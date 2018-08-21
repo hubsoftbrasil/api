@@ -34,6 +34,7 @@ O exemplo acima, possui alguns prarâmetros, que serão explicados abaixo:
 - password: Senha do usuário
 
 O resultado da requisição da rota /oauth/token, será igual ao exemplo abaixo::
+
 	{
 		access_token:"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijg0MTM2O"
 		expires_in:2592000
