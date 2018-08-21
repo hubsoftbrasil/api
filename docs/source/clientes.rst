@@ -23,7 +23,7 @@ Os seguintes parâmetros podem/devem ser utilizados:
 - limit: Limite de resultados
 - cancelado: Informa se deseja trazer os cancelados ou não
 - order_by: Campo que será utilizado para ordenação
-_ order_type: Tipo da Ordenação
+- order_type: Tipo da Ordenação
 
 
 Os atributos podem conter os seguintes valores:
