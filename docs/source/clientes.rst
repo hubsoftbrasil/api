@@ -47,10 +47,10 @@ Retorno da requisição GET::
 	        {
 	            "id_cliente": 11201,
 	            "codigo_cliente": 421,
-	            "nome_razaosocial": "GUILHERME ANTONIO DE ALCANTARA SILVA",
+	            "nome_razaosocial": "GUILHERME SILVA",
 	            "nome_fantasia": null,
 	            "tipo_pessoa": "pf",
-	            "cpf_cnpj": "10682083682",
+	            "cpf_cnpj": "10682083681",
 	            "telefone_primario": "37988242968",
 	            "telefone_secundario": "37988242968",
 	            "telefone_terciario": "",
@@ -80,6 +80,54 @@ Retorno da requisição GET::
 	                        "nome": "GENERICO",
 	                        "ipv4": "192.168.2.100",
 	                        "ipv6": null
+	                    },
+	                    "endereco_cadastral": {
+	                        "completo": "RUA DONA MARIA DAS DORES, 541 - NOSSA SENHORA DAS GRACAS, DIVINóPOLIS/MG - IGREJA",
+	                        "logradouro": "RUA",
+	                        "endereco": "DONA MARIA DAS DORES",
+	                        "numero": "541",
+	                        "complemento": "IGREJA",
+	                        "bairro": "NOSSA SENHORA DAS GRACAS",
+	                        "cep": "35501-048",
+	                        "estado": "MG",
+	                        "uf": "MINAS GERAIS",
+	                        "cidade": "Divinópolis"
+	                    },
+	                    "endereco_instalacao": {
+	                        "completo": "RUA MINAS GERAIS, 1793 - IPIRANGA, DIVINóPOLIS/MG",
+	                        "logradouro": "RUA",
+	                        "endereco": "MINAS GERAIS",
+	                        "numero": "1793",
+	                        "complemento": "",
+	                        "bairro": "IPIRANGA",
+	                        "cep": "35502-026",
+	                        "estado": "MG",
+	                        "uf": "MINAS GERAIS",
+	                        "cidade": "Divinópolis"
+	                    },
+	                    "endereco_fiscal": {
+	                        "completo": "RUA GOIAS, 86 - PORTO VELHO, DIVINóPOLIS/MG - APTO 101",
+	                        "logradouro": "RUA",
+	                        "endereco": "GOIAS",
+	                        "numero": "86",
+	                        "complemento": "APTO 101",
+	                        "bairro": "PORTO VELHO",
+	                        "cep": "35500-000",
+	                        "estado": "MG",
+	                        "uf": "MINAS GERAIS",
+	                        "cidade": "Divinópolis"
+	                    },
+	                    "endereco_cobranca": {
+	                        "completo": "RUA SEBASTIAO PARDINI, 58 - CENTRO, DIVINóPOLIS/MG - 202",
+	                        "logradouro": "RUA",
+	                        "endereco": "SEBASTIAO PARDINI",
+	                        "numero": "58",
+	                        "complemento": "202",
+	                        "bairro": "CENTRO",
+	                        "cep": "35500-000",
+	                        "estado": "MG",
+	                        "uf": "MINAS GERAIS",
+	                        "cidade": "Divinópolis"
 	                    }
 	                }
 	            ]
@@ -87,11 +135,11 @@ Retorno da requisição GET::
 	        {
 	            "id_cliente": 11202,
 	            "codigo_cliente": 422,
-	            "nome_razaosocial": "GUILHERME COSTA SOUZA",
+	            "nome_razaosocial": "GUILHERME COSTA",
 	            "nome_fantasia": null,
 	            "tipo_pessoa": "pf",
-	            "cpf_cnpj": "05338614626",
-	            "telefone_primario": "37999452812",
+	            "cpf_cnpj": "05333614622",
+	            "telefone_primario": "37999450812",
 	            "telefone_secundario": "37999452812",
 	            "telefone_terciario": "",
 	            "rg": "MG11298180",
@@ -103,7 +151,7 @@ Retorno da requisição GET::
 	            "servicos": [
 	                {
 	                    "numero_plano": 1,
-	                    "nome": "5MB",
+	                    "nome": "24M",
 	                    "valor": 119.9,
 	                    "status": "Serviço Habilitado",
 	                    "status_prefixo": "servico_habilitado",
@@ -120,6 +168,54 @@ Retorno da requisição GET::
 	                        "nome": "GENERICO",
 	                        "ipv4": "192.168.2.100",
 	                        "ipv6": null
+	                    },
+	                    "endereco_cadastral": {
+	                        "completo": "RUA GERALDO RODRIGUES DA COSTA, 5 - CENTRO, SANTO ANTôNIO DO MONTE/MG",
+	                        "logradouro": "RUA",
+	                        "endereco": "GERALDO RODRIGUES DA COSTA",
+	                        "numero": "5",
+	                        "complemento": "",
+	                        "bairro": "CENTRO",
+	                        "cep": "35560000",
+	                        "estado": "MG",
+	                        "uf": "MINAS GERAIS",
+	                        "cidade": "Santo Antônio do Monte"
+	                    },
+	                    "endereco_instalacao": {
+	                        "completo": "RUA JOÃO J FERNANDES, 900 - BARRETOS, NOVA SERRANA/MG - AREA RURAL",
+	                        "logradouro": "RUA",
+	                        "endereco": "JOÃO J FERNANDES",
+	                        "numero": "900",
+	                        "complemento": "AREA RURAL",
+	                        "bairro": "BARRETOS",
+	                        "cep": "35519-000",
+	                        "estado": "MG",
+	                        "uf": "MINAS GERAIS",
+	                        "cidade": "Nova Serrana"
+	                    },
+	                    "endereco_fiscal": {
+	                        "completo": "RUA RITA DOS SANTOS MESQUITA, 233 - SANTO AGOSTINHO, PERDIGãO/MG",
+	                        "logradouro": "RUA",
+	                        "endereco": "RITA DOS SANTOS MESQUITA",
+	                        "numero": "233",
+	                        "complemento": "",
+	                        "bairro": "SANTO AGOSTINHO",
+	                        "cep": "35545-000",
+	                        "estado": "MG",
+	                        "uf": "MINAS GERAIS",
+	                        "cidade": "Perdigão"
+	                    },
+	                    "endereco_cobranca": {
+	                        "completo": "RUA DOIS, 221 - BARRETINHOS, NOVA SERRANA/MG - AREA RURAL",
+	                        "logradouro": "RUA",
+	                        "endereco": "DOIS",
+	                        "numero": "221",
+	                        "complemento": "AREA RURAL",
+	                        "bairro": "BARRETINHOS",
+	                        "cep": "35519-000",
+	                        "estado": "MG",
+	                        "uf": "MINAS GERAIS",
+	                        "cidade": "Nova Serrana"
 	                    }
 	                }
 	            ]
