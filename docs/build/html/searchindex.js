@@ -1,0 +1,1 @@
+Search.setIndex({docnames:["index"],envversion:52,filenames:["index.rst"],objects:{},objnames:{},objtypes:{},terms:{"\u00edndic":0,"m\u00f3dul":0,"p\u00e1gin":0,pesquis:0},titles:["Documenta\u00e7\u00e3o da API do HubSoft!"],titleterms:{and:0,api:0,document:0,hubsoft:0,indic:0,tabl:0}})
