@@ -12,6 +12,6 @@ Bem-vindo à documentação da API do HubSoft. Para utilizar a API é necessári
    
    introducao
    autenticacao
-   clientes
-   atendimento
+   clientes/index
+   duvidas
 
