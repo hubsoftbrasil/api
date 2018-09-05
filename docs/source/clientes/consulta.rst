@@ -231,3 +231,11 @@ No exemplo acima, foi feito uma requisição utilizando os seguintes parâmetros
 - order_by: codigo_cliente
 - order_type: asc (Do maior para o menor)
 
+.. toctree::
+    :caption: Veja os outros métodos disponíveis da API de clientes
+
+    atendimento
+    consulta
+    financeiro
+    ordem_servico
+

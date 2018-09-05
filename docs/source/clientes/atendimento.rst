@@ -14,3 +14,12 @@ O endereço completo, ficará da seguinte forma::
 	https://endereco_do_servidor/api/v1/integracao/cliente/financeiro
 
 **GET**
+
+
+.. toctree::
+    :caption: Veja os outros métodos disponíveis da API de clientes
+
+    atendimento
+    consulta
+    financeiro
+    ordem_servico

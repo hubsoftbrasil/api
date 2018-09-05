@@ -1,4 +1,4 @@
-Ordem de Serviço dos Clientes
+Financeiro dos Clientes
 ============
 
 **Necessário**
@@ -7,7 +7,7 @@ Para fazer requisições nos dados de clientes, é necessário que você já pos
 
 As requisições de clientes, devem ser feitos na rota::
 
-	/api/v1/integracao/cliente/ordem_servico
+	/api/v1/integracao/cliente
 
 O endereço completo, ficará da seguinte forma::
 
