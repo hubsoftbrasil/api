@@ -1,4 +1,4 @@
-Atendimento ds Clientes
+Clientes > Atendimento
 ============
 
 **Necessário**

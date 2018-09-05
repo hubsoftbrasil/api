@@ -1,4 +1,4 @@
-Consulta de Clientes
+Clientes > Consulta
 ============
 
 **Necessário**
