@@ -16,9 +16,9 @@ O endereço completo, ficará da seguinte forma::
 Abaixo estão todas as funções disponíveis do cliente
 
 .. toctree::
-    :caption: Funções da API de Clientes
+    :caption: Funções da API do cliente
 
+    atendimento
     consulta
     financeiro
-    atendimento
     ordem_servico

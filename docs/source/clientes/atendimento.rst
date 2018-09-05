@@ -15,7 +15,6 @@ O endereço completo, ficará da seguinte forma::
 
 **GET**
 
-
 .. toctree::
     :caption: Veja os outros métodos disponíveis da API de clientes
 
