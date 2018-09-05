@@ -105,11 +105,3 @@ Retorno da requisição GET::
         }
     ]
 }
-
-.. toctree::
-    :caption: Veja os outros métodos disponíveis da API de clientes
-
-    atendimento
-    consulta
-    financeiro
-    ordem_servico
