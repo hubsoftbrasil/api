@@ -52,6 +52,7 @@ Retorno da requisição GET::
 	            "nosso_numero": "1",
 	            "nosso_numero_dv": null,
 	            "linha_digitavel": null,
+	            "link": null,
 	            "tipo_cobranca": "debito_conta_corrente",
 	            "valor": 132.5,
 	            "data_vencimento": "10/10/2017",
@@ -59,48 +60,51 @@ Retorno da requisição GET::
 	            "detalhamento": {
 	                "descricao": "(+) Taxa de Instalação (1/12) | R$ 12.50",
 	                "valor": 12.5
+	            },
+	            "cliente": {
+	                "codigo_cliente": 1163,
+	                "nome_razaosocial": "JOAQUIM JOSÉ DA SILVA",
+	                "cpf_cnpj": "09141806654"
 	            }
 	        },
 	        {
-	            "id_fatura": 43625,
-	            "nosso_numero": "4",
-	            "nosso_numero_dv": null,
-	            "linha_digitavel": null,
-	            "tipo_cobranca": "debito_conta_corrente",
-	            "valor": 12.5,
-	            "data_vencimento": "10/06/2018",
-	            "data_pagamento": null,
-	            "detalhamento": {
-	                "descricao": "(+) 5MB-WIRELESS (10/05/2018) até (09/06/2018)  | R$ 0.00",
-	                "valor": 0
-	            }
-	        },
-	        {
-	            "id_fatura": 42338,
-	            "nosso_numero": "2",
-	            "nosso_numero_dv": null,
-	            "linha_digitavel": null,
-	            "tipo_cobranca": "debito_conta_corrente",
+	            "id_fatura": 43647,
+	            "nosso_numero": "274551",
+	            "nosso_numero_dv": "0274551-0",
+	            "linha_digitavel": "75691.31662 01006.726101 27455.100019 6 75810000001000",
+	            "link": "http://endereco_do_servidor/pdf/fatura/TXpZek9UZz0=",
+	            "tipo_cobranca": "boleto_bancario",
 	            "valor": 10,
-	            "data_vencimento": "01/07/2018",
-	            "data_pagamento": null,
+	            "data_vencimento": "10/07/2018",
+	            "data_pagamento": "20/08/2018",
 	            "detalhamento": {
 	                "descricao": "Cobrança adicional - teste",
 	                "valor": 10
+	            },
+	            "cliente": {
+	                "codigo_cliente": 1163,
+	                "nome_razaosocial": "JOAQUIM JOSÉ DA SILVA",
+	                "cpf_cnpj": "09141806654"
 	            }
 	        },
 	        {
-	            "id_fatura": 44612,
-	            "nosso_numero": "274764",
-	            "nosso_numero_dv": "0274764-0",
-	            "linha_digitavel": "75691.31662 01006.726101 27476.400018 2 76380000001023",
+	            "id_fatura": 44654,
+	            "nosso_numero": "274805",
+	            "nosso_numero_dv": "0274805-7",
+	            "linha_digitavel": "75691.31662 01006.726101 27480.570012 1 77040000004990",
+	            "link": "http://endereco_do_servidor/pdf/fatura/TkRRMk5UTT0=",
 	            "tipo_cobranca": "boleto_bancario",
-	            "valor": 10,
-	            "data_vencimento": "31/08/2018",
+	            "valor": 49.9,
+	            "data_vencimento": "10/11/2018",
 	            "data_pagamento": null,
 	            "detalhamento": {
-	                "descricao": "Cobrança SCM",
-	                "valor": 10
+	                "descricao": "Serviço de Comunicação e Multimídia - 1_5MB (10/11/2018 até 10/12/2018)",
+	                "valor": 24.95
+	            },
+	            "cliente": {
+	                "codigo_cliente": 1163,
+	                "nome_razaosocial": "JOAQUIM JOSÉ DA SILVA",
+	                "cpf_cnpj": "09141806654"
 	            }
 	        }
 	    ]
