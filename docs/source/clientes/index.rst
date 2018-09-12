@@ -20,5 +20,6 @@ Abaixo estão todas as funções disponíveis do cliente
 
     atendimento
     consulta
+    extrato_conexao
     financeiro
     ordem_servico
