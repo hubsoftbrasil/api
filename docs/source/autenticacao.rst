@@ -54,6 +54,6 @@ Exemplo de chamada em uma rota, enviando os dados do Token::
 
 .. warning::
 
-	IMPORTANTE: Veja que o token foi enviado no HEADER da requisição HTTP. Conforme o exemplo acima, podemos observar que o token é enviado sempre no header :term:`Authorization`. Caso o Token não esteja presente no reader :term:`Authorization` a API irá responder com o código HTTP 401 (Unauthorized).
+	IMPORTANTE: Veja que o token foi enviado no HEADER da requisição HTTP. Conforme o exemplo acima, podemos observar que o token é enviado sempre no header ``Authorization``. Caso o Token não esteja presente no header ``Authorization`` a API irá responder com o código ``HTTP 401 (Unauthorized)``, não permitindo a utilização da API.
 
 
