@@ -44,7 +44,7 @@ O resultado da requisição da rota /oauth/token, será igual ao exemplo abaixo:
 
 Nesse momento, você já possui todos os dados necessário para iniciar as chamadas na rota da API.
 Em todas as rotas da API, será necessário enviar o TOKEN que foi recebido na rota /oauth/token.
-O TOKEN que deve ser enviado, é formado pelo token_type + access_token, no caso do exemplo acima, o token ficaria da seguinte forma::
+O TOKEN que deve ser enviado, é formado pelo token_type + access_token, no caso do exemplo acima o token ficaria da seguinte forma::
 
 	Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijg0MTM2O
 
@@ -52,6 +52,8 @@ Exemplo de chamada em uma rota, enviando os dados do Token::
 
 	curl -X GET --header "Accept:application/json" https://endereco_servidor/api/v1/teste -k --header "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijg0MTM2O"
 
+Warning
 
+IMPORTANTE: Veja que o token foi enviado no HEADER da requisição HTTP. Conforme o exemplo acima, podemos observar que o token é enviado sempre no header :term:`Authorization`. Caso o Token não esteja presente no reader :term:`Authorization` a API irá responder com o código HTTP 401 (Unauthorized).
 
 
