@@ -52,8 +52,8 @@ Exemplo de chamada em uma rota, enviando os dados do Token::
 
 	curl -X GET --header "Accept:application/json" https://endereco_servidor/api/v1/teste -k --header "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijg0MTM2O"
 
-Warning
+.. warning::
 
-IMPORTANTE: Veja que o token foi enviado no HEADER da requisição HTTP. Conforme o exemplo acima, podemos observar que o token é enviado sempre no header :term:`Authorization`. Caso o Token não esteja presente no reader :term:`Authorization` a API irá responder com o código HTTP 401 (Unauthorized).
+	IMPORTANTE: Veja que o token foi enviado no HEADER da requisição HTTP. Conforme o exemplo acima, podemos observar que o token é enviado sempre no header :term:`Authorization`. Caso o Token não esteja presente no reader :term:`Authorization` a API irá responder com o código HTTP 401 (Unauthorized).
 
 
