@@ -74,13 +74,23 @@ Retorno da requisição GET::
 	                    "ipv4": "10.99.2.203",
 	                    "ipv6": null,
 	                    "interface": {
-	                        "nome": "Interface Conexão Genérica",
-	                        "tipo": "wireless",
+	                        "nome": "PON5",
+	                        "tipo": "gpon",
+	                        "called_sid": null
+	                    },
+	                    "interface_roteamento": {
+	                        "nome": "ether8",
+	                        "tipo": "ethernet",
 	                        "called_sid": null
 	                    },
 	                    "equipamento_conexao": {
-	                        "nome": "GENERICO",
+	                        "nome": "OLT XPTO",
 	                        "ipv4": "192.168.2.100",
+	                        "ipv6": null
+	                    },
+	                    "equipamento_roteamento": {
+	                        "nome": "CONCENTRADOR XPTO",
+	                        "ipv4": "172.17.24.98",
 	                        "ipv6": null
 	                    },
 	                    "endereco_cadastral": {
@@ -144,8 +154,8 @@ Retorno da requisição GET::
 	            "telefone_primario": "37999450812",
 	            "telefone_secundario": "37999452812",
 	            "telefone_terciario": "",
-		    "email_principal":null,
-		    "email_secundario":null,
+		    	"email_principal":null,
+		    	"email_secundario":null,
 	            "rg": "MG11298180",
 	            "rg_emissao": null,
 	            "inscricao_municipal": null,
@@ -164,13 +174,23 @@ Retorno da requisição GET::
 	                    "ipv4": "10.99.1.118",
 	                    "ipv6": null,
 	                    "interface": {
-	                        "nome": "Interface Conexão Genérica",
-	                        "tipo": "wireless",
+	                        "nome": "PON5",
+	                        "tipo": "gpon",
+	                        "called_sid": null
+	                    },
+	                    "interface_roteamento": {
+	                        "nome": "ether8",
+	                        "tipo": "ethernet",
 	                        "called_sid": null
 	                    },
 	                    "equipamento_conexao": {
-	                        "nome": "GENERICO",
+	                        "nome": "OLT XPTO",
 	                        "ipv4": "192.168.2.100",
+	                        "ipv6": null
+	                    },
+	                    "equipamento_roteamento": {
+	                        "nome": "CONCENTRADOR XPTO",
+	                        "ipv4": "172.17.24.98",
 	                        "ipv6": null
 	                    },
 	                    "endereco_cadastral": {
