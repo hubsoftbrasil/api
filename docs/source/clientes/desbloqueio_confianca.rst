@@ -19,9 +19,9 @@ No método POST, será possível efetuar o desbloqueio em confiança, pela quant
 
 .. warning::
 
-	IMPORTANTE: O sistema vai fazer a validação da regra configurada pelo painel do administrador. Por exemplo, se a regra configurada pelo painel, estiver definido que o máximo de dias para desbloqueio for menor ou igual a 3 dias e a requisição da API, tiver um valor maior que 3, o desbloqueio não será efetuado, e uma mensagem de erro será retornada.
+	IMPORTANTE: O sistema vai fazer a validação da regra configurada pelo painel do administrador. Por exemplo, se a regra configurada pelo painel, estiver definido que o máximo de dias para desbloqueio for menor ou igual a 3 dias e a requisição da API, possuir um valor maior que 3() no atributo dias_desbloqueio), o desbloqueio não será efetuado, e uma mensagem de erro será retornada, avisando que o valor informado para os dias de desbloqueio não é permitido, pois ultrapassa a configuração pré-estabelecida.
 
-** Atributos da Requisição **
+**Atributos da Requisição**
 
 :id_cliente_servico: (OBRIGATÓRIO) Identificado único do serviço do cliente
 :dias_desbloqueio: (OBRIGATÓRIO) Quantidade de dias, a partir da data atual que o cliente ficará desbloqueado em confiança
@@ -45,6 +45,6 @@ Veja que os paramêtros enviados na requisição POST devem obedecer a estrutura
 Retorno da requisição POST::
 
 	{
-    	"status": "success",
-    	"msg": "Desbloqueio em confiança realizado com sucesso até a data 26/11/2018"
+		"status": "success",
+		"msg": "Desbloqueio em confiança realizado com sucesso até a data 26/11/2018"
 	}
