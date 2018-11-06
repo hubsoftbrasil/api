@@ -5,7 +5,7 @@ Atendimento
 
 Para fazer requisições nos dados de atendimento, é necessário que você já possua o TOKEN, conseguido na etapa (Autenticação)
 
-As requisições de clientes, devem ser feitos na rota::
+As requisições de atendimentos, devem ser feitos na rota::
 
 	/api/v1/integracao/atendimento
 
@@ -16,6 +16,6 @@ O endereço completo, ficará da seguinte forma::
 Abaixo estão todas as funções disponíveis do atendimento
 
 .. toctree::
-    :caption: Funções da API do cliente
+    :caption: Funções da API de Atendimento
 
     novo
