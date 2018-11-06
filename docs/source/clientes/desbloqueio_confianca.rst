@@ -24,12 +24,12 @@ No método POST, será possível efetuar o desbloqueio em confiança, pela quant
 **Atributos da Requisição**
 
 :id_cliente_servico: (OBRIGATÓRIO) Identificado único do serviço do cliente
-:dias_desbloqueio: (OBRIGATÓRIO) Quantidade de dias, a partir da data atual que o cliente ficará desbloqueado em confiança
+:dias_desbloqueio: Quantidade de dias, a partir da data atual que o cliente ficará desbloqueado em confiança
 
 Os atributos podem conter os seguintes valores:
 
 :id_cliente_servico: (OBRIGATÓRIO) Deve conter um número inteiro maior que 0
-:dias_desbloqueio: (OBRIGATÓRIO) Deve conter um número inteiro maior que 0
+:dias_desbloqueio: Deve conter um número inteiro maior que 0. Se não for preenchido o valor 1 será atributo, ou seja, será desbloqueado até o próximo dia
 
 Exemplo de requisição POST na rota do desbloqueio em confiança::
 
