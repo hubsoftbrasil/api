@@ -20,6 +20,7 @@ Abaixo estão todas as funções disponíveis do cliente
 
     atendimento
     consulta
+    desbloqueio_confianca
     extrato_conexao
     financeiro
     ordem_servico
