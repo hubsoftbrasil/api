@@ -54,8 +54,8 @@ Retorno da requisição GET::
 	            "telefone_primario": "37988242968",
 	            "telefone_secundario": "37988242968",
 	            "telefone_terciario": "",
-		    "email_principal":"guilherme@silva.com.br",
-		    "email_secundario":null,
+		    	"email_principal":"guilherme@silva.com.br",
+		    	"email_secundario":null,
 	            "rg": "MG16999888",
 	            "rg_emissao": null,
 	            "inscricao_municipal": null,
@@ -64,6 +64,7 @@ Retorno da requisição GET::
 	            "data_nascmento": "1969-12-31 04:00:00",
 	            "servicos": [
 	                {
+	                	"id_cliente_servico":11201,
 	                    "numero_plano": 1,
 	                    "nome": "4M",
 	                    "valor": 119.9,
@@ -164,7 +165,8 @@ Retorno da requisição GET::
 	            "data_nascmento": "1969-12-31 00:00:00",
 	            "servicos": [
 	                {
-	                    "numero_plano": 1,
+	                	"id_cliente_servico":11302,
+	                    "numero_plano": 2,
 	                    "nome": "24M",
 	                    "valor": 119.9,
 	                    "status": "Serviço Habilitado",
