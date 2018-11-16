@@ -43,85 +43,135 @@ Exemplo de requisição GET na rota do cliente::
 
 Retorno da requisição GET::
 
-	{
+		{
 	    "status": "suscess",
 	    "msg": "Dados consultados com sucesso",
 	    "atendimentos": [
 	        {
-	            "id_atendimento": 14,
-	            "protocolo": "201802141023283",
-	            "tipo_atendimento": "TÉCNICO",
-	            "usuario_abertura": "Master",
-	            "usuario_responsavel": "Camozzato",
+	            "id_atendimento": 110,
+	            "protocolo": "201806191505251",
+	            "descricao_abertura": "VERIFICAR CONEXÃO",
+	            "descricao_fechamento": null,
+	            "tipo_atendimento": "TÉCNICO - QUEDAS DE CONEXÃO",
+	            "usuario_abertura": "Bianca Couto",
+	            "usuario_responsavel": "Bianca Couto",
 	            "usuario_fechamento": null,
-	            "data_cadastro": "14/02/2018",
+	            "data_cadastro": "19/06/2018",
 	            "data_fechamento": null,
 	            "setor_responsavel": null,
 	            "status_fechamento": null,
 	            "motivo_fechamento": null,
 	            "status": "Pendente",
 	            "cliente": {
-	                "codigo_cliente": 1175,
-	                "nome_razaosocial": "ANTÔNIO JOSÉ SOUSA",
-	                "cpf_cnpj": "82313458253"
-	            }
+	                "codigo_cliente": 1204,
+	                "nome_razaosocial": "BIANCA COUTO",
+	                "cpf_cnpj": "86214941081"
+	            },
+	            "ordens_servico": [
+	                {
+	                    "id_ordem_servico": 131,
+	                    "numero_ordem_servico": "125",
+	                    "data_cadastro": "19/06/2018 15:05:25",
+	                    "tipo": "SUPORTE",
+	                    "data_inicio_programado": "19/06/2018 14:02:00",
+	                    "data_termino_programado": "19/06/2018 15:02:00",
+	                    "data_inicio_executado": "19/06/2018 14:02:00",
+	                    "data_termino_executado": "19/06/2018 15:02:00",
+	                    "descricao_abertura": "VERIFICAR CONEXÃO",
+	                    "descricao_servico": "VERIFICAR CONEXÃO",
+	                    "descricao_fechamento": "asdfasdfadsf",
+	                    "usuario_abertura": "Bianca Couto",
+	                    "usuario_fechamento": "Bianca Couto",
+	                    "status": "finalizado",
+	                    "status_fechamento": "concluido",
+	                    "cliente": {
+	                        "codigo_cliente": 1204,
+	                        "nome_razaosocial": "BIANCA COUTO",
+	                        "cpf_cnpj": "86214941081"
+	                    },
+	                    "servico": {
+	                        "numero_plano": 0,
+	                        "nome": "5MB-WIRELLES-TESTE",
+	                        "valor": 199.9,
+	                        "status": "Cancelado",
+	                        "status_prefixo": "cancelado"
+	                    }
+	                }
+	            ]
 	        },
 	        {
-	            "id_atendimento": 19,
-	            "protocolo": "201803121414088",
-	            "tipo_atendimento": "TÉCNICO",
+	            "id_atendimento": 285,
+	            "protocolo": "201811061724214",
+	            "descricao_abertura": "Abertura de atendimento através da API | ATENDIMENTO ABERTO VIA CENTRAL DO ASSINANTE",
+	            "descricao_fechamento": null,
+	            "tipo_atendimento": "SAC",
 	            "usuario_abertura": "Master",
 	            "usuario_responsavel": "Master",
 	            "usuario_fechamento": null,
-	            "data_cadastro": "12/03/2018",
+	            "data_cadastro": "06/11/2018",
 	            "data_fechamento": null,
 	            "setor_responsavel": null,
 	            "status_fechamento": null,
 	            "motivo_fechamento": null,
-	            "status": "Pendente",
+	            "status": "Aguardando Análise",
 	            "cliente": {
-	                "codigo_cliente": 1175,
-	                "nome_razaosocial": "ANTÔNIO JOSÉ SOUSA",
-	                "cpf_cnpj": "82313458253"
-	            }
+	                "codigo_cliente": 1204,
+	                "nome_razaosocial": "BIANCA COUTO",
+	                "cpf_cnpj": "86214941081"
+	            },
+	            "ordens_servico": []
 	        },
 	        {
-	            "id_atendimento": 20,
-	            "protocolo": "201803130936061",
-	            "tipo_atendimento": "TÉCNICO",
-	            "usuario_abertura": "Master",
-	            "usuario_responsavel": "Master",
+	            "id_atendimento": 300,
+	            "protocolo": "201811161058216",
+	            "descricao_abertura": "Estou sem acesso a internet desde segunda-feira. | ATENDIMENTO ABERTO VIA API",
+	            "descricao_fechamento": null,
+	            "tipo_atendimento": "SAC",
+	            "usuario_abertura": "IP Telecom",
+	            "usuario_responsavel": "IP Telecom",
 	            "usuario_fechamento": null,
-	            "data_cadastro": "13/03/2018",
+	            "data_cadastro": "16/11/2018",
 	            "data_fechamento": null,
 	            "setor_responsavel": null,
 	            "status_fechamento": null,
 	            "motivo_fechamento": null,
-	            "status": "Pendente",
+	            "status": "Aguardando Análise",
 	            "cliente": {
-	                "codigo_cliente": 1175,
-	                "nome_razaosocial": "ANTÔNIO JOSÉ SOUSA",
-	                "cpf_cnpj": "82313458253"
-	            }
-	        },
-	        {
-	            "id_atendimento": 21,
-	            "protocolo": "201803131015475",
-	            "tipo_atendimento": "TÉCNICO",
-	            "usuario_abertura": "Master",
-	            "usuario_responsavel": "Master",
-	            "usuario_fechamento": null,
-	            "data_cadastro": "13/03/2018",
-	            "data_fechamento": null,
-	            "setor_responsavel": null,
-	            "status_fechamento": null,
-	            "motivo_fechamento": null,
-	            "status": "Pendente",
-	            "cliente": {
-	                "codigo_cliente": 1175,
-	                "nome_razaosocial": "ANTÔNIO JOSÉ SOUSA",
-	                "cpf_cnpj": "82313458253"
-	            }
+	                "codigo_cliente": 1204,
+	                "nome_razaosocial": "BIANCA COUTO",
+	                "cpf_cnpj": "86214941081"
+	            },
+	            "ordens_servico": [
+	                {
+	                    "id_ordem_servico": 340,
+	                    "numero_ordem_servico": "320",
+	                    "data_cadastro": "16/11/2018 10:58:21",
+	                    "tipo": "ABERTURA VIA API",
+	                    "data_inicio_programado": "16/11/2018 11:58:21",
+	                    "data_termino_programado": "16/11/2018 12:58:21",
+	                    "data_inicio_executado": null,
+	                    "data_termino_executado": null,
+	                    "descricao_abertura": "Estou sem acesso a internet desde segunda-feira. | ATENDIMENTO ABERTO VIA API",
+	                    "descricao_servico": "Estou sem acesso a internet desde segunda-feira. | ATENDIMENTO ABERTO VIA API",
+	                    "descricao_fechamento": null,
+	                    "usuario_abertura": "IP Telecom",
+	                    "usuario_fechamento": null,
+	                    "status": "aguardando_agendamento",
+	                    "status_fechamento": null,
+	                    "cliente": {
+	                        "codigo_cliente": 1204,
+	                        "nome_razaosocial": "BIANCA COUTO",
+	                        "cpf_cnpj": "86214941081"
+	                    },
+	                    "servico": {
+	                        "numero_plano": 9,
+	                        "nome": "NEXT-NV_1MBPS",
+	                        "valor": 69.9,
+	                        "status": "Serviço Habilitado",
+	                        "status_prefixo": "servico_habilitado"
+	                    }
+	                }
+	            ]
 	        }
 	    ]
 	}

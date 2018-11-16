@@ -21,7 +21,8 @@ No método POST, será possível consultar os atendimentos em aberto/fechados do
 :descricao: (OBRIGATÓRIO) Descrição detalhada do atendimento / solicitação do cliente
 :nome: (OBRIGATÓRIO) Nome do cliente / usuário solicitando do atendimento
 :telefone: (OBRIGATÓRIO) Telefone do cliente solicitante
-:email: E-mail do cliente solicitando
+:email: (OPCIONAL) E-mail do cliente solicitando
+:abrir_os: (OPCIONAL) Parâmetro true ou false, que indica se deve abrir uma OS ou não
 
 Os atributos podem conter os seguintes valores:
 
@@ -29,7 +30,8 @@ Os atributos podem conter os seguintes valores:
 :descricao: (OBRIGATÓRIO) A descrição pode ser preenchida livremente. 
 :nome: (OBRIGATÓRIO) Nome do cliente pode ser preenchido livremente
 :telefone: (OBRIGATÓRIO) Telefone deve ser preenchido no formato DDNNNNNNNNN
-:email: E-mail do cliente não é obrigatório
+:email: (OPCIONAL) E-mail do cliente não é obrigatório
+:abrir_os: (OPCIONAL) Caso enviado, deve conter um valor boolean (true | false)
 
 Exemplo de requisição POST na rota de crição de novo atendimento::
 
@@ -43,22 +45,25 @@ Veja que os paramêtros enviados na requisição POST devem obedecer a estrutura
 		"descricao":"Abertura de atendimento de teste", 
 		"nome":"Nome do Usuário Solicitante", 
 		"telefone":"37999112233", 
-		"email":"teste@teste.com.br"
+		"email":"teste@teste.com.br",
+		"abrir_os":true
 	}
 
 Retorno da requisição GET::
 
 	{
 	    "status": "success",
-	    "msg": "Atendimento aberto com sucesso. Anote o protocolo: 201811061730517.",
+	    "msg": "Atendimento aberto com sucesso. Anote o protocolo: 201811161058216. Foi aberto também uma ordem de serviço e encaminhada ao sertor responsável",
 	    "atendimento": {
-	        "id_atendimento": 286,
-	        "protocolo": "201811061730517",
+	        "id_atendimento": 300,
+	        "protocolo": "201811161058216",
+	        "descricao_abertura": "Estou sem acesso a internet desde segunda-feira. | ATENDIMENTO ABERTO VIA API",
+	        "descricao_fechamento": null,
 	        "tipo_atendimento": "SAC",
-	        "usuario_abertura": "Master",
-	        "usuario_responsavel": "Master",
+	        "usuario_abertura": "IP Telecom",
+	        "usuario_responsavel": "IP Telecom",
 	        "usuario_fechamento": null,
-	        "data_cadastro": "06/11/2018",
+	        "data_cadastro": "16/11/2018",
 	        "data_fechamento": null,
 	        "setor_responsavel": null,
 	        "status_fechamento": null,
@@ -68,6 +73,41 @@ Retorno da requisição GET::
 	            "codigo_cliente": 1204,
 	            "nome_razaosocial": "BIANCA COUTO",
 	            "cpf_cnpj": "86214941081"
-	        }
+	        },
+	        "ordens_servico": [
+	            {
+	                "id_ordem_servico": 340,
+	                "numero_ordem_servico": "320",
+	                "data_cadastro": "16/11/2018 10:58:21",
+	                "tipo": "ABERTURA VIA API",
+	                "data_inicio_programado": "16/11/2018 11:58:21",
+	                "data_termino_programado": "16/11/2018 12:58:21",
+	                "data_inicio_executado": null,
+	                "data_termino_executado": null,
+	                "descricao_abertura": "Estou sem acesso a internet desde segunda-feira. | ATENDIMENTO ABERTO VIA API",
+	                "descricao_servico": "Estou sem acesso a internet desde segunda-feira. | ATENDIMENTO ABERTO VIA API",
+	                "descricao_fechamento": null,
+	                "usuario_abertura": "IP Telecom",
+	                "usuario_fechamento": null,
+	                "status": "aguardando_agendamento",
+	                "status_fechamento": null,
+	                "cliente": {
+	                    "codigo_cliente": 1204,
+	                    "nome_razaosocial": "BIANCA COUTO",
+	                    "cpf_cnpj": "86214941081"
+	                },
+	                "servico": {
+	                    "numero_plano": 9,
+	                    "nome": "NEXT-NV_1MBPS",
+	                    "valor": 69.9,
+	                    "status": "Serviço Habilitado",
+	                    "status_prefixo": "servico_habilitado"
+	                }
+	            }
+	        ]
 	    }
 	}
+
+.. note::
+
+	OBSERVAÇÃO: O JSON de resposta da requisição acima, contém dados de ordem de serviço, pois na requisição o atributo (abrir_os) foi enviado como true. Sendo assim, o setor técnico do provedor de internet, vai receber essa ordem de serviço para ser executada em campo pelo técnico responsável.
