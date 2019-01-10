@@ -24,7 +24,7 @@ No método POST, será possível fazer o disparo da fatura do cliente por SMS. P
 **Atributos da Requisição**
 
 :id_fatura: (OBRIGATÓRIO) Identificador único da fatura do cliente
-:telefone_adicionl: (OPCIONAL). Outros telefones adicionais, podem ser enviados na requisição.
+:telefone_adicional: (OPCIONAL). Outros telefones adicionais, podem ser enviados na requisição.
 
 Os atributos podem conter os seguintes valores:
 
