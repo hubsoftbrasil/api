@@ -23,4 +23,5 @@ Abaixo estão todas as funções disponíveis do cliente
     desbloqueio_confianca
     extrato_conexao
     financeiro
+    financeiro_email
     ordem_servico

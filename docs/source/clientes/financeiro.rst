@@ -3,7 +3,7 @@ Clientes > Financeiro
 
 **Necessário**
 
-Para fazer requisições nos dados de clientes, é necessário que você já possua o TOKEN, conseguido na etapa (Autenticação)
+Para fazer requisições nos dados de financeiro dos clientes, é necessário que você já possua o TOKEN, conseguido na etapa (Autenticação)
 
 As requisições de clientes, devem ser feitos na rota::
 
