@@ -33,11 +33,11 @@ No método POST, será possível fazer o disparo da fatura do cliente por e-mail
 Os atributos podem conter os seguintes valores:
 
 :id_cliente_servico: (OBRIGATÓRIO) Deve conter um número inteiro maior que 0
-:dias_desbloqueio: Deve conter um array de strings (emails)
+:email_adicional: Deve conter um array de strings (emails)
 
 Exemplo de requisição POST na rota do envio de e-mail::
 
-	curl -X POST --header "Accept:application/json" https://endereco_servidor/api/v1/integracao/cliente/financeiro/envio_email -d '{"id_fatura":"11000", "email_adicional":["email1@email.com","email2@email.com"]}' -k --header "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijg0MTM2O"
+	curl -X POST --header "Accept:application/json" https://endereco_servidor/api/v1/integracao/cliente/financeiro/enviar_email -d '{"id_fatura":"11000", "email_adicional":["email1@email.com","email2@email.com"]}' -k --header "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijg0MTM2O"
 
 Veja que os paramêtros enviados na requisição POST devem obedecer a estrutura no formato JSON::
 
@@ -105,4 +105,4 @@ Retorno da requisição POST::
 
 .. note::
 
-	OBSERVAÇÃO: Perceba que foram enviados 2 e-mails adicionais, porém o sistema fez um disparo de 3 emails. Isso aconteceu, pois o cliente já possuia 1 endereço de e-mail em seu cadastro. No momento do disparo, o sistema enviou para os e-mails já cadastrados no sistema mais e também para os e-mails adicionais passados na requisição POST
+	OBSERVAÇÃO: Perceba que foram enviados 2 e-mails adicionais, porém o sistema fez um disparo de 3 emails. Isso aconteceu, pois o cliente já possuia 1 endereço de e-mail em seu cadastro. No momento do disparo, o sistema enviou para os e-mails já cadastrados no sistema e também para os telefones adicionais passados na requisição POST
