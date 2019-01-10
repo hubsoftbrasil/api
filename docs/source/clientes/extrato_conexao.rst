@@ -1,4 +1,4 @@
-Clientes > Extrato Conexão
+Extrato Conexão
 ============
 
 **Necessário**

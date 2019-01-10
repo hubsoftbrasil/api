@@ -1,4 +1,4 @@
-Clientes > Financeiro
+Financeiro
 ============
 
 **Necessário**

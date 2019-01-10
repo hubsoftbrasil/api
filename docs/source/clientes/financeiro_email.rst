@@ -19,11 +19,11 @@ No método POST, será possível fazer o disparo da fatura do cliente por e-mail
 
 .. warning::
 
-	IMPORTANTE: O sistema vai fazer a validação dos dados de e-mail e verifique se a API possui um servidor de e-mail válido configurado. Caso todas as regras sejam atendidas, o disparo do e-mail é instantâneo, ou seja, é enviado em tempo real. Por esse motivo, a resposta da API, irá variar de acordo com a quantidade de e-mails que está na requisição para ser disparado.
+	IMPORTANTE: O sistema vai fazer a validação dos dados de e-mail e verificar se a API possui um servidor de e-mail válido configurado. Caso todas as regras sejam atendidas, o disparo do e-mail será efetuado instantaneamente, ou seja, é enviado em tempo real. Por esse motivo, o tempo de resposta da API, irá variar de acordo com a quantidade de e-mails que está na requisição para ser disparado.
 
 .. warning::
 
-	IMPORTANTE 2: Os servidor de e-mails configurados no HubSoft possui configuração de timeout entre um disparo e outro, dessa forma evita-se que o servidor seja adicionado em BlackLists de SPAM. Por esse motivo, a chamada da API, poderá ter um tempo de resposta grande.
+	IMPORTANTE 2: O(s) servidor(es) de e-mails configurados no HubSoft possuem configuração de timeout entre um disparo e outro, dessa forma evita-se que o servidor seja adicionado em BlackLists de SPAM. Por esse motivo, a chamada da API, poderá ter um tempo de resposta diferente do comum.
 
 **Atributos da Requisição**
 
@@ -105,4 +105,4 @@ Retorno da requisição POST::
 
 .. note::
 
-	OBSERVAÇÃO: Perceba que foram enviados 2 e-mails adicionais, porém o sistema fez um disparo de 3. Isso aconteceu, pois o cliente já possuia 1 endereço de e-mail em seu cadastro. No momento do disparo, o sistema enviou para os e-mails já cadastrados no sistema mais os emails adicionais enviados na requisição
+	OBSERVAÇÃO: Perceba que foram enviados 2 e-mails adicionais, porém o sistema fez um disparo de 3 emails. Isso aconteceu, pois o cliente já possuia 1 endereço de e-mail em seu cadastro. No momento do disparo, o sistema enviou para os e-mails já cadastrados no sistema mais e também para os e-mails adicionais passados na requisição POST
