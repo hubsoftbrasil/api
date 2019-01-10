@@ -24,4 +24,5 @@ Abaixo estão todas as funções disponíveis do cliente
     extrato_conexao
     financeiro
     financeiro_email
+    financeiro_sms
     ordem_servico
