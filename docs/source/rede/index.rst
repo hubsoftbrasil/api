@@ -19,4 +19,4 @@ Abaixo estão todas as funções disponíveis das rotas de Rede
     :caption: Funções da API de REDE
 
     equipamento
-   	pop
+    pop
