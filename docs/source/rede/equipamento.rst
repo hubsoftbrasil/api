@@ -1,4 +1,4 @@
-Equipamentos
+Equipamento
 ============
 
 **Necessário**
