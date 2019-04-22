@@ -29,7 +29,7 @@ Os atributos podem conter os seguintes valores:
 
 
 :busca: nome_razaosocial, nome_fantasia, cpf_cnpj, codigo_cliente, telefone, login_radius, ipv4, mac
-:limit: Valor mínimo 1, Valor Máximo 50. Valor Default 5 (Ao não preencher)
+:limit: Valor mínimo 1, Valor Máximo 100. Valor Default 5 (Ao não preencher)
 :cancelado: sim, nao
 :order_by: nome_razaosocial, nome_fantasia, codigo_cliente, cpf_cnpj
 :order_type: asc, desc
