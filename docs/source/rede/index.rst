@@ -20,3 +20,4 @@ Abaixo estão todas as funções disponíveis das rotas de Rede
 
     equipamento
     pop
+    zona_atendimento
