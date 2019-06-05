@@ -26,3 +26,4 @@ Abaixo estão todas as funções disponíveis do cliente
     financeiro_email
     financeiro_sms
     ordem_servico
+    resetar_mac
