@@ -33,7 +33,10 @@ Os atributos podem conter os seguintes valores:
 
 Exemplo de requisição POST na rota do desbloqueio em confiança::
 
-	curl -X POST --header "Accept:application/json" https://endereco_servidor/api/v1/integracao/cliente/desbloqueio_confianca -d '{"id_cliente_servico":"11000", "dias_desbloqueio":"1"}' -k --header "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijg0MTM2O"
+	curl -X POST 
+	--header "Accept:application/json" 
+	--header "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijg0MTM2O"
+	https://endereco_servidor/api/v1/integracao/cliente/desbloqueio_confianca -d '{"id_cliente_servico":"11000", "dias_desbloqueio":"1"}' -k
 
 Veja que os paramêtros enviados na requisição POST devem obedecer a estrutura no formato JSON::
 

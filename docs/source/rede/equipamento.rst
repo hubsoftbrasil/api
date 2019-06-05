@@ -19,7 +19,10 @@ No método GET, será possível consultar os equipamentos que estão cadastrados
 
 Exemplo de requisição GET na rota de equipamentos::
 
-	curl -X GET --header "Accept:application/json" https://endereco_servidor/api/v1/integracao/rede/equipamento -k --header "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijg0MTM2O"
+	curl -X GET 
+	--header "Accept:application/json"
+	--header "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijg0MTM2O"
+	https://endereco_servidor/api/v1/integracao/rede/equipamento -k
 
 Retorno da requisição GET::
 	

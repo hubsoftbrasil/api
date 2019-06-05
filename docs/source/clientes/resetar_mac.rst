@@ -46,5 +46,5 @@ Retorno da requisição POST::
 
 	{
 		"status": "success",
-		"msg": "Desbloqueio em confiança realizado com sucesso até a data 26/11/2018"
+		"msg": ""Endereço MAC resetado com sucesso!"
 	}

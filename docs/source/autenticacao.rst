@@ -50,7 +50,10 @@ O TOKEN que deve ser enviado, é formado pelo token_type + access_token, no caso
 
 Exemplo de chamada em uma rota, enviando os dados do Token::
 
-	curl -X GET --header "Accept:application/json" https://endereco_servidor/api/v1/teste -k --header "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijg0MTM2O"
+	curl -X GET 
+	--header "Accept:application/json" 
+	--header "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijg0MTM2O"
+	https://endereco_servidor/api/v1/teste -k 
 
 .. warning::
 

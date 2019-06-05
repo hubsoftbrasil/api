@@ -36,7 +36,10 @@ Os atributos podem conter os seguintes valores:
 
 Exemplo de requisição GET na rota de cliente::
 
-	curl -X GET --header "Accept:application/json" https://endereco_servidor/api/v1/integracao/cliente?busca=nome_razaosocial&termo_busca=guilherme&limit=2&cancelado=nao&order_by=codigo_cliente&order_type=asc -k --header "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijg0MTM2O"
+	curl -X GET 
+	--header "Accept:application/json"
+	--header "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijg0MTM2O"
+	https://endereco_servidor/api/v1/integracao/cliente?busca=nome_razaosocial&termo_busca=guilherme&limit=2&cancelado=nao&order_by=codigo_cliente&order_type=asc -k
 
 Retorno da requisição GET::
 

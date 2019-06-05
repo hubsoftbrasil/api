@@ -35,7 +35,10 @@ Os atributos podem conter os seguintes valores:
 
 Exemplo de requisição POST na rota de crição de novo atendimento::
 
-	curl -X POST --header "Accept:application/json" https://endereco_servidor/api/v1/integracao/atendimento -d '{"id_cliente_servico":"11000", "descricao":"Abertura de atendimento de teste", "nome":"Nome do Usuário Solicitante", "telefone":"37999112233", "email":"teste@teste.com.br"}' -k --header "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijg0MTM2O"
+	curl -X POST 
+	--header "Accept:application/json"
+	--header "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijg0MTM2O"
+	https://endereco_servidor/api/v1/integracao/atendimento -d '{"id_cliente_servico":"11000", "descricao":"Abertura de atendimento de teste", "nome":"Nome do Usuário Solicitante", "telefone":"37999112233", "email":"teste@teste.com.br"}' -k
 
 
 Veja que os paramêtros enviados na requisição POST devem obedecer a estrutura no formato JSON::

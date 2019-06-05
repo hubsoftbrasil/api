@@ -19,7 +19,10 @@ No método GET, será possível consultar os POPs e seus equipamentos de conexã
 
 Exemplo de requisição GET na rota de POP::
 
-	curl -X GET --header "Accept:application/json" https://endereco_servidor/api/v1/integracao/rede/pop -k --header "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijg0MTM2O"
+	curl -X GET 
+    --header "Accept:application/json"
+    --header "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijg0MTM2O"
+    https://endereco_servidor/api/v1/integracao/rede/pop -k
 
 Retorno da requisição GET::
 
