@@ -32,7 +32,7 @@ No método POST, de ambas as rotas poderão ser realizadas as notificações e c
 :ramal: Número de ramal correspondente ao usuário **(Obrigatório caso o identificador_interno não seja informado)**
 :identificador_interno: ID Interno correspondente ao usuário **(Obrigatório caso o ramal não seja informado)**
 :id_cliente: Identificador único do cliente **(Obrigatório caso o telefone não seja informado)**
-:telefone: Telefone da ligação externa do PBX **(Obrigatório caso o id_cliente não seja informado)**
+:telefone: Telefone da ligação externa do PBX **(Obrigatório)**
 
 Os atributos podem conter os seguintes valores:
 
