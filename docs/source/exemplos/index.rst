@@ -8,7 +8,7 @@ Alguns exemplos básicos foram desenvolvidos para facilitar a visualização de 
 Abaixo estão listados exemplos em algumas linguagens de programação
 
 .. toctree::
-    :caption: Funções da API do cliente
+    :caption: Exemplos de Código
 
     javascript
     php
