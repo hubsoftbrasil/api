@@ -15,7 +15,7 @@ O endereço completo, ficará da seguinte forma::
 
 **GET**
 
-No método GET, será possível consultar os atendimentos em aberto/fechados dos clientes e obter o retorno no formato JSON como resposta. Os segintes parâmetros podem/devem ser utilizados:
+No método GET, será possível consultar os atendimentos em aberto/fechados dos clientes e obter o retorno no formato JSON como resposta. Os segintes parâmetros podem/devem ser utilizados:   
 
 :busca: (OBRIGATÓRIO) Tipo de busca que deseja fazer no cliente
 :termo_busca: (OBRIGATÓRIO) Termo utilizado para fazer a busca
@@ -36,6 +36,24 @@ Os atributos podem conter os seguintes valores:
 :order_type: asc,desc. Default: asc (Ao não preencher)
 :data_inicio: Campo no formato DateTime (YYYY-MM-DD)
 :data_fim: Campo no formato DateTime (YYYY-MM-DD)
+
+.. list-table::
+   :header-rows: 1
+   
+   *  -  Atributo
+      -  Descrição
+      -  Obrigatório
+      -  Valores Aceitos
+
+   *  -  busca
+      -  Tipo de busca que deseja fazer no cliente
+      -  Sim
+      -  codigo_cliente, cpf_cnpj, id_cliente_servico, protocolo
+
+   *  -  termo_busca
+      -  Termo utilizado para fazer a busca
+      -  Sim
+      -  Campo Livre
 
 Exemplo de requisição GET na rota do cliente::
 
