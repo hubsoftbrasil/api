@@ -17,21 +17,69 @@ O endereço completo, ficará da seguinte forma::
 
 No método POST, será possível consultar os atendimentos em aberto/fechados dos clientes e obter o retorno no formato JSON como resposta. Os segintes parâmetros podem/devem ser utilizados:
 
-:id_cliente_servico: (OBRIGATÓRIO) Identificador do serviço do cliente
-:descricao: (OBRIGATÓRIO) Descrição detalhada do atendimento / solicitação do cliente
-:nome: (OBRIGATÓRIO) Nome do cliente / usuário solicitando do atendimento
-:telefone: (OBRIGATÓRIO) Telefone do cliente solicitante
-:email: (OPCIONAL) E-mail do cliente solicitando
-:abrir_os: (OPCIONAL) Parâmetro true ou false, que indica se deve abrir uma OS ou não
+.. list-table::
+   :header-rows: 1
+   
+   *  -  Atributo
+      -  Descrição
+      -  Obrigatório
+
+   *  -  id_cliente_servico
+      -  Identificador do serviço do cliente
+      -  Sim
+
+   *  -  descricao
+      -  Descrição detalhada do atendimento
+      -  Sim
+
+   *  -  nome
+      -  Nome do solicitante
+      -  Sim
+
+   *  -  telefone
+      -  Telefone do solicitante
+      -  Sim
+
+   *  -  email
+      -  Email do solicitante
+      -  Não
+
+   *  -  abrir_os
+      -  Indica se deve abrir Ordem de Serviço ou não
+      -  Não
 
 Os atributos podem conter os seguintes valores:
 
-:id_cliente_servico: (OBRIGATÓRIO) Campo deverá conter um número inteiro
-:descricao: (OBRIGATÓRIO) A descrição pode ser preenchida livremente. 
-:nome: (OBRIGATÓRIO) Nome do cliente pode ser preenchido livremente
-:telefone: (OBRIGATÓRIO) Telefone deve ser preenchido no formato DDNNNNNNNNN
-:email: (OPCIONAL) E-mail do cliente não é obrigatório
-:abrir_os: (OPCIONAL) Caso enviado, deve conter um valor boolean (true | false)
+.. list-table::
+   :header-rows: 1
+   
+   *  -  Atributo
+      -  Descrição
+      -  Valor Default
+
+   *  -  id_cliente_servico
+      -  Número Inteiro
+      -  Nenhum
+
+   *  -  descricao
+      -  Campo Livre (Qualquer valor é aceito)
+      -  Nenhum
+
+   *  -  nome
+      -  Campo Livre (Qualquer valor é aceito)
+      -  Nenhum
+
+   *  -  telefone
+      -  Telefone no formato (DDNNNNNNNNN).
+      -  Nenhum
+
+   *  -  email
+      -  Caso enviado deve ser no formato e-mail (EX: user@dominio.com)
+      -  Nenhum
+
+   *  -  abrir_os
+      -  Caso enviado, deve conter um valor boolean (true | false)
+      -  asc
 
 Exemplo de requisição POST na rota de crição de novo atendimento::
 
