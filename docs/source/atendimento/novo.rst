@@ -79,7 +79,7 @@ Os atributos podem conter os seguintes valores:
 
    *  -  abrir_os
       -  Caso enviado, deve conter um valor boolean (true | false)
-      -  asc
+      -  false
 
 Exemplo de requisição POST na rota de crição de novo atendimento::
 
