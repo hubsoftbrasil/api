@@ -29,19 +29,61 @@ No método POST, de ambas as rotas poderão ser realizadas as notificações e c
 
 **Atributos da Requisição de ambas as rotas**
 
-:ramal: Número de ramal correspondente ao usuário **(Obrigatório caso o identificador_interno não seja informado)**
-:identificador_interno: ID Interno correspondente ao usuário **(Obrigatório caso o ramal não seja informado)**
-:codigo_cliente: Código único do cliente **(Opcional)**
-:id_cliente: Identificador (chave primária) do cliente **(Opcional)**
-:telefone: Telefone da ligação externa do PBX **(Obrigatório)**
+.. list-table::
+   :header-rows: 1
+   
+   *  -  Atributo
+      -  Descrição
+      -  Obrigatório
+
+   *  -  ramal
+      -  Número de ramal correspondente ao usuário
+      -  **(Obrigatório caso o identificador_interno não seja informado)**
+
+   *  -  identificador_interno
+      -  ID Interno correspondente ao usuário
+      -  **(Obrigatório caso o ramal não seja informado)**
+
+   *  -  codigo_cliente
+      -  Código único do cliente
+      -  Não
+
+   *  -  id_cliente
+      -  Identificador (chave primária) do cliente
+      -  Não
+
+   *  -  telefone
+      -  Telefone da ligação externa do PBX
+      -  Não
 
 Os atributos podem conter os seguintes valores:
 
-:ramal: Deve ser um valor numérico
-:identificador_interno: Deve ser um valor alfanumérico
-:codigo_cliente: Deve ser um valor númerico e existir na base de dados
-:id_cliente: Deve ser um valor númerico e existir na base de dados
-:telefone: Deve ser um valor númerico
+.. list-table::
+   :header-rows: 1
+   
+   *  -  Atributo
+      -  Descrição
+      -  Valor Default
+
+   *  -  ramal
+      -  Deve ser um valor numérico
+      -  Nenhum
+
+   *  -  identificador_interno
+      -  Deve ser um valor alfanumérico
+      -  Nenhum
+
+   *  -  codigo_cliente
+      -  Deve ser um valor númerico e existir na base de dados
+      -  Nenhum
+
+   *  -  id_cliente
+      -  Deve ser um valor númerico e existir na base de dados
+      -  Nenhum
+
+   *  -  telefone
+      -  Deve ser um valor númerico
+      -  Nenhum
 
 Exemplo de requisição POST na rota de notificação de ligação::
         
