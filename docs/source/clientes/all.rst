@@ -1,4 +1,4 @@
-Consulta
+All (Todos os Clientes)
 ============
 
 **Necessário**

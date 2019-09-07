@@ -55,23 +55,23 @@ Os atributos podem conter os seguintes valores:
 
    *  -  busca
       -  login
-      -  Sim
+      -  Nenhum
 
    *  -  termo_busca
       -  Campo livre
-      -  Não
+      -  Nehum
 
    *  -  limit
-      -  Valor mínimo 1, Valor máximo 50. Valor Default: 20 (Ao não preencher)
-      -  Não
+      -  Valor mínimo 1, Valor máximo 50
+      -  20
 
    *  -  data_inicio
-      -  Campo no formato DateTime (YYYY-MM-DD). Valor Padrão será a data atual menos 30 dias
-      -  Não
+      -  Campo no formato DateTime (YYYY-MM-DD).
+      -  Data atual menos 30 dias
 
    *  -  data_fim
-      -  Campo no formato DateTime (YYYY-MM-DD). Valor Padrão será a data atual
-      -  Não
+      -  Campo no formato DateTime (YYYY-MM-DD).
+      -  Data atual
 
 Exemplo de requisição GET na rota do cliente::
 
