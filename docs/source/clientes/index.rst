@@ -18,6 +18,7 @@ Abaixo estão todas as funções disponíveis do cliente
 .. toctree::
     :caption: Funções da API do cliente
 
+    all
     atendimento
     consulta
     desbloqueio_confianca
