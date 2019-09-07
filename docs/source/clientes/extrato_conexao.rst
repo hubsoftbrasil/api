@@ -17,19 +17,61 @@ O endereço completo, ficará da seguinte forma::
 
 No método GET, será possível consultar os extratos de conexão de um determinaod login e obter o retorno no formato JSON como resposta. Os segintes parâmetros podem/devem ser utilizados:
 
-:busca: (OBRIGATÓRIO) Tipo de busca que deseja fazer no cliente
-:termo_busca: (OBRIGATÓRIO) Termo utilizado para fazer a busca
-:limit: Limite de resultados
-:data_inicio: Data de Início (Utiliza a data de vencimento como base)
-:data_fim: Data de Fim (Utiliza a data de vencimento como base)
+.. list-table::
+   :header-rows: 1
+   
+   *  -  Atributo
+      -  Descrição
+      -  Obrigatório
+
+   *  -  busca
+      -  Tipo de busca que deseja fazer no cliente
+      -  Sim
+
+   *  -  termo_busca
+      -  Termo utilizado para fazer a busca
+      -  Sim
+
+   *  -  limit
+      -  Limite de resultados
+      -  Não
+
+   *  -  data_inicio
+      -  Data de Início (Utiliza a data de vencimento como base)
+      -  Não
+
+   *  -  data_fim
+      -  Data de Fim (Utiliza a data de vencimento como base)
+      -  Não
 
 Os atributos podem conter os seguintes valores:
 
-:busca: (OBRIGATÓRIO) login
-:termo_busca: (OBRIGATÓRIO) Campo livre
-:limit: Valor mínimo 1, Valor máximo 50. Valor Default: 20 (Ao não preencher)
-:data_inicio: Campo no formato DateTime (YYYY-MM-DD). Valor Padrão será a data atual menos 30 dias
-:data_fim: Campo no formato DateTime (YYYY-MM-DD). Valor Padrão será a data atual
+.. list-table::
+   :header-rows: 1
+   
+   *  -  Atributo
+      -  Descrição
+      -  Valor Default
+
+   *  -  busca
+      -  login
+      -  Sim
+
+   *  -  termo_busca
+      -  Campo livre
+      -  Não
+
+   *  -  limit
+      -  Valor mínimo 1, Valor máximo 50. Valor Default: 20 (Ao não preencher)
+      -  Não
+
+   *  -  data_inicio
+      -  Campo no formato DateTime (YYYY-MM-DD). Valor Padrão será a data atual menos 30 dias
+      -  Não
+
+   *  -  data_fim
+      -  Campo no formato DateTime (YYYY-MM-DD). Valor Padrão será a data atual
+      -  Não
 
 Exemplo de requisição GET na rota do cliente::
 

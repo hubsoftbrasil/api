@@ -3,15 +3,16 @@ Consulta
 
 **Necessário**
 
-Para fazer requisições nos dados de clientes, é necessário que você já possua o TOKEN, conseguido na etapa (Autenticação)
+Para fazer requisições nos dados de clientes, é necessário que você já possua o TOKEN, conseguido na etapa (Autenticação).
+OBS: Essa rota irá retornar todos os dados de clientes, caso nenhum parâmetro seja enviado. Utilize com cautela.
 
 As requisições de clientes, devem ser feitos na rota::
 
-	/api/v1/integracao/cliente
+	/api/v1/integracao/cliente/all
 
 O endereço completo, ficará da seguinte forma::
 
-	https://endereco_do_servidor/api/v1/integracao/cliente
+	https://endereco_do_servidor/api/v1/integracao/cliente/all
 
 **GET**
 
@@ -25,20 +26,16 @@ Os seguintes parâmetros podem/devem ser utilizados:
       -  Descrição
       -  Obrigatório
 
-   *  -  busca
-      -  Tipo de busca que deseja fazer no cliente
-      -  Sim
+   *  -  data_inicio
+      -  Data de Cadastro Inicial
+      -  Não
 
-   *  -  termo_busca
-      -  Termo utilizado para fazer a busca
-      -  Sim
+   *  -  data_fim
+      -  Data de Cadastro Final
+      -  Não
 
    *  -  limit
       -  Limite de resultados
-      -  Não
-
-   *  -  cancelado
-      -  Informa se deseja trazer os serviços cancelados ou não
       -  Não
 
    *  -  order_by
@@ -58,21 +55,17 @@ Os atributos podem conter os seguintes valores:
       -  Descrição
       -  Valor Default
 
-   *  -  busca
-      -  nome_razaosocial, nome_fantasia, cpf_cnpj, codigo_cliente, telefone, login_radius, ipv4, mac
+   *  -  data_inicio
+      -  Valor no formato DateTime (YYYY-MM-DD)
       -  Nenhum
 
-   *  -  termo_busca
-      -  Campo livre (Qualquer valor será aceito)
+   *  -  data_fim
+      -  Valor no formato DateTime (YYYY-MM-DD) Obs: Maior ou igual data_inicio
       -  Nenhum
 
    *  -  limit
-      -  Valor mínimo 1, Valor Máximo 100.
-      -  5
-
-   *  -  cancelado
-      -  sim,nao
-      -  nao
+      -  Número Inteiro maior que 0
+      -  Nenhum
 
    *  -  order_by
       -  data_cadastro,data_fechamento
@@ -87,7 +80,7 @@ Exemplo de requisição GET na rota de cliente::
 	curl -X GET 
 	--header "Accept:application/json"
 	--header "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijg0MTM2O"
-	https://endereco_servidor/api/v1/integracao/cliente?busca=nome_razaosocial&termo_busca=guilherme&limit=2&cancelado=nao&order_by=codigo_cliente&order_type=asc -k
+	https://endereco_servidor/api/v1/integracao/cliente/all -k
 
 Retorno da requisição GET::
 
@@ -159,7 +152,7 @@ Retorno da requisição GET::
 	                        "cidade":"Divinópolis"
 	                    },
 	                    "endereco_instalacao":{
-	                        "completo":"RUA MINAS GERAIS, 1793 - IPIRANGA, DIVINóPOLIS/MG",
+	                        "completo":"RUA MINAS GERAIS, 1793 - IPIRANGA, DIVINÓPOLIS/MG",
 	                        "logradouro":"RUA",
 	                        "endereco":"MINAS GERAIS",
 	                        "numero":"1793",
@@ -171,7 +164,7 @@ Retorno da requisição GET::
 	                        "cidade":"Divinópolis"
 	                    },
 	                    "endereco_fiscal":{
-	                        "completo":"RUA GOIAS, 86 - PORTO VELHO, DIVINóPOLIS/MG - APTO 101",
+	                        "completo":"RUA GOIAS, 86 - PORTO VELHO, DIVINÓPOLIS/MG - APTO 101",
 	                        "logradouro":"RUA",
 	                        "endereco":"GOIAS",
 	                        "numero":"86",
@@ -183,7 +176,7 @@ Retorno da requisição GET::
 	                        "cidade":"Divinópolis"
 	                    },
 	                    "endereco_cobranca":{
-	                        "completo":"RUA SEBASTIAO PARDINI, 58 - CENTRO, DIVINóPOLIS/MG - 202",
+	                        "completo":"RUA SEBASTIAO PARDINI, 58 - CENTRO, DIVINÓPOLIS/MG - 202",
 	                        "logradouro":"RUA",
 	                        "endereco":"SEBASTIAO PARDINI",
 	                        "numero":"58",
@@ -302,11 +295,7 @@ Retorno da requisição GET::
 	    ]
 	}
 
-No exemplo acima, foi feito uma requisição utilizando os seguintes parâmetros:
+.. warning::
 
-- busca: nome_razaosocial
-- limit: 2 (Preciso de apenas 2 resultados)
-- cancelado: nao (Quero apenas planos ativos)
-- order_by: codigo_cliente
-- order_type: asc (Do maior para o menor)
+	IMPORTANTE: Por se tratar de uma requisição que poderá trazer uma quantidade muito grande dados, o sistema irá armazenar o resultado da requisição em um Cache. Portanto, em chamadas consecutivas em curtos intervalos de tempo dessa rota, o sistema irá retornar o mesmo resultado.
 

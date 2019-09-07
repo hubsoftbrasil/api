@@ -17,25 +17,81 @@ O endereço completo, ficará da seguinte forma::
 
 No método GET, será possível consultar as faturas em aberto/liquidadas dos clientes e obter o retorno no formato JSON como resposta. Os segintes parâmetros podem/devem ser utilizados:
 
-:busca: (OBRIGATÓRIO) Tipo de busca que deseja fazer no cliente
-:termo_busca: (OBRIGATÓRIO) Termo utilizado para fazer a busca
-:limit: Limite de resultados
-:apenas_pendente: Informa de deseja trazer apenas as faturas pendentes
-:order_by: Campo que será utilizado para ordenação
-:order_type: Tipo da Ordenação
-:data_inicio: Data de Início (Utiliza a data de vencimento como base)
-:data_fim: Data de Fim (Utiliza a data de vencimento como base)
+.. list-table::
+   :header-rows: 1
+   
+   *  -  Atributo
+      -  Descrição
+      -  Obrigatório
+
+   *  -  busca
+      -  Tipo de busca que deseja fazer no cliente
+      -  Sim
+
+   *  -  termo_busca
+      -  Termo utilizado para fazer a busca
+      -  Sim
+
+   *  -  limit
+      -  Limite de resultados
+      -  Não
+
+   *  -  apenas_pendente
+      -  Informa de deseja trazer apenas as faturas pendentes
+      -  Não
+
+   *  -  order_by
+      -  Campo que será utilizado para ordenação
+      -  Não
+
+   *  -  order_type
+      -  Tipo da Ordenação
+      -  Não
+
+   *  -  data_inicio
+      -  Data de Início (Utiliza a data de vencimento como base)
+      -  Não
+
+   *  -  data_fim
+      -  Data de Fim (Utiliza a data de vencimento como base)
+      -  Não
 
 Os atributos podem conter os seguintes valores:
 
-:busca: (OBRIGATÓRIO) cpf_cnpj, codigo_cliente, id_cliente_servico
-:termo_busca: (OBRIGATÓRIO) Campo livre
-:limit: Valor mínimo 1, Valor máximo 50. Valor Default: 20 (Ao não preencher)
-:apenas_pendente: sim,nao. Valor default: sim (Ao não preencher)
-:order_by: data_vencimento,valor. Default: data_vencimento (Ao não preencher)
-:order_type: asc,desc. Default: asc (Ao não preencher)
-:data_inicio: Campo no formato DateTime (YYYY-MM-DD)
-:data_fim: Campo no formato DateTime (YYYY-MM-DD)
+.. list-table::
+   :header-rows: 1
+   
+   *  -  busca
+      -  cpf_cnpj, codigo_cliente, id_cliente_servico
+      -  Nenhum
+
+   *  -  termo_busca
+      -  Campo livre
+      -  Sim
+
+   *  -  limit
+      -  Valor mínimo 1, Valor máximo 50.
+      -  20
+
+   *  -  apenas_pendente
+      -  sim,nao.
+      -  sim
+
+   *  -  order_by
+      -  data_vencimento,valor.
+      -  data_vencimento
+
+   *  -  order_type
+      -  asc,desc.
+      -  asc
+
+   *  -  data_inicio
+      -  Campo no formato DateTime (YYYY-MM-DD)
+      -  Nenhum
+
+   *  -  data_fim
+      -  Campo no formato DateTime (YYYY-MM-DD)
+      -  Nenhum
 
 Exemplo de requisição GET na rota do cliente::
 
