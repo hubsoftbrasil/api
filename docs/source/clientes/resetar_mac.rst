@@ -23,11 +23,29 @@ No método POST, será possível efetuar o desbloqueio em confiança, pela quant
 
 **Atributos da Requisição**
 
-:id_cliente_servico: (OBRIGATÓRIO) Identificador único do serviço do cliente
+.. list-table::
+   :header-rows: 1
+   
+   *  -  Atributo
+      -  Descrição
+      -  Obrigatório
+
+   *  -  id_cliente_servico
+      -  Identificador único do serviço do cliente
+      -  Sim
 
 Os atributos podem conter os seguintes valores:
 
-:id_cliente_servico: (OBRIGATÓRIO) Deve conter um número inteiro maior que 0
+.. list-table::
+   :header-rows: 1
+   
+   *  -  Atributo
+      -  Descrição
+      -  Valor Default
+
+   *  -  id_cliente_servico
+      -  Deve conter um número inteiro maior que 0
+      -  Nenhum
 
 Exemplo de requisição POST na rota do desbloqueio em confiança::
 

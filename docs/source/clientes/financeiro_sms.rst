@@ -23,13 +23,37 @@ No método POST, será possível fazer o disparo da fatura do cliente por SMS. P
 
 **Atributos da Requisição**
 
-:id_fatura: (OBRIGATÓRIO) Identificador único da fatura do cliente
-:telefone_adicional: (OPCIONAL). Outros telefones adicionais, podem ser enviados na requisição.
+.. list-table::
+   :header-rows: 1
+   
+   *  -  Atributo
+      -  Descrição
+      -  Obrigatório
+
+   *  -  id_fatura
+      -  Identificador único da fatura do cliente
+      -  Sim
+
+   *  -  telefone_adicional
+      -  Outros telefones adicionais, podem ser enviados na requisição.
+      -  Não
 
 Os atributos podem conter os seguintes valores:
 
-:id_cliente_servico: (OBRIGATÓRIO) Deve conter um número inteiro maior que 0
-:telefone_adicional: Deve conter um array de strings com os telefones no formato DDNNNNNNNN ou DDNNNNNNNNN
+.. list-table::
+   :header-rows: 1
+   
+   *  -  Atributo
+      -  Descrição
+      -  Valor Default
+
+   *  -  id_fatura
+      -  Deve conter um número inteiro maior que 0
+      -  Nenhum
+
+   *  -  telefone_adicional
+      -  Deve conter um array de strings com os telefones no formato DDNNNNNNNN ou DDNNNNNNNNN
+      -  Nenhum
 
 Exemplo de requisição POST na rota do envio de e-mail::
 

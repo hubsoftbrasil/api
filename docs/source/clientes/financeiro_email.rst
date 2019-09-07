@@ -27,13 +27,37 @@ No método POST, será possível fazer o disparo da fatura do cliente por e-mail
 
 **Atributos da Requisição**
 
-:id_fatura: (OBRIGATÓRIO) Identificador único da fatura do cliente
-:email_adicional: (OPCIONAL). Outros e-mails adicionais, podem ser enviados na requisição.
+.. list-table::
+   :header-rows: 1
+   
+   *  -  Atributo
+      -  Descrição
+      -  Obrigatório
+
+   *  -  id_fatura
+      -  Identificador único da fatura do cliente
+      -  Sim
+
+   *  -  email_adicional
+      -  Outros e-mails adicionais, podem ser enviados na requisição.
+      -  Não
 
 Os atributos podem conter os seguintes valores:
 
-:id_cliente_servico: (OBRIGATÓRIO) Deve conter um número inteiro maior que 0
-:email_adicional: Deve conter um array de strings (emails)
+.. list-table::
+   :header-rows: 1
+   
+   *  -  Atributo
+      -  Descrição
+      -  Valor Default
+
+   *  -  id_fatura
+      -  Deve conter um número inteiro maior que 0
+      -  Nenhum
+
+   *  -  email_adicional
+      -  Deve conter um array de strings (emails)
+      -  Nenhum
 
 Exemplo de requisição POST na rota do envio de e-mail::
 
