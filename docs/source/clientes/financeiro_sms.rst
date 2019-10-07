@@ -74,30 +74,37 @@ Veja que os paramêtros enviados na requisição POST devem obedecer a estrutura
 
 Retorno da requisição POST::
 
-	{
-	    "status": "success",
-	    "msg": "Um total de 3/3 SMS foram enviados com sucesso",
-	    "sms_enviados": [
-	        {
-	            "id_cliente": 12013,
-	            "telefone": "5537999999999",
-	            "conteudo": "HUBSOFT%3A+Ola+BIANCA%2C+sua+fatura+com+valor+80.00%2C+vence+em+08-01-2019.+Codigo+de+Barras%3A+75691.31662+01006.726101+27660.830012+4+77650000008170",
-	            "status": "enviado_para_gateway"
-	        },
-	        {
-	            "id_cliente": 12013,
-	            "telefone": "11988887777",
-	            "conteudo": "HUBSOFT%3A+Ola+BIANCA%2C+sua+fatura+com+valor+80.00%2C+vence+em+08-01-2019.+Codigo+de+Barras%3A+75691.31662+01006.726101+27660.830012+4+77650000008170",
-	            "status": "enviado_para_gateway"
-	        },
-	        {
-	            "id_cliente": 12013,
-	            "telefone": "1188887776",
-	            "conteudo": "HUBSOFT%3A+Ola+BIANCA%2C+sua+fatura+com+valor+80.00%2C+vence+em+08-01-2019.+Codigo+de+Barras%3A+75691.31662+01006.726101+27660.830012+4+77650000008170",
-	            "status": "enviado_para_gateway"
-	        },
-	    ]
-	}
+        {
+        "status": "success",
+        "msg": "As faturas foram adicionadas para serem disparadas por SMS. Por se tratar de um processo de envio massivo, o sistema fará o agendamento do disparo. Dentro de alguns minutos o cliente irá receber as mensgens SMS com os dados das faturas. OBS: Para cada fatura selecionada será enviado um SMS",
+        "job": {
+            "tries": 1,
+            "timeout": 172800,
+            "memory": 2048,
+            "faturas": [
+                {
+                    "id_fatura": 50949
+                }
+            ],
+            "telefones": [
+                {
+                    "id_contato": null,
+                    "id_cliente": 12025,
+                    "telefone": "37999931412",
+                    "nome": "MACIEL RODRIGUES",
+                    "permite_enviar_sms": true,
+                    "origem": "cadastro_cliente"
+                }
+            ],
+            "connection": null,
+            "queue": "teste",
+            "delay": {
+                "date": "2019-10-07 13:20:51.000000",
+                "timezone_type": 3,
+                "timezone": "America/Sao_Paulo"
+            }
+        }
+    }
 
 .. note::
 
