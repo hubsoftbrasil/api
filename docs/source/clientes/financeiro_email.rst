@@ -78,57 +78,56 @@ Veja que os paramêtros enviados na requisição POST devem obedecer a estrutura
 
 Retorno da requisição POST::
 
-	{
-	    "status": "success",
-	    "msg": "Um total de 3/3 email(s) foram enviados com sucesso",
-	    "emails_enviados": [
-	        {
-	            "id_cliente": 12013,
-	            "id_usuario": null,
-	            "id_usuario_envio": 1,
-	            "host": "mx1.weblink.com.br",
-	            "email_origem": "teste@hubsoft.com.br",
-	            "email_destino": "biancacouto16@gmail.com",
-	            "tipo_envio": "manual",
-	            "tipo_documento": "fatura",
-	            "data_envio": "2019-01-10 08:59:15",
-	            "lido": false,
-	            "id_email_enviado": 278,
-	            "data_envio_br": "10/01/2019 08:59",
-	            "data_envio_timestamp": 1547117955000
-	        },
-	        {
-	            "id_cliente": 12013,
-	            "id_usuario": null,
-	            "id_usuario_envio": 1,
-	            "host": "smtp.isimples.com.br",
-	            "email_origem": "hubsoftteste@isimples.com.br",
-	            "email_destino": "email1@email.com",
-	            "tipo_envio": "manual",
-	            "tipo_documento": "fatura",
-	            "data_envio": "2019-01-10 08:59:15",
-	            "lido": false,
-	            "id_email_enviado": 279,
-	            "data_envio_br": "10/01/2019 08:59",
-	            "data_envio_timestamp": 1547117955000
-	        },
-	        {
-	            "id_cliente": 12013,
-	            "id_usuario": null,
-	            "id_usuario_envio": 1,
-	            "host": "mx1.weblink.com.br",
-	            "email_origem": "teste@hubsoft.com.br",
-	            "email_destino": "email2@email.com",
-	            "tipo_envio": "manual",
-	            "tipo_documento": "fatura",
-	            "data_envio": "2019-01-10 08:59:59",
-	            "lido": false,
-	            "id_email_enviado": 280,
-	            "data_envio_br": "10/01/2019 08:59",
-	            "data_envio_timestamp": 1547117999000
-	        }
-	    ]
-	}
+    {
+        "status": "success",
+        "msg": "As faturas foram adicionadas para serem disparadas por e-mail. Por se tratar de um processo de envio massivo, o sistema fará o agendamento do disparo. Dentro de alguns minutos o cliente irá receber os e-mails com as faturas. OBS: Para cada fatura selecionada será enviado um e-mail",
+        "job": {
+            "tries": 1,
+            "timeout": 172800,
+            "memory": 2048,
+            "faturas": [
+                {
+                    "id_fatura": 50949
+                }
+            ],
+            "emails": [
+                {
+                    "id_contato": null,
+                    "id_cliente": 12025,
+                    "email": "macielrsf@gmail.com",
+                    "nome": "MACIEL RODRIGUES",
+                    "name": "MACIEL RODRIGUES",
+                    "permite_enviar_email": true,
+                    "origem": "cadastro_cliente"
+                },
+                {
+                    "id_contato": null,
+                    "id_cliente": 12025,
+                    "email": "macielrsf@gmail.com",
+                    "nome": "MACIEL RODRIGUES",
+                    "name": "MACIEL RODRIGUES",
+                    "permite_enviar_email": true,
+                    "origem": "cadastro_cliente"
+                },
+                {
+                    "id_contato": 12035,
+                    "id_cliente": 12025,
+                    "email": "macielrsf@gmail.com",
+                    "nome": "MACIEL RODRIGUES",
+                    "name": "MACIEL RODRIGUES",
+                    "permite_enviar_email": "sim",
+                    "origem": "contato"
+                }
+            ],
+            "connection": null,
+            "queue": "hubsoft-prioritario",
+            "delay": {
+                "date": "2019-10-07 13:39:48.000000",
+                "timezone_type": 3,
+                "timezone": "America/Sao_Paulo"
+            }
+        }
+    }
 
 .. note::
 
