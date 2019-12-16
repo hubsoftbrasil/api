@@ -19,7 +19,7 @@ No método GET, será possível efetuar a desconexão da conexão do cliente.
 
 .. warning::
 
-	IMPORTANTE: É importante lembrar que a desconexão apenas será realizada se a porta INCOMING estiver habilitado no equipamento de conexão, nas configurações de rede do HubSoft e também é necessário que o servidor RADIUS possua comunicação com o equipamento de conexão (Concentrador) no momento da solicitação.
+	IMPORTANTE: A desconexão apenas será realizada se a porta INCOMING estiver habilitada no equipamento de conexão (Concentrador). É necessário estar configurado no HubSoft em Rede > Equipamentos de Conexão e também é importante que o servidor RADIUS possua comunicação com o equipamento de conexão (Concentrador) no momento da solicitação. Todos esses fatores devem trabalhar em conjunto, para que o sistema consiga executar a operação com sucesso.
 
 **Atributos da Requisição**
 
@@ -65,8 +65,8 @@ Retorno da requisição GET em caso de sucesso::
 
 Retorno da requisição GET em caso de erro::
 
-{
-    "status": "error",
-    "msg": "A desconexão não foi bem sucedida para o login hubsoft!",
-    "errors": []
-}
+	{
+		"status": "error",
+    	"msg": "A desconexão não foi bem sucedida para o login hubsoft!",
+    	"errors": []
+	}
