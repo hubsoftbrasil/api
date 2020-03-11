@@ -24,6 +24,10 @@ No método PUT, será possível editar e fechar os atendimentos em abertos dos c
       -  Descrição
       -  Obrigatório
 
+   *  -  descricao
+      -  Descrição de abertura do atendimento (Opcional)
+      -  Não
+
    *  -  fechar_atendimento
       -  Indica se deve ser fechado os atendimento e suas ordens de serviço
       -  Sim
@@ -41,9 +45,13 @@ Os atributos podem conter os seguintes valores:
       -  Descrição
       -  Valor Default
 
+   *  -  descricao
+      -  Texto
+      -  Nenhum
+
    *  -  fechar_atendimento
       -  Boolean ( Verdadeiro ou Falso )
-      -  Nenhum
+      -  false
 
    *  -  parametros
       -  Array Associativo, JSON
