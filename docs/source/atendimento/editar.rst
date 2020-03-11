@@ -49,10 +49,6 @@ Os atributos podem conter os seguintes valores:
       -  Array Associativo, JSON
       -  Nenhum
 
-.. ::note
-
-    É necessário fornecer o ID do atendimento na rota da requisição.
-
 Exemplo de requisição PUT na rota de edição do atendimento::
 
 	curl -X PUT 
@@ -72,7 +68,7 @@ Veja que os paramêtros enviados na requisição PUT devem obedecer a estrutura 
             "fechar_atendimento": true
         }
 
-Retorno da requisição POST::
+Retorno da requisição PUT::
 
         {
           "status": "success",
@@ -115,3 +111,7 @@ Retorno da requisição POST::
             "percentual_color_class": "white-fg md-red-bg"
           }
         }
+        
+.. ::note
+
+    É necessário fornecer o ID do atendimento na rota da requisição.
