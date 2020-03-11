@@ -19,3 +19,4 @@ Abaixo estão todas as funções disponíveis do atendimento
     :caption: Funções da API de Atendimento
 
     novo
+    editar
