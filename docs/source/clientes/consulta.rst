@@ -41,6 +41,10 @@ Os seguintes parâmetros podem/devem ser utilizados:
       -  Informa se deseja trazer os serviços cancelados ou não
       -  Não
 
+   *  -  ultima_conexao
+      -  Informa se deseja trazer os dados da última conexão
+      -  Não
+
    *  -  order_by
       -  Campo que será utilizado para ordenação
       -  Não
@@ -71,6 +75,10 @@ Os atributos podem conter os seguintes valores:
       -  5
 
    *  -  cancelado
+      -  sim,nao
+      -  nao
+
+   *  -  ultima_conexao
       -  sim,nao
       -  nao
 
@@ -126,6 +134,17 @@ Retorno da requisição GET::
 	                    "senha":"123",
 	                    "ipv4":"10.99.2.203",
 	                    "ipv6":null,
+	                    "ultima_conexao": {
+                        	"conectado": true,
+	                        "ultima_conexao_datetime": "2019-12-15 18:22:24-03",
+	                        "ultima_desconexao_datetime": null,
+	                        "ultima_conexao": "15/12/2019 18:22:24",
+	                        "ultima_desconexao": null,
+	                        "ultimo_ipv4": "189.90.210.100",
+	                        "ultimo_nas_ip": "10.28.33.20",
+	                        "status_txt": "CONECTADO HÁ 0 MES(ES), 0 DIA(S), 22 HORA(S) e 53 MINUTO(S) - 189.90.210.100(10.28.50.20)",
+	                        "status_txt_resumido": "CONECTADO HÁ 0 MES(ES), 0 DIA(S), 22 HORA(S) e 53 MINUTO(S)"
+	                    }
 	                    "interface":{
 	                        "nome":"PON5",
 	                        "tipo":"gpon",
@@ -228,6 +247,7 @@ Retorno da requisição GET::
 	                    "senha":"123",
 	                    "ipv4":"10.99.1.118",
 	                    "ipv6":null,
+	                    "ultima_conexao"=>[],
 	                    "interface":{
 	                        "nome":"PON5",
 	                        "tipo":"gpon",
@@ -309,4 +329,8 @@ No exemplo acima, foi feito uma requisição utilizando os seguintes parâmetros
 - cancelado: nao (Quero apenas planos ativos)
 - order_by: codigo_cliente
 - order_type: asc (Do maior para o menor)
+
+.. warning::
+
+	IMPORTANTE: Para trazer os dados da última autenticação, é necessário enviar o parâmetro ultima_conexao=sim. A última conexão utiliza como base o extrato de conexão do RADIUS, por isso, caso existam problemas na rede do provedor, essa informação poderá não ser 100% confiável, uma vez, que ela depende que o concentrador do provedor, informe ao servidor RADIUS o estado atual da conexão do cliente.
 

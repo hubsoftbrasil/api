@@ -61,6 +61,10 @@ Os atributos podem conter os seguintes valores:
 .. list-table::
    :header-rows: 1
    
+   *  -  Atributo
+      -  Descrição
+      -  Valor Default   
+
    *  -  busca
       -  cpf_cnpj, codigo_cliente, id_cliente_servico
       -  Nenhum

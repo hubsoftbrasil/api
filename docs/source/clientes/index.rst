@@ -22,6 +22,7 @@ Abaixo estão todas as funções disponíveis do cliente
     atendimento
     consulta
     desbloqueio_confianca
+    desconexao
     extrato_conexao
     financeiro
     financeiro_email
