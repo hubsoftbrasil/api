@@ -111,65 +111,106 @@ Retorno da requisição GET::
 	    "msg": "Dados consultados com sucesso",
 	    "faturas": [
 	        {
-	            "id_fatura": 36398,
-	            "nosso_numero": "1",
+	            "id_fatura": 36397,
+	            "nosso_numero": "272064",
 	            "nosso_numero_dv": null,
 	            "linha_digitavel": null,
+	            "codigo_barras": null,
 	            "link": null,
+	            "agencia_codigo_beneficiario": null,
+	            "beneficiario": null,
+	            "numero_documento": null,
+	            "especie": null,
+	            "especie_dinheiro": "R$",
+	            "aceite": null,
+	            "local_pagamento": null,
+	            "carteira": null,
 	            "tipo_cobranca": "debito_conta_corrente",
-	            "valor": 132.5,
+	            "valor": 54.95,
 	            "data_vencimento": "10/10/2017",
-	            "data_pagamento": "09/07/2018",
-	            "detalhamento": {
-	                "descricao": "(+) Taxa de Instalação (1/12) | R$ 12.50",
-	                "valor": 12.5
-	            },
+	            "data_pagamento": "31/07/2017",
+	            "data_documento": null,
+	            "data_processamento": null,
+	            "detalhamento": [
+	                {
+	                    "descricao": "(+) Serviço de Comunicação e Multimídia (26/09/2017) até (09/10/2017) - 13 dias (proporcional) | R$ 21.62",
+	                    "valor": 21.62
+	                },
+	                {
+	                    "descricao": "(+) Taxa de Instalação (1/3) | R$ 33.33",
+	                    "valor": 33.33
+	                }
+	            ],
 	            "cliente": {
-	                "codigo_cliente": 1163,
-	                "nome_razaosocial": "JOAQUIM JOSÉ DA SILVA",
-	                "cpf_cnpj": "09141806654"
+	                "codigo_cliente": 1162,
+	                "nome_razaosocial": "GUILHERME DA COSTA COUTO",
+	                "cpf_cnpj": "41107296617"
 	            }
 	        },
 	        {
-	            "id_fatura": 43647,
-	            "nosso_numero": "274551",
-	            "nosso_numero_dv": "0274551-0",
-	            "linha_digitavel": "75691.31662 01006.726101 27455.100019 6 75810000001000",
-	            "codigo_barras": "75692821200000099901213201024844418499410001",
-	            "link": "http://endereco_do_servidor/pdf/fatura/TXpZek9UZz0=",
+	            "id_fatura": 36403,
+	            "nosso_numero": "272100",
+	            "nosso_numero_dv": "0272100-0",
+	            "linha_digitavel": "75691.31662 01006.726101 27210.000017 7 73380000001000",
+	            "codigo_barras": "75697733800000010001316601006726102721000001",
+	            "link": "https://endereco_do_servidor/pdf/fatura/TXpZME1ETT0=",
+	            "agencia_codigo_beneficiario": "3166 / 67261",
+	            "beneficiario": "PROVEDOR DE INTERNET LTDA / CNPJ: 22.385.367/0001-03",
+	            "numero_documento": 36403,
+	            "especie": "DS",
+	            "especie_dinheiro": "R$",
+	            "aceite": "N",
+	            "local_pagamento": "PAGÁVEL EM QUALQUER BANCO ATÉ O VENCIMENTO",
+	            "carteira": "1",
+	            "tipo_cobranca": "boleto_bancario",
+	            "valor": 10,
+	            "data_vencimento": "09/11/2017",
+	            "data_pagamento": "25/06/2018",
+	            "data_documento": "06/04/2020",
+	            "data_processamento": "06/04/2020",
+	            "detalhamento": [
+	                {
+	                    "descricao": "Cobrança adicional",
+	                    "valor": 10
+	                }
+	            ],
+	            "cliente": {
+	                "codigo_cliente": 1162,
+	                "nome_razaosocial": "GUILHERME DA COSTA COUTO",
+	                "cpf_cnpj": "41107296617"
+	            }
+	        },
+	        {
+	            "id_fatura": 43653,
+	            "nosso_numero": "274554",
+	            "nosso_numero_dv": "0274554-2",
+	            "linha_digitavel": "75691.31662 01006.726101 27455.420011 8 82170000001232",
+	            "codigo_barras": "75698821700000012321316601006726102745542001",
+	            "link": "http://endereco_do_servidor/pdf/fatura/TkRNMk5UTT0=",
+	            "agencia_codigo_beneficiario": "3166 / 67261",
+	            "beneficiario": "PROVEDOR DE INTERNET LTDA / CNPJ: 22.385.367/0001-03",
+	            "numero_documento": 43653,
+	            "especie": "DS",
+	            "especie_dinheiro": "R$",
+	            "aceite": "N",
+	            "local_pagamento": "PAGÁVEL EM QUALQUER BANCO ATÉ O VENCIMENTO",
+	            "carteira": "1",
 	            "tipo_cobranca": "boleto_bancario",
 	            "valor": 10,
 	            "data_vencimento": "10/07/2018",
-	            "data_pagamento": "20/08/2018",
-	            "detalhamento": {
-	                "descricao": "Cobrança adicional - teste",
-	                "valor": 10
-	            },
-	            "cliente": {
-	                "codigo_cliente": 1163,
-	                "nome_razaosocial": "JOAQUIM JOSÉ DA SILVA",
-	                "cpf_cnpj": "09141806654"
-	            }
-	        },
-	        {
-	            "id_fatura": 44654,
-	            "nosso_numero": "274805",
-	            "nosso_numero_dv": "0274805-7",
-	            "linha_digitavel": "75691.31662 01006.726101 27480.570012 1 77040000004990",
-	            "codigo_barras": "75692821200000099901213201024844418499410001",
-	            "link": "http://endereco_do_servidor/pdf/fatura/TkRRMk5UTT0=",
-	            "tipo_cobranca": "boleto_bancario",
-	            "valor": 49.9,
-	            "data_vencimento": "10/11/2018",
 	            "data_pagamento": null,
-	            "detalhamento": {
-	                "descricao": "Serviço de Comunicação e Multimídia - 1_5MB (10/11/2018 até 10/12/2018)",
-	                "valor": 24.95
-	            },
+	            "data_documento": "06/04/2020",
+	            "data_processamento": "06/04/2020",
+	            "detalhamento": [
+	                {
+	                    "descricao": "COBRANÇA DE TESTE VENCIDA",
+	                    "valor": 10
+	                }
+	            ],
 	            "cliente": {
-	                "codigo_cliente": 1163,
-	                "nome_razaosocial": "JOAQUIM JOSÉ DA SILVA",
-	                "cpf_cnpj": "09141806654"
+	                "codigo_cliente": 1162,
+	                "nome_razaosocial": "GUILHERME DA COSTA COUTO",
+	                "cpf_cnpj": "41107296617"
 	            }
 	        }
 	    ]
