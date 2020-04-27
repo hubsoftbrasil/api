@@ -121,6 +121,11 @@ Retorno da requisição GET::
 	            "inscricao_estadual":null,
 	            "data_cadastro":"2017-08-05 00:00:00",
 	            "data_nascmento":"1969-12-31 04:00:00",
+	            "alerta":true,
+	            "alerta_mensagens":[
+	            	"Existe um rompimento de fibra no bairro Centro, na cidade Divinópolis que está afetando esse cliente",
+	            	"A equipe técnica já está a caminho para resolver o rompimento de fibra"
+	            ],
 	            "servicos":[
 	                {
 	                    "id_cliente_servico":11201,
@@ -234,6 +239,8 @@ Retorno da requisição GET::
 	            "inscricao_estadual":null,
 	            "data_cadastro":"2017-04-26 00:00:00",
 	            "data_nascmento":"1969-12-31 00:00:00",
+	            "alerta":false,
+	            "alerta_mensagens":[],
 	            "servicos":[
 	                {
 	                    "id_cliente_servico":11302,
@@ -333,4 +340,8 @@ No exemplo acima, foi feito uma requisição utilizando os seguintes parâmetros
 .. warning::
 
 	IMPORTANTE: Para trazer os dados da última autenticação, é necessário enviar o parâmetro ultima_conexao=sim. A última conexão utiliza como base o extrato de conexão do RADIUS, por isso, caso existam problemas na rede do provedor, essa informação poderá não ser 100% confiável, uma vez, que ela depende que o concentrador do provedor, informe ao servidor RADIUS o estado atual da conexão do cliente.
+
+.. warning::
+
+	IMPORTANTE 2: O provedor poderá cadastrar os alertas, que serão retornados aqui na API, pelos atributos alerta e alerta_mensagens. Esses alertas, podem ser utilizados pelo software que está consumindo a API, para enviar uma mensagem automática em um BOT para o cliente, ou soltar um áudio customizado no PBX, quando o cliente ligar, ou ainda exibir o cliente de uma cor diferente no mapa. As possibilidades são muitas e vão depender exclusivamente da criativade do integrador. A equipe do HubSoft estará sempre a disposição para ajudar os desenvolvedores em suas integrações conosco :)
 
