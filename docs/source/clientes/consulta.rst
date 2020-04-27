@@ -343,5 +343,5 @@ No exemplo acima, foi feito uma requisição utilizando os seguintes parâmetros
 
 .. warning::
 
-	IMPORTANTE 2: O provedor poderá cadastrar os alertas, que serão retornados aqui na API, pelos atributos alerta e alerta_mensagens. Esses alertas, podem ser utilizados pelo software que está consumindo a API, para enviar uma mensagem automática em um BOT para o cliente, ou soltar um áudio customizado no PBX, quando o cliente ligar, ou ainda exibir o cliente de uma cor diferente no mapa. As possibilidades são muitas e vão depender exclusivamente da criativade do integrador. A equipe do HubSoft estará sempre a disposição para ajudar os desenvolvedores em suas integrações conosco :)
+	IMPORTANTE 2: O provedor poderá cadastrar os alertas, que serão retornados aqui na API, pelos atributos alerta e alerta_mensagens. Esses alertas, podem ser utilizados pelo software que está consumindo a API, para enviar uma mensagem automática em um BOT para o cliente, ou soltar um áudio customizado no PBX, quando o cliente ligar, ou ainda exibir o cliente de uma cor diferente no mapa. As possibilidades são muitas e vão depender exclusivamente da criatividade do integrador. A equipe do HubSoft estará sempre a disposição para ajudar os desenvolvedores em suas integrações conosco :)
 
