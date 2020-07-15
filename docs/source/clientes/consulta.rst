@@ -254,7 +254,11 @@ Retorno da requisição GET::
 	                    "senha":"123",
 	                    "ipv4":"10.99.1.118",
 	                    "ipv6":null,
-	                    "ultima_conexao"=>[],
+	                    "ultima_conexao": [],
+                            "porta_atendimento": {
+                                "numero": 7,
+                                "equipamento": "A2R3C2"
+                            },
 	                    "interface":{
 	                        "nome":"PON5",
 	                        "tipo":"gpon",
