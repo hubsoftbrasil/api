@@ -180,7 +180,11 @@ Retorno da requisição GET::
 	                        "cep":"35501-048",
 	                        "estado":"MG",
 	                        "uf":"MINAS GERAIS",
-	                        "cidade":"Divinópolis"
+	                        "cidade":"Divinópolis",
+	                        "coordenadas": {
+	                            "latitude": null,
+	                            "longitude": null
+	                        }
 	                    },
 	                    "endereco_instalacao":{
 	                        "completo":"RUA MINAS GERAIS, 1793 - IPIRANGA, DIVINóPOLIS/MG",
@@ -192,7 +196,11 @@ Retorno da requisição GET::
 	                        "cep":"35502-026",
 	                        "estado":"MG",
 	                        "uf":"MINAS GERAIS",
-	                        "cidade":"Divinópolis"
+	                        "cidade":"Divinópolis",
+	                        "coordenadas": {
+	                            "latitude": -19.8562717,
+	                            "longitude": -45.0105913
+	                        }
 	                    },
 	                    "endereco_fiscal":{
 	                        "completo":"RUA GOIAS, 86 - PORTO VELHO, DIVINóPOLIS/MG - APTO 101",
@@ -204,7 +212,11 @@ Retorno da requisição GET::
 	                        "cep":"35500-000",
 	                        "estado":"MG",
 	                        "uf":"MINAS GERAIS",
-	                        "cidade":"Divinópolis"
+	                        "cidade":"Divinópolis",
+	                        "coordenadas": {
+	                            "latitude": null,
+	                            "longitude": null
+	                        }
 	                    },
 	                    "endereco_cobranca":{
 	                        "completo":"RUA SEBASTIAO PARDINI, 58 - CENTRO, DIVINóPOLIS/MG - 202",
@@ -216,7 +228,11 @@ Retorno da requisição GET::
 	                        "cep":"35500-000",
 	                        "estado":"MG",
 	                        "uf":"MINAS GERAIS",
-	                        "cidade":"Divinópolis"
+	                        "cidade":"Divinópolis",
+	                        "coordenadas": {
+	                            "latitude": null,
+	                            "longitude": null
+	                        }
 	                    }
 	                }
 	            ]
@@ -285,7 +301,11 @@ Retorno da requisição GET::
 	                        "cep":"35560000",
 	                        "estado":"MG",
 	                        "uf":"MINAS GERAIS",
-	                        "cidade":"Santo Antônio do Monte"
+	                        "cidade":"Santo Antônio do Monte",
+	                        "coordenadas": {
+	                            "latitude": null,
+	                            "longitude": null
+	                        }
 	                    },
 	                    "endereco_instalacao":{
 	                        "completo":"RUA JOÃO J FERNANDES, 900 - BARRETOS, NOVA SERRANA/MG - AREA RURAL",
@@ -297,7 +317,11 @@ Retorno da requisição GET::
 	                        "cep":"35519-000",
 	                        "estado":"MG",
 	                        "uf":"MINAS GERAIS",
-	                        "cidade":"Nova Serrana"
+	                        "cidade":"Nova Serrana",
+	                        "coordenadas": {
+	                            "latitude": -19.8562717,
+	                            "longitude": -45.0105913
+	                        }
 	                    },
 	                    "endereco_fiscal":{
 	                        "completo":"RUA RITA DOS SANTOS MESQUITA, 233 - SANTO AGOSTINHO, PERDIGãO/MG",
@@ -309,7 +333,11 @@ Retorno da requisição GET::
 	                        "cep":"35545-000",
 	                        "estado":"MG",
 	                        "uf":"MINAS GERAIS",
-	                        "cidade":"Perdigão"
+	                        "cidade":"Perdigão",
+	                        "coordenadas": {
+	                            "latitude": null,
+	                            "longitude": null
+	                        }
 	                    },
 	                    "endereco_cobranca":{
 	                        "completo":"RUA DOIS, 221 - BARRETINHOS, NOVA SERRANA/MG - AREA RURAL",
@@ -321,7 +349,11 @@ Retorno da requisição GET::
 	                        "cep":"35519-000",
 	                        "estado":"MG",
 	                        "uf":"MINAS GERAIS",
-	                        "cidade":"Nova Serrana"
+	                        "cidade":"Nova Serrana",
+	                        "coordenadas": {
+	                            "latitude": null,
+	                            "longitude": null
+	                        }
 	                    }
 	                }
 	            ]
@@ -343,5 +375,9 @@ No exemplo acima, foi feito uma requisição utilizando os seguintes parâmetros
 
 .. warning::
 
-	IMPORTANTE 2: O provedor poderá cadastrar os alertas, que serão retornados aqui na API, pelos atributos alerta e alerta_mensagens. Esses alertas, podem ser utilizados pelo software que está consumindo a API, para enviar uma mensagem automática em um BOT para o cliente, ou soltar um áudio customizado no PBX, quando o cliente ligar, ou ainda exibir o cliente de uma cor diferente no mapa. As possibilidades são muitas e vão depender exclusivamente da criatividade do integrador. A equipe do HubSoft estará sempre a disposição para ajudar os desenvolvedores em suas integrações conosco :)
+	IMPORTANTE 2: Para que o HubSoft consiga retornar os dados de coordenadas do endereço, é importante que o provedor tenha configurado em seus sistema, as credenciais de integração com o Google Maps API. O HubSoft irá verificar apenas os endereços de instalação, para fazer a atualização de coordenadas.
+
+.. warning::
+
+	IMPORTANTE 3: O provedor poderá cadastrar os alertas, que serão retornados aqui na API, pelos atributos alerta e alerta_mensagens. Esses alertas, podem ser utilizados pelo software que está consumindo a API, para enviar uma mensagem automática em um BOT para o cliente, ou soltar um áudio customizado no PBX, quando o cliente ligar, ou ainda exibir o cliente de uma cor diferente no mapa. As possibilidades são muitas e vão depender exclusivamente da criatividade do integrador. A equipe do HubSoft estará sempre a disposição para ajudar os desenvolvedores em suas integrações conosco :)
 

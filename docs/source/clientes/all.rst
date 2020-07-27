@@ -149,7 +149,11 @@ Retorno da requisição GET::
 	                        "cep":"35501-048",
 	                        "estado":"MG",
 	                        "uf":"MINAS GERAIS",
-	                        "cidade":"Divinópolis"
+	                        "cidade":"Divinópolis",
+	                        "coordenadas": {
+	                            "latitude": null,
+	                            "longitude": null
+	                        }
 	                    },
 	                    "endereco_instalacao":{
 	                        "completo":"RUA MINAS GERAIS, 1793 - IPIRANGA, DIVINÓPOLIS/MG",
@@ -161,7 +165,11 @@ Retorno da requisição GET::
 	                        "cep":"35502-026",
 	                        "estado":"MG",
 	                        "uf":"MINAS GERAIS",
-	                        "cidade":"Divinópolis"
+	                        "cidade":"Divinópolis",
+	                        "coordenadas": {
+	                            "latitude": -20.086592,
+	                            "longitude": -45.290962
+	                        }
 	                    },
 	                    "endereco_fiscal":{
 	                        "completo":"RUA GOIAS, 86 - PORTO VELHO, DIVINÓPOLIS/MG - APTO 101",
@@ -173,7 +181,11 @@ Retorno da requisição GET::
 	                        "cep":"35500-000",
 	                        "estado":"MG",
 	                        "uf":"MINAS GERAIS",
-	                        "cidade":"Divinópolis"
+	                        "cidade":"Divinópolis",
+	                        "coordenadas": {
+	                            "latitude": null,
+	                            "longitude": null
+	                        }
 	                    },
 	                    "endereco_cobranca":{
 	                        "completo":"RUA SEBASTIAO PARDINI, 58 - CENTRO, DIVINÓPOLIS/MG - 202",
@@ -185,7 +197,11 @@ Retorno da requisição GET::
 	                        "cep":"35500-000",
 	                        "estado":"MG",
 	                        "uf":"MINAS GERAIS",
-	                        "cidade":"Divinópolis"
+	                        "cidade":"Divinópolis",
+	                        "coordenadas": {
+	                            "latitude": null,
+	                            "longitude": null
+	                        }
 	                    }
 	                }
 	            ]
@@ -251,7 +267,11 @@ Retorno da requisição GET::
 	                        "cep":"35560000",
 	                        "estado":"MG",
 	                        "uf":"MINAS GERAIS",
-	                        "cidade":"Santo Antônio do Monte"
+	                        "cidade":"Santo Antônio do Monte",
+	                        "coordenadas": {
+	                            "latitude": null,
+	                            "longitude": null
+	                        }
 	                    },
 	                    "endereco_instalacao":{
 	                        "completo":"RUA JOÃO J FERNANDES, 900 - BARRETOS, NOVA SERRANA/MG - AREA RURAL",
@@ -263,7 +283,11 @@ Retorno da requisição GET::
 	                        "cep":"35519-000",
 	                        "estado":"MG",
 	                        "uf":"MINAS GERAIS",
-	                        "cidade":"Nova Serrana"
+	                        "cidade":"Nova Serrana",
+	                        "coordenadas": {
+	                            "latitude": -19.8562717,
+	                            "longitude": -45.0105913
+	                        }
 	                    },
 	                    "endereco_fiscal":{
 	                        "completo":"RUA RITA DOS SANTOS MESQUITA, 233 - SANTO AGOSTINHO, PERDIGãO/MG",
@@ -275,7 +299,11 @@ Retorno da requisição GET::
 	                        "cep":"35545-000",
 	                        "estado":"MG",
 	                        "uf":"MINAS GERAIS",
-	                        "cidade":"Perdigão"
+	                        "cidade":"Perdigão",
+	                        "coordenadas": {
+	                            "latitude": null,
+	                            "longitude": null
+	                        }
 	                    },
 	                    "endereco_cobranca":{
 	                        "completo":"RUA DOIS, 221 - BARRETINHOS, NOVA SERRANA/MG - AREA RURAL",
@@ -287,7 +315,11 @@ Retorno da requisição GET::
 	                        "cep":"35519-000",
 	                        "estado":"MG",
 	                        "uf":"MINAS GERAIS",
-	                        "cidade":"Nova Serrana"
+	                        "cidade":"Nova Serrana",
+	                        "coordenadas": {
+	                            "latitude": null,
+	                            "longitude": null
+	                        }
 	                    }
 	                }
 	            ]
