@@ -57,6 +57,8 @@ Exemplo de chamada em uma rota, enviando os dados do Token::
 
 .. warning::
 
+        IMPORTANTE: O token irá expirar conforme o tempo retornado no parametro ``expires_in``. Observação: O valor 2592000 é equivalente a 30 dias. Então será necessário renovar o token requisitado sempre que expirar. 
+
+.. warning::
+
 	IMPORTANTE: Veja que o token foi enviado no HEADER da requisição HTTP. Conforme o exemplo acima, podemos observar que o token é enviado sempre no header ``Authorization``. Caso o Token não esteja presente no header ``Authorization`` a API irá responder com o código ``HTTP 401 (Unauthorized)``, não permitindo a utilização da API.
-
-
