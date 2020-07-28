@@ -34,10 +34,10 @@ As seguintes respostas podem ser obtidas de acordo com o que for informado na ro
 
 - Caso o parâmetro de busca seja omitido, a seguinte resposta será obtida::
   
-  {
-    "status": "error",
-    "msg": "O campo busca é obrigatória"
-  }
+    {
+        "status": "error",
+        "msg": "O campo busca é obrigatória"
+    }
 
 **Casos de sucesso**
 
