@@ -11,5 +11,5 @@ Abaixo estão todas as funções disponíveis para o prospecto
     :caption: Funções da API de Prospectos
 
     create
-    search
     store
+    search
