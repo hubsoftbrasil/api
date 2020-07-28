@@ -20,6 +20,7 @@ Bem-vindo à documentação da API do HubSoft. Para utilizar a API é necessári
    endereco/index
    financeiro/index
    pbx
+   prospecto/index
    rede/index
    exemplos/index   
    duvidas
