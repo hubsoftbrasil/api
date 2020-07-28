@@ -22,11 +22,14 @@ O endereço completo, ficará da seguinte forma::
 
     store
 
-### Rota e parâmetros da requisição
+
+Rota e parâmetros da requisição
+-----------
 
 A rota em questão é do tipo **GET** e possui 1 único parâmetro obrigatório que deve ser informado junto a URL, o "cep". O parâmetro deve ser informado no formato de *query string*, da seguinte forma: **?cep=<numero_cep>**. O **<numero_cep>**, deve ser substituído pelo valor equivalente ao CEP a ser informado para busca de serviços / planos disponíveis.
 
-**Respostas da requisição**
+Respostas da requisição
+-----------
 
 As seguintes respostas podem ser obtidas de acordo com o que for informado na rota em questão:
 
