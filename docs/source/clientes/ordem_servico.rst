@@ -66,7 +66,7 @@ Os atributos podem conter os seguintes valores:
       -  Valor Default
 
    *  -  busca
-      -  codigo_cliente, cpf_cnpj, id_cliente_servico, protocolo
+      -  codigo_cliente, cpf_cnpj, id_cliente_servico, numero_ordem_servico
       -  Nenhum
 
    *  -  termo_busca
