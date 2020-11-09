@@ -139,6 +139,22 @@ Retorno da requisição GET::
 	                        "ipv4":"172.17.24.98",
 	                        "ipv6":null
 	                    },
+	                    "pacotes":[
+	                    	{
+	                            "id_pacote": 1,
+	                            "descricao": "IP FIXO",
+	                            "valor": "20",
+	                            "observacoes": "IP FIXO 189.79.21.21",
+	                            "data_cadastro": "2019-11-21 16:43:56"
+	                        },
+	                        {
+	                        	"id_pacote": 2,
+	                            "descricao": "TV",
+	                            "valor": "20",
+	                            "observacoes": "ASSINATURA DE TV",
+	                            "data_cadastro": "2019-11-20 16:43:56"
+	                        }
+	                    ],
 	                    "endereco_cadastral":{
 	                        "completo":"RUA DONA MARIA DAS DORES, 541 - NOSSA SENHORA DAS GRACAS, DIVINóPOLIS/MG - IGREJA",
 	                        "logradouro":"RUA",

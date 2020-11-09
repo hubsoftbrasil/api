@@ -82,7 +82,7 @@ Os atributos podem conter os seguintes valores:
       -  sim
 
    *  -  order_by
-      -  data_vencimento,valor.
+      -  data_vencimento,data_pagamento,valor.
       -  data_vencimento
 
    *  -  order_type
