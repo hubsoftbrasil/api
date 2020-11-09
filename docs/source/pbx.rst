@@ -56,6 +56,10 @@ No método POST, de ambas as rotas poderão ser realizadas as notificações e c
       -  Telefone da ligação externa do PBX
       -  Não
 
+   *  -  ligacao_params
+      -  Objeto JSON para serem informados parametros da ligação
+      -  Não
+
 Os atributos podem conter os seguintes valores:
 
 .. list-table::
@@ -85,12 +89,16 @@ Os atributos podem conter os seguintes valores:
       -  Deve ser um valor númerico
       -  Nenhum
 
+   *  -  ligacao_params
+      -  Deve ser um objeto no formato JSON
+      -  Nenhum
+
 Exemplo de requisição POST na rota de notificação de ligação::
         
         curl -X POST https://endereco_servidor/api/v1/integracao/pbx/ligacao/notificar
         -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjNjN2VjYTY1"
         -H "content-type: application/json"
-        -d '{"ramal": 111, "telefone": 37999912222}'
+        -d '{"ramal": 111, "telefone": 37999912222, "ligacao_params": {"origem": "PBX", "atendente": "João"}}'
 
 Exemplo de requisição POST na rota de cancelamento da ligação::
         
