@@ -16,6 +16,7 @@ Bem-vindo à documentação da API do HubSoft. Para utilizar a API é necessári
    introducao
    autenticacao
    atendimento/index
+   ordem_servico/index
    clientes/index
    endereco/index
    financeiro/index
