@@ -130,6 +130,14 @@ Retorno da requisição GET::
 	                "nome_razaosocial": "BIANCA COUTO",
 	                "cpf_cnpj": "86214941081"
 	            },
+	            "servico": {
+                	"id_cliente_servico":"123",
+                    "numero_plano": 0,
+                    "nome": "5MB-WIRELLES-TESTE",
+                    "valor": 199.9,
+                    "status": "Cancelado",
+                    "status_prefixo": "cancelado"
+                },
 	            "ordens_servico": [
 	                {
 	                    "id_ordem_servico": 131,
@@ -153,6 +161,7 @@ Retorno da requisição GET::
 	                        "cpf_cnpj": "86214941081"
 	                    },
 	                    "servico": {
+	                    	"id_cliente_servico":"123",
 	                        "numero_plano": 0,
 	                        "nome": "5MB-WIRELLES-TESTE",
 	                        "valor": 199.9,
@@ -206,12 +215,12 @@ Retorno da requisição GET::
 	            },
 	            "servico": {
 	            	"id_cliente_servico":"12345",
-                    "numero_plano": 9,
-                    "nome": "NEXT-NV_1MBPS",
-                    "valor": 69.9,
-                    "status": "Serviço Habilitado",
-                    "status_prefixo": "servico_habilitado"
-                }
+	            	"numero_plano": 9,
+	            	"nome": "NEXT-NV_1MBPS",
+	            	"valor": 69.9,
+	            	"status": "Serviço Habilitado",
+	            	"status_prefixo": "servico_habilitado"
+                },
 	            "ordens_servico": [
 	                {
 	                    "id_ordem_servico": 340,
