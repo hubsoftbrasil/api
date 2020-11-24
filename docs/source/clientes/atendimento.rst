@@ -11,7 +11,7 @@ As requisições de clientes, devem ser feitos na rota::
 
 O endereço completo, ficará da seguinte forma::
 
-	https://endereco_do_servidor/api/v1/integracao/cliente/financeiro
+	https://endereco_do_servidor/api/v1/integracao/cliente/atendimento
 
 **GET**
 
@@ -204,6 +204,14 @@ Retorno da requisição GET::
 	                "nome_razaosocial": "BIANCA COUTO",
 	                "cpf_cnpj": "86214941081"
 	            },
+	            "servico": {
+	            	"id_cliente_servico":"12345",
+                    "numero_plano": 9,
+                    "nome": "NEXT-NV_1MBPS",
+                    "valor": 69.9,
+                    "status": "Serviço Habilitado",
+                    "status_prefixo": "servico_habilitado"
+                }
 	            "ordens_servico": [
 	                {
 	                    "id_ordem_servico": 340,
@@ -227,6 +235,7 @@ Retorno da requisição GET::
 	                        "cpf_cnpj": "86214941081"
 	                    },
 	                    "servico": {
+	                    	"id_cliente_servico":"12345",
 	                        "numero_plano": 9,
 	                        "nome": "NEXT-NV_1MBPS",
 	                        "valor": 69.9,
