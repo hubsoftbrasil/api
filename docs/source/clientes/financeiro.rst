@@ -144,7 +144,15 @@ Retorno da requisição GET::
 	            "cliente": {
 	                "codigo_cliente": 1162,
 	                "nome_razaosocial": "GUILHERME DA COSTA COUTO",
-	                "cpf_cnpj": "41107296617"
+	                "cpf_cnpj": "41107296617",
+	                "servico": {
+	                    "id_cliente_servico": 22703,
+	                    "numero_plano": 26,
+	                    "nome": "500MB",
+	                    "valor": 54.95,
+	                    "status": "Serviço Habilitado",
+	                    "status_prefixo": "servico_habilitado"
+	                }
 	            }
 	        },
 	        {
@@ -177,7 +185,15 @@ Retorno da requisição GET::
 	            "cliente": {
 	                "codigo_cliente": 1162,
 	                "nome_razaosocial": "GUILHERME DA COSTA COUTO",
-	                "cpf_cnpj": "41107296617"
+	                "cpf_cnpj": "41107296617",
+	                "servico": {
+	                    "id_cliente_servico": 22703,
+	                    "numero_plano": 26,
+	                    "nome": "500MB",
+	                    "valor": 54.95,
+	                    "status": "Serviço Habilitado",
+	                    "status_prefixo": "servico_habilitado"
+	                }
 	            }
 	        },
 	        {
