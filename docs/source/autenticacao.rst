@@ -53,6 +53,7 @@ Exemplo de chamada em uma rota, enviando os dados do Token::
 	curl -X GET 
 	--header "Accept:application/json" 
 	--header "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijg0MTM2O"
+	--header "Content-Type: application/json"
 	https://endereco_servidor/api/v1/teste -k 
 
 .. warning::

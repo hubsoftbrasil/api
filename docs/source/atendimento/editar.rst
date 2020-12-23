@@ -62,6 +62,7 @@ Exemplo de requisição PUT na rota de edição do atendimento::
 	curl -X PUT 
 	--header "Accept:application/json"
 	--header "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijg0MTM2O"
+  --header "Content-Type: application/json"
 	https://endereco_servidor/api/v1/integracao/atendimento/1 -d '{"parametros": { "url_ligacao": "https://www.meusite.com.br/ligacao/3", "empresa": "NeWave", "xpto": 123456 }, "fechar_atendimento": true }' -k
 
 

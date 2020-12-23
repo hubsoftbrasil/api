@@ -64,6 +64,7 @@ Exemplo de requisição POST na rota do envio de e-mail::
 	curl -X POST 
 	--header "Accept:application/json"
 	--header "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijg0MTM2O"
+  --header "Content-Type: application/json"
 	https://endereco_servidor/api/v1/integracao/cliente/financeiro/enviar_email -d '{"id_fatura":"11000", "email_adicional":["email1@email.com","email2@email.com"]}' -k
 
 Veja que os paramêtros enviados na requisição POST devem obedecer a estrutura no formato JSON::

@@ -50,6 +50,7 @@ Exemplo de requisição POST na rota do envio de push notification::
 	curl -X POST 
 	--header "Accept:application/json"
 	--header "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijg0MTM2O"
+   --header "Content-Type: application/json"
 	https://endereco_servidor/api/v1/integracao/cliente/financeiro/enviar_push -d '{"id_fatura":"11000"}' -k
 
 Veja que os paramêtros enviados na requisição POST devem obedecer a estrutura no formato JSON::

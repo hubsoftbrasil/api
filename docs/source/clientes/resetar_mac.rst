@@ -52,6 +52,7 @@ Exemplo de requisição POST na rota do desbloqueio em confiança::
 	curl -X POST 
 	--header "Accept:application/json"
 	--header "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijg0MTM2O"
+	--header "Content-Type: application/json"
 	https://endereco_servidor/api/v1/integracao/cliente/reset_mac_addr -d '{"id_cliente_servico":"11000"}' -k
 
 Veja que os paramêtros enviados na requisição POST devem obedecer a estrutura no formato JSON::

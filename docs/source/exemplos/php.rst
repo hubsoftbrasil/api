@@ -16,6 +16,7 @@ Exemplo de Código em PHP::
 	    $req = curl_init($url);
 	    $header = array();
 	    $header[] = 'Accept: application/json';
+	    $header[] = 'Content-Type: application/json';
 	    if(!is_null($token)){
 	        $header[] = 'Authorization: ' . $token;
 	    }
