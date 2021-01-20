@@ -21,6 +21,7 @@ Abaixo estão todas as funções disponíveis do cliente
     all
     atendimento
     consulta
+    configurar_autenticacao
     desbloqueio_confianca
     desconexao
     extrato_conexao
