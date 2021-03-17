@@ -164,8 +164,8 @@ Retorno da requisição GET::
 							"uf": "MINAS GERAIS",
 							"cidade": "SANTO ANTÔNIO DO MONTE",
 							"coordenadas": {
-								"latitude": -20.086726,
-								"longitude": -45.290536
+							  "latitude": -20.086726,
+							  "longitude": -45.290536
 							}
 						},
 						"endereco_instalacao": {
@@ -180,8 +180,8 @@ Retorno da requisição GET::
 							"uf": "MINAS GERAIS",
 							"cidade": "SANTO ANTÔNIO DO MONTE",
 							"coordenadas": {
-								"latitude": -20.086726,
-								"longitude": -45.290536
+							  "latitude": -20.086726,
+							  "longitude": -45.290536
 							}
 						},
 						"endereco_fiscal": {
@@ -196,8 +196,8 @@ Retorno da requisição GET::
 							"uf": "MINAS GERAIS",
 							"cidade": "SANTO ANTÔNIO DO MONTE",
 							"coordenadas": {
-								"latitude": -20.086726,
-								"longitude": -45.290536
+							  "latitude": -20.086726,
+							  "longitude": -45.290536
 							}
 						},
 						"endereco_cobranca": {
@@ -212,8 +212,8 @@ Retorno da requisição GET::
 							"uf": "MINAS GERAIS",
 							"cidade": "SANTO ANTÔNIO DO MONTE",
 							"coordenadas": {
-								"latitude": -20.086726,
-								"longitude": -45.290536
+							  "latitude": -20.086726,
+							  "longitude": -45.290536
 							}
 						}
 	                }
@@ -269,8 +269,8 @@ Retorno da requisição GET::
 							"uf": "MINAS GERAIS",
 							"cidade": "SANTO ANTÔNIO DO MONTE",
 							"coordenadas": {
-								"latitude": -20.086726,
-								"longitude": -45.290536
+							  "latitude": -20.086726,
+							  "longitude": -45.290536
 							}
 						},
 						"endereco_instalacao": {
@@ -285,8 +285,8 @@ Retorno da requisição GET::
 							"uf": "MINAS GERAIS",
 							"cidade": "SANTO ANTÔNIO DO MONTE",
 							"coordenadas": {
-								"latitude": -20.086726,
-								"longitude": -45.290536
+							  "latitude": -20.086726,
+							  "longitude": -45.290536
 							}
 						},
 						"endereco_fiscal": {
@@ -301,8 +301,8 @@ Retorno da requisição GET::
 							"uf": "MINAS GERAIS",
 							"cidade": "SANTO ANTÔNIO DO MONTE",
 							"coordenadas": {
-								"latitude": -20.086726,
-								"longitude": -45.290536
+							  "latitude": -20.086726,
+							  "longitude": -45.290536
 							}
 						},
 						"endereco_cobranca": {
@@ -317,8 +317,8 @@ Retorno da requisição GET::
 							"uf": "MINAS GERAIS",
 							"cidade": "SANTO ANTÔNIO DO MONTE",
 							"coordenadas": {
-								"latitude": -20.086726,
-								"longitude": -45.290536
+							  "latitude": -20.086726,
+							  "longitude": -45.290536
 							}
 						}
 	                }
