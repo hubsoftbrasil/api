@@ -101,7 +101,7 @@ Os atributos podem conter os seguintes valores:
       -  data_vencimento, data_pagamento, data_cadastro
       -  data_vencimento
 
-.. info::
+.. note::
 
 	INFORMAÇÃO: O atributo "tipo_data" somente será validado, caso seja informado o atributo data_inicio e/ou data_fim, pois o filtro o tipo de data selecionado, será aplicado em cima da data inicial e/ou data final.
 
