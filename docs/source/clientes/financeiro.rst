@@ -82,7 +82,7 @@ Os atributos podem conter os seguintes valores:
       -  sim
 
    *  -  order_by
-      -  data_vencimento,data_pagamento,valor.
+      -  data_vencimento,data_pagamento,data_cadastro,valor.
       -  data_vencimento
 
    *  -  order_type
@@ -96,6 +96,10 @@ Os atributos podem conter os seguintes valores:
    *  -  data_fim
       -  Campo no formato DateTime (YYYY-MM-DD)
       -  Nenhum
+
+   *  -  tipo_data
+      -  Tipo de Data que irá filtrar a data_inicio e data_fim
+      -  data_vencimento
 
 Exemplo de requisição GET na rota do cliente::
 
@@ -128,6 +132,7 @@ Retorno da requisição GET::
 	            "tipo_cobranca": "debito_conta_corrente",
 	            "valor": 54.95,
 	            "data_vencimento": "10/10/2017",
+	            "data_cadastro": "10/10/2017",
 	            "data_pagamento": "31/07/2017",
 	            "data_documento": null,
 	            "data_processamento": null,
@@ -173,6 +178,7 @@ Retorno da requisição GET::
 	            "tipo_cobranca": "boleto_bancario",
 	            "valor": 10,
 	            "data_vencimento": "09/11/2017",
+	            "data_cadastro": "10/10/2017",
 	            "data_pagamento": "25/06/2018",
 	            "data_documento": "06/04/2020",
 	            "data_processamento": "06/04/2020",
@@ -214,6 +220,7 @@ Retorno da requisição GET::
 	            "tipo_cobranca": "boleto_bancario",
 	            "valor": 10,
 	            "data_vencimento": "10/07/2018",
+	            "data_cadastro": "10/10/2017",
 	            "data_pagamento": null,
 	            "data_documento": "06/04/2020",
 	            "data_processamento": "06/04/2020",

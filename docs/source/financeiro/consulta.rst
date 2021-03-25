@@ -83,7 +83,7 @@ Os atributos podem conter os seguintes valores:
       -  Nenhum
 
    *  -  tipo_data
-      -  data_vencimento, data_pagamento
+      -  data_vencimento, data_pagamento, data_cadastro
       -  data_vencimento
 
    *  -  tipo_resultado
@@ -99,7 +99,7 @@ Os atributos podem conter os seguintes valores:
       -  Não
 
    *  -  order_by
-      -  data_vencimento,data_pagamento,valor
+      -  data_vencimento, data_pagamento, data_cadastro, valor
       -  Não
 
    *  -  order_type
@@ -134,6 +134,8 @@ Retorno da requisição GET::
 	            "data_vencimento_br": "05/04/2020",
 	            "data_pagamento": null,
 	            "data_pagamento_br": null,
+	            "data_cadastro": "2020-01-01 12:52:12",
+	            "data_cadastro_br": "01/01/2020",
 	            "valor": "119.9",
 	            "valor_pago": null,
 	            "cliente": {
@@ -162,6 +164,8 @@ Retorno da requisição GET::
 	            "data_vencimento_br": "05/04/2020",
 	            "data_pagamento": null,
 	            "data_pagamento_br": null,
+	            "data_cadastro": "2020-01-01 12:52:12",
+	            "data_cadastro_br": "01/01/2020",
 	            "valor": "115.9",
 	            "valor_pago": null,
 	            "cliente": {
@@ -190,6 +194,8 @@ Retorno da requisição GET::
 	            "data_vencimento_br": "05/04/2020",
 	            "data_pagamento": null,
 	            "data_pagamento_br": null,
+	            "data_cadastro": "2020-01-01 12:52:12",
+	            "data_cadastro_br": "01/01/2020",
 	            "valor": "169.9",
 	            "valor_pago": null,
 	            "cliente": {
@@ -218,6 +224,8 @@ Retorno da requisição GET::
 	            "data_vencimento_br": "05/04/2020",
 	            "data_pagamento": null,
 	            "data_pagamento_br": null,
+	            "data_cadastro": "2020-01-01 12:52:12",
+	            "data_cadastro_br": "01/01/2020",
 	            "valor": "40.3",
 	            "valor_pago": null,
 	            "cliente": {
