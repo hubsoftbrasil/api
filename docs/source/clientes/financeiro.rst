@@ -98,8 +98,12 @@ Os atributos podem conter os seguintes valores:
       -  Nenhum
 
    *  -  tipo_data
-      -  Tipo de Data que irá filtrar a data_inicio e data_fim
+      -  data_vencimento, data_pagamento, data_cadastro
       -  data_vencimento
+
+.. info::
+
+	INFORMAÇÃO: O atributo "tipo_data" somente será validado, caso seja informado o atributo data_inicio e/ou data_fim, pois o filtro o tipo de data selecionado, será aplicado em cima da data inicial e/ou data final.
 
 Exemplo de requisição GET na rota do cliente::
 
