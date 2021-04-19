@@ -20,3 +20,4 @@ Abaixo estão todas as funções disponíveis do atendimento
 
     novo
     editar
+    consulta
