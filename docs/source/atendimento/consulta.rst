@@ -1,4 +1,4 @@
-Consulta (Todos os Atendimentos - Paginados)
+Consulta (Todos os Atendimentos - Com Paginação)
 ============
 
 **Necessário**
