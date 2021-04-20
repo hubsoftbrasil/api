@@ -27,6 +27,10 @@ No método POST, será possível consultar os atendimentos em aberto/fechados do
    *  -  id_cliente_servico
       -  Identificador do serviço do cliente
       -  Sim
+      
+   *  -  id_tipo_atendimento
+      -  Identificador do tipo de atendimento
+      -  Não
 
    *  -  descricao
       -  Descrição detalhada do atendimento
@@ -58,6 +62,10 @@ Os atributos podem conter os seguintes valores:
       -  Valor Default
 
    *  -  id_cliente_servico
+      -  Número Inteiro
+      -  Nenhum
+      
+   *  -  id_tipo_atendimento
       -  Número Inteiro
       -  Nenhum
 
