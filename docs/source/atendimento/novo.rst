@@ -89,8 +89,7 @@ Os atributos podem conter os seguintes valores:
       -  Caso enviado, deve conter um valor boolean (true | false)
       -  false
       
-**Observação**
-Se o paramêtro id_tipo_atendimento não for enviado, o atendimento será aberto com o tipo padrão SAC.
+**Observação: Se o paramêtro id_tipo_atendimento não for enviado, o atendimento será aberto com o tipo padrão SAC.**
 
 Exemplo de requisição POST na rota de crição de novo atendimento::
 
