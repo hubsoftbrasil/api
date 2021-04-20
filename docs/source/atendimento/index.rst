@@ -18,6 +18,7 @@ Abaixo estão todas as funções disponíveis do atendimento
 .. toctree::
     :caption: Funções da API de Atendimento
 
+    consulta
     novo
     editar
-    consulta
+    
