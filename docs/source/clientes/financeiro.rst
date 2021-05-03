@@ -82,7 +82,7 @@ Os atributos podem conter os seguintes valores:
       -  sim
 
    *  -  order_by
-      -  data_vencimento,data_pagamento,valor.
+      -  data_vencimento,data_pagamento,data_cadastro,valor.
       -  data_vencimento
 
    *  -  order_type
@@ -96,6 +96,14 @@ Os atributos podem conter os seguintes valores:
    *  -  data_fim
       -  Campo no formato DateTime (YYYY-MM-DD)
       -  Nenhum
+
+   *  -  tipo_data
+      -  data_vencimento, data_pagamento, data_cadastro
+      -  data_vencimento
+
+.. note::
+
+	INFORMAÇÃO: O atributo "tipo_data" somente será validado, caso seja informado o atributo data_inicio e/ou data_fim, pois o filtro o tipo de data selecionado, será aplicado em cima da data inicial e/ou data final.
 
 Exemplo de requisição GET na rota do cliente::
 
@@ -128,6 +136,7 @@ Retorno da requisição GET::
 	            "tipo_cobranca": "debito_conta_corrente",
 	            "valor": 54.95,
 	            "data_vencimento": "10/10/2017",
+	            "data_cadastro": "10/10/2017",
 	            "data_pagamento": "31/07/2017",
 	            "data_documento": null,
 	            "data_processamento": null,
@@ -152,70 +161,70 @@ Retorno da requisição GET::
 	                    "valor": 54.95,
 	                    "status": "Serviço Habilitado",
 	                    "status_prefixo": "servico_habilitado",
-						"endereco_cadastral": {
-							"completo": "PRAÇA GETULIO VARGAS, 100, SALA 411 - CENTRO, SANTO ANTÔNIO DO MONTE\/MG | CEP: 35560-000",
-							"endereco": "PRAÇA GETULIO VARGAS",
-							"numero": "100",
-							"complemento": "SALA 411",
-							"referencia": null,
-							"bairro": "CENTRO",
-							"cep": "35560000",
-							"estado": "MG",
-							"uf": "MINAS GERAIS",
-							"cidade": "SANTO ANTÔNIO DO MONTE",
-							"coordenadas": {
-							  "latitude": -20.086726,
-							  "longitude": -45.290536
-							}
-						},
-						"endereco_instalacao": {
-							"completo": "PRAÇA GETULIO VARGAS, 100, SALA 411 - CENTRO, SANTO ANTÔNIO DO MONTE\/MG | CEP: 35560-000",
-							"endereco": "PRAÇA GETULIO VARGAS",
-							"numero": "100",
-							"complemento": "SALA 411",
-							"referencia": null,
-							"bairro": "CENTRO",
-							"cep": "35560000",
-							"estado": "MG",
-							"uf": "MINAS GERAIS",
-							"cidade": "SANTO ANTÔNIO DO MONTE",
-							"coordenadas": {
-							  "latitude": -20.086726,
-							  "longitude": -45.290536
-							}
-						},
-						"endereco_fiscal": {
-							"completo": "PRAÇA GETULIO VARGAS, 100, SALA 411 - CENTRO, SANTO ANTÔNIO DO MONTE\/MG | CEP: 35560-000",
-							"endereco": "PRAÇA GETULIO VARGAS",
-							"numero": "100",
-							"complemento": "SALA 411",
-							"referencia": null,
-							"bairro": "CENTRO",
-							"cep": "35560000",
-							"estado": "MG",
-							"uf": "MINAS GERAIS",
-							"cidade": "SANTO ANTÔNIO DO MONTE",
-							"coordenadas": {
-							  "latitude": -20.086726,
-							  "longitude": -45.290536
-							}
-						},
-						"endereco_cobranca": {
-							"completo": "PRAÇA GETULIO VARGAS, 100, SALA 411 - CENTRO, SANTO ANTÔNIO DO MONTE\/MG | CEP: 35560-000",
-							"endereco": "PRAÇA GETULIO VARGAS",
-							"numero": "100",
-							"complemento": "SALA 411",
-							"referencia": null,
-							"bairro": "CENTRO",
-							"cep": "35560000",
-							"estado": "MG",
-							"uf": "MINAS GERAIS",
-							"cidade": "SANTO ANTÔNIO DO MONTE",
-							"coordenadas": {
-							  "latitude": -20.086726,
-							  "longitude": -45.290536
-							}
-						}
+	                    "endereco_cadastral": {
+	                        "completo": "PRAÇA GETULIO VARGAS, 100, SALA 411 - CENTRO, SANTO ANTÔNIO DO MONTE\/MG | CEP: 35560-000",
+	                        "endereco": "PRAÇA GETULIO VARGAS",
+	                        "numero": "100",
+	                        "complemento": "SALA 411",
+	                        "referencia": null,
+	                        "bairro": "CENTRO",
+	                        "cep": "35560000",
+	                        "estado": "MG",
+	                        "uf": "MINAS GERAIS",
+	                        "cidade": "SANTO ANTÔNIO DO MONTE",
+	                        "coordenadas": {
+	                            "latitude": -20.086726,
+	                            "longitude": -45.290536
+	                        }
+	                    },
+	                    "endereco_instalacao": {
+	                        "completo": "PRAÇA GETULIO VARGAS, 100, SALA 411 - CENTRO, SANTO ANTÔNIO DO MONTE\/MG | CEP: 35560-000",
+	                        "endereco": "PRAÇA GETULIO VARGAS",
+	                        "numero": "100",
+	                        "complemento": "SALA 411",
+	                        "referencia": null,
+	                        "bairro": "CENTRO",
+	                        "cep": "35560000",
+	                        "estado": "MG",
+	                        "uf": "MINAS GERAIS",
+	                        "cidade": "SANTO ANTÔNIO DO MONTE",
+	                        "coordenadas": {
+	                            "latitude": -20.086726,
+	                            "longitude": -45.290536
+	                        }
+	                    },
+	                    "endereco_fiscal": {
+	                        "completo": "PRAÇA GETULIO VARGAS, 100, SALA 411 - CENTRO, SANTO ANTÔNIO DO MONTE\/MG | CEP: 35560-000",
+	                        "endereco": "PRAÇA GETULIO VARGAS",
+	                        "numero": "100",
+	                        "complemento": "SALA 411",
+	                        "referencia": null,
+	                        "bairro": "CENTRO",
+	                        "cep": "35560000",
+	                        "estado": "MG",
+	                        "uf": "MINAS GERAIS",
+	                        "cidade": "SANTO ANTÔNIO DO MONTE",
+	                        "coordenadas": {
+	                            "latitude": -20.086726,
+	                            "longitude": -45.290536
+	                        }
+	                    },
+	                    "endereco_cobranca": {
+	                        "completo": "PRAÇA GETULIO VARGAS, 100, SALA 411 - CENTRO, SANTO ANTÔNIO DO MONTE\/MG | CEP: 35560-000",
+	                        "endereco": "PRAÇA GETULIO VARGAS",
+	                        "numero": "100",
+	                        "complemento": "SALA 411",
+	                        "referencia": null,
+	                        "bairro": "CENTRO",
+	                        "cep": "35560000",
+	                        "estado": "MG",
+	                        "uf": "MINAS GERAIS",
+	                        "cidade": "SANTO ANTÔNIO DO MONTE",
+	                        "coordenadas": {
+	                            "latitude": -20.086726,
+	                            "longitude": -45.290536
+	                        }
+	                    }
 	                }
 	            }
 	        },
@@ -237,6 +246,7 @@ Retorno da requisição GET::
 	            "tipo_cobranca": "boleto_bancario",
 	            "valor": 10,
 	            "data_vencimento": "09/11/2017",
+	            "data_cadastro": "10/10/2017",
 	            "data_pagamento": "25/06/2018",
 	            "data_documento": "06/04/2020",
 	            "data_processamento": "06/04/2020",
@@ -256,7 +266,71 @@ Retorno da requisição GET::
 	                    "nome": "500MB",
 	                    "valor": 54.95,
 	                    "status": "Serviço Habilitado",
-	                    "status_prefixo": "servico_habilitado"
+	                    "status_prefixo": "servico_habilitado",
+	                    "endereco_cadastral": {
+	                        "completo": "PRAÇA GETULIO VARGAS, 100, SALA 411 - CENTRO, SANTO ANTÔNIO DO MONTE\/MG | CEP: 35560-000",
+	                        "endereco": "PRAÇA GETULIO VARGAS",
+	                        "numero": "100",
+	                        "complemento": "SALA 411",
+	                        "referencia": null,
+	                        "bairro": "CENTRO",
+	                        "cep": "35560000",
+	                        "estado": "MG",
+	                        "uf": "MINAS GERAIS",
+	                        "cidade": "SANTO ANTÔNIO DO MONTE",
+	                        "coordenadas": {
+	                            "latitude": -20.086726,
+	                            "longitude": -45.290536
+	                        }
+	                    },
+	                    "endereco_instalacao": {
+	                        "completo": "PRAÇA GETULIO VARGAS, 100, SALA 411 - CENTRO, SANTO ANTÔNIO DO MONTE\/MG | CEP: 35560-000",
+	                        "endereco": "PRAÇA GETULIO VARGAS",
+	                        "numero": "100",
+	                        "complemento": "SALA 411",
+	                        "referencia": null,
+	                        "bairro": "CENTRO",
+	                        "cep": "35560000",
+	                        "estado": "MG",
+	                        "uf": "MINAS GERAIS",
+	                        "cidade": "SANTO ANTÔNIO DO MONTE",
+	                        "coordenadas": {
+	                            "latitude": -20.086726,
+	                            "longitude": -45.290536
+	                        }
+	                    },
+	                    "endereco_fiscal": {
+	                        "completo": "PRAÇA GETULIO VARGAS, 100, SALA 411 - CENTRO, SANTO ANTÔNIO DO MONTE\/MG | CEP: 35560-000",
+	                        "endereco": "PRAÇA GETULIO VARGAS",
+	                        "numero": "100",
+	                        "complemento": "SALA 411",
+	                        "referencia": null,
+	                        "bairro": "CENTRO",
+	                        "cep": "35560000",
+	                        "estado": "MG",
+	                        "uf": "MINAS GERAIS",
+	                        "cidade": "SANTO ANTÔNIO DO MONTE",
+	                        "coordenadas": {
+	                            "latitude": -20.086726,
+	                            "longitude": -45.290536
+	                        }
+	                    },
+	                    "endereco_cobranca": {
+	                        "completo": "PRAÇA GETULIO VARGAS, 100, SALA 411 - CENTRO, SANTO ANTÔNIO DO MONTE\/MG | CEP: 35560-000",
+	                        "endereco": "PRAÇA GETULIO VARGAS",
+	                        "numero": "100",
+	                        "complemento": "SALA 411",
+	                        "referencia": null,
+	                        "bairro": "CENTRO",
+	                        "cep": "35560000",
+	                        "estado": "MG",
+	                        "uf": "MINAS GERAIS",
+	                        "cidade": "SANTO ANTÔNIO DO MONTE",
+	                        "coordenadas": {
+	                            "latitude": -20.086726,
+	                            "longitude": -45.290536
+	                        }
+	                    }
 	                }
 	            }
 	        },
@@ -278,6 +352,7 @@ Retorno da requisição GET::
 	            "tipo_cobranca": "boleto_bancario",
 	            "valor": 10,
 	            "data_vencimento": "10/07/2018",
+	            "data_cadastro": "10/10/2017",
 	            "data_pagamento": null,
 	            "data_documento": "06/04/2020",
 	            "data_processamento": "06/04/2020",

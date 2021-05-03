@@ -27,6 +27,10 @@ No método POST, será possível consultar os atendimentos em aberto/fechados do
    *  -  id_cliente_servico
       -  Identificador do serviço do cliente
       -  Sim
+      
+   *  -  id_tipo_atendimento
+      -  Identificador do tipo de atendimento
+      -  Não
 
    *  -  descricao
       -  Descrição detalhada do atendimento
@@ -60,6 +64,10 @@ Os atributos podem conter os seguintes valores:
    *  -  id_cliente_servico
       -  Número Inteiro
       -  Nenhum
+      
+   *  -  id_tipo_atendimento
+      -  Número Inteiro
+      -  Nenhum
 
    *  -  descricao
       -  Campo Livre (Qualquer valor é aceito)
@@ -80,6 +88,8 @@ Os atributos podem conter os seguintes valores:
    *  -  abrir_os
       -  Caso enviado, deve conter um valor boolean (true | false)
       -  false
+      
+**Observação: Se o paramêtro id_tipo_atendimento não for enviado, o atendimento será aberto com o tipo padrão SAC.**
 
 Exemplo de requisição POST na rota de crição de novo atendimento::
 
