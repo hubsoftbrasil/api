@@ -61,7 +61,7 @@ Rota e corpo (payload) da requisição
 
    *  -  cpf_cnpj
       -  CPF ou CNPJ do contratante
-      -  Sim
+      -  Não
 
    *  -  telefone
       -  Telefone principal do contratante
