@@ -11,11 +11,11 @@ As requisições de atendimento, devem ser feitos na rota::
 
 O endereço completo, ficará da seguinte forma::
 
-	https://endereco_do_servidor/api/v1/integracao/atendimento/1
+	https://endereco_do_servidor/api/v1/integracao/atendimento/{id_atendimento}
 
 **PUT**
 
-No método PUT, será possível editar e fechar os atendimentos em abertos dos clientes e obter o retorno no formato JSON como resposta. Os segintes parâmetros podem/devem estar presentes no corpo do requisição:
+No método PUT, será possível editar e fechar os atendimentos em abertos dos clientes e obter o retorno no formato JSON como resposta. Lembre de enviar o ID do atendimento como um parametro na URL, conforme o exemplo acima. Os segintes parâmetros podem/devem estar presentes no corpo do requisição:
 
 .. list-table::
    :header-rows: 1
