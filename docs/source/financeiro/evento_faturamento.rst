@@ -153,7 +153,7 @@ Exemplo de requisição POST na rota do envio de e-mail::
 
 Veja que os paramêtros enviados na requisição POST devem obedecer a estrutura no formato JSON::
 
-	{
+	 {
         "id_cliente_servico": 13579,
         "id_tipo_servico": 2,
         "descricao": "ADICIONAL",
@@ -177,4 +177,4 @@ Retorno da requisição POST::
 
 .. note::
 
-	OBSERVAÇÃO: Perceba que foi retornado um array contendo o ID do Evento de Faturamento. Esse retorno é caracterizado pelo fato do evento poder ser parcelado, caso ele tenha 3 parcelas, por exemplo, será retornado um array com 3 itens. Como no exemplo demonstrado acima foi cadastro um evento sem parcelamento, o array com uma posição foi retornado
+	OBSERVAÇÃO: Perceba que foi retornado um array contendo o ID do Evento de Faturamento. Esse retorno é caracterizado pelo fato do evento poder ser parcelado, caso ele tenha 3 parcelas, por exemplo, será retornado um array com 3 itens. Como no exemplo demonstrado acima foi cadastrado um evento sem parcelamento, o array com uma posição foi retornado
