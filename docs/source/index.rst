@@ -19,7 +19,7 @@ Bem-vindo à documentação da API do HubSoft. Para utilizar a API é necessári
    tipo_atendimento/index
    ordem_servico/index
    clientes/index
-   endereco/index
+   cidade/index
    financeiro/index
    pbx
    prospecto/index
