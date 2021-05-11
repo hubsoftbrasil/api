@@ -1,4 +1,4 @@
-Cidade
+All (Todas as Cidades)
 ============
 
 **Necessário**
@@ -7,11 +7,11 @@ Para fazer requisições nos dados da API, é necessário que você já possua o
 
 As requisições de REDE, devem ser feitos na rota::
 
-	/api/v1/integracao/endereco
+	/api/v1/integracao/configuracao/cidade
 
 O endereço completo da requisição, ficará da seguinte forma::
 
-	https://endereco_do_servidor/api/v1/integracao/endereco/cidade
+	https://endereco_do_servidor/api/v1/integracao/configuracao/cidade
 
 **GET**
 

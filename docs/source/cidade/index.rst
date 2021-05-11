@@ -1,4 +1,4 @@
-Endereço
+Cidade
 ============
 
 **Necessário**
@@ -7,15 +7,15 @@ Para fazer requisições nos dados de endereços, é necessário que você já p
 
 As requisições de endereçø, devem ser feitos na rota::
 
-	/api/v1/integracao/endereco
+	/api/v1/integracao/cidade
 
 O endereço completo, ficará da seguinte forma::
 
-	https://endereco_do_servidor/api/v1/integracao/endereco
+	https://endereco_do_servidor/api/v1/integracao/cidade
 
 Abaixo estão todas as funções disponíveis das rotas de endereço
 
 .. toctree::
     :caption: Funções da API de Endereços
 
-    cidade
+    all
