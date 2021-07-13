@@ -7,11 +7,11 @@ Para fazer requisições nos dados de tipos de atendimento, é necessário que v
 
 As requisições de tipos de atendimento, devem ser feitos na rota::
 
-	/api/v1/integracao/tipo_atendimento
+	/api/v1/integracao/configuracao/tipo_atendimento
 
 O endereço completo, ficará da seguinte forma::
 
-	https://endereco_do_servidor/api/v1/integracao/tipo_atendimento
+	https://endereco_do_servidor/api/v1/integracao/configuracao/tipo_atendimento
 
 Abaixo estão todas as funções disponíveis do cliente
 

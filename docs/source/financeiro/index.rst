@@ -19,3 +19,4 @@ Abaixo estão todas as funções disponíveis do financeiro
     :caption: Funções da API do financeiro
 
     consulta
+    evento_faturamento

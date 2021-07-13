@@ -8,11 +8,11 @@ OBS: Essa rota irá retornar todos os dados de tipos de atendimento.
 
 As requisições de tipos de atendimento, devem ser feitos na rota::
 
-	/api/v1/integracao/tipo_atendimento
+	/api/v1/integracao/configuracao/tipo_atendimento
 
 O endereço completo, ficará da seguinte forma::
 
-	https://endereco_do_servidor/api/v1/integracao/tipo_atendimento
+	https://endereco_do_servidor/api/v1/integracao/configuracao/tipo_atendimento
 
 **GET**
 
