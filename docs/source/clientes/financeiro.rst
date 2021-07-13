@@ -140,6 +140,7 @@ Retorno da requisição GET::
 	            "data_pagamento": "31/07/2017",
 	            "data_documento": null,
 	            "data_processamento": null,
+	            "pix_copia_cola":"00020101026216880014BR.GOV.BCB.PIX2566qrcodes-pix.gerencianet.com.br/v2/9a5944a87b1a47da12345581735e74165204000053039865802BR5914GERENCIANET SA6010OURO PRETO62070503***6301122B",
 	            "detalhamento": [
 	                {
 	                    "descricao": "(+) Serviço de Comunicação e Multimídia (26/09/2017) até (09/10/2017) - 13 dias (proporcional) | R$ 21.62",
@@ -250,6 +251,7 @@ Retorno da requisição GET::
 	            "data_pagamento": "25/06/2018",
 	            "data_documento": "06/04/2020",
 	            "data_processamento": "06/04/2020",
+	            "pix_copia_cola":null,
 	            "detalhamento": [
 	                {
 	                    "descricao": "Cobrança adicional",
@@ -356,6 +358,7 @@ Retorno da requisição GET::
 	            "data_pagamento": null,
 	            "data_documento": "06/04/2020",
 	            "data_processamento": "06/04/2020",
+	            "pix_copia_cola":"00020101026216880014BR.GOV.BCB.PIX2566qrcodes-pix.gerencianet.com.br/v2/9a5944a87b1a47da12345581735e74165204000053039865802BR5914GERENCIANET SA6010OURO PRETO62070503***6301122B",
 	            "detalhamento": [
 	                {
 	                    "descricao": "COBRANÇA DE TESTE VENCIDA",
