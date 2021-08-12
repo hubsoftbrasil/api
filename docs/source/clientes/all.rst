@@ -38,6 +38,10 @@ Os seguintes parâmetros podem/devem ser utilizados:
       -  Limite de resultados
       -  Não
 
+   *  -  offset
+      -  Deslocamento em relação ao limite de dados
+      -  Não
+
    *  -  order_by
       -  Campo que será utilizado para ordenação
       -  Não
@@ -64,6 +68,10 @@ Os atributos podem conter os seguintes valores:
       -  Nenhum
 
    *  -  limit
+      -  Número Inteiro maior que 0
+      -  Nenhum
+
+   *  -  offset
       -  Número Inteiro maior que 0
       -  Nenhum
 
