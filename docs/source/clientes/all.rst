@@ -6,6 +6,10 @@ All (Todos os Clientes)
 Para fazer requisições nos dados de clientes, é necessário que você já possua o TOKEN, conseguido na etapa (Autenticação).
 OBS: Essa rota irá retornar todos os dados de clientes, caso nenhum parâmetro seja enviado. Utilize com cautela.
 
+.. warning::
+
+	IMPORTANTE: Por se tratar de uma requisição que poderá trazer uma quantidade muito grande dados, o sistema irá armazenar o resultado da requisição em um Cache. Portanto, em chamadas consecutivas em curtos intervalos de tempo dessa rota, o sistema irá retornar o mesmo resultado. Recomendamos o uso dessa API poucas vezes ao dia (EX: 1 vez de madrugada e outra na parte da tarde por exemplo). Chamadas consecutivas nessa API pode parar seu sistema.
+
 As requisições de clientes, devem ser feitos na rota::
 
 	/api/v1/integracao/cliente/all
@@ -117,6 +121,7 @@ Retorno da requisição GET::
 	            "servicos":[
 	                {
 	                    "id_cliente_servico":11201,
+	                    "id_servico":100,
 	                    "numero_plano":1,
 	                    "nome":"4M",
 	                    "valor":119.9,
@@ -251,6 +256,7 @@ Retorno da requisição GET::
 	            "servicos":[
 	                {
 	                    "id_cliente_servico":11302,
+	                    "id_servico":1023,
 	                    "numero_plano":2,
 	                    "nome":"24M",
 	                    "valor":119.9,
@@ -350,8 +356,4 @@ Retorno da requisição GET::
 	        }
 	    ]
 	}
-
-.. warning::
-
-	IMPORTANTE: Por se tratar de uma requisição que poderá trazer uma quantidade muito grande dados, o sistema irá armazenar o resultado da requisição em um Cache. Portanto, em chamadas consecutivas em curtos intervalos de tempo dessa rota, o sistema irá retornar o mesmo resultado.
 
