@@ -52,6 +52,11 @@ Os seguintes parâmetros podem/devem ser utilizados:
    *  -  order_type
       -  Tipo de Ordenação
       -  Não
+   
+   *  -  inativo
+      -  Informa se deseja trazer os clientes inativos
+      -  Não
+     
 
 Os atributos podem conter os seguintes valores:
 
@@ -89,6 +94,10 @@ Os atributos podem conter os seguintes valores:
    *  -  order_type
       -  asc,desc
       -  asc
+   
+   *  -  inativo
+      -  sim,nao
+      -  nao
 
 Exemplo de requisição GET na rota de cliente::
 
