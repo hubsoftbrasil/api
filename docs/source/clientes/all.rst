@@ -156,12 +156,15 @@ Retorno da requisição GET::
 	                    	{
 	                            "id_pacote": 1,
 	                            "descricao": "IP FIXO",
+				    "codigo":"null"
 	                            "valor": "20",
 	                            "observacoes": "IP FIXO 189.79.21.21",
 	                            "data_cadastro": "2019-11-21 16:43:56"
 	                        },
 	                        {
-	                        	"id_pacote": 2,
+				    "id_pacote": 2,
+	                            "descricao": "TV",
+				    "codigo":"plataforma001"
 	                            "descricao": "TV",
 	                            "valor": "20",
 	                            "observacoes": "ASSINATURA DE TV",
