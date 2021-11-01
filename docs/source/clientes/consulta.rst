@@ -52,11 +52,6 @@ Os seguintes parâmetros podem/devem ser utilizados:
    *  -  order_type
       -  Tipo de Ordenação
       -  Não
-   
-   *  -  inativo
-      -  Informa se deseja trazer os clientes inativos
-      -  Não
-     
 
 Os atributos podem conter os seguintes valores:
 
@@ -94,10 +89,6 @@ Os atributos podem conter os seguintes valores:
    *  -  order_type
       -  asc,desc
       -  asc
-   
-   *  -  inativo
-      -  sim,nao
-      -  nao
 
 Exemplo de requisição GET na rota de cliente::
 
@@ -182,21 +173,27 @@ Retorno da requisição GET::
 	                    "pacotes":[
 	                    	{
 	                            "id_pacote": 1,
-				    "codigo":null,
 	                            "descricao": "IP FIXO",
 	                            "valor": "20",
 	                            "observacoes": "IP FIXO 189.79.21.21",
 	                            "data_cadastro": "2019-11-21 16:43:56"
 	                        },
 	                        {
-	                            "id_pacote": 2,
-				    "codigo":"tv001",
+	                        	"id_pacote": 2,
 	                            "descricao": "TV",
 	                            "valor": "20",
 	                            "observacoes": "ASSINATURA DE TV",
 	                            "data_cadastro": "2019-11-20 16:43:56"
 	                        }
 	                    ],
+	                    "senhas": [
+									{
+										"id_cliente_servico_senha": 6,
+										"descricao": "Teste",
+										"usuario": "xpto123",
+										"senha": "abc123"
+									}
+								],
 	                    "endereco_cadastral":{
 	                        "completo":"RUA DONA MARIA DAS DORES, 541 - NOSSA SENHORA DAS GRACAS, DIVINóPOLIS/MG - IGREJA",
 	                        "logradouro":"RUA",
@@ -322,7 +319,8 @@ Retorno da requisição GET::
 	                        "ipv4":"172.17.24.98",
 	                        "ipv6":null
 	                    },
-	                    "pacotes":null,
+	                    "pacotes":[],
+	                    "senhas":[],
 	                    "endereco_cadastral":{
 	                        "completo":"RUA GERALDO RODRIGUES DA COSTA, 5 - CENTRO, SANTO ANTôNIO DO MONTE/MG",
 	                        "logradouro":"RUA",
