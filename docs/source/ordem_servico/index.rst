@@ -19,7 +19,6 @@ Abaixo estão todas as funções disponíveis da ordem de serviço
     :caption: Funções da API de Ordem de Serviço
 
     agendar
-    create
     consultar
     reagendar
     remover_agendamento
