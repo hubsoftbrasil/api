@@ -38,6 +38,10 @@ Os seguintes parâmetros podem/devem ser utilizados:
       -  Data de Cadastro Final
       -  Não
 
+   *  -  cancelado
+      -  Retornar serviços cancelados
+      -  Não
+
    *  -  limit
       -  Limite de resultados
       -  Não
@@ -70,6 +74,10 @@ Os atributos podem conter os seguintes valores:
    *  -  data_fim
       -  Valor no formato DateTime (YYYY-MM-DD) Obs: Maior ou igual data_inicio
       -  Nenhum
+
+   *  -  cancelado
+      -  sim,nao
+      -  nao
 
    *  -  limit
       -  Número Inteiro maior que 0
