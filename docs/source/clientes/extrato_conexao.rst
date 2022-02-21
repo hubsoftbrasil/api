@@ -54,7 +54,7 @@ Os atributos podem conter os seguintes valores:
       -  Valor Default
 
    *  -  busca
-      -  login
+      -  login,ipv4,ipv6_wan,ipv6_lan
       -  Nenhum
 
    *  -  termo_busca
