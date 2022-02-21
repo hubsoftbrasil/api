@@ -21,6 +21,7 @@ Bem-vindo à documentação da API do HubSoft. Para utilizar a API é necessári
    financeiro/index
    ordem_servico/index
    pbx
+   crm
    prospecto/index
    rede/index
    tipo_atendimento/index
