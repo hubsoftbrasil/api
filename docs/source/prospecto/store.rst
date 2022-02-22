@@ -158,7 +158,7 @@ As seguintes respostas podem ser obtidas de acordo com o que for informado na ro
     
 **Observação ao vincular Prospecto a um CRM**
 
-- Caso seja informado o atributo id_crm, o prosecto será vinculado a lista **PROSPECTOS-API** por padrão.
+- Caso seja informado o atributo id_crm, o prospecto será vinculado a lista **PROSPECTOS-API** por padrão.
 
 **Casos de sucesso**
 
