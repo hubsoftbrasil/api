@@ -20,7 +20,7 @@
 # -- Project information -----------------------------------------------------
 
 project = u'HubSoft'
-copyright = u'2018, Guilherme Couto'
+copyright = u'2022, Guilherme Couto'
 author = u'Guilherme Couto'
 
 # The short X.Y version
