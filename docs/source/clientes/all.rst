@@ -163,13 +163,15 @@ Retorno da requisição GET::
 	                    "pacotes":[
 	                    	   {
 	                            "id_pacote": 1,
+				    "codigo":"meu_codigo_personalizado_1",
 	                            "descricao": "IP FIXO",
 	                            "valor": "20",
 	                            "observacoes": "IP FIXO 189.79.21.21",
 	                            "data_cadastro": "2019-11-21 16:43:56"
 	                        },
 	                        {
-	                        	"id_pacote": 2,
+	                            "id_pacote": 2,
+				    "codigo":"meu_codigo_personalizado_2",
 	                            "descricao": "TV",
 	                            "valor": "20",
 	                            "observacoes": "ASSINATURA DE TV",
@@ -177,13 +179,13 @@ Retorno da requisição GET::
 	                        }
 	                    ],
 	                    "senhas": [
-								   {
-								       "id_cliente_servico_senha": 6,
-								       "descricao": "Teste",
-								       "usuario": "xpto123",
-								       "senha": "abc123"
-								   }
-								],
+			    	{
+					"id_cliente_servico_senha": 6,
+					"descricao": "Teste",
+					"usuario": "xpto123",
+					"senha": "abc123"
+				}
+			    ],
 	                    "endereco_cadastral":{
 	                        "completo":"RUA DONA MARIA DAS DORES, 541 - NOSSA SENHORA DAS GRACAS, DIVINóPOLIS/MG - IGREJA",
 	                        "logradouro":"RUA",
