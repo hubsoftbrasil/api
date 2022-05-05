@@ -393,3 +393,79 @@ Retorno da requisição GET::
 	    ]
 	}
 
+Exemplo de requisição GET na rota de cliente, carregando apenas algumas relações::
+
+	curl -X GET 
+	--header "Accept:application/json"
+	--header "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijg0MTM2O"
+	https://endereco_servidor/api/v1/integracao/cliente/all?relacoes=pacotes,senhas -k
+
+Retorno da requisição GET::
+
+	{
+	    "status":"success",
+	    "msg":"Dados consultados com sucesso",
+	    "clientes":[
+	        {
+	            "id_cliente":11201,
+	            "codigo_cliente":421,
+	            "nome_razaosocial":"GUILHERME SILVA",
+	            "nome_fantasia":null,
+	            "tipo_pessoa":"pf",
+	            "cpf_cnpj":"10682083681",
+	            "telefone_primario":"37988242968",
+	            "telefone_secundario":"37988242968",
+	            "telefone_terciario":"",
+	            "email_principal":"guilherme@silva.com.br",
+	            "email_secundario":null,
+	            "rg":"MG16999888",
+	            "rg_emissao":null,
+	            "inscricao_municipal":null,
+	            "inscricao_estadual":null,
+	            "data_cadastro":"2017-08-05 00:00:00",
+	            "data_nascmento":"1969-12-31 04:00:00",
+	            "servicos":[
+	                {
+	                    "id_cliente_servico":11201,
+	                    "id_servico":100,
+	                    "numero_plano":1,
+	                    "nome":"4M",
+	                    "valor":119.9,
+	                    "status":"Serviço Habilitado",
+	                    "status_prefixo":"servico_habilitado",
+	                    "tecnologia":"WIRELESS",
+	                    "login":"guilhermesilva1068",
+	                    "senha":"123",
+	                    "ipv4":"10.99.2.203",
+	                    "ipv6":null,
+	                    "pacotes":[
+							{
+	                            "id_pacote": 1,
+				    			"codigo":"meu_codigo_personalizado_1",
+	                            "descricao": "IP FIXO",
+	                            "valor": "20",
+	                            "observacoes": "IP FIXO 189.79.21.21",
+	                            "data_cadastro": "2019-11-21 16:43:56"
+	                        },
+	                        {
+	                            "id_pacote": 2,
+				    			"codigo":"meu_codigo_personalizado_2",
+	                            "descricao": "TV",
+	                            "valor": "20",
+	                            "observacoes": "ASSINATURA DE TV",
+	                            "data_cadastro": "2019-11-20 16:43:56"
+	                        }
+	                    ],
+	                    "senhas": [
+							{
+								"id_cliente_servico_senha": 6,
+								"descricao": "Teste",
+								"usuario": "xpto123",
+								"senha": "abc123"
+							}
+			    		]
+	                }
+	            ]
+	        }
+	    ]
+	}
