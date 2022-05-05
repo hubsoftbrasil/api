@@ -439,9 +439,9 @@ Retorno da requisição GET::
 	                    "ipv4":"10.99.2.203",
 	                    "ipv6":null,
 	                    "pacotes":[
-							{
+	                    	   {
 	                            "id_pacote": 1,
-				    			"codigo":"meu_codigo_personalizado_1",
+				    "codigo":"meu_codigo_personalizado_1",
 	                            "descricao": "IP FIXO",
 	                            "valor": "20",
 	                            "observacoes": "IP FIXO 189.79.21.21",
@@ -449,7 +449,7 @@ Retorno da requisição GET::
 	                        },
 	                        {
 	                            "id_pacote": 2,
-				    			"codigo":"meu_codigo_personalizado_2",
+				    "codigo":"meu_codigo_personalizado_2",
 	                            "descricao": "TV",
 	                            "valor": "20",
 	                            "observacoes": "ASSINATURA DE TV",
@@ -457,13 +457,13 @@ Retorno da requisição GET::
 	                        }
 	                    ],
 	                    "senhas": [
-							{
-								"id_cliente_servico_senha": 6,
-								"descricao": "Teste",
-								"usuario": "xpto123",
-								"senha": "abc123"
-							}
-			    		]
+			    	{
+					"id_cliente_servico_senha": 6,
+					"descricao": "Teste",
+					"usuario": "xpto123",
+					"senha": "abc123"
+				}
+			    ]
 	                }
 	            ]
 	        }
