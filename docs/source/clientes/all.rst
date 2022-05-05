@@ -42,6 +42,14 @@ Os seguintes parâmetros podem/devem ser utilizados:
       -  Retornar serviços cancelados
       -  Não
 
+   *  -  codigo_pacote
+      -  Retorna apenas os clientes que contém pacotes com o código especificado
+      -  Não
+
+   *  -  relacoes
+      -  Carrega apenas os relacionamentos especificados
+      -  Não
+
    *  -  limit
       -  Limite de resultados
       -  Não
@@ -78,6 +86,14 @@ Os atributos podem conter os seguintes valores:
    *  -  cancelado
       -  sim,nao
       -  nao
+
+   *  -  codigo_pacote
+      -  Valor no formato string
+      -  Nenhum
+
+   *  -  relacoes
+      -  endereco_instalacao,endereco_cadastral,endereco_cobranca,endereco_fiscal,pacotes,interface,interface_roteamento,equipamento_conexao,equipamento_roteamento,grupos,porta_atendimento,senhas,status_conexao
+      -  Nenhum
 
    *  -  limit
       -  Número Inteiro maior que 0
