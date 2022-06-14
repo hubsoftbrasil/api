@@ -39,6 +39,13 @@ Exemplo de requisição POST na rota do cliente::
 	--header "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijg0MTM2O"
 	https://endereco_servidor/api/v1/integracao/cliente/autenticacao -d '{"usuario":"12312312344", "senha":"!M1nhAS3nhA&"}' -k
 
+Exemlo do JSON da requisição POST::
+
+	{
+		"usuario":"12312312344",
+		"senha":"!M1nhAS3nhA&"
+	}
+
 Retorno da requisição POST::
 
 	{
