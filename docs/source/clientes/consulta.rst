@@ -45,6 +45,10 @@ Os seguintes parâmetros podem/devem ser utilizados:
       -  Informa se deseja trazer os dados da última conexão
       -  Não
 
+   *  -  incluir_contrato
+      -  Informa se deseja incluir os contratos do serviço
+      -  Não
+
    *  -  order_by
       -  Campo que será utilizado para ordenação
       -  Não
@@ -79,6 +83,10 @@ Os atributos podem conter os seguintes valores:
       -  nao
 
    *  -  ultima_conexao
+      -  sim,nao
+      -  nao
+   
+   *  -  incluir_contrato
       -  sim,nao
       -  nao
 

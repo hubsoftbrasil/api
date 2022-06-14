@@ -90,6 +90,10 @@ Rota e corpo (payload) da requisição
    *  -  numero
       -  Número referente ao endereço de instalação
       -  Sim
+      
+   *  -  id_crm
+      -  ID referente ao CRM que será vinculado o prospecto
+      -  Nao
 
 - Tipo de valores aceitos pelos campos:
 
@@ -134,6 +138,9 @@ Rota e corpo (payload) da requisição
 
    *  -  numero
       - Numérico
+   
+   *  -  id_crm
+      - Numérico
 
 Respostas da requisição
 -----------
@@ -148,6 +155,10 @@ As seguintes respostas podem ser obtidas de acordo com o que for informado na ro
       "status": "error",
       "msg": "O CPF/CNPJ já foi cadastrado antes no prospecto EMPRESA XPTO LTDA"
     }
+    
+**Observação ao vincular Prospecto a um CRM**
+
+- Caso seja informado o atributo id_crm, o prospecto será vinculado a lista **PROSPECTOS-API** por padrão.
 
 **Casos de sucesso**
 

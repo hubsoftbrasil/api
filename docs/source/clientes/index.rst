@@ -29,5 +29,7 @@ Abaixo estão todas as funções disponíveis do cliente
     financeiro_email
     financeiro_sms
     financeiro_push
+    nota_fiscal
+    nota_fiscal_email
     ordem_servico
     resetar_mac

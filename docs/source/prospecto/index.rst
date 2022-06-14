@@ -10,6 +10,7 @@ Abaixo estão todas as funções disponíveis para o prospecto
 .. toctree::
     :caption: Funções da API de Prospectos
 
+    all    
     create
     store
     search
