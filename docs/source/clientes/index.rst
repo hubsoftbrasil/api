@@ -20,6 +20,7 @@ Abaixo estão todas as funções disponíveis do cliente
 
     all
     atendimento
+    autenticacao
     consulta
     configurar_autenticacao
     desbloqueio_confianca
