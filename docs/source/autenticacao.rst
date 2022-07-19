@@ -58,7 +58,9 @@ Exemplo de chamada em uma rota, enviando os dados do Token::
 
 .. warning::
 
-        IMPORTANTE: O token irá expirar conforme o tempo retornado no parametro ``expires_in``. Observação: O valor 2592000 é equivalente a 30 dias. Então será necessário renovar o token requisitado sempre que expirar. 
+        **IMPORTANTE:** O token irá expirar conforme o tempo retornado no parametro ``expires_in``. 
+        **Observação:** O valor 2592000 é equivalente a 30 dias. Sugerimos que armazenem o token e reutilizem o mesmo, conforme for necessário. Será necessário gerar um novo token sempre que o mesmo expirar.
+        **Observação 2:** Caso o token ainda não tenha terminado o seu prazo de validade, porém a API retornar o código de status ``HTTP 401``, significa que é necessário gerar um novo token, pois o mesmo pode ter sido cancelado / expirado manualmente através de algum usuário administrador do sistema (por exemplo, durante atualizações o sistema poderá invalidar todos os TOKENS, fazendo com que uma nova autenticação seja necessária)
 
 .. warning::
 
