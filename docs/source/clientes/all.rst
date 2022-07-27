@@ -42,6 +42,10 @@ Os seguintes parâmetros podem/devem ser utilizados:
       -  Retornar serviços cancelados
       -  Não
 
+   *  -  ultima_conexao
+      -  Informa se deseja trazer os dados da última conexão
+      -  Não
+
    *  -  codigo_pacote
       -  Retorna apenas os clientes que contém pacotes com o código especificado
       -  Não
@@ -84,6 +88,10 @@ Os atributos podem conter os seguintes valores:
       -  Nenhum
 
    *  -  cancelado
+      -  sim,nao
+      -  nao
+
+   *  -  ultima_conexao
       -  sim,nao
       -  nao
 
