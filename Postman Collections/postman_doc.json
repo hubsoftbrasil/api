@@ -11,7 +11,7 @@
 			"item": [
 				{
 					"name": "oAuth",
-					"_postman_id": "a3a5b671-c0c5-4b20-ace9-ea05b5b13c5e",
+					"id": "a3a5b671-c0c5-4b20-ace9-ea05b5b13c5e",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -82,7 +82,7 @@
 					]
 				}
 			],
-			"_postman_id": "4a682004-f355-42bd-b35b-a040fb1e2987",
+			"id": "4a682004-f355-42bd-b35b-a040fb1e2987",
 			"description": "**Necessário**\n\nPara autenticar na API, será necessário possuir os seguintes dados em mãos:\n\n\\* client_id  \n\\* client_secret  \n\\* username  \n\\* password\n\nApós a autenticação você receberá um `access_token` que deverá ser utilizado nos demais endpoints.\n\nEsse token deverá ser enviado no `Header Authorization` no seguinte formato:\n\n`Bearer`\n\n**IMPORTANTE:** O token irá expirar conforme o tempo retornado no parametro `expires_in`.\n\n**Observação:** O valor 2592000 é equivalente a 30 dias. Sugerimos que armazenem o token e reutilizem o mesmo, conforme for necessário. Será necessário gerar um novo token sempre que o mesmo expirar.\n\n**Observação 2:** Caso a API retorne em qualquer momento o código de status `HTTP 401`, significa que é necessário gerar um novo token, pois o mesmo pode ter sido cancelado / expirado manualmente através de algum usuário administrador do sistema (por exemplo, durante atualizações o sistema poderá invalidar todos os TOKENS, fazendo com que uma nova autenticação seja necessária)"
 		},
 		{
@@ -90,7 +90,7 @@
 			"item": [
 				{
 					"name": "Consulta",
-					"_postman_id": "e109b770-88bf-4ffd-a147-14e3e35cf9af",
+					"id": "e109b770-88bf-4ffd-a147-14e3e35cf9af",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -137,8 +137,7 @@
 								{
 									"key": "quantidade",
 									"value": "10",
-									"description": "Quantidade de Itens por Página",
-									"type": "string"
+									"description": "Quantidade de Itens por Página"
 								}
 							]
 						},
@@ -206,7 +205,7 @@
 				},
 				{
 					"name": "Adicionar",
-					"_postman_id": "51f78a40-e296-495b-b073-4f34c3115437",
+					"id": "51f78a40-e296-495b-b073-4f34c3115437",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -277,7 +276,7 @@
 				},
 				{
 					"name": "Editar",
-					"_postman_id": "78356c4d-dbee-4651-94a2-8bbb52b22146",
+					"id": "78356c4d-dbee-4651-94a2-8bbb52b22146",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -316,8 +315,7 @@
 								{
 									"key": "id_atendimento",
 									"value": "123",
-									"description": "ID do Atendimento a ser editado",
-									"type": "string"
+									"description": "ID do Atendimento a ser editado"
 								}
 							]
 						},
@@ -376,7 +374,7 @@
 					]
 				}
 			],
-			"_postman_id": "91a44cd1-4860-4926-8040-cb6bb73c43ba",
+			"id": "91a44cd1-4860-4926-8040-cb6bb73c43ba",
 			"description": "**Necessário**\n\nPara realizar as requisições nos dados de atendimento, será necessário que você já possua o `access_token`, adquirido através dos `endpoints` de `(oAuth)`."
 		},
 		{
@@ -384,7 +382,7 @@
 			"item": [
 				{
 					"name": "All (Todos os Clientes)",
-					"_postman_id": "f0068073-f3d6-489c-9aa7-40451b85e97b",
+					"id": "f0068073-f3d6-489c-9aa7-40451b85e97b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -527,7 +525,7 @@
 				},
 				{
 					"name": "Atendimento",
-					"_postman_id": "3fd4a2c3-979f-4ee2-a88b-4ebf949da008",
+					"id": "3fd4a2c3-979f-4ee2-a88b-4ebf949da008",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -568,7 +566,7 @@
 				},
 				{
 					"name": "Autenticação",
-					"_postman_id": "6cfe3ea8-5816-46a4-8fe9-ff7b182a09de",
+					"id": "6cfe3ea8-5816-46a4-8fe9-ff7b182a09de",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -597,7 +595,7 @@
 				},
 				{
 					"name": "Consultas",
-					"_postman_id": "e54e9bd8-b9e3-423a-a1da-9193894f522a",
+					"id": "e54e9bd8-b9e3-423a-a1da-9193894f522a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -686,10 +684,9 @@
 										"value": "{{access_token}}",
 										"type": "text"
 									}
-								],
-								"url": null
+								]
 							},
-							"_postman_previewlanguage": "json",
+							"_postman_previewlanguage": "Text",
 							"header": null,
 							"cookie": [],
 							"responseTime": null,
@@ -699,7 +696,7 @@
 				},
 				{
 					"name": "Configuração de dados de Autenticação",
-					"_postman_id": "55a9af47-323c-4fc4-acce-8ea71c55ce4a",
+					"id": "55a9af47-323c-4fc4-acce-8ea71c55ce4a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -740,7 +737,7 @@
 				},
 				{
 					"name": "Desbloqueio em Confiança",
-					"_postman_id": "06e8db8d-fa7c-407b-bd94-e9a8f5f1c7a6",
+					"id": "06e8db8d-fa7c-407b-bd94-e9a8f5f1c7a6",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -781,7 +778,7 @@
 				},
 				{
 					"name": "Desconexão do Cliente",
-					"_postman_id": "7ed5854e-888c-4337-b46d-6abc4d8245b6",
+					"id": "7ed5854e-888c-4337-b46d-6abc4d8245b6",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -803,8 +800,7 @@
 							"name": "Sucesso",
 							"originalRequest": {
 								"method": "GET",
-								"header": [],
-								"url": null
+								"header": []
 							},
 							"_postman_previewlanguage": "json",
 							"header": null,
@@ -836,7 +832,7 @@
 				},
 				{
 					"name": "Extrato de Conexão",
-					"_postman_id": "f89b0d5e-5d5c-4e89-858f-a722be98c01e",
+					"id": "f89b0d5e-5d5c-4e89-858f-a722be98c01e",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -858,8 +854,7 @@
 							"name": "Sucesso",
 							"originalRequest": {
 								"method": "GET",
-								"header": [],
-								"url": null
+								"header": []
 							},
 							"_postman_previewlanguage": "json",
 							"header": null,
@@ -871,7 +866,7 @@
 				},
 				{
 					"name": "Financeiro",
-					"_postman_id": "0ba61080-2bda-4560-9760-3c0d117dd7cd",
+					"id": "0ba61080-2bda-4560-9760-3c0d117dd7cd",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -893,8 +888,7 @@
 							"name": "Sucesso",
 							"originalRequest": {
 								"method": "GET",
-								"header": [],
-								"url": null
+								"header": []
 							},
 							"_postman_previewlanguage": "json",
 							"header": null,
@@ -906,7 +900,7 @@
 				},
 				{
 					"name": "Financeiro -> Enviar E-mail",
-					"_postman_id": "7a4be438-4771-4c2b-85d6-64a9c706a216",
+					"id": "7a4be438-4771-4c2b-85d6-64a9c706a216",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -941,7 +935,7 @@
 				},
 				{
 					"name": "Financeiro -> Enviar SMS",
-					"_postman_id": "b993d2cb-c7ec-494e-a7ef-e3d5845054fc",
+					"id": "b993d2cb-c7ec-494e-a7ef-e3d5845054fc",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -982,7 +976,7 @@
 				},
 				{
 					"name": "Financeiro -> Push Notificação",
-					"_postman_id": "a132a67f-aed1-4747-8771-b67d4020e359",
+					"id": "a132a67f-aed1-4747-8771-b67d4020e359",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1023,7 +1017,7 @@
 				},
 				{
 					"name": "Nota Fiscal",
-					"_postman_id": "3e917dc2-52be-4d05-9265-aca3f70ace89",
+					"id": "3e917dc2-52be-4d05-9265-aca3f70ace89",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1045,8 +1039,7 @@
 							"name": "Sucesso",
 							"originalRequest": {
 								"method": "GET",
-								"header": [],
-								"url": null
+								"header": []
 							},
 							"_postman_previewlanguage": "json",
 							"header": null,
@@ -1058,7 +1051,7 @@
 				},
 				{
 					"name": "Nota Fiscal -> Envio por Email",
-					"_postman_id": "764d8f92-3adc-4434-bfa3-41d3ecc63d8b",
+					"id": "764d8f92-3adc-4434-bfa3-41d3ecc63d8b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1099,7 +1092,7 @@
 				},
 				{
 					"name": "Ordem de Serviço",
-					"_postman_id": "b8043377-1499-4f3e-bd05-6bcf71f46f80",
+					"id": "b8043377-1499-4f3e-bd05-6bcf71f46f80",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1121,8 +1114,7 @@
 							"name": "Sucesso",
 							"originalRequest": {
 								"method": "GET",
-								"header": [],
-								"url": null
+								"header": []
 							},
 							"_postman_previewlanguage": "json",
 							"header": null,
@@ -1134,7 +1126,7 @@
 				},
 				{
 					"name": "Resetar MAC do Cliente",
-					"_postman_id": "ad95f206-c517-4e56-95e2-c4179f1deb1c",
+					"id": "ad95f206-c517-4e56-95e2-c4179f1deb1c",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1156,8 +1148,7 @@
 							"name": "Sucesso",
 							"originalRequest": {
 								"method": "GET",
-								"header": [],
-								"url": null
+								"header": []
 							},
 							"_postman_previewlanguage": "json",
 							"header": null,
@@ -1168,7 +1159,7 @@
 					]
 				}
 			],
-			"_postman_id": "15eb59d2-9c7d-4056-ab56-ccc5da1faf79",
+			"id": "15eb59d2-9c7d-4056-ab56-ccc5da1faf79",
 			"description": "Para realizar requisições nos dados de clientes, é necessário que você já possua o `access_token`, conseguido na etapa `(oAuth)`"
 		},
 		{
@@ -1176,7 +1167,7 @@
 			"item": [
 				{
 					"name": "Consulta",
-					"_postman_id": "15a34af2-a72e-407f-994c-1eb325f699cf",
+					"id": "15a34af2-a72e-407f-994c-1eb325f699cf",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1204,7 +1195,7 @@
 					]
 				}
 			],
-			"_postman_id": "1f430ce4-b266-4e3d-8381-ce17f70bddb3",
+			"id": "1f430ce4-b266-4e3d-8381-ce17f70bddb3",
 			"description": "**Necessário**\n\nPara fazer requisições nos dados de `CRM`, é necessário que você já possua o `access_token`, conseguido na etapa `(oAuth)`.\n\nOBS: Essa rota irá retornar todos os dados de `CRM.`"
 		},
 		{
@@ -1212,7 +1203,7 @@
 			"item": [
 				{
 					"name": "Consulta",
-					"_postman_id": "1b0a371e-03e2-4e7f-9849-8cef41436ecb",
+					"id": "1b0a371e-03e2-4e7f-9849-8cef41436ecb",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1253,7 +1244,7 @@
 				},
 				{
 					"name": "Evento de Faturamento",
-					"_postman_id": "5b87d301-3917-4cdc-acdf-5e989e20b1c1",
+					"id": "5b87d301-3917-4cdc-acdf-5e989e20b1c1",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1293,7 +1284,7 @@
 					]
 				}
 			],
-			"_postman_id": "71ba8361-d5d0-4cf7-ab8c-a2b73390bb9f",
+			"id": "71ba8361-d5d0-4cf7-ab8c-a2b73390bb9f",
 			"description": "**Necessário**\n\nPara fazer requisições nos dados de clientes, é necessário que você já possua o `access_token`, conseguido na etapa (`oAuth`)"
 		},
 		{
@@ -1301,7 +1292,7 @@
 			"item": [
 				{
 					"name": "Agendar",
-					"_postman_id": "34226b10-c234-49ab-9456-32217a485cfa",
+					"id": "34226b10-c234-49ab-9456-32217a485cfa",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1336,7 +1327,7 @@
 				},
 				{
 					"name": "Consultar",
-					"_postman_id": "2cb1d9b7-5977-4176-9abb-15f04060621a",
+					"id": "2cb1d9b7-5977-4176-9abb-15f04060621a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1377,7 +1368,7 @@
 				},
 				{
 					"name": "Reagendar",
-					"_postman_id": "ca5f3657-eaf4-42ad-a974-6a0dd0152f2d",
+					"id": "ca5f3657-eaf4-42ad-a974-6a0dd0152f2d",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1418,7 +1409,7 @@
 				},
 				{
 					"name": "Remover Agendamento",
-					"_postman_id": "5881bc8d-26f4-4757-b0e2-c8c672e46ac1",
+					"id": "5881bc8d-26f4-4757-b0e2-c8c672e46ac1",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1458,15 +1449,386 @@
 					]
 				}
 			],
-			"_postman_id": "d64e5000-278c-4bbd-b6da-17c9ace88a72",
+			"id": "d64e5000-278c-4bbd-b6da-17c9ace88a72",
 			"description": "StartFragment\n\n**Necessário**\n\nPara fazer requisições nos dados de ordem de serviço, é necessário que você já possua o `access_token`, conseguido na etapa `(oAuth)`\n\nEndFragment"
+		},
+		{
+			"name": "Nota Fiscal",
+			"item": [
+				{
+					"name": "NFSE",
+					"item": [
+						{
+							"name": "Listar NFSEs",
+							"id": "b44a7f0e-f043-4fac-af75-97adab7baab6",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/v1/integracao/nota_fiscal/nfse?data_inicio=2020-01-01&data_fim=2022-08-31&documento=295074870001851&pagina=0&itens_por_pagina=10",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"integracao",
+										"nota_fiscal",
+										"nfse"
+									],
+									"query": [
+										{
+											"key": "data_inicio",
+											"value": "2020-01-01",
+											"description": "(Obrigatório) Data Inicial no formato YYYY-MM-DD"
+										},
+										{
+											"key": "data_fim",
+											"value": "2022-08-31",
+											"description": "(Obrigatório) Data Final no formato YYYY-MM-DD"
+										},
+										{
+											"key": "documento",
+											"value": "295074870001851",
+											"description": "(Obrigatório) CNPJ da Empresa emissora da NFSe"
+										},
+										{
+											"key": "pagina",
+											"value": "0",
+											"description": "(Obrigatório) Página a ser exibida"
+										},
+										{
+											"key": "itens_por_pagina",
+											"value": "10",
+											"description": "(Obrigatório) Itens por Página a serem exibidos. Mínimo: 1, Máximo: 500"
+										}
+									]
+								},
+								"description": "No método `GET`, será possível consultar as NFSe emitidas e obter o retorno no formato `JSON` como resposta. Os seguintes `Query Params` podem/devem ser utilizados\n\n| **Atributo** | **Descrição** | **Obrigatório** |\n| --- | --- | --- |\n| `data_inicio` | Data Inicial no formato YYYY-MM-DD | Sim |\n| `data_fim` | Data Final no formato YYYY-MM-DD | Sim |\n| `documento` | CNPJ da Empresa emissora da NFSe | Sim |\n| `pagina` | Página a ser exibida | Sim |\n| `itens_por_pagina` | Itens por Página a serem exibidos. Mínimo: 1, Máximo: 500 | Sim |"
+							},
+							"response": [
+								{
+									"id": "56e7d4b9-d24a-4f72-8e1d-1260a01aa849",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{access_token}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/nota_fiscal/nfse?data_inicio=2020-01-01&data_fim=2022-08-31&documento=29507487000185&pagina=0&itens_por_pagina=10",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"nota_fiscal",
+												"nfse"
+											],
+											"query": [
+												{
+													"key": "data_inicio",
+													"value": "2020-01-01",
+													"description": "Data Inicial no formato YYYY-MM-DD"
+												},
+												{
+													"key": "data_fim",
+													"value": "2022-08-31",
+													"description": "Data Final no formato YYYY-MM-DD"
+												},
+												{
+													"key": "documento",
+													"value": "29507487000185",
+													"description": "CNPJ da Empresa emissora da NFSe"
+												},
+												{
+													"key": "pagina",
+													"value": "0"
+												},
+												{
+													"key": "itens_por_pagina",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 14 Sep 2022 14:26:13 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 14 Sep 2022 14:26:13 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.2.34"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=YUxZR05XNqOH0ZrhKUDEmQabuB9DhUutVcZTxDtz; expires=Wed, 14-Sep-2022 15:26:13 GMT; Max-Age=3600; path=/; httponly"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Dados consultados com sucesso\",\n    \"nfses\": [\n        {\n            \"id_nfse\": 1,\n            \"id_externo\": \"5e0eab8d6f876b9e7e4638ed\",\n            \"hash\": \"c86faa05-55ca-451f-8d2e-3c56f2c8764b\",\n            \"numero\": \"6\",\n            \"serie\": \"1\",\n            \"lote_rps\": \"9\",\n            \"data_emissao\": \"2020-01-02 22:03:33\",\n            \"data_cancelamento\": \"2020-01-03 18:15:39\",\n            \"link_pdf\": null,\n            \"link_xml\": null,\n            \"status\": \"cancelado\",\n            \"informacao_complementar\": \"INFORMAÇÃO COMPLEMENTAR DA NFSE\",\n            \"protocolo_cancelamento\": \"3ce37523-c23b-483f-90a9-f2c4aa00efbb\",\n            \"iss_retido\": null,\n            \"codigo_lista_servico\": null,\n            \"codigo_tributacao_municipio\": null,\n            \"cnae\": null,\n            \"aliquota_iss\": null,\n            \"aliquota_pis\": null,\n            \"aliquota_cofins\": null,\n            \"aliquota_csll\": null,\n            \"aliquota_inss\": null,\n            \"aliquota_irrf\": null,\n            \"valor_iss\": null,\n            \"valor_pis\": null,\n            \"valor_cofins\": null,\n            \"valor_csll\": null,\n            \"valor_inss\": null,\n            \"valor_irrf\": null,\n            \"valor_iss_retido\": null,\n            \"valor_desconto_condicionado\": null,\n            \"valor_desconto_incondicionado\": null,\n            \"valor_deducoes\": null,\n            \"tipo_tributacao\": {\n                \"codigo\": null,\n                \"descricao\": null\n            },\n            \"exigibilidade\": {\n                \"codigo\": null,\n                \"descricao\": null\n            },\n            \"prestador\": {\n                \"documento\": \"29507487000185\",\n                \"nome_razaosocial\": \"HUBSOFT BRASIL LTDA\",\n                \"nome_fantasia\": \"HUBSOFT\"\n            },\n            \"tomador\": {\n                \"codigo\": 1382,\n                \"documento\": \"09141806654\",\n                \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO\",\n                \"nome_fantasia\": null,\n                \"telefone_primario\": \"37999991111\",\n                \"telefone_secundario\": \"3734151100\",\n                \"email_principal\": \"naotem@naotem.com.br\",\n                \"email_secundario\": \"naotem@naotem.com.br\",\n                \"rg\": null,\n                \"rg_emissor\": null,\n                \"inscricao_municipal\": null,\n                \"inscricao_estadual\": null,\n                \"tipo_pessoa\": \"pf\",\n                \"data_nascimento\": \"1994-03-11\"\n            },\n            \"itens\": [\n                {\n                    \"descricao\": \"SCM (30/12/2019) até (10/01/2020) | R$ 29.33 (Proporcional) 11 dias\",\n                    \"valor\": \"39.33\",\n                    \"servico\": {\n                        \"numero_plano\": 2,\n                        \"descricao\": \"TESTE-NFSE\"\n                    }\n                }\n            ]\n        },\n        {\n            \"id_nfse\": 2,\n            \"id_externo\": \"5e0f88b5dc59f60a1bc2233b\",\n            \"hash\": null,\n            \"numero\": null,\n            \"serie\": null,\n            \"lote_rps\": null,\n            \"data_emissao\": \"2020-01-03 15:30:34\",\n            \"data_cancelamento\": \"2020-01-03 18:28:18\",\n            \"link_pdf\": null,\n            \"link_xml\": null,\n            \"status\": \"cancelado\",\n            \"informacao_complementar\": \"INFORMAÇÃO COMPLEMENTAR DA NFSE\",\n            \"protocolo_cancelamento\": null,\n            \"iss_retido\": null,\n            \"codigo_lista_servico\": null,\n            \"codigo_tributacao_municipio\": null,\n            \"cnae\": null,\n            \"aliquota_iss\": null,\n            \"aliquota_pis\": null,\n            \"aliquota_cofins\": null,\n            \"aliquota_csll\": null,\n            \"aliquota_inss\": null,\n            \"aliquota_irrf\": null,\n            \"valor_iss\": null,\n            \"valor_pis\": null,\n            \"valor_cofins\": null,\n            \"valor_csll\": null,\n            \"valor_inss\": null,\n            \"valor_irrf\": null,\n            \"valor_iss_retido\": null,\n            \"valor_desconto_condicionado\": null,\n            \"valor_desconto_incondicionado\": null,\n            \"valor_deducoes\": null,\n            \"tipo_tributacao\": {\n                \"codigo\": null,\n                \"descricao\": null\n            },\n            \"exigibilidade\": {\n                \"codigo\": null,\n                \"descricao\": null\n            },\n            \"prestador\": {\n                \"documento\": \"29507487000185\",\n                \"nome_razaosocial\": \"HUBSOFT BRASIL LTDA\",\n                \"nome_fantasia\": \"HUBSOFT\"\n            },\n            \"tomador\": {\n                \"codigo\": 1162,\n                \"documento\": \"41107296617\",\n                \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO\",\n                \"nome_fantasia\": null,\n                \"telefone_primario\": \"37999094211\",\n                \"telefone_secundario\": \"3732818382\",\n                \"email_principal\": \"naotem@naotem.com.br\",\n                \"email_secundario\": \"naotem@naotem.com.br\",\n                \"rg\": \"MG16082148\",\n                \"rg_emissor\": \"SSPMG\",\n                \"inscricao_municipal\": null,\n                \"inscricao_estadual\": null,\n                \"tipo_pessoa\": \"pf\",\n                \"data_nascimento\": \"1994-03-10\"\n            },\n            \"itens\": [\n                {\n                    \"descricao\": \"(+) SVA - Teste\",\n                    \"valor\": \"123.5\",\n                    \"servico\": {\n                        \"numero_plano\": 1,\n                        \"descricao\": \"50MB - Mega (Promocional 2/2019)\"\n                    }\n                }\n            ]\n        },\n        {\n            \"id_nfse\": 3,\n            \"id_externo\": null,\n            \"hash\": null,\n            \"numero\": null,\n            \"serie\": null,\n            \"lote_rps\": null,\n            \"data_emissao\": \"2020-01-03 17:40:13\",\n            \"data_cancelamento\": \"2020-01-03 17:47:50\",\n            \"link_pdf\": null,\n            \"link_xml\": null,\n            \"status\": \"cancelado\",\n            \"informacao_complementar\": \"INFORMAÇÃO COMPLEMENTAR DA NFSE\",\n            \"protocolo_cancelamento\": null,\n            \"iss_retido\": null,\n            \"codigo_lista_servico\": null,\n            \"codigo_tributacao_municipio\": null,\n            \"cnae\": null,\n            \"aliquota_iss\": null,\n            \"aliquota_pis\": null,\n            \"aliquota_cofins\": null,\n            \"aliquota_csll\": null,\n            \"aliquota_inss\": null,\n            \"aliquota_irrf\": null,\n            \"valor_iss\": null,\n            \"valor_pis\": null,\n            \"valor_cofins\": null,\n            \"valor_csll\": null,\n            \"valor_inss\": null,\n            \"valor_irrf\": null,\n            \"valor_iss_retido\": null,\n            \"valor_desconto_condicionado\": null,\n            \"valor_desconto_incondicionado\": null,\n            \"valor_deducoes\": null,\n            \"tipo_tributacao\": {\n                \"codigo\": null,\n                \"descricao\": null\n            },\n            \"exigibilidade\": {\n                \"codigo\": null,\n                \"descricao\": null\n            },\n            \"prestador\": {\n                \"documento\": \"29507487000185\",\n                \"nome_razaosocial\": \"HUBSOFT BRASIL LTDA\",\n                \"nome_fantasia\": \"HUBSOFT\"\n            },\n            \"tomador\": {\n                \"codigo\": 1382,\n                \"documento\": \"09141806654\",\n                \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO\",\n                \"nome_fantasia\": null,\n                \"telefone_primario\": \"37999991111\",\n                \"telefone_secundario\": \"3734151100\",\n                \"email_principal\": \"naotem@naotem.com.br\",\n                \"email_secundario\": \"naotem@naotem.com.br\",\n                \"rg\": null,\n                \"rg_emissor\": null,\n                \"inscricao_municipal\": null,\n                \"inscricao_estadual\": null,\n                \"tipo_pessoa\": \"pf\",\n                \"data_nascimento\": \"1994-03-11\"\n            },\n            \"itens\": [\n                {\n                    \"descricao\": \"SCM (10/01/2020) até (10/02/2020) | R$ 80.00\",\n                    \"valor\": \"80\",\n                    \"servico\": {\n                        \"numero_plano\": 2,\n                        \"descricao\": \"TESTE-NFSE\"\n                    }\n                }\n            ]\n        },\n        {\n            \"id_nfse\": 4,\n            \"id_externo\": \"5e0fb21cdc59f6ce80c2274f\",\n            \"hash\": \"5d707116-7de4-4acd-afb6-62f37d8b22ce\",\n            \"numero\": \"7\",\n            \"serie\": \"1\",\n            \"lote_rps\": \"11\",\n            \"data_emissao\": \"2020-01-03 18:28:41\",\n            \"data_cancelamento\": \"2020-01-03 18:30:24\",\n            \"link_pdf\": null,\n            \"link_xml\": null,\n            \"status\": \"cancelado\",\n            \"informacao_complementar\": \"INFORMAÇÃO COMPLEMENTAR DA NFSE\",\n            \"protocolo_cancelamento\": \"fc3f1b09-97d3-497a-9ae1-5534f3f86372\",\n            \"iss_retido\": null,\n            \"codigo_lista_servico\": null,\n            \"codigo_tributacao_municipio\": null,\n            \"cnae\": null,\n            \"aliquota_iss\": null,\n            \"aliquota_pis\": null,\n            \"aliquota_cofins\": null,\n            \"aliquota_csll\": null,\n            \"aliquota_inss\": null,\n            \"aliquota_irrf\": null,\n            \"valor_iss\": null,\n            \"valor_pis\": null,\n            \"valor_cofins\": null,\n            \"valor_csll\": null,\n            \"valor_inss\": null,\n            \"valor_irrf\": null,\n            \"valor_iss_retido\": null,\n            \"valor_desconto_condicionado\": null,\n            \"valor_desconto_incondicionado\": null,\n            \"valor_deducoes\": null,\n            \"tipo_tributacao\": {\n                \"codigo\": null,\n                \"descricao\": null\n            },\n            \"exigibilidade\": {\n                \"codigo\": null,\n                \"descricao\": null\n            },\n            \"prestador\": {\n                \"documento\": \"29507487000185\",\n                \"nome_razaosocial\": \"HUBSOFT BRASIL LTDA\",\n                \"nome_fantasia\": \"HUBSOFT\"\n            },\n            \"tomador\": {\n                \"codigo\": 1382,\n                \"documento\": \"09141806654\",\n                \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO\",\n                \"nome_fantasia\": null,\n                \"telefone_primario\": \"37999991111\",\n                \"telefone_secundario\": \"3734151100\",\n                \"email_principal\": \"naotem@naotem.com.br\",\n                \"email_secundario\": \"naotem@naotem.com.br\",\n                \"rg\": null,\n                \"rg_emissor\": null,\n                \"inscricao_municipal\": null,\n                \"inscricao_estadual\": null,\n                \"tipo_pessoa\": \"pf\",\n                \"data_nascimento\": \"1994-03-11\"\n            },\n            \"itens\": [\n                {\n                    \"descricao\": \"SCM (01/01/2020) até (10/02/2020) | R$ 106.67 (Proporcional) 40 dias\",\n                    \"valor\": \"106.67\",\n                    \"servico\": {\n                        \"numero_plano\": 2,\n                        \"descricao\": \"TESTE-NFSE\"\n                    }\n                }\n            ]\n        },\n        {\n            \"id_nfse\": 5,\n            \"id_externo\": \"5e0fb30f9a5c2df7819440ec\",\n            \"hash\": null,\n            \"numero\": \"8\",\n            \"serie\": \"1\",\n            \"lote_rps\": \"12\",\n            \"data_emissao\": \"2020-01-03 18:32:41\",\n            \"data_cancelamento\": \"2020-01-03 23:39:42\",\n            \"link_pdf\": null,\n            \"link_xml\": null,\n            \"status\": \"cancelado\",\n            \"informacao_complementar\": \"INFORMAÇÃO COMPLEMENTAR DA NFSE\",\n            \"protocolo_cancelamento\": \"a2af069e-f57b-40ea-9f76-1eb1016fc889\",\n            \"iss_retido\": null,\n            \"codigo_lista_servico\": null,\n            \"codigo_tributacao_municipio\": null,\n            \"cnae\": null,\n            \"aliquota_iss\": null,\n            \"aliquota_pis\": null,\n            \"aliquota_cofins\": null,\n            \"aliquota_csll\": null,\n            \"aliquota_inss\": null,\n            \"aliquota_irrf\": null,\n            \"valor_iss\": null,\n            \"valor_pis\": null,\n            \"valor_cofins\": null,\n            \"valor_csll\": null,\n            \"valor_inss\": null,\n            \"valor_irrf\": null,\n            \"valor_iss_retido\": null,\n            \"valor_desconto_condicionado\": null,\n            \"valor_desconto_incondicionado\": null,\n            \"valor_deducoes\": null,\n            \"tipo_tributacao\": {\n                \"codigo\": null,\n                \"descricao\": null\n            },\n            \"exigibilidade\": {\n                \"codigo\": null,\n                \"descricao\": null\n            },\n            \"prestador\": {\n                \"documento\": \"29507487000185\",\n                \"nome_razaosocial\": \"HUBSOFT BRASIL LTDA\",\n                \"nome_fantasia\": \"HUBSOFT\"\n            },\n            \"tomador\": {\n                \"codigo\": 1382,\n                \"documento\": \"09141806654\",\n                \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO\",\n                \"nome_fantasia\": null,\n                \"telefone_primario\": \"37999991111\",\n                \"telefone_secundario\": \"3734151100\",\n                \"email_principal\": \"naotem@naotem.com.br\",\n                \"email_secundario\": \"naotem@naotem.com.br\",\n                \"rg\": null,\n                \"rg_emissor\": null,\n                \"inscricao_municipal\": null,\n                \"inscricao_estadual\": null,\n                \"tipo_pessoa\": \"pf\",\n                \"data_nascimento\": \"1994-03-11\"\n            },\n            \"itens\": [\n                {\n                    \"descricao\": \"(+) SCM (01/01/2020) até (31/01/2020) | R$ 80.00\",\n                    \"valor\": \"80\",\n                    \"servico\": {\n                        \"numero_plano\": 2,\n                        \"descricao\": \"TESTE-NFSE\"\n                    }\n                }\n            ]\n        },\n        {\n            \"id_nfse\": 6,\n            \"id_externo\": \"5e0ffce99a5c2d3bce9440f2\",\n            \"hash\": \"d6aabe8d-8672-4c08-bb7f-3e617a2cc52a\",\n            \"numero\": \"9\",\n            \"serie\": \"1\",\n            \"lote_rps\": \"13\",\n            \"data_emissao\": \"2020-01-03 23:45:18\",\n            \"data_cancelamento\": \"2020-01-03 23:51:04\",\n            \"link_pdf\": null,\n            \"link_xml\": null,\n            \"status\": \"cancelado\",\n            \"informacao_complementar\": \"INFORMAÇÃO COMPLEMENTAR DA NFSE\",\n            \"protocolo_cancelamento\": \"04691c5d-9daa-4812-beed-e8cc45c3753c\",\n            \"iss_retido\": null,\n            \"codigo_lista_servico\": null,\n            \"codigo_tributacao_municipio\": null,\n            \"cnae\": null,\n            \"aliquota_iss\": null,\n            \"aliquota_pis\": null,\n            \"aliquota_cofins\": null,\n            \"aliquota_csll\": null,\n            \"aliquota_inss\": null,\n            \"aliquota_irrf\": null,\n            \"valor_iss\": null,\n            \"valor_pis\": null,\n            \"valor_cofins\": null,\n            \"valor_csll\": null,\n            \"valor_inss\": null,\n            \"valor_irrf\": null,\n            \"valor_iss_retido\": null,\n            \"valor_desconto_condicionado\": null,\n            \"valor_desconto_incondicionado\": null,\n            \"valor_deducoes\": null,\n            \"tipo_tributacao\": {\n                \"codigo\": null,\n                \"descricao\": null\n            },\n            \"exigibilidade\": {\n                \"codigo\": null,\n                \"descricao\": null\n            },\n            \"prestador\": {\n                \"documento\": \"29507487000185\",\n                \"nome_razaosocial\": \"HUBSOFT BRASIL LTDA\",\n                \"nome_fantasia\": \"HUBSOFT\"\n            },\n            \"tomador\": {\n                \"codigo\": 1382,\n                \"documento\": \"09141806654\",\n                \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO\",\n                \"nome_fantasia\": null,\n                \"telefone_primario\": \"37999991111\",\n                \"telefone_secundario\": \"3734151100\",\n                \"email_principal\": \"naotem@naotem.com.br\",\n                \"email_secundario\": \"naotem@naotem.com.br\",\n                \"rg\": null,\n                \"rg_emissor\": null,\n                \"inscricao_municipal\": null,\n                \"inscricao_estadual\": null,\n                \"tipo_pessoa\": \"pf\",\n                \"data_nascimento\": \"1994-03-11\"\n            },\n            \"itens\": [\n                {\n                    \"descricao\": \"SCM (30/12/2019) até (10/01/2020) | R$ 29.33 (Proporcional) 11 dias\",\n                    \"valor\": \"29.33\",\n                    \"servico\": {\n                        \"numero_plano\": 2,\n                        \"descricao\": \"TESTE-NFSE\"\n                    }\n                }\n            ]\n        },\n        {\n            \"id_nfse\": 7,\n            \"id_externo\": \"5e0ffcea0b09a332926e01ee\",\n            \"hash\": \"63f379b1-36fc-41dc-8017-88fa757658a7\",\n            \"numero\": \"10\",\n            \"serie\": \"1\",\n            \"lote_rps\": \"14\",\n            \"data_emissao\": \"2020-01-03 23:47:44\",\n            \"data_cancelamento\": \"2020-01-03 23:53:34\",\n            \"link_pdf\": null,\n            \"link_xml\": null,\n            \"status\": \"cancelado\",\n            \"informacao_complementar\": \"INFORMAÇÃO COMPLEMENTAR DA NFSE\",\n            \"protocolo_cancelamento\": \"406c0c68-1ac5-4420-a0a7-3e5a26f92f10\",\n            \"iss_retido\": null,\n            \"codigo_lista_servico\": null,\n            \"codigo_tributacao_municipio\": null,\n            \"cnae\": null,\n            \"aliquota_iss\": null,\n            \"aliquota_pis\": null,\n            \"aliquota_cofins\": null,\n            \"aliquota_csll\": null,\n            \"aliquota_inss\": null,\n            \"aliquota_irrf\": null,\n            \"valor_iss\": null,\n            \"valor_pis\": null,\n            \"valor_cofins\": null,\n            \"valor_csll\": null,\n            \"valor_inss\": null,\n            \"valor_irrf\": null,\n            \"valor_iss_retido\": null,\n            \"valor_desconto_condicionado\": null,\n            \"valor_desconto_incondicionado\": null,\n            \"valor_deducoes\": null,\n            \"tipo_tributacao\": {\n                \"codigo\": null,\n                \"descricao\": null\n            },\n            \"exigibilidade\": {\n                \"codigo\": null,\n                \"descricao\": null\n            },\n            \"prestador\": {\n                \"documento\": \"29507487000185\",\n                \"nome_razaosocial\": \"HUBSOFT BRASIL LTDA\",\n                \"nome_fantasia\": \"HUBSOFT\"\n            },\n            \"tomador\": {\n                \"codigo\": 1162,\n                \"documento\": \"41107296617\",\n                \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO\",\n                \"nome_fantasia\": null,\n                \"telefone_primario\": \"37999094211\",\n                \"telefone_secundario\": \"3732818382\",\n                \"email_principal\": \"naotem@naotem.com.br\",\n                \"email_secundario\": \"naotem@naotem.com.br\",\n                \"rg\": \"MG16082148\",\n                \"rg_emissor\": \"SSPMG\",\n                \"inscricao_municipal\": null,\n                \"inscricao_estadual\": null,\n                \"tipo_pessoa\": \"pf\",\n                \"data_nascimento\": \"1994-03-10\"\n            },\n            \"itens\": [\n                {\n                    \"descricao\": \"(+) SVA - Teste\",\n                    \"valor\": \"123.5\",\n                    \"servico\": {\n                        \"numero_plano\": 1,\n                        \"descricao\": \"50MB - Mega (Promocional 2/2019)\"\n                    }\n                }\n            ]\n        },\n        {\n            \"id_nfse\": 8,\n            \"id_externo\": \"5e1096016bffd25e73102bc3\",\n            \"hash\": \"c758224b-ae02-4ed7-a144-b6bfc049c4ca\",\n            \"numero\": \"11\",\n            \"serie\": \"1\",\n            \"lote_rps\": \"15\",\n            \"data_emissao\": \"2020-01-04 10:41:09\",\n            \"data_cancelamento\": null,\n            \"link_pdf\": null,\n            \"link_xml\": null,\n            \"status\": \"autorizado\",\n            \"informacao_complementar\": \"INFORMAÇÃO COMPLEMENTAR DA NFSE\",\n            \"protocolo_cancelamento\": null,\n            \"iss_retido\": null,\n            \"codigo_lista_servico\": null,\n            \"codigo_tributacao_municipio\": null,\n            \"cnae\": null,\n            \"aliquota_iss\": null,\n            \"aliquota_pis\": null,\n            \"aliquota_cofins\": null,\n            \"aliquota_csll\": null,\n            \"aliquota_inss\": null,\n            \"aliquota_irrf\": null,\n            \"valor_iss\": null,\n            \"valor_pis\": null,\n            \"valor_cofins\": null,\n            \"valor_csll\": null,\n            \"valor_inss\": null,\n            \"valor_irrf\": null,\n            \"valor_iss_retido\": null,\n            \"valor_desconto_condicionado\": null,\n            \"valor_desconto_incondicionado\": null,\n            \"valor_deducoes\": null,\n            \"tipo_tributacao\": {\n                \"codigo\": null,\n                \"descricao\": null\n            },\n            \"exigibilidade\": {\n                \"codigo\": null,\n                \"descricao\": null\n            },\n            \"prestador\": {\n                \"documento\": \"29507487000185\",\n                \"nome_razaosocial\": \"HUBSOFT BRASIL LTDA\",\n                \"nome_fantasia\": \"HUBSOFT\"\n            },\n            \"tomador\": {\n                \"codigo\": 1382,\n                \"documento\": \"09141806654\",\n                \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO\",\n                \"nome_fantasia\": null,\n                \"telefone_primario\": \"37999991111\",\n                \"telefone_secundario\": \"3734151100\",\n                \"email_principal\": \"naotem@naotem.com.br\",\n                \"email_secundario\": \"naotem@naotem.com.br\",\n                \"rg\": null,\n                \"rg_emissor\": null,\n                \"inscricao_municipal\": null,\n                \"inscricao_estadual\": null,\n                \"tipo_pessoa\": \"pf\",\n                \"data_nascimento\": \"1994-03-11\"\n            },\n            \"itens\": [\n                {\n                    \"descricao\": \"SCM (30/12/2019) até (10/01/2020) | R$ 29.33 (Proporcional) 11 dias\",\n                    \"valor\": \"29.33\",\n                    \"servico\": {\n                        \"numero_plano\": 2,\n                        \"descricao\": \"TESTE-NFSE\"\n                    }\n                }\n            ]\n        },\n        {\n            \"id_nfse\": 9,\n            \"id_externo\": \"5e136edefc9323e9321e9b20\",\n            \"hash\": \"5c87cb1c-0147-4c24-96ee-e15f18bba337\",\n            \"numero\": \"12\",\n            \"serie\": \"1\",\n            \"lote_rps\": \"20\",\n            \"data_emissao\": \"2020-01-06 14:05:02\",\n            \"data_cancelamento\": null,\n            \"link_pdf\": null,\n            \"link_xml\": null,\n            \"status\": \"autorizado\",\n            \"informacao_complementar\": \"INFORMAÇÃO COMPLEMENTAR DA NFSE\",\n            \"protocolo_cancelamento\": null,\n            \"iss_retido\": null,\n            \"codigo_lista_servico\": null,\n            \"codigo_tributacao_municipio\": null,\n            \"cnae\": null,\n            \"aliquota_iss\": null,\n            \"aliquota_pis\": null,\n            \"aliquota_cofins\": null,\n            \"aliquota_csll\": null,\n            \"aliquota_inss\": null,\n            \"aliquota_irrf\": null,\n            \"valor_iss\": null,\n            \"valor_pis\": null,\n            \"valor_cofins\": null,\n            \"valor_csll\": null,\n            \"valor_inss\": null,\n            \"valor_irrf\": null,\n            \"valor_iss_retido\": null,\n            \"valor_desconto_condicionado\": null,\n            \"valor_desconto_incondicionado\": null,\n            \"valor_deducoes\": null,\n            \"tipo_tributacao\": {\n                \"codigo\": null,\n                \"descricao\": null\n            },\n            \"exigibilidade\": {\n                \"codigo\": null,\n                \"descricao\": null\n            },\n            \"prestador\": {\n                \"documento\": \"29507487000185\",\n                \"nome_razaosocial\": \"HUBSOFT BRASIL LTDA\",\n                \"nome_fantasia\": \"HUBSOFT\"\n            },\n            \"tomador\": {\n                \"codigo\": 1162,\n                \"documento\": \"41107296617\",\n                \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO\",\n                \"nome_fantasia\": null,\n                \"telefone_primario\": \"37999094211\",\n                \"telefone_secundario\": \"3732818382\",\n                \"email_principal\": \"naotem@naotem.com.br\",\n                \"email_secundario\": \"naotem@naotem.com.br\",\n                \"rg\": \"MG16082148\",\n                \"rg_emissor\": \"SSPMG\",\n                \"inscricao_municipal\": null,\n                \"inscricao_estadual\": null,\n                \"tipo_pessoa\": \"pf\",\n                \"data_nascimento\": \"1994-03-10\"\n            },\n            \"itens\": [\n                {\n                    \"descricao\": \"(+) SVA - Teste\",\n                    \"valor\": \"123.5\",\n                    \"servico\": {\n                        \"numero_plano\": 1,\n                        \"descricao\": \"50MB - Mega (Promocional 2/2019)\"\n                    }\n                }\n            ]\n        },\n        {\n            \"id_nfse\": 10,\n            \"id_externo\": \"5e1865fa9404973fcf25ab96\",\n            \"hash\": \"8564ddd9-6a9d-429d-a14c-5ad1508cd9c6\",\n            \"numero\": \"13\",\n            \"serie\": \"1\",\n            \"lote_rps\": \"21\",\n            \"data_emissao\": \"2020-01-10 08:54:12\",\n            \"data_cancelamento\": \"2020-01-11 10:33:44\",\n            \"link_pdf\": null,\n            \"link_xml\": null,\n            \"status\": \"cancelado\",\n            \"informacao_complementar\": \"INFORMAÇÃO COMPLEMENTAR DA NFSE\",\n            \"protocolo_cancelamento\": \"eeb04508-6f82-43b8-a65a-b5f6cf177f2f\",\n            \"iss_retido\": null,\n            \"codigo_lista_servico\": null,\n            \"codigo_tributacao_municipio\": null,\n            \"cnae\": null,\n            \"aliquota_iss\": null,\n            \"aliquota_pis\": null,\n            \"aliquota_cofins\": null,\n            \"aliquota_csll\": null,\n            \"aliquota_inss\": null,\n            \"aliquota_irrf\": null,\n            \"valor_iss\": null,\n            \"valor_pis\": null,\n            \"valor_cofins\": null,\n            \"valor_csll\": null,\n            \"valor_inss\": null,\n            \"valor_irrf\": null,\n            \"valor_iss_retido\": null,\n            \"valor_desconto_condicionado\": null,\n            \"valor_desconto_incondicionado\": null,\n            \"valor_deducoes\": null,\n            \"tipo_tributacao\": {\n                \"codigo\": null,\n                \"descricao\": null\n            },\n            \"exigibilidade\": {\n                \"codigo\": null,\n                \"descricao\": null\n            },\n            \"prestador\": {\n                \"documento\": \"29507487000185\",\n                \"nome_razaosocial\": \"HUBSOFT BRASIL LTDA\",\n                \"nome_fantasia\": \"HUBSOFT\"\n            },\n            \"tomador\": {\n                \"codigo\": 1382,\n                \"documento\": \"09141806654\",\n                \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO\",\n                \"nome_fantasia\": null,\n                \"telefone_primario\": \"37999991111\",\n                \"telefone_secundario\": \"3734151100\",\n                \"email_principal\": \"naotem@naotem.com.br\",\n                \"email_secundario\": \"naotem@naotem.com.br\",\n                \"rg\": null,\n                \"rg_emissor\": null,\n                \"inscricao_municipal\": null,\n                \"inscricao_estadual\": null,\n                \"tipo_pessoa\": \"pf\",\n                \"data_nascimento\": \"1994-03-11\"\n            },\n            \"itens\": [\n                {\n                    \"descricao\": \"Serviço de Comunicação e Multimídia 31/12/2019 até 31/12/2019 (Proporcional) 1 dia\",\n                    \"valor\": \"4\",\n                    \"servico\": {\n                        \"numero_plano\": 22,\n                        \"descricao\": \"TESTE - TESTE - 80MB\"\n                    }\n                }\n            ]\n        }\n    ],\n    \"paginacao\": {\n        \"primeira_pagina\": 0,\n        \"ultima_pagina\": 6,\n        \"pagina_atual\": 0,\n        \"total_registros\": 68\n    }\n}"
+								},
+								{
+									"id": "5bd510bf-4201-464d-a73d-ceca5780a152",
+									"name": "Erro",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{access_token}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/nota_fiscal/nfse?data_inicio=2020-01-01&data_fim=2022-08-31&documento=295074870001851&pagina=0&itens_por_pagina=10",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"nota_fiscal",
+												"nfse"
+											],
+											"query": [
+												{
+													"key": "data_inicio",
+													"value": "2020-01-01",
+													"description": "Data Inicial no formato YYYY-MM-DD"
+												},
+												{
+													"key": "data_fim",
+													"value": "2022-08-31",
+													"description": "Data Final no formato YYYY-MM-DD"
+												},
+												{
+													"key": "documento",
+													"value": "295074870001851",
+													"description": "CNPJ da Empresa emissora da NFSe"
+												},
+												{
+													"key": "pagina",
+													"value": "0"
+												},
+												{
+													"key": "itens_por_pagina",
+													"value": "10",
+													"type": "text"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 14 Sep 2022 14:28:37 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 14 Sep 2022 14:28:37 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.2.34"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=YUxZR05XNqOH0ZrhKUDEmQabuB9DhUutVcZTxDtz; expires=Wed, 14-Sep-2022 15:28:37 GMT; Max-Age=3600; path=/; httponly"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"error\",\n    \"msg\": \"Favor preencher os campos obrigatórios de acordo com as especificações\",\n    \"errors\": [\n        \"O campo documento não possui um valor válido.\"\n    ]\n}"
+								}
+							]
+						}
+					],
+					"id": "136fa044-8aa0-4fee-9c36-acfac7ecedea",
+					"description": "Para fazer requisições nos dados de NFSe, é necessário que você já possua o `access_token`, conseguido na etapa `(oAuth)`"
+				},
+				{
+					"name": "Telecom (21/22)",
+					"item": [
+						{
+							"name": "Listar Notas Telecom",
+							"id": "faf35d3d-b2e0-409f-b3b5-bb96136bd69b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/v1/integracao/nota_fiscal/telecom?data_inicio=2020-01-01&data_fim=2022-08-31&documento=29507487000185&modelo=22&pagina=0&itens_por_pagina=10",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"integracao",
+										"nota_fiscal",
+										"telecom"
+									],
+									"query": [
+										{
+											"key": "data_inicio",
+											"value": "2020-01-01",
+											"description": "Data Inicial no formato YYYY-MM-DD"
+										},
+										{
+											"key": "data_fim",
+											"value": "2022-08-31",
+											"description": "Data Final no formato YYYY-MM-DD"
+										},
+										{
+											"key": "documento",
+											"value": "29507487000185",
+											"description": "CNPJ da Empresa Emitente"
+										},
+										{
+											"key": "modelo",
+											"value": "22",
+											"description": "Modelo da Nota Fiscal. Valores aceitos: 0, 21, 22",
+											"type": "text"
+										},
+										{
+											"key": "pagina",
+											"value": "0",
+											"description": "Número da Página"
+										},
+										{
+											"key": "itens_por_pagina",
+											"value": "10",
+											"description": "Quantidade de Itens por Página. Mínimo: 1, Máximo: 500"
+										}
+									]
+								},
+								"description": "No método `GET`, será possível consultar as Notas de Telecom emitidas e obter o retorno no formato `JSON` como resposta. Os seguintes `Query Params` podem/devem ser utilizados\n\n| **Atributo** | **Descrição** | **Obrigatório** |\n| --- | --- | --- |\n| `data_inicio` | Data Inicial no formato YYYY-MM-DD | Sim |\n| `data_fim` | Data Final no formato YYYY-MM-DD | Sim |\n| `documento` | CNPJ da Empresa emitente | Sim |\n| modelo | Modelo da Nota Fiscal. Valores aceitos: 0,21,22 | Sim |\n| `pagina` | Página a ser exibida | Sim |\n| `itens_por_pagina` | Itens por Página a serem exibidos. Mínimo: 1, Máximo: 500 | Sim |"
+							},
+							"response": []
+						}
+					],
+					"id": "f2cff978-4b54-4dd2-ad06-dba0d87b5214",
+					"description": "Para fazer requisições nos dados de notas fiscais de telecom (21/22), é necessário que você já possua o `access_token`, conseguido na etapa `(oAuth)`"
+				}
+			],
+			"id": "7bb0efcf-e8ea-4790-b651-d0646d6a5811",
+			"description": "Através do HubSoft é possível fazer a emissão dos seguintes notas fiscais:\n\n\\*   NF Modelo 21 (Telecom)\n\\*   NF Modelo 22 (Telecom)\n\\*   NF Modelo 55 (NFe)\n\\*   NFSe (Serviços / ISS / Prefeitura)"
 		},
 		{
 			"name": "PBX",
 			"item": [
 				{
 					"name": "Notificar/Cancelar",
-					"_postman_id": "9bb8ac9f-0cf7-46c7-934c-2074aa1fbb8f",
+					"id": "9bb8ac9f-0cf7-46c7-934c-2074aa1fbb8f",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1526,7 +1888,7 @@
 					]
 				}
 			],
-			"_postman_id": "ce487b76-7c81-46bd-81d9-b81f79b907b7",
+			"id": "ce487b76-7c81-46bd-81d9-b81f79b907b7",
 			"description": "**Necessário**\n\nPara fazer requisições nas rotas de notificação de ligação do PBX, é necessário que você já possua o `access_token`, conseguido na etapa `(oAuth)`"
 		},
 		{
@@ -1534,7 +1896,7 @@
 			"item": [
 				{
 					"name": "Consultar (Todos)",
-					"_postman_id": "c96a5089-f557-445e-9bb6-aa298a92b114",
+					"id": "c96a5089-f557-445e-9bb6-aa298a92b114",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1575,7 +1937,7 @@
 				},
 				{
 					"name": "Serviços/Planos Disponíveis",
-					"_postman_id": "c92c8819-fb39-4bc6-9455-9deb1bf0c71f",
+					"id": "c92c8819-fb39-4bc6-9455-9deb1bf0c71f",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1766,7 +2128,7 @@
 				},
 				{
 					"name": "Cadastrar Prospectos",
-					"_postman_id": "7650c654-1890-49c2-be97-f3b2bafcfaac",
+					"id": "7650c654-1890-49c2-be97-f3b2bafcfaac",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1827,7 +2189,7 @@
 				},
 				{
 					"name": "Buscar Prospectos",
-					"_postman_id": "5d72774e-e886-4508-a8c6-9acf70f3deca",
+					"id": "5d72774e-e886-4508-a8c6-9acf70f3deca",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1938,7 +2300,7 @@
 					]
 				}
 			],
-			"_postman_id": "cd220d13-e998-4776-8829-956d88b0038b",
+			"id": "cd220d13-e998-4776-8829-956d88b0038b",
 			"description": "**Necessário**\n\nPara fazer requisições nos dados de prospectos, é necessário que você já possua o `access_token`, adquirido na etapa `(oAuth)`"
 		},
 		{
@@ -1946,7 +2308,7 @@
 			"item": [
 				{
 					"name": "Equipamento",
-					"_postman_id": "5664d62d-b76a-4f9f-8d03-a3197d84cad2",
+					"id": "5664d62d-b76a-4f9f-8d03-a3197d84cad2",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1987,7 +2349,7 @@
 				},
 				{
 					"name": "POP",
-					"_postman_id": "06a661cd-9918-4ba7-bd9c-e1b60ba38291",
+					"id": "06a661cd-9918-4ba7-bd9c-e1b60ba38291",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2022,7 +2384,7 @@
 				},
 				{
 					"name": "Zona de Atendimento",
-					"_postman_id": "c349ff75-de19-484c-a7ff-1ea4e785de4e",
+					"id": "c349ff75-de19-484c-a7ff-1ea4e785de4e",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2062,7 +2424,7 @@
 					]
 				}
 			],
-			"_postman_id": "ef75212f-275c-487d-a829-775dba7a895a",
+			"id": "ef75212f-275c-487d-a829-775dba7a895a",
 			"description": "**Necessário**\n\nPara fazer requisições nos dados de REDE, é necessário que você já possua o `access_token`, conseguido na etapa (`oAuth`)"
 		},
 		{
@@ -2070,7 +2432,7 @@
 			"item": [
 				{
 					"name": "Cidades",
-					"_postman_id": "97b11dd6-69c0-4591-ba65-a5b6a42b7ed5",
+					"id": "97b11dd6-69c0-4591-ba65-a5b6a42b7ed5",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2111,7 +2473,7 @@
 				},
 				{
 					"name": "Tipos de Atendimento",
-					"_postman_id": "57154c6a-c35b-4832-bd6d-2ec5fa41657b",
+					"id": "57154c6a-c35b-4832-bd6d-2ec5fa41657b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2158,7 +2520,7 @@
 				},
 				{
 					"name": "Tipos de Serviço",
-					"_postman_id": "65b8d782-2c2c-472e-b5c8-4d582cece6cd",
+					"id": "65b8d782-2c2c-472e-b5c8-4d582cece6cd",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2204,7 +2566,7 @@
 					]
 				}
 			],
-			"_postman_id": "df07f265-98f3-41b4-aada-085c92eb7209"
+			"id": "df07f265-98f3-41b4-aada-085c92eb7209"
 		}
 	],
 	"event": [
@@ -2231,46 +2593,39 @@
 	],
 	"variable": [
 		{
-			"id": "2677634c-0a4f-4916-91e0-c10779bf7c6e",
+			"id": "92c8ebd1-030c-46d9-af71-e886ce932c2a",
 			"key": "url",
-			"value": "",
-			"type": "string"
+			"value": "http://localhost:8000"
 		},
 		{
-			"id": "eea60fc3-32b7-4dbf-a314-88dd1c1fbc40",
+			"id": "32039c57-98a8-4266-ac5c-b1df11095880",
 			"key": "client_id",
-			"value": "",
-			"type": "string"
+			"value": "10"
 		},
 		{
-			"id": "e2a787f5-a687-485a-860e-595dc032c920",
+			"id": "8f5a1b65-5009-46a7-9a71-3151e8fedda5",
 			"key": "client_secret",
-			"value": "",
-			"type": "string"
+			"value": "Q5CutpzOEZmadmCpW6NaDzq7pMEJavVPcpg5Tl8S"
 		},
 		{
-			"id": "8769de4a-e58b-4352-a8c6-bdcb8c62326f",
+			"id": "dc8fa953-6a91-4e1b-808d-e88f7fe54505",
 			"key": "username",
-			"value": "",
-			"type": "string"
+			"value": "api@postman.com.br"
 		},
 		{
-			"id": "73e2367e-dac2-449b-93a7-099d9c63eebd",
+			"id": "4f0f5fe6-8f3f-48aa-bb08-1c1023d4a9a6",
 			"key": "password",
-			"value": "",
-			"type": "string"
+			"value": "!@#ksjfkjk3j4k1FAF#@%$ASDFkjdf1247"
 		},
 		{
-			"id": "9e70de1f-3b5e-44a8-baea-d7efdeab4dbb",
+			"id": "236be4da-1716-4ea0-b32d-a83167209c30",
 			"key": "grant_type",
-			"value": "password",
-			"type": "string"
+			"value": "password"
 		},
 		{
-			"id": "5f4ef854-a37b-4233-a42e-ceb9415cb90b",
+			"id": "95cb57ec-7ced-4742-b9d8-c424e760ba23",
 			"key": "access_token",
-			"value": "",
-			"type": "string"
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImY4MTU5MTBkYTc4ZTkyZjNiMDdjMDk0NmMyNzZkNjA4YmY0ZWIyYWZlNDhlNmEyOTM4YjU0Yzg2ZWYwMzU1NDc0MzlkOTcxODc0YjM0Njc3In0.eyJhdWQiOiIxMCIsImp0aSI6ImY4MTU5MTBkYTc4ZTkyZjNiMDdjMDk0NmMyNzZkNjA4YmY0ZWIyYWZlNDhlNmEyOTM4YjU0Yzg2ZWYwMzU1NDc0MzlkOTcxODc0YjM0Njc3IiwiaWF0IjoxNjYzMTAwMTQ3LCJuYmYiOjE2NjMxMDAxNDcsImV4cCI6MTk3ODcxOTM0Niwic3ViIjoiNTIzNyIsInNjb3BlcyI6W119.cHyPESl1CTijtXLdGNvbh4mfXNSaL6k2uPzOjNbboGUS0_Fcic7b_tsjC_G8eKrZ4fipFD4syOIY3AD5G2YCJMHrOUOMT08wKO-Alnrd3ji4iwYmYGKROwAoLJCmlFcZHpNA1gB8DoZoF6Y7uDqyKxt7vVnwQXJDi1Y-vJPTFz2ZHvlZ4_sWdKe4hspTieBCIkOW0SfqJPVJ4MCXzhWKSIWVgS_d5niv1uk1tr8wxsikDa-uYiU10rfA8Xqdvh_vNQoEVUpS7R5M8UsQRpVywmE1MMuEcu23vicnvatHjo5kUlTzPE_snmBhoempQq6eVefirIgmrS9_1pxHEfCS1z2HrlgtfllnD8Ncpmk3ZjbK83_lqwCPiKSQHfcepBmHu6_BkwYl77Amfs4QLls4RP8x6OCrP0nlsD4_9zlTMq5pcA9TwQpAPzIhdk2aO4TXALYVACi7Dg32Lguk2lV3GnqcIVgLuttVKhe0cu4rDMChRomUAod5EDs4UilGVFFNCC7VBQIOeAefhjWwTI6cyVcsuNTiP8DFRceD43OgVJro2QnQAWakRDXIv7l7Ku4rzIXghNCM2xNCef94yDwYY19VjxKnfFbiEVtuTA4Q1FvijvKeczgq_ltAV59KUz3XJrMzaplZKWHaGVLmTWYRyGfbH0Rnpmckwew3SIdZdPM"
 		}
 	]
 }
