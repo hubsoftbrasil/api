@@ -609,7 +609,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{url}}/api/v1/integracao/cliente?busca&termo_busca&limit&cancelado&ultima_conexao&incluir_contrato&order_by&order_type",
+							"raw": "{{url}}/api/v1/integracao/cliente?busca=&inativo=&termo_busca=&limit=&cancelado=&ultima_conexao=&incluir_contrato=&order_by=&order_type=",
 							"host": [
 								"{{url}}"
 							],
@@ -622,50 +622,55 @@
 							"query": [
 								{
 									"key": "busca",
-									"value": null,
-									"description": "(Obrigatório) Tipo de busca que deseja fazer no cliente. Valores aceitos: nome_razaosocial, nome_fantasia, cpf_cnpj, codigo_cliente, telefone, login_radius, ipv4, mac",
-									"type": "text"
+									"value": "",
+									"type": "text",
+									"description": "(Obrigatório) Tipo de busca que deseja fazer no cliente. Valores aceitos: nome_razaosocial, nome_fantasia, cpf_cnpj, codigo_cliente, telefone, login_radius, ipv4, mac"
+								},
+								{
+									"key": "inativo",
+									"value": "",
+									"type": "text",
+									"description": "(Obrigatório) Termo utilizado para fazer a busca"
 								},
 								{
 									"key": "termo_busca",
-									"value": null,
-									"description": "(Obrigatório) Termo utilizado para fazer a busca",
-									"type": "text"
+									"value": "",
+									"type": "text",
+									"description": "(Opcional) Limite de resultados. Valor mínimo: 1, Valor máximo: 100"
 								},
 								{
 									"key": "limit",
-									"value": null,
-									"description": "(Opcional) Limite de resultados. Valor mínimo: 1, Valor máximo: 100",
-									"type": "text"
+									"value": "",
+									"type": "text",
+									"description": "(Opcional) Informa se deseja trazer os serviços cancelados ou não. Valor aceitos: sim,nao"
 								},
 								{
 									"key": "cancelado",
-									"value": null,
-									"description": "(Opcional) Informa se deseja trazer os serviços cancelados ou não. Valor aceitos: sim,nao",
-									"type": "text"
+									"value": "",
+									"type": "text",
+									"description": "(Opcional) Informa se deseja trazer os dados da última conexão. Valor Aceitos: sim,nao"
 								},
 								{
 									"key": "ultima_conexao",
-									"value": null,
-									"description": "(Opcional) Informa se deseja trazer os dados da última conexão. Valor Aceitos: sim,nao",
-									"type": "text"
+									"value": "",
+									"type": "text",
+									"description": "(Opcional) Informa se deseja incluir os contratos do serviço"
 								},
 								{
 									"key": "incluir_contrato",
-									"value": null,
-									"description": "(Opcional) Informa se deseja incluir os contratos do serviço",
-									"type": "text"
+									"value": "",
+									"type": "text",
+									"description": "(Opcional) Campo que será utilizado para ordenação. Valores aceitos: data_cadastro,data_fechamento"
 								},
 								{
 									"key": "order_by",
-									"value": null,
-									"description": "(Opcional) Campo que será utilizado para ordenação. Valores aceitos: data_cadastro,data_fechamento",
-									"type": "text"
+									"value": "",
+									"type": "text",
+									"description": "(Opcional) Tipo de Ordenação. Valores aceitos: asc,desc"
 								},
 								{
 									"key": "order_type",
-									"value": null,
-									"description": "(Opcional) Tipo de Ordenação. Valores aceitos: asc,desc",
+									"value": "",
 									"type": "text"
 								}
 							]
@@ -2831,37 +2836,37 @@
 	],
 	"variable": [
 		{
-			"id": "49390d8e-0ba7-432c-9b00-579376c0882b",
+			"id": "f3627642-eb77-4e72-a5e4-30f555b6b58d",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "610abeda-2d72-4109-a3fe-014a150630d4",
+			"id": "57e2023d-7366-4707-8bcc-489cedae269e",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "acadddb3-a5dc-4b76-8ad5-d76ef0103405",
+			"id": "35c88d61-945b-4a38-93fd-4371cbe8e3b5",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "dc677e89-b86e-458d-8019-999372d57f56",
+			"id": "546c8f3d-b1f7-48e8-8f71-fafbc80b822c",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "01473e8b-48c4-4fcb-9178-09b520748d98",
+			"id": "843f546e-a022-4921-a7e6-82a2c876754b",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "c92bd7dc-43e9-411c-8b36-72e5733e7605",
+			"id": "d178f84c-8e7f-42f3-aabc-8e79769cec44",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "7c1b6801-8cdc-44c8-9180-6b8960dddfbe",
+			"id": "6f6989ba-51b4-45ad-a8da-1d9a78d11d73",
 			"key": "access_token",
 			"value": ""
 		}
