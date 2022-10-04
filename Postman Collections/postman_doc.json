@@ -1346,7 +1346,7 @@
 							}
 						],
 						"url": "{{url}}/api/v1/integracao/ordem_servico/consultar",
-						"description": "**Endpoint (Rota)**\n\nNeste `endpoint`, será possível consultar ordens de serviço, obtendo o retorno no formato `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| consulta | Parametro que será utilizado para encontrar uma O.S. pelo seu número ou nome do cliente | Sim |\n| data_inicio | Data inicial de referência para consulta de ordens de serviço em um intervalo | Sim |\n| data_fim | Data final de referência para consulta de ordens de serviço em um intervalo | Sim |\n| tipo_data | O tipo de data poderá ser: data_cadastro, data_inicio_programado, data_inicio_executado, data_termino_programado, data_termino_executado | Não |\n| order_by | A ordenação poderá ser: data_cadastro, data_inicio_programado, data_inicio_executado, data_termino_programado, data_termino_executado | Não |\n| order_by_key | A ordenação poderá ser: crescente (ASC) ou decrescenter (DESC) | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_ordem_servico | Número Inteiro | Nenhum |\n| consulta | Texto ou número inteiro | Nenhum |\n| data_inicio | Formato timestamp (2020-01-01 00:00:00) | Nenhum |\n| data_fim | Formato timestamp (2020-01-01 00:00:00) | Nenhum |\n| tipo_data | Texto | data_inicio_programado |\n| order_by | Texto | data_inicio_programado |\n| order_by_key | Texto | desc |\n\nVeja que os parâmetros enviados na requisição `POST` devem obedecer a estrutura no formato `JSON`:\n\n```\n{\n    \"consulta\": \"Guilherme\",\n    \"data_inicio\": \"2020-11-01 00:00:00\",\n    \"data_fim\": \"2020-11-20 23:59:59\",\n    \"tipo_data\": \"data_inicio_programado\",\n    \"order_by_key\": \"asc\",\n    \"order_by\": \"data_inicio_programado\"\n}\n\n```"
+						"description": "**Endpoint (Rota)**\n\nNeste `endpoint`, será possível consultar ordens de serviço, obtendo o retorno no formato `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| consulta | Parametro que será utilizado para encontrar uma O.S. pelo seu número ou nome do cliente | Sim |\n| data_inicio | Data inicial de referência para consulta de ordens de serviço em um intervalo | Sim |\n| data_fim | Data final de referência para consulta de ordens de serviço em um intervalo | Sim |\n| tipo_data | O tipo de data poderá ser: data_cadastro, data_inicio_programado, data_inicio_executado, data_termino_programado, data_termino_executado | Não |\n| order_by | A ordenação poderá ser: data_cadastro, data_inicio_programado, data_inicio_executado, data_termino_programado, data_termino_executado | Não |\n| order_by_key | A ordenação poderá ser: crescente (ASC) ou decrescenter (DESC) | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_ordem_servico | Número Inteiro | Nenhum |\n| consulta | Texto ou número inteiro | Nenhum |\n| status | status da O.S | pendente , finalizado ou aguardando_agendamento |\n| data_inicio | Formato timestamp (2020-01-01 00:00:00) | Nenhum |\n| data_fim | Formato timestamp (2020-01-01 00:00:00) | Nenhum |\n| tipo_data | Texto | data_inicio_programado |\n| order_by | Texto | data_inicio_programado |\n| order_by_key | Texto | desc |\n\nVeja que os parâmetros enviados na requisição `POST` devem obedecer a estrutura no formato `JSON`:\n\n```\n{\n    \"consulta\": \"Guilherme\",\n    \"data_inicio\": \"2020-11-01 00:00:00\",\n    \"data_fim\": \"2020-11-20 23:59:59\",\n    \"tipo_data\": \"data_inicio_programado\",\n    \"order_by_key\": \"asc\",\n    \"order_by\": \"data_inicio_programado\"\n}\n\n```"
 					},
 					"response": [
 						{
@@ -2836,37 +2836,37 @@
 	],
 	"variable": [
 		{
-			"id": "8fbf3f0a-f3cb-494d-9c2a-73b8f4cbdaab",
+			"id": "fb29960a-0014-43d7-bd69-9da7abb219f7",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "e5df5dd3-13b4-4ba3-9ae1-f766e4bf71e4",
+			"id": "ad7ad89c-d8b3-4d28-8fb5-13140857bfa0",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "b10e71a0-b8e5-4796-8c63-c742c26e715d",
+			"id": "177bb916-ac6f-4547-8ec5-a17889c7ed0d",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "de3cc0ef-3e4d-4e16-974c-d360f1a27c87",
+			"id": "d95519ce-d0bd-413b-b44f-64f266148118",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "5bc8ed18-6d2e-4604-8289-8802f68b3018",
+			"id": "9d705845-a039-4307-9c5b-8d8d4a07d2a7",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "1e73326d-81a1-4e68-907a-a9d10abe7f50",
+			"id": "4738d7a7-e1af-4b4d-a7c0-a3e449742902",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "85b63adb-4712-40f5-91f7-44c0626d6d47",
+			"id": "0bce66bd-bea5-4206-8c17-c2f44c7c98d9",
 			"key": "access_token",
 			"value": ""
 		}
