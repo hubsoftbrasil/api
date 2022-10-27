@@ -1145,7 +1145,7 @@
 							}
 						],
 						"url": "{{url}}/api/v1/integracao/cliente/reset_mac_addr",
-						"description": "**POST**\n\nAtravés deste `endpoint`, será possível efetuar o desbloqueio em confiança, pela quantidade de dias desejados.\n\n**Aviso**\n\n`IMPORTANTE`: O sistema irá validar se o serviço informado possui dados de autenticação. Caso o serviço selecionado não possua, uma mensagem de erro será retornada, impedindo que a solicitação seja executada.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico | Identificador único do serviço do cliente | Sim |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico | Deve conter um número inteiro maior que 0 | Nenhum |\n\nVeja que os parâmetros enviados na requisição `POST` devem obedecer a estrutura no formato `JSON`:\n\n```\n{\n        \"id_cliente_servico\":\"11000\"\n}\n\n```"
+						"description": "**POST**\n\nAtravés deste `endpoint`, será possível efetuar o resetar o MAC ADDRESS configurado na autenticação do plano do cliente. Esse endpoint será útil para provedores que fazem controle / restrição de MAC ADDRESS na rede.\n\n**Aviso**\n\n`IMPORTANTE`: O sistema irá validar se o serviço informado possui dados de autenticação. Caso o serviço selecionado não possua, uma mensagem de erro será retornada, impedindo que a solicitação seja executada.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico | Identificador único do serviço do cliente | Sim |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico | Deve conter um número inteiro maior que 0 | Nenhum |\n\nVeja que os parâmetros enviados na requisição `POST` devem obedecer a estrutura no formato `JSON`:\n\n```\n{\n        \"id_cliente_servico\":\"11000\"\n}\n\n```"
 					},
 					"response": [
 						{
@@ -2836,37 +2836,37 @@
 	],
 	"variable": [
 		{
-			"id": "fb29960a-0014-43d7-bd69-9da7abb219f7",
+			"id": "f96c4222-051e-4ea9-85ba-9ca7f6705b4d",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "ad7ad89c-d8b3-4d28-8fb5-13140857bfa0",
+			"id": "393dd539-61b8-4e50-88ad-49bf22be633a",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "177bb916-ac6f-4547-8ec5-a17889c7ed0d",
+			"id": "362f1eb3-e2f0-4bfe-a8f5-7e522d822c4c",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "d95519ce-d0bd-413b-b44f-64f266148118",
+			"id": "89bddea2-ca11-48ec-996a-7f3eed1fea65",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "9d705845-a039-4307-9c5b-8d8d4a07d2a7",
+			"id": "b5bde5e7-aae6-4bc5-a550-0c62e0de0b93",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "4738d7a7-e1af-4b4d-a7c0-a3e449742902",
+			"id": "94f573f3-1e1f-43f7-8a8b-ca0dccccdb5f",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "0bce66bd-bea5-4206-8c17-c2f44c7c98d9",
+			"id": "115aa48a-56e0-40a6-a1be-38cc6b372958",
 			"key": "access_token",
 			"value": ""
 		}
