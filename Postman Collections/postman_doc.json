@@ -1145,7 +1145,7 @@
 							}
 						],
 						"url": "{{url}}/api/v1/integracao/cliente/reset_mac_addr",
-						"description": "**POST**\n\nAtravés deste `endpoint`, será possível efetuar o resetar o MAC ADDRESS configurado na autenticação do plano do cliente. Esse endpoint será útil para provedores que fazem controle / restrição de MAC ADDRESS na rede.\n\n**Aviso**\n\n`IMPORTANTE`: O sistema irá validar se o serviço informado possui dados de autenticação. Caso o serviço selecionado não possua, uma mensagem de erro será retornada, impedindo que a solicitação seja executada.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico | Identificador único do serviço do cliente | Sim |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico | Deve conter um número inteiro maior que 0 | Nenhum |\n\nVeja que os parâmetros enviados na requisição `POST` devem obedecer a estrutura no formato `JSON`:\n\n```\n{\n        \"id_cliente_servico\":\"11000\"\n}\n\n```"
+						"description": "**POST**\n\nAtravés deste `endpoint`, será possível resetar o MAC ADDRESS configurado na autenticação do plano do cliente. Após resetar o MAC, qualquer equipamento com o login e senha corretos estará apto a realizar a autenticação. Esse endpoint será útil para provedores que fazem controle / restrição de MAC ADDRESS na rede.\n\n**Aviso**\n\n`IMPORTANTE`: O sistema irá validar se o serviço informado possui dados de autenticação. Caso o serviço selecionado não possua, uma mensagem de erro será retornada, impedindo que a solicitação seja executada.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico | Identificador único do serviço do cliente | Sim |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico | Deve conter um número inteiro maior que 0 | Nenhum |\n\nVeja que os parâmetros enviados na requisição `POST` devem obedecer a estrutura no formato `JSON`:\n\n```\n{\n        \"id_cliente_servico\":\"11000\"\n}\n\n```"
 					},
 					"response": [
 						{
@@ -2836,37 +2836,37 @@
 	],
 	"variable": [
 		{
-			"id": "f96c4222-051e-4ea9-85ba-9ca7f6705b4d",
+			"id": "8d9cee6f-c28a-47bf-a041-fc1d634d7e81",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "393dd539-61b8-4e50-88ad-49bf22be633a",
+			"id": "26b75df0-a0a9-4138-bbaf-6b7978ed02cb",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "362f1eb3-e2f0-4bfe-a8f5-7e522d822c4c",
+			"id": "3f8ca753-32a9-4479-865d-9f71867022c7",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "89bddea2-ca11-48ec-996a-7f3eed1fea65",
+			"id": "3ccc6381-37ac-4583-bb5f-ece19c675853",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "b5bde5e7-aae6-4bc5-a550-0c62e0de0b93",
+			"id": "6901b107-5301-4cdb-886c-55d2693010e5",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "94f573f3-1e1f-43f7-8a8b-ca0dccccdb5f",
+			"id": "0cb6e221-a131-4602-9eac-3a12ae1a8064",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "115aa48a-56e0-40a6-a1be-38cc6b372958",
+			"id": "918529bc-8f70-4d32-b719-075f4c558380",
 			"key": "access_token",
 			"value": ""
 		}
