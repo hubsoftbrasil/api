@@ -453,7 +453,7 @@
 							]
 						},
 						{
-							"name": "Financeiro -> Enviar SMS",
+							"name": "Enviar por SMS",
 							"id": "b993d2cb-c7ec-494e-a7ef-e3d5845054fc",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -2848,37 +2848,37 @@
 	],
 	"variable": [
 		{
-			"id": "13f79494-7d17-4dbd-8f32-1289687ff57d",
+			"id": "65ffaaf5-2a0c-4fce-b65f-e7362f59bc1d",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "c3e2df23-9933-45d3-81b9-4ffbe4942593",
+			"id": "f1f5e29d-63f6-4202-9a18-844aede11392",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "d8b1831c-89ec-4e5e-a458-5ea83f54d695",
+			"id": "813477c4-2df4-45f4-a888-e7634d3959e3",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "06e714d9-9fd8-4cd2-ba44-13cde0da404c",
+			"id": "28802fc2-c5a3-41b0-bf5b-25ebc48a9862",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "da9138f1-959e-4dde-93e4-e4a8d7a5274d",
+			"id": "a0610ce8-c4a1-4702-8e92-0165e2319c98",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "f7f6dcf0-bf37-4c80-9241-9b9d32b52cd7",
+			"id": "82d4845e-5926-49fa-aa5a-1229194e053c",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "fc33c002-7fee-4340-a3f0-4158c15d99cd",
+			"id": "df7b0ee4-cd25-4b39-80a1-440aa505a582",
 			"key": "access_token",
 			"value": ""
 		}
