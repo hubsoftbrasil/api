@@ -381,6 +381,53 @@
 			"name": "Clientes",
 			"item": [
 				{
+					"name": "Atendimento",
+					"item": [
+						{
+							"name": "Consultar",
+							"id": "3fd4a2c3-979f-4ee2-a88b-4ebf949da008",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/api/v1/integracao/cliente/atendimento",
+								"description": "**GET**\n\n  \nNo método `GET`, será possível consultar os atendimentos em aberto/fechados dos clientes e obter o retorno no formato `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| busca | Tipo de busca que deseja fazer no cliente | Sim |\n| termo_busca | Termo utilizado para fazer a busca | Sim |\n| limit | Limite de resultados | Não |\n| apenas_pendente | Informa de deseja trazer apenas os atendimentos pendentes (abertos) | Não |\n| order_by | Campo que será utilizado para ordenação | Não |\n| order_type | Tipo de Ordenação | Não |\n| data_inicio | Data de Início (Utiliza a data de cadastro como base) | Não |\n| data_fim | Data de Fim (Utiliza a data de cadastro como base) | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| busca | codigo_cliente, cpf_cnpj, id_cliente_servico, protocolo | Nenhum |\n| termo_busca | Campo livre (Qualquer valor será aceito) | Nenhum |\n| limit | Valor mínimo 1, Valor máximo 50. | 20 |\n| apenas_pendente | sim,nao | sim |\n| order_by | data_cadastro,data_fechamento | data_cadastro |\n| order_type | asc,desc | asc |\n| data_inicio | Campo no formato DateTime (YYYY-MM-DD) | Nenhum |\n| data_fim | Campo no formato DateTime (YYYY-MM-DD) | Nenhum |"
+							},
+							"response": [
+								{
+									"id": "ea841403-6128-4d19-b7ef-dd0dff6ae062",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"type": "text"
+											}
+										],
+										"url": "{{url}}/api/v1/integracao/cliente/atendimento"
+									},
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"responseTime": null,
+									"body": "  {\r\n    \"status\": \"suscess\",\r\n    \"msg\": \"Dados consultados com sucesso\",\r\n    \"atendimentos\": [\r\n        {\r\n            \"id_atendimento\": 110,\r\n            \"protocolo\": \"201806191505251\",\r\n            \"descricao_abertura\": \"VERIFICAR CONEXÃO\",\r\n            \"descricao_fechamento\": null,\r\n            \"tipo_atendimento\": \"TÉCNICO - QUEDAS DE CONEXÃO\",\r\n            \"usuario_abertura\": \"Bianca Couto\",\r\n            \"usuario_responsavel\": \"Bianca Couto\",\r\n            \"usuario_fechamento\": null,\r\n            \"data_cadastro\": \"19/06/2018\",\r\n            \"data_fechamento\": null,\r\n            \"setor_responsavel\": null,\r\n            \"status_fechamento\": null,\r\n            \"motivo_fechamento\": null,\r\n            \"status\": \"Pendente\",\r\n            \"cliente\": {\r\n                \"codigo_cliente\": 1204,\r\n                \"nome_razaosocial\": \"BIANCA COUTO\",\r\n                \"cpf_cnpj\": \"86214941081\"\r\n            },\r\n            \"servico\": {\r\n                \"id_cliente_servico\":\"123\",\r\n            \"numero_plano\": 0,\r\n            \"nome\": \"5MB-WIRELLES-TESTE\",\r\n            \"valor\": 199.9,\r\n            \"status\": \"Cancelado\",\r\n            \"status_prefixo\": \"cancelado\"\r\n        },\r\n            \"ordens_servico\": [\r\n                {\r\n                    \"id_ordem_servico\": 131,\r\n                    \"numero_ordem_servico\": \"125\",\r\n                    \"data_cadastro\": \"19/06/2018 15:05:25\",\r\n                    \"tipo\": \"SUPORTE\",\r\n                    \"data_inicio_programado\": \"19/06/2018 14:02:00\",\r\n                    \"data_termino_programado\": \"19/06/2018 15:02:00\",\r\n                    \"data_inicio_executado\": \"19/06/2018 14:02:00\",\r\n                    \"data_termino_executado\": \"19/06/2018 15:02:00\",\r\n                    \"descricao_abertura\": \"VERIFICAR CONEXÃO\",\r\n                    \"descricao_servico\": \"VERIFICAR CONEXÃO\",\r\n                    \"descricao_fechamento\": \"asdfasdfadsf\",\r\n                    \"usuario_abertura\": \"Bianca Couto\",\r\n                    \"usuario_fechamento\": \"Bianca Couto\",\r\n                    \"status\": \"finalizado\",\r\n                    \"status_fechamento\": \"concluido\",\r\n                    \"cliente\": {\r\n                        \"codigo_cliente\": 1204,\r\n                        \"nome_razaosocial\": \"BIANCA COUTO\",\r\n                        \"cpf_cnpj\": \"86214941081\"\r\n                    },\r\n                    \"servico\": {\r\n                        \"id_cliente_servico\":\"123\",\r\n                        \"numero_plano\": 0,\r\n                        \"nome\": \"5MB-WIRELLES-TESTE\",\r\n                        \"valor\": 199.9,\r\n                        \"status\": \"Cancelado\",\r\n                        \"status_prefixo\": \"cancelado\"\r\n                    }\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id_atendimento\": 285,\r\n            \"protocolo\": \"201811061724214\",\r\n            \"descricao_abertura\": \"Abertura de atendimento através da API | ATENDIMENTO ABERTO VIA CENTRAL DO ASSINANTE\",\r\n            \"descricao_fechamento\": null,\r\n            \"tipo_atendimento\": \"SAC\",\r\n            \"usuario_abertura\": \"Master\",\r\n            \"usuario_responsavel\": \"Master\",\r\n            \"usuario_fechamento\": null,\r\n            \"data_cadastro\": \"06/11/2018\",\r\n            \"data_fechamento\": null,\r\n            \"setor_responsavel\": null,\r\n            \"status_fechamento\": null,\r\n            \"motivo_fechamento\": null,\r\n            \"status\": \"Aguardando Análise\",\r\n            \"cliente\": {\r\n                \"codigo_cliente\": 1204,\r\n                \"nome_razaosocial\": \"BIANCA COUTO\",\r\n                \"cpf_cnpj\": \"86214941081\"\r\n            },\r\n            \"ordens_servico\": []\r\n        },\r\n        {\r\n            \"id_atendimento\": 300,\r\n            \"protocolo\": \"201811161058216\",\r\n            \"descricao_abertura\": \"Estou sem acesso a internet desde segunda-feira. | ATENDIMENTO ABERTO VIA API\",\r\n            \"descricao_fechamento\": null,\r\n            \"tipo_atendimento\": \"SAC\",\r\n            \"usuario_abertura\": \"IP Telecom\",\r\n            \"usuario_responsavel\": \"IP Telecom\",\r\n            \"usuario_fechamento\": null,\r\n            \"data_cadastro\": \"16/11/2018\",\r\n            \"data_fechamento\": null,\r\n            \"setor_responsavel\": null,\r\n            \"status_fechamento\": null,\r\n            \"motivo_fechamento\": null,\r\n            \"status\": \"Aguardando Análise\",\r\n            \"cliente\": {\r\n                \"codigo_cliente\": 1204,\r\n                \"nome_razaosocial\": \"BIANCA COUTO\",\r\n                \"cpf_cnpj\": \"86214941081\"\r\n            },\r\n            \"servico\": {\r\n                \"id_cliente_servico\":\"12345\",\r\n                \"numero_plano\": 9,\r\n                \"nome\": \"NEXT-NV_1MBPS\",\r\n                \"valor\": 69.9,\r\n                \"status\": \"Serviço Habilitado\",\r\n                \"status_prefixo\": \"servico_habilitado\"\r\n        },\r\n            \"ordens_servico\": [\r\n                {\r\n                    \"id_ordem_servico\": 340,\r\n                    \"numero_ordem_servico\": \"320\",\r\n                    \"data_cadastro\": \"16/11/2018 10:58:21\",\r\n                    \"tipo\": \"ABERTURA VIA API\",\r\n                    \"data_inicio_programado\": \"16/11/2018 11:58:21\",\r\n                    \"data_termino_programado\": \"16/11/2018 12:58:21\",\r\n                    \"data_inicio_executado\": null,\r\n                    \"data_termino_executado\": null,\r\n                    \"descricao_abertura\": \"Estou sem acesso a internet desde segunda-feira. | ATENDIMENTO ABERTO VIA API\",\r\n                    \"descricao_servico\": \"Estou sem acesso a internet desde segunda-feira. | ATENDIMENTO ABERTO VIA API\",\r\n                    \"descricao_fechamento\": null,\r\n                    \"usuario_abertura\": \"IP Telecom\",\r\n                    \"usuario_fechamento\": null,\r\n                    \"status\": \"aguardando_agendamento\",\r\n                    \"status_fechamento\": null,\r\n                    \"cliente\": {\r\n                        \"codigo_cliente\": 1204,\r\n                        \"nome_razaosocial\": \"BIANCA COUTO\",\r\n                        \"cpf_cnpj\": \"86214941081\"\r\n                    },\r\n                    \"servico\": {\r\n                        \"id_cliente_servico\":\"12345\",\r\n                        \"numero_plano\": 9,\r\n                        \"nome\": \"NEXT-NV_1MBPS\",\r\n                        \"valor\": 69.9,\r\n                        \"status\": \"Serviço Habilitado\",\r\n                        \"status_prefixo\": \"servico_habilitado\"\r\n                    }\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}\r\n"
+								}
+							]
+						}
+					],
+					"id": "fdc03940-7916-487f-9295-8eb86433ba2e"
+				},
+				{
 					"name": "Financeiro",
 					"item": [
 						{
@@ -619,11 +666,122 @@
 					"id": "a34bc745-30b7-4df3-a1fa-a992863f478f"
 				},
 				{
-					"name": "Atendimento",
+					"name": "Outros",
 					"item": [
 						{
-							"name": "Consultar",
-							"id": "3fd4a2c3-979f-4ee2-a88b-4ebf949da008",
+							"name": "Autenticação",
+							"id": "6cfe3ea8-5816-46a4-8fe9-ff7b182a09de",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": "{{url}}api/v1/integracao/cliente/autenticacao",
+								"description": "Através desse `endpoint` será possível realizar a autenticação do cliente, com seu usuário e senha. Essa autenticação respeita os mesmos dados que o cliente utiliza para conectar na Central do Assinante `WEB` ou `APP`. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| usuario | Usuário de Autenticação da Central | Sim |\n| senha | Senha de Autenticação da Central | Sim |\n\nCom esse endpoint é possível criar outras soluções para os clientes da empresa e manter toda a autenticação centralizada na central do assinante do HubSoft. Por exemplo, é possível criar plataformas de conteúdo e o cliente usar o mesmo login e senha em todas elas."
+							},
+							"response": [
+								{
+									"id": "3cfc787b-3c37-4eca-b69f-6ae5aee6215c",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": "{{url}}api/v1/integracao/cliente/autenticacao"
+									},
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Usuário autenticado com sucesso\",\r\n    \"cliente\": {\r\n        \"id_cliente\": 23285,\r\n        \"codigo_cliente\": 1382,\r\n        \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO\",\r\n        \"nome_fantasia\": null,\r\n        \"cpf_cnpj\": \"09141806654\",\r\n        \"data_nascimento\": \"1994-03-11\",\r\n        \"telefone_primario\": \"37911112222\",\r\n        \"telefone_secundario\": \"3734151100\",\r\n        \"telefone_terciario\": \"11988887777\",\r\n        \"email_principal\": \"naotem@naotem.com.br\",\r\n        \"email_secundario\": \"naotem@naotem.com.br\"\r\n    }\r\n}"
+								}
+							]
+						},
+						{
+							"name": "Configuração de dados de Autenticação",
+							"id": "55a9af47-323c-4fc4-acce-8ea71c55ce4a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/api/v1/integracao/cliente/configurar_autenticacao",
+								"description": "**POST**\n\nAtravés deste `endpoint` , será possível efetuar a configuração de alguns parâmetros de autenticação do serviço.\n\nOs seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico | Identificador único do serviço do cliente | Sim |\n| id_interface_conexao | Interface de conexão com a qual o plano deverá ser vinculado | Não |\n| phy_addr | MAC/Serial da ONU ou equipamento equivalente do cliente, que forneça acesso em camada 2 | Não |\n| password | Senha de autenticação do cliente | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico | Deve conter um número inteiro maior que 0 | Nenhum |\n| id_interface_conexao | Deve conter um número inteiro maior que 0 | Nenhum |\n| phy_addr | Deve conter uma sequencia de letras e caracteres, sem espaço | Nenhum |\n| password | Deve conter no minimo tres caracteres | Nenhum |\n\nVeja que os parâmetros enviados na requisição `POST` devem obedecer a estrutura no formato `JSON`:\n\n```\n{\n        \"id_cliente_servico\":\"11000\",\n        \"password\":\"NewPasswd123\",\n        \"id_interface_conexao\":\"931\"\n}\n\n```"
+							},
+							"response": [
+								{
+									"id": "55e3b49c-8c33-4079-9fda-5f26f6707698",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"type": "text"
+											}
+										],
+										"url": "{{url}}/api/v1/integracao/cliente/configurar_autenticacao"
+									},
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Parametros de autenticacao modificados com sucesso!\"\r\n}"
+								}
+							]
+						},
+						{
+							"name": "Desbloqueio em Confiança",
+							"id": "06e8db8d-fa7c-407b-bd94-e9a8f5f1c7a6",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/api/v1/integracao/cliente/desbloqueio_confianca",
+								"description": "**POST**\n\nAtravés deste `endpoint` , será possível efetuar o desbloqueio em confiança, pela quantidade de dias desejados.\n\nAviso\n\n`IMPORTANTE`: O sistema vai fazer a validação da regra configurada pelo painel do administrador. Por exemplo, se a regra configurada pelo painel, estiver definido que o máximo de dias para desbloqueio for menor ou igual a 3 dias e a requisição da `API`, possuir um valor maior que 3 (no atributo `dias_desbloqueio`), o desbloqueio não será efetuado, e uma mensagem de erro será retornada, avisando que o valor informado para os dias de desbloqueio não é permitido, pois ultrapassa a configuração pré-estabelecida.\n\nOs seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico | Identificador único do serviço do cliente | Sim |\n| dias_desbloqueio | Quantidade de dias, a partir da data atual que o cliente ficará desbloqueado em confiança | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico | Deve conter um número inteiro maior que 0 | Nenhum |\n| dias_desbloqueio | Deve conter um número inteiro maior que 0. Se não for preenchido o valor 1 será atributo, ou seja, será desbloqueado até o próximo dia | Nenhum |\n\nVeja que os parâmetros enviados na requisição `POST` devem obedecer a estrutura no formato `JSON:`\n\n```\n{\n        \"id_cliente_servico\":\"11000\",\n        \"dias_desbloqueio\":\"1\"\n}\n\n```"
+							},
+							"response": [
+								{
+									"id": "590568b1-1d04-482c-a59f-ad11a53d2ba8",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"type": "text"
+											}
+										],
+										"url": "{{url}}/api/v1/integracao/cliente/desbloqueio_confianca"
+									},
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Desbloqueio em confiança realizado com sucesso até a data 26/11/2018\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Desconexão do Cliente",
+							"id": "7ed5854e-888c-4337-b46d-6abc4d8245b6",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -636,13 +794,26 @@
 										"type": "text"
 									}
 								],
-								"url": "{{url}}/api/v1/integracao/cliente/atendimento",
-								"description": "**GET**\n\n  \nNo método `GET`, será possível consultar os atendimentos em aberto/fechados dos clientes e obter o retorno no formato `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| busca | Tipo de busca que deseja fazer no cliente | Sim |\n| termo_busca | Termo utilizado para fazer a busca | Sim |\n| limit | Limite de resultados | Não |\n| apenas_pendente | Informa de deseja trazer apenas os atendimentos pendentes (abertos) | Não |\n| order_by | Campo que será utilizado para ordenação | Não |\n| order_type | Tipo de Ordenação | Não |\n| data_inicio | Data de Início (Utiliza a data de cadastro como base) | Não |\n| data_fim | Data de Fim (Utiliza a data de cadastro como base) | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| busca | codigo_cliente, cpf_cnpj, id_cliente_servico, protocolo | Nenhum |\n| termo_busca | Campo livre (Qualquer valor será aceito) | Nenhum |\n| limit | Valor mínimo 1, Valor máximo 50. | 20 |\n| apenas_pendente | sim,nao | sim |\n| order_by | data_cadastro,data_fechamento | data_cadastro |\n| order_type | asc,desc | asc |\n| data_inicio | Campo no formato DateTime (YYYY-MM-DD) | Nenhum |\n| data_fim | Campo no formato DateTime (YYYY-MM-DD) | Nenhum |"
+								"url": "{{url}}/api/v1/integracao/cliente/solicitar_desconexao/<id_cliente_servico>",
+								"description": "**GET**\n\nNo método `GET`, será possível efetuar a desconexão da conexão do cliente.\n\n**Aviso**\n\n`IMPORTANTE`: A desconexão apenas será realizada se a porta INCOMING estiver habilitada no equipamento de conexão (Concentrador). É necessário estar configurado no `HubSoft` em Rede > Equipamentos de Conexão e também é importante que o servidor `RADIUS` possua comunicação com o equipamento de conexão (Concentrador) no momento da solicitação. Todos esses fatores devem trabalhar em conjunto, para que o sistema consiga executar a operação com sucesso.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico | Identificador único do serviço do cliente | Sim |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico | Deve conter um número inteiro maior que 0 | Nenhum |"
 							},
 							"response": [
 								{
-									"id": "ea841403-6128-4d19-b7ef-dd0dff6ae062",
+									"id": "c4c239e9-9544-403e-8458-bc57a9885c24",
 									"name": "Sucesso",
+									"originalRequest": {
+										"method": "GET",
+										"header": []
+									},
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\r\n\"status\": \"success\",\r\n\"msg\": \"A desconexão foi bem sucedida para o login hubsoft!\",\r\n\"login\": \"hubsoft\"\r\n}"
+								},
+								{
+									"id": "3d534f26-c160-48bd-ad8b-aed63f104506",
+									"name": "Falha",
 									"originalRequest": {
 										"method": "GET",
 										"header": [
@@ -652,23 +823,91 @@
 												"type": "text"
 											}
 										],
-										"url": "{{url}}/api/v1/integracao/cliente/atendimento"
+										"url": "{{url}}/api/v1/integracao/cliente/solicitar_desconexao/<id_cliente_servico>"
 									},
 									"_postman_previewlanguage": "json",
 									"header": null,
 									"cookie": [],
 									"responseTime": null,
-									"body": "  {\r\n    \"status\": \"suscess\",\r\n    \"msg\": \"Dados consultados com sucesso\",\r\n    \"atendimentos\": [\r\n        {\r\n            \"id_atendimento\": 110,\r\n            \"protocolo\": \"201806191505251\",\r\n            \"descricao_abertura\": \"VERIFICAR CONEXÃO\",\r\n            \"descricao_fechamento\": null,\r\n            \"tipo_atendimento\": \"TÉCNICO - QUEDAS DE CONEXÃO\",\r\n            \"usuario_abertura\": \"Bianca Couto\",\r\n            \"usuario_responsavel\": \"Bianca Couto\",\r\n            \"usuario_fechamento\": null,\r\n            \"data_cadastro\": \"19/06/2018\",\r\n            \"data_fechamento\": null,\r\n            \"setor_responsavel\": null,\r\n            \"status_fechamento\": null,\r\n            \"motivo_fechamento\": null,\r\n            \"status\": \"Pendente\",\r\n            \"cliente\": {\r\n                \"codigo_cliente\": 1204,\r\n                \"nome_razaosocial\": \"BIANCA COUTO\",\r\n                \"cpf_cnpj\": \"86214941081\"\r\n            },\r\n            \"servico\": {\r\n                \"id_cliente_servico\":\"123\",\r\n            \"numero_plano\": 0,\r\n            \"nome\": \"5MB-WIRELLES-TESTE\",\r\n            \"valor\": 199.9,\r\n            \"status\": \"Cancelado\",\r\n            \"status_prefixo\": \"cancelado\"\r\n        },\r\n            \"ordens_servico\": [\r\n                {\r\n                    \"id_ordem_servico\": 131,\r\n                    \"numero_ordem_servico\": \"125\",\r\n                    \"data_cadastro\": \"19/06/2018 15:05:25\",\r\n                    \"tipo\": \"SUPORTE\",\r\n                    \"data_inicio_programado\": \"19/06/2018 14:02:00\",\r\n                    \"data_termino_programado\": \"19/06/2018 15:02:00\",\r\n                    \"data_inicio_executado\": \"19/06/2018 14:02:00\",\r\n                    \"data_termino_executado\": \"19/06/2018 15:02:00\",\r\n                    \"descricao_abertura\": \"VERIFICAR CONEXÃO\",\r\n                    \"descricao_servico\": \"VERIFICAR CONEXÃO\",\r\n                    \"descricao_fechamento\": \"asdfasdfadsf\",\r\n                    \"usuario_abertura\": \"Bianca Couto\",\r\n                    \"usuario_fechamento\": \"Bianca Couto\",\r\n                    \"status\": \"finalizado\",\r\n                    \"status_fechamento\": \"concluido\",\r\n                    \"cliente\": {\r\n                        \"codigo_cliente\": 1204,\r\n                        \"nome_razaosocial\": \"BIANCA COUTO\",\r\n                        \"cpf_cnpj\": \"86214941081\"\r\n                    },\r\n                    \"servico\": {\r\n                        \"id_cliente_servico\":\"123\",\r\n                        \"numero_plano\": 0,\r\n                        \"nome\": \"5MB-WIRELLES-TESTE\",\r\n                        \"valor\": 199.9,\r\n                        \"status\": \"Cancelado\",\r\n                        \"status_prefixo\": \"cancelado\"\r\n                    }\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id_atendimento\": 285,\r\n            \"protocolo\": \"201811061724214\",\r\n            \"descricao_abertura\": \"Abertura de atendimento através da API | ATENDIMENTO ABERTO VIA CENTRAL DO ASSINANTE\",\r\n            \"descricao_fechamento\": null,\r\n            \"tipo_atendimento\": \"SAC\",\r\n            \"usuario_abertura\": \"Master\",\r\n            \"usuario_responsavel\": \"Master\",\r\n            \"usuario_fechamento\": null,\r\n            \"data_cadastro\": \"06/11/2018\",\r\n            \"data_fechamento\": null,\r\n            \"setor_responsavel\": null,\r\n            \"status_fechamento\": null,\r\n            \"motivo_fechamento\": null,\r\n            \"status\": \"Aguardando Análise\",\r\n            \"cliente\": {\r\n                \"codigo_cliente\": 1204,\r\n                \"nome_razaosocial\": \"BIANCA COUTO\",\r\n                \"cpf_cnpj\": \"86214941081\"\r\n            },\r\n            \"ordens_servico\": []\r\n        },\r\n        {\r\n            \"id_atendimento\": 300,\r\n            \"protocolo\": \"201811161058216\",\r\n            \"descricao_abertura\": \"Estou sem acesso a internet desde segunda-feira. | ATENDIMENTO ABERTO VIA API\",\r\n            \"descricao_fechamento\": null,\r\n            \"tipo_atendimento\": \"SAC\",\r\n            \"usuario_abertura\": \"IP Telecom\",\r\n            \"usuario_responsavel\": \"IP Telecom\",\r\n            \"usuario_fechamento\": null,\r\n            \"data_cadastro\": \"16/11/2018\",\r\n            \"data_fechamento\": null,\r\n            \"setor_responsavel\": null,\r\n            \"status_fechamento\": null,\r\n            \"motivo_fechamento\": null,\r\n            \"status\": \"Aguardando Análise\",\r\n            \"cliente\": {\r\n                \"codigo_cliente\": 1204,\r\n                \"nome_razaosocial\": \"BIANCA COUTO\",\r\n                \"cpf_cnpj\": \"86214941081\"\r\n            },\r\n            \"servico\": {\r\n                \"id_cliente_servico\":\"12345\",\r\n                \"numero_plano\": 9,\r\n                \"nome\": \"NEXT-NV_1MBPS\",\r\n                \"valor\": 69.9,\r\n                \"status\": \"Serviço Habilitado\",\r\n                \"status_prefixo\": \"servico_habilitado\"\r\n        },\r\n            \"ordens_servico\": [\r\n                {\r\n                    \"id_ordem_servico\": 340,\r\n                    \"numero_ordem_servico\": \"320\",\r\n                    \"data_cadastro\": \"16/11/2018 10:58:21\",\r\n                    \"tipo\": \"ABERTURA VIA API\",\r\n                    \"data_inicio_programado\": \"16/11/2018 11:58:21\",\r\n                    \"data_termino_programado\": \"16/11/2018 12:58:21\",\r\n                    \"data_inicio_executado\": null,\r\n                    \"data_termino_executado\": null,\r\n                    \"descricao_abertura\": \"Estou sem acesso a internet desde segunda-feira. | ATENDIMENTO ABERTO VIA API\",\r\n                    \"descricao_servico\": \"Estou sem acesso a internet desde segunda-feira. | ATENDIMENTO ABERTO VIA API\",\r\n                    \"descricao_fechamento\": null,\r\n                    \"usuario_abertura\": \"IP Telecom\",\r\n                    \"usuario_fechamento\": null,\r\n                    \"status\": \"aguardando_agendamento\",\r\n                    \"status_fechamento\": null,\r\n                    \"cliente\": {\r\n                        \"codigo_cliente\": 1204,\r\n                        \"nome_razaosocial\": \"BIANCA COUTO\",\r\n                        \"cpf_cnpj\": \"86214941081\"\r\n                    },\r\n                    \"servico\": {\r\n                        \"id_cliente_servico\":\"12345\",\r\n                        \"numero_plano\": 9,\r\n                        \"nome\": \"NEXT-NV_1MBPS\",\r\n                        \"valor\": 69.9,\r\n                        \"status\": \"Serviço Habilitado\",\r\n                        \"status_prefixo\": \"servico_habilitado\"\r\n                    }\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}\r\n"
+									"body": "{\r\n        \"status\": \"error\",\r\n\"msg\": \"A desconexão não foi bem sucedida para o login hubsoft!\",\r\n\"errors\": []\r\n}"
+								}
+							]
+						},
+						{
+							"name": "Extrato de Conexão",
+							"id": "f89b0d5e-5d5c-4e89-858f-a722be98c01e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/api/v1/integracao/cliente/extrato_conexao",
+								"description": "**GET**\n\nNo método `GET`, será possível consultar os extratos de conexão de um determinado login e obter o retorno no formato `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| busca | Tipo de busca que deseja fazer no cliente | Sim |\n| termo_busca | Termo utilizado para fazer a busca | Sim |\n| limit | Limite de resultados | Não |\n| data_inicio | Data de Início (Utiliza a data de vencimento como base) | Não |\n| data_fim | Data de Fim (Utiliza a data de vencimento como base) | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| busca | login,ipv4,ipv6_wan,ipv6_lan | Nenhum |\n| termo_busca | Campo livre | Nehum |\n| limit | Valor mínimo 1, Valor máximo 50 | 20 |\n| data_inicio | Campo no formato DateTime (YYYY-MM-DD). | Data atual menos 30 dias |\n| data_fim | Campo no formato DateTime (YYYY-MM-DD). | Data atual |"
+							},
+							"response": [
+								{
+									"id": "84c4e4e1-fcad-4dc3-91d4-fb55565ff86b",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "GET",
+										"header": []
+									},
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Dados consultados com sucesso\",\r\n    \"registros\": [\r\n        {\r\n            \"acctstarttime\": \"2017-09-27 18:14:08-03\",\r\n            \"acctstarttimebr\": \"27/09/2017 18:14:08\",\r\n            \"acctstoptime\": null,\r\n            \"acctstoptimebr\": null,\r\n            \"calledstationid\": \"service2\",\r\n            \"callingstationid\": \"58:10:8C:4B:FF:AA\",\r\n            \"download_megabytes\": 4594.95,\r\n            \"upload_megabytes\": 156.12,\r\n            \"framedipaddress\": \"10.99.1.152\",\r\n            \"nasipaddress\": \"172.17.22.132\",\r\n            \"nasportid\": \"ether3\",\r\n            \"nasporttype\": \"Ethernet\",\r\n            \"username\": \"antoniomas\",\r\n            \"servico\": {\r\n                \"numero_plano\": 49,\r\n                \"nome\": \"100GB-DE-TESTE-\",\r\n                \"valor\": 100,\r\n                \"status\": \"Serviço Habilitado\",\r\n                \"status_prefixo\": \"servico_habilitado\"\r\n            },\r\n            \"cliente\": {\r\n                \"codigo_cliente\": 1161,\r\n                \"nome_razaosocial\": \"ANTONIO MODESTO\",\r\n                \"cpf_cnpj\": \"09350012345\"\r\n            }\r\n        }\r\n    ],\r\n    \"estatisticas\": {\r\n        \"total_conexoes\": 1,\r\n        \"download_total\": 4594.95,\r\n        \"upload_total\": 156.12,\r\n        \"trafego_total\": 4751.07,\r\n        \"media_download\": 0.23,\r\n        \"media_upload\": 0.01\r\n    }\r\n}\r\n"
+								}
+							]
+						},
+						{
+							"name": "Resetar MAC do Cliente",
+							"id": "ad95f206-c517-4e56-95e2-c4179f1deb1c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/api/v1/integracao/cliente/reset_mac_addr",
+								"description": "**POST**\n\nAtravés deste `endpoint`, será possível resetar o MAC ADDRESS configurado na autenticação do plano do cliente. Após resetar o MAC, qualquer equipamento com o login e senha corretos estará apto a realizar a autenticação. Esse endpoint será útil para provedores que fazem controle / restrição de MAC ADDRESS na rede.\n\n**Aviso**\n\n`IMPORTANTE`: O sistema irá validar se o serviço informado possui dados de autenticação. Caso o serviço selecionado não possua, uma mensagem de erro será retornada, impedindo que a solicitação seja executada.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico | Identificador único do serviço do cliente | Sim |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico | Deve conter um número inteiro maior que 0 | Nenhum |\n\nVeja que os parâmetros enviados na requisição `POST` devem obedecer a estrutura no formato `JSON`:\n\n```\n{\n        \"id_cliente_servico\":\"11000\"\n}\n\n```"
+							},
+							"response": [
+								{
+									"id": "e0307706-bea3-46fe-9001-f7f6c17596da",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "GET",
+										"header": []
+									},
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\r\n        \"status\": \"success\",\r\n        \"msg\": \"\"Endereço MAC resetado com sucesso!\"\r\n}"
 								}
 							]
 						}
 					],
-					"id": "fdc03940-7916-487f-9295-8eb86433ba2e"
+					"id": "1ba90c81-93bd-40a5-a287-32d405268325"
 				},
 				{
-					"name": "Outros",
+					"name": "New Folder",
 					"item": [],
-					"id": "1ba90c81-93bd-40a5-a287-32d405268325"
+					"id": "1a91f213-34a1-44ba-ad93-c2a486f7ac60"
 				},
 				{
 					"name": "All (Todos os Clientes)",
@@ -814,35 +1053,6 @@
 					]
 				},
 				{
-					"name": "Autenticação",
-					"id": "6cfe3ea8-5816-46a4-8fe9-ff7b182a09de",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [],
-						"url": "{{url}}api/v1/integracao/cliente/autenticacao",
-						"description": "Através desse `endpoint` será possível realizar a autenticação do cliente, com seu usuário e senha. Essa autenticação respeita os mesmos dados que o cliente utiliza para conectar na Central do Assinante `WEB` ou `APP`. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| usuario | Usuário de Autenticação da Central | Sim |\n| senha | Senha de Autenticação da Central | Sim |\n\nCom esse endpoint é possível criar outras soluções para os clientes da empresa e manter toda a autenticação centralizada na central do assinante do HubSoft. Por exemplo, é possível criar plataformas de conteúdo e o cliente usar o mesmo login e senha em todas elas."
-					},
-					"response": [
-						{
-							"id": "3cfc787b-3c37-4eca-b69f-6ae5aee6215c",
-							"name": "Sucesso",
-							"originalRequest": {
-								"method": "POST",
-								"header": [],
-								"url": "{{url}}api/v1/integracao/cliente/autenticacao"
-							},
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Usuário autenticado com sucesso\",\r\n    \"cliente\": {\r\n        \"id_cliente\": 23285,\r\n        \"codigo_cliente\": 1382,\r\n        \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO\",\r\n        \"nome_fantasia\": null,\r\n        \"cpf_cnpj\": \"09141806654\",\r\n        \"data_nascimento\": \"1994-03-11\",\r\n        \"telefone_primario\": \"37911112222\",\r\n        \"telefone_secundario\": \"3734151100\",\r\n        \"telefone_terciario\": \"11988887777\",\r\n        \"email_principal\": \"naotem@naotem.com.br\",\r\n        \"email_secundario\": \"naotem@naotem.com.br\"\r\n    }\r\n}"
-						}
-					]
-				},
-				{
 					"name": "Consultar Cliente",
 					"id": "e54e9bd8-b9e3-423a-a1da-9193894f522a",
 					"protocolProfileBehavior": {
@@ -949,176 +1159,6 @@
 					]
 				},
 				{
-					"name": "Configuração de dados de Autenticação",
-					"id": "55a9af47-323c-4fc4-acce-8ea71c55ce4a",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "{{access_token}}",
-								"type": "text"
-							}
-						],
-						"url": "{{url}}/api/v1/integracao/cliente/configurar_autenticacao",
-						"description": "**POST**\n\nAtravés deste `endpoint` , será possível efetuar a configuração de alguns parâmetros de autenticação do serviço.\n\nOs seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico | Identificador único do serviço do cliente | Sim |\n| id_interface_conexao | Interface de conexão com a qual o plano deverá ser vinculado | Não |\n| phy_addr | MAC/Serial da ONU ou equipamento equivalente do cliente, que forneça acesso em camada 2 | Não |\n| password | Senha de autenticação do cliente | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico | Deve conter um número inteiro maior que 0 | Nenhum |\n| id_interface_conexao | Deve conter um número inteiro maior que 0 | Nenhum |\n| phy_addr | Deve conter uma sequencia de letras e caracteres, sem espaço | Nenhum |\n| password | Deve conter no minimo tres caracteres | Nenhum |\n\nVeja que os parâmetros enviados na requisição `POST` devem obedecer a estrutura no formato `JSON`:\n\n```\n{\n        \"id_cliente_servico\":\"11000\",\n        \"password\":\"NewPasswd123\",\n        \"id_interface_conexao\":\"931\"\n}\n\n```"
-					},
-					"response": [
-						{
-							"id": "55e3b49c-8c33-4079-9fda-5f26f6707698",
-							"name": "Sucesso",
-							"originalRequest": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "{{access_token}}",
-										"type": "text"
-									}
-								],
-								"url": "{{url}}/api/v1/integracao/cliente/configurar_autenticacao"
-							},
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Parametros de autenticacao modificados com sucesso!\"\r\n}"
-						}
-					]
-				},
-				{
-					"name": "Desbloqueio em Confiança",
-					"id": "06e8db8d-fa7c-407b-bd94-e9a8f5f1c7a6",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "{{access_token}}",
-								"type": "text"
-							}
-						],
-						"url": "{{url}}/api/v1/integracao/cliente/desbloqueio_confianca",
-						"description": "**POST**\n\nAtravés deste `endpoint` , será possível efetuar o desbloqueio em confiança, pela quantidade de dias desejados.\n\nAviso\n\n`IMPORTANTE`: O sistema vai fazer a validação da regra configurada pelo painel do administrador. Por exemplo, se a regra configurada pelo painel, estiver definido que o máximo de dias para desbloqueio for menor ou igual a 3 dias e a requisição da `API`, possuir um valor maior que 3 (no atributo `dias_desbloqueio`), o desbloqueio não será efetuado, e uma mensagem de erro será retornada, avisando que o valor informado para os dias de desbloqueio não é permitido, pois ultrapassa a configuração pré-estabelecida.\n\nOs seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico | Identificador único do serviço do cliente | Sim |\n| dias_desbloqueio | Quantidade de dias, a partir da data atual que o cliente ficará desbloqueado em confiança | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico | Deve conter um número inteiro maior que 0 | Nenhum |\n| dias_desbloqueio | Deve conter um número inteiro maior que 0. Se não for preenchido o valor 1 será atributo, ou seja, será desbloqueado até o próximo dia | Nenhum |\n\nVeja que os parâmetros enviados na requisição `POST` devem obedecer a estrutura no formato `JSON:`\n\n```\n{\n        \"id_cliente_servico\":\"11000\",\n        \"dias_desbloqueio\":\"1\"\n}\n\n```"
-					},
-					"response": [
-						{
-							"id": "590568b1-1d04-482c-a59f-ad11a53d2ba8",
-							"name": "Sucesso",
-							"originalRequest": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "{{access_token}}",
-										"type": "text"
-									}
-								],
-								"url": "{{url}}/api/v1/integracao/cliente/desbloqueio_confianca"
-							},
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Desbloqueio em confiança realizado com sucesso até a data 26/11/2018\"\n}"
-						}
-					]
-				},
-				{
-					"name": "Desconexão do Cliente",
-					"id": "7ed5854e-888c-4337-b46d-6abc4d8245b6",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "{{access_token}}",
-								"type": "text"
-							}
-						],
-						"url": "{{url}}/api/v1/integracao/cliente/solicitar_desconexao/<id_cliente_servico>",
-						"description": "**GET**\n\nNo método `GET`, será possível efetuar a desconexão da conexão do cliente.\n\n**Aviso**\n\n`IMPORTANTE`: A desconexão apenas será realizada se a porta INCOMING estiver habilitada no equipamento de conexão (Concentrador). É necessário estar configurado no `HubSoft` em Rede > Equipamentos de Conexão e também é importante que o servidor `RADIUS` possua comunicação com o equipamento de conexão (Concentrador) no momento da solicitação. Todos esses fatores devem trabalhar em conjunto, para que o sistema consiga executar a operação com sucesso.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico | Identificador único do serviço do cliente | Sim |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico | Deve conter um número inteiro maior que 0 | Nenhum |"
-					},
-					"response": [
-						{
-							"id": "c4c239e9-9544-403e-8458-bc57a9885c24",
-							"name": "Sucesso",
-							"originalRequest": {
-								"method": "GET",
-								"header": []
-							},
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\r\n\"status\": \"success\",\r\n\"msg\": \"A desconexão foi bem sucedida para o login hubsoft!\",\r\n\"login\": \"hubsoft\"\r\n}"
-						},
-						{
-							"id": "3d534f26-c160-48bd-ad8b-aed63f104506",
-							"name": "Falha",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "{{access_token}}",
-										"type": "text"
-									}
-								],
-								"url": "{{url}}/api/v1/integracao/cliente/solicitar_desconexao/<id_cliente_servico>"
-							},
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\r\n        \"status\": \"error\",\r\n\"msg\": \"A desconexão não foi bem sucedida para o login hubsoft!\",\r\n\"errors\": []\r\n}"
-						}
-					]
-				},
-				{
-					"name": "Extrato de Conexão",
-					"id": "f89b0d5e-5d5c-4e89-858f-a722be98c01e",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "{{access_token}}",
-								"type": "text"
-							}
-						],
-						"url": "{{url}}/api/v1/integracao/cliente/extrato_conexao",
-						"description": "**GET**\n\nNo método `GET`, será possível consultar os extratos de conexão de um determinado login e obter o retorno no formato `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| busca | Tipo de busca que deseja fazer no cliente | Sim |\n| termo_busca | Termo utilizado para fazer a busca | Sim |\n| limit | Limite de resultados | Não |\n| data_inicio | Data de Início (Utiliza a data de vencimento como base) | Não |\n| data_fim | Data de Fim (Utiliza a data de vencimento como base) | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| busca | login,ipv4,ipv6_wan,ipv6_lan | Nenhum |\n| termo_busca | Campo livre | Nehum |\n| limit | Valor mínimo 1, Valor máximo 50 | 20 |\n| data_inicio | Campo no formato DateTime (YYYY-MM-DD). | Data atual menos 30 dias |\n| data_fim | Campo no formato DateTime (YYYY-MM-DD). | Data atual |"
-					},
-					"response": [
-						{
-							"id": "84c4e4e1-fcad-4dc3-91d4-fb55565ff86b",
-							"name": "Sucesso",
-							"originalRequest": {
-								"method": "GET",
-								"header": []
-							},
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Dados consultados com sucesso\",\r\n    \"registros\": [\r\n        {\r\n            \"acctstarttime\": \"2017-09-27 18:14:08-03\",\r\n            \"acctstarttimebr\": \"27/09/2017 18:14:08\",\r\n            \"acctstoptime\": null,\r\n            \"acctstoptimebr\": null,\r\n            \"calledstationid\": \"service2\",\r\n            \"callingstationid\": \"58:10:8C:4B:FF:AA\",\r\n            \"download_megabytes\": 4594.95,\r\n            \"upload_megabytes\": 156.12,\r\n            \"framedipaddress\": \"10.99.1.152\",\r\n            \"nasipaddress\": \"172.17.22.132\",\r\n            \"nasportid\": \"ether3\",\r\n            \"nasporttype\": \"Ethernet\",\r\n            \"username\": \"antoniomas\",\r\n            \"servico\": {\r\n                \"numero_plano\": 49,\r\n                \"nome\": \"100GB-DE-TESTE-\",\r\n                \"valor\": 100,\r\n                \"status\": \"Serviço Habilitado\",\r\n                \"status_prefixo\": \"servico_habilitado\"\r\n            },\r\n            \"cliente\": {\r\n                \"codigo_cliente\": 1161,\r\n                \"nome_razaosocial\": \"ANTONIO MODESTO\",\r\n                \"cpf_cnpj\": \"09350012345\"\r\n            }\r\n        }\r\n    ],\r\n    \"estatisticas\": {\r\n        \"total_conexoes\": 1,\r\n        \"download_total\": 4594.95,\r\n        \"upload_total\": 156.12,\r\n        \"trafego_total\": 4751.07,\r\n        \"media_download\": 0.23,\r\n        \"media_upload\": 0.01\r\n    }\r\n}\r\n"
-						}
-					]
-				},
-				{
 					"name": "Ordem de Serviço",
 					"id": "b8043377-1499-4f3e-bd05-6bcf71f46f80",
 					"protocolProfileBehavior": {
@@ -1149,40 +1189,6 @@
 							"cookie": [],
 							"responseTime": null,
 							"body": "{\r\n    \"status\": \"suscess\",\r\n    \"msg\": \"Dados consultados com sucesso\",\r\n    \"ordens_servico\": [\r\n        {\r\n            \"id_ordem_servico\": 78,\r\n            \"numero_ordem_servico\": \"74\",\r\n            \"data_cadastro\": \"12/04/2018 15:26:28\",\r\n            \"tipo\": \"SUPORTE\",\r\n            \"data_inicio_programado\": \"02/05/2018 10:00:00\",\r\n            \"data_termino_programado\": \"16/04/2018 12:00:00\",\r\n            \"data_inicio_executado\": null,\r\n            \"data_termino_executado\": null,\r\n            \"descricao_abertura\": \"cliente reclama de conexão lenta\",\r\n            \"descricao_servico\": \"CLIENTE TESTE TESTE\",\r\n            \"descricao_fechamento\": null,\r\n            \"usuario_abertura\": \"Master\",\r\n            \"usuario_fechamento\": null,\r\n            \"status\": \"aguardando_agendamento\",\r\n            \"status_fechamento\": null,\r\n            \"atendimento\": {\r\n                \"protocolo\": \"201804121526287\",\r\n                \"id_atendimento\": 60,\r\n                \"tipo_atendimento\": \"TÉCNICO - CONEXÃO LENTA\",\r\n                \"usuario_abertura\": \"Master\",\r\n                \"usuario_responsavel\": \"Guilherme Couto\",\r\n                \"usuario_fechamento\": null,\r\n                \"data_cadastro\": \"12/04/2018\",\r\n                \"data_fechamento\": null,\r\n                \"setor_responsavel\": null,\r\n                \"status_fechamento\": null,\r\n                \"motivo_fechamento\": null\r\n            },\r\n            \"cliente\": {\r\n                \"codigo_cliente\": 1188,\r\n                \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO - TESTE\",\r\n                \"cpf_cnpj\": \"26788493090\"\r\n            },\r\n            \"servico\": {\r\n                \"numero_plano\": 0,\r\n                \"nome\": \"100GB-DE-TESTE-\",\r\n                \"valor\": 100,\r\n                \"status\": \"Serviço Habilitado\",\r\n                \"status_prefixo\": \"servico_habilitado\"\r\n            }\r\n        },\r\n        {\r\n            \"id_ordem_servico\": 102,\r\n            \"numero_ordem_servico\": \"96\",\r\n            \"data_cadastro\": \"19/05/2018 10:17:03\",\r\n            \"tipo\": \"INSTALAÇÃO\",\r\n            \"data_inicio_programado\": \"19/05/2018 08:00:00\",\r\n            \"data_termino_programado\": \"19/05/2018 09:00:00\",\r\n            \"data_inicio_executado\": \"19/05/2018 11:54:59\",\r\n            \"data_termino_executado\": \"19/05/2018 11:56:50\",\r\n            \"descricao_abertura\": \"TESTE TESTE TESTE\",\r\n            \"descricao_servico\": \"teste teste teste\",\r\n            \"descricao_fechamento\": \"RT Este de fechamento\",\r\n            \"usuario_abertura\": \"Master\",\r\n            \"usuario_fechamento\": \"Master\",\r\n            \"status\": \"finalizado\",\r\n            \"status_fechamento\": \"concluido\",\r\n            \"atendimento\": {\r\n                \"protocolo\": \"201805191017039\",\r\n                \"id_atendimento\": 79,\r\n                \"tipo_atendimento\": \"TÉCNICO - CONEXÃO LENTA\",\r\n                \"usuario_abertura\": \"Master\",\r\n                \"usuario_responsavel\": \"Guilherme Couto\",\r\n                \"usuario_fechamento\": null,\r\n                \"data_cadastro\": \"19/05/2018\",\r\n                \"data_fechamento\": null,\r\n                \"setor_responsavel\": null,\r\n                \"status_fechamento\": null,\r\n                \"motivo_fechamento\": null\r\n            },\r\n            \"cliente\": {\r\n                \"codigo_cliente\": 1188,\r\n                \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO - TESTE\",\r\n                \"cpf_cnpj\": \"26788493090\"\r\n            },\r\n            \"servico\": {\r\n                \"numero_plano\": 6,\r\n                \"nome\": \"100GB-DE-TESTE-\",\r\n                \"valor\": 100,\r\n                \"status\": \"Serviço Habilitado\",\r\n                \"status_prefixo\": \"servico_habilitado\"\r\n            }\r\n        },\r\n        {\r\n            \"id_ordem_servico\": 208,\r\n            \"numero_ordem_servico\": \"191\",\r\n            \"data_cadastro\": \"14/08/2018 16:22:25\",\r\n            \"tipo\": \"INSTALAÇÃO\",\r\n            \"data_inicio_programado\": \"14/08/2018 15:00:00\",\r\n            \"data_termino_programado\": \"14/08/2018 16:00:00\",\r\n            \"data_inicio_executado\": null,\r\n            \"data_termino_executado\": null,\r\n            \"descricao_abertura\": \"inatalacção\",\r\n            \"descricao_servico\": \"inatalacção\",\r\n            \"descricao_fechamento\": null,\r\n            \"usuario_abertura\": \"Suporte\",\r\n            \"usuario_fechamento\": null,\r\n            \"status\": \"aguardando_agendamento\",\r\n            \"status_fechamento\": null,\r\n            \"atendimento\": null,\r\n            \"cliente\": {\r\n                \"codigo_cliente\": 1188,\r\n                \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO - TESTE\",\r\n                \"cpf_cnpj\": \"26788493090\"\r\n            },\r\n            \"servico\": {\r\n                \"numero_plano\": 7,\r\n                \"nome\": \"5MB-WIRELESS\",\r\n                \"valor\": 300,\r\n                \"status\": \"Aguardando Migração\",\r\n                \"status_prefixo\": \"aguardando_migracao\"\r\n            }\r\n        },\r\n        {\r\n            \"id_ordem_servico\": 209,\r\n            \"numero_ordem_servico\": \"192\",\r\n            \"data_cadastro\": \"14/08/2018 16:24:12\",\r\n            \"tipo\": \"INSTALAÇÃO\",\r\n            \"data_inicio_programado\": \"14/08/2018 15:00:00\",\r\n            \"data_termino_programado\": \"14/08/2018 16:00:00\",\r\n            \"data_inicio_executado\": null,\r\n            \"data_termino_executado\": null,\r\n            \"descricao_abertura\": \"dsgsdgsdgsd\",\r\n            \"descricao_servico\": \"dsgsdgsdgsd\",\r\n            \"descricao_fechamento\": null,\r\n            \"usuario_abertura\": \"Suporte\",\r\n            \"usuario_fechamento\": null,\r\n            \"status\": \"aguardando_agendamento\",\r\n            \"status_fechamento\": null,\r\n            \"atendimento\": null,\r\n            \"cliente\": {\r\n                \"codigo_cliente\": 1188,\r\n                \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO - TESTE\",\r\n                \"cpf_cnpj\": \"26788493090\"\r\n            },\r\n            \"servico\": {\r\n                \"numero_plano\": 8,\r\n                \"nome\": \"5MB-WIRELESS\",\r\n                \"valor\": 300,\r\n                \"status\": \"Aguardando Migração\",\r\n                \"status_prefixo\": \"aguardando_migracao\"\r\n            }\r\n        }\r\n    ]\r\n}"
-						}
-					]
-				},
-				{
-					"name": "Resetar MAC do Cliente",
-					"id": "ad95f206-c517-4e56-95e2-c4179f1deb1c",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "{{access_token}}",
-								"type": "text"
-							}
-						],
-						"url": "{{url}}/api/v1/integracao/cliente/reset_mac_addr",
-						"description": "**POST**\n\nAtravés deste `endpoint`, será possível resetar o MAC ADDRESS configurado na autenticação do plano do cliente. Após resetar o MAC, qualquer equipamento com o login e senha corretos estará apto a realizar a autenticação. Esse endpoint será útil para provedores que fazem controle / restrição de MAC ADDRESS na rede.\n\n**Aviso**\n\n`IMPORTANTE`: O sistema irá validar se o serviço informado possui dados de autenticação. Caso o serviço selecionado não possua, uma mensagem de erro será retornada, impedindo que a solicitação seja executada.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico | Identificador único do serviço do cliente | Sim |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico | Deve conter um número inteiro maior que 0 | Nenhum |\n\nVeja que os parâmetros enviados na requisição `POST` devem obedecer a estrutura no formato `JSON`:\n\n```\n{\n        \"id_cliente_servico\":\"11000\"\n}\n\n```"
-					},
-					"response": [
-						{
-							"id": "e0307706-bea3-46fe-9001-f7f6c17596da",
-							"name": "Sucesso",
-							"originalRequest": {
-								"method": "GET",
-								"header": []
-							},
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\r\n        \"status\": \"success\",\r\n        \"msg\": \"\"Endereço MAC resetado com sucesso!\"\r\n}"
 						}
 					]
 				}
@@ -2865,37 +2871,37 @@
 	],
 	"variable": [
 		{
-			"id": "a4623a18-89aa-4508-b112-35fc4b27241d",
+			"id": "95c61bde-da6e-4c05-955a-0ea46d8d031f",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "8134a987-3c95-4bde-a9a6-51e0d00876b5",
+			"id": "1a0133af-cfd0-484c-b4df-cc9ae3a5ed89",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "f7e4e881-9a0c-42db-a3a8-ddcff55a3722",
+			"id": "8d6df7c5-d5a4-4909-910f-a6effdedd523",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "14db05c0-f064-40a9-8e4a-94132c7154c0",
+			"id": "d9ed3f68-6c97-41ab-a88c-cf1c95d5afba",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "ae1b7772-9593-4812-a3f7-6e117b9bf591",
+			"id": "ca6d703f-4d9d-4fe9-8fb9-0f0e929940ce",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "6c1f55da-080f-4f23-ae90-c1b8f1b82337",
+			"id": "bae1e88d-cfc9-449b-85dd-311847360272",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "e1251aa8-afc5-4e40-af82-bd0c1b687106",
+			"id": "3f2aac06-6970-472e-85eb-4734eabb3a6d",
 			"key": "access_token",
 			"value": ""
 		}
