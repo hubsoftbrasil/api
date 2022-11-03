@@ -541,7 +541,7 @@
 					"name": "Nota Fiscal",
 					"item": [
 						{
-							"name": "Nota Fiscal",
+							"name": "Consultar Notas",
 							"id": "3e917dc2-52be-4d05-9265-aca3f70ace89",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -2854,37 +2854,37 @@
 	],
 	"variable": [
 		{
-			"id": "e543e15d-9b86-44fe-ba61-52e65508eb36",
+			"id": "d00ad6a1-fe2f-4ec8-9820-78e6b7e91ad9",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "f20c119d-dc2d-4bdd-a485-2aa1c38ff0bc",
+			"id": "c5e37118-d681-41fc-8e2e-5b13cec1b21b",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "bfa0e768-aeab-42e7-b269-895787782ebb",
+			"id": "9663920b-84d7-4b5e-b150-fb130f909b21",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "5cf0187f-cbec-4973-894d-b0cbd545231b",
+			"id": "108eae0b-d9e3-47e5-b604-6be7ceefe049",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "44a92589-4ac4-4b15-8596-96a710f1408c",
+			"id": "093d527f-ea6b-4340-990c-f542edb428fc",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "754829f2-0d6e-426a-9993-47de2a312045",
+			"id": "5cc19d50-1b77-4725-8a15-c2cf551bc207",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "0e3a8676-c411-4831-b445-9461a9a277b2",
+			"id": "a665908e-6e66-4a4f-a383-7e5efa7065ed",
 			"key": "access_token",
 			"value": ""
 		}
