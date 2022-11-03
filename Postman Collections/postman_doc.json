@@ -497,7 +497,7 @@
 					"id": "606adf7c-dbf5-47b2-bb9b-863655c40815"
 				},
 				{
-					"name": "New Folder",
+					"name": "Nota Fiscal",
 					"item": [],
 					"id": "a34bc745-30b7-4df3-a1fa-a992863f478f"
 				},
@@ -2853,37 +2853,37 @@
 	],
 	"variable": [
 		{
-			"id": "f97de716-d202-4d29-af7d-1cfa5a057974",
+			"id": "c4e018f5-a7d0-4716-9734-2c6a2ceb6015",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "ea8c0d75-c4a3-4e08-8314-21169c8fc23d",
+			"id": "1edff15d-5f3b-4611-9995-89c9136c7f42",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "452f761b-c5aa-4f6f-8e7b-8ff2ae50fef5",
+			"id": "58cf9cbf-7b68-4e99-8720-e0d0cfe27f1b",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "4fdf8420-41e6-4389-bd7c-2a66a7541d83",
+			"id": "ff9bd11a-13d4-4a3f-acb1-c7ead8687928",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "f6820d02-2dfe-4c6b-b53b-9fabc9c6940d",
+			"id": "46e36bf9-e20e-4866-893a-5574b0056130",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "a20e6bde-e480-4d54-8c8c-6f1f016855ff",
+			"id": "745c8754-4d65-412d-a192-aeb66abbf81f",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "3d34186a-12c3-4052-a440-2086c9f8101b",
+			"id": "4f147eb4-d19d-4460-8fa9-66422d8303fb",
 			"key": "access_token",
 			"value": ""
 		}
