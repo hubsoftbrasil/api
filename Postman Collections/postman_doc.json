@@ -666,7 +666,7 @@
 					"id": "fdc03940-7916-487f-9295-8eb86433ba2e"
 				},
 				{
-					"name": "New Folder",
+					"name": "Outros",
 					"item": [],
 					"id": "1ba90c81-93bd-40a5-a287-32d405268325"
 				},
@@ -2865,37 +2865,37 @@
 	],
 	"variable": [
 		{
-			"id": "918a7aab-1d6c-45cf-9a87-97f333fcfaa8",
+			"id": "a4623a18-89aa-4508-b112-35fc4b27241d",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "d51859a4-e08a-420e-b05b-7ee848ddb5ff",
+			"id": "8134a987-3c95-4bde-a9a6-51e0d00876b5",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "3e95d07b-5a3b-434e-b7c3-9e0a38ebdd66",
+			"id": "f7e4e881-9a0c-42db-a3a8-ddcff55a3722",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "d5382bb1-ef54-4b8a-8735-106af7615bb5",
+			"id": "14db05c0-f064-40a9-8e4a-94132c7154c0",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "78e39613-8c24-4511-a58b-290865fd896b",
+			"id": "ae1b7772-9593-4812-a3f7-6e117b9bf591",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "ca6ecf06-30a3-4e95-985b-a606a23973ae",
+			"id": "6c1f55da-080f-4f23-ae90-c1b8f1b82337",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "cf0844d4-d2dc-429e-ab2c-07994c422254",
+			"id": "e1251aa8-afc5-4e40-af82-bd0c1b687106",
 			"key": "access_token",
 			"value": ""
 		}
