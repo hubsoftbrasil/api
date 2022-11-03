@@ -556,7 +556,7 @@
 									}
 								],
 								"url": "{{url}}/api/v1/integracao/cliente/nota_fiscal",
-								"description": "**GET**\n\nNo método `GET`, será possível consultar as notas fiscais e obter o retorno no formato `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| busca | Tipo de busca que deseja fazer no cliente | Sim |\n| termo_busca | Termo utilizado para fazer a busca | Sim |\n| data_inicio | Data de Início (Utiliza a data de emissão da nota como base) | Não |\n| data_fim | Data de Fim (Utiliza a data de emissão da nota como base) | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| busca | id_cliente | Nenhum |\n| termo_busca | Campo livre | Sim |\n| data_inicio | Campo no formato DateTime (YYYY-MM-DD) | Nenhum |\n| data_fim | Campo no formato DateTime (YYYY-MM-DD) | Nenhum |\n\n**Aviso**\n\nA `API` vai retornar somente notas que já foram processadas e enviadas aos respectivos orgãos responsáveis, sendo assim será retornado somente as notas com os seguintes status: NFe: efetivada / NFSe: autorizado / Nota Fiscal Telecom 21/22: normal\n\n**Nota**\n\nPara os parâmetros `data_inicio` e `data_fim` não pode ser informado um intervalo de datas maior que 60 dias."
+								"description": "**GET**\n\nNo método `GET`, será possível consultar as notas fiscais modelos 0, 21 e 22 e obter o retorno no formato `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| busca | Tipo de busca que deseja fazer no cliente | Sim |\n| termo_busca | Termo utilizado para fazer a busca | Sim |\n| data_inicio | Data de Início (Utiliza a data de emissão da nota como base) | Não |\n| data_fim | Data de Fim (Utiliza a data de emissão da nota como base) | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| busca | id_cliente | Nenhum |\n| termo_busca | Campo livre | Sim |\n| data_inicio | Campo no formato DateTime (YYYY-MM-DD) | Nenhum |\n| data_fim | Campo no formato DateTime (YYYY-MM-DD) | Nenhum |\n\n**Aviso**\n\nA `API` vai retornar somente notas que já foram processadas e enviadas aos respectivos orgãos responsáveis, sendo assim será retornado somente as notas com os seguintes status: NFe: efetivada / NFSe: autorizado / Nota Fiscal Telecom 21/22: normal\n\n**Nota**\n\nPara os parâmetros `data_inicio` e `data_fim` não pode ser informado um intervalo de datas maior que 60 dias."
 							},
 							"response": [
 								{
@@ -2854,37 +2854,37 @@
 	],
 	"variable": [
 		{
-			"id": "d00ad6a1-fe2f-4ec8-9820-78e6b7e91ad9",
+			"id": "b465086b-713b-49aa-97dd-10b332e47866",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "c5e37118-d681-41fc-8e2e-5b13cec1b21b",
+			"id": "dd78a3bc-1594-41f7-bb53-0fea6d08affd",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "9663920b-84d7-4b5e-b150-fb130f909b21",
+			"id": "6bb7682e-055f-4905-856a-28db5b73df41",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "108eae0b-d9e3-47e5-b604-6be7ceefe049",
+			"id": "831820ee-9fd9-4183-bf21-28c9b73f05ce",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "093d527f-ea6b-4340-990c-f542edb428fc",
+			"id": "9aee7dd1-85eb-4eff-8387-85f4e070c13f",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "5cc19d50-1b77-4725-8a15-c2cf551bc207",
+			"id": "684dbe22-9c6e-431f-a461-f046d4049ef5",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "a665908e-6e66-4a4f-a383-7e5efa7065ed",
+			"id": "0ce4e8b3-3440-4b00-a6c2-a32f2a6f5ead",
 			"key": "access_token",
 			"value": ""
 		}
