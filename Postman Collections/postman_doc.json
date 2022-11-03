@@ -1103,7 +1103,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{url}}/api/v1/integracao/cliente?busca=&inativo=&termo_busca=&limit=&cancelado=&ultima_conexao=&incluir_contrato=&order_by=&order_type=",
+							"raw": "{{url}}/api/v1/integracao/cliente?busca=&termo_busca=&inativo=&limit=&cancelado=&ultima_conexao=&incluir_contrato=&order_by=&order_type=",
 							"host": [
 								"{{url}}"
 							],
@@ -1117,55 +1117,47 @@
 								{
 									"key": "busca",
 									"value": "",
-									"type": "text",
 									"description": "(Obrigatório) Tipo de busca que deseja fazer no cliente. Valores aceitos: nome_razaosocial, nome_fantasia, cpf_cnpj, codigo_cliente, telefone, login_radius, ipv4, mac"
-								},
-								{
-									"key": "inativo",
-									"value": "",
-									"type": "text",
-									"description": "(Obrigatório) Termo utilizado para fazer a busca"
 								},
 								{
 									"key": "termo_busca",
 									"value": "",
-									"type": "text",
-									"description": "(Opcional) Limite de resultados. Valor mínimo: 1, Valor máximo: 100"
+									"description": "(Obrigatório) Termo utilizado para fazer a busca"
+								},
+								{
+									"key": "inativo",
+									"value": "",
+									"description": "(Opcional) Informa se deseja consultar cadastros de clientes inativos ou não. Valor aceitos: sim, nao"
 								},
 								{
 									"key": "limit",
 									"value": "",
-									"type": "text",
-									"description": "(Opcional) Informa se deseja trazer os serviços cancelados ou não. Valor aceitos: sim,nao"
+									"description": "(Opcional) Limite de resultados. Valor mínimo: 1, Valor máximo: 100"
 								},
 								{
 									"key": "cancelado",
 									"value": "",
-									"type": "text",
-									"description": "(Opcional) Informa se deseja trazer os dados da última conexão. Valor Aceitos: sim,nao"
+									"description": "(Opcional) Informa se deseja trazer os serviços cancelados ou não. Valor aceitos: sim,nao"
 								},
 								{
 									"key": "ultima_conexao",
 									"value": "",
-									"type": "text",
-									"description": "(Opcional) Informa se deseja incluir os contratos do serviço"
+									"description": "(Opcional) Informa se deseja trazer os dados da última conexão. Valor Aceitos: sim,nao"
 								},
 								{
 									"key": "incluir_contrato",
 									"value": "",
-									"type": "text",
-									"description": "(Opcional) Campo que será utilizado para ordenação. Valores aceitos: data_cadastro,data_fechamento"
+									"description": "(Opcional) Informa se deseja incluir os contratos do serviço"
 								},
 								{
 									"key": "order_by",
 									"value": "",
-									"type": "text",
-									"description": "(Opcional) Tipo de Ordenação. Valores aceitos: asc,desc"
+									"description": "(Opcional) Campo que será utilizado para ordenação. Valores aceitos: data_cadastro,data_fechamento"
 								},
 								{
 									"key": "order_type",
 									"value": "",
-									"type": "text"
+									"description": "(Opcional) Tipo de Ordenação. Valores aceitos: asc,desc"
 								}
 							]
 						},
@@ -2872,37 +2864,37 @@
 	],
 	"variable": [
 		{
-			"id": "3396a36d-e95a-4695-ba79-917c242577de",
+			"id": "c2f3bfaa-74e5-4b79-9d82-16d15063635d",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "eca895ba-0e37-40e0-8e18-d4c150372aca",
+			"id": "e6ad9907-5548-40c1-b19a-0eaca7f9a16a",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "ec672930-1575-4bcf-b4c8-c6d514317347",
+			"id": "3d6f729f-3566-4e34-89b6-ce4d906ee871",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "dba6e8f0-5636-497f-b992-22d9044d4882",
+			"id": "905afae6-3caf-475d-ab40-47e9fe9c7081",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "15cde0cb-99bb-4f50-8b55-b1129706a58a",
+			"id": "aef1e2ed-f6b6-4e2a-9e03-5724845d4213",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "def4218a-d7d3-4b22-8542-c18302e104be",
+			"id": "16feaae4-36ad-40a9-b060-53768fb99262",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "270b5510-366b-4530-8156-e88d183604db",
+			"id": "63012a9e-ecc1-442e-95aa-7e7e2b7a6f7e",
 			"key": "access_token",
 			"value": ""
 		}
