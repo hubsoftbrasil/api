@@ -384,7 +384,7 @@
 					"name": "Financeiro",
 					"item": [
 						{
-							"name": "Consultar",
+							"name": "Consultar Faturas",
 							"id": "0ba61080-2bda-4560-9760-3c0d117dd7cd",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -2848,37 +2848,37 @@
 	],
 	"variable": [
 		{
-			"id": "a388a8db-4441-4830-a277-2f3916531080",
+			"id": "cedf10d9-ea32-4079-b517-5b1e8ce32a14",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "66279997-b6ea-4bbf-b909-4ae9289caf6d",
+			"id": "a3efab9b-a0e5-4aa5-af86-0a329391d5bd",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "07ee8bbd-f5bc-4737-a32e-1df46c9d3725",
+			"id": "6780aa64-7f72-47f4-9da1-7d5b51042d74",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "04e3275b-8589-4fd7-89d2-1c9f4031f932",
+			"id": "ef37ee13-dd8f-4757-8b53-93ae4c334cd8",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "054c6050-a3e5-4123-b806-08bc6f6b8fc2",
+			"id": "72580ab0-b74d-4054-80c9-bf21af7674d2",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "63ce0164-4ac3-4d40-a079-26fa3fc45b1b",
+			"id": "b981484d-d6ae-41eb-818c-6979643a7041",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "093912ee-a917-4b45-bb42-477a30ba2169",
+			"id": "dfa1a418-84ca-43a3-850d-b76ede19f2e3",
 			"key": "access_token",
 			"value": ""
 		}
