@@ -1208,7 +1208,49 @@
 			"item": [
 				{
 					"name": "Evento de Faturamento",
-					"item": [],
+					"item": [
+						{
+							"name": "Adicionar",
+							"id": "5b87d301-3917-4cdc-acdf-5e989e20b1c1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/api/v1/integracao/financeiro/evento_faturamento",
+								"description": "**POST**\n\nAtravés deste `endpoint`, será possível fazer o cadastro de evento de faturamento. Pode ser cadastrado um evento de Acréscimo ou Desconto, permitindo também parcelamento.\n\n**Aviso**\n\n`IMPORTANTE`: É necessário informar o `id_cliente_servico` e o `id_tipo_servico,` ambos retornados nas rotas Clientes > Consulta e Tipo de Serviço > All respectivamente\n\n`IMPORTANTE 2:` Ao enviar a o parâmetro parcelado como true, os parâmetros `numero_total_parcelas`, `mes_primeira_parcela` e `ano_primeira_parcela` tornam-se obrigatórios\n\n`IMPORTANTE 3`: Ao enviar a o parâmetro parcelado como false, o parâmetro `proximo_faturamento` torna-se obrigatório. Caso ele seja enviado como false, os parâmetros `mes_processar` e `ano_processar` também deverão ser enviados\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico | Identificador único do serviço do cliente | Sim |\n| id_tipo_servico | Identificador único do tipo de serviço | Sim |\n| tipo | Textual (aceita os valores acrescimo e desconto). | Sim |\n| descricao | Descrição textual para o evento. | Sim |\n| valor | Campo númerico (aceita valor decimal separado por ponto. Ex.: 10.2). | Sim |\n| parcelado | Boolean para identificar se o evento é parcelado ou não | Sim |\n| numero_total_parcelas | Valor maior que 0 para identificar o total de parcelas | Sim (Se parcelado = true) |\n| mes_primeira_parcela | Valor inteiro que representa o mês do ano (Dezembro = 12). Utilizado para verificar o mês da primeira parcela | Sim (Se parcelado = true) |\n| ano_primeira_parcela | Valor inteiro que representa o ano. Utilizado para verificar o ano da primeira parcela | Sim (Se parcelado = true) |\n| proximo_faturamento | Boolean para identificar se o evento será lançado no próximo faturamento | Sim (Se parcelado = false) |\n| mes_processar | Valor inteiro que representa o mês do ano (Dezembro = 12). Utilizado para verificar o mês de processamento do faturamento | Sim (Se proximo_faturamento = false) |\n| ano_processar | Valor inteiro que representa o ano. Utilizado para verificar o ano de processamento do faturamento | Sim (Se proximo_faturamento = false) |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico | Deve conter um número inteiro maior que 0 | Nenhum |\n| id_tipo_servico | Deve conter um número inteiro maior que 0 | Nenhum |\n| tipo | Textual | Nenhum |\n| descricao | Textual | Nenhum |\n| valor | Número Inteiro/Decimal | Nenhum |\n| parcelado | Boolean | Nenhum |\n| numero_total_parcelas | Número Inteiro | Nenhum |\n| mes_primeira_parcela | Número Inteiro (maior que 0 e menor que 13) | Nenhum |\n| ano_primeira_parcela | Número Inteiro | Nenhum |\n| proximo_faturamento | Boolean | Nenhum |\n| mes_processar | Número Inteiro (maior que 0 e menor que 13) | Nenhum |\n| ano_processar | Número Inteiro | Nenhum |\n\nVeja que os parâmetros enviados na requisição `POST` devem obedecer a estrutura no formato `JSON:`\n\n```\n     {\n    \"id_cliente_servico\": 13579,\n    \"id_tipo_servico\": 2,\n    \"descricao\": \"ADICIONAL\",\n    \"parcelado\": false,\n    \"proximo_faturamento\": true,\n    \"tipo\": \"acrescimo\",\n    \"valor\": 10.3\n}\n\n```"
+							},
+							"response": [
+								{
+									"id": "e2956765-a056-4930-9c27-f225365f798c",
+									"name": "Evento de Faturamento",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"type": "text"
+											}
+										],
+										"url": "{{url}}/api/v1/integracao/financeiro/evento_faturamento"
+									},
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"1 Evento(s) de Farturamento de acréscimo cadastrados com sucesso. VALOR TOTAL: R$ 10.30\",\r\n    \"eventos_faturamento\": [\r\n        {\r\n            \"id_evento_faturamento\": 1575\r\n        }\r\n    ]\r\n}"
+								}
+							]
+						}
+					],
 					"id": "abc64005-03d4-4018-9bff-a58d0861e083"
 				},
 				{
@@ -1249,47 +1291,6 @@
 							"cookie": [],
 							"responseTime": null,
 							"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Dados consultados com sucesso.\",\r\n    \"faturas\": [\r\n        {\r\n            \"id_fatura\": 62636,\r\n            \"nosso_numero\": \"1900247\",\r\n            \"data_vencimento\": \"2020-04-05\",\r\n            \"data_vencimento_br\": \"05/04/2020\",\r\n            \"data_pagamento\": null,\r\n            \"data_pagamento_br\": null,\r\n            \"data_cadastro\": \"2020-01-01 12:52:12\",\r\n            \"data_cadastro_br\": \"01/01/2020\",\r\n            \"valor\": \"119.9\",\r\n            \"valor_pago\": null,\r\n            \"cliente\": {\r\n                \"id_cliente\": 11943,\r\n                \"codigo_cliente\": 1162,\r\n                \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO\",\r\n                \"nome_fantasia\": null,\r\n                \"tipo_pessoa\": \"pf\",\r\n                \"cpf_cnpj\": \"41107296617\",\r\n                \"data_nascimento\": \"1994-03-10\",\r\n                \"data_nascimento_br\": \"10/03/1994\",\r\n                \"telefone_primario\": \"37999091234\",\r\n                \"telefone_secundario\": \"373415100\",\r\n                \"telefone_terciario\": null,\r\n                \"email_principal\": \"email@cliente.com.b4\",\r\n                \"email_secundario\": null,\r\n                \"data_cadastro\": \"2017-09-26 13:20:33\",\r\n                \"data_cadastro_br\": \"26/09/2017 13:20\",\r\n                \"ativo\": true\r\n            }\r\n        },\r\n        {\r\n            \"id_fatura\": 62634,\r\n            \"nosso_numero\": \"1900245\",\r\n            \"data_vencimento\": \"2020-04-05\",\r\n            \"data_vencimento_br\": \"05/04/2020\",\r\n            \"data_pagamento\": null,\r\n            \"data_pagamento_br\": null,\r\n            \"data_cadastro\": \"2020-01-01 12:52:12\",\r\n            \"data_cadastro_br\": \"01/01/2020\",\r\n            \"valor\": \"115.9\",\r\n            \"valor_pago\": null,\r\n            \"cliente\": {\r\n                \"id_cliente\": 11943,\r\n                \"codigo_cliente\": 1162,\r\n                \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO\",\r\n                \"nome_fantasia\": null,\r\n                \"tipo_pessoa\": \"pf\",\r\n                \"cpf_cnpj\": \"41107296617\",\r\n                \"data_nascimento\": \"1994-03-10\",\r\n                \"data_nascimento_br\": \"10/03/1994\",\r\n                \"telefone_primario\": \"37999091234\",\r\n                \"telefone_secundario\": \"373415100\",\r\n                \"telefone_terciario\": null,\r\n                \"email_principal\": \"email@cliente.com.b4\",\r\n                \"email_secundario\": null,\r\n                \"data_cadastro\": \"2017-09-26 13:20:33\",\r\n                \"data_cadastro_br\": \"26/09/2017 13:20\",\r\n                \"ativo\": true\r\n            }\r\n        },\r\n        {\r\n            \"id_fatura\": 62625,\r\n            \"nosso_numero\": \"1900242\",\r\n            \"data_vencimento\": \"2020-04-05\",\r\n            \"data_vencimento_br\": \"05/04/2020\",\r\n            \"data_pagamento\": null,\r\n            \"data_pagamento_br\": null,\r\n            \"data_cadastro\": \"2020-01-01 12:52:12\",\r\n            \"data_cadastro_br\": \"01/01/2020\",\r\n            \"valor\": \"169.9\",\r\n            \"valor_pago\": null,\r\n            \"cliente\": {\r\n                \"id_cliente\": 11943,\r\n                \"codigo_cliente\": 1162,\r\n                \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO\",\r\n                \"nome_fantasia\": null,\r\n                \"tipo_pessoa\": \"pf\",\r\n                \"cpf_cnpj\": \"41107296617\",\r\n                \"data_nascimento\": \"1994-03-10\",\r\n                \"data_nascimento_br\": \"10/03/1994\",\r\n                \"telefone_primario\": \"37999091234\",\r\n                \"telefone_secundario\": \"373415100\",\r\n                \"telefone_terciario\": null,\r\n                \"email_principal\": \"email@cliente.com.b4\",\r\n                \"email_secundario\": null,\r\n                \"data_cadastro\": \"2017-09-26 13:20:33\",\r\n                \"data_cadastro_br\": \"26/09/2017 13:20\",\r\n                \"ativo\": true\r\n            }\r\n        },\r\n        {\r\n            \"id_fatura\": 62628,\r\n            \"nosso_numero\": \"212\",\r\n            \"data_vencimento\": \"2020-04-05\",\r\n            \"data_vencimento_br\": \"05/04/2020\",\r\n            \"data_pagamento\": null,\r\n            \"data_pagamento_br\": null,\r\n            \"data_cadastro\": \"2020-01-01 12:52:12\",\r\n            \"data_cadastro_br\": \"01/01/2020\",\r\n            \"valor\": \"40.3\",\r\n            \"valor_pago\": null,\r\n            \"cliente\": {\r\n                \"id_cliente\": 11943,\r\n                \"codigo_cliente\": 1162,\r\n                \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO\",\r\n                \"nome_fantasia\": null,\r\n                \"tipo_pessoa\": \"pf\",\r\n                \"cpf_cnpj\": \"41107296617\",\r\n                \"data_nascimento\": \"1994-03-10\",\r\n                \"data_nascimento_br\": \"10/03/1994\",\r\n                \"telefone_primario\": \"37999091234\",\r\n                \"telefone_secundario\": \"373415100\",\r\n                \"telefone_terciario\": null,\r\n                \"email_principal\": \"email@cliente.com.b4\",\r\n                \"email_secundario\": null,\r\n                \"data_cadastro\": \"2017-09-26 13:20:33\",\r\n                \"data_cadastro_br\": \"26/09/2017 13:20\",\r\n                \"ativo\": true\r\n            }\r\n        }\r\n    ]\r\n}"
-						}
-					]
-				},
-				{
-					"name": "Evento de Faturamento",
-					"id": "5b87d301-3917-4cdc-acdf-5e989e20b1c1",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "{{access_token}}",
-								"type": "text"
-							}
-						],
-						"url": "{{url}}/api/v1/integracao/financeiro/evento_faturamento",
-						"description": "**POST**\n\nAtravés deste `endpoint`, será possível fazer o cadastro de evento de faturamento. Pode ser cadastrado um evento de Acréscimo ou Desconto, permitindo também parcelamento.\n\n**Aviso**\n\n`IMPORTANTE`: É necessário informar o `id_cliente_servico` e o `id_tipo_servico,` ambos retornados nas rotas Clientes > Consulta e Tipo de Serviço > All respectivamente\n\n`IMPORTANTE 2:` Ao enviar a o parâmetro parcelado como true, os parâmetros `numero_total_parcelas`, `mes_primeira_parcela` e `ano_primeira_parcela` tornam-se obrigatórios\n\n`IMPORTANTE 3`: Ao enviar a o parâmetro parcelado como false, o parâmetro `proximo_faturamento` torna-se obrigatório. Caso ele seja enviado como false, os parâmetros `mes_processar` e `ano_processar` também deverão ser enviados\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico | Identificador único do serviço do cliente | Sim |\n| id_tipo_servico | Identificador único do tipo de serviço | Sim |\n| tipo | Textual (aceita os valores acrescimo e desconto). | Sim |\n| descricao | Descrição textual para o evento. | Sim |\n| valor | Campo númerico (aceita valor decimal separado por ponto. Ex.: 10.2). | Sim |\n| parcelado | Boolean para identificar se o evento é parcelado ou não | Sim |\n| numero_total_parcelas | Valor maior que 0 para identificar o total de parcelas | Sim (Se parcelado = true) |\n| mes_primeira_parcela | Valor inteiro que representa o mês do ano (Dezembro = 12). Utilizado para verificar o mês da primeira parcela | Sim (Se parcelado = true) |\n| ano_primeira_parcela | Valor inteiro que representa o ano. Utilizado para verificar o ano da primeira parcela | Sim (Se parcelado = true) |\n| proximo_faturamento | Boolean para identificar se o evento será lançado no próximo faturamento | Sim (Se parcelado = false) |\n| mes_processar | Valor inteiro que representa o mês do ano (Dezembro = 12). Utilizado para verificar o mês de processamento do faturamento | Sim (Se proximo_faturamento = false) |\n| ano_processar | Valor inteiro que representa o ano. Utilizado para verificar o ano de processamento do faturamento | Sim (Se proximo_faturamento = false) |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico | Deve conter um número inteiro maior que 0 | Nenhum |\n| id_tipo_servico | Deve conter um número inteiro maior que 0 | Nenhum |\n| tipo | Textual | Nenhum |\n| descricao | Textual | Nenhum |\n| valor | Número Inteiro/Decimal | Nenhum |\n| parcelado | Boolean | Nenhum |\n| numero_total_parcelas | Número Inteiro | Nenhum |\n| mes_primeira_parcela | Número Inteiro (maior que 0 e menor que 13) | Nenhum |\n| ano_primeira_parcela | Número Inteiro | Nenhum |\n| proximo_faturamento | Boolean | Nenhum |\n| mes_processar | Número Inteiro (maior que 0 e menor que 13) | Nenhum |\n| ano_processar | Número Inteiro | Nenhum |\n\nVeja que os parâmetros enviados na requisição `POST` devem obedecer a estrutura no formato `JSON:`\n\n```\n     {\n    \"id_cliente_servico\": 13579,\n    \"id_tipo_servico\": 2,\n    \"descricao\": \"ADICIONAL\",\n    \"parcelado\": false,\n    \"proximo_faturamento\": true,\n    \"tipo\": \"acrescimo\",\n    \"valor\": 10.3\n}\n\n```"
-					},
-					"response": [
-						{
-							"id": "e2956765-a056-4930-9c27-f225365f798c",
-							"name": "Evento de Faturamento",
-							"originalRequest": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "{{access_token}}",
-										"type": "text"
-									}
-								],
-								"url": "{{url}}/api/v1/integracao/financeiro/evento_faturamento"
-							},
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"1 Evento(s) de Farturamento de acréscimo cadastrados com sucesso. VALOR TOTAL: R$ 10.30\",\r\n    \"eventos_faturamento\": [\r\n        {\r\n            \"id_evento_faturamento\": 1575\r\n        }\r\n    ]\r\n}"
 						}
 					]
 				}
@@ -2841,37 +2842,37 @@
 	],
 	"variable": [
 		{
-			"id": "cfcbbb42-cf68-4fd7-84c8-527a6559954b",
+			"id": "cb96bf19-6c9b-4aff-9cbb-6a1d201eae9e",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "0634664f-03c2-4de5-a607-708de9ed3ab1",
+			"id": "735d6a49-9adf-4f4f-abe0-62f0a1842cb8",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "3b75afc5-1297-4de8-84ce-bcc5fa8adfd6",
+			"id": "aa8fde27-c745-477b-aee0-b75d1131bec5",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "430345c7-87ba-4474-85f9-d6d04c9f85e8",
+			"id": "a3a74103-eaba-43ae-a88d-5edead082cda",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "f4836540-d4fd-465d-a7ff-2c9916ddf1e3",
+			"id": "5c9f18e5-180c-4e50-b87b-effaae1fce57",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "75175765-4253-4906-9be9-623f1ecc863b",
+			"id": "e5af3df3-6448-4be7-bb4c-572d4b2c2cf0",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "95a15973-ea55-4be2-9ad5-deee7a176abd",
+			"id": "389bd578-9cbc-4d58-9b84-0744707bc5f2",
 			"key": "access_token",
 			"value": ""
 		}
