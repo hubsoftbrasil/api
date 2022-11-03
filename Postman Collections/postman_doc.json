@@ -1207,6 +1207,11 @@
 			"name": "Financeiro",
 			"item": [
 				{
+					"name": "New Folder",
+					"item": [],
+					"id": "abc64005-03d4-4018-9bff-a58d0861e083"
+				},
+				{
 					"name": "Consulta",
 					"id": "1b0a371e-03e2-4e7f-9849-8cef41436ecb",
 					"protocolProfileBehavior": {
@@ -2836,37 +2841,37 @@
 	],
 	"variable": [
 		{
-			"id": "8d9cee6f-c28a-47bf-a041-fc1d634d7e81",
+			"id": "eac5f0d4-028d-40fd-9827-dd0b4218d7e0",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "26b75df0-a0a9-4138-bbaf-6b7978ed02cb",
+			"id": "40ef9fe0-2a1b-43ba-bc7f-3ffa1aa33572",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "3f8ca753-32a9-4479-865d-9f71867022c7",
+			"id": "57205ed8-67be-4aef-936e-5bc351255749",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "3ccc6381-37ac-4583-bb5f-ece19c675853",
+			"id": "c277d9e9-dabd-4589-bd23-63c1ada81b04",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "6901b107-5301-4cdb-886c-55d2693010e5",
+			"id": "72965ff4-8057-4b11-8621-f43ecc60e452",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "0cb6e221-a131-4602-9eac-3a12ae1a8064",
+			"id": "ccf90b7e-87c7-48fb-bd0e-2f92581ed171",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "918529bc-8f70-4d32-b719-075f4c558380",
+			"id": "64ea0782-a894-4453-8527-a209e0d1b802",
 			"key": "access_token",
 			"value": ""
 		}
