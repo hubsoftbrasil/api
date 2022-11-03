@@ -497,6 +497,11 @@
 					"id": "606adf7c-dbf5-47b2-bb9b-863655c40815"
 				},
 				{
+					"name": "New Folder",
+					"item": [],
+					"id": "a34bc745-30b7-4df3-a1fa-a992863f478f"
+				},
+				{
 					"name": "All (Todos os Clientes)",
 					"id": "f0068073-f3d6-489c-9aa7-40451b85e97b",
 					"protocolProfileBehavior": {
@@ -2848,37 +2853,37 @@
 	],
 	"variable": [
 		{
-			"id": "65ffaaf5-2a0c-4fce-b65f-e7362f59bc1d",
+			"id": "f97de716-d202-4d29-af7d-1cfa5a057974",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "f1f5e29d-63f6-4202-9a18-844aede11392",
+			"id": "ea8c0d75-c4a3-4e08-8314-21169c8fc23d",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "813477c4-2df4-45f4-a888-e7634d3959e3",
+			"id": "452f761b-c5aa-4f6f-8e7b-8ff2ae50fef5",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "28802fc2-c5a3-41b0-bf5b-25ebc48a9862",
+			"id": "4fdf8420-41e6-4389-bd7c-2a66a7541d83",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "a0610ce8-c4a1-4702-8e92-0165e2319c98",
+			"id": "f6820d02-2dfe-4c6b-b53b-9fabc9c6940d",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "82d4845e-5926-49fa-aa5a-1229194e053c",
+			"id": "a20e6bde-e480-4d54-8c8c-6f1f016855ff",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "df7b0ee4-cd25-4b39-80a1-440aa505a582",
+			"id": "3d34186a-12c3-4052-a440-2086c9f8101b",
 			"key": "access_token",
 			"value": ""
 		}
