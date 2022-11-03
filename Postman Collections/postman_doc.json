@@ -382,7 +382,118 @@
 			"item": [
 				{
 					"name": "Financeiro",
-					"item": [],
+					"item": [
+						{
+							"name": "Consultar",
+							"id": "0ba61080-2bda-4560-9760-3c0d117dd7cd",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/api/v1/integracao/cliente/financeiro",
+								"description": "**GET**\n\nNo método `GET`, será possível consultar as faturas em aberto/liquidadas dos clientes e obter o retorno no formato `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| busca | Tipo de busca que deseja fazer no cliente | Sim |\n| termo_busca | Termo utilizado para fazer a busca | Sim |\n| limit | Limite de resultados | Não |\n| apenas_pendente | Informa de deseja trazer apenas as faturas pendentes | Não |\n| order_by | Campo que será utilizado para ordenação | Não |\n| order_type | Tipo da Ordenação | Não |\n| data_inicio | Data de Início (Utiliza a data de vencimento como base) | Não |\n| data_fim | Data de Fim (Utiliza a data de vencimento como base) | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| busca | cpf_cnpj, codigo_cliente, id_cliente_servico | Nenhum |\n| termo_busca | Campo livre | Sim |\n| limit | Valor mínimo 1, Valor máximo 50. | 20 |\n| apenas_pendente | sim,nao. | sim |\n| order_by | data_vencimento,data_pagamento,data_cadastro,valor. | data_vencimento |\n| order_type | asc,desc. | asc |\n| data_inicio | Campo no formato DateTime (YYYY-MM-DD) | Nenhum |\n| data_fim | Campo no formato DateTime (YYYY-MM-DD) | Nenhum |\n| tipo_data | data_vencimento, data_pagamento, data_cadastro | data_vencimento |\n\n**Nota**\n\n`INFORMAÇÃO`: O atributo `«tipo_data»` somente será validado, caso seja informado o atributo `data_inicio` e/ou `data_fim`, pois o filtro o tipo de data selecionado, será aplicado em cima da data inicial e/ou data final."
+							},
+							"response": [
+								{
+									"id": "56849c36-8910-4a01-af7f-74e8d4a78148",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "GET",
+										"header": []
+									},
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\r\n    \"status\": \"suscess\",\r\n    \"msg\": \"Dados consultados com sucesso\",\r\n    \"faturas\": [\r\n        {\r\n            \"id_fatura\": 36397,\r\n            \"nosso_numero\": \"272064\",\r\n            \"nosso_numero_dv\": null,\r\n            \"linha_digitavel\": null,\r\n            \"codigo_barras\": null,\r\n            \"link\": null,\r\n            \"agencia_codigo_beneficiario\": null,\r\n            \"beneficiario\": null,\r\n            \"numero_documento\": null,\r\n            \"especie\": null,\r\n            \"especie_dinheiro\": \"R$\",\r\n            \"aceite\": null,\r\n            \"local_pagamento\": null,\r\n            \"carteira\": null,\r\n            \"tipo_cobranca\": \"debito_conta_corrente\",\r\n            \"valor\": 54.95,\r\n            \"data_vencimento\": \"10/10/2017\",\r\n            \"data_cadastro\": \"10/10/2017\",\r\n            \"data_pagamento\": \"31/07/2017\",\r\n            \"data_documento\": null,\r\n            \"data_processamento\": null,\r\n            \"pix_copia_cola\":\"00020101026216880014BR.GOV.BCB.PIX2566qrcodes-pix.gerencianet.com.br/v2/9a5944a87b1a47da12345581735e74165204000053039865802BR5914GERENCIANET SA6010OURO PRETO62070503***6301122B\",\r\n            \"detalhamento\": [\r\n                {\r\n                    \"descricao\": \"(+) Serviço de Comunicação e Multimídia (26/09/2017) até (09/10/2017) - 13 dias (proporcional) | R$ 21.62\",\r\n                    \"valor\": 21.62\r\n                },\r\n                {\r\n                    \"descricao\": \"(+) Taxa de Instalação (1/3) | R$ 33.33\",\r\n                    \"valor\": 33.33\r\n                }\r\n            ],\r\n            \"cliente\": {\r\n                \"codigo_cliente\": 1162,\r\n                \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO\",\r\n                \"cpf_cnpj\": \"41107296617\",\r\n                \"servico\": {\r\n                    \"id_cliente_servico\": 22703,\r\n                    \"numero_plano\": 26,\r\n                    \"nome\": \"500MB\",\r\n                    \"valor\": 54.95,\r\n                    \"status\": \"Serviço Habilitado\",\r\n                    \"status_prefixo\": \"servico_habilitado\",\r\n                    \"endereco_cadastral\": {\r\n                        \"completo\": \"PRAÇA GETULIO VARGAS, 100, SALA 411 - CENTRO, SANTO ANTÔNIO DO MONTE\\/MG | CEP: 35560-000\",\r\n                        \"endereco\": \"PRAÇA GETULIO VARGAS\",\r\n                        \"numero\": \"100\",\r\n                        \"complemento\": \"SALA 411\",\r\n                        \"referencia\": null,\r\n                        \"bairro\": \"CENTRO\",\r\n                        \"cep\": \"35560000\",\r\n                        \"estado\": \"MG\",\r\n                        \"uf\": \"MINAS GERAIS\",\r\n                        \"cidade\": \"SANTO ANTÔNIO DO MONTE\",\r\n                        \"coordenadas\": {\r\n                            \"latitude\": -20.086726,\r\n                            \"longitude\": -45.290536\r\n                        }\r\n                    },\r\n                    \"endereco_instalacao\": {\r\n                        \"completo\": \"PRAÇA GETULIO VARGAS, 100, SALA 411 - CENTRO, SANTO ANTÔNIO DO MONTE\\/MG | CEP: 35560-000\",\r\n                        \"endereco\": \"PRAÇA GETULIO VARGAS\",\r\n                        \"numero\": \"100\",\r\n                        \"complemento\": \"SALA 411\",\r\n                        \"referencia\": null,\r\n                        \"bairro\": \"CENTRO\",\r\n                        \"cep\": \"35560000\",\r\n                        \"estado\": \"MG\",\r\n                        \"uf\": \"MINAS GERAIS\",\r\n                        \"cidade\": \"SANTO ANTÔNIO DO MONTE\",\r\n                        \"coordenadas\": {\r\n                            \"latitude\": -20.086726,\r\n                            \"longitude\": -45.290536\r\n                        }\r\n                    },\r\n                    \"endereco_fiscal\": {\r\n                        \"completo\": \"PRAÇA GETULIO VARGAS, 100, SALA 411 - CENTRO, SANTO ANTÔNIO DO MONTE\\/MG | CEP: 35560-000\",\r\n                        \"endereco\": \"PRAÇA GETULIO VARGAS\",\r\n                        \"numero\": \"100\",\r\n                        \"complemento\": \"SALA 411\",\r\n                        \"referencia\": null,\r\n                        \"bairro\": \"CENTRO\",\r\n                        \"cep\": \"35560000\",\r\n                        \"estado\": \"MG\",\r\n                        \"uf\": \"MINAS GERAIS\",\r\n                        \"cidade\": \"SANTO ANTÔNIO DO MONTE\",\r\n                        \"coordenadas\": {\r\n                            \"latitude\": -20.086726,\r\n                            \"longitude\": -45.290536\r\n                        }\r\n                    },\r\n                    \"endereco_cobranca\": {\r\n                        \"completo\": \"PRAÇA GETULIO VARGAS, 100, SALA 411 - CENTRO, SANTO ANTÔNIO DO MONTE\\/MG | CEP: 35560-000\",\r\n                        \"endereco\": \"PRAÇA GETULIO VARGAS\",\r\n                        \"numero\": \"100\",\r\n                        \"complemento\": \"SALA 411\",\r\n                        \"referencia\": null,\r\n                        \"bairro\": \"CENTRO\",\r\n                        \"cep\": \"35560000\",\r\n                        \"estado\": \"MG\",\r\n                        \"uf\": \"MINAS GERAIS\",\r\n                        \"cidade\": \"SANTO ANTÔNIO DO MONTE\",\r\n                        \"coordenadas\": {\r\n                            \"latitude\": -20.086726,\r\n                            \"longitude\": -45.290536\r\n                        }\r\n                    }\r\n                }\r\n            }\r\n        },\r\n        {\r\n            \"id_fatura\": 36403,\r\n            \"nosso_numero\": \"272100\",\r\n            \"nosso_numero_dv\": \"0272100-0\",\r\n            \"linha_digitavel\": \"75691.31662 01006.726101 27210.000017 7 73380000001000\",\r\n            \"codigo_barras\": \"75697733800000010001316601006726102721000001\",\r\n            \"link\": \"https://endereco_do_servidor/pdf/fatura/TXpZME1ETT0=\",\r\n            \"agencia_codigo_beneficiario\": \"3166 / 67261\",\r\n            \"beneficiario\": \"PROVEDOR DE INTERNET LTDA / CNPJ: 22.385.367/0001-03\",\r\n            \"numero_documento\": 36403,\r\n            \"especie\": \"DS\",\r\n            \"especie_dinheiro\": \"R$\",\r\n            \"aceite\": \"N\",\r\n            \"local_pagamento\": \"PAGÁVEL EM QUALQUER BANCO ATÉ O VENCIMENTO\",\r\n            \"carteira\": \"1\",\r\n            \"tipo_cobranca\": \"boleto_bancario\",\r\n            \"valor\": 10,\r\n            \"data_vencimento\": \"09/11/2017\",\r\n            \"data_cadastro\": \"10/10/2017\",\r\n            \"data_pagamento\": \"25/06/2018\",\r\n            \"data_documento\": \"06/04/2020\",\r\n            \"data_processamento\": \"06/04/2020\",\r\n            \"pix_copia_cola\":null,\r\n            \"detalhamento\": [\r\n                {\r\n                    \"descricao\": \"Cobrança adicional\",\r\n                    \"valor\": 10\r\n                }\r\n            ],\r\n            \"cliente\": {\r\n                \"codigo_cliente\": 1162,\r\n                \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO\",\r\n                \"cpf_cnpj\": \"41107296617\",\r\n                \"servico\": {\r\n                    \"id_cliente_servico\": 22703,\r\n                    \"numero_plano\": 26,\r\n                    \"nome\": \"500MB\",\r\n                    \"valor\": 54.95,\r\n                    \"status\": \"Serviço Habilitado\",\r\n                    \"status_prefixo\": \"servico_habilitado\",\r\n                    \"endereco_cadastral\": {\r\n                        \"completo\": \"PRAÇA GETULIO VARGAS, 100, SALA 411 - CENTRO, SANTO ANTÔNIO DO MONTE\\/MG | CEP: 35560-000\",\r\n                        \"endereco\": \"PRAÇA GETULIO VARGAS\",\r\n                        \"numero\": \"100\",\r\n                        \"complemento\": \"SALA 411\",\r\n                        \"referencia\": null,\r\n                        \"bairro\": \"CENTRO\",\r\n                        \"cep\": \"35560000\",\r\n                        \"estado\": \"MG\",\r\n                        \"uf\": \"MINAS GERAIS\",\r\n                        \"cidade\": \"SANTO ANTÔNIO DO MONTE\",\r\n                        \"coordenadas\": {\r\n                            \"latitude\": -20.086726,\r\n                            \"longitude\": -45.290536\r\n                        }\r\n                    },\r\n                    \"endereco_instalacao\": {\r\n                        \"completo\": \"PRAÇA GETULIO VARGAS, 100, SALA 411 - CENTRO, SANTO ANTÔNIO DO MONTE\\/MG | CEP: 35560-000\",\r\n                        \"endereco\": \"PRAÇA GETULIO VARGAS\",\r\n                        \"numero\": \"100\",\r\n                        \"complemento\": \"SALA 411\",\r\n                        \"referencia\": null,\r\n                        \"bairro\": \"CENTRO\",\r\n                        \"cep\": \"35560000\",\r\n                        \"estado\": \"MG\",\r\n                        \"uf\": \"MINAS GERAIS\",\r\n                        \"cidade\": \"SANTO ANTÔNIO DO MONTE\",\r\n                        \"coordenadas\": {\r\n                            \"latitude\": -20.086726,\r\n                            \"longitude\": -45.290536\r\n                        }\r\n                    },\r\n                    \"endereco_fiscal\": {\r\n                        \"completo\": \"PRAÇA GETULIO VARGAS, 100, SALA 411 - CENTRO, SANTO ANTÔNIO DO MONTE\\/MG | CEP: 35560-000\",\r\n                        \"endereco\": \"PRAÇA GETULIO VARGAS\",\r\n                        \"numero\": \"100\",\r\n                        \"complemento\": \"SALA 411\",\r\n                        \"referencia\": null,\r\n                        \"bairro\": \"CENTRO\",\r\n                        \"cep\": \"35560000\",\r\n                        \"estado\": \"MG\",\r\n                        \"uf\": \"MINAS GERAIS\",\r\n                        \"cidade\": \"SANTO ANTÔNIO DO MONTE\",\r\n                        \"coordenadas\": {\r\n                            \"latitude\": -20.086726,\r\n                            \"longitude\": -45.290536\r\n                        }\r\n                    },\r\n                    \"endereco_cobranca\": {\r\n                        \"completo\": \"PRAÇA GETULIO VARGAS, 100, SALA 411 - CENTRO, SANTO ANTÔNIO DO MONTE\\/MG | CEP: 35560-000\",\r\n                        \"endereco\": \"PRAÇA GETULIO VARGAS\",\r\n                        \"numero\": \"100\",\r\n                        \"complemento\": \"SALA 411\",\r\n                        \"referencia\": null,\r\n                        \"bairro\": \"CENTRO\",\r\n                        \"cep\": \"35560000\",\r\n                        \"estado\": \"MG\",\r\n                        \"uf\": \"MINAS GERAIS\",\r\n                        \"cidade\": \"SANTO ANTÔNIO DO MONTE\",\r\n                        \"coordenadas\": {\r\n                            \"latitude\": -20.086726,\r\n                            \"longitude\": -45.290536\r\n                        }\r\n                    }\r\n                }\r\n            }\r\n        },\r\n        {\r\n            \"id_fatura\": 43653,\r\n            \"nosso_numero\": \"274554\",\r\n            \"nosso_numero_dv\": \"0274554-2\",\r\n            \"linha_digitavel\": \"75691.31662 01006.726101 27455.420011 8 82170000001232\",\r\n            \"codigo_barras\": \"75698821700000012321316601006726102745542001\",\r\n            \"link\": \"http://endereco_do_servidor/pdf/fatura/TkRNMk5UTT0=\",\r\n            \"agencia_codigo_beneficiario\": \"3166 / 67261\",\r\n            \"beneficiario\": \"PROVEDOR DE INTERNET LTDA / CNPJ: 22.385.367/0001-03\",\r\n            \"numero_documento\": 43653,\r\n            \"especie\": \"DS\",\r\n            \"especie_dinheiro\": \"R$\",\r\n            \"aceite\": \"N\",\r\n            \"local_pagamento\": \"PAGÁVEL EM QUALQUER BANCO ATÉ O VENCIMENTO\",\r\n            \"carteira\": \"1\",\r\n            \"tipo_cobranca\": \"boleto_bancario\",\r\n            \"valor\": 10,\r\n            \"data_vencimento\": \"10/07/2018\",\r\n            \"data_cadastro\": \"10/10/2017\",\r\n            \"data_pagamento\": null,\r\n            \"data_documento\": \"06/04/2020\",\r\n            \"data_processamento\": \"06/04/2020\",\r\n            \"pix_copia_cola\":\"00020101026216880014BR.GOV.BCB.PIX2566qrcodes-pix.gerencianet.com.br/v2/9a5944a87b1a47da12345581735e74165204000053039865802BR5914GERENCIANET SA6010OURO PRETO62070503***6301122B\",\r\n            \"detalhamento\": [\r\n                {\r\n                    \"descricao\": \"COBRANÇA DE TESTE VENCIDA\",\r\n                    \"valor\": 10\r\n                }\r\n            ],\r\n            \"cliente\": {\r\n                \"codigo_cliente\": 1162,\r\n                \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO\",\r\n                \"cpf_cnpj\": \"41107296617\"\r\n            }\r\n        }\r\n    ]\r\n}"
+								}
+							]
+						},
+						{
+							"name": "Financeiro -> Enviar E-mail",
+							"id": "7a4be438-4771-4c2b-85d6-64a9c706a216",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/api/v1/integracao/cliente/financeiro/enviar_email",
+								"description": "**POST**\n\nAtravés deste `endpoint,` será possível fazer o disparo da fatura do cliente por e-mail. Podem ser passados e-mails adicionais, além dos que já estão cadastrados no sistema.\n\n**Aviso**\n\n`IMPORTANTE`: O sistema vai fazer a validação dos dados de e-mail e verificar se a `API` possui um servidor de e-mail válido configurado. Caso todas as regras sejam atendidas, o disparo do e-mail será efetuado instantaneamente, ou seja, é enviado em tempo real. Por esse motivo, o tempo de resposta da `API`, irá variar de acordo com a quantidade de e-mails que está na requisição para ser disparado.\n\n`IMPORTANTE 2`: O(s) servidor(es) de e-mails configurados no HubSoft possuem configuração de timeout entre um disparo e outro, dessa forma evita-se que o servidor seja adicionado em `BlackLists` de `SPAM`. Por esse motivo, a chamada da `API`, poderá ter um tempo de resposta diferente do comum.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_fatura | Identificador único da fatura do cliente | Sim |\n| email_adicional | Outros e-mails adicionais, podem ser enviados na requisição. | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_fatura | Deve conter um número inteiro maior que 0 | Nenhum |\n| email_adicional | Deve conter um array de strings (emails) | Nenhum |\n\nVeja que os parâmetros enviados na requisição `POST` devem obedecer a estrutura no formato `JSON:`\n\n```\n{\n        \"id_fatura\":\"11000\",\n        \"email_adicional\":[\n                \"email1@email.com\",\n                \"email2@email.com\"\n        ]\n}\n\n```"
+							},
+							"response": [
+								{
+									"id": "f72ea6ca-885b-4e43-9898-c899411df37c",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": "{{url}}/api/v1/integracao/cliente/financeiro/enviar_email"
+									},
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"As faturas foram adicionadas para serem disparadas por e-mail. Por se tratar de um processo de envio massivo, o sistema fará o agendamento do disparo. Dentro de alguns minutos o cliente irá receber os e-mails com as faturas. OBS: Para cada fatura selecionada será enviado um e-mail\",\r\n    \"job\": {\r\n        \"tries\": 1,\r\n        \"timeout\": 172800,\r\n        \"memory\": 2048,\r\n        \"faturas\": [\r\n            {\r\n                \"id_fatura\": 50949\r\n            }\r\n        ],\r\n        \"emails\": [\r\n            {\r\n                \"id_contato\": null,\r\n                \"id_cliente\": 12025,\r\n                \"email\": \"macielrsf@gmail.com\",\r\n                \"nome\": \"MACIEL RODRIGUES\",\r\n                \"name\": \"MACIEL RODRIGUES\",\r\n                \"permite_enviar_email\": true,\r\n                \"origem\": \"cadastro_cliente\"\r\n            },\r\n            {\r\n                \"id_contato\": null,\r\n                \"id_cliente\": 12025,\r\n                \"email\": \"macielrsf@gmail.com\",\r\n                \"nome\": \"MACIEL RODRIGUES\",\r\n                \"name\": \"MACIEL RODRIGUES\",\r\n                \"permite_enviar_email\": true,\r\n                \"origem\": \"cadastro_cliente\"\r\n            },\r\n            {\r\n                \"id_contato\": 12035,\r\n                \"id_cliente\": 12025,\r\n                \"email\": \"macielrsf@gmail.com\",\r\n                \"nome\": \"MACIEL RODRIGUES\",\r\n                \"name\": \"MACIEL RODRIGUES\",\r\n                \"permite_enviar_email\": \"sim\",\r\n                \"origem\": \"contato\"\r\n            }\r\n        ],\r\n        \"connection\": null,\r\n        \"queue\": \"hubsoft-prioritario\",\r\n        \"delay\": {\r\n            \"date\": \"2019-10-07 13:39:48.000000\",\r\n            \"timezone_type\": 3,\r\n            \"timezone\": \"America/Sao_Paulo\"\r\n        }\r\n    }\r\n}"
+								}
+							]
+						},
+						{
+							"name": "Financeiro -> Enviar SMS",
+							"id": "b993d2cb-c7ec-494e-a7ef-e3d5845054fc",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/api/v1/integracao/cliente/financeiro/enviar_sms",
+								"description": "**POST**\n\nAtravés deste `endpoint`, será possível fazer o disparo da fatura do cliente por `SMS`. Podem ser passados números de telefones adicionais, além dos que já estão cadastrados no sistema.\n\n**Aviso**\n\n`IMPORTANTE`: O disparo do SMS é efetuado para a Plataforma de `SMS`. Caso o HubSoft consiga entregar o SMS para plataforma, o resultado da requisição será uma resposta de SUCESSO, mesmo que a plataforma não efetue o disparo, para o HubSoft a tarefa foi efetuada com sucesso.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_fatura | Identificador único da fatura do cliente | Sim |\n| telefone_adicional | Outros telefones adicionais, podem ser enviados na requisição. | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_fatura | Deve conter um número inteiro maior que 0 | Nenhum |\n| telefone_adicional | Deve conter um array de strings com os telefones no formato DDNNNNNNNN ou D |  |\n\nVeja que os paramêtros enviados na requisição `POST` devem obedecer a estrutura no formato `JSON`:\n\n```\n{\n        \"id_fatura\":\"11000\",\n        \"email_adicional\":[\n                \"11988887777\",\n                \"1188887776\"\n        ]\n}\n\n```\n\n**Nota**\n\n`OBSERVAÇÃO`: Perceba que foram enviados 2 telefones adicionais, porém o sistema fez um disparo de 3 SMS. Isso aconteceu, pois o cliente já possui 1 número de telefone celular válido em seu cadastro. No momento do disparo, o sistema enviou para os telefones já cadastrados no sistema e também para os telefones adicionais passados na requisição `POST`"
+							},
+							"response": [
+								{
+									"id": "3e6569c5-ca23-4b51-a939-1643551ddfa5",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"type": "text"
+											}
+										],
+										"url": "{{url}}/api/v1/integracao/cliente/financeiro/enviar_sms"
+									},
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"As faturas foram adicionadas para serem disparadas por SMS. Por se tratar de um processo de envio massivo, o sistema fará o agendamento do disparo. Dentro de alguns minutos o cliente irá receber as mensgens SMS com os dados das faturas. OBS: Para cada fatura selecionada será enviado um SMS\",\n    \"job\": {\n        \"tries\": 1,\n        \"timeout\": 172800,\n        \"memory\": 2048,\n        \"faturas\": [\n            {\n                \"id_fatura\": 50949\n            }\n        ],\n        \"telefones\": [\n            {\n                \"id_contato\": null,\n                \"id_cliente\": 12025,\n                \"telefone\": \"37999931412\",\n                \"nome\": \"MACIEL RODRIGUES\",\n                \"permite_enviar_sms\": true,\n                \"origem\": \"cadastro_cliente\"\n            }\n        ],\n        \"connection\": null,\n        \"queue\": \"teste\",\n        \"delay\": {\n            \"date\": \"2019-10-07 13:20:51.000000\",\n            \"timezone_type\": 3,\n            \"timezone\": \"America/Sao_Paulo\"\n        }\n    }\n}"
+								}
+							]
+						}
+					],
 					"id": "606adf7c-dbf5-47b2-bb9b-863655c40815"
 				},
 				{
@@ -871,116 +982,6 @@
 							"cookie": [],
 							"responseTime": null,
 							"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Dados consultados com sucesso\",\r\n    \"registros\": [\r\n        {\r\n            \"acctstarttime\": \"2017-09-27 18:14:08-03\",\r\n            \"acctstarttimebr\": \"27/09/2017 18:14:08\",\r\n            \"acctstoptime\": null,\r\n            \"acctstoptimebr\": null,\r\n            \"calledstationid\": \"service2\",\r\n            \"callingstationid\": \"58:10:8C:4B:FF:AA\",\r\n            \"download_megabytes\": 4594.95,\r\n            \"upload_megabytes\": 156.12,\r\n            \"framedipaddress\": \"10.99.1.152\",\r\n            \"nasipaddress\": \"172.17.22.132\",\r\n            \"nasportid\": \"ether3\",\r\n            \"nasporttype\": \"Ethernet\",\r\n            \"username\": \"antoniomas\",\r\n            \"servico\": {\r\n                \"numero_plano\": 49,\r\n                \"nome\": \"100GB-DE-TESTE-\",\r\n                \"valor\": 100,\r\n                \"status\": \"Serviço Habilitado\",\r\n                \"status_prefixo\": \"servico_habilitado\"\r\n            },\r\n            \"cliente\": {\r\n                \"codigo_cliente\": 1161,\r\n                \"nome_razaosocial\": \"ANTONIO MODESTO\",\r\n                \"cpf_cnpj\": \"09350012345\"\r\n            }\r\n        }\r\n    ],\r\n    \"estatisticas\": {\r\n        \"total_conexoes\": 1,\r\n        \"download_total\": 4594.95,\r\n        \"upload_total\": 156.12,\r\n        \"trafego_total\": 4751.07,\r\n        \"media_download\": 0.23,\r\n        \"media_upload\": 0.01\r\n    }\r\n}\r\n"
-						}
-					]
-				},
-				{
-					"name": "Financeiro",
-					"id": "0ba61080-2bda-4560-9760-3c0d117dd7cd",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "{{access_token}}",
-								"type": "text"
-							}
-						],
-						"url": "{{url}}/api/v1/integracao/cliente/financeiro",
-						"description": "**GET**\n\nNo método `GET`, será possível consultar as faturas em aberto/liquidadas dos clientes e obter o retorno no formato `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| busca | Tipo de busca que deseja fazer no cliente | Sim |\n| termo_busca | Termo utilizado para fazer a busca | Sim |\n| limit | Limite de resultados | Não |\n| apenas_pendente | Informa de deseja trazer apenas as faturas pendentes | Não |\n| order_by | Campo que será utilizado para ordenação | Não |\n| order_type | Tipo da Ordenação | Não |\n| data_inicio | Data de Início (Utiliza a data de vencimento como base) | Não |\n| data_fim | Data de Fim (Utiliza a data de vencimento como base) | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| busca | cpf_cnpj, codigo_cliente, id_cliente_servico | Nenhum |\n| termo_busca | Campo livre | Sim |\n| limit | Valor mínimo 1, Valor máximo 50. | 20 |\n| apenas_pendente | sim,nao. | sim |\n| order_by | data_vencimento,data_pagamento,data_cadastro,valor. | data_vencimento |\n| order_type | asc,desc. | asc |\n| data_inicio | Campo no formato DateTime (YYYY-MM-DD) | Nenhum |\n| data_fim | Campo no formato DateTime (YYYY-MM-DD) | Nenhum |\n| tipo_data | data_vencimento, data_pagamento, data_cadastro | data_vencimento |\n\n**Nota**\n\n`INFORMAÇÃO`: O atributo `«tipo_data»` somente será validado, caso seja informado o atributo `data_inicio` e/ou `data_fim`, pois o filtro o tipo de data selecionado, será aplicado em cima da data inicial e/ou data final."
-					},
-					"response": [
-						{
-							"id": "56849c36-8910-4a01-af7f-74e8d4a78148",
-							"name": "Sucesso",
-							"originalRequest": {
-								"method": "GET",
-								"header": []
-							},
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\r\n    \"status\": \"suscess\",\r\n    \"msg\": \"Dados consultados com sucesso\",\r\n    \"faturas\": [\r\n        {\r\n            \"id_fatura\": 36397,\r\n            \"nosso_numero\": \"272064\",\r\n            \"nosso_numero_dv\": null,\r\n            \"linha_digitavel\": null,\r\n            \"codigo_barras\": null,\r\n            \"link\": null,\r\n            \"agencia_codigo_beneficiario\": null,\r\n            \"beneficiario\": null,\r\n            \"numero_documento\": null,\r\n            \"especie\": null,\r\n            \"especie_dinheiro\": \"R$\",\r\n            \"aceite\": null,\r\n            \"local_pagamento\": null,\r\n            \"carteira\": null,\r\n            \"tipo_cobranca\": \"debito_conta_corrente\",\r\n            \"valor\": 54.95,\r\n            \"data_vencimento\": \"10/10/2017\",\r\n            \"data_cadastro\": \"10/10/2017\",\r\n            \"data_pagamento\": \"31/07/2017\",\r\n            \"data_documento\": null,\r\n            \"data_processamento\": null,\r\n            \"pix_copia_cola\":\"00020101026216880014BR.GOV.BCB.PIX2566qrcodes-pix.gerencianet.com.br/v2/9a5944a87b1a47da12345581735e74165204000053039865802BR5914GERENCIANET SA6010OURO PRETO62070503***6301122B\",\r\n            \"detalhamento\": [\r\n                {\r\n                    \"descricao\": \"(+) Serviço de Comunicação e Multimídia (26/09/2017) até (09/10/2017) - 13 dias (proporcional) | R$ 21.62\",\r\n                    \"valor\": 21.62\r\n                },\r\n                {\r\n                    \"descricao\": \"(+) Taxa de Instalação (1/3) | R$ 33.33\",\r\n                    \"valor\": 33.33\r\n                }\r\n            ],\r\n            \"cliente\": {\r\n                \"codigo_cliente\": 1162,\r\n                \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO\",\r\n                \"cpf_cnpj\": \"41107296617\",\r\n                \"servico\": {\r\n                    \"id_cliente_servico\": 22703,\r\n                    \"numero_plano\": 26,\r\n                    \"nome\": \"500MB\",\r\n                    \"valor\": 54.95,\r\n                    \"status\": \"Serviço Habilitado\",\r\n                    \"status_prefixo\": \"servico_habilitado\",\r\n                    \"endereco_cadastral\": {\r\n                        \"completo\": \"PRAÇA GETULIO VARGAS, 100, SALA 411 - CENTRO, SANTO ANTÔNIO DO MONTE\\/MG | CEP: 35560-000\",\r\n                        \"endereco\": \"PRAÇA GETULIO VARGAS\",\r\n                        \"numero\": \"100\",\r\n                        \"complemento\": \"SALA 411\",\r\n                        \"referencia\": null,\r\n                        \"bairro\": \"CENTRO\",\r\n                        \"cep\": \"35560000\",\r\n                        \"estado\": \"MG\",\r\n                        \"uf\": \"MINAS GERAIS\",\r\n                        \"cidade\": \"SANTO ANTÔNIO DO MONTE\",\r\n                        \"coordenadas\": {\r\n                            \"latitude\": -20.086726,\r\n                            \"longitude\": -45.290536\r\n                        }\r\n                    },\r\n                    \"endereco_instalacao\": {\r\n                        \"completo\": \"PRAÇA GETULIO VARGAS, 100, SALA 411 - CENTRO, SANTO ANTÔNIO DO MONTE\\/MG | CEP: 35560-000\",\r\n                        \"endereco\": \"PRAÇA GETULIO VARGAS\",\r\n                        \"numero\": \"100\",\r\n                        \"complemento\": \"SALA 411\",\r\n                        \"referencia\": null,\r\n                        \"bairro\": \"CENTRO\",\r\n                        \"cep\": \"35560000\",\r\n                        \"estado\": \"MG\",\r\n                        \"uf\": \"MINAS GERAIS\",\r\n                        \"cidade\": \"SANTO ANTÔNIO DO MONTE\",\r\n                        \"coordenadas\": {\r\n                            \"latitude\": -20.086726,\r\n                            \"longitude\": -45.290536\r\n                        }\r\n                    },\r\n                    \"endereco_fiscal\": {\r\n                        \"completo\": \"PRAÇA GETULIO VARGAS, 100, SALA 411 - CENTRO, SANTO ANTÔNIO DO MONTE\\/MG | CEP: 35560-000\",\r\n                        \"endereco\": \"PRAÇA GETULIO VARGAS\",\r\n                        \"numero\": \"100\",\r\n                        \"complemento\": \"SALA 411\",\r\n                        \"referencia\": null,\r\n                        \"bairro\": \"CENTRO\",\r\n                        \"cep\": \"35560000\",\r\n                        \"estado\": \"MG\",\r\n                        \"uf\": \"MINAS GERAIS\",\r\n                        \"cidade\": \"SANTO ANTÔNIO DO MONTE\",\r\n                        \"coordenadas\": {\r\n                            \"latitude\": -20.086726,\r\n                            \"longitude\": -45.290536\r\n                        }\r\n                    },\r\n                    \"endereco_cobranca\": {\r\n                        \"completo\": \"PRAÇA GETULIO VARGAS, 100, SALA 411 - CENTRO, SANTO ANTÔNIO DO MONTE\\/MG | CEP: 35560-000\",\r\n                        \"endereco\": \"PRAÇA GETULIO VARGAS\",\r\n                        \"numero\": \"100\",\r\n                        \"complemento\": \"SALA 411\",\r\n                        \"referencia\": null,\r\n                        \"bairro\": \"CENTRO\",\r\n                        \"cep\": \"35560000\",\r\n                        \"estado\": \"MG\",\r\n                        \"uf\": \"MINAS GERAIS\",\r\n                        \"cidade\": \"SANTO ANTÔNIO DO MONTE\",\r\n                        \"coordenadas\": {\r\n                            \"latitude\": -20.086726,\r\n                            \"longitude\": -45.290536\r\n                        }\r\n                    }\r\n                }\r\n            }\r\n        },\r\n        {\r\n            \"id_fatura\": 36403,\r\n            \"nosso_numero\": \"272100\",\r\n            \"nosso_numero_dv\": \"0272100-0\",\r\n            \"linha_digitavel\": \"75691.31662 01006.726101 27210.000017 7 73380000001000\",\r\n            \"codigo_barras\": \"75697733800000010001316601006726102721000001\",\r\n            \"link\": \"https://endereco_do_servidor/pdf/fatura/TXpZME1ETT0=\",\r\n            \"agencia_codigo_beneficiario\": \"3166 / 67261\",\r\n            \"beneficiario\": \"PROVEDOR DE INTERNET LTDA / CNPJ: 22.385.367/0001-03\",\r\n            \"numero_documento\": 36403,\r\n            \"especie\": \"DS\",\r\n            \"especie_dinheiro\": \"R$\",\r\n            \"aceite\": \"N\",\r\n            \"local_pagamento\": \"PAGÁVEL EM QUALQUER BANCO ATÉ O VENCIMENTO\",\r\n            \"carteira\": \"1\",\r\n            \"tipo_cobranca\": \"boleto_bancario\",\r\n            \"valor\": 10,\r\n            \"data_vencimento\": \"09/11/2017\",\r\n            \"data_cadastro\": \"10/10/2017\",\r\n            \"data_pagamento\": \"25/06/2018\",\r\n            \"data_documento\": \"06/04/2020\",\r\n            \"data_processamento\": \"06/04/2020\",\r\n            \"pix_copia_cola\":null,\r\n            \"detalhamento\": [\r\n                {\r\n                    \"descricao\": \"Cobrança adicional\",\r\n                    \"valor\": 10\r\n                }\r\n            ],\r\n            \"cliente\": {\r\n                \"codigo_cliente\": 1162,\r\n                \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO\",\r\n                \"cpf_cnpj\": \"41107296617\",\r\n                \"servico\": {\r\n                    \"id_cliente_servico\": 22703,\r\n                    \"numero_plano\": 26,\r\n                    \"nome\": \"500MB\",\r\n                    \"valor\": 54.95,\r\n                    \"status\": \"Serviço Habilitado\",\r\n                    \"status_prefixo\": \"servico_habilitado\",\r\n                    \"endereco_cadastral\": {\r\n                        \"completo\": \"PRAÇA GETULIO VARGAS, 100, SALA 411 - CENTRO, SANTO ANTÔNIO DO MONTE\\/MG | CEP: 35560-000\",\r\n                        \"endereco\": \"PRAÇA GETULIO VARGAS\",\r\n                        \"numero\": \"100\",\r\n                        \"complemento\": \"SALA 411\",\r\n                        \"referencia\": null,\r\n                        \"bairro\": \"CENTRO\",\r\n                        \"cep\": \"35560000\",\r\n                        \"estado\": \"MG\",\r\n                        \"uf\": \"MINAS GERAIS\",\r\n                        \"cidade\": \"SANTO ANTÔNIO DO MONTE\",\r\n                        \"coordenadas\": {\r\n                            \"latitude\": -20.086726,\r\n                            \"longitude\": -45.290536\r\n                        }\r\n                    },\r\n                    \"endereco_instalacao\": {\r\n                        \"completo\": \"PRAÇA GETULIO VARGAS, 100, SALA 411 - CENTRO, SANTO ANTÔNIO DO MONTE\\/MG | CEP: 35560-000\",\r\n                        \"endereco\": \"PRAÇA GETULIO VARGAS\",\r\n                        \"numero\": \"100\",\r\n                        \"complemento\": \"SALA 411\",\r\n                        \"referencia\": null,\r\n                        \"bairro\": \"CENTRO\",\r\n                        \"cep\": \"35560000\",\r\n                        \"estado\": \"MG\",\r\n                        \"uf\": \"MINAS GERAIS\",\r\n                        \"cidade\": \"SANTO ANTÔNIO DO MONTE\",\r\n                        \"coordenadas\": {\r\n                            \"latitude\": -20.086726,\r\n                            \"longitude\": -45.290536\r\n                        }\r\n                    },\r\n                    \"endereco_fiscal\": {\r\n                        \"completo\": \"PRAÇA GETULIO VARGAS, 100, SALA 411 - CENTRO, SANTO ANTÔNIO DO MONTE\\/MG | CEP: 35560-000\",\r\n                        \"endereco\": \"PRAÇA GETULIO VARGAS\",\r\n                        \"numero\": \"100\",\r\n                        \"complemento\": \"SALA 411\",\r\n                        \"referencia\": null,\r\n                        \"bairro\": \"CENTRO\",\r\n                        \"cep\": \"35560000\",\r\n                        \"estado\": \"MG\",\r\n                        \"uf\": \"MINAS GERAIS\",\r\n                        \"cidade\": \"SANTO ANTÔNIO DO MONTE\",\r\n                        \"coordenadas\": {\r\n                            \"latitude\": -20.086726,\r\n                            \"longitude\": -45.290536\r\n                        }\r\n                    },\r\n                    \"endereco_cobranca\": {\r\n                        \"completo\": \"PRAÇA GETULIO VARGAS, 100, SALA 411 - CENTRO, SANTO ANTÔNIO DO MONTE\\/MG | CEP: 35560-000\",\r\n                        \"endereco\": \"PRAÇA GETULIO VARGAS\",\r\n                        \"numero\": \"100\",\r\n                        \"complemento\": \"SALA 411\",\r\n                        \"referencia\": null,\r\n                        \"bairro\": \"CENTRO\",\r\n                        \"cep\": \"35560000\",\r\n                        \"estado\": \"MG\",\r\n                        \"uf\": \"MINAS GERAIS\",\r\n                        \"cidade\": \"SANTO ANTÔNIO DO MONTE\",\r\n                        \"coordenadas\": {\r\n                            \"latitude\": -20.086726,\r\n                            \"longitude\": -45.290536\r\n                        }\r\n                    }\r\n                }\r\n            }\r\n        },\r\n        {\r\n            \"id_fatura\": 43653,\r\n            \"nosso_numero\": \"274554\",\r\n            \"nosso_numero_dv\": \"0274554-2\",\r\n            \"linha_digitavel\": \"75691.31662 01006.726101 27455.420011 8 82170000001232\",\r\n            \"codigo_barras\": \"75698821700000012321316601006726102745542001\",\r\n            \"link\": \"http://endereco_do_servidor/pdf/fatura/TkRNMk5UTT0=\",\r\n            \"agencia_codigo_beneficiario\": \"3166 / 67261\",\r\n            \"beneficiario\": \"PROVEDOR DE INTERNET LTDA / CNPJ: 22.385.367/0001-03\",\r\n            \"numero_documento\": 43653,\r\n            \"especie\": \"DS\",\r\n            \"especie_dinheiro\": \"R$\",\r\n            \"aceite\": \"N\",\r\n            \"local_pagamento\": \"PAGÁVEL EM QUALQUER BANCO ATÉ O VENCIMENTO\",\r\n            \"carteira\": \"1\",\r\n            \"tipo_cobranca\": \"boleto_bancario\",\r\n            \"valor\": 10,\r\n            \"data_vencimento\": \"10/07/2018\",\r\n            \"data_cadastro\": \"10/10/2017\",\r\n            \"data_pagamento\": null,\r\n            \"data_documento\": \"06/04/2020\",\r\n            \"data_processamento\": \"06/04/2020\",\r\n            \"pix_copia_cola\":\"00020101026216880014BR.GOV.BCB.PIX2566qrcodes-pix.gerencianet.com.br/v2/9a5944a87b1a47da12345581735e74165204000053039865802BR5914GERENCIANET SA6010OURO PRETO62070503***6301122B\",\r\n            \"detalhamento\": [\r\n                {\r\n                    \"descricao\": \"COBRANÇA DE TESTE VENCIDA\",\r\n                    \"valor\": 10\r\n                }\r\n            ],\r\n            \"cliente\": {\r\n                \"codigo_cliente\": 1162,\r\n                \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO\",\r\n                \"cpf_cnpj\": \"41107296617\"\r\n            }\r\n        }\r\n    ]\r\n}"
-						}
-					]
-				},
-				{
-					"name": "Financeiro -> Enviar E-mail",
-					"id": "7a4be438-4771-4c2b-85d6-64a9c706a216",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "{{access_token}}",
-								"type": "text"
-							}
-						],
-						"url": "{{url}}/api/v1/integracao/cliente/financeiro/enviar_email",
-						"description": "**POST**\n\nAtravés deste `endpoint,` será possível fazer o disparo da fatura do cliente por e-mail. Podem ser passados e-mails adicionais, além dos que já estão cadastrados no sistema.\n\n**Aviso**\n\n`IMPORTANTE`: O sistema vai fazer a validação dos dados de e-mail e verificar se a `API` possui um servidor de e-mail válido configurado. Caso todas as regras sejam atendidas, o disparo do e-mail será efetuado instantaneamente, ou seja, é enviado em tempo real. Por esse motivo, o tempo de resposta da `API`, irá variar de acordo com a quantidade de e-mails que está na requisição para ser disparado.\n\n`IMPORTANTE 2`: O(s) servidor(es) de e-mails configurados no HubSoft possuem configuração de timeout entre um disparo e outro, dessa forma evita-se que o servidor seja adicionado em `BlackLists` de `SPAM`. Por esse motivo, a chamada da `API`, poderá ter um tempo de resposta diferente do comum.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_fatura | Identificador único da fatura do cliente | Sim |\n| email_adicional | Outros e-mails adicionais, podem ser enviados na requisição. | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_fatura | Deve conter um número inteiro maior que 0 | Nenhum |\n| email_adicional | Deve conter um array de strings (emails) | Nenhum |\n\nVeja que os parâmetros enviados na requisição `POST` devem obedecer a estrutura no formato `JSON:`\n\n```\n{\n        \"id_fatura\":\"11000\",\n        \"email_adicional\":[\n                \"email1@email.com\",\n                \"email2@email.com\"\n        ]\n}\n\n```"
-					},
-					"response": [
-						{
-							"id": "f72ea6ca-885b-4e43-9898-c899411df37c",
-							"name": "Sucesso",
-							"originalRequest": {
-								"method": "POST",
-								"header": [],
-								"url": "{{url}}/api/v1/integracao/cliente/financeiro/enviar_email"
-							},
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"As faturas foram adicionadas para serem disparadas por e-mail. Por se tratar de um processo de envio massivo, o sistema fará o agendamento do disparo. Dentro de alguns minutos o cliente irá receber os e-mails com as faturas. OBS: Para cada fatura selecionada será enviado um e-mail\",\r\n    \"job\": {\r\n        \"tries\": 1,\r\n        \"timeout\": 172800,\r\n        \"memory\": 2048,\r\n        \"faturas\": [\r\n            {\r\n                \"id_fatura\": 50949\r\n            }\r\n        ],\r\n        \"emails\": [\r\n            {\r\n                \"id_contato\": null,\r\n                \"id_cliente\": 12025,\r\n                \"email\": \"macielrsf@gmail.com\",\r\n                \"nome\": \"MACIEL RODRIGUES\",\r\n                \"name\": \"MACIEL RODRIGUES\",\r\n                \"permite_enviar_email\": true,\r\n                \"origem\": \"cadastro_cliente\"\r\n            },\r\n            {\r\n                \"id_contato\": null,\r\n                \"id_cliente\": 12025,\r\n                \"email\": \"macielrsf@gmail.com\",\r\n                \"nome\": \"MACIEL RODRIGUES\",\r\n                \"name\": \"MACIEL RODRIGUES\",\r\n                \"permite_enviar_email\": true,\r\n                \"origem\": \"cadastro_cliente\"\r\n            },\r\n            {\r\n                \"id_contato\": 12035,\r\n                \"id_cliente\": 12025,\r\n                \"email\": \"macielrsf@gmail.com\",\r\n                \"nome\": \"MACIEL RODRIGUES\",\r\n                \"name\": \"MACIEL RODRIGUES\",\r\n                \"permite_enviar_email\": \"sim\",\r\n                \"origem\": \"contato\"\r\n            }\r\n        ],\r\n        \"connection\": null,\r\n        \"queue\": \"hubsoft-prioritario\",\r\n        \"delay\": {\r\n            \"date\": \"2019-10-07 13:39:48.000000\",\r\n            \"timezone_type\": 3,\r\n            \"timezone\": \"America/Sao_Paulo\"\r\n        }\r\n    }\r\n}"
-						}
-					]
-				},
-				{
-					"name": "Financeiro -> Enviar SMS",
-					"id": "b993d2cb-c7ec-494e-a7ef-e3d5845054fc",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "{{access_token}}",
-								"type": "text"
-							}
-						],
-						"url": "{{url}}/api/v1/integracao/cliente/financeiro/enviar_sms",
-						"description": "**POST**\n\nAtravés deste `endpoint`, será possível fazer o disparo da fatura do cliente por `SMS`. Podem ser passados números de telefones adicionais, além dos que já estão cadastrados no sistema.\n\n**Aviso**\n\n`IMPORTANTE`: O disparo do SMS é efetuado para a Plataforma de `SMS`. Caso o HubSoft consiga entregar o SMS para plataforma, o resultado da requisição será uma resposta de SUCESSO, mesmo que a plataforma não efetue o disparo, para o HubSoft a tarefa foi efetuada com sucesso.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_fatura | Identificador único da fatura do cliente | Sim |\n| telefone_adicional | Outros telefones adicionais, podem ser enviados na requisição. | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_fatura | Deve conter um número inteiro maior que 0 | Nenhum |\n| telefone_adicional | Deve conter um array de strings com os telefones no formato DDNNNNNNNN ou D |  |\n\nVeja que os paramêtros enviados na requisição `POST` devem obedecer a estrutura no formato `JSON`:\n\n```\n{\n        \"id_fatura\":\"11000\",\n        \"email_adicional\":[\n                \"11988887777\",\n                \"1188887776\"\n        ]\n}\n\n```\n\n**Nota**\n\n`OBSERVAÇÃO`: Perceba que foram enviados 2 telefones adicionais, porém o sistema fez um disparo de 3 SMS. Isso aconteceu, pois o cliente já possui 1 número de telefone celular válido em seu cadastro. No momento do disparo, o sistema enviou para os telefones já cadastrados no sistema e também para os telefones adicionais passados na requisição `POST`"
-					},
-					"response": [
-						{
-							"id": "3e6569c5-ca23-4b51-a939-1643551ddfa5",
-							"name": "Sucesso",
-							"originalRequest": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "{{access_token}}",
-										"type": "text"
-									}
-								],
-								"url": "{{url}}/api/v1/integracao/cliente/financeiro/enviar_sms"
-							},
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\n    \"status\": \"success\",\n    \"msg\": \"As faturas foram adicionadas para serem disparadas por SMS. Por se tratar de um processo de envio massivo, o sistema fará o agendamento do disparo. Dentro de alguns minutos o cliente irá receber as mensgens SMS com os dados das faturas. OBS: Para cada fatura selecionada será enviado um SMS\",\n    \"job\": {\n        \"tries\": 1,\n        \"timeout\": 172800,\n        \"memory\": 2048,\n        \"faturas\": [\n            {\n                \"id_fatura\": 50949\n            }\n        ],\n        \"telefones\": [\n            {\n                \"id_contato\": null,\n                \"id_cliente\": 12025,\n                \"telefone\": \"37999931412\",\n                \"nome\": \"MACIEL RODRIGUES\",\n                \"permite_enviar_sms\": true,\n                \"origem\": \"cadastro_cliente\"\n            }\n        ],\n        \"connection\": null,\n        \"queue\": \"teste\",\n        \"delay\": {\n            \"date\": \"2019-10-07 13:20:51.000000\",\n            \"timezone_type\": 3,\n            \"timezone\": \"America/Sao_Paulo\"\n        }\n    }\n}"
 						}
 					]
 				},
@@ -2847,37 +2848,37 @@
 	],
 	"variable": [
 		{
-			"id": "1385f542-a801-43b0-bf15-a080f2caef85",
+			"id": "a388a8db-4441-4830-a277-2f3916531080",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "e05042ba-24d3-426d-ab27-7a62707d1133",
+			"id": "66279997-b6ea-4bbf-b909-4ae9289caf6d",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "fce42876-8763-4dc0-ae24-c30b3d31e16b",
+			"id": "07ee8bbd-f5bc-4737-a32e-1df46c9d3725",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "e0043ba1-35f4-4efe-9cfd-56d5bfd9d0f7",
+			"id": "04e3275b-8589-4fd7-89d2-1c9f4031f932",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "f339cd50-c6c5-4dc9-9280-f74b49791128",
+			"id": "054c6050-a3e5-4123-b806-08bc6f6b8fc2",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "c76c7207-8bc2-4c30-a750-b5c1a1d786c4",
+			"id": "63ce0164-4ac3-4d40-a079-26fa3fc45b1b",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "00c0ec0d-47a2-45e4-b004-a54ab6af7d35",
+			"id": "093912ee-a917-4b45-bb42-477a30ba2169",
 			"key": "access_token",
 			"value": ""
 		}
