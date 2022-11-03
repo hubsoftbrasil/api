@@ -418,7 +418,7 @@
 							]
 						},
 						{
-							"name": "Financeiro -> Enviar E-mail",
+							"name": "Enviar por Email",
 							"id": "7a4be438-4771-4c2b-85d6-64a9c706a216",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -2848,37 +2848,37 @@
 	],
 	"variable": [
 		{
-			"id": "cedf10d9-ea32-4079-b517-5b1e8ce32a14",
+			"id": "13f79494-7d17-4dbd-8f32-1289687ff57d",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "a3efab9b-a0e5-4aa5-af86-0a329391d5bd",
+			"id": "c3e2df23-9933-45d3-81b9-4ffbe4942593",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "6780aa64-7f72-47f4-9da1-7d5b51042d74",
+			"id": "d8b1831c-89ec-4e5e-a458-5ea83f54d695",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "ef37ee13-dd8f-4757-8b53-93ae4c334cd8",
+			"id": "06e714d9-9fd8-4cd2-ba44-13cde0da404c",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "72580ab0-b74d-4054-80c9-bf21af7674d2",
+			"id": "da9138f1-959e-4dde-93e4-e4a8d7a5274d",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "b981484d-d6ae-41eb-818c-6979643a7041",
+			"id": "f7f6dcf0-bf37-4c80-9241-9b9d32b52cd7",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "dfa1a418-84ca-43a3-850d-b76ede19f2e3",
+			"id": "fc33c002-7fee-4340-a3f0-4158c15d99cd",
 			"key": "access_token",
 			"value": ""
 		}
