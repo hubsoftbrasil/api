@@ -492,13 +492,130 @@
 									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"As faturas foram adicionadas para serem disparadas por SMS. Por se tratar de um processo de envio massivo, o sistema fará o agendamento do disparo. Dentro de alguns minutos o cliente irá receber as mensgens SMS com os dados das faturas. OBS: Para cada fatura selecionada será enviado um SMS\",\n    \"job\": {\n        \"tries\": 1,\n        \"timeout\": 172800,\n        \"memory\": 2048,\n        \"faturas\": [\n            {\n                \"id_fatura\": 50949\n            }\n        ],\n        \"telefones\": [\n            {\n                \"id_contato\": null,\n                \"id_cliente\": 12025,\n                \"telefone\": \"37999931412\",\n                \"nome\": \"MACIEL RODRIGUES\",\n                \"permite_enviar_sms\": true,\n                \"origem\": \"cadastro_cliente\"\n            }\n        ],\n        \"connection\": null,\n        \"queue\": \"teste\",\n        \"delay\": {\n            \"date\": \"2019-10-07 13:20:51.000000\",\n            \"timezone_type\": 3,\n            \"timezone\": \"America/Sao_Paulo\"\n        }\n    }\n}"
 								}
 							]
+						},
+						{
+							"name": "Enviar por Push",
+							"id": "a132a67f-aed1-4747-8771-b67d4020e359",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/api/v1/integracao/cliente/financeiro/enviar_push",
+								"description": "**POST**\n\nAtravés deste endpoint, será possível fazer o disparo da fatura do cliente por push notification.\n\n**IMPORTANTE**: O cliente só receberá o push notification, caso ele possua o aplicativo do cliente instalado e esteja autenticado com o CPF/CNPJ.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_fatura | Identificador único da fatura do cliente | Sim |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_fatura | Deve conter um número inteiro maior que 0 | Nenhum |\n\nVeja que os parâmetros enviados na requisição `POST` devem obedecer a estrutura no formato `JSON`:\n\n```\n{\n        \"id_fatura\":\"11000\"\n}\n\n```"
+							},
+							"response": [
+								{
+									"id": "6721623f-d192-4593-92cc-0211a987038e",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"type": "text"
+											}
+										],
+										"url": "{{url}}/api/v1/integracao/cliente/financeiro/enviar_push"
+									},
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Fatura enviada com sucesso via push notification\"\r\n}"
+								}
+							]
 						}
 					],
 					"id": "606adf7c-dbf5-47b2-bb9b-863655c40815"
 				},
 				{
 					"name": "Nota Fiscal",
-					"item": [],
+					"item": [
+						{
+							"name": "Nota Fiscal",
+							"id": "3e917dc2-52be-4d05-9265-aca3f70ace89",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/api/v1/integracao/cliente/nota_fiscal",
+								"description": "**GET**\n\nNo método `GET`, será possível consultar as notas fiscais e obter o retorno no formato `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| busca | Tipo de busca que deseja fazer no cliente | Sim |\n| termo_busca | Termo utilizado para fazer a busca | Sim |\n| data_inicio | Data de Início (Utiliza a data de emissão da nota como base) | Não |\n| data_fim | Data de Fim (Utiliza a data de emissão da nota como base) | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| busca | id_cliente | Nenhum |\n| termo_busca | Campo livre | Sim |\n| data_inicio | Campo no formato DateTime (YYYY-MM-DD) | Nenhum |\n| data_fim | Campo no formato DateTime (YYYY-MM-DD) | Nenhum |\n\n**Aviso**\n\nA `API` vai retornar somente notas que já foram processadas e enviadas aos respectivos orgãos responsáveis, sendo assim será retornado somente as notas com os seguintes status: NFe: efetivada / NFSe: autorizado / Nota Fiscal Telecom 21/22: normal\n\n**Nota**\n\nPara os parâmetros `data_inicio` e `data_fim` não pode ser informado um intervalo de datas maior que 60 dias."
+							},
+							"response": [
+								{
+									"id": "c0ab2a64-4e29-4349-b5b0-68eac4fb656d",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "GET",
+										"header": []
+									},
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\r\n\"status\": \"success\",\r\n\"msg\": \"Dados carregados com sucesso\",\r\n\"cliente\": {\r\n  \"id_cliente\": 23285,\r\n  \"codigo_cliente\": 1382,\r\n  \"nome_razaosocial\": \"HUBSOFT BRASIL\"\r\n},\r\n\"notas_fiscais\": [\r\n  {\r\n    \"id_nota_fiscal\": 3064,\r\n    \"id_tipo_documento_fiscal\": 1,\r\n    \"numero_nota\": 427,\r\n    \"serie_nota\": \"U\",\r\n    \"cfop\": \"5307\",\r\n    \"identificacao\": \"XYWNrpBhW5D8p2yuvAoL\",\r\n    \"valor\": \"5\",\r\n    \"data_cadastro_br\": \"25/02/2022 09:07\",\r\n    \"data_emissao_br\": \"25/02/2022\",\r\n    \"data_cancelamento_br\": null,\r\n    \"cancelado\": false,\r\n    \"tipo_documento_fiscal\": {\r\n      \"id_tipo_documento_fiscal\": 1,\r\n      \"descricao\": \"Nota Fiscal de Serviço de Comunicação\",\r\n      \"codigo\": \"21\",\r\n      \"ativo\": true,\r\n      \"display\": \"21 - Nota Fiscal de Serviço de Comunicação\"\r\n    }\r\n  }\r\n],\r\n\"nfes\": [\r\n  {\r\n    \"id_nfe\": 351,\r\n    \"modelo\": \"55\",\r\n    \"serie\": \"1\",\r\n    \"numero_nf\": 60,\r\n    \"chave\": \"NFe16922351872769307419\",\r\n    \"recibo\": \"16922351872769307419\",\r\n    \"autorizacao\": null,\r\n    \"status\": \"efetivada\",\r\n    \"status_mensagem\": \"Autorizado o uso da NF-e\",\r\n    \"data_cadastro\": \"2021-12-09 17:31:39\",\r\n    \"protocolo_autorizacao\": \"16922351872769307419\",\r\n    \"cancelado\": false,\r\n    \"data_cadastro_br\": \"09/12/2021 17:31:39\",\r\n    \"data_cadastro_timestamp\": 1639081899000,\r\n    \"data_emissao_br\": \"25/02/2022 09:07:06\",\r\n    \"data_emissao_timestamp\": 1645790826000,\r\n    \"data_contigencia_br\": null,\r\n    \"data_contigencia_timestamp\": null,\r\n    \"data_saida_br\": null,\r\n    \"data_saida_timestamp\": null,\r\n    \"nfe_emitente\": {\r\n      \"id_nfe_emitente\": 343,\r\n      \"id_nfe\": 351,\r\n      \"nome_razaosocial\": \"TELECOM E HARDWARE LTDA\",\r\n      \"nome_fantasia\": \"TESTE NFE\",\r\n      \"inscricao_estadual\": \"0010735429999\",\r\n      \"inscricao_municipal\": null,\r\n      \"cpf_cnpj\": \"09613622999999\",\r\n      \"tipo_pessoa\": \"pj\",\r\n      \"end_logradouro\": \"PRAÇA GETULIO VARGAS\",\r\n      \"end_numero\": \"77\",\r\n      \"end_complemento\": null,\r\n      \"end_bairro\": \"CENTRO\",\r\n      \"end_cep\": \"35560000\"\r\n    }\r\n  }\r\n],\r\n\"nfses\": [\r\n  {\r\n    \"id_nfse\": 106,\r\n    \"id_externo\": \"61279626fbce65722f734bf899999\",\r\n    \"hash\": \"ae71a618-f673-4359-ac4d-6LuLjmXmLuu9G4KGOdXd\",\r\n    \"numero\": \"14890\",\r\n    \"serie\": \"LAL\",\r\n    \"lote_rps\": \"290008\",\r\n    \"valor\": \"25\",\r\n    \"data_cadastro\": \"2021-08-26 10:22:51\",\r\n    \"tipo_emissao\": \"manual\",\r\n    \"link_pdf\": \"\",\r\n    \"link_xml\": \"\",\r\n    \"status\": \"autorizado\",\r\n    \"status_mensagem\": \"RPS Autorizada com sucesso\",\r\n    \"informacao_complementar\": \"INFORMAÇÃO COMPLEMENTAR DA NFSE\",\r\n    \"data_cadastro_br\": \"26/08/2021 10:22\",\r\n    \"data_cadastro_timestamp\": 1629984171000,\r\n    \"data_cancelamento_br\": null,\r\n    \"data_cancelamento_timestamp\": null\r\n  }\r\n]\r\n}\r\n"
+								}
+							]
+						},
+						{
+							"name": "Nota Fiscal -> Envio por Email",
+							"id": "764d8f92-3adc-4434-bfa3-41d3ecc63d8b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/api/v1/integracao/cliente/nota_fiscal/enviar_email",
+								"description": "**POST**\n\nAtravés deste `endpoint`, será possível fazer o disparo da nota fiscal do cliente por e-mail. Podem ser passados e-mails adicionais, além dos que já estão cadastrados no sistema.\n\n**Aviso**\n\n`IMPORTANTE`: O sistema vai fazer a validação dos dados de e-mail e verificar se a API possui um servidor de e-mail válido configurado. Caso todas as regras sejam atendidas, o disparo do e-mail será efetuado instantaneamente, ou seja, é enviado em tempo real. Por esse motivo, o tempo de resposta da API, irá variar de acordo com a quantidade de e-mails que está na requisição para ser disparado.\n\n`IMPORTANTE 2:` O(s) servidor(es) de e-mails configurados no HubSoft possuem configuração de timeout entre um disparo e outro, dessa forma evita-se que o servidor seja adicionado em `BlackLists` de `SPAM`. Por esse motivo, a chamada da `API`, poderá ter um tempo de resposta diferente do comum.\n\nVeja que os parâmetros enviados na requisição `POST` devem obedecer a estrutura no formato `JSON`:\n\n```\n    {\n            \"id_nota_fiscal\":\"123\",\n\"tipo_documento\":\"nfe\",\n            \"email_adicional\":[\n                    \"email1@email.com\"\n            ]\n    }\n\n```"
+							},
+							"response": [
+								{
+									"id": "192ae398-059a-4841-b0a8-c59c3e9d8511",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"type": "text"
+											}
+										],
+										"url": "{{url}}/api/v1/integracao/cliente/nota_fiscal/enviar_email"
+									},
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\r\n  \"status\": \"success\",\r\n  \"msg\": \"Um total de 2/3 email(s) foram enviados com sucesso\",\r\n  \"emails_enviados\": [\r\n      {\r\n          \"id_cliente\": 23285,\r\n          \"id_usuario\": 1,\r\n          \"id_usuario_envio\": 915,\r\n          \"host\": \"smtp.mailtrap.io\",\r\n          \"email_origem\": \"b860cbd1ea1dca\",\r\n          \"email_destino\": \"naotem@naotem.com.br\",\r\n          \"tipo_envio\": \"manual\",\r\n          \"tipo_documento\": \"nota_fiscal_produto\",\r\n          \"data_envio\": \"2022-02-25 09:59:46\",\r\n          \"enviado\": true,\r\n          \"mensagem_erro\": null,\r\n          \"id_email_enviado\": 1416,\r\n          \"data_envio_br\": \"25/02/2022 09:59\",\r\n          \"data_envio_timestamp\": 1645793986000\r\n      },\r\n      {\r\n          \"id_cliente\": 23285,\r\n          \"id_usuario\": 1,\r\n          \"id_usuario_envio\": 915,\r\n          \"host\": \"smtp.mailtrap.io\",\r\n          \"email_origem\": \"b860cbd1ea1dca\",\r\n          \"email_destino\": \"guilherme@hubsoft.com.br\",\r\n          \"tipo_envio\": \"manual\",\r\n          \"tipo_documento\": \"nota_fiscal_produto\",\r\n          \"data_envio\": \"2022-02-25 10:00:30\",\r\n          \"enviado\": true,\r\n          \"mensagem_erro\": null,\r\n          \"id_email_enviado\": 1417,\r\n          \"data_envio_br\": \"25/02/2022 10:00\",\r\n          \"data_envio_timestamp\": 1645794030000\r\n      }\r\n  ]\r\n}"
+								}
+							]
+						}
+					],
 					"id": "a34bc745-30b7-4df3-a1fa-a992863f478f"
 				},
 				{
@@ -987,122 +1104,6 @@
 							"cookie": [],
 							"responseTime": null,
 							"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Dados consultados com sucesso\",\r\n    \"registros\": [\r\n        {\r\n            \"acctstarttime\": \"2017-09-27 18:14:08-03\",\r\n            \"acctstarttimebr\": \"27/09/2017 18:14:08\",\r\n            \"acctstoptime\": null,\r\n            \"acctstoptimebr\": null,\r\n            \"calledstationid\": \"service2\",\r\n            \"callingstationid\": \"58:10:8C:4B:FF:AA\",\r\n            \"download_megabytes\": 4594.95,\r\n            \"upload_megabytes\": 156.12,\r\n            \"framedipaddress\": \"10.99.1.152\",\r\n            \"nasipaddress\": \"172.17.22.132\",\r\n            \"nasportid\": \"ether3\",\r\n            \"nasporttype\": \"Ethernet\",\r\n            \"username\": \"antoniomas\",\r\n            \"servico\": {\r\n                \"numero_plano\": 49,\r\n                \"nome\": \"100GB-DE-TESTE-\",\r\n                \"valor\": 100,\r\n                \"status\": \"Serviço Habilitado\",\r\n                \"status_prefixo\": \"servico_habilitado\"\r\n            },\r\n            \"cliente\": {\r\n                \"codigo_cliente\": 1161,\r\n                \"nome_razaosocial\": \"ANTONIO MODESTO\",\r\n                \"cpf_cnpj\": \"09350012345\"\r\n            }\r\n        }\r\n    ],\r\n    \"estatisticas\": {\r\n        \"total_conexoes\": 1,\r\n        \"download_total\": 4594.95,\r\n        \"upload_total\": 156.12,\r\n        \"trafego_total\": 4751.07,\r\n        \"media_download\": 0.23,\r\n        \"media_upload\": 0.01\r\n    }\r\n}\r\n"
-						}
-					]
-				},
-				{
-					"name": "Financeiro -> Push Notificação",
-					"id": "a132a67f-aed1-4747-8771-b67d4020e359",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "{{access_token}}",
-								"type": "text"
-							}
-						],
-						"url": "{{url}}/api/v1/integracao/cliente/financeiro/enviar_push",
-						"description": "**POST**\n\nAtravés deste endpoint, será possível fazer o disparo da fatura do cliente por push notification.\n\n**IMPORTANTE**: O cliente só receberá o push notification, caso ele possua o aplicativo do cliente instalado e esteja autenticado com o CPF/CNPJ.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_fatura | Identificador único da fatura do cliente | Sim |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_fatura | Deve conter um número inteiro maior que 0 | Nenhum |\n\nVeja que os parâmetros enviados na requisição `POST` devem obedecer a estrutura no formato `JSON`:\n\n```\n{\n        \"id_fatura\":\"11000\"\n}\n\n```"
-					},
-					"response": [
-						{
-							"id": "6721623f-d192-4593-92cc-0211a987038e",
-							"name": "Sucesso",
-							"originalRequest": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "{{access_token}}",
-										"type": "text"
-									}
-								],
-								"url": "{{url}}/api/v1/integracao/cliente/financeiro/enviar_push"
-							},
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Fatura enviada com sucesso via push notification\"\r\n}"
-						}
-					]
-				},
-				{
-					"name": "Nota Fiscal",
-					"id": "3e917dc2-52be-4d05-9265-aca3f70ace89",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "{{access_token}}",
-								"type": "text"
-							}
-						],
-						"url": "{{url}}/api/v1/integracao/cliente/nota_fiscal",
-						"description": "**GET**\n\nNo método `GET`, será possível consultar as notas fiscais e obter o retorno no formato `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| busca | Tipo de busca que deseja fazer no cliente | Sim |\n| termo_busca | Termo utilizado para fazer a busca | Sim |\n| data_inicio | Data de Início (Utiliza a data de emissão da nota como base) | Não |\n| data_fim | Data de Fim (Utiliza a data de emissão da nota como base) | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| busca | id_cliente | Nenhum |\n| termo_busca | Campo livre | Sim |\n| data_inicio | Campo no formato DateTime (YYYY-MM-DD) | Nenhum |\n| data_fim | Campo no formato DateTime (YYYY-MM-DD) | Nenhum |\n\n**Aviso**\n\nA `API` vai retornar somente notas que já foram processadas e enviadas aos respectivos orgãos responsáveis, sendo assim será retornado somente as notas com os seguintes status: NFe: efetivada / NFSe: autorizado / Nota Fiscal Telecom 21/22: normal\n\n**Nota**\n\nPara os parâmetros `data_inicio` e `data_fim` não pode ser informado um intervalo de datas maior que 60 dias."
-					},
-					"response": [
-						{
-							"id": "c0ab2a64-4e29-4349-b5b0-68eac4fb656d",
-							"name": "Sucesso",
-							"originalRequest": {
-								"method": "GET",
-								"header": []
-							},
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\r\n\"status\": \"success\",\r\n\"msg\": \"Dados carregados com sucesso\",\r\n\"cliente\": {\r\n  \"id_cliente\": 23285,\r\n  \"codigo_cliente\": 1382,\r\n  \"nome_razaosocial\": \"HUBSOFT BRASIL\"\r\n},\r\n\"notas_fiscais\": [\r\n  {\r\n    \"id_nota_fiscal\": 3064,\r\n    \"id_tipo_documento_fiscal\": 1,\r\n    \"numero_nota\": 427,\r\n    \"serie_nota\": \"U\",\r\n    \"cfop\": \"5307\",\r\n    \"identificacao\": \"XYWNrpBhW5D8p2yuvAoL\",\r\n    \"valor\": \"5\",\r\n    \"data_cadastro_br\": \"25/02/2022 09:07\",\r\n    \"data_emissao_br\": \"25/02/2022\",\r\n    \"data_cancelamento_br\": null,\r\n    \"cancelado\": false,\r\n    \"tipo_documento_fiscal\": {\r\n      \"id_tipo_documento_fiscal\": 1,\r\n      \"descricao\": \"Nota Fiscal de Serviço de Comunicação\",\r\n      \"codigo\": \"21\",\r\n      \"ativo\": true,\r\n      \"display\": \"21 - Nota Fiscal de Serviço de Comunicação\"\r\n    }\r\n  }\r\n],\r\n\"nfes\": [\r\n  {\r\n    \"id_nfe\": 351,\r\n    \"modelo\": \"55\",\r\n    \"serie\": \"1\",\r\n    \"numero_nf\": 60,\r\n    \"chave\": \"NFe16922351872769307419\",\r\n    \"recibo\": \"16922351872769307419\",\r\n    \"autorizacao\": null,\r\n    \"status\": \"efetivada\",\r\n    \"status_mensagem\": \"Autorizado o uso da NF-e\",\r\n    \"data_cadastro\": \"2021-12-09 17:31:39\",\r\n    \"protocolo_autorizacao\": \"16922351872769307419\",\r\n    \"cancelado\": false,\r\n    \"data_cadastro_br\": \"09/12/2021 17:31:39\",\r\n    \"data_cadastro_timestamp\": 1639081899000,\r\n    \"data_emissao_br\": \"25/02/2022 09:07:06\",\r\n    \"data_emissao_timestamp\": 1645790826000,\r\n    \"data_contigencia_br\": null,\r\n    \"data_contigencia_timestamp\": null,\r\n    \"data_saida_br\": null,\r\n    \"data_saida_timestamp\": null,\r\n    \"nfe_emitente\": {\r\n      \"id_nfe_emitente\": 343,\r\n      \"id_nfe\": 351,\r\n      \"nome_razaosocial\": \"TELECOM E HARDWARE LTDA\",\r\n      \"nome_fantasia\": \"TESTE NFE\",\r\n      \"inscricao_estadual\": \"0010735429999\",\r\n      \"inscricao_municipal\": null,\r\n      \"cpf_cnpj\": \"09613622999999\",\r\n      \"tipo_pessoa\": \"pj\",\r\n      \"end_logradouro\": \"PRAÇA GETULIO VARGAS\",\r\n      \"end_numero\": \"77\",\r\n      \"end_complemento\": null,\r\n      \"end_bairro\": \"CENTRO\",\r\n      \"end_cep\": \"35560000\"\r\n    }\r\n  }\r\n],\r\n\"nfses\": [\r\n  {\r\n    \"id_nfse\": 106,\r\n    \"id_externo\": \"61279626fbce65722f734bf899999\",\r\n    \"hash\": \"ae71a618-f673-4359-ac4d-6LuLjmXmLuu9G4KGOdXd\",\r\n    \"numero\": \"14890\",\r\n    \"serie\": \"LAL\",\r\n    \"lote_rps\": \"290008\",\r\n    \"valor\": \"25\",\r\n    \"data_cadastro\": \"2021-08-26 10:22:51\",\r\n    \"tipo_emissao\": \"manual\",\r\n    \"link_pdf\": \"\",\r\n    \"link_xml\": \"\",\r\n    \"status\": \"autorizado\",\r\n    \"status_mensagem\": \"RPS Autorizada com sucesso\",\r\n    \"informacao_complementar\": \"INFORMAÇÃO COMPLEMENTAR DA NFSE\",\r\n    \"data_cadastro_br\": \"26/08/2021 10:22\",\r\n    \"data_cadastro_timestamp\": 1629984171000,\r\n    \"data_cancelamento_br\": null,\r\n    \"data_cancelamento_timestamp\": null\r\n  }\r\n]\r\n}\r\n"
-						}
-					]
-				},
-				{
-					"name": "Nota Fiscal -> Envio por Email",
-					"id": "764d8f92-3adc-4434-bfa3-41d3ecc63d8b",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "{{access_token}}",
-								"type": "text"
-							}
-						],
-						"url": "{{url}}/api/v1/integracao/cliente/nota_fiscal/enviar_email",
-						"description": "**POST**\n\nAtravés deste `endpoint`, será possível fazer o disparo da nota fiscal do cliente por e-mail. Podem ser passados e-mails adicionais, além dos que já estão cadastrados no sistema.\n\n**Aviso**\n\n`IMPORTANTE`: O sistema vai fazer a validação dos dados de e-mail e verificar se a API possui um servidor de e-mail válido configurado. Caso todas as regras sejam atendidas, o disparo do e-mail será efetuado instantaneamente, ou seja, é enviado em tempo real. Por esse motivo, o tempo de resposta da API, irá variar de acordo com a quantidade de e-mails que está na requisição para ser disparado.\n\n`IMPORTANTE 2:` O(s) servidor(es) de e-mails configurados no HubSoft possuem configuração de timeout entre um disparo e outro, dessa forma evita-se que o servidor seja adicionado em `BlackLists` de `SPAM`. Por esse motivo, a chamada da `API`, poderá ter um tempo de resposta diferente do comum.\n\nVeja que os parâmetros enviados na requisição `POST` devem obedecer a estrutura no formato `JSON`:\n\n```\n    {\n            \"id_nota_fiscal\":\"123\",\n\"tipo_documento\":\"nfe\",\n            \"email_adicional\":[\n                    \"email1@email.com\"\n            ]\n    }\n\n```"
-					},
-					"response": [
-						{
-							"id": "192ae398-059a-4841-b0a8-c59c3e9d8511",
-							"name": "Sucesso",
-							"originalRequest": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "{{access_token}}",
-										"type": "text"
-									}
-								],
-								"url": "{{url}}/api/v1/integracao/cliente/nota_fiscal/enviar_email"
-							},
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\r\n  \"status\": \"success\",\r\n  \"msg\": \"Um total de 2/3 email(s) foram enviados com sucesso\",\r\n  \"emails_enviados\": [\r\n      {\r\n          \"id_cliente\": 23285,\r\n          \"id_usuario\": 1,\r\n          \"id_usuario_envio\": 915,\r\n          \"host\": \"smtp.mailtrap.io\",\r\n          \"email_origem\": \"b860cbd1ea1dca\",\r\n          \"email_destino\": \"naotem@naotem.com.br\",\r\n          \"tipo_envio\": \"manual\",\r\n          \"tipo_documento\": \"nota_fiscal_produto\",\r\n          \"data_envio\": \"2022-02-25 09:59:46\",\r\n          \"enviado\": true,\r\n          \"mensagem_erro\": null,\r\n          \"id_email_enviado\": 1416,\r\n          \"data_envio_br\": \"25/02/2022 09:59\",\r\n          \"data_envio_timestamp\": 1645793986000\r\n      },\r\n      {\r\n          \"id_cliente\": 23285,\r\n          \"id_usuario\": 1,\r\n          \"id_usuario_envio\": 915,\r\n          \"host\": \"smtp.mailtrap.io\",\r\n          \"email_origem\": \"b860cbd1ea1dca\",\r\n          \"email_destino\": \"guilherme@hubsoft.com.br\",\r\n          \"tipo_envio\": \"manual\",\r\n          \"tipo_documento\": \"nota_fiscal_produto\",\r\n          \"data_envio\": \"2022-02-25 10:00:30\",\r\n          \"enviado\": true,\r\n          \"mensagem_erro\": null,\r\n          \"id_email_enviado\": 1417,\r\n          \"data_envio_br\": \"25/02/2022 10:00\",\r\n          \"data_envio_timestamp\": 1645794030000\r\n      }\r\n  ]\r\n}"
 						}
 					]
 				},
@@ -2853,37 +2854,37 @@
 	],
 	"variable": [
 		{
-			"id": "c4e018f5-a7d0-4716-9734-2c6a2ceb6015",
+			"id": "e543e15d-9b86-44fe-ba61-52e65508eb36",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "1edff15d-5f3b-4611-9995-89c9136c7f42",
+			"id": "f20c119d-dc2d-4bdd-a485-2aa1c38ff0bc",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "58cf9cbf-7b68-4e99-8720-e0d0cfe27f1b",
+			"id": "bfa0e768-aeab-42e7-b269-895787782ebb",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "ff9bd11a-13d4-4a3f-acb1-c7ead8687928",
+			"id": "5cf0187f-cbec-4973-894d-b0cbd545231b",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "46e36bf9-e20e-4866-893a-5574b0056130",
+			"id": "44a92589-4ac4-4b15-8596-96a710f1408c",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "745c8754-4d65-412d-a192-aeb66abbf81f",
+			"id": "754829f2-0d6e-426a-9993-47de2a312045",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "4f147eb4-d19d-4460-8fa9-66422d8303fb",
+			"id": "0e3a8676-c411-4831-b445-9461a9a277b2",
 			"key": "access_token",
 			"value": ""
 		}
