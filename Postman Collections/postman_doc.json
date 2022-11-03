@@ -832,7 +832,7 @@
 					]
 				},
 				{
-					"name": "Consultas",
+					"name": "Consultar Cliente",
 					"id": "e54e9bd8-b9e3-423a-a1da-9193894f522a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -2854,37 +2854,37 @@
 	],
 	"variable": [
 		{
-			"id": "b465086b-713b-49aa-97dd-10b332e47866",
+			"id": "7ff47b33-f8ec-410a-8da7-6616e240f357",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "dd78a3bc-1594-41f7-bb53-0fea6d08affd",
+			"id": "a04eeb8b-cd8c-4292-a3a4-344320f919f0",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "6bb7682e-055f-4905-856a-28db5b73df41",
+			"id": "eafca6c0-ed22-431e-b5e8-e16c4c97e90a",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "831820ee-9fd9-4183-bf21-28c9b73f05ce",
+			"id": "3fea015d-fbaa-49c9-8268-3a453247d4ea",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "9aee7dd1-85eb-4eff-8387-85f4e070c13f",
+			"id": "ec60ddd1-cfc6-4014-9043-e942622c6e77",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "684dbe22-9c6e-431f-a461-f046d4049ef5",
+			"id": "21d86751-4433-44b0-a73f-2050becf6280",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "0ce4e8b3-3440-4b00-a6c2-a32f2a6f5ead",
+			"id": "6b810f15-724e-49f0-bc17-87294a93f2f0",
 			"key": "access_token",
 			"value": ""
 		}
