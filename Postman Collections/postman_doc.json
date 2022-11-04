@@ -1294,7 +1294,7 @@
 									}
 								],
 								"url": "{{url}}/api/v1/integracao/financeiro",
-								"description": "**GET**\n\nNo método `GET`, irá consultar/listar os dados de faturas e retornar um `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| pagina | Página a ser exibida | Não |\n| itens_por_pagina | Itens por Página a serem exibidos. Mínimo: 1, Máximo: 500. | Não |\n| busca | Tipo de busca que deseja fazer no cliente | Não |\n| termo_busca | Termo utilizado para fazer a busca | Não |\n| tipo_data | Tipo de data que será utilizada | Não |\n| tipo_resultado | Tipo de resultado que será devolvido na resposta | Não |\n| data_inicio | Data de início da filtragem de dados | Não |\n| data_fim | Data final da filtragem de dados | Não |\n| order_by | Campo que será utilizado para ordenação | Não |\n| order_type | Tipo de Ordenação | Não |\n| apenas_quitado | Indica o status desejado das faturas | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| pagina | Campo Inteiro (integer) | 0 |\n| itens_por_pagina | Campo Inteiro (integer) | 50 |\n| busca | id_cliente, codigo_cliente, cpf_cnpj, id_cliente_servico | Nenhum |\n| termo_busca | Campo livre (Qualquer valor será aceito) | Nenhum |\n| tipo_data | data_vencimento, data_pagamento, data_cadastro | data_vencimento |\n| tipo_resultado | simplificado, detalhado | simplificado |\n| data_inicio | Campo no formato DateTime (YYYY-MM-DD) | Não |\n| data_fim | Campo no formato DateTime (YYYY-MM-DD) | Não |\n| order_by | data_vencimento, data_pagamento, data_cadastro, valor | Não |\n| order_type | asc, desc | Não |\n| apenas_quitado | Indica o status desejado das faturas | Não |"
+								"description": "**GET**\n\nNo método `GET`, irá consultar/listar os dados de faturas e retornar um `JSON` como resposta. Os dados serão retornados de forma paginada, portanto fique atento ao conjunto da dados \"paginacao\" que é retornado na resposta, para saber se será necessário consultar outras páginas ou não.\n\nOs seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| pagina | Página a ser exibida | Não |\n| itens_por_pagina | Itens por Página a serem exibidos. Mínimo: 1, Máximo: 500. | Não |\n| busca | Tipo de busca que deseja fazer no cliente | Não |\n| termo_busca | Termo utilizado para fazer a busca | Não |\n| tipo_data | Tipo de data que será utilizada | Não |\n| tipo_resultado | Tipo de resultado que será devolvido na resposta | Não |\n| data_inicio | Data de início da filtragem de dados | Não |\n| data_fim | Data final da filtragem de dados | Não |\n| order_by | Campo que será utilizado para ordenação | Não |\n| order_type | Tipo de Ordenação | Não |\n| apenas_quitado | Indica o status desejado das faturas | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| pagina | Campo Inteiro (integer) | 0 |\n| itens_por_pagina | Campo Inteiro (integer) | 50 |\n| busca | id_cliente, codigo_cliente, cpf_cnpj, id_cliente_servico | Nenhum |\n| termo_busca | Campo livre (Qualquer valor será aceito) | Nenhum |\n| tipo_data | data_vencimento, data_pagamento, data_cadastro | data_vencimento |\n| tipo_resultado | simplificado, detalhado | simplificado |\n| data_inicio | Campo no formato DateTime (YYYY-MM-DD) | Não |\n| data_fim | Campo no formato DateTime (YYYY-MM-DD) | Não |\n| order_by | data_vencimento, data_pagamento, data_cadastro, valor | Não |\n| order_type | asc, desc | Não |\n| apenas_quitado | Indica o status desejado das faturas | Não |"
 							},
 							"response": [
 								{
@@ -2870,37 +2870,37 @@
 	],
 	"variable": [
 		{
-			"id": "08abaaac-e15f-45d8-876d-6d20ab34ec73",
+			"id": "b2f450bb-4ffe-42f6-a726-e10f5e06df7f",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "02e1ae61-48a1-4d96-aee0-5fdf51cedb10",
+			"id": "a3435ccd-0a88-482e-a703-8579712f6350",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "a8f4399e-0c48-4f8b-aac9-a6a3a9f644e4",
+			"id": "4f4fbcf2-6830-44ac-915b-76f0bee554df",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "1fd6eca7-bb42-48a8-a1c6-22b9aa808dcb",
+			"id": "02692d36-5456-4a5a-8947-0443d63e91be",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "b8ae8803-769a-4cdf-b28a-8d2862eafde8",
+			"id": "50684f9d-faa3-45e6-b682-b9a8c23bb8a7",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "75ccc7c0-97ea-4b51-82a4-532ea8d592a9",
+			"id": "1e3728e1-e777-4294-b00f-328bf549bab1",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "7cd8d32a-60da-4552-aec2-98c0b06d0d81",
+			"id": "8c69a453-1763-4c5f-b634-a5b5b829b96c",
 			"key": "access_token",
 			"value": ""
 		}
