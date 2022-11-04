@@ -1309,7 +1309,7 @@
 												"type": "text"
 											}
 										],
-										"url": "{{url}}/api/v1/integracao/financeiro"
+										"url": "{{url}}/api/v1/integracao/financeiro/fatura"
 									},
 									"_postman_previewlanguage": "json",
 									"header": null,
@@ -2890,37 +2890,37 @@
 	],
 	"variable": [
 		{
-			"id": "d4bf8989-f476-4949-94f8-58502b0fb25a",
+			"id": "7a936d6c-2cb5-4486-8a0d-8a3a25188fb7",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "ef29cf1d-a2d7-4d69-811a-757b5b15d2a8",
+			"id": "ff3b5dfb-5e26-447c-be9b-dd8046ca3762",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "c0ffe8a2-d066-495a-8abb-1ff6d6a16cc9",
+			"id": "8f2bd732-3e9d-4a8f-8247-3b07cabc6c9c",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "874e52d9-a46f-40e3-b171-119ca1a57515",
+			"id": "b4e4993d-8f30-4908-a1c4-fd15ba8b5e4a",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "420f78bb-f72b-4395-96ce-d57ad6bc971c",
+			"id": "aab23168-2502-46c1-a8ed-742eb407273d",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "942be1fd-9885-42ff-a413-5ddbbe30515e",
+			"id": "d135bca5-1554-4ae0-85b4-80ca4e5f9853",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "fda901ec-cd14-420a-bd97-7849e0e5fe13",
+			"id": "8e9ab79d-35a6-447c-a0e9-85866b8f8362",
 			"key": "access_token",
 			"value": ""
 		}
