@@ -1290,7 +1290,8 @@
 									{
 										"key": "Authorization",
 										"value": "{{access_token}}",
-										"type": "text"
+										"type": "text",
+										"description": "Bearer"
 									}
 								],
 								"url": {
@@ -2916,37 +2917,37 @@
 	],
 	"variable": [
 		{
-			"id": "65cd8383-ab90-4fe6-a1f2-61e2bc60ba2d",
+			"id": "1bf54e82-864e-435b-9ae3-ed969b3ec316",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "934e88dc-4f6f-4c4d-803c-e999225eb3b6",
+			"id": "0dbe1c78-f6e6-4db8-8a2f-fbbd069d1a96",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "4a76dcf4-0949-4cd0-8583-477f2b1d56c5",
+			"id": "ee764edc-db84-4af3-a75f-3c82d319cf5b",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "322a5660-20ff-4209-9e17-fe51e3dd48b4",
+			"id": "c3a1faa4-f1fa-4789-8333-82b098a69da0",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "ff42a724-53e7-43ad-8046-e10936a83561",
+			"id": "4e2d27b4-3630-46ee-b60a-8d804fbfb895",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "caf9a06d-42a6-48c6-a55c-986184bc3b34",
+			"id": "a5ae210f-ab38-42b6-9369-12f5a9e0b97b",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "ba4239d9-88a9-4754-be08-a6a9c2f061bf",
+			"id": "06b5ea14-4408-4eab-8765-ab41ab17db59",
 			"key": "access_token",
 			"value": ""
 		}
