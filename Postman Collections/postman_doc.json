@@ -1276,6 +1276,11 @@
 					"id": "abc64005-03d4-4018-9bff-a58d0861e083"
 				},
 				{
+					"name": "New Folder",
+					"item": [],
+					"id": "074e240a-259c-4b50-82df-4d9fbf78747e"
+				},
+				{
 					"name": "Consulta",
 					"id": "1b0a371e-03e2-4e7f-9849-8cef41436ecb",
 					"protocolProfileBehavior": {
@@ -2864,37 +2869,37 @@
 	],
 	"variable": [
 		{
-			"id": "c2f3bfaa-74e5-4b79-9d82-16d15063635d",
+			"id": "04df6207-e2ce-4ca8-81ac-2626427b7c05",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "e6ad9907-5548-40c1-b19a-0eaca7f9a16a",
+			"id": "eabe478d-564c-4ad9-9c5b-0c5d58983dc0",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "3d6f729f-3566-4e34-89b6-ce4d906ee871",
+			"id": "885a2624-b6c8-465b-9dbe-f7c85abe9794",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "905afae6-3caf-475d-ab40-47e9fe9c7081",
+			"id": "f5f77976-54dc-44f2-bb64-8306d476a94f",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "aef1e2ed-f6b6-4e2a-9e03-5724845d4213",
+			"id": "958eaebc-c9e3-42e9-92f1-a420e2f920ba",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "16feaae4-36ad-40a9-b060-53768fb99262",
+			"id": "d7005553-6c2a-47dd-86b8-7aea7e7ea3e7",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "63012a9e-ecc1-442e-95aa-7e7e2b7a6f7e",
+			"id": "dfc528a2-1a7e-4da2-8270-3d0c1d0e935e",
 			"key": "access_token",
 			"value": ""
 		}
