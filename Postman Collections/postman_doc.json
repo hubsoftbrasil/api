@@ -1294,7 +1294,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{url}}/api/v1/integracao/financeiro/fatura?pagina&itens_por_pagina",
+									"raw": "{{url}}/api/v1/integracao/financeiro/fatura",
 									"host": [
 										"{{url}}"
 									],
@@ -1309,12 +1309,12 @@
 										{
 											"key": "pagina",
 											"value": null,
-											"type": "text"
+											"disabled": true
 										},
 										{
 											"key": "itens_por_pagina",
 											"value": null,
-											"type": "text"
+											"disabled": true
 										}
 									]
 								},
@@ -2914,37 +2914,37 @@
 	],
 	"variable": [
 		{
-			"id": "bbef0fd1-2885-4124-a954-d2a22755ecce",
+			"id": "b77bf7e7-dc78-40e8-a157-1ebd51f21d1f",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "99d9698d-8441-4d4e-8413-47f026f1b526",
+			"id": "eee8e4ba-670f-45a5-8a0e-52e199a15465",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "6b15f0c6-c3fc-4c9e-bda3-4f7d6168d49d",
+			"id": "6834717d-f9c5-48fc-b370-08f6b3d4eee0",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "97f11aaf-d319-4e0e-ad1e-447615c60fe4",
+			"id": "955f98cd-7b3e-4719-ba13-eb493145eb96",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "d0dd6999-796e-4dad-a5a8-96e8b4f4cd54",
+			"id": "721f5b3b-131f-41fc-aed1-61ed57a2799f",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "41d89d9c-a444-4b1d-a559-3047d8ec0877",
+			"id": "49420f70-27e9-44ad-bcb6-94007458dead",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "a8fdaf10-f550-4dc3-bb72-71f72337f2bb",
+			"id": "caf197e0-a223-4d79-962d-fcd3b6884e65",
 			"key": "access_token",
 			"value": ""
 		}
