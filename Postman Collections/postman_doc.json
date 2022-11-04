@@ -1299,7 +1299,7 @@
 							"response": [
 								{
 									"id": "789e0949-b938-4d9c-bae7-36dcc4f5c30b",
-									"name": "Sucesso",
+									"name": "Sucesso Simplificado",
 									"originalRequest": {
 										"method": "GET",
 										"header": [
@@ -2870,37 +2870,37 @@
 	],
 	"variable": [
 		{
-			"id": "651b65b6-1bff-43b5-8741-6f40474c07c1",
+			"id": "98facd7b-00c1-49ee-81f5-c00f97871fa0",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "e0802b0e-0734-4090-9742-b589e312ac83",
+			"id": "816f1516-23ff-4098-957b-3268032f0b1c",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "c386732b-18f8-40a9-a448-2836647fb3a1",
+			"id": "24d30f5e-39b0-405b-9c2b-20002e4593d2",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "1ccd6931-2631-401c-89d8-60bfda7c3200",
+			"id": "521c5321-a15b-453d-b3a4-8b043babd7ac",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "3a7e8069-3dae-4f44-81b4-8034b9e64031",
+			"id": "7d92ef7b-a495-4b1e-bbaa-ca16c09095ef",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "904a3737-2124-4a8c-b4a5-b50da9fd6b01",
+			"id": "5a5a000e-4211-4404-af86-dad41a08ca72",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "f4a8fb5e-cf34-45ee-a953-3114dd99510c",
+			"id": "0311ec19-00b3-4027-bcb7-92e7677a5a5f",
 			"key": "access_token",
 			"value": ""
 		}
