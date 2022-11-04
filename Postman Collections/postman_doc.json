@@ -1277,32 +1277,14 @@
 				},
 				{
 					"name": "Fatura",
-					"item": [],
-					"id": "074e240a-259c-4b50-82df-4d9fbf78747e"
-				},
-				{
-					"name": "Consulta",
-					"id": "1b0a371e-03e2-4e7f-9849-8cef41436ecb",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "{{access_token}}",
-								"type": "text"
-							}
-						],
-						"url": "{{url}}/api/v1/integracao/financeiro",
-						"description": "**GET**\n\nNo método `GET`, irá consultar os dados financeiros (contas a receber) e retornar um `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| busca | Tipo de busca que deseja fazer no cliente | Não |\n| termo_busca | Termo utilizado para fazer a busca | Não |\n| tipo_data | Tipo de data que será utilizada | Não |\n| tipo_resultado | Tipo de resultado que será devolvido na resposta | Não |\n| data_inicio | Data de início da filtragem de dados | Não |\n| data_fim | Data final da filtragem de dados | Não |\n| order_by | Campo que será utilizado para ordenação | Não |\n| order_type | Tipo de Ordenação | Não |\n| limit | Limite de resultados | Não |\n| apenas_quitado | Indica o status desejado das faturas | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| busca | id_cliente, codigo_cliente, cpf_cnpj, id_cliente_servico | Nenhum |\n| termo_busca | Campo livre (Qualquer valor será aceito) | Nenhum |\n| tipo_data | data_vencimento, data_pagamento, data_cadastro | data_vencimento |\n| tipo_resultado | simplificado, detalhado | simplificado |\n| data_inicio | Campo no formato DateTime (YYYY-MM-DD) | Não |\n| data_fim | Campo no formato DateTime (YYYY-MM-DD) | Não |\n| order_by | data_vencimento, data_pagamento, data_cadastro, valor | Não |\n| order_type | asc, desc | Não |\n| limit | Valor número maior que 0 (zero) | Não |\n| apenas_quitado | Indica o status desejado das faturas | Não |"
-					},
-					"response": [
+					"item": [
 						{
-							"id": "789e0949-b938-4d9c-bae7-36dcc4f5c30b",
-							"name": "Consulta",
-							"originalRequest": {
+							"name": "Listar Faturas",
+							"id": "1b0a371e-03e2-4e7f-9849-8cef41436ecb",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
 								"method": "GET",
 								"header": [
 									{
@@ -1311,15 +1293,34 @@
 										"type": "text"
 									}
 								],
-								"url": "{{url}}/api/v1/integracao/financeiro"
+								"url": "{{url}}/api/v1/integracao/financeiro",
+								"description": "**GET**\n\nNo método `GET`, irá consultar os dados financeiros (contas a receber) e retornar um `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| busca | Tipo de busca que deseja fazer no cliente | Não |\n| termo_busca | Termo utilizado para fazer a busca | Não |\n| tipo_data | Tipo de data que será utilizada | Não |\n| tipo_resultado | Tipo de resultado que será devolvido na resposta | Não |\n| data_inicio | Data de início da filtragem de dados | Não |\n| data_fim | Data final da filtragem de dados | Não |\n| order_by | Campo que será utilizado para ordenação | Não |\n| order_type | Tipo de Ordenação | Não |\n| limit | Limite de resultados | Não |\n| apenas_quitado | Indica o status desejado das faturas | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| busca | id_cliente, codigo_cliente, cpf_cnpj, id_cliente_servico | Nenhum |\n| termo_busca | Campo livre (Qualquer valor será aceito) | Nenhum |\n| tipo_data | data_vencimento, data_pagamento, data_cadastro | data_vencimento |\n| tipo_resultado | simplificado, detalhado | simplificado |\n| data_inicio | Campo no formato DateTime (YYYY-MM-DD) | Não |\n| data_fim | Campo no formato DateTime (YYYY-MM-DD) | Não |\n| order_by | data_vencimento, data_pagamento, data_cadastro, valor | Não |\n| order_type | asc, desc | Não |\n| limit | Valor número maior que 0 (zero) | Não |\n| apenas_quitado | Indica o status desejado das faturas | Não |"
 							},
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Dados consultados com sucesso.\",\r\n    \"faturas\": [\r\n        {\r\n            \"id_fatura\": 62636,\r\n            \"nosso_numero\": \"1900247\",\r\n            \"data_vencimento\": \"2020-04-05\",\r\n            \"data_vencimento_br\": \"05/04/2020\",\r\n            \"data_pagamento\": null,\r\n            \"data_pagamento_br\": null,\r\n            \"data_cadastro\": \"2020-01-01 12:52:12\",\r\n            \"data_cadastro_br\": \"01/01/2020\",\r\n            \"valor\": \"119.9\",\r\n            \"valor_pago\": null,\r\n            \"cliente\": {\r\n                \"id_cliente\": 11943,\r\n                \"codigo_cliente\": 1162,\r\n                \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO\",\r\n                \"nome_fantasia\": null,\r\n                \"tipo_pessoa\": \"pf\",\r\n                \"cpf_cnpj\": \"41107296617\",\r\n                \"data_nascimento\": \"1994-03-10\",\r\n                \"data_nascimento_br\": \"10/03/1994\",\r\n                \"telefone_primario\": \"37999091234\",\r\n                \"telefone_secundario\": \"373415100\",\r\n                \"telefone_terciario\": null,\r\n                \"email_principal\": \"email@cliente.com.b4\",\r\n                \"email_secundario\": null,\r\n                \"data_cadastro\": \"2017-09-26 13:20:33\",\r\n                \"data_cadastro_br\": \"26/09/2017 13:20\",\r\n                \"ativo\": true\r\n            }\r\n        },\r\n        {\r\n            \"id_fatura\": 62634,\r\n            \"nosso_numero\": \"1900245\",\r\n            \"data_vencimento\": \"2020-04-05\",\r\n            \"data_vencimento_br\": \"05/04/2020\",\r\n            \"data_pagamento\": null,\r\n            \"data_pagamento_br\": null,\r\n            \"data_cadastro\": \"2020-01-01 12:52:12\",\r\n            \"data_cadastro_br\": \"01/01/2020\",\r\n            \"valor\": \"115.9\",\r\n            \"valor_pago\": null,\r\n            \"cliente\": {\r\n                \"id_cliente\": 11943,\r\n                \"codigo_cliente\": 1162,\r\n                \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO\",\r\n                \"nome_fantasia\": null,\r\n                \"tipo_pessoa\": \"pf\",\r\n                \"cpf_cnpj\": \"41107296617\",\r\n                \"data_nascimento\": \"1994-03-10\",\r\n                \"data_nascimento_br\": \"10/03/1994\",\r\n                \"telefone_primario\": \"37999091234\",\r\n                \"telefone_secundario\": \"373415100\",\r\n                \"telefone_terciario\": null,\r\n                \"email_principal\": \"email@cliente.com.b4\",\r\n                \"email_secundario\": null,\r\n                \"data_cadastro\": \"2017-09-26 13:20:33\",\r\n                \"data_cadastro_br\": \"26/09/2017 13:20\",\r\n                \"ativo\": true\r\n            }\r\n        },\r\n        {\r\n            \"id_fatura\": 62625,\r\n            \"nosso_numero\": \"1900242\",\r\n            \"data_vencimento\": \"2020-04-05\",\r\n            \"data_vencimento_br\": \"05/04/2020\",\r\n            \"data_pagamento\": null,\r\n            \"data_pagamento_br\": null,\r\n            \"data_cadastro\": \"2020-01-01 12:52:12\",\r\n            \"data_cadastro_br\": \"01/01/2020\",\r\n            \"valor\": \"169.9\",\r\n            \"valor_pago\": null,\r\n            \"cliente\": {\r\n                \"id_cliente\": 11943,\r\n                \"codigo_cliente\": 1162,\r\n                \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO\",\r\n                \"nome_fantasia\": null,\r\n                \"tipo_pessoa\": \"pf\",\r\n                \"cpf_cnpj\": \"41107296617\",\r\n                \"data_nascimento\": \"1994-03-10\",\r\n                \"data_nascimento_br\": \"10/03/1994\",\r\n                \"telefone_primario\": \"37999091234\",\r\n                \"telefone_secundario\": \"373415100\",\r\n                \"telefone_terciario\": null,\r\n                \"email_principal\": \"email@cliente.com.b4\",\r\n                \"email_secundario\": null,\r\n                \"data_cadastro\": \"2017-09-26 13:20:33\",\r\n                \"data_cadastro_br\": \"26/09/2017 13:20\",\r\n                \"ativo\": true\r\n            }\r\n        },\r\n        {\r\n            \"id_fatura\": 62628,\r\n            \"nosso_numero\": \"212\",\r\n            \"data_vencimento\": \"2020-04-05\",\r\n            \"data_vencimento_br\": \"05/04/2020\",\r\n            \"data_pagamento\": null,\r\n            \"data_pagamento_br\": null,\r\n            \"data_cadastro\": \"2020-01-01 12:52:12\",\r\n            \"data_cadastro_br\": \"01/01/2020\",\r\n            \"valor\": \"40.3\",\r\n            \"valor_pago\": null,\r\n            \"cliente\": {\r\n                \"id_cliente\": 11943,\r\n                \"codigo_cliente\": 1162,\r\n                \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO\",\r\n                \"nome_fantasia\": null,\r\n                \"tipo_pessoa\": \"pf\",\r\n                \"cpf_cnpj\": \"41107296617\",\r\n                \"data_nascimento\": \"1994-03-10\",\r\n                \"data_nascimento_br\": \"10/03/1994\",\r\n                \"telefone_primario\": \"37999091234\",\r\n                \"telefone_secundario\": \"373415100\",\r\n                \"telefone_terciario\": null,\r\n                \"email_principal\": \"email@cliente.com.b4\",\r\n                \"email_secundario\": null,\r\n                \"data_cadastro\": \"2017-09-26 13:20:33\",\r\n                \"data_cadastro_br\": \"26/09/2017 13:20\",\r\n                \"ativo\": true\r\n            }\r\n        }\r\n    ]\r\n}"
+							"response": [
+								{
+									"id": "789e0949-b938-4d9c-bae7-36dcc4f5c30b",
+									"name": "Consulta",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"type": "text"
+											}
+										],
+										"url": "{{url}}/api/v1/integracao/financeiro"
+									},
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Dados consultados com sucesso.\",\r\n    \"faturas\": [\r\n        {\r\n            \"id_fatura\": 62636,\r\n            \"nosso_numero\": \"1900247\",\r\n            \"data_vencimento\": \"2020-04-05\",\r\n            \"data_vencimento_br\": \"05/04/2020\",\r\n            \"data_pagamento\": null,\r\n            \"data_pagamento_br\": null,\r\n            \"data_cadastro\": \"2020-01-01 12:52:12\",\r\n            \"data_cadastro_br\": \"01/01/2020\",\r\n            \"valor\": \"119.9\",\r\n            \"valor_pago\": null,\r\n            \"cliente\": {\r\n                \"id_cliente\": 11943,\r\n                \"codigo_cliente\": 1162,\r\n                \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO\",\r\n                \"nome_fantasia\": null,\r\n                \"tipo_pessoa\": \"pf\",\r\n                \"cpf_cnpj\": \"41107296617\",\r\n                \"data_nascimento\": \"1994-03-10\",\r\n                \"data_nascimento_br\": \"10/03/1994\",\r\n                \"telefone_primario\": \"37999091234\",\r\n                \"telefone_secundario\": \"373415100\",\r\n                \"telefone_terciario\": null,\r\n                \"email_principal\": \"email@cliente.com.b4\",\r\n                \"email_secundario\": null,\r\n                \"data_cadastro\": \"2017-09-26 13:20:33\",\r\n                \"data_cadastro_br\": \"26/09/2017 13:20\",\r\n                \"ativo\": true\r\n            }\r\n        },\r\n        {\r\n            \"id_fatura\": 62634,\r\n            \"nosso_numero\": \"1900245\",\r\n            \"data_vencimento\": \"2020-04-05\",\r\n            \"data_vencimento_br\": \"05/04/2020\",\r\n            \"data_pagamento\": null,\r\n            \"data_pagamento_br\": null,\r\n            \"data_cadastro\": \"2020-01-01 12:52:12\",\r\n            \"data_cadastro_br\": \"01/01/2020\",\r\n            \"valor\": \"115.9\",\r\n            \"valor_pago\": null,\r\n            \"cliente\": {\r\n                \"id_cliente\": 11943,\r\n                \"codigo_cliente\": 1162,\r\n                \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO\",\r\n                \"nome_fantasia\": null,\r\n                \"tipo_pessoa\": \"pf\",\r\n                \"cpf_cnpj\": \"41107296617\",\r\n                \"data_nascimento\": \"1994-03-10\",\r\n                \"data_nascimento_br\": \"10/03/1994\",\r\n                \"telefone_primario\": \"37999091234\",\r\n                \"telefone_secundario\": \"373415100\",\r\n                \"telefone_terciario\": null,\r\n                \"email_principal\": \"email@cliente.com.b4\",\r\n                \"email_secundario\": null,\r\n                \"data_cadastro\": \"2017-09-26 13:20:33\",\r\n                \"data_cadastro_br\": \"26/09/2017 13:20\",\r\n                \"ativo\": true\r\n            }\r\n        },\r\n        {\r\n            \"id_fatura\": 62625,\r\n            \"nosso_numero\": \"1900242\",\r\n            \"data_vencimento\": \"2020-04-05\",\r\n            \"data_vencimento_br\": \"05/04/2020\",\r\n            \"data_pagamento\": null,\r\n            \"data_pagamento_br\": null,\r\n            \"data_cadastro\": \"2020-01-01 12:52:12\",\r\n            \"data_cadastro_br\": \"01/01/2020\",\r\n            \"valor\": \"169.9\",\r\n            \"valor_pago\": null,\r\n            \"cliente\": {\r\n                \"id_cliente\": 11943,\r\n                \"codigo_cliente\": 1162,\r\n                \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO\",\r\n                \"nome_fantasia\": null,\r\n                \"tipo_pessoa\": \"pf\",\r\n                \"cpf_cnpj\": \"41107296617\",\r\n                \"data_nascimento\": \"1994-03-10\",\r\n                \"data_nascimento_br\": \"10/03/1994\",\r\n                \"telefone_primario\": \"37999091234\",\r\n                \"telefone_secundario\": \"373415100\",\r\n                \"telefone_terciario\": null,\r\n                \"email_principal\": \"email@cliente.com.b4\",\r\n                \"email_secundario\": null,\r\n                \"data_cadastro\": \"2017-09-26 13:20:33\",\r\n                \"data_cadastro_br\": \"26/09/2017 13:20\",\r\n                \"ativo\": true\r\n            }\r\n        },\r\n        {\r\n            \"id_fatura\": 62628,\r\n            \"nosso_numero\": \"212\",\r\n            \"data_vencimento\": \"2020-04-05\",\r\n            \"data_vencimento_br\": \"05/04/2020\",\r\n            \"data_pagamento\": null,\r\n            \"data_pagamento_br\": null,\r\n            \"data_cadastro\": \"2020-01-01 12:52:12\",\r\n            \"data_cadastro_br\": \"01/01/2020\",\r\n            \"valor\": \"40.3\",\r\n            \"valor_pago\": null,\r\n            \"cliente\": {\r\n                \"id_cliente\": 11943,\r\n                \"codigo_cliente\": 1162,\r\n                \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO\",\r\n                \"nome_fantasia\": null,\r\n                \"tipo_pessoa\": \"pf\",\r\n                \"cpf_cnpj\": \"41107296617\",\r\n                \"data_nascimento\": \"1994-03-10\",\r\n                \"data_nascimento_br\": \"10/03/1994\",\r\n                \"telefone_primario\": \"37999091234\",\r\n                \"telefone_secundario\": \"373415100\",\r\n                \"telefone_terciario\": null,\r\n                \"email_principal\": \"email@cliente.com.b4\",\r\n                \"email_secundario\": null,\r\n                \"data_cadastro\": \"2017-09-26 13:20:33\",\r\n                \"data_cadastro_br\": \"26/09/2017 13:20\",\r\n                \"ativo\": true\r\n            }\r\n        }\r\n    ]\r\n}"
+								}
+							]
 						}
-					]
+					],
+					"id": "074e240a-259c-4b50-82df-4d9fbf78747e"
 				}
 			],
 			"id": "71ba8361-d5d0-4cf7-ab8c-a2b73390bb9f",
@@ -2869,37 +2870,37 @@
 	],
 	"variable": [
 		{
-			"id": "a8361b94-385b-4033-bf87-c8dd388e3b82",
+			"id": "a728d621-4311-4ec4-97b5-e03a3e9e1ecf",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "d02dc380-2302-4173-9bfe-dcfa46ed3972",
+			"id": "6c809a7d-5ab4-431d-82ba-a3430469b5a2",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "77ba2e20-8808-42e8-b315-7f181db83e29",
+			"id": "46122759-a9b0-48d4-9b06-b99b439450aa",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "178dbfa7-ba3c-4a23-98cb-8b0b1b48edfd",
+			"id": "3f44f481-4552-40ce-9ca1-ea39fa8406f6",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "126c3c2a-d034-465a-a69d-fbaea7c9ca23",
+			"id": "f72233ba-a625-4f2a-a5d5-c3b6a0c2d391",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "f94801ca-d7ff-4623-a949-3ab0d4027b0c",
+			"id": "f9131430-6ab2-402d-8b85-bbad62fca8f7",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "87531a04-ed9e-438a-b2b7-6f4ebbaff147",
+			"id": "682bfe56-a7ce-41a6-8b9c-88355d36ae48",
 			"key": "access_token",
 			"value": ""
 		}
