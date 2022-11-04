@@ -1308,12 +1308,14 @@
 									"query": [
 										{
 											"key": "pagina",
-											"value": null,
+											"value": "",
+											"description": "Número da Página",
 											"disabled": true
 										},
 										{
 											"key": "itens_por_pagina",
-											"value": null,
+											"value": "",
+											"description": "Qtd de Itens por Página",
 											"disabled": true
 										}
 									]
@@ -2914,37 +2916,37 @@
 	],
 	"variable": [
 		{
-			"id": "b77bf7e7-dc78-40e8-a157-1ebd51f21d1f",
+			"id": "65cd8383-ab90-4fe6-a1f2-61e2bc60ba2d",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "eee8e4ba-670f-45a5-8a0e-52e199a15465",
+			"id": "934e88dc-4f6f-4c4d-803c-e999225eb3b6",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "6834717d-f9c5-48fc-b370-08f6b3d4eee0",
+			"id": "4a76dcf4-0949-4cd0-8583-477f2b1d56c5",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "955f98cd-7b3e-4719-ba13-eb493145eb96",
+			"id": "322a5660-20ff-4209-9e17-fe51e3dd48b4",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "721f5b3b-131f-41fc-aed1-61ed57a2799f",
+			"id": "ff42a724-53e7-43ad-8046-e10936a83561",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "49420f70-27e9-44ad-bcb6-94007458dead",
+			"id": "caf9a06d-42a6-48c6-a55c-986184bc3b34",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "caf197e0-a223-4d79-962d-fcd3b6884e65",
+			"id": "ba4239d9-88a9-4754-be08-a6a9c2f061bf",
 			"key": "access_token",
 			"value": ""
 		}
