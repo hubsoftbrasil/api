@@ -1293,7 +1293,7 @@
 										"type": "text"
 									}
 								],
-								"url": "{{url}}/api/v1/integracao/financeiro",
+								"url": "{{url}}/api/v1/integracao/financeiro/fatura",
 								"description": "**GET**\n\nNo método `GET`, irá consultar/listar os dados de faturas e retornar um `JSON` como resposta. Os dados serão retornados de forma paginada, portanto fique atento ao conjunto da dados \"paginacao\" que é retornado na resposta, para saber se será necessário consultar outras páginas ou não.\n\nOs seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| pagina | Página a ser exibida | Não |\n| itens_por_pagina | Itens por Página a serem exibidos. Mínimo: 1, Máximo: 500. | Não |\n| busca | Tipo de busca que deseja fazer no cliente | Não |\n| termo_busca | Termo utilizado para fazer a busca | Não |\n| tipo_data | Tipo de data que será utilizada | Não |\n| tipo_resultado | Tipo de resultado que será devolvido na resposta | Não |\n| data_inicio | Data de início da filtragem de dados | Não |\n| data_fim | Data final da filtragem de dados | Não |\n| order_by | Campo que será utilizado para ordenação | Não |\n| order_type | Tipo de Ordenação | Não |\n| apenas_quitado | Indica o status desejado das faturas | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| pagina | Campo Inteiro (integer) | 0 |\n| itens_por_pagina | Campo Inteiro (integer) | 50 |\n| busca | id_cliente, codigo_cliente, cpf_cnpj, id_cliente_servico | Nenhum |\n| termo_busca | Campo livre (Qualquer valor será aceito) | Nenhum |\n| tipo_data | data_vencimento, data_pagamento, data_cadastro | data_vencimento |\n| tipo_resultado | simplificado, detalhado | simplificado |\n| data_inicio | Campo no formato Date (YYYY-MM-DD) | 10 dias anterioes à data atual |\n| data_fim | Campo no formato Date (YYYY-MM-DD) | Data Atual |\n| order_by | data_vencimento, data_pagamento, data_cadastro, valor | data_vencimento |\n| order_type | asc, desc | asc |\n| apenas_quitado | sim,nao | nao |"
 							},
 							"response": [
@@ -2870,37 +2870,37 @@
 	],
 	"variable": [
 		{
-			"id": "bdd1fe36-ef00-4e1a-a8b3-e8f84df27211",
+			"id": "56d14021-6d0a-44ec-ac80-423c006eb885",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "83629268-2264-40ec-9b89-be6739d1e53f",
+			"id": "bfacbe6a-8cc4-41e7-bcd8-2c9e1969667c",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "101dc4b3-09d0-43dc-88ec-e39b472435e9",
+			"id": "35d9f1bd-f8f8-463d-a836-2301e3debd2a",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "9b5ebbb5-2c06-4c0a-be8b-aea763f09e24",
+			"id": "b23d28aa-f6ed-411c-9754-5034b3240706",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "aa77f074-eec1-41bc-afe8-a5b1c2f3bcd2",
+			"id": "df87f9cf-af90-44c3-9ae7-e9bf6ca4a188",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "ad9a8cca-ab56-463b-b7a4-aa374c2e9402",
+			"id": "00f27666-71a7-4f6e-b74f-7bc8c553d7b7",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "720ae145-406f-429b-a852-0fd0707e19c8",
+			"id": "7ba50c01-3093-4cf8-a84c-70d430f81ede",
 			"key": "access_token",
 			"value": ""
 		}
