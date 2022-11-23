@@ -2729,8 +2729,8 @@
 			"name": "Configuração",
 			"item": [
 				{
-					"name": "Cidades",
-					"id": "97b11dd6-69c0-4591-ba65-a5b6a42b7ed5",
+					"name": "Caixa Financeiro",
+					"id": "431b8688-0ae9-44b1-bc16-5ae888b0dc99",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2743,12 +2743,12 @@
 								"type": "text"
 							}
 						],
-						"url": "{{url}}/api/v1/integracao/configuracao/cidade",
+						"url": "{{url}}/api/v1/integracao/configuracao/caixa_financeiro",
 						"description": "**GIT**\n\n  \nAtravés desse `endpoint` será possível consultar as cidades e seus respectivos bairros que estão cadastrados dentro do sistema\n\n`OBSERVAÇÃO`: Apenas as cidades e bairros que possuem clientes ativos, serão retornadas na requisição da `API`, uma vez que o sistema conta com o cadastro atualizado de todas as cidades do Brasil."
 					},
 					"response": [
 						{
-							"id": "dfb8ef49-41ab-4287-9c18-7cd73448d2d2",
+							"id": "d278a1c1-93b4-4b06-aefe-020494ea4196",
 							"name": "Consulta",
 							"originalRequest": {
 								"method": "GET",
@@ -2770,8 +2770,8 @@
 					]
 				},
 				{
-					"name": "Caixa Financeiro",
-					"id": "431b8688-0ae9-44b1-bc16-5ae888b0dc99",
+					"name": "Cidades",
+					"id": "97b11dd6-69c0-4591-ba65-a5b6a42b7ed5",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2789,7 +2789,7 @@
 					},
 					"response": [
 						{
-							"id": "d278a1c1-93b4-4b06-aefe-020494ea4196",
+							"id": "dfb8ef49-41ab-4287-9c18-7cd73448d2d2",
 							"name": "Consulta",
 							"originalRequest": {
 								"method": "GET",
@@ -2932,37 +2932,37 @@
 	],
 	"variable": [
 		{
-			"id": "49c5e390-ae43-4c56-baf8-4b4eced139e4",
+			"id": "8845e4a5-dc14-4e0a-aef6-2eee12c5bd3e",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "e2c2af02-fcdf-4d05-b563-f5993e651095",
+			"id": "a481dafd-027a-45d9-a29e-96320f825dbf",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "4777597c-7015-47e9-a992-844fe7e34a9b",
+			"id": "1b9ff5ac-311c-4520-9da0-115fe2823f45",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "e99af0c8-cef6-4c0f-afeb-0edcdac366d8",
+			"id": "259d980c-03dd-4551-9a6d-3a3248e91967",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "df6841a4-3bd8-46c4-84ae-d2b523af0b45",
+			"id": "a7c1fa62-6e06-49ee-9b4a-87ce90bd817d",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "0a59b3dc-4fff-4e28-b681-c1771253c643",
+			"id": "72fcd981-8e66-499e-8bbb-fd0e8c42877d",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "800b1490-d752-47a6-bd05-29a4c11f9943",
+			"id": "1e91168b-d6a3-46c9-8fcc-cac5fba755cd",
 			"key": "access_token",
 			"value": ""
 		}
