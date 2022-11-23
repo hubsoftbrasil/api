@@ -2770,47 +2770,6 @@
 					]
 				},
 				{
-					"name": "Meios de Pagamento",
-					"id": "e3ef9dcf-aaf7-4ebd-a6b2-f890827653e3",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "{{access_token}}",
-								"type": "text"
-							}
-						],
-						"url": "{{url}}/api/v1/integracao/configuracao/caixa_financeiro",
-						"description": "**GIT**\n\n  \nAtravés desse `endpoint` será possível consultar as cidades e seus respectivos bairros que estão cadastrados dentro do sistema\n\n`OBSERVAÇÃO`: Apenas as cidades e bairros que possuem clientes ativos, serão retornadas na requisição da `API`, uma vez que o sistema conta com o cadastro atualizado de todas as cidades do Brasil."
-					},
-					"response": [
-						{
-							"id": "4c7530b0-2cf2-4d55-8ce3-282b2f387928",
-							"name": "Consulta",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "{{access_token}}",
-										"type": "text"
-									}
-								],
-								"url": "{{url}}/api/v1/integracao/configuracao/caixa_financeiro"
-							},
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Caixas Finaceiros consultados com sucesso\",\r\n    \"caixas_financeiro\": [\r\n        {\r\n            \"id_caixa_financeiro\": 123,\r\n            \"descricao\": \"CAIXA BANCO ABC\"\r\n        },\r\n        {\r\n            \"id_caixa_financeiro\": 139,\r\n            \"descricao\": \"CAIXA BANCO TESTE\"\r\n        },\r\n        {\r\n            \"id_caixa_financeiro\": 143,\r\n            \"descricao\": \"CAIXA CARTÃO DE CRÉDITO\"\r\n        }\r\n    ]\r\n}"
-						}
-					]
-				},
-				{
 					"name": "Cidades",
 					"id": "97b11dd6-69c0-4591-ba65-a5b6a42b7ed5",
 					"protocolProfileBehavior": {
@@ -2848,6 +2807,47 @@
 							"cookie": [],
 							"responseTime": null,
 							"body": " {\r\n    \"status\": \"success\",\r\n    \"msg\": \"Dados consultados com sucesso.\",\r\n    \"cidades\": [\r\n        {\r\n            \"id_cidade\": 1393,\r\n            \"nome\": \"Araújos\",\r\n            \"uf\": \"MG\",\r\n            \"ibge\": \"3103900\",\r\n            \"bairros\": [\r\n                {\r\n                    \"nome\": \"ANTONIA DE LURDES\"\r\n                },\r\n                {\r\n                    \"nome\": \"BEIRA RIO\"\r\n                },\r\n                {\r\n                    \"nome\": \"BELA VISTA\"\r\n                },\r\n                {\r\n                    \"nome\": \"CENTRO\"\r\n                },\r\n                {\r\n                    \"nome\": \"CHIQUINHO PERCILIA\"\r\n                },\r\n                {\r\n                    \"nome\": \"CIDADE NOVA\"\r\n                },\r\n                {\r\n                    \"nome\": \"CIDADE NOVO\"\r\n                },\r\n                {\r\n                    \"nome\": \"DOM CABRAL\"\r\n                },\r\n                {\r\n                    \"nome\": \"ESTEVES\"\r\n                },\r\n                {\r\n                    \"nome\": \"ESTIVA\"\r\n                },\r\n                {\r\n                    \"nome\": \"FREDERICO OZANAN\"\r\n                },\r\n                {\r\n                    \"nome\": \"GERALDO FIRMINO\"\r\n                },\r\n                {\r\n                    \"nome\": \"JOAO ALONSO\"\r\n                },\r\n                {\r\n                    \"nome\": \"JUCA FIRMINO\"\r\n                },\r\n                {\r\n                    \"nome\": \"OLAVO DA AZ\"\r\n                },\r\n                {\r\n                    \"nome\": \"OLAVO DA PAZ\"\r\n                },\r\n                {\r\n                    \"nome\": \"RESIDENCIAL OLAVO ALVES DA PAZ\"\r\n                },\r\n                {\r\n                    \"nome\": \"SANTO AGOSTINHO\"\r\n                },\r\n                {\r\n                    \"nome\": \"SANTO ANTÔNIO\"\r\n                },\r\n                {\r\n                    \"nome\": \"SOLAR\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id_cidade\": 1406,\r\n            \"nome\": \"Bambuí\",\r\n            \"uf\": \"MG\",\r\n            \"ibge\": \"3105103\",\r\n            \"bairros\": [\r\n                {\r\n                    \"nome\": \"CENTRO\"\r\n                },\r\n                {\r\n                    \"nome\": \"JARDIM AMERICA\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id_cidade\": 1416,\r\n            \"nome\": \"Belo Horizonte\",\r\n            \"uf\": \"MG\",\r\n            \"ibge\": \"3106200\",\r\n            \"bairros\": [\r\n                {\r\n                    \"nome\": \"LOURDES\"\r\n                },\r\n                {\r\n                    \"nome\": \"OURO PRETO\"\r\n                },\r\n                {\r\n                    \"nome\": \"PALMEIRAS\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}"
+						}
+					]
+				},
+				{
+					"name": "Meios de Pagamento",
+					"id": "e3ef9dcf-aaf7-4ebd-a6b2-f890827653e3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": "{{url}}/api/v1/integracao/configuracao/meio_pagamento",
+						"description": "**GIT**\n\n  \nAtravés desse `endpoint` será possível consultar as cidades e seus respectivos bairros que estão cadastrados dentro do sistema\n\n`OBSERVAÇÃO`: Apenas as cidades e bairros que possuem clientes ativos, serão retornadas na requisição da `API`, uma vez que o sistema conta com o cadastro atualizado de todas as cidades do Brasil."
+					},
+					"response": [
+						{
+							"id": "4c7530b0-2cf2-4d55-8ce3-282b2f387928",
+							"name": "Consulta",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/api/v1/integracao/configuracao/caixa_financeiro"
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Caixas Finaceiros consultados com sucesso\",\r\n    \"caixas_financeiro\": [\r\n        {\r\n            \"id_caixa_financeiro\": 123,\r\n            \"descricao\": \"CAIXA BANCO ABC\"\r\n        },\r\n        {\r\n            \"id_caixa_financeiro\": 139,\r\n            \"descricao\": \"CAIXA BANCO TESTE\"\r\n        },\r\n        {\r\n            \"id_caixa_financeiro\": 143,\r\n            \"descricao\": \"CAIXA CARTÃO DE CRÉDITO\"\r\n        }\r\n    ]\r\n}"
 						}
 					]
 				},
@@ -2973,37 +2973,37 @@
 	],
 	"variable": [
 		{
-			"id": "be087309-8dae-4855-b7f7-376b22cb4dcb",
+			"id": "6b07cbb7-f553-4de6-a9a4-e4fcb376c60a",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "00375aad-54bd-4ff2-aff5-a0f6983c1977",
+			"id": "8d8cb224-98fb-477f-bb5c-e0a2d72a9ff9",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "ca6d4027-e008-4472-974d-2d5557197778",
+			"id": "abe43996-d8d6-4585-97e5-7153db958487",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "f1a88783-04fa-400e-abfc-9dcf0e636fd0",
+			"id": "c39bcfdf-589a-49bd-abe9-21c1ad378bec",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "32a8f2d7-daa4-43ca-9f4c-079cf19cce7c",
+			"id": "98251495-58e3-4020-b223-c4b5e760dd69",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "c76c2c30-f794-4bca-aa56-fa040c2718be",
+			"id": "e79b1a66-bed9-4463-b43d-360595537958",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "a25efeda-d3f9-4180-930c-13f112213650",
+			"id": "107cbdb7-7848-412f-bdcc-7ee41bf05b20",
 			"key": "access_token",
 			"value": ""
 		}
