@@ -1357,7 +1357,7 @@
 									}
 								],
 								"url": "{{url}}/api/v1/integracao/financeiro/fatura",
-								"description": "**GET**\n\nNo método `GET`, irá consultar/listar os dados de faturas e retornar um `JSON` como resposta. Os dados serão retornados de forma paginada, portanto fique atento ao conjunto da dados \"paginacao\" que é retornado na resposta, para saber se será necessário consultar outras páginas ou não.\n\nOs seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| pagina | Página a ser exibida | Não |\n| itens_por_pagina | Itens por Página a serem exibidos. Mínimo: 1, Máximo: 500. | Não |\n| documento | CNPJ da Empresa emissora da fatura | Não |\n| busca | Tipo de busca que deseja fazer no cliente | Não |\n| termo_busca | Termo utilizado para fazer a busca | Não |\n| tipo_data | Tipo de data que será utilizada | Não |\n| tipo_resultado | Tipo de resultado que será devolvido na resposta | Não |\n| data_inicio | Data de início da filtragem de dados | Não |\n| data_fim | Data final da filtragem de dados | Não |\n| apenas_quitado | Indica o status desejado das faturas | Não |\n| valor_zerado | Indica se deseja listar as faturs com valor = 0 | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| pagina | Campo Inteiro (integer) | 0 |\n| itens_por_pagina | Campo Inteiro (integer) | 50 |\n| documento | CNPJ da Empresa emissora | `NULL` |\n| busca | id_cliente, codigo_cliente, cpf_cnpj, id_cliente_servico | `NULL` |\n| termo_busca | Campo livre (Qualquer valor será aceito) | `NULL` |\n| tipo_data | data_vencimento, data_pagamento, data_cadastro | data_vencimento |\n| tipo_resultado | simplificado, detalhado | simplificado |\n| data_inicio | Campo no formato Date (YYYY-MM-DD) | 10 dias anterioes à data atual |\n| data_fim | Campo no formato Date (YYYY-MM-DD) | Data Atual |\n| apenas_quitado | sim,nao | nao |\n| valor_zerado | sim,nao | nao |"
+								"description": "Através desse `endpoint`, será possível fazer a liquidação de uma fatura no HubSoft. Esse endpoint é normalmente utilizado, quando se deseja utilizar uma forma externa ao HubSoft para receber o boleto de um cliente, por exemplo, um aplicativo customizado, uma central do assinante customizada, totem para auto atendimento, etc.\n\nOs seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_fatura | ID da Fatura | Sim |\n| id_caixa_financeiro | ID do Caixa Financeiro | Sim |\n| data_pagamento | Data do Pagamento | Sim |\n| valor_pago | Valor Pago | Sim |\n| juros | Valor de Juros/Multas | Não |\n| meio_pagamento | Meio de Pagamento | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_fatura | Campo Inteiro (integer) | `NULL` |\n| id_caixa_financeiro | Campo Inteiro (integer) | `NULL` |\n| data_pagamento | Campo no formato Date (YYYY-MM-DD) | `NULL` |\n| valor_pago | Campo númerico com 2 casas decimais. EX: R$ 99,85 = 99.87 | `NULL` |\n| juros | Campo númerico com 2 casas decimais. EX: R$ 99,90 = 99.90 | `NULL` |\n| meio_pagamento | Prefixo do Meio de Pagamento. | dinheiro |\n\nO campo `meio_pagamento` possui por padrão os seguintes prefixos: `boleto`, `cartao_credito`, `cartao_debito`, `cheque`, `debito_automatico`, `dinheiro`, `pix`, `transferencia`\n\nPorém, caso seja necessário utilizar outros meios de pagamento, basta fazer o cadastro pela interface WEB do sisema em `Configuração > Financeiro > Meios de Pagamento`"
 							},
 							"response": [
 								{
@@ -3035,37 +3035,37 @@
 	],
 	"variable": [
 		{
-			"id": "63e5e58e-f262-4453-9771-27995e308534",
+			"id": "1baf0595-38a1-4abb-9cd8-1566b6f0458f",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "1d22a239-cace-4843-96c9-edaa30e0740c",
+			"id": "62ff35ee-6c63-4fbf-9d69-321d65e2eb78",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "0963828b-7baf-463d-8873-933ddad16725",
+			"id": "56f725bc-77d7-4114-8c72-314f457048a4",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "6368168a-2d52-41ff-bc60-539f3001c000",
+			"id": "36c48f89-108c-4f21-b0d3-48b6cc806388",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "63a9d7c2-457a-4486-b070-ebefd9c73cfc",
+			"id": "aad0aafb-07ae-4c1a-9347-8d3644fc1300",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "b8deca53-017e-4f34-967d-aabe252c1cb8",
+			"id": "201991db-2329-4127-b5e7-89be221de141",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "6a2c302b-d397-429e-8902-df54ecfb7a3f",
+			"id": "bf029faa-cabd-4cd0-bc2b-000db12c9c1c",
 			"key": "access_token",
 			"value": ""
 		}
