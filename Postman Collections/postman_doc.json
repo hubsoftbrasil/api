@@ -2841,7 +2841,7 @@
 										"type": "text"
 									}
 								],
-								"url": "{{url}}/api/v1/integracao/configuracao/caixa_financeiro"
+								"url": "{{url}}/api/v1/integracao/configuracao/meio_pagamento"
 							},
 							"_postman_previewlanguage": "json",
 							"header": null,
@@ -2973,37 +2973,37 @@
 	],
 	"variable": [
 		{
-			"id": "6b07cbb7-f553-4de6-a9a4-e4fcb376c60a",
+			"id": "7cbdcfb6-b376-48ad-bcac-728c8f526e61",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "8d8cb224-98fb-477f-bb5c-e0a2d72a9ff9",
+			"id": "261383f6-ccae-42cc-9f2d-fcca6e959869",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "abe43996-d8d6-4585-97e5-7153db958487",
+			"id": "dec6df37-f4ab-4539-8868-179a024b8e43",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "c39bcfdf-589a-49bd-abe9-21c1ad378bec",
+			"id": "ad225745-d76a-4e82-9146-a3ef98eedd82",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "98251495-58e3-4020-b223-c4b5e760dd69",
+			"id": "05d6f013-283e-4a74-8bfd-6e700b019fd2",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "e79b1a66-bed9-4463-b43d-360595537958",
+			"id": "90566b1f-1cc8-4ca2-bc6e-ccbc8565b83d",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "107cbdb7-7848-412f-bdcc-7ee41bf05b20",
+			"id": "894c3a49-c6b4-43e8-b0ec-ff6fd4ebbeb3",
 			"key": "access_token",
 			"value": ""
 		}
