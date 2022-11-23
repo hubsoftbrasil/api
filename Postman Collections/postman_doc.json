@@ -2766,26 +2766,6 @@
 							"cookie": [],
 							"responseTime": null,
 							"body": " {\r\n    \"status\": \"success\",\r\n    \"msg\": \"Dados consultados com sucesso.\",\r\n    \"cidades\": [\r\n        {\r\n            \"id_cidade\": 1393,\r\n            \"nome\": \"Araújos\",\r\n            \"uf\": \"MG\",\r\n            \"ibge\": \"3103900\",\r\n            \"bairros\": [\r\n                {\r\n                    \"nome\": \"ANTONIA DE LURDES\"\r\n                },\r\n                {\r\n                    \"nome\": \"BEIRA RIO\"\r\n                },\r\n                {\r\n                    \"nome\": \"BELA VISTA\"\r\n                },\r\n                {\r\n                    \"nome\": \"CENTRO\"\r\n                },\r\n                {\r\n                    \"nome\": \"CHIQUINHO PERCILIA\"\r\n                },\r\n                {\r\n                    \"nome\": \"CIDADE NOVA\"\r\n                },\r\n                {\r\n                    \"nome\": \"CIDADE NOVO\"\r\n                },\r\n                {\r\n                    \"nome\": \"DOM CABRAL\"\r\n                },\r\n                {\r\n                    \"nome\": \"ESTEVES\"\r\n                },\r\n                {\r\n                    \"nome\": \"ESTIVA\"\r\n                },\r\n                {\r\n                    \"nome\": \"FREDERICO OZANAN\"\r\n                },\r\n                {\r\n                    \"nome\": \"GERALDO FIRMINO\"\r\n                },\r\n                {\r\n                    \"nome\": \"JOAO ALONSO\"\r\n                },\r\n                {\r\n                    \"nome\": \"JUCA FIRMINO\"\r\n                },\r\n                {\r\n                    \"nome\": \"OLAVO DA AZ\"\r\n                },\r\n                {\r\n                    \"nome\": \"OLAVO DA PAZ\"\r\n                },\r\n                {\r\n                    \"nome\": \"RESIDENCIAL OLAVO ALVES DA PAZ\"\r\n                },\r\n                {\r\n                    \"nome\": \"SANTO AGOSTINHO\"\r\n                },\r\n                {\r\n                    \"nome\": \"SANTO ANTÔNIO\"\r\n                },\r\n                {\r\n                    \"nome\": \"SOLAR\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id_cidade\": 1406,\r\n            \"nome\": \"Bambuí\",\r\n            \"uf\": \"MG\",\r\n            \"ibge\": \"3105103\",\r\n            \"bairros\": [\r\n                {\r\n                    \"nome\": \"CENTRO\"\r\n                },\r\n                {\r\n                    \"nome\": \"JARDIM AMERICA\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id_cidade\": 1416,\r\n            \"nome\": \"Belo Horizonte\",\r\n            \"uf\": \"MG\",\r\n            \"ibge\": \"3106200\",\r\n            \"bairros\": [\r\n                {\r\n                    \"nome\": \"LOURDES\"\r\n                },\r\n                {\r\n                    \"nome\": \"OURO PRETO\"\r\n                },\r\n                {\r\n                    \"nome\": \"PALMEIRAS\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}"
-						},
-						{
-							"id": "7a89a34a-82a2-4246-a7fc-c3499020b5fb",
-							"name": "Sucesso",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "{{access_token}}",
-										"type": "text"
-									}
-								],
-								"url": "{{url}}/api/v1/integracao/configuracao/caixa_financeiro"
-							},
-							"_postman_previewlanguage": null,
-							"header": null,
-							"cookie": [],
-							"responseTime": null,
-							"body": null
 						}
 					]
 				},
@@ -2952,37 +2932,37 @@
 	],
 	"variable": [
 		{
-			"id": "26dded67-ff92-454d-9f85-d6eb2df27faf",
+			"id": "c8bdb6a5-a485-4131-91e4-f542d65a31b6",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "87fe5a4e-317b-4136-9431-4d4033d29fa5",
+			"id": "bbc93ee7-1b6d-480b-86f1-1e6707853c02",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "188f9fc8-56da-4925-8d19-9539c518631e",
+			"id": "8e90c367-8e50-4a58-a79d-c8d2f0f901d1",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "094b76dd-86af-419f-8923-f41ea953df59",
+			"id": "ce063b0c-94ad-4d72-b37d-b81be2ecd623",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "d120755c-cf9f-4260-a79c-dc7c39013093",
+			"id": "4da8c1d7-2d8e-45b4-8436-c425e06020ea",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "77ed4e53-10af-4d64-9b12-17d4bf542cf2",
+			"id": "5cae61a4-2998-44af-a089-5d3b960b4d88",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "a36f226b-208e-49a9-99c2-1f1001f115fd",
+			"id": "e4752273-dbdd-4667-b82a-0d4a633c881f",
 			"key": "access_token",
 			"value": ""
 		}
