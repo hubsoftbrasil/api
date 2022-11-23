@@ -2770,6 +2770,47 @@
 					]
 				},
 				{
+					"name": "Meios de Pagamento",
+					"id": "e3ef9dcf-aaf7-4ebd-a6b2-f890827653e3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": "{{url}}/api/v1/integracao/configuracao/caixa_financeiro",
+						"description": "**GIT**\n\n  \nAtravés desse `endpoint` será possível consultar as cidades e seus respectivos bairros que estão cadastrados dentro do sistema\n\n`OBSERVAÇÃO`: Apenas as cidades e bairros que possuem clientes ativos, serão retornadas na requisição da `API`, uma vez que o sistema conta com o cadastro atualizado de todas as cidades do Brasil."
+					},
+					"response": [
+						{
+							"id": "4c7530b0-2cf2-4d55-8ce3-282b2f387928",
+							"name": "Consulta",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/api/v1/integracao/configuracao/caixa_financeiro"
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Caixas Finaceiros consultados com sucesso\",\r\n    \"caixas_financeiro\": [\r\n        {\r\n            \"id_caixa_financeiro\": 123,\r\n            \"descricao\": \"CAIXA BANCO ABC\"\r\n        },\r\n        {\r\n            \"id_caixa_financeiro\": 139,\r\n            \"descricao\": \"CAIXA BANCO TESTE\"\r\n        },\r\n        {\r\n            \"id_caixa_financeiro\": 143,\r\n            \"descricao\": \"CAIXA CARTÃO DE CRÉDITO\"\r\n        }\r\n    ]\r\n}"
+						}
+					]
+				},
+				{
 					"name": "Cidades",
 					"id": "97b11dd6-69c0-4591-ba65-a5b6a42b7ed5",
 					"protocolProfileBehavior": {
@@ -2932,37 +2973,37 @@
 	],
 	"variable": [
 		{
-			"id": "314df98a-d01c-4e54-8379-ac16bbcaa393",
+			"id": "be087309-8dae-4855-b7f7-376b22cb4dcb",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "be69cfe9-81ff-4a92-ad66-ac0923025557",
+			"id": "00375aad-54bd-4ff2-aff5-a0f6983c1977",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "c44b6164-9250-4f78-b8a1-4fbccff9fd6a",
+			"id": "ca6d4027-e008-4472-974d-2d5557197778",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "b22d018d-70c7-4ca6-b303-50cb1c3d8fdc",
+			"id": "f1a88783-04fa-400e-abfc-9dcf0e636fd0",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "5e599707-834b-44bc-8bce-bd234a0b7cf8",
+			"id": "32a8f2d7-daa4-43ca-9f4c-079cf19cce7c",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "8465ae08-a518-4bd8-836c-eceff39dcaf1",
+			"id": "c76c2c30-f794-4bca-aa56-fa040c2718be",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "ab1330a7-080f-41d2-9665-55e65e562344",
+			"id": "a25efeda-d3f9-4180-930c-13f112213650",
 			"key": "access_token",
 			"value": ""
 		}
