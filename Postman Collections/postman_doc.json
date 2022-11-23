@@ -1379,6 +1379,26 @@
 									"cookie": [],
 									"responseTime": null,
 									"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Liquidação efetuada com sucesso\",\r\n    \"recibo\": {\r\n        \"id_recibo\": 2514,\r\n        \"numero_recibo\": \"622fffb79b057\",\r\n        \"data_pagamento\": \"2022-11-23\",\r\n        \"valor_pago\": 89.9,\r\n        \"cliente\": {\r\n            \"codigo_cliente\": 1382,\r\n            \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO\",\r\n            \"cpf_cnpj\": \"12345678900\"\r\n        }\r\n    }\r\n}"
+								},
+								{
+									"id": "12ff3ba3-f243-40fa-bc68-b39e3d784933",
+									"name": "Erro",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"type": "text"
+											}
+										],
+										"url": "{{url}}/api/v1/integracao/financeiro/fatura/liquidar"
+									},
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\r\n    \"status\": \"error\",\r\n    \"msg\": \"A fatura de ID 93723 já encontra-se quitada com data de pagamento em 23/11/2022\",\r\n    \"errors\": []\r\n}"
 								}
 							]
 						}
@@ -3015,37 +3035,37 @@
 	],
 	"variable": [
 		{
-			"id": "44f25281-1829-41f5-9a8b-d11cbfed42a3",
+			"id": "c8a56a43-03c0-48fe-bb56-dbdb8aa5a27a",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "4c625bb0-8a42-4e41-b5de-1997396663f2",
+			"id": "7b41e1ec-d708-4633-8bf8-79b51a4242c3",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "56d1069f-8be5-4ee9-b80f-8317227cfd28",
+			"id": "925a1b0b-ec5d-46ea-a486-4ec50ed94b43",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "c3896b65-395b-4b31-88e3-6302e21ffd00",
+			"id": "ad35b708-25d1-4b95-8a96-df4455ef3aec",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "7bb91aaa-c582-452b-8a94-52aa7feda9b1",
+			"id": "29190523-76ee-4e41-be26-3aeccc16e509",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "11078713-a19f-4945-8b09-38a82cacef92",
+			"id": "eae435e6-0943-43f0-97ff-0c651853f1d5",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "42a07239-e1ff-4cca-8808-b10f7d90d1e9",
+			"id": "f3393ab8-4e30-467e-b8ee-cd20d0883343",
 			"key": "access_token",
 			"value": ""
 		}
