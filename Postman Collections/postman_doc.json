@@ -2826,7 +2826,7 @@
 							}
 						],
 						"url": "{{url}}/api/v1/integracao/configuracao/meio_pagamento",
-						"description": "Através desse `endpoint` será possível consultar as cidades e seus respectivos bairros que estão cadastrados dentro do sistema\n\n`OBSERVAÇÃO`: Apenas as cidades e bairros que possuem clientes ativos, serão retornadas na requisição da `API`, uma vez que o sistema conta com o cadastro atualizado de todas as cidades do Brasil."
+						"description": "Através desse `endpoint` será possível consultar os meios de pagamento que estão cadastrados e ativos no sistema.\n\n`OBSERVAÇÃO`: O uso dessa API será muito útil para complementar a API de Liquidação de faturas, onde é possível especificar o prefixo do meio de pagamento.\n\n`OBSERVAÇÃO 2:` Para incrementar novos meios de pagamento, basta cadastrá-los através da interface WEB do sistema em `Configuração > Financeiro > Meios de Pagamento`"
 					},
 					"response": [
 						{
@@ -2973,37 +2973,37 @@
 	],
 	"variable": [
 		{
-			"id": "5905b50b-d6f0-4d45-8604-2ae80309ab4e",
+			"id": "5f0da29f-de65-4eba-95be-b9dcef187e46",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "090eb55d-cf11-4b80-8afe-6d24f88aaef2",
+			"id": "73be8779-dafe-4986-a630-22416bcc39f8",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "6722648b-f6e1-4b30-a8f8-86c60ffd7248",
+			"id": "a8c437e9-e516-4206-8332-710175e8bfed",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "7f7de2f2-82e6-46d1-81f6-bd26d4663719",
+			"id": "cb94c951-3551-450c-8711-4ad7281a632f",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "47669e4c-2fc1-41e0-bf48-44acbf83afcb",
+			"id": "04d73b2a-cfd7-4506-9b09-a3d08eb74d7e",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "91b34c7e-7f8a-49ed-9f6d-ce4d87cb5e23",
+			"id": "a4b657a1-d5d3-47fd-913a-2a0cefc5d6ab",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "e0859173-79a8-434f-9676-37c370717e80",
+			"id": "1360f07f-0008-438f-8f93-c18db4703cbb",
 			"key": "access_token",
 			"value": ""
 		}
