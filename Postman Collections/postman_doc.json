@@ -2800,7 +2800,7 @@
 										"type": "text"
 									}
 								],
-								"url": "{{url}}/api/v1/integracao/cidade"
+								"url": "{{url}}/api/v1/integracao/configuracao/cidade"
 							},
 							"_postman_previewlanguage": "json",
 							"header": null,
@@ -2932,37 +2932,37 @@
 	],
 	"variable": [
 		{
-			"id": "3113266c-ee82-4160-bedc-f2e991de0b17",
+			"id": "314df98a-d01c-4e54-8379-ac16bbcaa393",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "1596f289-5ac4-4ae5-bd44-2b386423a539",
+			"id": "be69cfe9-81ff-4a92-ad66-ac0923025557",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "a884d054-78f5-4c3c-ac25-19ff3f57083e",
+			"id": "c44b6164-9250-4f78-b8a1-4fbccff9fd6a",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "99d407d4-e97b-4caa-9475-cc5d5687df7c",
+			"id": "b22d018d-70c7-4ca6-b303-50cb1c3d8fdc",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "0914502e-db90-4382-83e4-766596827923",
+			"id": "5e599707-834b-44bc-8bce-bd234a0b7cf8",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "463b8fe7-35ee-4ad5-a19e-6e7aa227b6ee",
+			"id": "8465ae08-a518-4bd8-836c-eceff39dcaf1",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "1ad582f2-60ea-481d-bbfd-e1b0984c7e89",
+			"id": "ab1330a7-080f-41d2-9665-55e65e562344",
 			"key": "access_token",
 			"value": ""
 		}
