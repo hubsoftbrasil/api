@@ -1339,18 +1339,6 @@
 									"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Dados consultados com sucesso.\",\r\n    \"paginacao\": {\r\n        \"primeira_pagina\": 0,\r\n        \"ultima_pagina\": 6,\r\n        \"pagina_atual\": 0,\r\n        \"total_registros\": 68\r\n    },\r\n    \"faturas\": [\r\n        {\r\n            \"id_fatura\": 62636,\r\n            \"nosso_numero\": \"1900247\",\r\n            \"data_vencimento\": \"2020-04-05\",\r\n            \"data_pagamento\": \"2020-04-05\",\r\n            \"data_credito\":\"2020-04-06\",\r\n            \"data_cadastro\": \"2020-01-01 12:52:12\",\r\n            \"valor\": \"119.9\",\r\n            \"valor_pago\": \"109.9\",\r\n            \"linha_digitavel\": \"75691.31662 01006.726101 27182.400013 8 72930000002827\",\r\n            \"codigo_barras\": \"75698729300000028271316601006726102718240001\",\r\n            \"empresa\": {\r\n                \"documento\": \"36636392000127\",\r\n                \"nome_razaosocial\": \"SERVIÇOS DE TECNOLOGIA\",\r\n                \"nome_fantasia\": \"SERVIÇOS\"\r\n            },\r\n            \"cliente\": {\r\n                \"id_cliente\": 11943,\r\n                \"codigo_cliente\": 1162,\r\n                \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO\",\r\n                \"nome_fantasia\": null,\r\n                \"tipo_pessoa\": \"pf\",\r\n                \"cpf_cnpj\": \"41107296617\",\r\n                \"data_nascimento\": \"1994-03-10\",\r\n                \"telefone_primario\": \"37999091234\",\r\n                \"telefone_secundario\": \"373415100\",\r\n                \"telefone_terciario\": null,\r\n                \"email_principal\": \"email@cliente.com.b4\",\r\n                \"email_secundario\": null,\r\n                \"data_cadastro\": \"2017-09-26 13:20:33\",\r\n                \"ativo\": true\r\n            }\r\n        },\r\n        {\r\n            \"id_fatura\": 62634,\r\n            \"nosso_numero\": \"1900245\",\r\n            \"data_vencimento\": \"2020-04-05\",\r\n            \"data_pagamento\": null,\r\n            \"data_credito\":null,\r\n            \"data_cadastro\": \"2020-01-01 12:52:12\",\r\n            \"valor\": \"115.9\",\r\n            \"valor_pago\": null,\r\n            \"linha_digitavel\": \"75691.31662 01006.726101 27182.400013 8 72930000002827\",\r\n            \"codigo_barras\": \"75698729300000028271316601006726102718240001\",\r\n            \"empresa\": {\r\n                \"documento\": \"36636392000127\",\r\n                \"nome_razaosocial\": \"SERVIÇOS DE TECNOLOGIA\",\r\n                \"nome_fantasia\": \"SERVIÇOS\"\r\n            },\r\n            \"cliente\": {\r\n                \"id_cliente\": 11943,\r\n                \"codigo_cliente\": 1162,\r\n                \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO\",\r\n                \"nome_fantasia\": null,\r\n                \"tipo_pessoa\": \"pf\",\r\n                \"cpf_cnpj\": \"41107296617\",\r\n                \"data_nascimento\": \"1994-03-10\",\r\n                \"telefone_primario\": \"37999091234\",\r\n                \"telefone_secundario\": \"373415100\",\r\n                \"telefone_terciario\": null,\r\n                \"email_principal\": \"email@cliente.com.b4\",\r\n                \"email_secundario\": null,\r\n                \"data_cadastro\": \"2017-09-26 13:20:33\",\r\n                \"ativo\": true\r\n            }\r\n        },\r\n        {\r\n            \"id_fatura\": 62625,\r\n            \"nosso_numero\": \"1900242\",\r\n            \"data_vencimento\": \"2020-04-05\",\r\n            \"data_pagamento\": null,\r\n            \"data_credito\":null,\r\n            \"data_cadastro\": \"2020-01-01 12:52:12\",\r\n            \"valor\": \"169.9\",\r\n            \"valor_pago\": null,\r\n            \"linha_digitavel\": \"75691.31662 01006.726101 27182.400013 8 72930000002827\",\r\n            \"codigo_barras\": \"75698729300000028271316601006726102718240001\",\r\n            \"empresa\": {\r\n                \"documento\": \"36636392000127\",\r\n                \"nome_razaosocial\": \"SERVIÇOS DE TECNOLOGIA\",\r\n                \"nome_fantasia\": \"SERVIÇOS\"\r\n            },\r\n            \"cliente\": {\r\n                \"id_cliente\": 11943,\r\n                \"codigo_cliente\": 1162,\r\n                \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO\",\r\n                \"nome_fantasia\": null,\r\n                \"tipo_pessoa\": \"pf\",\r\n                \"cpf_cnpj\": \"41107296617\",\r\n                \"data_nascimento\": \"1994-03-10\",\r\n                \"telefone_primario\": \"37999091234\",\r\n                \"telefone_secundario\": \"373415100\",\r\n                \"telefone_terciario\": null,\r\n                \"email_principal\": \"email@cliente.com.b4\",\r\n                \"email_secundario\": null,\r\n                \"data_cadastro\": \"2017-09-26 13:20:33\",\r\n                \"ativo\": true\r\n            }\r\n        },\r\n        {\r\n            \"id_fatura\": 62628,\r\n            \"nosso_numero\": \"212\",\r\n            \"data_vencimento\": \"2020-04-05\",\r\n            \"data_pagamento\": null,\r\n            \"data_credito\":null,\r\n            \"data_cadastro\": \"2020-01-01 12:52:12\",\r\n            \"valor\": \"40.3\",\r\n            \"valor_pago\": null,\r\n            \"linha_digitavel\": \"75691.31662 01006.726101 27182.400013 8 72930000002827\",\r\n            \"codigo_barras\": \"75698729300000028271316601006726102718240001\",\r\n            \"empresa\": {\r\n                \"documento\": \"36636392000127\",\r\n                \"nome_razaosocial\": \"SERVIÇOS DE TECNOLOGIA\",\r\n                \"nome_fantasia\": \"SERVIÇOS\"\r\n            },\r\n            \"cliente\": {\r\n                \"id_cliente\": 11943,\r\n                \"codigo_cliente\": 1162,\r\n                \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO\",\r\n                \"nome_fantasia\": null,\r\n                \"tipo_pessoa\": \"pf\",\r\n                \"cpf_cnpj\": \"41107296617\",\r\n                \"data_nascimento\": \"1994-03-10\",\r\n                \"telefone_primario\": \"37999091234\",\r\n                \"telefone_secundario\": \"373415100\",\r\n                \"telefone_terciario\": null,\r\n                \"email_principal\": \"email@cliente.com.b4\",\r\n                \"email_secundario\": null,\r\n                \"data_cadastro\": \"2017-09-26 13:20:33\",\r\n                \"ativo\": true\r\n            }\r\n        }\r\n    ]\r\n}"
 								}
 							]
-						},
-						{
-							"name": "New Request",
-							"id": "14931e27-bc35-4f26-a212-256b172f55e8",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": []
-							},
-							"response": []
 						}
 					],
 					"id": "074e240a-259c-4b50-82df-4d9fbf78747e"
@@ -2985,37 +2973,37 @@
 	],
 	"variable": [
 		{
-			"id": "185fe0c1-de0b-4b47-a4be-e2ea36e3355b",
+			"id": "002fb1df-3da3-4ef6-a4c7-f6bd24ab0fab",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "023a062b-c4e4-4617-ad31-a69b3a7cff9f",
+			"id": "19f6403c-2d1d-4bbe-99df-a94e4ad4c07a",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "5106d8f0-b490-4196-b8bc-fa5926bacea8",
+			"id": "1fcb899a-989d-4277-b878-3c45ae0e6d73",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "e4d63dbc-2803-4a1b-8bea-57e7182188ea",
+			"id": "4746f3f8-1c4b-421f-bcb4-831c49fbda8a",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "d407c17d-010f-45d6-92af-45ff2cfb6ddd",
+			"id": "c319f75e-031a-4657-b5ee-0e68aa233a8a",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "93d8f044-3c92-487d-a69a-c19f7a0ae0b1",
+			"id": "aa9b53c9-3508-4959-b99b-92f4239d3280",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "8b1df316-fb2a-48da-9920-86589715c104",
+			"id": "6822b14e-0a46-4b2d-9fb5-fe50e69555c0",
 			"key": "access_token",
 			"value": ""
 		}
