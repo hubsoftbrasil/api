@@ -1398,7 +1398,7 @@
 									"header": null,
 									"cookie": [],
 									"responseTime": null,
-									"body": "{\r\n    \"status\": \"error\",\r\n    \"msg\": \"A fatura de ID 93723 já encontra-se quitada com data de pagamento em 23/11/2022\",\r\n    \"errors\": []\r\n}"
+									"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Liquidação efetuada com sucesso\",\r\n    \"recibo\": {\r\n        \"id_recibo\": 2514,\r\n        \"numero_recibo\": \"622fffb79b057\",\r\n        \"data_pagamento\": \"2022-11-23\",\r\n        \"valor_pago\": 89.9,\r\n        \"cliente\": {\r\n            \"codigo_cliente\": 1382,\r\n            \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO\",\r\n            \"cpf_cnpj\": \"12345678900\"\r\n        }\r\n    }\r\n}"
 								}
 							]
 						}
@@ -3035,37 +3035,37 @@
 	],
 	"variable": [
 		{
-			"id": "c8a56a43-03c0-48fe-bb56-dbdb8aa5a27a",
+			"id": "2b56ba1b-13af-4b2e-83b9-ade75da651e3",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "7b41e1ec-d708-4633-8bf8-79b51a4242c3",
+			"id": "bf5099d8-ebf8-45f0-9ace-c314babbb160",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "925a1b0b-ec5d-46ea-a486-4ec50ed94b43",
+			"id": "576c73e8-3e49-4e2c-b43d-3d145416c353",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "ad35b708-25d1-4b95-8a96-df4455ef3aec",
+			"id": "8275cc0a-f2c7-46b6-9e4c-1afab19991f1",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "29190523-76ee-4e41-be26-3aeccc16e509",
+			"id": "f8ad3472-d6ba-491c-a4df-620ca3113608",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "eae435e6-0943-43f0-97ff-0c651853f1d5",
+			"id": "e7b53904-95b8-4564-8534-0e1f6d4316fc",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "f3393ab8-4e30-467e-b8ee-cd20d0883343",
+			"id": "235e7cf9-103d-465f-bb97-6eed216d6863",
 			"key": "access_token",
 			"value": ""
 		}
