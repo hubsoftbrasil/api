@@ -1372,13 +1372,13 @@
 												"type": "text"
 											}
 										],
-										"url": "{{url}}/api/v1/integracao/financeiro/fatura"
+										"url": "{{url}}/api/v1/integracao/financeiro/fatura/liquidar"
 									},
 									"_postman_previewlanguage": "json",
 									"header": null,
 									"cookie": [],
 									"responseTime": null,
-									"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Dados consultados com sucesso\",\r\n    \"paginacao\": {\r\n        \"primeira_pagina\": 0,\r\n        \"ultima_pagina\": 10282,\r\n        \"pagina_atual\": 0,\r\n        \"total_registros\": 30847\r\n    },\r\n    \"faturas\": [\r\n        {\r\n            \"id_fatura\": 24979,\r\n            \"id_carne\": null,\r\n            \"id_cliente_servico\": 12066,\r\n            \"nosso_numero\": \"271824\",\r\n            \"data_vencimento\": \"2017-09-25\",\r\n            \"data_pagamento\": null,\r\n            \"data_cadastro\": \"2017-09-14 17:08:32\",\r\n            \"data_credito\": null,\r\n            \"valor\": \"28.27\",\r\n            \"valor_pago\": null,\r\n            \"linha_digitavel\": \"75691.31662 01006.726101 27182.400013 8 72930000002827\",\r\n            \"codigo_barras\": \"75698729300000028271316601006726102718240001\",\r\n            \"empresa\": {\r\n                \"documento\": \"36636392000127\",\r\n                \"nome_razaosocial\": \"SERVIÇOS DE TECNOLOGIA\",\r\n                \"nome_fantasia\": \"SERVIÇOS\"\r\n            },\r\n            \"cliente\": {\r\n                \"id_cliente\": 11533,\r\n                \"codigo_cliente\": 753,\r\n                \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO\",\r\n                \"nome_fantasia\": null,\r\n                \"tipo_pessoa\": \"pf\",\r\n                \"cpf_cnpj\": \"09811102600\",\r\n                \"data_nascimento\": \"1969-12-31\",\r\n                \"telefone_primario\": \"37999771122\",\r\n                \"telefone_secundario\": null,\r\n                \"telefone_terciario\": null,\r\n                \"email_principal\": \"naotem@naotem.com.br\",\r\n                \"email_secundario\": \"naotem@naotem.com.br\",\r\n                \"data_cadastro\": \"2017-09-08 00:00:00\",\r\n                \"ativo\": true\r\n            },\r\n            \"servico\": {\r\n                \"numero_plano\": 1,\r\n                \"descricao\": \"Next-1MB\"\r\n            },\r\n            \"cobrancas\": [\r\n                {\r\n                    \"id_cobranca\": 25032,\r\n                    \"descricao\": \"Serviço de Comunicação e Multimídia\",\r\n                    \"valor\": 18.50\r\n                },\r\n                {\r\n                    \"id_cobranca\": 25031,\r\n                    \"descricao\": \"Serviço de Valor Adicionado\",\r\n                    \"valor\": 9.77\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id_fatura\": 24980,\r\n            \"id_carne\": null,\r\n            \"id_cliente_servico\": 11984,\r\n            \"nosso_numero\": \"271669\",\r\n            \"data_vencimento\": \"2017-09-25\",\r\n            \"data_pagamento\": \"2018-06-26\",\r\n            \"data_cadastro\": \"2017-09-14 17:08:33\",\r\n            \"data_credito\": null,\r\n            \"valor\": \"199.9\",\r\n            \"valor_pago\": \"240.41\",\r\n            \"linha_digitavel\": \"75691.31662 01006.726101 27166.970015 2 72930000019990\",\r\n            \"codigo_barras\": \"75692729300000199901316601006726102716697001\",\r\n            \"empresa\": {\r\n                \"documento\": \"36636392000127\",\r\n                \"nome_razaosocial\": \"SERVIÇOS DE TECNOLOGIA\",\r\n                \"nome_fantasia\": \"SERVIÇOS\"\r\n            },\r\n            \"cliente\": {\r\n                \"id_cliente\": 11455,\r\n                \"codigo_cliente\": 675,\r\n                \"nome_razaosocial\": \"LUCAS THADEU\",\r\n                \"nome_fantasia\": null,\r\n                \"tipo_pessoa\": \"pf\",\r\n                \"cpf_cnpj\": \"10598805671\",\r\n                \"data_nascimento\": \"1969-12-31\",\r\n                \"telefone_primario\": \"3299910000\",\r\n                \"telefone_secundario\": null,\r\n                \"telefone_terciario\": null,\r\n                \"email_principal\": \"naotem@naotem.com.br\",\r\n                \"email_secundario\": \"naotem@naotem.com.br\",\r\n                \"data_cadastro\": \"2016-11-30 00:00:00\",\r\n                \"ativo\": true\r\n            },\r\n            \"servico\": {\r\n                \"numero_plano\": 1,\r\n                \"descricao\": \"EMPRESAX - 100MB-FIBRA-2019\"\r\n            },\r\n            \"cobrancas\": [\r\n                {\r\n                    \"id_cobranca\": 25033,\r\n                    \"descricao\": \"Serviço de Comunicação e Multimídia\",\r\n                    \"valor\": 199.9\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id_fatura\": 24981,\r\n            \"id_carne\": null,\r\n            \"id_cliente_servico\": 11534,\r\n            \"nosso_numero\": \"271825\",\r\n            \"data_vencimento\": \"2017-09-25\",\r\n            \"data_pagamento\": \"2018-06-26\",\r\n            \"data_cadastro\": \"2017-09-14 17:08:33\",\r\n            \"data_credito\": null,\r\n            \"valor\": \"48.93\",\r\n            \"valor_pago\": \"58.85\",\r\n            \"linha_digitavel\": \"75691.31662 01006.726101 27182.570013 5 72930000004893\",\r\n            \"codigo_barras\": \"75695729300000048931316601006726102718257001\",\r\n            \"empresa\": {\r\n                \"documento\": \"36636392000127\",\r\n                \"nome_razaosocial\": \"SERVIÇOS DE TECNOLOGIA\",\r\n                \"nome_fantasia\": \"SERVIÇOS\"\r\n            },\r\n            \"cliente\": {\r\n                \"id_cliente\": 11013,\r\n                \"codigo_cliente\": 233,\r\n                \"nome_razaosocial\": \"DANIELA ARAUJO\",\r\n                \"nome_fantasia\": null,\r\n                \"tipo_pessoa\": \"pf\",\r\n                \"cpf_cnpj\": \"01974442125\",\r\n                \"data_nascimento\": \"1969-12-31\",\r\n                \"telefone_primario\": \"37989991234\",\r\n                \"telefone_secundario\": \"38989991234\",\r\n                \"telefone_terciario\": null,\r\n                \"email_principal\": \"naotem@naotem.com.br\",\r\n                \"email_secundario\": \"naotem@naotem.com.br\",\r\n                \"data_cadastro\": \"2017-01-09 00:00:00\",\r\n                \"ativo\": false\r\n            },\r\n            \"servico\": {\r\n                \"numero_plano\": 1,\r\n                \"descricao\": \"EMPRESAX - 100MB-FIBRA-2019\"\r\n            },\r\n            \"cobrancas\": [\r\n                {\r\n                    \"id_cobranca\": 25034,\r\n                    \"descricao\": \"Serviço de Comunicação e Multimídia\",\r\n                    \"valor\": 28.93\r\n                },\r\n                {\r\n                    \"id_cobranca\": 25035,\r\n                    \"descricao\": \"Serviço de Valor Adicionado\",\r\n                    \"valor\": 20.00\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}"
+									"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Liquidação efetuada com sucesso\",\r\n    \"recibo\": {\r\n        \"id_recibo\": 2514,\r\n        \"numero_recibo\": \"622fffb79b057\",\r\n        \"data_pagamento\": \"2022-11-23\",\r\n        \"valor_pago\": 89.9,\r\n        \"cliente\": {\r\n            \"codigo_cliente\": 1382,\r\n            \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO\",\r\n            \"cpf_cnpj\": \"12345678900\"\r\n        }\r\n    }\r\n}"
 								}
 							]
 						}
@@ -3015,37 +3015,37 @@
 	],
 	"variable": [
 		{
-			"id": "74c667d2-90ed-40a0-8303-0aa6ff74b8f6",
+			"id": "44f25281-1829-41f5-9a8b-d11cbfed42a3",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "7c679b0c-71ca-4734-9b03-a0f1535d7720",
+			"id": "4c625bb0-8a42-4e41-b5de-1997396663f2",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "1ebfb065-cddd-48ac-9992-19d7d59815b5",
+			"id": "56d1069f-8be5-4ee9-b80f-8317227cfd28",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "19fd1509-f348-47ee-89bd-f9c442ef74cb",
+			"id": "c3896b65-395b-4b31-88e3-6302e21ffd00",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "81544d8e-68c9-4c8b-bdbe-67a05bd0f546",
+			"id": "7bb91aaa-c582-452b-8a94-52aa7feda9b1",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "e3c57d6f-25c6-4046-84ce-149d072409f4",
+			"id": "11078713-a19f-4945-8b09-38a82cacef92",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "8cdac81d-3d06-45a9-bce8-541befed243c",
+			"id": "42a07239-e1ff-4cca-8808-b10f7d90d1e9",
 			"key": "access_token",
 			"value": ""
 		}
