@@ -2759,13 +2759,13 @@
 										"type": "text"
 									}
 								],
-								"url": "{{url}}/api/v1/integracao/cidade"
+								"url": "{{url}}/api/v1/integracao/configuracao/caixa_financeiro"
 							},
 							"_postman_previewlanguage": "json",
 							"header": null,
 							"cookie": [],
 							"responseTime": null,
-							"body": " {\r\n    \"status\": \"success\",\r\n    \"msg\": \"Dados consultados com sucesso.\",\r\n    \"cidades\": [\r\n        {\r\n            \"id_cidade\": 1393,\r\n            \"nome\": \"Araújos\",\r\n            \"uf\": \"MG\",\r\n            \"ibge\": \"3103900\",\r\n            \"bairros\": [\r\n                {\r\n                    \"nome\": \"ANTONIA DE LURDES\"\r\n                },\r\n                {\r\n                    \"nome\": \"BEIRA RIO\"\r\n                },\r\n                {\r\n                    \"nome\": \"BELA VISTA\"\r\n                },\r\n                {\r\n                    \"nome\": \"CENTRO\"\r\n                },\r\n                {\r\n                    \"nome\": \"CHIQUINHO PERCILIA\"\r\n                },\r\n                {\r\n                    \"nome\": \"CIDADE NOVA\"\r\n                },\r\n                {\r\n                    \"nome\": \"CIDADE NOVO\"\r\n                },\r\n                {\r\n                    \"nome\": \"DOM CABRAL\"\r\n                },\r\n                {\r\n                    \"nome\": \"ESTEVES\"\r\n                },\r\n                {\r\n                    \"nome\": \"ESTIVA\"\r\n                },\r\n                {\r\n                    \"nome\": \"FREDERICO OZANAN\"\r\n                },\r\n                {\r\n                    \"nome\": \"GERALDO FIRMINO\"\r\n                },\r\n                {\r\n                    \"nome\": \"JOAO ALONSO\"\r\n                },\r\n                {\r\n                    \"nome\": \"JUCA FIRMINO\"\r\n                },\r\n                {\r\n                    \"nome\": \"OLAVO DA AZ\"\r\n                },\r\n                {\r\n                    \"nome\": \"OLAVO DA PAZ\"\r\n                },\r\n                {\r\n                    \"nome\": \"RESIDENCIAL OLAVO ALVES DA PAZ\"\r\n                },\r\n                {\r\n                    \"nome\": \"SANTO AGOSTINHO\"\r\n                },\r\n                {\r\n                    \"nome\": \"SANTO ANTÔNIO\"\r\n                },\r\n                {\r\n                    \"nome\": \"SOLAR\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id_cidade\": 1406,\r\n            \"nome\": \"Bambuí\",\r\n            \"uf\": \"MG\",\r\n            \"ibge\": \"3105103\",\r\n            \"bairros\": [\r\n                {\r\n                    \"nome\": \"CENTRO\"\r\n                },\r\n                {\r\n                    \"nome\": \"JARDIM AMERICA\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id_cidade\": 1416,\r\n            \"nome\": \"Belo Horizonte\",\r\n            \"uf\": \"MG\",\r\n            \"ibge\": \"3106200\",\r\n            \"bairros\": [\r\n                {\r\n                    \"nome\": \"LOURDES\"\r\n                },\r\n                {\r\n                    \"nome\": \"OURO PRETO\"\r\n                },\r\n                {\r\n                    \"nome\": \"PALMEIRAS\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}"
+							"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Caixas Finaceiros consultados com sucesso\",\r\n    \"caixas_financeiro\": [\r\n        {\r\n            \"id_caixa_financeiro\": 123,\r\n            \"descricao\": \"CAIXA BANCO ABC\"\r\n        },\r\n        {\r\n            \"id_caixa_financeiro\": 139,\r\n            \"descricao\": \"CAIXA BANCO TESTE\"\r\n        },\r\n        {\r\n            \"id_caixa_financeiro\": 143,\r\n            \"descricao\": \"CAIXA CARTÃO DE CRÉDITO\"\r\n        }\r\n    ]\r\n}"
 						}
 					]
 				},
@@ -2932,37 +2932,37 @@
 	],
 	"variable": [
 		{
-			"id": "c8bdb6a5-a485-4131-91e4-f542d65a31b6",
+			"id": "3113266c-ee82-4160-bedc-f2e991de0b17",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "bbc93ee7-1b6d-480b-86f1-1e6707853c02",
+			"id": "1596f289-5ac4-4ae5-bd44-2b386423a539",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "8e90c367-8e50-4a58-a79d-c8d2f0f901d1",
+			"id": "a884d054-78f5-4c3c-ac25-19ff3f57083e",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "ce063b0c-94ad-4d72-b37d-b81be2ecd623",
+			"id": "99d407d4-e97b-4caa-9475-cc5d5687df7c",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "4da8c1d7-2d8e-45b4-8436-c425e06020ea",
+			"id": "0914502e-db90-4382-83e4-766596827923",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "5cae61a4-2998-44af-a089-5d3b960b4d88",
+			"id": "463b8fe7-35ee-4ad5-a19e-6e7aa227b6ee",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "e4752273-dbdd-4667-b82a-0d4a633c881f",
+			"id": "1ad582f2-60ea-481d-bbfd-e1b0984c7e89",
 			"key": "access_token",
 			"value": ""
 		}
