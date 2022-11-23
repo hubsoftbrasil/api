@@ -2785,7 +2785,7 @@
 							}
 						],
 						"url": "{{url}}/api/v1/integracao/configuracao/cidade",
-						"description": "**GIT**\n\n  \nAtravés desse `endpoint` será possível consultar as cidades e seus respectivos bairros que estão cadastrados dentro do sistema\n\n`OBSERVAÇÃO`: Apenas as cidades e bairros que possuem clientes ativos, serão retornadas na requisição da `API`, uma vez que o sistema conta com o cadastro atualizado de todas as cidades do Brasil."
+						"description": "Através desse `endpoint` será possível consultar as cidades e seus respectivos bairros que estão cadastrados dentro do sistema\n\n`OBSERVAÇÃO`: Apenas as cidades e bairros que possuem clientes ativos, serão retornadas na requisição da `API`, uma vez que o sistema conta com o cadastro atualizado de todas as cidades do Brasil."
 					},
 					"response": [
 						{
@@ -2973,37 +2973,37 @@
 	],
 	"variable": [
 		{
-			"id": "e82f789d-b093-42da-8b87-23f7eb5d0205",
+			"id": "f4d21984-a82c-4031-9164-dfdf6af2263a",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "4a82dd60-aaca-4732-91a9-33b7e718180c",
+			"id": "0aa33858-1f29-441a-b3d7-7c227fa59dd6",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "3ae500ea-bf8a-4495-8913-a23c97020fb2",
+			"id": "17651a87-d940-4476-b265-eee9345cc12b",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "f70086b1-5746-4adc-bf29-6eb5a9c9cb4d",
+			"id": "8a7a9944-c1a5-4caa-b850-607b7dc98c32",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "1c8f79e6-8e17-4f9f-82f8-296bdf8e19a3",
+			"id": "c1d9b885-5c81-424e-8631-0e8e88495131",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "5690e740-dd25-45d4-9efa-ba94622ac750",
+			"id": "45c8c54c-7122-47eb-bcbd-b89eba9ac57b",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "53ac8e31-b557-463e-bb73-3f0806066ddc",
+			"id": "54ff40c1-2446-4cec-a6e5-a32f4a21b946",
 			"key": "access_token",
 			"value": ""
 		}
