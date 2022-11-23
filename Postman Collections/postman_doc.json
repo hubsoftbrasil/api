@@ -2770,6 +2770,47 @@
 					]
 				},
 				{
+					"name": "Caixa Financeiro",
+					"id": "431b8688-0ae9-44b1-bc16-5ae888b0dc99",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": "{{url}}/api/v1/integracao/configuracao/cidade",
+						"description": "**GIT**\n\n  \nAtravés desse `endpoint` será possível consultar as cidades e seus respectivos bairros que estão cadastrados dentro do sistema\n\n`OBSERVAÇÃO`: Apenas as cidades e bairros que possuem clientes ativos, serão retornadas na requisição da `API`, uma vez que o sistema conta com o cadastro atualizado de todas as cidades do Brasil."
+					},
+					"response": [
+						{
+							"id": "d278a1c1-93b4-4b06-aefe-020494ea4196",
+							"name": "Consulta",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/api/v1/integracao/cidade"
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": " {\r\n    \"status\": \"success\",\r\n    \"msg\": \"Dados consultados com sucesso.\",\r\n    \"cidades\": [\r\n        {\r\n            \"id_cidade\": 1393,\r\n            \"nome\": \"Araújos\",\r\n            \"uf\": \"MG\",\r\n            \"ibge\": \"3103900\",\r\n            \"bairros\": [\r\n                {\r\n                    \"nome\": \"ANTONIA DE LURDES\"\r\n                },\r\n                {\r\n                    \"nome\": \"BEIRA RIO\"\r\n                },\r\n                {\r\n                    \"nome\": \"BELA VISTA\"\r\n                },\r\n                {\r\n                    \"nome\": \"CENTRO\"\r\n                },\r\n                {\r\n                    \"nome\": \"CHIQUINHO PERCILIA\"\r\n                },\r\n                {\r\n                    \"nome\": \"CIDADE NOVA\"\r\n                },\r\n                {\r\n                    \"nome\": \"CIDADE NOVO\"\r\n                },\r\n                {\r\n                    \"nome\": \"DOM CABRAL\"\r\n                },\r\n                {\r\n                    \"nome\": \"ESTEVES\"\r\n                },\r\n                {\r\n                    \"nome\": \"ESTIVA\"\r\n                },\r\n                {\r\n                    \"nome\": \"FREDERICO OZANAN\"\r\n                },\r\n                {\r\n                    \"nome\": \"GERALDO FIRMINO\"\r\n                },\r\n                {\r\n                    \"nome\": \"JOAO ALONSO\"\r\n                },\r\n                {\r\n                    \"nome\": \"JUCA FIRMINO\"\r\n                },\r\n                {\r\n                    \"nome\": \"OLAVO DA AZ\"\r\n                },\r\n                {\r\n                    \"nome\": \"OLAVO DA PAZ\"\r\n                },\r\n                {\r\n                    \"nome\": \"RESIDENCIAL OLAVO ALVES DA PAZ\"\r\n                },\r\n                {\r\n                    \"nome\": \"SANTO AGOSTINHO\"\r\n                },\r\n                {\r\n                    \"nome\": \"SANTO ANTÔNIO\"\r\n                },\r\n                {\r\n                    \"nome\": \"SOLAR\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id_cidade\": 1406,\r\n            \"nome\": \"Bambuí\",\r\n            \"uf\": \"MG\",\r\n            \"ibge\": \"3105103\",\r\n            \"bairros\": [\r\n                {\r\n                    \"nome\": \"CENTRO\"\r\n                },\r\n                {\r\n                    \"nome\": \"JARDIM AMERICA\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id_cidade\": 1416,\r\n            \"nome\": \"Belo Horizonte\",\r\n            \"uf\": \"MG\",\r\n            \"ibge\": \"3106200\",\r\n            \"bairros\": [\r\n                {\r\n                    \"nome\": \"LOURDES\"\r\n                },\r\n                {\r\n                    \"nome\": \"OURO PRETO\"\r\n                },\r\n                {\r\n                    \"nome\": \"PALMEIRAS\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}"
+						}
+					]
+				},
+				{
 					"name": "Tipos de Atendimento",
 					"id": "57154c6a-c35b-4832-bd6d-2ec5fa41657b",
 					"protocolProfileBehavior": {
@@ -2891,37 +2932,37 @@
 	],
 	"variable": [
 		{
-			"id": "a9760bc7-abdb-49da-a8a9-cc8cefec5a8f",
+			"id": "49c5e390-ae43-4c56-baf8-4b4eced139e4",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "61a52115-1514-442f-a364-cfa969f79512",
+			"id": "e2c2af02-fcdf-4d05-b563-f5993e651095",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "5a86a88b-140b-4f29-9d01-b74125c7be29",
+			"id": "4777597c-7015-47e9-a992-844fe7e34a9b",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "670eaee8-1bc6-44f3-a0ad-d127623fbea2",
+			"id": "e99af0c8-cef6-4c0f-afeb-0edcdac366d8",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "8da5957d-8ea7-46e3-ad11-b66e171c5aca",
+			"id": "df6841a4-3bd8-46c4-84ae-d2b523af0b45",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "24094975-c6d8-4cab-9b9e-167f59c5a2ae",
+			"id": "0a59b3dc-4fff-4e28-b681-c1771253c643",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "238245ce-ddf2-48d2-86da-52e5a0acfb65",
+			"id": "800b1490-d752-47a6-bd05-29a4c11f9943",
 			"key": "access_token",
 			"value": ""
 		}
