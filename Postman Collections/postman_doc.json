@@ -2744,7 +2744,7 @@
 							}
 						],
 						"url": "{{url}}/api/v1/integracao/configuracao/caixa_financeiro",
-						"description": "**GIT**\n\n  \nAtravés desse `endpoint` será possível consultar as cidades e seus respectivos bairros que estão cadastrados dentro do sistema\n\n`OBSERVAÇÃO`: Apenas as cidades e bairros que possuem clientes ativos, serão retornadas na requisição da `API`, uma vez que o sistema conta com o cadastro atualizado de todas as cidades do Brasil."
+						"description": "**GIT**\n\nAtravés desse `endpoint` será possível consultar os caixas finaneiros que estão cadastrados e ativos no sistema.\n\n`OBSERVAÇÃO`: O uso dessa API será muito útil para complementar a API de Liquidação de faturas, onde se faz necessário enviar obrigatóriamente o ID do Caixa Financeiro onde se deseja realizar a liquidação."
 					},
 					"response": [
 						{
@@ -2973,37 +2973,37 @@
 	],
 	"variable": [
 		{
-			"id": "9f699f19-73e7-4f1c-be74-e8df7f58f6cd",
+			"id": "f27a1e3b-9836-4091-a2f6-ba403bc0cf1f",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "255d873b-bca5-4c9a-aa92-1e83261de7dc",
+			"id": "7b4b42fe-8f61-46a3-b812-1d5bdb1c166a",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "cd9d060c-1542-4810-804c-a21be430bdb2",
+			"id": "764ec794-e122-4676-afd5-6e722a45acb9",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "a51ebba5-a193-4523-b343-4e5936f5cc3c",
+			"id": "97f38c07-ed8f-48e2-9e87-fe036c49a721",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "6b473ca9-e108-4ee0-a5db-408225812065",
+			"id": "74d2fbb4-1b5a-476f-a422-ef88d7acc865",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "8ad7bc2b-2a36-43c6-a082-19602161be91",
+			"id": "d801fb5c-33ac-4659-ae17-492355c389e4",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "5c235f5c-38b9-46a2-8ec5-52055047b16c",
+			"id": "24afe4db-c1f4-44ed-b7d6-fd4a3eb10590",
 			"key": "access_token",
 			"value": ""
 		}
