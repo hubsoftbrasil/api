@@ -1138,7 +1138,7 @@
 									"header": null,
 									"cookie": [],
 									"responseTime": null,
-									"body": "{\r\n        \"status\": \"success\",\r\n        \"msg\": Endereço MAC resetado com sucesso!\"\r\n}"
+									"body": "{\r\n        \"status\": \"success\",\r\n        \"msg\": \"Endereço MAC resetado com sucesso!\"\r\n}"
 								}
 							]
 						}
@@ -3251,37 +3251,37 @@
 	],
 	"variable": [
 		{
-			"id": "ea5a25b5-e15c-48ab-8ff4-3fe6a4f23cdc",
+			"id": "189ed24b-4825-48c9-89ab-218b1dbe8476",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "4191747b-4df9-400b-8e92-5e440b10ccc9",
+			"id": "2916c685-d963-48d9-a74c-206fb761423e",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "af0e9abd-340f-4878-a80a-ea592739c78d",
+			"id": "1b65ba5e-fbf1-43bd-8f7d-64afaa6099c8",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "dd86a85a-87a1-4fbb-967e-51df4f5a84da",
+			"id": "18d1acde-c7db-4cd4-9f83-8a43707f2c05",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "63ba967d-51e2-45b0-b622-7f79f71ff410",
+			"id": "f5055aee-3919-4ae2-9fa7-ab832221808d",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "a02a913a-8eb3-4fc5-8eec-67f7655f472b",
+			"id": "20fa0dc7-aa16-4192-9134-bbbb2331e188",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "4540e754-cf6f-42bb-8541-d5a205ea29dd",
+			"id": "7d3ef616-8c61-4263-a62b-ee22e1efa8f8",
 			"key": "access_token",
 			"value": ""
 		}
