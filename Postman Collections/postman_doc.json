@@ -2594,41 +2594,6 @@
 							"cookie": [],
 							"responseTime": null,
 							"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Ligação notificada com sucesso\"\r\n}"
-						},
-						{
-							"id": "a1cc2e39-d56c-41e3-b141-2bcb5b7cc5de",
-							"name": "Cancelamento",
-							"originalRequest": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "{{access_token}}",
-										"type": "text"
-									},
-									{
-										"key": "Content-Type",
-										"name": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n   \"ramal\":111,\n   \"telefone\":37999912222\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{url}}/api/v1/integracao/pbx/ligacao/notificar"
-							},
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Ligação cancelada com sucesso\"\r\n}"
 						}
 					]
 				},
@@ -2660,41 +2625,6 @@
 						"description": "**POST**\n\nAtravés deste `endpoint`, de ambas as rotas poderão ser realizadas as notificações e cancelamento de ligações.\n\n**Aviso**\n\n**`IMPORTANTE:`** Ao realizar a requisição na rota de `«notificação»`, o sistema irá automaticamente abrir uma janela pro usuário de destino, com os dados da chamada: ramal, identificador interno, telefone de origem da ligação. Caso algum cliente tenha sido identificado, será possível abrir o atendimento e já fornecer o protocolo ao cliente, caso contrário terá a opção de consultar um cliente na base. Ao realizar a requisição na rota de `«cancelamento»` da ligação, a janela de ligação será fechada automaticamente caso ela ainda esteja aberta.\n\n**Atributos da Requisição de ambas as rotas**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| ramal | Número de ramal correspondente ao usuário | **(Obrigatório caso o identificador_interno não seja informado)** |\n| identificador_interno | ID Interno correspondente ao usuário | **(Obrigatório caso o ramal não seja informado)** |\n| codigo_cliente | Código único do cliente | Não |\n| id_cliente | Identificador (chave primária) do cliente | Não |\n| telefone | Telefone da ligação externa do PBX | Não |\n| ligacao_params | Objeto JSON para serem informados parametros da ligação | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| ramal | Deve ser um valor numérico | Nenhum |\n| identificador_interno | Deve ser um valor alfanumérico | Nenhum |\n| codigo_cliente | Deve ser um valor númerico e existir na base de dados | Nenhum |\n| id_cliente | Deve ser um valor númerico e existir na base de dados | Nenhum |\n| telefone | Deve ser um valor númerico | Nenhum |\n| ligacao_params | Deve ser um objeto no formato JSON | Nenhum |"
 					},
 					"response": [
-						{
-							"id": "8dc00788-b7de-4b11-a307-28aeaf8ca4c1",
-							"name": "Notificação",
-							"originalRequest": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "{{access_token}}",
-										"type": "text"
-									},
-									{
-										"key": "Content-Type",
-										"name": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n   \"ramal\":111,\n   \"telefone\":37999912222,\n   \"ligacao_params\":{\n      \"origem\":\"PBX\",\n      \"atendente\":\"João\"\n   }\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{url}}/api/v1/integracao/pbx/ligacao/notificar"
-							},
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Ligação notificada com sucesso\"\r\n}"
-						},
 						{
 							"id": "6aeedcfd-ef38-4b9f-a4a4-7749b741efec",
 							"name": "Cancelamento",
@@ -3535,37 +3465,37 @@
 	],
 	"variable": [
 		{
-			"id": "588d67a4-0a47-41e7-95fe-b121d042cf32",
+			"id": "dc832498-d711-45c7-80a1-03cc69afd2e2",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "2b1198a4-30ab-4e9b-a05d-6bfb5eafbd80",
+			"id": "5f2dcbe2-6059-46f4-a19e-e34fa64672fa",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "83654c73-ca70-462e-9e8c-255d368b6871",
+			"id": "132afdb4-3057-48d7-93c3-5c206d6a4103",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "f4ad07c7-b38e-4c2b-8e34-eb9900eabfe4",
+			"id": "e4517f24-d2d9-4aad-851b-b2636d437cac",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "74ae1bf1-9569-473c-921a-e838ac6cd4af",
+			"id": "882868ef-b1fb-4a6a-bd6c-5e5bbc68856f",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "e9f99925-1540-46f6-9c8c-fa933cb38229",
+			"id": "b99de8ef-2f9f-4f35-9cfd-6cc1ce98c5f1",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "b189d3ac-3d8d-46c4-9580-9a73383aa6e3",
+			"id": "7674b262-e55c-4caa-8a76-e866865c2dec",
 			"key": "access_token",
 			"value": ""
 		}
