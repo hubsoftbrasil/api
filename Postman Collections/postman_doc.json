@@ -2333,82 +2333,6 @@
 					},
 					"response": [
 						{
-							"id": "837af3f0-215a-4c13-8804-4daa28db2afa",
-							"name": "Sem parâmetro ?cep=<numero_cep> na rota.",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "{{access_token}}",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{url}}/api/v1/integracao/prospecto/create?cep=<numero_cep>",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"api",
-										"v1",
-										"integracao",
-										"prospecto",
-										"create"
-									],
-									"query": [
-										{
-											"key": "cep",
-											"value": "<numero_cep>"
-										}
-									]
-								}
-							},
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\r\n    \"status\": \"error\",\r\n    \"msg\": \"CEP não informado.\"\r\n}"
-						},
-						{
-							"id": "9a9f3bc7-6950-4a4d-8dab-bee223224c30",
-							"name": "CEP Inválido",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "{{access_token}}",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{url}}/api/v1/integracao/prospecto/create?cep=<numero_cep>",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"api",
-										"v1",
-										"integracao",
-										"prospecto",
-										"create"
-									],
-									"query": [
-										{
-											"key": "cep",
-											"value": "<numero_cep>"
-										}
-									]
-								}
-							},
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\r\n  \"status\": \"error\",\r\n  \"msg\": \"Nenhuma cidade foi encontrada com esse CEP.\"\r\n}"
-						},
-						{
 							"id": "83dac8e6-1ed8-429e-9dc7-41eab13a2668",
 							"name": "CEP Válido",
 							"originalRequest": {
@@ -2483,6 +2407,82 @@
 							"cookie": [],
 							"responseTime": null,
 							"body": "{\r\n  \"status\": \"success\",\r\n  \"msg\": \"Dados consultados com sucesso\",\r\n  \"servicos\": [\r\n    {\r\n      \"id_servico\": 1303,\r\n      \"descricao\": \"100-FIBRA-CLONE-TEST\",\r\n      \"valor\": 100,\r\n      \"nome_radius\": \"HUBSOFT-SERVICE-1303\",\r\n      \"display\": \"100-FIBRA-CLONE-TEST - (R$ 100.00) (INATIVO)\",\r\n      \"velocidade_download\": 150000,\r\n      \"velocidade_upload\": 35000\r\n    },\r\n    {\r\n      \"id_servico\": 1292,\r\n      \"descricao\": \"100GB-FIBRA-CLONADO\",\r\n      \"valor\": 100,\r\n      \"nome_radius\": \"HUBSOFT-SERVICE-1292\",\r\n      \"display\": \"100GB-FIBRA-CLONADO - (R$ 100.00) (INATIVO)\",\r\n      \"velocidade_download\": 150000,\r\n      \"velocidade_upload\": 35000\r\n    },\r\n    {\r\n      \"id_servico\": 1417,\r\n      \"descricao\": \"100GB-FIBRA-CLONE-imprimir-carne\",\r\n      \"valor\": 80,\r\n      \"nome_radius\": \"HUBSOFT-SERVICE-1417\",\r\n      \"display\": \"100GB-FIBRA-CLONE-imprimir-carne - (R$ 80.00) (INATIVO)\",\r\n      \"velocidade_download\": 150000,\r\n      \"velocidade_upload\": 35000\r\n    },\r\n    {\r\n      \"id_servico\": 1410,\r\n      \"descricao\": \"100GB-FIBRA-XPTO\",\r\n      \"valor\": 80,\r\n      \"nome_radius\": \"HUBSOFT-SERVICE-1410\",\r\n      \"display\": \"100GB-FIBRA-XPTO - (R$ 80.00) (INATIVO)\",\r\n      \"velocidade_download\": 150000,\r\n      \"velocidade_upload\": 35000\r\n    },\r\n    {\r\n      \"id_servico\": 1394,\r\n      \"descricao\": \"100MB + HBO\",\r\n      \"valor\": 100,\r\n      \"nome_radius\": \"HUBSOFT-SERVICE-1394\",\r\n      \"display\": \"100MB + HBO - (R$ 100.00) (INATIVO)\",\r\n      \"velocidade_download\": 150000,\r\n      \"velocidade_upload\": 35000\r\n    },\r\n    {\r\n      \"id_servico\": 1384,\r\n      \"descricao\": \"100MB-FIBRA + PACOTE\",\r\n      \"valor\": 100,\r\n      \"nome_radius\": \"HUBSOFT-SERVICE-1384\",\r\n      \"display\": \"100MB-FIBRA + PACOTE - (R$ 100.00) (INATIVO)\",\r\n      \"velocidade_download\": 150000,\r\n      \"velocidade_upload\": 35000\r\n    },\r\n    {\r\n      \"id_servico\": 1402,\r\n      \"descricao\": \"200 GB\",\r\n      \"valor\": 80,\r\n      \"nome_radius\": \"HUBSOFT-SERVICE-1402\",\r\n      \"display\": \"200 GB - (R$ 80.00) (INATIVO)\",\r\n      \"velocidade_download\": 150000,\r\n      \"velocidade_upload\": 35000\r\n    },\r\n    {\r\n      \"id_servico\": 1272,\r\n      \"descricao\": \"20MB-TESTE1\",\r\n      \"valor\": 100,\r\n      \"nome_radius\": \"HUBSOFT-SERVICE-1272\",\r\n      \"display\": \"20MB-TESTE1 - (R$ 100.00) (INATIVO)\",\r\n      \"velocidade_download\": 20000,\r\n      \"velocidade_upload\": 10000\r\n    },\r\n    {\r\n      \"id_servico\": 1260,\r\n      \"descricao\": \"2MB_WIRELESS\",\r\n      \"valor\": 59.9,\r\n      \"nome_radius\": \"HUBSOFT-SERVICE-1260\",\r\n      \"display\": \"2MB_WIRELESS - (R$ 59.90) (INATIVO)\",\r\n      \"velocidade_download\": 2000,\r\n      \"velocidade_upload\": 800\r\n    },\r\n    {\r\n      \"id_servico\": 1275,\r\n      \"descricao\": \"30 MB FIBRA PLUS\",\r\n      \"valor\": 49.9,\r\n      \"nome_radius\": \"HUBSOFT-SERVICE-1275\",\r\n      \"display\": \"30 MB FIBRA PLUS - (R$ 49.90) (INATIVO)\",\r\n      \"velocidade_download\": 2000,\r\n      \"velocidade_upload\": 640\r\n    },\r\n    {\r\n      \"id_servico\": 1301,\r\n      \"descricao\": \"5MB CONECTA 2\",\r\n      \"valor\": 89.9,\r\n      \"nome_radius\": \"HUBSOFT-SERVICE-1301\",\r\n      \"display\": \"5MB CONECTA 2 - (R$ 89.90) (INATIVO)\",\r\n      \"velocidade_download\": 5192,\r\n      \"velocidade_upload\": 5192\r\n    },\r\n    {\r\n      \"id_servico\": 1,\r\n      \"descricao\": \"5MB-WIRELESS\",\r\n      \"valor\": 300,\r\n      \"nome_radius\": \"HUBSOFT-SERVICE-1\",\r\n      \"display\": \"5MB-WIRELESS - (R$ 300.00) (INATIVO)\",\r\n      \"velocidade_download\": 7000,\r\n      \"velocidade_upload\": 2000\r\n    },\r\n    {\r\n      \"id_servico\": 1251,\r\n      \"descricao\": \"AOM - CNPJ - 02MB\",\r\n      \"valor\": 69.9,\r\n      \"nome_radius\": \"HUBSOFT-SERVICE-1251\",\r\n      \"display\": \"AOM - CNPJ - 02MB - (R$ 69.90) (INATIVO)\",\r\n      \"velocidade_download\": 2048,\r\n      \"velocidade_upload\": 1024\r\n    },\r\n    {\r\n      \"id_servico\": 1330,\r\n      \"descricao\": \"COMBO 10 MB EM DOBRO FIXO E 3 CAMERAS RAP10\",\r\n      \"valor\": 254.9,\r\n      \"nome_radius\": \"HUBSOFT-SERVICE-1330\",\r\n      \"display\": \"COMBO 10 MB EM DOBRO FIXO E 3 CAMERAS RAP10 - (R$ 254.90) (INATIVO)\",\r\n      \"velocidade_download\": 20480,\r\n      \"velocidade_upload\": 4096\r\n    },\r\n    {\r\n      \"id_servico\": 1324,\r\n      \"descricao\": \"COMBO 50 MB FIXO E 1 CAMERA RAP10\",\r\n      \"valor\": 274.9,\r\n      \"nome_radius\": \"HUBSOFT-SERVICE-1324\",\r\n      \"display\": \"COMBO 50 MB FIXO E 1 CAMERA RAP10 - (R$ 274.90) (INATIVO)\",\r\n      \"velocidade_download\": 51200,\r\n      \"velocidade_upload\": 10240\r\n    },\r\n    {\r\n      \"id_servico\": 1308,\r\n      \"descricao\": \"PLANO 10 MBPS + IP FIXO\",\r\n      \"valor\": 129.9,\r\n      \"nome_radius\": \"HUBSOFT-SERVICE-1308\",\r\n      \"display\": \"PLANO 10 MBPS + IP FIXO - (R$ 129.90) (INATIVO)\",\r\n      \"velocidade_download\": 10240,\r\n      \"velocidade_upload\": 2048\r\n    },\r\n    {\r\n      \"id_servico\": 1318,\r\n      \"descricao\": \"PLANO 10 MBPS RAP10 E FIXO EM DOBRO\",\r\n      \"valor\": 129.9,\r\n      \"nome_radius\": \"HUBSOFT-SERVICE-1318\",\r\n      \"display\": \"PLANO 10 MBPS RAP10 E FIXO EM DOBRO - (R$ 129.90) (INATIVO)\",\r\n      \"velocidade_download\": 20480,\r\n      \"velocidade_upload\": 4096\r\n    },\r\n    {\r\n      \"id_servico\": 1319,\r\n      \"descricao\": \"PLANO 25 MBPS RAP10 E FIXO EM DOBRO\",\r\n      \"valor\": 169.9,\r\n      \"nome_radius\": \"HUBSOFT-SERVICE-1319\",\r\n      \"display\": \"PLANO 25 MBPS RAP10 E FIXO EM DOBRO - (R$ 169.90) (INATIVO)\",\r\n      \"velocidade_download\": 51200,\r\n      \"velocidade_upload\": 10240\r\n    }\r\n  ]\r\n}"
+						},
+						{
+							"id": "9a9f3bc7-6950-4a4d-8dab-bee223224c30",
+							"name": "CEP Inválido",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/v1/integracao/prospecto/create?cep=<numero_cep>",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"integracao",
+										"prospecto",
+										"create"
+									],
+									"query": [
+										{
+											"key": "cep",
+											"value": "<numero_cep>"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\r\n  \"status\": \"error\",\r\n  \"msg\": \"Nenhuma cidade foi encontrada com esse CEP.\"\r\n}"
+						},
+						{
+							"id": "837af3f0-215a-4c13-8804-4daa28db2afa",
+							"name": "Sem parâmetro",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/v1/integracao/prospecto/create?cep=<numero_cep>",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"integracao",
+										"prospecto",
+										"create"
+									],
+									"query": [
+										{
+											"key": "cep",
+											"value": "<numero_cep>"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\r\n    \"status\": \"error\",\r\n    \"msg\": \"CEP não informado.\"\r\n}"
 						}
 					]
 				},
@@ -2599,43 +2599,6 @@
 					},
 					"response": [
 						{
-							"id": "477d6002-b71f-45d0-9aa8-184f97021ab9",
-							"name": "ERRO - Preencher o campo busca",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "{{access_token}}",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{url}}/api/v1/integracao/prospecto?busca=xpto",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"api",
-										"v1",
-										"integracao",
-										"prospecto"
-									],
-									"query": [
-										{
-											"key": "busca",
-											"value": "xpto"
-										}
-									]
-								}
-							},
-							"_postman_previewlanguage": null,
-							"header": null,
-							"cookie": [],
-							"responseTime": null,
-							"body": null
-						},
-						{
 							"id": "0fb94150-d80a-4a25-a655-a2aeb7ba6aae",
 							"name": "SUCESSO",
 							"originalRequest": {
@@ -2671,6 +2634,43 @@
 							"cookie": [],
 							"responseTime": null,
 							"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Dados consultados com sucesso\",\n    \"prospectos\": [\n        {\n            \"id_prospecto\": 100,\n            \"nome_razaosocial\": \"EMPRESA XPTO LTDA\",\n            \"cpf_cnpj\": \"41483316000169\",\n            \"email\": null,\n            \"telefone\": \"3732818000\",\n            \"observacao\": null,\n            \"id_cliente\": null,\n            \"id_endereco_numero\": 33320,\n            \"created_at\": \"2020-07-28 10:27:56\",\n            \"updated_at\": \"2020-07-28 10:27:56\",\n            \"tipo_pessoa\": \"pj\",\n            \"id_usuario\": 1,\n            \"origem\": \"API\",\n            \"created_at_br\": \"28/07/2020\"\n        }\n    ]\n}"
+						},
+						{
+							"id": "477d6002-b71f-45d0-9aa8-184f97021ab9",
+							"name": "ERRO - Preencher o campo busca",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/v1/integracao/prospecto?busca=xpto",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"integracao",
+										"prospecto"
+									],
+									"query": [
+										{
+											"key": "busca",
+											"value": "xpto"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": null
 						}
 					]
 				}
@@ -3050,37 +3050,37 @@
 	],
 	"variable": [
 		{
-			"id": "852b40e6-85aa-45b6-88ad-9eb47f6e70c3",
+			"id": "844c9a70-9292-497e-97b2-23a412c2793d",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "a8e2a2d9-e054-4d36-b0f2-0aa82008e1e1",
+			"id": "33614613-e4ff-4f11-8ce4-4ee7d4905bc9",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "f7cbe688-e48d-480c-b97c-4c706f3712f2",
+			"id": "fa90ca70-3a5a-4658-991a-3c16c3c4b207",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "6f29460b-efb1-4084-997f-0e57a6330fa0",
+			"id": "885330ae-b1c8-463c-bfa7-5077be8ba8f0",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "8d4dd1c0-1ffb-42af-802f-dac2bec31d51",
+			"id": "af176b54-0c68-4ff1-b1ec-f18c14cd55c6",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "77821b9d-07d7-4682-86eb-80e999405f97",
+			"id": "13869049-db57-4618-a129-3803ccef45fd",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "f5023afc-ea2e-450d-a2b2-1b0ae14d0e67",
+			"id": "1b4ae2c8-2256-40cf-a24d-1890994d9a86",
 			"key": "access_token",
 			"value": ""
 		}
