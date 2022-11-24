@@ -823,7 +823,7 @@
 										}
 									}
 								},
-								"url": "{{url}}api/v1/integracao/cliente/autenticacao",
+								"url": "{{url}}/api/v1/integracao/cliente/autenticacao",
 								"description": "Através desse `endpoint` será possível realizar a autenticação do cliente, com seu usuário e senha. Essa autenticação respeita os mesmos dados que o cliente utiliza para conectar na Central do Assinante `WEB` ou `APP`. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| usuario | Usuário de Autenticação da Central | Sim |\n| senha | Senha de Autenticação da Central | Sim |\n\nCom esse endpoint é possível criar outras soluções para os clientes da empresa e manter toda a autenticação centralizada na central do assinante do HubSoft. Por exemplo, é possível criar plataformas de conteúdo e o cliente usar o mesmo login e senha em todas elas."
 							},
 							"response": [
@@ -3479,37 +3479,37 @@
 	],
 	"variable": [
 		{
-			"id": "855ec55e-6cfd-4036-a6b5-6acae51f0a8a",
+			"id": "cf62ef86-86aa-4502-9057-d9e0efa27a3b",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "e57ebe77-69ba-4157-8d4e-b7793f1880fd",
+			"id": "22549eba-571a-4874-ad7c-7eb54a32916c",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "d45ec711-4dc1-4a6b-bbbf-7e756848eb16",
+			"id": "bfef2d12-00ec-4f3c-a30c-833310c3d889",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "dba080f6-324e-4fe0-8683-d596c575e4e4",
+			"id": "e8a2a348-1068-4528-bfdd-1b825ab30260",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "92da68ce-1526-4e76-8abe-157abcab5372",
+			"id": "86cfbf1b-5e58-4e32-9752-365aa7c838e1",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "ef005c52-742c-47d4-a3cf-c75b9dc7f8b4",
+			"id": "a198251b-6d32-4562-957e-c8e41c40f3b7",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "7da9809d-0a10-4949-acb2-a8dfea1bf4a0",
+			"id": "365383ca-eff8-4c14-8149-44fa07e15a4a",
 			"key": "access_token",
 			"value": ""
 		}
