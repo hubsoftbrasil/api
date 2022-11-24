@@ -1110,7 +1110,23 @@
 									"name": "Sucesso",
 									"originalRequest": {
 										"method": "GET",
-										"header": []
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id_cliente_servico\":\"11000\"\n}\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										}
 									},
 									"_postman_previewlanguage": "json",
 									"header": null,
@@ -3229,37 +3245,37 @@
 	],
 	"variable": [
 		{
-			"id": "7f1aa720-5ef3-4d82-a2c6-3baea338e6e8",
+			"id": "138a2d14-ea68-487a-a34f-d2ea45607361",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "158f24ad-8475-43d8-8b4e-baf703538aca",
+			"id": "510c969c-562e-4e8b-a6b7-34cebc27ad27",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "4e3fc702-d7f2-4d9c-b23a-3e3b105a0221",
+			"id": "ec135e3b-070d-4ce5-b105-47dc33b1b1fa",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "1849d538-536e-419a-a6ea-7f8fd9262587",
+			"id": "228a1b6f-9037-4293-b758-c99ad4078b56",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "36d16fec-d9b5-493d-827a-236a3b65678f",
+			"id": "0bc0cdb4-209c-4497-8cc7-f27a5ba7e8bc",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "51ab29ea-7956-4b3f-8ac4-98739fd25c7e",
+			"id": "01fbcf21-0935-4920-a7c2-866835f9b5ff",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "cd4b73c4-aa98-468b-a7eb-f15d16fb0662",
+			"id": "db9e1168-757d-408f-b166-c119ae039489",
 			"key": "access_token",
 			"value": ""
 		}
