@@ -897,11 +897,22 @@
 												"key": "Authorization",
 												"value": "{{access_token}}",
 												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
 											}
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"id_cliente_servico\": \"11000\",\n  \"password\": \"NewPasswd123\",\n  \"id_interface_conexao\": \"931\"\n}"
+											"raw": "{\n  \"id_cliente_servico\": \"11000\",\n  \"password\": \"NewPasswd123\",\n  \"id_interface_conexao\": \"931\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
 										},
 										"url": "{{url}}/api/v1/integracao/cliente/configurar_autenticacao"
 									},
@@ -3185,37 +3196,37 @@
 	],
 	"variable": [
 		{
-			"id": "d389aae9-cdc7-48ac-8cb6-6accf7c3d9ec",
+			"id": "42d9324d-b475-4afe-b1cf-0ac87b8d07d4",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "7780e9e1-6e37-439a-8502-aa053b16820b",
+			"id": "7ef6c219-3037-4ed4-91da-d1492b3da6b5",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "efad80c3-6a41-4fc1-bb20-4fe608778fd6",
+			"id": "bf9f1810-7f23-4cb4-af74-ee55717319b6",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "fab3c528-86c6-4c02-ba54-459e490effcc",
+			"id": "cbfc7866-fa79-419c-a799-23ffda37cc8b",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "2b79c14c-b4a5-4d8b-bf49-47f58388f6f8",
+			"id": "50261a09-1936-4838-9202-61827b40cead",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "2e5a40f4-5cd8-4b3c-b0a4-b145e96b2db8",
+			"id": "c3012ab3-eae5-45f4-a2ba-1c507ca4d711",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "4e03d27c-a1bf-4a5d-9cf4-d75e0ddd1cd1",
+			"id": "9f838e41-184e-4462-996b-86a240f0ffb1",
 			"key": "access_token",
 			"value": ""
 		}
