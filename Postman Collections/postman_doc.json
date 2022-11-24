@@ -1102,7 +1102,7 @@
 									}
 								},
 								"url": "{{url}}/api/v1/integracao/cliente/reset_mac_addr",
-								"description": "**POST**\n\nAtravés deste `endpoint`, será possível resetar o MAC ADDRESS configurado na autenticação do plano do cliente. Após resetar o MAC, qualquer equipamento com o login e senha corretos estará apto a realizar a autenticação. Esse endpoint será útil para provedores que fazem controle / restrição de MAC ADDRESS na rede.\n\n**Aviso**\n\n`IMPORTANTE`: O sistema irá validar se o serviço informado possui dados de autenticação. Caso o serviço selecionado não possua, uma mensagem de erro será retornada, impedindo que a solicitação seja executada.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico | Identificador único do serviço do cliente | Sim |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico | Deve conter um número inteiro maior que 0 | Nenhum |\n\nVeja que os parâmetros enviados na requisição `POST` devem obedecer a estrutura no formato `JSON`:\n\n```\n{\n        \"id_cliente_servico\":\"11000\"\n}\n\n```"
+								"description": "**POST**\n\nAtravés deste `endpoint`, será possível resetar o MAC ADDRESS configurado na autenticação do plano do cliente. Após resetar o MAC, qualquer equipamento com o login e senha corretos estará apto a realizar a autenticação. Esse endpoint será útil para provedores que fazem controle / restrição de MAC ADDRESS na rede.\n\n**Aviso**\n\n`IMPORTANTE`: O sistema irá validar se o serviço informado possui dados de autenticação. Caso o serviço selecionado não possua, uma mensagem de erro será retornada, impedindo que a solicitação seja executada.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico | Identificador único do serviço do cliente | Sim |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico | Deve conter um número inteiro maior que 0 | Nenhum |"
 							},
 							"response": [
 								{
@@ -1116,11 +1116,16 @@
 												"name": "Content-Type",
 												"value": "application/json",
 												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer Token",
+												"type": "text"
 											}
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"id_cliente_servico\":\"11000\"\n}\n",
+											"raw": "{\n    \"id_cliente_servico\":\"11000\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1133,7 +1138,7 @@
 									"header": null,
 									"cookie": [],
 									"responseTime": null,
-									"body": "{\r\n        \"status\": \"success\",\r\n        \"msg\": \"\"Endereço MAC resetado com sucesso!\"\r\n}"
+									"body": "{\r\n        \"status\": \"success\",\r\n        \"msg\": \"Endereço MAC resetado com sucesso!\"\r\n}"
 								}
 							]
 						}
@@ -1442,8 +1447,17 @@
 										"type": "text"
 									}
 								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \"id_cliente_servico\":13579,\n   \"id_tipo_servico\":2,\n   \"descricao\":\"Acréscimo Ref Compra de Produto ABC\",\n   \"parcelado\":false,\n   \"proximo_faturamento\":true,\n   \"tipo\":\"acrescimo\",\n   \"valor\":10.3\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": "{{url}}/api/v1/integracao/financeiro/evento_faturamento",
-								"description": "**POST**\n\nAtravés deste `endpoint`, será possível fazer o cadastro de evento de faturamento. Pode ser cadastrado um evento de Acréscimo ou Desconto, permitindo também parcelamento.\n\n**Aviso**\n\n`IMPORTANTE`: É necessário informar o `id_cliente_servico` e o `id_tipo_servico,` ambos retornados nas rotas Clientes > Consulta e Tipo de Serviço > All respectivamente\n\n`IMPORTANTE 2:` Ao enviar a o parâmetro parcelado como true, os parâmetros `numero_total_parcelas`, `mes_primeira_parcela` e `ano_primeira_parcela` tornam-se obrigatórios\n\n`IMPORTANTE 3`: Ao enviar a o parâmetro parcelado como false, o parâmetro `proximo_faturamento` torna-se obrigatório. Caso ele seja enviado como false, os parâmetros `mes_processar` e `ano_processar` também deverão ser enviados\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico | Identificador único do serviço do cliente | Sim |\n| id_tipo_servico | Identificador único do tipo de serviço | Sim |\n| tipo | Textual (aceita os valores acrescimo e desconto). | Sim |\n| descricao | Descrição textual para o evento. | Sim |\n| valor | Campo númerico (aceita valor decimal separado por ponto. Ex.: 10.2). | Sim |\n| parcelado | Boolean para identificar se o evento é parcelado ou não | Sim |\n| numero_total_parcelas | Valor maior que 0 para identificar o total de parcelas | Sim (Se parcelado = true) |\n| mes_primeira_parcela | Valor inteiro que representa o mês do ano (Dezembro = 12). Utilizado para verificar o mês da primeira parcela | Sim (Se parcelado = true) |\n| ano_primeira_parcela | Valor inteiro que representa o ano. Utilizado para verificar o ano da primeira parcela | Sim (Se parcelado = true) |\n| proximo_faturamento | Boolean para identificar se o evento será lançado no próximo faturamento | Sim (Se parcelado = false) |\n| mes_processar | Valor inteiro que representa o mês do ano (Dezembro = 12). Utilizado para verificar o mês de processamento do faturamento | Sim (Se proximo_faturamento = false) |\n| ano_processar | Valor inteiro que representa o ano. Utilizado para verificar o ano de processamento do faturamento | Sim (Se proximo_faturamento = false) |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico | Deve conter um número inteiro maior que 0 | Nenhum |\n| id_tipo_servico | Deve conter um número inteiro maior que 0 | Nenhum |\n| tipo | Textual | Nenhum |\n| descricao | Textual | Nenhum |\n| valor | Número Inteiro/Decimal | Nenhum |\n| parcelado | Boolean | Nenhum |\n| numero_total_parcelas | Número Inteiro | Nenhum |\n| mes_primeira_parcela | Número Inteiro (maior que 0 e menor que 13) | Nenhum |\n| ano_primeira_parcela | Número Inteiro | Nenhum |\n| proximo_faturamento | Boolean | Nenhum |\n| mes_processar | Número Inteiro (maior que 0 e menor que 13) | Nenhum |\n| ano_processar | Número Inteiro | Nenhum |\n\nVeja que os parâmetros enviados na requisição `POST` devem obedecer a estrutura no formato `JSON:`\n\n```\n     {\n    \"id_cliente_servico\": 13579,\n    \"id_tipo_servico\": 2,\n    \"descricao\": \"ADICIONAL\",\n    \"parcelado\": false,\n    \"proximo_faturamento\": true,\n    \"tipo\": \"acrescimo\",\n    \"valor\": 10.3\n}\n\n```"
+								"description": "**POST**\n\nAtravés deste `endpoint`, será possível fazer o cadastro de evento de faturamento. Pode ser cadastrado um evento de Acréscimo ou Desconto, permitindo também parcelamento.\n\n**Aviso**\n\n`IMPORTANTE`: É necessário informar o `id_cliente_servico` e o `id_tipo_servico,` ambos retornados nas rotas Clientes > Consulta e Tipo de Serviço > All respectivamente\n\n`IMPORTANTE 2:` Ao enviar a o parâmetro parcelado como true, os parâmetros `numero_total_parcelas`, `mes_primeira_parcela` e `ano_primeira_parcela` tornam-se obrigatórios\n\n`IMPORTANTE 3`: Ao enviar a o parâmetro parcelado como false, o parâmetro `proximo_faturamento` torna-se obrigatório. Caso ele seja enviado como false, os parâmetros `mes_processar` e `ano_processar` também deverão ser enviados\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico | Identificador único do serviço do cliente | Sim |\n| id_tipo_servico | Identificador único do tipo de serviço | Sim |\n| tipo | Textual (aceita os valores acrescimo e desconto). | Sim |\n| descricao | Descrição textual para o evento. | Sim |\n| valor | Campo númerico (aceita valor decimal separado por ponto. Ex.: 10.2). | Sim |\n| parcelado | Boolean para identificar se o evento é parcelado ou não | Sim |\n| numero_total_parcelas | Valor maior que 0 para identificar o total de parcelas | Sim (Se parcelado = true) |\n| mes_primeira_parcela | Valor inteiro que representa o mês do ano (Dezembro = 12). Utilizado para verificar o mês da primeira parcela | Sim (Se parcelado = true) |\n| ano_primeira_parcela | Valor inteiro que representa o ano. Utilizado para verificar o ano da primeira parcela | Sim (Se parcelado = true) |\n| proximo_faturamento | Boolean para identificar se o evento será lançado no próximo faturamento | Sim (Se parcelado = false) |\n| mes_processar | Valor inteiro que representa o mês do ano (Dezembro = 12). Utilizado para verificar o mês de processamento do faturamento | Sim (Se proximo_faturamento = false) |\n| ano_processar | Valor inteiro que representa o ano. Utilizado para verificar o ano de processamento do faturamento | Sim (Se proximo_faturamento = false) |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico | Deve conter um número inteiro maior que 0 | Nenhum |\n| id_tipo_servico | Deve conter um número inteiro maior que 0 | Nenhum |\n| tipo | Textual | Nenhum |\n| descricao | Textual | Nenhum |\n| valor | Número Inteiro/Decimal | Nenhum |\n| parcelado | Boolean | Nenhum |\n| numero_total_parcelas | Número Inteiro | Nenhum |\n| mes_primeira_parcela | Número Inteiro (maior que 0 e menor que 13) | Nenhum |\n| ano_primeira_parcela | Número Inteiro | Nenhum |\n| proximo_faturamento | Boolean | Nenhum |\n| mes_processar | Número Inteiro (maior que 0 e menor que 13) | Nenhum |\n| ano_processar | Número Inteiro | Nenhum |"
 							},
 							"response": [
 								{
@@ -1456,8 +1470,23 @@
 												"key": "Authorization",
 												"value": "{{access_token}}",
 												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
 											}
 										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n   \"id_cliente_servico\":13579,\n   \"id_tipo_servico\":2,\n   \"descricao\":\"ADICIONAL\",\n   \"parcelado\":false,\n   \"proximo_faturamento\":true,\n   \"tipo\":\"acrescimo\",\n   \"valor\":10.3\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
 										"url": "{{url}}/api/v1/integracao/financeiro/evento_faturamento"
 									},
 									"_postman_previewlanguage": "json",
@@ -1552,6 +1581,15 @@
 										"description": "Bearer"
 									}
 								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id_fatura\":93723,\n    \"id_caixa_financeiro\":123,\n    \"meio_pagamento\":\"cartao_credito\",\n    \"data_pagamento\":\"2022-11-23\",\n    \"valor_pago\":89.9\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": "{{url}}/api/v1/integracao/financeiro/fatura/liquidar",
 								"description": "Através desse `endpoint`, será possível fazer a liquidação de uma fatura no HubSoft. Esse endpoint é normalmente utilizado, quando se deseja utilizar uma forma externa ao HubSoft para receber o boleto de um cliente, por exemplo, um aplicativo customizado, uma central do assinante customizada, totem para auto atendimento, etc.\n\nOs seguintes parâmetros podem/devem ser utilizados:\n\n| **Atributo** | **Descrição** | **Obrigatório** |\n| --- | --- | --- |\n| id_fatura | ID da Fatura | Sim |\n| id_caixa_financeiro | ID do Caixa Financeiro | Sim |\n| data_pagamento | Data do Pagamento | Sim |\n| valor_pago | Valor Pago | Sim |\n| juros | Valor de Juros/Multas | Não |\n| meio_pagamento | Meio de Pagamento | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| **Atributo** | **Descrição** | **Valor Default** |\n| --- | --- | --- |\n| id_fatura | Campo Inteiro (integer) | `NULL` |\n| id_caixa_financeiro | Campo Inteiro (integer) | `NULL` |\n| data_pagamento | Campo no formato Date (YYYY-MM-DD) | `NULL` |\n| valor_pago | Campo númerico com 2 casas decimais. EX: R$ 99,85 = 99.87 | `NULL` |\n| juros | Campo númerico com 2 casas decimais. EX: R$ 99,90 = 99.90 | `NULL` |\n| meio_pagamento | Prefixo do Meio de Pagamento. | dinheiro |\n\nO campo `meio_pagamento` possui por padrão os seguintes prefixos:\n\n- `boleto`\n- `cartao_credito`\n- `cartao_debito`\n- `cheque`\n- `debito_automatico`\n- `dinheiro`\n- `pix`\n- `transferencia`\n    \n\nPorém, caso seja necessário utilizar outros meios de pagamento, basta fazer o cadastro pela interface WEB do sisema em `Configuração > Financeiro > Meios de Pagamento`\n\nPara consultar via API todos os meios de pagamento, você pode verificar através do endpoint de [Configuração > Meio de Pagamento](https://docs.hubsoft.com.br/#e3ef9dcf-aaf7-4ebd-a6b2-f890827653e3)\n\nPara consultar via API todos os IDs dos Caixas Financeiros disponíveis, você pode verificar através do endpoint de [Configuração > Caixa Financeiro](https://docs.hubsoft.com.br/#431b8688-0ae9-44b1-bc16-5ae888b0dc99)"
 							},
@@ -1566,8 +1604,23 @@
 												"key": "Authorization",
 												"value": "{{access_token}}",
 												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
 											}
 										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id_fatura\":93723,\n    \"id_caixa_financeiro\":123,\n    \"meio_pagamento\":\"cartao_credito\",\n    \"data_pagamento\":\"2022-11-23\",\n    \"valor_pago\":89.9\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
 										"url": "{{url}}/api/v1/integracao/financeiro/fatura/liquidar"
 									},
 									"_postman_previewlanguage": "json",
@@ -1632,7 +1685,23 @@
 							"name": "Agendar",
 							"originalRequest": {
 								"method": "POST",
-								"header": [],
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id_ordem_servico\":99991\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": "{{url}}/api/v1/integracao/ordem_servico/agendar"
 							},
 							"_postman_previewlanguage": "json",
@@ -3246,37 +3315,37 @@
 	],
 	"variable": [
 		{
-			"id": "434fd6e4-5f85-4ff6-bcf0-fe55302c5d19",
+			"id": "60a382f1-d93c-4264-9da7-ea6bf43473b1",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "8ba7a98f-5d03-4b1d-9c47-d038736e3399",
+			"id": "5ad2bc5b-cac5-4bcf-8261-718ee4fbf5eb",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "4163bcea-b506-47bf-88a0-23457b9234e4",
+			"id": "3748095e-944d-4acd-af09-c59a45f4c97d",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "2158a04f-75c8-4baf-9578-a125b9ff1a4f",
+			"id": "049fbe65-9d5d-413f-b2fe-49a37384bc8d",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "d19d4f0f-8231-412f-af1c-0b4f3d9dc872",
+			"id": "bd216660-2133-40c5-bed0-537e38273d3a",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "e31e53db-b244-4331-b4db-36ef8bb8708c",
+			"id": "ca204d18-f03b-4050-9b0a-9d1b80f70f33",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "b1702d50-2483-49ec-a1f5-7e67dfb5bf4e",
+			"id": "566fa147-6f1d-4366-a2cb-8ab9cd5e6943",
 			"key": "access_token",
 			"value": ""
 		}
