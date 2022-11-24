@@ -814,6 +814,15 @@
 							"request": {
 								"method": "POST",
 								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"usuario\":\"09148213622\",\n    \"senha\":\"#M1nh4$3NH4!\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": "{{url}}api/v1/integracao/cliente/autenticacao",
 								"description": "Através desse `endpoint` será possível realizar a autenticação do cliente, com seu usuário e senha. Essa autenticação respeita os mesmos dados que o cliente utiliza para conectar na Central do Assinante `WEB` ou `APP`. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| usuario | Usuário de Autenticação da Central | Sim |\n| senha | Senha de Autenticação da Central | Sim |\n\nCom esse endpoint é possível criar outras soluções para os clientes da empresa e manter toda a autenticação centralizada na central do assinante do HubSoft. Por exemplo, é possível criar plataformas de conteúdo e o cliente usar o mesmo login e senha em todas elas."
 							},
@@ -3147,37 +3156,37 @@
 	],
 	"variable": [
 		{
-			"id": "e355f7d0-a529-4f74-9399-09b20edcbadd",
+			"id": "e2176e9e-7d9f-4141-b619-de75c1c2eaf3",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "d727a5f6-c1e7-4e25-b360-8a5b94628ec2",
+			"id": "72bcf473-2a09-46cb-a0cc-fdb12fd50560",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "8119ce02-2aa5-4b4e-880e-8776a31b3ebd",
+			"id": "4e45ac09-dfeb-4e52-a6e5-f597eb18fdc5",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "41a92dbf-90ae-4f20-9210-5d451c466937",
+			"id": "a4a4952d-0e94-414d-8af9-12f22b6bf384",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "ae577590-8cdc-4797-9dab-578dc5123731",
+			"id": "026b619a-cb6b-429b-9685-31726ffd984e",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "dc2bb00c-4576-4b89-b8ca-073a34c97665",
+			"id": "f0b85b8b-2498-4a03-ac81-d3ee0e88df50",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "4db87a5a-8136-4937-b73d-29d9ba31379c",
+			"id": "5c27e2e1-d819-4a6d-8345-7933609281aa",
 			"key": "access_token",
 			"value": ""
 		}
