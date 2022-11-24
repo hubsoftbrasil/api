@@ -604,6 +604,15 @@
 										"type": "text"
 									}
 								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \"id_fatura\":\"11000\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": "{{url}}/api/v1/integracao/cliente/financeiro/enviar_push",
 								"description": "**POST**\n\nAtravés deste endpoint, será possível fazer o disparo da fatura do cliente por push notification.\n\n**IMPORTANTE**: O cliente só receberá o push notification, caso ele possua o aplicativo do cliente instalado e esteja autenticado com o CPF/CNPJ.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_fatura | Identificador único da fatura do cliente | Sim |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_fatura | Deve conter um número inteiro maior que 0 | Nenhum |"
 							},
@@ -3123,37 +3132,37 @@
 	],
 	"variable": [
 		{
-			"id": "873dbc42-2f96-4c54-9300-d172c8c097e7",
+			"id": "262c07dc-892e-48a1-b070-af8f7f22ab48",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "81b98b8e-6a14-4536-9ed1-e64b7737172c",
+			"id": "b49c0ab2-600c-4c93-900b-4df8caf7f419",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "48f162e9-326e-4d17-b5ad-2fcc92e565b4",
+			"id": "11bb9aac-e2da-452b-b833-129d9f8e8b1b",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "aa007ee4-f05c-479a-9d2c-c90594bb03d3",
+			"id": "10bbeeb9-567d-4357-891e-394e011fc9c9",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "1e4a8a2f-dfad-43f4-aee4-bac523bf7945",
+			"id": "d15e2833-20be-4f24-a7a6-6c90e7e1884b",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "ff827370-896a-413a-9452-c818e0f829ec",
+			"id": "ca06e2be-93f6-4f43-80b6-fc73553bd4a1",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "5e9b2048-aed1-4271-abc5-bf1a810a05dd",
+			"id": "40a275fc-4eeb-4544-9595-86d9a3ced669",
 			"key": "access_token",
 			"value": ""
 		}
