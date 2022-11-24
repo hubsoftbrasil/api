@@ -711,7 +711,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"id_nota_fiscal\":\"123\",\n    \"tipo_documento\":\"nfe\",\n    \"email_adicional\":[\n        \"email1@email.com\"\n    ]\n}",
+									"raw": "{\n    \"id_nota_fiscal\":\"123\",\n    \"tipo_documento\":\"nf_telecom\",\n    \"email_adicional\":[\n        \"email1@email.com\"\n    ]\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3479,37 +3479,37 @@
 	],
 	"variable": [
 		{
-			"id": "919937be-9c61-47ce-9934-dc9ec6558a28",
+			"id": "72c00136-20ed-4b7f-9c0c-fe8f617a8618",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "84981b0e-fd8d-4de4-b5bf-744b25b16107",
+			"id": "6081ee7f-57bd-4a79-82f4-c2200d89b2ad",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "68838caf-c520-413c-b4d8-4fd5f9f28c14",
+			"id": "f2584469-c58d-43ca-a367-3584c0de7f31",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "5aaae737-d6a2-4f7a-8d8f-a282dd3e9150",
+			"id": "410b1320-a2bf-4861-bf31-5d66542eb53d",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "5228170c-068c-484a-9e61-c9e667535833",
+			"id": "0aebb436-b7b7-4bf0-82d7-cdb1bcf01b55",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "7506b9d8-5f48-4ac9-a15c-a8e5dc664946",
+			"id": "e52f757c-66e0-4842-bd0a-1a328b45c9bf",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "60a05fe1-e750-4780-8651-c4ec1671bc42",
+			"id": "edce97d4-4db9-47ea-ac5c-dddd8da8b238",
 			"key": "access_token",
 			"value": ""
 		}
