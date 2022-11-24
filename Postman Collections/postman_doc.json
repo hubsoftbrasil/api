@@ -539,6 +539,15 @@
 										"type": "text"
 									}
 								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": "{{url}}/api/v1/integracao/cliente/financeiro/enviar_sms",
 								"description": "**POST**\n\nAtravés deste `endpoint`, será possível fazer o disparo da fatura do cliente por `SMS`. Podem ser passados números de telefones adicionais, além dos que já estão cadastrados no sistema.\n\n**Aviso**\n\n`IMPORTANTE`: O disparo do SMS é efetuado para a Plataforma de `SMS`. Caso o HubSoft consiga entregar o SMS para plataforma, o resultado da requisição será uma resposta de SUCESSO, mesmo que a plataforma não efetue o disparo, para o HubSoft a tarefa foi efetuada com sucesso.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_fatura | Identificador único da fatura do cliente | Sim |\n| telefone_adicional | Outros telefones adicionais, podem ser enviados na requisição. | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_fatura | Deve conter um número inteiro maior que 0 | Nenhum |\n| telefone_adicional | Deve conter um array de strings com os telefones no formato DDNNNNNNNN ou D |  |\n\nVeja que os paramêtros enviados na requisição `POST` devem obedecer a estrutura no formato `JSON`:\n\n```\n{\n        \"id_fatura\":\"11000\",\n        \"email_adicional\":[\n                \"11988887777\",\n                \"1188887776\"\n        ]\n}\n\n```\n\n**Nota**\n\n`OBSERVAÇÃO`: Perceba que foram enviados 2 telefones adicionais, porém o sistema fez um disparo de 3 SMS. Isso aconteceu, pois o cliente já possui 1 número de telefone celular válido em seu cadastro. No momento do disparo, o sistema enviou para os telefones já cadastrados no sistema e também para os telefones adicionais passados na requisição `POST`"
 							},
@@ -3099,37 +3108,37 @@
 	],
 	"variable": [
 		{
-			"id": "56c0694c-79e1-40d6-9517-41973ca30afb",
+			"id": "4c7d58b6-998f-4817-9559-d6af2ba3ef2c",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "1a00c176-f92f-4241-a451-7bb5714b1bfa",
+			"id": "37420ac6-ab1b-4cd9-b492-0851952e8bd6",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "6bf27c8c-803b-48ad-949c-1c00fdcbdae3",
+			"id": "c364e8e0-5b47-4b1f-80ce-51ab58a2b5e9",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "c61255fe-eefd-4341-aa0e-5df69f17b6da",
+			"id": "5c258990-8aa7-4d45-88a2-7118dc149ac7",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "505b0bbf-7665-4cef-8470-220ae58f89f3",
+			"id": "7b4b343e-3f98-4139-bc37-0432c8714aca",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "c03c6be7-0ac8-40c2-9729-d122e99495bc",
+			"id": "aa1c5416-2f13-4bce-a185-1dc324205700",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "2cb36ffc-ce7b-4eaf-ae34-49d1cae0d759",
+			"id": "f9981009-5b06-4f5b-968b-738a16f38371",
 			"key": "access_token",
 			"value": ""
 		}
