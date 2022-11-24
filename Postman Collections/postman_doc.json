@@ -627,8 +627,23 @@
 												"key": "Authorization",
 												"value": "{{access_token}}",
 												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
 											}
 										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n   \"id_fatura\":\"11000\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
 										"url": "{{url}}/api/v1/integracao/cliente/financeiro/enviar_push"
 									},
 									"_postman_previewlanguage": "json",
@@ -3132,37 +3147,37 @@
 	],
 	"variable": [
 		{
-			"id": "262c07dc-892e-48a1-b070-af8f7f22ab48",
+			"id": "e355f7d0-a529-4f74-9399-09b20edcbadd",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "b49c0ab2-600c-4c93-900b-4df8caf7f419",
+			"id": "d727a5f6-c1e7-4e25-b360-8a5b94628ec2",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "11bb9aac-e2da-452b-b833-129d9f8e8b1b",
+			"id": "8119ce02-2aa5-4b4e-880e-8776a31b3ebd",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "10bbeeb9-567d-4357-891e-394e011fc9c9",
+			"id": "41a92dbf-90ae-4f20-9210-5d451c466937",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "d15e2833-20be-4f24-a7a6-6c90e7e1884b",
+			"id": "ae577590-8cdc-4797-9dab-578dc5123731",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "ca06e2be-93f6-4f43-80b6-fc73553bd4a1",
+			"id": "dc2bb00c-4576-4b89-b8ca-073a34c97665",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "40a275fc-4eeb-4544-9595-86d9a3ced669",
+			"id": "4db87a5a-8136-4937-b73d-29d9ba31379c",
 			"key": "access_token",
 			"value": ""
 		}
