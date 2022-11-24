@@ -860,7 +860,7 @@
 							]
 						},
 						{
-							"name": "Configuração de dados de Autenticação",
+							"name": "Configurar Autenticação",
 							"id": "55a9af47-323c-4fc4-acce-8ea71c55ce4a",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -3479,37 +3479,37 @@
 	],
 	"variable": [
 		{
-			"id": "329a2d19-6d1f-4fe8-b8c1-90a0dbb493c9",
+			"id": "c9234eb2-3f4f-4944-96bc-5e2c73b3e2e8",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "920293f6-e1f4-42bf-8b8e-36235a26931d",
+			"id": "79dd71e4-128b-4348-9549-cea89d9618a9",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "eed5e4a6-c196-4999-995a-da9c3066824f",
+			"id": "c77cbc31-f6d8-456c-a259-6b12061889dc",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "9f04e762-3497-4106-8fd8-7a1aaf6b97c8",
+			"id": "777001e0-0baf-48e7-88c7-fbfd67844a34",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "001f3bd6-ffa2-4252-b4bb-11dce1b20962",
+			"id": "38304d52-d6f7-4e11-ba5d-9f2645b5fb92",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "b86d2129-e4a8-4f57-8b20-e3e11a71da29",
+			"id": "12d89909-fc02-456b-b47d-9b6bac5c1a26",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "4e9b0214-8be8-46ab-ac9d-ed554f3e8699",
+			"id": "c7205693-155c-40c1-8a4f-089c633e346a",
 			"key": "access_token",
 			"value": ""
 		}
