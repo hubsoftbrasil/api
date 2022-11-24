@@ -874,6 +874,15 @@
 										"type": "text"
 									}
 								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id_cliente_servico\": \"11000\",\n  \"password\": \"NewPasswd123\",\n  \"id_interface_conexao\": \"931\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": "{{url}}/api/v1/integracao/cliente/configurar_autenticacao",
 								"description": "**POST**\n\nAtravés deste `endpoint` , será possível efetuar a configuração de alguns parâmetros de autenticação do serviço.\n\nOs seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico | Identificador único do serviço do cliente | Sim |\n| id_interface_conexao | Interface de conexão com a qual o plano deverá ser vinculado | Não |\n| phy_addr | MAC/Serial da ONU ou equipamento equivalente do cliente, que forneça acesso em camada 2 | Não |\n| password | Senha de autenticação do cliente | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico | Deve conter um número inteiro maior que 0 | Nenhum |\n| id_interface_conexao | Deve conter um número inteiro maior que 0 | Nenhum |\n| phy_addr | Deve conter uma sequencia de letras e caracteres, sem espaço | Nenhum |\n| password | Deve conter no minimo tres caracteres | Nenhum |"
 							},
@@ -3172,37 +3181,37 @@
 	],
 	"variable": [
 		{
-			"id": "262a8d20-ad60-4daa-939c-3b2ef6c2d9c5",
+			"id": "429bdbb1-77e0-4c99-a0cf-6f5110c386ce",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "3551cfdc-03a1-43a0-96da-04ce4999e3a2",
+			"id": "84964b79-861b-4835-ac92-1be38ca6a775",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "ca3d0e24-127d-47b5-ab12-7e886473549b",
+			"id": "95ccd227-c9e8-4f03-a933-0e1b736a6716",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "6c9f58bb-ced4-4bc7-a243-afde9221e46b",
+			"id": "8ca1a20c-53c6-47a5-8854-0c77b1327e79",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "d4dc799e-2918-4408-a510-497883b7399a",
+			"id": "5c97eca1-34bc-4896-b9a0-fef088adfd39",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "db7cbeba-249e-49b9-a8dd-e9cadbdda08c",
+			"id": "1c48af8b-f932-4034-92e3-b9762daf62aa",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "50bb98bf-9c2d-4a31-ab9c-ab3543a2a48b",
+			"id": "1eb4fa3e-1feb-4f59-b789-1d34811028c0",
 			"key": "access_token",
 			"value": ""
 		}
