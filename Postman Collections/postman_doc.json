@@ -972,7 +972,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "\n{\n  \"id_cliente_servico\": \"11000\",\n  \"dias_desbloqueio\": \"1\"\n}",
+											"raw": "{\n  \"id_cliente_servico\": \"11000\",\n  \"dias_desbloqueio\": \"1\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -3220,37 +3220,37 @@
 	],
 	"variable": [
 		{
-			"id": "30256374-9406-433e-8b36-d96da5442127",
+			"id": "0cb57edf-214b-452c-92ad-858ff615fd0a",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "5cca82ce-a73e-4e9d-95be-971b0c812b12",
+			"id": "8bd594bc-f16d-4cf7-a302-5cce19203a6e",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "57e52e46-0cbd-44dc-996e-250757d4e58f",
+			"id": "060da75d-0460-436c-add2-9abb455c9792",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "3bbb5589-e79f-47ca-9c97-5dbaa35959e8",
+			"id": "758d8d66-0b91-4533-93bd-fddaec34ccab",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "a2c058aa-2011-4def-9f12-c5778b58f130",
+			"id": "c3846329-7470-4312-aa45-445dce2c39d0",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "7d34f866-bb9f-4a64-9f57-577f3846b2e3",
+			"id": "69506255-2cb3-4be1-aad3-de9f1127e142",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "17d77ae8-7629-4b0f-8f6b-dedb7222efe1",
+			"id": "143109b6-ec3c-4701-90bb-e8b19fbcea8a",
 			"key": "access_token",
 			"value": ""
 		}
