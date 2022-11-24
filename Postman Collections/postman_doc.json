@@ -479,6 +479,15 @@
 										"type": "text"
 									}
 								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id_fatura\":\"11000\",\n    \"email_adicional\":[\n        \"email1@email.com\",\n        \"email2@email.com\"\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": "{{url}}/api/v1/integracao/cliente/financeiro/enviar_email",
 								"description": "**POST**\n\nAtravés deste `endpoint,` será possível fazer o disparo da fatura do cliente por e-mail. Podem ser passados e-mails adicionais, além dos que já estão cadastrados no sistema.\n\n**Aviso**\n\n`IMPORTANTE`: O sistema vai fazer a validação dos dados de e-mail e verificar se a `API` possui um servidor de e-mail válido configurado. Caso todas as regras sejam atendidas, o disparo do e-mail será efetuado instantaneamente, ou seja, é enviado em tempo real. Por esse motivo, o tempo de resposta da `API`, irá variar de acordo com a quantidade de e-mails que está na requisição para ser disparado.\n\n`IMPORTANTE 2`: O(s) servidor(es) de e-mails configurados no HubSoft possuem configuração de timeout entre um disparo e outro, dessa forma evita-se que o servidor seja adicionado em `BlackLists` de `SPAM`. Por esse motivo, a chamada da `API`, poderá ter um tempo de resposta diferente do comum.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_fatura | Identificador único da fatura do cliente | Sim |\n| email_adicional | Outros e-mails adicionais, podem ser enviados na requisição. | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_fatura | Deve conter um número inteiro maior que 0 | Nenhum |\n| email_adicional | Deve conter um array de strings (emails) | Nenhum |\n\nVeja que os parâmetros enviados na requisição `POST` devem obedecer a estrutura no formato `JSON:`\n\n```\n{\n        \"id_fatura\":\"11000\",\n        \"email_adicional\":[\n                \"email1@email.com\",\n                \"email2@email.com\"\n        ]\n}\n\n```"
 							},
@@ -3074,37 +3083,37 @@
 	],
 	"variable": [
 		{
-			"id": "0d617c3e-a742-4542-8034-4463f7cf1ff2",
+			"id": "9a60c893-0b38-4e2d-9386-271aaf570e68",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "7c095cde-9f5a-4c5a-a874-b926273b5790",
+			"id": "1e39e6d8-2957-4051-a876-822a7cc8705d",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "eff9ec9c-ebd9-4978-af2b-872b895f0be5",
+			"id": "c3712091-a90f-4790-a92f-104db76a91d1",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "5a06ae89-acc7-405b-9dd3-f158781c878d",
+			"id": "f9b19ba9-f34b-4af2-bfc9-0943a8cdae84",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "b40a6f07-f8d6-458f-a1a9-8b95a5af12eb",
+			"id": "3a4919c2-0c8a-49de-97b2-74c348d3760d",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "d81f6975-187e-4ede-9b09-43adf2e5162c",
+			"id": "b50320aa-5f4b-4c66-8e4e-e9919865276b",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "08b4722c-c026-4374-833f-8ddda79d6a9e",
+			"id": "e32307c7-8374-4959-96ef-9cfbd4080abe",
 			"key": "access_token",
 			"value": ""
 		}
