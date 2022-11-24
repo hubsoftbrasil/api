@@ -2626,41 +2626,6 @@
 					},
 					"response": [
 						{
-							"id": "8dc00788-b7de-4b11-a307-28aeaf8ca4c1",
-							"name": "Notificação",
-							"originalRequest": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "{{access_token}}",
-										"type": "text"
-									},
-									{
-										"key": "Content-Type",
-										"name": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n   \"ramal\":111,\n   \"telefone\":37999912222,\n   \"ligacao_params\":{\n      \"origem\":\"PBX\",\n      \"atendente\":\"João\"\n   }\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{url}}/api/v1/integracao/pbx/ligacao/notificar"
-							},
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Ligação notificada com sucesso\"\r\n}"
-						},
-						{
 							"id": "6aeedcfd-ef38-4b9f-a4a4-7749b741efec",
 							"name": "Cancelamento",
 							"originalRequest": {
@@ -3500,37 +3465,37 @@
 	],
 	"variable": [
 		{
-			"id": "34c750a6-4996-4335-b30c-8e27d50e1471",
+			"id": "833529e7-0564-4862-ba03-df5dfe3278ef",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "68048243-0b7c-45ef-969e-d0c3ae15164f",
+			"id": "1009e27c-9d7e-4f15-a6d6-430d79151d83",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "e5850753-0c4e-4fd4-81b3-4b01c4753706",
+			"id": "650ef4cf-ddc7-4c9b-a3d8-2d5c1c7e516e",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "0119cc56-1d31-409b-a8b4-504c15c5e73b",
+			"id": "c73f782e-7afb-44e9-a698-6aa6f81eff51",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "1dcccd00-6b31-4c90-9160-2e60f4921c52",
+			"id": "e99cd012-a8da-45c3-b291-3e5ef87cd63a",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "27794615-cb25-4248-8755-838f5f922c7a",
+			"id": "aa84f5e2-0927-4a82-ba1b-8a3f59c50e0b",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "c63e7903-3edf-4506-99e3-09fa546ab31d",
+			"id": "1bec78f6-3b37-4d8e-9182-412d92acd078",
 			"key": "access_token",
 			"value": ""
 		}
