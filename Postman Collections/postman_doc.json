@@ -1889,8 +1889,23 @@
 										"key": "Authorization",
 										"value": "{{access_token}}",
 										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
 									}
 								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id_ordem_servico\":99991\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": "{{url}}/api/v1/integracao/ordem_servico/remove_agendamento"
 							},
 							"_postman_previewlanguage": "json",
@@ -3381,37 +3396,37 @@
 	],
 	"variable": [
 		{
-			"id": "fd07c073-57c0-487d-8c4e-91a4a66cc79b",
+			"id": "dd657ce4-7bc2-417c-b70e-1fe12bebde36",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "8945c5ea-2f44-476b-abec-c182cd0464e7",
+			"id": "4d3a4952-5911-4d4d-a1a8-a29bf5bb122d",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "be2abd16-27af-488e-8584-714a94f14900",
+			"id": "5c8e9798-fab5-45a8-b2a9-52116b070361",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "c7a91f5d-7b96-4956-a779-d3af993a707c",
+			"id": "e0573ccb-f258-41f9-b682-6a63c1d6c33c",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "19212f72-4943-44c7-8933-29b1e0386825",
+			"id": "e30c23ab-0e75-43f1-97fb-acb80c6fd3d4",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "736a50bb-5492-4852-a956-f9ed6649a9c3",
+			"id": "7c80c8c0-f900-4871-b607-f6bedc12bc25",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "28dc2855-49d9-4371-96d0-a08ff0436b92",
+			"id": "ab465da8-600f-4069-ad02-01486b2908c2",
 			"key": "access_token",
 			"value": ""
 		}
