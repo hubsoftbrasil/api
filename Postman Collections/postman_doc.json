@@ -940,7 +940,7 @@
 									}
 								],
 								"url": "{{url}}/api/v1/integracao/cliente/desbloqueio_confianca",
-								"description": "**POST**\n\nAtravés deste `endpoint` , será possível efetuar o desbloqueio em confiança, pela quantidade de dias desejados.\n\nAviso\n\n`IMPORTANTE`: O sistema vai fazer a validação da regra configurada pelo painel do administrador. Por exemplo, se a regra configurada pelo painel, estiver definido que o máximo de dias para desbloqueio for menor ou igual a 3 dias e a requisição da `API`, possuir um valor maior que 3 (no atributo `dias_desbloqueio`), o desbloqueio não será efetuado, e uma mensagem de erro será retornada, avisando que o valor informado para os dias de desbloqueio não é permitido, pois ultrapassa a configuração pré-estabelecida.\n\nOs seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico | Identificador único do serviço do cliente | Sim |\n| dias_desbloqueio | Quantidade de dias, a partir da data atual que o cliente ficará desbloqueado em confiança | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico | Deve conter um número inteiro maior que 0 | Nenhum |\n| dias_desbloqueio | Deve conter um número inteiro maior que 0. Se não for preenchido o valor 1 será atributo, ou seja, será desbloqueado até o próximo dia | Nenhum |\n\nVeja que os parâmetros enviados na requisição `POST` devem obedecer a estrutura no formato `JSON:`\n\n```\n{\n        \"id_cliente_servico\":\"11000\",\n        \"dias_desbloqueio\":\"1\"\n}\n\n```"
+								"description": "**POST**\n\nAtravés deste `endpoint` , será possível efetuar o desbloqueio em confiança, pela quantidade de dias desejados.\n\nAviso\n\n`IMPORTANTE`: O sistema vai fazer a validação da regra configurada pelo painel do administrador. Por exemplo, se a regra configurada pelo painel, estiver definido que o máximo de dias para desbloqueio for menor ou igual a 3 dias e a requisição da `API`, possuir um valor maior que 3 (no atributo `dias_desbloqueio`), o desbloqueio não será efetuado, e uma mensagem de erro será retornada, avisando que o valor informado para os dias de desbloqueio não é permitido, pois ultrapassa a configuração pré-estabelecida.\n\nOs seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico | Identificador único do serviço do cliente | Sim |\n| dias_desbloqueio | Quantidade de dias, a partir da data atual que o cliente ficará desbloqueado em confiança | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico | Deve conter um número inteiro maior que 0 | Nenhum |\n| dias_desbloqueio | Deve conter um número inteiro maior que 0. Se não for preenchido o valor 1 será atributo, ou seja, será desbloqueado até o próximo dia | Nenhum |"
 							},
 							"response": [
 								{
@@ -3196,37 +3196,37 @@
 	],
 	"variable": [
 		{
-			"id": "42d9324d-b475-4afe-b1cf-0ac87b8d07d4",
+			"id": "021e699b-4e88-4aa3-b26a-c1cc5cfb8fa3",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "7ef6c219-3037-4ed4-91da-d1492b3da6b5",
+			"id": "5e627065-078f-4b4d-a444-96015963fb1c",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "bf9f1810-7f23-4cb4-af74-ee55717319b6",
+			"id": "ea8724d2-cdc5-4954-8d0b-8f8584762866",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "cbfc7866-fa79-419c-a799-23ffda37cc8b",
+			"id": "e2288c1d-f826-4cc1-bd16-5857b25a4e10",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "50261a09-1936-4838-9202-61827b40cead",
+			"id": "31ab577d-d37d-4b73-9153-80bf9191af68",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "c3012ab3-eae5-45f4-a2ba-1c507ca4d711",
+			"id": "9ad055bc-9aa9-43c1-b223-8bae08e745d7",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "9f838e41-184e-4462-996b-86a240f0ffb1",
+			"id": "69be0cf4-e0e8-4c26-817f-5bb6cdae74c5",
 			"key": "access_token",
 			"value": ""
 		}
