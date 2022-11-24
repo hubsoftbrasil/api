@@ -636,6 +636,15 @@
 										"type": "text"
 									}
 								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id_nota_fiscal\":\"123\",\n    \"tipo_documento\":\"nfe\",\n    \"email_adicional\":[\n        \"email1@email.com\"\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": "{{url}}/api/v1/integracao/cliente/nota_fiscal/enviar_email",
 								"description": "**POST**\n\nAtravés deste `endpoint`, será possível fazer o disparo da nota fiscal do cliente por e-mail. Podem ser passados e-mails adicionais, além dos que já estão cadastrados no sistema.\n\n**Aviso**\n\n`IMPORTANTE`: O sistema vai fazer a validação dos dados de e-mail e verificar se a API possui um servidor de e-mail válido configurado. Caso todas as regras sejam atendidas, o disparo do e-mail será efetuado instantaneamente, ou seja, é enviado em tempo real. Por esse motivo, o tempo de resposta da API, irá variar de acordo com a quantidade de e-mails que está na requisição para ser disparado.\n\n`IMPORTANTE 2:` O(s) servidor(es) de e-mails configurados no HubSoft possuem configuração de timeout entre um disparo e outro, dessa forma evita-se que o servidor seja adicionado em `BlackLists` de `SPAM`. Por esse motivo, a chamada da `API`, poderá ter um tempo de resposta diferente do comum."
 							},
@@ -3065,37 +3074,37 @@
 	],
 	"variable": [
 		{
-			"id": "38a0fba1-8db5-4a94-8896-21478a64f34f",
+			"id": "0d617c3e-a742-4542-8034-4463f7cf1ff2",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "8e2acb1e-5d3e-4113-b21b-cdbdcea2211c",
+			"id": "7c095cde-9f5a-4c5a-a874-b926273b5790",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "38c02fa2-e9b8-4934-b10b-97983570c8f9",
+			"id": "eff9ec9c-ebd9-4978-af2b-872b895f0be5",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "b97a2405-4c4c-4454-aaeb-8f331fdc00ca",
+			"id": "5a06ae89-acc7-405b-9dd3-f158781c878d",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "9c1dc4b5-fd50-4068-be1e-7965d2cbdb19",
+			"id": "b40a6f07-f8d6-458f-a1a9-8b95a5af12eb",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "b7c2f379-c2ad-41b0-91e5-144b467a822b",
+			"id": "d81f6975-187e-4ede-9b09-43adf2e5162c",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "915671f9-e97a-417f-b260-beb1afceb343",
+			"id": "08b4722c-c026-4374-833f-8ddda79d6a9e",
 			"key": "access_token",
 			"value": ""
 		}
