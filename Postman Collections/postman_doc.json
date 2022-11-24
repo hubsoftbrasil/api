@@ -572,7 +572,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n   \"id_fatura\":\"11000\",\n   \"email_adicional\":[\n      \"11988887777\",\n      \"1188887776\"\n   ]\n}",
+											"raw": "{\n   \"id_fatura\":\"11000\",\n   \"telefone_adicional\":[\n      \"11988887777\",\n      \"1188887776\"\n   ]\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -3479,37 +3479,37 @@
 	],
 	"variable": [
 		{
-			"id": "a61c1093-3272-4904-8c65-37a9b8b8c3c4",
+			"id": "b5faa31c-9e08-45a6-80c2-be34737e2c2c",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "14854e51-a88c-461b-b325-6b82892fd0db",
+			"id": "a8657e63-e5ef-46ee-ad7a-8a82a7f873d5",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "f714adbb-ccf1-46d2-885b-d6ec08e74565",
+			"id": "ec9ba80f-36e3-4f4c-b582-c7c5166bd174",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "cb76b19d-4dcb-434e-a85c-1c4d850de91a",
+			"id": "62b4e35e-db84-4b31-a5d1-7b17a356f94e",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "5f6105da-fbdf-4462-9564-1bd03e4c1f3f",
+			"id": "75a95347-88f6-44fe-94bd-f068682f3395",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "98ce82bd-b524-47e6-a6e5-1ce45c636baf",
+			"id": "c6ba072c-9ea6-4529-b2d3-a6c2086d8724",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "6b0723e1-f7f5-4b3f-b5b0-34ef3bc3d210",
+			"id": "c17162ee-585e-4160-9034-f275f23bb36b",
 			"key": "access_token",
 			"value": ""
 		}
