@@ -1811,7 +1811,7 @@
 							}
 						},
 						"url": "{{url}}/api/v1/integracao/ordem_servico/reagendar",
-						"description": "**Endpoint (Rota)**\n\nNeste `endpoint`, será possível reagendar a ordem de serviço, obtendo o retorno no formato `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_ordem_servico | Identificador da ordem de serviço | Sim |\n| data_inicio_programado | Data inicial programada para iniciar a execução da ordem de serviço | Sim |\n| hora_inicio_programado | Hora inicial programada para iniciar a execução da ordem de serviço | Sim |\n| data_termino_programado | Data final programada para finalizar a execução da ordem de serviço | Sim |\n| hora_termino_programado | Hora final programada para finalizar a execução da ordem de serviço | Sim |\n| id_usuario_antigo | Identificador do usuário (técnico) responsável pela ordem de serviço | Sim, se o id_usuario_novo for especificado |\n| id_usuario_novo | Identificador do usuário (técnico) responsável pela ordem de serviço | Sim, se o id_usuario_antigo for especificado |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_ordem_servico | Número Inteiro | Nenhum |\n| data_inicio_programado | Timestamp (2020-01-01) | Nenhum |\n| hora_inicio_programado | Texto (12:00:00) | Nenhum |\n| data_termino_programado | Texto (2020-01-01) | Nenhum |\n| hora_termino_programado | Texto (13:00:00) | Nenhum |\n| id_usuario_antigo | Número Inteiro | Nenhum |\n| id_usuario_novo | Número Inteiro | Nenhum |\n\nVeja que os parâmetros enviados na requisição `POST` devem obedecer a estrutura no formato `JSON`:\n\n```\n{\n    \"id_ordem_servico\": \"1493\",\n    \"data_inicio_programado\": \"2020-11-23\",\n    \"hora_inicio_programado\": \"08:00:00\",\n    \"data_termino_programado\": \"2020-11-23\",\n    \"hora_termino_programado\": \"09:30:00\",\n    \"id_usuario_antigo\": 4,\n    \"id_usuario_novo\": 1\n}\n\n```"
+						"description": "**Endpoint (Rota)**\n\nNeste `endpoint`, será possível reagendar a ordem de serviço, obtendo o retorno no formato `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_ordem_servico | Identificador da ordem de serviço | Sim |\n| data_inicio_programado | Data inicial programada para iniciar a execução da ordem de serviço | Sim |\n| hora_inicio_programado | Hora inicial programada para iniciar a execução da ordem de serviço | Sim |\n| data_termino_programado | Data final programada para finalizar a execução da ordem de serviço | Sim |\n| hora_termino_programado | Hora final programada para finalizar a execução da ordem de serviço | Sim |\n| id_usuario_antigo | Identificador do usuário (técnico) responsável pela ordem de serviço | Sim, se o id_usuario_novo for especificado |\n| id_usuario_novo | Identificador do usuário (técnico) responsável pela ordem de serviço | Sim, se o id_usuario_antigo for especificado |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_ordem_servico | Número Inteiro | Nenhum |\n| data_inicio_programado | Timestamp (2020-01-01) | Nenhum |\n| hora_inicio_programado | Texto (12:00:00) | Nenhum |\n| data_termino_programado | Texto (2020-01-01) | Nenhum |\n| hora_termino_programado | Texto (13:00:00) | Nenhum |\n| id_usuario_antigo | Número Inteiro | Nenhum |\n| id_usuario_novo | Número Inteiro | Nenhum |"
 					},
 					"response": [
 						{
@@ -3396,37 +3396,37 @@
 	],
 	"variable": [
 		{
-			"id": "14bcabed-df3f-4f50-b139-984c1cb43df1",
+			"id": "932b3955-4bec-45bf-b5d5-71e1ff271451",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "fe4e961a-74ff-47cc-9b6f-454158c5a835",
+			"id": "e41ebbd4-4747-4093-9eaa-bdefa595036b",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "733acda4-87d0-413d-9ec2-d981aba0464c",
+			"id": "f3296608-383e-4009-b729-c458f7dc1e00",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "131b2558-7a52-4b77-8307-448c57803ec6",
+			"id": "9b01779d-7712-44c1-9c03-e1bea4ac5354",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "6ab11d05-bd1b-44b2-a973-936fbbc2c693",
+			"id": "c9836254-51e9-4e00-95f1-e8157a9641a3",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "2b65a654-fd34-4d32-b572-b43571ed5b00",
+			"id": "fd1ffd28-2866-4526-9f6c-3ab96288a383",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "4fa6c976-7323-4f4b-b359-27d570dd7b56",
+			"id": "79d9d16e-6844-4781-a799-4c13129429fb",
 			"key": "access_token",
 			"value": ""
 		}
