@@ -939,6 +939,15 @@
 										"type": "text"
 									}
 								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id_cliente_servico\": \"11000\",\n  \"dias_desbloqueio\": \"1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": "{{url}}/api/v1/integracao/cliente/desbloqueio_confianca",
 								"description": "**POST**\n\nAtravés deste `endpoint` , será possível efetuar o desbloqueio em confiança, pela quantidade de dias desejados.\n\nAviso\n\n`IMPORTANTE`: O sistema vai fazer a validação da regra configurada pelo painel do administrador. Por exemplo, se a regra configurada pelo painel, estiver definido que o máximo de dias para desbloqueio for menor ou igual a 3 dias e a requisição da `API`, possuir um valor maior que 3 (no atributo `dias_desbloqueio`), o desbloqueio não será efetuado, e uma mensagem de erro será retornada, avisando que o valor informado para os dias de desbloqueio não é permitido, pois ultrapassa a configuração pré-estabelecida.\n\nOs seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico | Identificador único do serviço do cliente | Sim |\n| dias_desbloqueio | Quantidade de dias, a partir da data atual que o cliente ficará desbloqueado em confiança | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico | Deve conter um número inteiro maior que 0 | Nenhum |\n| dias_desbloqueio | Deve conter um número inteiro maior que 0. Se não for preenchido o valor 1 será atributo, ou seja, será desbloqueado até o próximo dia | Nenhum |"
 							},
@@ -3196,37 +3205,37 @@
 	],
 	"variable": [
 		{
-			"id": "021e699b-4e88-4aa3-b26a-c1cc5cfb8fa3",
+			"id": "231c9e9e-19c3-461e-9b0a-f0819d4ae395",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "5e627065-078f-4b4d-a444-96015963fb1c",
+			"id": "b88cd86a-bd92-4b9d-bbf8-0969141bb4fc",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "ea8724d2-cdc5-4954-8d0b-8f8584762866",
+			"id": "97b29054-16d5-46eb-827f-22a4bab7b754",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "e2288c1d-f826-4cc1-bd16-5857b25a4e10",
+			"id": "daf0abe6-cc30-4a3b-a022-1ae96b530766",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "31ab577d-d37d-4b73-9153-80bf9191af68",
+			"id": "86efcfbc-e3b2-4efb-b4f5-6ae300265e8c",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "9ad055bc-9aa9-43c1-b223-8bae08e745d7",
+			"id": "371e81e9-ae3a-42be-9702-f61620168b9f",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "69be0cf4-e0e8-4c26-817f-5bb6cdae74c5",
+			"id": "6f82507f-bbc3-4b39-b777-e2b6e7894a34",
 			"key": "access_token",
 			"value": ""
 		}
