@@ -562,8 +562,23 @@
 												"key": "Authorization",
 												"value": "{{access_token}}",
 												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
 											}
 										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n   \"id_fatura\":\"11000\",\n   \"email_adicional\":[\n      \"11988887777\",\n      \"1188887776\"\n   ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
 										"url": "{{url}}/api/v1/integracao/cliente/financeiro/enviar_sms"
 									},
 									"_postman_previewlanguage": "json",
@@ -3108,37 +3123,37 @@
 	],
 	"variable": [
 		{
-			"id": "0299ae7a-e472-4f28-84c2-7883efcde806",
+			"id": "98b58612-fced-4937-83bf-2b68b6cab78d",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "39cd8e40-42c5-4459-8f80-bedb5bbf4bcc",
+			"id": "b67fa9ef-0f89-4bb7-bfdb-f3d5838a1352",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "b89a17fb-5622-4093-be91-deea55dec954",
+			"id": "eed984fc-41f8-41e2-8900-6065f77021be",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "83a69a5f-1771-4656-a0bc-b8782f8578ad",
+			"id": "b1734bb3-3211-45b4-8e23-09c48c7e2930",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "9cf72bab-bbfa-4957-8ea0-c67a8a7a72e9",
+			"id": "0c78e148-2cea-4790-a31f-ac19de9a1df3",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "2021e41d-5f50-46d6-8614-e0c212238f59",
+			"id": "ae2fbd88-0b0f-4ad7-93c4-129896d23227",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "96e75737-c409-48e5-a27c-829327e807f3",
+			"id": "98b2e059-d5d3-4121-83fb-bc7bb14ccf94",
 			"key": "access_token",
 			"value": ""
 		}
