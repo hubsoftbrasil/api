@@ -2652,7 +2652,7 @@
 										}
 									}
 								},
-								"url": "{{url}}/api/v1/integracao/pbx/ligacao/cancelar"
+								"url": "{{url}}/api/v1/integracao/pbx/ligacao/notificar"
 							},
 							"_postman_previewlanguage": "json",
 							"header": null,
@@ -3465,37 +3465,37 @@
 	],
 	"variable": [
 		{
-			"id": "a34a4e5c-5af9-4564-be55-f39a666e1177",
+			"id": "9a85c654-735c-423e-8794-0a0e9fb6be60",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "91418737-20fa-49c8-a94b-e7626bc56398",
+			"id": "e26d617b-f2db-42df-a121-902c6eee8d42",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "9fd7b77a-6ca6-4c2e-b12c-efe9056ced1b",
+			"id": "4e9b5dc8-05a2-41a2-94e7-295a7af6d62b",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "602b4781-9c2d-4339-9c48-359e2f6143a2",
+			"id": "dc40ec16-18f9-4ffb-b222-16bfc3d54d35",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "a1c87f25-260f-48e8-a123-73eb9dafe1cb",
+			"id": "baba25ac-a0a2-4329-9b64-f9a4a8a67a87",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "c540f2f3-1694-48c8-9a9e-17d5ef91b6ba",
+			"id": "d721e95d-826a-4c8d-9f1c-7285b9d9aa23",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "b520d4ea-1a23-490e-b0a6-3cb8da2f6549",
+			"id": "3d9846b0-c9e4-4437-8a60-7e459a735ef9",
 			"key": "access_token",
 			"value": ""
 		}
