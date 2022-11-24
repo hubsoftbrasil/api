@@ -962,8 +962,23 @@
 												"key": "Authorization",
 												"value": "{{access_token}}",
 												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
 											}
 										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id_cliente_servico\": \"11000\",\n  \"dias_desbloqueio\": \"1\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
 										"url": "{{url}}/api/v1/integracao/cliente/desbloqueio_confianca"
 									},
 									"_postman_previewlanguage": "json",
@@ -3205,37 +3220,37 @@
 	],
 	"variable": [
 		{
-			"id": "231c9e9e-19c3-461e-9b0a-f0819d4ae395",
+			"id": "633a6d9c-9b8b-45a4-805a-2ad11f66f75c",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "b88cd86a-bd92-4b9d-bbf8-0969141bb4fc",
+			"id": "e12a88b0-dcc2-4505-9fe5-e7f0e7b1f716",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "97b29054-16d5-46eb-827f-22a4bab7b754",
+			"id": "66c11378-537a-4e4a-a0ff-0962b02a984e",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "daf0abe6-cc30-4a3b-a022-1ae96b530766",
+			"id": "f3bf6ee1-4ae0-4ecc-8c49-809556a23003",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "86efcfbc-e3b2-4efb-b4f5-6ae300265e8c",
+			"id": "a9afb98e-8d2b-487b-b7a6-93d0541a8c65",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "371e81e9-ae3a-42be-9702-f61620168b9f",
+			"id": "62a14548-2bfb-40cc-996e-2d56a18fa4d7",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "6f82507f-bbc3-4b39-b777-e2b6e7894a34",
+			"id": "1453c550-3883-4d82-8b8f-74410e57d181",
 			"key": "access_token",
 			"value": ""
 		}
