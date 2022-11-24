@@ -1094,7 +1094,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n        \"id_cliente_servico\":\"11000\"\n}",
+									"raw": "{\n    \"id_cliente_servico\":\"11000\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3229,37 +3229,37 @@
 	],
 	"variable": [
 		{
-			"id": "5aa42ca3-42b2-4bf4-a76c-1350eda325f6",
+			"id": "7f1aa720-5ef3-4d82-a2c6-3baea338e6e8",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "6c0417e0-bb0f-4ec0-bab7-addb907149f0",
+			"id": "158f24ad-8475-43d8-8b4e-baf703538aca",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "79f4b5bc-bb7b-4450-825a-203f48ccec14",
+			"id": "4e3fc702-d7f2-4d9c-b23a-3e3b105a0221",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "1ca74312-2d77-4abf-beef-0e995015ea90",
+			"id": "1849d538-536e-419a-a6ea-7f8fd9262587",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "96605fde-2218-4806-a3be-39ea95e2afa4",
+			"id": "36d16fec-d9b5-493d-827a-236a3b65678f",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "bd1766e8-6785-43c4-b7b3-63c46f63cc65",
+			"id": "51ab29ea-7956-4b3f-8ac4-98739fd25c7e",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "151100fc-5bac-47ca-96aa-c764817f38b8",
+			"id": "cd4b73c4-aa98-468b-a7eb-f15d16fb0662",
 			"key": "access_token",
 			"value": ""
 		}
