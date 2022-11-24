@@ -1759,8 +1759,23 @@
 										"key": "Authorization",
 										"value": "{{access_token}}",
 										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
 									}
 								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \"consulta\":\"Guilherme\",\n   \"data_inicio\":\"2020-11-01 00:00:00\",\n   \"data_fim\":\"2020-11-20 23:59:59\",\n   \"tipo_data\":\"data_inicio_programado\",\n   \"order_by_key\":\"asc\",\n   \"order_by\":\"data_inicio_programado\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": "{{url}}/api/v1/integracao/ordem_servico/consultar"
 							},
 							"_postman_previewlanguage": "json",
@@ -3333,37 +3348,37 @@
 	],
 	"variable": [
 		{
-			"id": "5a5e40ae-eb63-4275-a8bd-3882750710ad",
+			"id": "d23eaa4a-a4c4-4dbe-8ef2-120aaf7b101d",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "ca8f9771-1532-4c4f-a2d5-44afa08bd680",
+			"id": "5f96982f-5cd6-4de4-be73-d63908b13a29",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "889e22a2-6356-4438-b8ed-dbe0ece95b02",
+			"id": "f86157fc-4db5-43e7-ae3d-2faab01002a1",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "a0f81cd1-28f6-4dc2-afe8-1efb96fccf72",
+			"id": "10efd70d-a081-4c8f-b046-2fcae57f7e4e",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "d606e506-4438-4615-b5e7-92cdfff49963",
+			"id": "6066894e-29e3-4c70-8602-5a7e88362447",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "3962592d-b9fa-4f7d-9db5-aea3a9b89810",
+			"id": "66652e19-c64e-4a1d-a448-4138c12425ac",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "aacc2176-687d-498e-bb5e-90cba12cac94",
+			"id": "3dde6535-35ab-43ea-ab2d-61778f1b399a",
 			"key": "access_token",
 			"value": ""
 		}
