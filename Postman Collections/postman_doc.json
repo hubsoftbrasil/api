@@ -1876,7 +1876,7 @@
 							}
 						},
 						"url": "{{url}}/api/v1/integracao/ordem_servico/remove_agendamento",
-						"description": "**Endpoint (Rota)**\n\nNeste `endpoint`, será possível remover o agendamento da ordem de serviço, obtendo o retorno no formato `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_ordem_servico | Identificador da ordem de serviço | Sim |\n| id_motivo_remocao_agendamento | Identificador do motivo de remoção de agendamento | Sim |\n| observacao | Textual (Mínimo de 10 caracteres) | Sim |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_ordem_servico | Número Inteiro | Nenhum |\n| id_motivo_remocao_agendamento | Número Inteiro | Nenhum |\n| observacao | Texto | Nenhum |\n\nEndFragmentStartFragment\n\nVeja que os parâmetros enviados na requisição `POST` devem obedecer a estrutura no formato `JSON`:\n\n```\n{\n    \"id_ordem_servico\": \"1493\",\n    \"id_motivo_remocao_agendamento\": \"8\",\n    \"observacao\": \"Cliente pediu para ir no dia seguinte.\"\n}\n\n```"
+						"description": "**Endpoint (Rota)**\n\nNeste `endpoint`, será possível remover o agendamento da ordem de serviço, obtendo o retorno no formato `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_ordem_servico | Identificador da ordem de serviço | Sim |\n| id_motivo_remocao_agendamento | Identificador do motivo de remoção de agendamento | Sim |\n| observacao | Textual (Mínimo de 10 caracteres) | Sim |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_ordem_servico | Número Inteiro | Nenhum |\n| id_motivo_remocao_agendamento | Número Inteiro | Nenhum |\n| observacao | Texto | Nenhum |"
 					},
 					"response": [
 						{
@@ -3396,37 +3396,37 @@
 	],
 	"variable": [
 		{
-			"id": "52c96f11-45cf-4a29-b0fd-2ad734662348",
+			"id": "8849187d-1ed6-40c3-b926-d9a4d5a0b8dd",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "2274a797-1e05-462c-bd51-7c8dfa6f66c9",
+			"id": "4e175635-e228-438e-936d-8df65f08959e",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "cb5690b7-98b0-4fb2-ac47-9e44a494803d",
+			"id": "fa917e3f-bb83-4fc5-ae2f-03dd9cc50520",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "92a1bd4f-5f18-4f79-912b-31ad17430311",
+			"id": "3709b2fd-b500-4a1b-8c46-409cd7880dbd",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "d0369014-fbc5-431b-baf1-cdd05ac53ef4",
+			"id": "3a2a25a7-8e63-4cac-82c5-a60e356c7477",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "ed2bfdf4-41e4-46be-aa09-db1a3184801b",
+			"id": "1956cb8c-f033-405d-b893-c551dd7a9d36",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "ef722e4b-e72e-4255-9ba3-50c39d682d4d",
+			"id": "12715852-e55d-45d1-bbe3-b78f903e6338",
 			"key": "access_token",
 			"value": ""
 		}
