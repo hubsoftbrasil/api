@@ -1801,6 +1801,15 @@
 								"type": "text"
 							}
 						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"id_ordem_servico\":\"1493\",\n   \"data_inicio_programado\":\"2020-11-23\",\n   \"hora_inicio_programado\":\"08:00:00\",\n   \"data_termino_programado\":\"2020-11-23\",\n   \"hora_termino_programado\":\"09:30:00\",\n   \"id_usuario_antigo\":4,\n   \"id_usuario_novo\":1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": "{{url}}/api/v1/integracao/ordem_servico/reagendar",
 						"description": "**Endpoint (Rota)**\n\nNeste `endpoint`, será possível reagendar a ordem de serviço, obtendo o retorno no formato `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_ordem_servico | Identificador da ordem de serviço | Sim |\n| data_inicio_programado | Data inicial programada para iniciar a execução da ordem de serviço | Sim |\n| hora_inicio_programado | Hora inicial programada para iniciar a execução da ordem de serviço | Sim |\n| data_termino_programado | Data final programada para finalizar a execução da ordem de serviço | Sim |\n| hora_termino_programado | Hora final programada para finalizar a execução da ordem de serviço | Sim |\n| id_usuario_antigo | Identificador do usuário (técnico) responsável pela ordem de serviço | Sim, se o id_usuario_novo for especificado |\n| id_usuario_novo | Identificador do usuário (técnico) responsável pela ordem de serviço | Sim, se o id_usuario_antigo for especificado |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_ordem_servico | Número Inteiro | Nenhum |\n| data_inicio_programado | Timestamp (2020-01-01) | Nenhum |\n| hora_inicio_programado | Texto (12:00:00) | Nenhum |\n| data_termino_programado | Texto (2020-01-01) | Nenhum |\n| hora_termino_programado | Texto (13:00:00) | Nenhum |\n| id_usuario_antigo | Número Inteiro | Nenhum |\n| id_usuario_novo | Número Inteiro | Nenhum |\n\nVeja que os parâmetros enviados na requisição `POST` devem obedecer a estrutura no formato `JSON`:\n\n```\n{\n    \"id_ordem_servico\": \"1493\",\n    \"data_inicio_programado\": \"2020-11-23\",\n    \"hora_inicio_programado\": \"08:00:00\",\n    \"data_termino_programado\": \"2020-11-23\",\n    \"hora_termino_programado\": \"09:30:00\",\n    \"id_usuario_antigo\": 4,\n    \"id_usuario_novo\": 1\n}\n\n```"
 					},
@@ -3348,37 +3357,37 @@
 	],
 	"variable": [
 		{
-			"id": "0ab32559-3706-467a-b92f-4334e2b0b0e2",
+			"id": "8cd190b2-e5bd-401d-a665-b799cb5d6d8e",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "8b164b0a-687c-42c3-b964-f258584b90ba",
+			"id": "4a450cfd-f26d-4a03-ac5f-4653b8a22553",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "ba87e2ca-26a2-4b46-b4da-77ebf0ca16fe",
+			"id": "7422ea40-2605-4bfe-b381-cc8cecd178d5",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "ac5d1f53-a628-4935-9899-e536fe46da99",
+			"id": "4778a1ee-f193-4717-b216-a8c571c05ac2",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "2e0db136-8b5f-493e-8c7e-f58d08ff8944",
+			"id": "99ece80d-87c7-428a-9348-02ee08a9203b",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "6b5edc8d-10a2-431e-a4bd-195ae702c869",
+			"id": "1857a516-fc58-41c0-8099-76b0543931af",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "be7c5dbe-751c-4e01-9e9d-228865a5d739",
+			"id": "fc2024e8-d325-4be5-9cac-0381847b9ff2",
 			"key": "access_token",
 			"value": ""
 		}
