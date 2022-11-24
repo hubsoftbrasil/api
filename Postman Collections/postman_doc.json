@@ -497,7 +497,23 @@
 									"name": "Sucesso",
 									"originalRequest": {
 										"method": "POST",
-										"header": [],
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id_fatura\":\"11000\",\n    \"email_adicional\":[\n        \"email1@email.com\",\n        \"email2@email.com\"\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
 										"url": "{{url}}/api/v1/integracao/cliente/financeiro/enviar_email"
 									},
 									"_postman_previewlanguage": "json",
@@ -3083,37 +3099,37 @@
 	],
 	"variable": [
 		{
-			"id": "9a60c893-0b38-4e2d-9386-271aaf570e68",
+			"id": "3dd7de18-b684-43a6-b0dc-9f4f9f011786",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "1e39e6d8-2957-4051-a876-822a7cc8705d",
+			"id": "fc318ef9-9d64-4216-8fd5-601c44a59eb0",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "c3712091-a90f-4790-a92f-104db76a91d1",
+			"id": "feb9cb68-ae97-4bb6-8284-3657c60296c5",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "f9b19ba9-f34b-4af2-bfc9-0943a8cdae84",
+			"id": "d1b5ac38-679d-4426-994d-1029fbfff042",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "3a4919c2-0c8a-49de-97b2-74c348d3760d",
+			"id": "f08858a9-15a2-4f2a-9ebe-178cf980c47e",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "b50320aa-5f4b-4c66-8e4e-e9919865276b",
+			"id": "7974122d-2f4f-4a8d-a263-62fc87e80750",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "e32307c7-8374-4959-96ef-9cfbd4080abe",
+			"id": "66527e9a-bce8-4450-bc24-7bab0aec5234",
 			"key": "access_token",
 			"value": ""
 		}
