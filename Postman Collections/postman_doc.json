@@ -2506,6 +2506,41 @@
 					},
 					"response": [
 						{
+							"id": "2d91ed25-b8ef-4056-9172-28ef2f97a970",
+							"name": "Sucesso",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \"cep\":\"35560000\",\n   \"servico\":{\n      \"id_servico\":1,\n      \"valor\":100\n   },\n   \"cpf_cnpj\":\"68346567000158\",\n   \"telefone\":\"3732818000\",\n   \"nome_razaosocial\":\"Empresa XPTO LTDA\",\n   \"tipo_pessoa\":\"pj\",\n   \"bairro\":\"Centro\",\n   \"endereco\":\"Praça Getúlio Vargas\",\n   \"numero\":77\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/v1/integracao/prospecto"
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Prospecto adicionado com sucesso\",\n    \"prospecto\": {\n        \"nome_razaosocial\": \"EMPRESA XPTO LTDA\",\n        \"telefone\": \"3732818000\",\n        \"email\": null,\n        \"observacao\": null,\n        \"id_endereco_numero\": 33320,\n        \"tipo_pessoa\": \"pj\",\n        \"cpf_cnpj\": \"41483316000169\",\n        \"id_usuario\": 1,\n        \"origem\": \"API\",\n        \"updated_at\": \"2020-07-28 10:27:56\",\n        \"created_at\": \"2020-07-28 10:27:56\",\n        \"id_prospecto\": 100,\n        \"created_at_br\": \"28/07/2020\",\n        \"prospecto_servico\": {\n            \"id_prospecto_servico\": 99,\n            \"id_prospecto\": 100,\n            \"id_servico\": 1,\n            \"valor\": \"100\"\n        }\n    }\n}"
+						},
+						{
 							"id": "42f27cb9-41ef-4db5-a215-8ef34a0884e4",
 							"name": "Erro - CPF/CNPJ já cadastrado",
 							"originalRequest": {
@@ -2524,26 +2559,6 @@
 							"cookie": [],
 							"responseTime": null,
 							"body": "{\r\n  \"status\": \"error\",\r\n  \"msg\": \"O CPF/CNPJ já foi cadastrado antes no prospecto EMPRESA XPTO LTDA\"\r\n}"
-						},
-						{
-							"id": "2d91ed25-b8ef-4056-9172-28ef2f97a970",
-							"name": "Sucesso",
-							"originalRequest": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "{{access_token}}",
-										"type": "text"
-									}
-								],
-								"url": "{{url}}/api/v1/integracao/prospecto"
-							},
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Prospecto adicionado com sucesso\",\n    \"prospecto\": {\n        \"nome_razaosocial\": \"EMPRESA XPTO LTDA\",\n        \"telefone\": \"3732818000\",\n        \"email\": null,\n        \"observacao\": null,\n        \"id_endereco_numero\": 33320,\n        \"tipo_pessoa\": \"pj\",\n        \"cpf_cnpj\": \"41483316000169\",\n        \"id_usuario\": 1,\n        \"origem\": \"API\",\n        \"updated_at\": \"2020-07-28 10:27:56\",\n        \"created_at\": \"2020-07-28 10:27:56\",\n        \"id_prospecto\": 100,\n        \"created_at_br\": \"28/07/2020\",\n        \"prospecto_servico\": {\n            \"id_prospecto_servico\": 99,\n            \"id_prospecto\": 100,\n            \"id_servico\": 1,\n            \"valor\": \"100\"\n        }\n    }\n}"
 						}
 					]
 				},
@@ -3035,37 +3050,37 @@
 	],
 	"variable": [
 		{
-			"id": "4e0dbab8-f438-4eb2-98b1-48b4a410db26",
+			"id": "07268551-c2af-4b5b-a0d1-c0399fad7b11",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "c468da74-d48a-4612-953d-2fcbdb04b746",
+			"id": "144847e2-3a84-4518-bddc-7f281c2bff7d",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "0f4ea1f1-7ce2-454e-ab87-92803ae33627",
+			"id": "529c54d3-7052-407d-890a-e24dd9da722e",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "e81882fb-95b4-4382-89fd-efb7ebd05840",
+			"id": "6003ce7b-3708-4b8e-b14d-2cbfc15a35a0",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "629b879d-e9e0-44e5-beae-b452c1fbd95e",
+			"id": "d5e2c9c2-5591-40fb-86ba-491938a1878a",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "12c62615-50e1-4215-a4a5-11c6d950fb58",
+			"id": "3dcdb9b4-0956-4dec-a6dd-83ffaeea2efb",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "ac2a84df-4b27-4bd8-b3e9-da60ac09c36a",
+			"id": "2145fe9a-bf1a-40b4-9d56-b51eb5456361",
 			"key": "access_token",
 			"value": ""
 		}
