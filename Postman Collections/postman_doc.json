@@ -541,7 +541,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "",
+									"raw": "{\n   \"id_fatura\":\"11000\",\n   \"email_adicional\":[\n      \"11988887777\",\n      \"1188887776\"\n   ]\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3108,37 +3108,37 @@
 	],
 	"variable": [
 		{
-			"id": "b8674346-df7a-40c7-980a-c6a1410bc6c1",
+			"id": "0299ae7a-e472-4f28-84c2-7883efcde806",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "e7aef42a-7575-44ce-be31-e9a7fb5ff981",
+			"id": "39cd8e40-42c5-4459-8f80-bedb5bbf4bcc",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "0cecead0-bd87-4454-a95b-3898841765ae",
+			"id": "b89a17fb-5622-4093-be91-deea55dec954",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "061d82a1-f85c-4229-9e71-243c33dd7321",
+			"id": "83a69a5f-1771-4656-a0bc-b8782f8578ad",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "fb61ac8e-1d0b-4b03-928f-9599479158b1",
+			"id": "9cf72bab-bbfa-4957-8ea0-c67a8a7a72e9",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "0cc789d4-068e-443e-a0eb-653fbe4f3cea",
+			"id": "2021e41d-5f50-46d6-8614-e0c212238f59",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "9c7e425f-067d-45a0-9e10-2f94d5c1470d",
+			"id": "96e75737-c409-48e5-a27c-829327e807f3",
 			"key": "access_token",
 			"value": ""
 		}
