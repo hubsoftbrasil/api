@@ -1531,7 +1531,26 @@
 										"description": "Bearer"
 									}
 								],
-								"url": "{{url}}/api/v1/integracao/financeiro/fatura",
+								"url": {
+									"raw": "{{url}}/api/v1/integracao/financeiro/fatura?=",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"integracao",
+										"financeiro",
+										"fatura"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
 								"description": "**GET**\n\nNo método `GET`, irá consultar/listar os dados de faturas e retornar um `JSON` como resposta. Os dados serão retornados de forma paginada, portanto fique atento ao conjunto da dados \"paginacao\" que é retornado na resposta, para saber se será necessário consultar outras páginas ou não.\n\nOs seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| pagina | Página a ser exibida | Não |\n| itens_por_pagina | Itens por Página a serem exibidos. Mínimo: 1, Máximo: 500. | Não |\n| documento | CNPJ da Empresa emissora da fatura | Não |\n| busca | Tipo de busca que deseja fazer no cliente | Não |\n| termo_busca | Termo utilizado para fazer a busca | Não |\n| tipo_data | Tipo de data que será utilizada | Não |\n| tipo_resultado | Tipo de resultado que será devolvido na resposta | Não |\n| data_inicio | Data de início da filtragem de dados | Não |\n| data_fim | Data final da filtragem de dados | Não |\n| apenas_quitado | Indica o status desejado das faturas | Não |\n| valor_zerado | Indica se deseja listar as faturs com valor = 0 | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| pagina | Campo Inteiro (integer) | 0 |\n| itens_por_pagina | Campo Inteiro (integer) | 50 |\n| documento | CNPJ da Empresa emissora | `NULL` |\n| busca | id_cliente, codigo_cliente, cpf_cnpj, id_cliente_servico | `NULL` |\n| termo_busca | Campo livre (Qualquer valor será aceito) | `NULL` |\n| tipo_data | data_vencimento, data_pagamento, data_cadastro | data_vencimento |\n| tipo_resultado | simplificado, detalhado | simplificado |\n| data_inicio | Campo no formato Date (YYYY-MM-DD) | 10 dias anterioes à data atual |\n| data_fim | Campo no formato Date (YYYY-MM-DD) | Data Atual |\n| apenas_quitado | sim,nao | nao |\n| valor_zerado | sim,nao | nao |"
 							},
 							"response": [
@@ -3491,37 +3510,37 @@
 	],
 	"variable": [
 		{
-			"id": "eb1b2613-1338-4353-aa5c-42780adeab63",
+			"id": "0e0fa953-ff69-4966-a88f-302fe640a8c6",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "086adbcf-99c2-4a19-bbd1-d5a2db0d9409",
+			"id": "ea16b575-c1b3-4807-8eba-b4de167d9de0",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "55a8564f-682d-4e8b-aaf3-1e4be0557d67",
+			"id": "e747ad51-c8a9-4f06-9571-d39b161dd59c",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "fa9fbf39-1633-42ff-acf2-bcb3b032de1b",
+			"id": "2531da0b-d865-4f25-9874-e73da975354f",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "0643f8bd-2ac6-45c2-94fb-54e51d250226",
+			"id": "749f682d-9b1b-45de-9a48-7df0279220a3",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "26f826ea-b942-4f39-8378-d5ec8f8ba951",
+			"id": "227337a7-4633-4c90-a9e6-9ecf3809c82c",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "00fa17ab-ce68-4541-bf0e-b61a4c689c94",
+			"id": "3421d949-7e03-4a1b-8463-9f3c245f475c",
 			"key": "access_token",
 			"value": ""
 		}
