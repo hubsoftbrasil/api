@@ -899,6 +899,10 @@
 												"type": "text"
 											}
 										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id_cliente_servico\": \"11000\",\n  \"password\": \"NewPasswd123\",\n  \"id_interface_conexao\": \"931\"\n}"
+										},
 										"url": "{{url}}/api/v1/integracao/cliente/configurar_autenticacao"
 									},
 									"_postman_previewlanguage": "json",
@@ -3181,37 +3185,37 @@
 	],
 	"variable": [
 		{
-			"id": "429bdbb1-77e0-4c99-a0cf-6f5110c386ce",
+			"id": "d389aae9-cdc7-48ac-8cb6-6accf7c3d9ec",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "84964b79-861b-4835-ac92-1be38ca6a775",
+			"id": "7780e9e1-6e37-439a-8502-aa053b16820b",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "95ccd227-c9e8-4f03-a933-0e1b736a6716",
+			"id": "efad80c3-6a41-4fc1-bb20-4fe608778fd6",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "8ca1a20c-53c6-47a5-8854-0c77b1327e79",
+			"id": "fab3c528-86c6-4c02-ba54-459e490effcc",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "5c97eca1-34bc-4896-b9a0-fef088adfd39",
+			"id": "2b79c14c-b4a5-4d8b-bf49-47f58388f6f8",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "1c48af8b-f932-4034-92e3-b9762daf62aa",
+			"id": "2e5a40f4-5cd8-4b3c-b0a4-b145e96b2db8",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "1eb4fa3e-1feb-4f59-b789-1d34811028c0",
+			"id": "4e03d27c-a1bf-4a5d-9cf4-d75e0ddd1cd1",
 			"key": "access_token",
 			"value": ""
 		}
