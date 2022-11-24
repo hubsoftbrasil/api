@@ -1868,7 +1868,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id_ordem_servico\":99991\n}",
+							"raw": "{\n   \"id_ordem_servico\":\"1493\",\n   \"id_motivo_remocao_agendamento\":\"8\",\n   \"observacao\":\"Cliente pediu para ir no dia seguinte.\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -3396,37 +3396,37 @@
 	],
 	"variable": [
 		{
-			"id": "dd657ce4-7bc2-417c-b70e-1fe12bebde36",
+			"id": "e2ed7003-4e47-4386-b4dc-8ce09960a91a",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "4d3a4952-5911-4d4d-a1a8-a29bf5bb122d",
+			"id": "2bb99e57-efe2-4ff7-8dad-3c025810f9b0",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "5c8e9798-fab5-45a8-b2a9-52116b070361",
+			"id": "673deb61-09cb-4eb2-ab2b-14e5105c2adf",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "e0573ccb-f258-41f9-b682-6a63c1d6c33c",
+			"id": "96cdff7d-95ec-433b-a069-de51923bb0ab",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "e30c23ab-0e75-43f1-97fb-acb80c6fd3d4",
+			"id": "c9c15bb1-9593-4ac8-b57b-1ca99400fd2f",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "7c80c8c0-f900-4871-b607-f6bedc12bc25",
+			"id": "8a5646c0-c58f-47af-a321-eb9041da8666",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "ab465da8-600f-4069-ad02-01486b2908c2",
+			"id": "153f5a15-f790-4366-95b2-c234819454fe",
 			"key": "access_token",
 			"value": ""
 		}
