@@ -1116,6 +1116,11 @@
 												"name": "Content-Type",
 												"value": "application/json",
 												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer Token",
+												"type": "text"
 											}
 										],
 										"body": {
@@ -1126,7 +1131,8 @@
 													"language": "json"
 												}
 											}
-										}
+										},
+										"url": "{{url}}/api/v1/integracao/cliente/reset_mac_addr"
 									},
 									"_postman_previewlanguage": "json",
 									"header": null,
@@ -3245,37 +3251,37 @@
 	],
 	"variable": [
 		{
-			"id": "138a2d14-ea68-487a-a34f-d2ea45607361",
+			"id": "ec9b62cb-76c8-41e1-9e86-e02b35508ddf",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "510c969c-562e-4e8b-a6b7-34cebc27ad27",
+			"id": "50f7a800-c001-45ca-b352-cb243ce0e0df",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "ec135e3b-070d-4ce5-b105-47dc33b1b1fa",
+			"id": "ccc472bc-644d-4028-9daf-2840602cfd70",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "228a1b6f-9037-4293-b758-c99ad4078b56",
+			"id": "aceaaf12-d204-4909-8d09-6e864fe35f3d",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "0bc0cdb4-209c-4497-8cc7-f27a5ba7e8bc",
+			"id": "ec511f63-dc19-4ca6-8648-c341786af886",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "01fbcf21-0935-4920-a7c2-866835f9b5ff",
+			"id": "a6145c0e-4767-405e-aea8-afdb4005325d",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "db9e1168-757d-408f-b166-c119ae039489",
+			"id": "8b5f00a0-41db-422c-87f7-aaa8557911d4",
 			"key": "access_token",
 			"value": ""
 		}
