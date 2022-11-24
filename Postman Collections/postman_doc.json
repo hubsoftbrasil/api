@@ -695,7 +695,7 @@
 							]
 						},
 						{
-							"name": "Nota Fiscal -> Envio por Email",
+							"name": "Enviar por Email",
 							"id": "764d8f92-3adc-4434-bfa3-41d3ecc63d8b",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -3479,37 +3479,37 @@
 	],
 	"variable": [
 		{
-			"id": "0193d7b3-0cd4-49a1-9f2c-644fd465d8a4",
+			"id": "dfb7a797-6ce9-485a-922f-0e5c291d45a6",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "a9ce703a-4176-4fdf-b43f-8bf4cfd67d35",
+			"id": "da2b2e57-314d-41b9-9376-318e42af3721",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "fa7919bb-a090-41c7-ae94-0fb957097c24",
+			"id": "12d0278f-dd25-47c7-aa95-3d7967bffa9e",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "f2a3329a-a5be-4cca-aa15-76d424329b50",
+			"id": "7bbb652d-dcb5-4b3e-bb88-a756cfde0817",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "fe403680-7866-41cc-9859-6a830116abd9",
+			"id": "9c09020e-ddf6-4e27-93d4-5f7c3e5f1628",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "531169f3-90d6-4532-b22d-fa09549d078c",
+			"id": "51d0321d-7aef-4d10-b510-6bc5e3cfbb0a",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "cb24d2f2-5891-4be3-81e5-383cf348b84c",
+			"id": "b76ccdad-e997-4a95-955d-33a60cc106d4",
 			"key": "access_token",
 			"value": ""
 		}
