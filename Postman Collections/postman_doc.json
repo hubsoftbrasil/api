@@ -1504,7 +1504,7 @@
 					"name": "Fatura",
 					"item": [
 						{
-							"name": "Listar Faturas",
+							"name": "Listar",
 							"id": "1b0a371e-03e2-4e7f-9849-8cef41436ecb",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -3479,37 +3479,37 @@
 	],
 	"variable": [
 		{
-			"id": "44220740-742c-4bcd-a6f7-f6be5ab6199a",
+			"id": "caa9eede-6685-4f72-9ba0-0dde67850321",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "6e9546b8-baa3-444c-bc6d-eed7e3960984",
+			"id": "faca2400-91bc-4986-af37-06b8ed74356c",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "e8d4ef1c-8a1f-4963-a583-df4ac4414ad7",
+			"id": "818f38e4-2bca-4a04-a579-78bec2b5f0cc",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "b12fc4f0-eab9-4ec9-b865-8d6cf63afca2",
+			"id": "03e46e29-89d5-482f-8bf6-552bb1f85aee",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "97b8d999-16a2-4531-83ec-2fea7e118924",
+			"id": "c8a073c1-98a6-4e60-aa1f-3d931f6804d2",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "028886a3-598e-4ac6-9f1b-deb10db0111c",
+			"id": "192e0fb6-2212-4543-9450-c1ed68cbdad6",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "6862df00-c702-41f9-a5be-086151156a9a",
+			"id": "25d38c34-79ed-4177-a222-5dcf1ccf797d",
 			"key": "access_token",
 			"value": ""
 		}
