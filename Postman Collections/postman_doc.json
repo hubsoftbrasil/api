@@ -1407,7 +1407,13 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{access_token}}",
+								"type": "text"
+							}
+						],
 						"url": "{{url}}/api/v1/integracao/crm/all",
 						"description": "**GET**\n\nNo método `GET`, irá consultar os dados dos CRM e retornar um `JSON` como resposta."
 					},
@@ -3485,37 +3491,37 @@
 	],
 	"variable": [
 		{
-			"id": "dd7f4e38-1d0c-493b-98c8-13dc730ec49f",
+			"id": "eb1b2613-1338-4353-aa5c-42780adeab63",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "04b498b5-738c-4491-99a7-fa0637e7cf7e",
+			"id": "086adbcf-99c2-4a19-bbd1-d5a2db0d9409",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "3ed292ca-0bfb-410a-b574-78913d68c833",
+			"id": "55a8564f-682d-4e8b-aaf3-1e4be0557d67",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "99046aee-dd8d-482b-a9a1-ca41e9b940e1",
+			"id": "fa9fbf39-1633-42ff-acf2-bcb3b032de1b",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "3fe2c604-a650-4415-a0bf-7a70ee3cb275",
+			"id": "0643f8bd-2ac6-45c2-94fb-54e51d250226",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "e8d6268d-c938-46a7-924b-a00e1ee7b018",
+			"id": "26f826ea-b942-4f39-8378-d5ec8f8ba951",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "ba325a24-c084-45c6-81d5-253688116282",
+			"id": "00fa17ab-ce68-4541-bf0e-b61a4c689c94",
 			"key": "access_token",
 			"value": ""
 		}
