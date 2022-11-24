@@ -1499,7 +1499,7 @@
 									"header": null,
 									"cookie": [],
 									"responseTime": null,
-									"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"1 Evento(s) de Farturamento de acréscimo cadastrados com sucesso. VALOR TOTAL: R$ 10.30\",\r\n    \"eventos_faturamento\": [\r\n        {\r\n            \"id_evento_faturamento\": 1575\r\n        }\r\n    ]\r\n}"
+									"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"1 Evento(s) de Faturamento de acréscimo cadastrados com sucesso. VALOR TOTAL: R$ 10.30\",\r\n    \"eventos_faturamento\": [\r\n        {\r\n            \"id_evento_faturamento\": 9714,\r\n            \"descricao\": \"Acréscimo Ref Compra de Produto ABC\",\r\n            \"valor\": 10.3\r\n        }\r\n    ]\r\n}"
 								}
 							]
 						}
@@ -3485,37 +3485,37 @@
 	],
 	"variable": [
 		{
-			"id": "982de03f-5131-4b48-9176-d0a9831aa97c",
+			"id": "7c4f374d-6412-462b-b7e2-cc590ac6fb47",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "8f0d869d-554c-4335-b702-d42aa6f72912",
+			"id": "3eeb2df7-d74e-45e2-bdb8-033f2acacf35",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "2944d10d-c109-4a1b-a4d0-c80fbb1f6715",
+			"id": "7c8c27be-8419-4473-98ea-1732ea81627e",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "41de94a9-306f-4cda-b9b9-87455d0e4aaa",
+			"id": "008f9a9c-b6aa-4c19-bc78-7773bfb401af",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "31878c7a-4344-4f60-9837-545d072de080",
+			"id": "a8ee8420-1bce-4db7-96d2-64cbec2e7358",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "50195b33-8450-4a37-a61c-ba06c14616c4",
+			"id": "1dd3efb0-d35c-4e49-9090-ead85ec389b6",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "5644fb20-ddc9-4f88-870b-95bbf4a68cb6",
+			"id": "da3f1d43-d045-4c46-92e2-778f93a52857",
 			"key": "access_token",
 			"value": ""
 		}
