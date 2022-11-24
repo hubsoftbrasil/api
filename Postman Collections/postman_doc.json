@@ -1678,7 +1678,12 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id_ordem_servico\":99991\n}"
+							"raw": "{\n    \"id_ordem_servico\":99991\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
 						"url": "{{url}}/api/v1/integracao/ordem_servico/agendar",
 						"description": "**Endpoint (Rota)**\n\nNeste `endpoint`, será possível agendar uma O.S. que esteja aguardando agendamento, obtendo o retorno no formato `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_ordem_servico | Identificador da ordem de serviço | Sim |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_ordem_servico | Número Inteiro | Nenhum |"
@@ -3319,37 +3324,37 @@
 	],
 	"variable": [
 		{
-			"id": "b452fcb9-d3db-4008-ba4c-5a9c82f4c71b",
+			"id": "4abdda46-f345-49b9-b9c9-fbcdbd74d240",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "5783eabd-8ca7-4769-9e90-e0cd6e62aa02",
+			"id": "2ed9696a-a6cf-4db2-b846-7a35a43aef36",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "923c12ec-3515-4f6a-85e9-da2741c2e1dc",
+			"id": "853ccbd7-bb99-405c-9cd6-03b9bfb93424",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "d8938186-4043-4f5e-ad46-92e75f6693bb",
+			"id": "eedeb348-f663-470f-8561-61a800ba8b80",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "c1c6f115-f9a4-4bbb-9510-df313a01a491",
+			"id": "010f010c-06ec-45ee-b3a6-f8c4c422f73a",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "ce57d38c-fa9b-47db-a54b-4add018db355",
+			"id": "cccc6ac1-4bea-4753-b041-37a44df64636",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "cfae7ef8-3b7a-446c-bdd0-376273d07e2c",
+			"id": "b7627603-a47e-4b84-9b9d-f732e0c0ea1f",
 			"key": "access_token",
 			"value": ""
 		}
