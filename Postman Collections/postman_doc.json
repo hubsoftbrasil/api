@@ -832,7 +832,23 @@
 									"name": "Sucesso",
 									"originalRequest": {
 										"method": "POST",
-										"header": [],
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"usuario\":\"09148213622\",\n    \"senha\":\"#M1nh4$3NH4!\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
 										"url": "{{url}}api/v1/integracao/cliente/autenticacao"
 									},
 									"_postman_previewlanguage": "json",
@@ -3156,37 +3172,37 @@
 	],
 	"variable": [
 		{
-			"id": "e2176e9e-7d9f-4141-b619-de75c1c2eaf3",
+			"id": "662df39e-195a-44ec-9a5f-c3844ab5b158",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "72bcf473-2a09-46cb-a0cc-fdb12fd50560",
+			"id": "dabd97f2-ec59-4c01-aff7-d5d1d38651da",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "4e45ac09-dfeb-4e52-a6e5-f597eb18fdc5",
+			"id": "d89d0db3-5a5b-411b-9d55-e6fb9370b9c6",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "a4a4952d-0e94-414d-8af9-12f22b6bf384",
+			"id": "5ece2ee3-a009-469b-83be-4f733166ac54",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "026b619a-cb6b-429b-9685-31726ffd984e",
+			"id": "4dc54673-00b0-4816-a770-05ad126addf5",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "f0b85b8b-2498-4a03-ac81-d3ee0e88df50",
+			"id": "8199c3d1-4e02-4f9a-b621-c5936ce5e6f7",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "5c27e2e1-d819-4a6d-8345-7933609281aa",
+			"id": "b1b57718-7953-4844-a090-324e27b3b9b1",
 			"key": "access_token",
 			"value": ""
 		}
