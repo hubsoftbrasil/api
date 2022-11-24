@@ -605,7 +605,7 @@
 									}
 								],
 								"url": "{{url}}/api/v1/integracao/cliente/financeiro/enviar_push",
-								"description": "**POST**\n\nAtravés deste endpoint, será possível fazer o disparo da fatura do cliente por push notification.\n\n**IMPORTANTE**: O cliente só receberá o push notification, caso ele possua o aplicativo do cliente instalado e esteja autenticado com o CPF/CNPJ.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_fatura | Identificador único da fatura do cliente | Sim |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_fatura | Deve conter um número inteiro maior que 0 | Nenhum |\n\nVeja que os parâmetros enviados na requisição `POST` devem obedecer a estrutura no formato `JSON`:\n\n```\n{\n        \"id_fatura\":\"11000\"\n}\n\n```"
+								"description": "**POST**\n\nAtravés deste endpoint, será possível fazer o disparo da fatura do cliente por push notification.\n\n**IMPORTANTE**: O cliente só receberá o push notification, caso ele possua o aplicativo do cliente instalado e esteja autenticado com o CPF/CNPJ.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_fatura | Identificador único da fatura do cliente | Sim |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_fatura | Deve conter um número inteiro maior que 0 | Nenhum |"
 							},
 							"response": [
 								{
@@ -3123,37 +3123,37 @@
 	],
 	"variable": [
 		{
-			"id": "98b58612-fced-4937-83bf-2b68b6cab78d",
+			"id": "873dbc42-2f96-4c54-9300-d172c8c097e7",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "b67fa9ef-0f89-4bb7-bfdb-f3d5838a1352",
+			"id": "81b98b8e-6a14-4536-9ed1-e64b7737172c",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "eed984fc-41f8-41e2-8900-6065f77021be",
+			"id": "48f162e9-326e-4d17-b5ad-2fcc92e565b4",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "b1734bb3-3211-45b4-8e23-09c48c7e2930",
+			"id": "aa007ee4-f05c-479a-9d2c-c90594bb03d3",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "0c78e148-2cea-4790-a31f-ac19de9a1df3",
+			"id": "1e4a8a2f-dfad-43f4-aee4-bac523bf7945",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "ae2fbd88-0b0f-4ad7-93c4-129896d23227",
+			"id": "ff827370-896a-413a-9452-c818e0f829ec",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "98b2e059-d5d3-4121-83fb-bc7bb14ccf94",
+			"id": "5e9b2048-aed1-4271-abc5-bf1a810a05dd",
 			"key": "access_token",
 			"value": ""
 		}
