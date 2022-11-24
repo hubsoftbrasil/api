@@ -719,7 +719,7 @@
 									}
 								},
 								"url": "{{url}}/api/v1/integracao/cliente/nota_fiscal/enviar_email",
-								"description": "**POST**\n\nAtravés deste `endpoint`, será possível fazer o disparo da nota fiscal do cliente por e-mail. Podem ser passados e-mails adicionais, além dos que já estão cadastrados no sistema.\n\n**Aviso**\n\n`IMPORTANTE`: O sistema vai fazer a validação dos dados de e-mail e verificar se a API possui um servidor de e-mail válido configurado. Caso todas as regras sejam atendidas, o disparo do e-mail será efetuado instantaneamente, ou seja, é enviado em tempo real. Por esse motivo, o tempo de resposta da API, irá variar de acordo com a quantidade de e-mails que está na requisição para ser disparado.\n\n`IMPORTANTE 2:` O(s) servidor(es) de e-mails configurados no HubSoft possuem configuração de timeout entre um disparo e outro, dessa forma evita-se que o servidor seja adicionado em `BlackLists` de `SPAM`. Por esse motivo, a chamada da `API`, poderá ter um tempo de resposta diferente do comum."
+								"description": "**POST**\n\nAtravés deste `endpoint`, será possível fazer o disparo da nota fiscal do cliente por e-mail. Podem ser passados e-mails adicionais, além dos que já estão cadastrados no sistema.\n\nO campo tipo_documento, poderá conter um dos valores abaixo:\n\n- nf_telecom\n- nfe\n- nfse\n    \n\n**Aviso**\n\n`IMPORTANTE`: O sistema vai fazer a validação dos dados de e-mail e verificar se a API possui um servidor de e-mail válido configurado. Caso todas as regras sejam atendidas, o disparo do e-mail será efetuado instantaneamente, ou seja, é enviado em tempo real. Por esse motivo, o tempo de resposta da API, irá variar de acordo com a quantidade de e-mails que está na requisição para ser disparado.\n\n`IMPORTANTE 2:` O(s) servidor(es) de e-mails configurados no HubSoft possuem configuração de timeout entre um disparo e outro, dessa forma evita-se que o servidor seja adicionado em `BlackLists` de `SPAM`. Por esse motivo, a chamada da `API`, poderá ter um tempo de resposta diferente do comum."
 							},
 							"response": [
 								{
@@ -3479,37 +3479,37 @@
 	],
 	"variable": [
 		{
-			"id": "dfb7a797-6ce9-485a-922f-0e5c291d45a6",
+			"id": "919937be-9c61-47ce-9934-dc9ec6558a28",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "da2b2e57-314d-41b9-9376-318e42af3721",
+			"id": "84981b0e-fd8d-4de4-b5bf-744b25b16107",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "12d0278f-dd25-47c7-aa95-3d7967bffa9e",
+			"id": "68838caf-c520-413c-b4d8-4fd5f9f28c14",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "7bbb652d-dcb5-4b3e-bb88-a756cfde0817",
+			"id": "5aaae737-d6a2-4f7a-8d8f-a282dd3e9150",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "9c09020e-ddf6-4e27-93d4-5f7c3e5f1628",
+			"id": "5228170c-068c-484a-9e61-c9e667535833",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "51d0321d-7aef-4d10-b510-6bc5e3cfbb0a",
+			"id": "7506b9d8-5f48-4ac9-a15c-a8e5dc664946",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "b76ccdad-e997-4a95-955d-33a60cc106d4",
+			"id": "60a05fe1-e750-4780-8651-c4ec1671bc42",
 			"key": "access_token",
 			"value": ""
 		}
