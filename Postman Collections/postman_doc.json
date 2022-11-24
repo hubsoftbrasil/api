@@ -2570,8 +2570,23 @@
 										"key": "Authorization",
 										"value": "{{access_token}}",
 										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
 									}
 								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \"ramal\":111,\n   \"telefone\":37999912222,\n   \"ligacao_params\":{\n      \"origem\":\"PBX\",\n      \"atendente\":\"João\"\n   }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": "{{url}}/api/v1/integracao/pbx/ligacao/notificar"
 							},
 							"_postman_previewlanguage": "json",
@@ -3405,37 +3420,37 @@
 	],
 	"variable": [
 		{
-			"id": "2ef2093d-8366-427a-b419-1fe7efb46137",
+			"id": "ce8f001a-933a-4860-8e24-77281fe035bd",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "2506bdac-9fff-4e9d-959c-8b1d3d843d11",
+			"id": "855efb1e-bd06-4124-9cc7-787487141c31",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "456dedb2-8242-4f08-aaac-a5a18ce15200",
+			"id": "d4c649db-c9a6-40fc-a542-65056ed52808",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "f0c4340a-b2a8-40b9-935f-d4ec567a78a5",
+			"id": "d9bb1855-6322-44bd-8562-2128a6cb8357",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "aacdc49b-34db-46f3-b897-4bb0ff16f1b3",
+			"id": "4d24030e-8a81-4249-bb68-d499b3cc30d1",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "f7b2bf7d-c7be-40ce-9702-e61dcbb9ceb2",
+			"id": "d0a7a9b2-c283-46e8-a581-f12781f00110",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "241b694e-573e-4021-83a1-6ab5fc1b765b",
+			"id": "607fdc2b-ffd6-4035-8efb-437bf7663e86",
 			"key": "access_token",
 			"value": ""
 		}
