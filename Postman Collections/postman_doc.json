@@ -2921,6 +2921,15 @@
 								"type": "text"
 							}
 						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"cep\":\"35560000\",\n   \"servico\":{\n      \"id_servico\":1,\n      \"valor\":100\n   },\n   \"cpf_cnpj\":\"68346567000158\",\n   \"telefone\":\"3732818000\",\n   \"nome_razaosocial\":\"Empresa XPTO LTDA\",\n   \"tipo_pessoa\":\"pj\",\n   \"bairro\":\"Centro\",\n   \"endereco\":\"Praça Getúlio Vargas\",\n   \"numero\":77\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": "{{url}}/api/v1/integracao/prospecto",
 						"description": "A rota em questão é do tipo `POST` e o corpo da requisição deve possuir os campos abaixo no JSON.\n\n| Campo | Descrição | Obrigatório |\n| --- | --- | --- |\n| cep | CEP referente ao endereço de instalação | Sim |\n| servico.id_servico | Identificador único do serviço / plano de contratação | Sim |\n| servico.valor | Valor em reais (R$) do serviço / plano ofertado | Sim |\n| nome_razaosocial | Nome ou Razão Social do contratante | Sim |\n| cpf_cnpj | CPF ou CNPJ do contratante | Não |\n| telefone | Telefone principal do contratante | Sim |\n| email | email principal do contratante | Não |\n| observacao | Campo livre para observações do contratante | Não |\n| tipo_pessoa | Informar «pj» para pessoa jurídica ou «pf» para pessoa física | Sim |\n| bairro | Bairro referente ao endereço de instalação | Sim |\n| endereco | Endereço referente ao local de instalação | Sim |\n| numero | Número referente ao endereço de instalação | Sim |\n| id_crm | ID referente ao CRM que será vinculado o prospecto | Nao |\n\n\\* Tipo de valores aceitos pelos campos:\n\n| Campo | Tipo |\n| --- | --- |\n| cep | Numérico |\n| servico.id_servico | Numérico |\n| servico.valor | Numérico |\n| nome_razaosocial | Texto |\n| cpf_cnpj | Numérico |\n| telefone | Numérico |\n| email | Texto |\n| observacao | Texto |\n| tipo_pessoa | Texto |\n| bairro | Texto |\n| endereco | Texto |\n| numero | Numérico |\n| id_crm | Numérico |"
 					},
@@ -3470,37 +3479,37 @@
 	],
 	"variable": [
 		{
-			"id": "e39d5417-d716-44a2-9edb-7bf28fc1361d",
+			"id": "d1f92bcc-74de-4b05-8437-eabba8a9bc8b",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "80e2b810-3345-4d65-9d61-b896f6c11e7e",
+			"id": "23dc097b-b5ff-4f07-b983-79bd7643eab8",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "60161a31-7012-4fba-a8ea-2dac5923df09",
+			"id": "cafd9ce1-857f-429c-b4f9-b8691925fa85",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "5ec218b9-b019-42a5-843e-f430c76d52a9",
+			"id": "b19c92d6-2fd8-4a77-8d74-34e3f9af89b8",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "ee3d5208-d78f-4545-aa63-8b84e05901f7",
+			"id": "9c02e125-a77c-4ee3-98b5-361538f413c5",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "9e6089da-af61-4377-ba34-92d405da5d5f",
+			"id": "4e24ea5a-7607-4269-9892-7ab8f872dd6b",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "5832e3a8-f8ca-402a-8698-2f4bbf8927b3",
+			"id": "1e915e2d-e785-4d03-bd5f-7045322a0958",
 			"key": "access_token",
 			"value": ""
 		}
