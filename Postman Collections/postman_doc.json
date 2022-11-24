@@ -2547,6 +2547,15 @@
 								"type": "text"
 							}
 						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"ramal\":111,\n   \"telefone\":37999912222,\n   \"ligacao_params\":{\n      \"origem\":\"PBX\",\n      \"atendente\":\"João\"\n   }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": "{{url}}/api/v1/integracao/pbx/ligacao/notificar",
 						"description": "**POST**\n\nAtravés deste `endpoint`, de ambas as rotas poderão ser realizadas as notificações e cancelamento de ligações.\n\n**Aviso**\n\n**`IMPORTANTE:`** Ao realizar a requisição na rota de `«notificação»`, o sistema irá automaticamente abrir uma janela pro usuário de destino, com os dados da chamada: ramal, identificador interno, telefone de origem da ligação. Caso algum cliente tenha sido identificado, será possível abrir o atendimento e já fornecer o protocolo ao cliente, caso contrário terá a opção de consultar um cliente na base. Ao realizar a requisição na rota de `«cancelamento»` da ligação, a janela de ligação será fechada automaticamente caso ela ainda esteja aberta.\n\n**Atributos da Requisição de ambas as rotas**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| ramal | Número de ramal correspondente ao usuário | **(Obrigatório caso o identificador_interno não seja informado)** |\n| identificador_interno | ID Interno correspondente ao usuário | **(Obrigatório caso o ramal não seja informado)** |\n| codigo_cliente | Código único do cliente | Não |\n| id_cliente | Identificador (chave primária) do cliente | Não |\n| telefone | Telefone da ligação externa do PBX | Não |\n| ligacao_params | Objeto JSON para serem informados parametros da ligação | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| ramal | Deve ser um valor numérico | Nenhum |\n| identificador_interno | Deve ser um valor alfanumérico | Nenhum |\n| codigo_cliente | Deve ser um valor númerico e existir na base de dados | Nenhum |\n| id_cliente | Deve ser um valor númerico e existir na base de dados | Nenhum |\n| telefone | Deve ser um valor númerico | Nenhum |\n| ligacao_params | Deve ser um objeto no formato JSON | Nenhum |"
 					},
@@ -3396,37 +3405,37 @@
 	],
 	"variable": [
 		{
-			"id": "8849187d-1ed6-40c3-b926-d9a4d5a0b8dd",
+			"id": "dc99099b-8a83-48a9-b6c6-293a3f9c649c",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "4e175635-e228-438e-936d-8df65f08959e",
+			"id": "7024064f-9d73-4b5f-8046-1de1fd576e46",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "fa917e3f-bb83-4fc5-ae2f-03dd9cc50520",
+			"id": "01b0c23f-3b7e-4121-9e74-733472d50861",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "3709b2fd-b500-4a1b-8c46-409cd7880dbd",
+			"id": "ecf8c408-bf51-490f-9184-9a594313a882",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "3a2a25a7-8e63-4cac-82c5-a60e356c7477",
+			"id": "e69b9947-2f22-4042-9281-e87a2a07f3e5",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "1956cb8c-f033-405d-b893-c551dd7a9d36",
+			"id": "2ca96fe5-3ed3-43d7-b638-efcdf847dcc1",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "12715852-e55d-45d1-bbe3-b78f903e6338",
+			"id": "ecd6985c-9c41-40dd-a35a-eeaf000c4497",
 			"key": "access_token",
 			"value": ""
 		}
