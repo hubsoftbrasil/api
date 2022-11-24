@@ -1092,6 +1092,15 @@
 										"type": "text"
 									}
 								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"id_cliente_servico\":\"11000\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": "{{url}}/api/v1/integracao/cliente/reset_mac_addr",
 								"description": "**POST**\n\nAtravés deste `endpoint`, será possível resetar o MAC ADDRESS configurado na autenticação do plano do cliente. Após resetar o MAC, qualquer equipamento com o login e senha corretos estará apto a realizar a autenticação. Esse endpoint será útil para provedores que fazem controle / restrição de MAC ADDRESS na rede.\n\n**Aviso**\n\n`IMPORTANTE`: O sistema irá validar se o serviço informado possui dados de autenticação. Caso o serviço selecionado não possua, uma mensagem de erro será retornada, impedindo que a solicitação seja executada.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico | Identificador único do serviço do cliente | Sim |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico | Deve conter um número inteiro maior que 0 | Nenhum |\n\nVeja que os parâmetros enviados na requisição `POST` devem obedecer a estrutura no formato `JSON`:\n\n```\n{\n        \"id_cliente_servico\":\"11000\"\n}\n\n```"
 							},
@@ -3220,37 +3229,37 @@
 	],
 	"variable": [
 		{
-			"id": "0cb57edf-214b-452c-92ad-858ff615fd0a",
+			"id": "96a0ae60-bff6-4301-b124-2ce71f8b71b5",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "8bd594bc-f16d-4cf7-a302-5cce19203a6e",
+			"id": "de1446b5-e3d6-45b5-9cac-ba7c46c7d4cd",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "060da75d-0460-436c-add2-9abb455c9792",
+			"id": "e5cf3677-ee4e-40f7-bfaf-eba53b88200a",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "758d8d66-0b91-4533-93bd-fddaec34ccab",
+			"id": "d88e5c8f-e8b4-4a19-8045-3f8c84e96373",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "c3846329-7470-4312-aa45-445dce2c39d0",
+			"id": "b06c0a1a-7f7b-415b-8eb7-f11cefa3033b",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "69506255-2cb3-4be1-aad3-de9f1127e142",
+			"id": "abd4c0cf-c6e2-4049-900f-2d530f42153d",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "143109b6-ec3c-4701-90bb-e8b19fbcea8a",
+			"id": "e5fd6898-0b4b-431e-bc33-0d3fcd66289a",
 			"key": "access_token",
 			"value": ""
 		}
