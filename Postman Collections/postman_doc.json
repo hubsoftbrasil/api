@@ -1449,7 +1449,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n   \"id_cliente_servico\":13579,\n   \"id_tipo_servico\":2,\n   \"descricao\":\"ADICIONAL\",\n   \"parcelado\":false,\n   \"proximo_faturamento\":true,\n   \"tipo\":\"acrescimo\",\n   \"valor\":10.3\n}",
+									"raw": "{\n   \"id_cliente_servico\":13579,\n   \"id_tipo_servico\":2,\n   \"descricao\":\"Acréscimo Ref Compra de Produto ABC\",\n   \"parcelado\":false,\n   \"proximo_faturamento\":true,\n   \"tipo\":\"acrescimo\",\n   \"valor\":10.3\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3260,37 +3260,37 @@
 	],
 	"variable": [
 		{
-			"id": "4ceae231-1cd0-48f0-8c74-adfcd156f6dd",
+			"id": "8ce674cf-87a0-4b7c-bb5a-254cf5f61bd8",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "a8d93918-3087-4aae-92f5-cb37a0b874ab",
+			"id": "1eca1de6-25f9-4863-9a90-7335796c0f92",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "8a9e0b78-b8b7-44ad-bf3b-5be67f05a0d6",
+			"id": "29516ac2-a54d-449e-b76e-bc32da2f8b16",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "f40d9e61-2007-4334-95af-3757de2c8d67",
+			"id": "5a5805e8-4dea-4077-9fb3-1a5eaf4346bc",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "baee0ba4-4ca0-4687-adea-8b4d11401fac",
+			"id": "a40b8357-2ebd-48bf-a9da-857e2fa7dc7a",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "cbdfe508-cc5e-4280-aa66-1778ae1805d5",
+			"id": "8e5badfc-0d12-40fe-ac02-9085c536555e",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "b823fb3c-fcab-43b7-8e13-3899f663fee0",
+			"id": "8a0e4f28-f39c-4021-9b45-49766fbdda2c",
 			"key": "access_token",
 			"value": ""
 		}
