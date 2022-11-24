@@ -1470,8 +1470,23 @@
 												"key": "Authorization",
 												"value": "{{access_token}}",
 												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
 											}
 										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n   \"id_cliente_servico\":13579,\n   \"id_tipo_servico\":2,\n   \"descricao\":\"ADICIONAL\",\n   \"parcelado\":false,\n   \"proximo_faturamento\":true,\n   \"tipo\":\"acrescimo\",\n   \"valor\":10.3\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
 										"url": "{{url}}/api/v1/integracao/financeiro/evento_faturamento"
 									},
 									"_postman_previewlanguage": "json",
@@ -3260,37 +3275,37 @@
 	],
 	"variable": [
 		{
-			"id": "8ce674cf-87a0-4b7c-bb5a-254cf5f61bd8",
+			"id": "0735a393-ec84-4581-a862-81f27b892bc5",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "1eca1de6-25f9-4863-9a90-7335796c0f92",
+			"id": "f5cd45a8-36e8-48ab-923c-9866abf818a3",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "29516ac2-a54d-449e-b76e-bc32da2f8b16",
+			"id": "b08c73ca-1c41-43b4-8ad9-c750fcbea3db",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "5a5805e8-4dea-4077-9fb3-1a5eaf4346bc",
+			"id": "95cfd785-3f9a-4200-8838-0e3ae6066af7",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "a40b8357-2ebd-48bf-a9da-857e2fa7dc7a",
+			"id": "9ed7ab15-5391-4a3c-a405-cb31f8273a2e",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "8e5badfc-0d12-40fe-ac02-9085c536555e",
+			"id": "1084d496-5f3d-400b-93d2-570e20e9feba",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "8a0e4f28-f39c-4021-9b45-49766fbdda2c",
+			"id": "9d73da38-01e0-446b-8144-2bf203b54cff",
 			"key": "access_token",
 			"value": ""
 		}
