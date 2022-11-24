@@ -719,7 +719,7 @@
 									}
 								},
 								"url": "{{url}}/api/v1/integracao/cliente/nota_fiscal/enviar_email",
-								"description": "**POST**\n\nAtravés deste `endpoint`, será possível fazer o disparo da nota fiscal do cliente por e-mail. Podem ser passados e-mails adicionais, além dos que já estão cadastrados no sistema.\n\nO campo tipo_documento, poderá conter um dos valores abaixo:\n\n- nf_telecom\n- nfe\n- nfse\n    \n\n**Aviso**\n\n`IMPORTANTE`: O sistema vai fazer a validação dos dados de e-mail e verificar se a API possui um servidor de e-mail válido configurado. Caso todas as regras sejam atendidas, o disparo do e-mail será efetuado instantaneamente, ou seja, é enviado em tempo real. Por esse motivo, o tempo de resposta da API, irá variar de acordo com a quantidade de e-mails que está na requisição para ser disparado.\n\n`IMPORTANTE 2:` O(s) servidor(es) de e-mails configurados no HubSoft possuem configuração de timeout entre um disparo e outro, dessa forma evita-se que o servidor seja adicionado em `BlackLists` de `SPAM`. Por esse motivo, a chamada da `API`, poderá ter um tempo de resposta diferente do comum."
+								"description": "**POST**\n\nAtravés deste `endpoint`, será possível fazer o disparo da nota fiscal do cliente por e-mail. Podem ser passados e-mails adicionais, além dos que já estão cadastrados no sistema.\n\nO campo `tipo_documento`, poderá conter um dos valores abaixo:\n\n- `nf_telecom`\n- `nfe`\n- `nfse`\n    \n\n**Aviso**\n\n`IMPORTANTE`: O sistema vai fazer a validação dos dados de e-mail e verificar se a API possui um servidor de e-mail válido configurado. Caso todas as regras sejam atendidas, o disparo do e-mail será efetuado instantaneamente, ou seja, é enviado em tempo real. Por esse motivo, o tempo de resposta da API, irá variar de acordo com a quantidade de e-mails que está na requisição para ser disparado.\n\n`IMPORTANTE 2:` O(s) servidor(es) de e-mails configurados no HubSoft possuem configuração de timeout entre um disparo e outro, dessa forma evita-se que o servidor seja adicionado em `BlackLists` de `SPAM`. Por esse motivo, a chamada da `API`, poderá ter um tempo de resposta diferente do comum."
 							},
 							"response": [
 								{
@@ -3479,37 +3479,37 @@
 	],
 	"variable": [
 		{
-			"id": "030f9fca-9d04-4f6b-b27f-11b2790c449b",
+			"id": "855ec55e-6cfd-4036-a6b5-6acae51f0a8a",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "7440a3d2-7a55-4780-a0b8-d14dc4fda549",
+			"id": "e57ebe77-69ba-4157-8d4e-b7793f1880fd",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "48e949aa-f77a-4c7d-8ffc-ffcd7095fa28",
+			"id": "d45ec711-4dc1-4a6b-bbbf-7e756848eb16",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "c3f8baff-2472-4604-ac18-a5425f11e770",
+			"id": "dba080f6-324e-4fe0-8683-d596c575e4e4",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "880b117c-cd28-44ed-99ab-bc07a5708328",
+			"id": "92da68ce-1526-4e76-8abe-157abcab5372",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "223f2cae-8167-4c78-bf2b-229d3c03a1f2",
+			"id": "ef005c52-742c-47d4-a3cf-c75b9dc7f8b4",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "aa00911a-00b0-41f2-b082-103b07f96bed",
+			"id": "7da9809d-0a10-4949-acb2-a8dfea1bf4a0",
 			"key": "access_token",
 			"value": ""
 		}
