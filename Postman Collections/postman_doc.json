@@ -875,7 +875,7 @@
 									}
 								],
 								"url": "{{url}}/api/v1/integracao/cliente/configurar_autenticacao",
-								"description": "**POST**\n\nAtravés deste `endpoint` , será possível efetuar a configuração de alguns parâmetros de autenticação do serviço.\n\nOs seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico | Identificador único do serviço do cliente | Sim |\n| id_interface_conexao | Interface de conexão com a qual o plano deverá ser vinculado | Não |\n| phy_addr | MAC/Serial da ONU ou equipamento equivalente do cliente, que forneça acesso em camada 2 | Não |\n| password | Senha de autenticação do cliente | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico | Deve conter um número inteiro maior que 0 | Nenhum |\n| id_interface_conexao | Deve conter um número inteiro maior que 0 | Nenhum |\n| phy_addr | Deve conter uma sequencia de letras e caracteres, sem espaço | Nenhum |\n| password | Deve conter no minimo tres caracteres | Nenhum |\n\nVeja que os parâmetros enviados na requisição `POST` devem obedecer a estrutura no formato `JSON`:\n\n```\n{\n        \"id_cliente_servico\":\"11000\",\n        \"password\":\"NewPasswd123\",\n        \"id_interface_conexao\":\"931\"\n}\n\n```"
+								"description": "**POST**\n\nAtravés deste `endpoint` , será possível efetuar a configuração de alguns parâmetros de autenticação do serviço.\n\nOs seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico | Identificador único do serviço do cliente | Sim |\n| id_interface_conexao | Interface de conexão com a qual o plano deverá ser vinculado | Não |\n| phy_addr | MAC/Serial da ONU ou equipamento equivalente do cliente, que forneça acesso em camada 2 | Não |\n| password | Senha de autenticação do cliente | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico | Deve conter um número inteiro maior que 0 | Nenhum |\n| id_interface_conexao | Deve conter um número inteiro maior que 0 | Nenhum |\n| phy_addr | Deve conter uma sequencia de letras e caracteres, sem espaço | Nenhum |\n| password | Deve conter no minimo tres caracteres | Nenhum |"
 							},
 							"response": [
 								{
@@ -3172,37 +3172,37 @@
 	],
 	"variable": [
 		{
-			"id": "662df39e-195a-44ec-9a5f-c3844ab5b158",
+			"id": "262a8d20-ad60-4daa-939c-3b2ef6c2d9c5",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "dabd97f2-ec59-4c01-aff7-d5d1d38651da",
+			"id": "3551cfdc-03a1-43a0-96da-04ce4999e3a2",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "d89d0db3-5a5b-411b-9d55-e6fb9370b9c6",
+			"id": "ca3d0e24-127d-47b5-ab12-7e886473549b",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "5ece2ee3-a009-469b-83be-4f733166ac54",
+			"id": "6c9f58bb-ced4-4bc7-a243-afde9221e46b",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "4dc54673-00b0-4816-a770-05ad126addf5",
+			"id": "d4dc799e-2918-4408-a510-497883b7399a",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "8199c3d1-4e02-4f9a-b621-c5936ce5e6f7",
+			"id": "db7cbeba-249e-49b9-a8dd-e9cadbdda08c",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "b1b57718-7953-4844-a090-324e27b3b9b1",
+			"id": "50bb98bf-9c2d-4a31-ab9c-ab3543a2a48b",
 			"key": "access_token",
 			"value": ""
 		}
