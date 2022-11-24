@@ -650,15 +650,30 @@
 												"key": "Authorization",
 												"value": "{{access_token}}",
 												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
 											}
 										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id_nota_fiscal\":\"123\",\n    \"tipo_documento\":\"nfe\",\n    \"email_adicional\":[\n        \"email1@email.com\"\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
 										"url": "{{url}}/api/v1/integracao/cliente/nota_fiscal/enviar_email"
 									},
 									"_postman_previewlanguage": "json",
 									"header": null,
 									"cookie": [],
 									"responseTime": null,
-									"body": "{\r\n  \"status\": \"success\",\r\n  \"msg\": \"Um total de 2/3 email(s) foram enviados com sucesso\",\r\n  \"emails_enviados\": [\r\n      {\r\n          \"id_cliente\": 23285,\r\n          \"id_usuario\": 1,\r\n          \"id_usuario_envio\": 915,\r\n          \"host\": \"smtp.mailtrap.io\",\r\n          \"email_origem\": \"b860cbd1ea1dca\",\r\n          \"email_destino\": \"naotem@naotem.com.br\",\r\n          \"tipo_envio\": \"manual\",\r\n          \"tipo_documento\": \"nota_fiscal_produto\",\r\n          \"data_envio\": \"2022-02-25 09:59:46\",\r\n          \"enviado\": true,\r\n          \"mensagem_erro\": null,\r\n          \"id_email_enviado\": 1416,\r\n          \"data_envio_br\": \"25/02/2022 09:59\",\r\n          \"data_envio_timestamp\": 1645793986000\r\n      },\r\n      {\r\n          \"id_cliente\": 23285,\r\n          \"id_usuario\": 1,\r\n          \"id_usuario_envio\": 915,\r\n          \"host\": \"smtp.mailtrap.io\",\r\n          \"email_origem\": \"b860cbd1ea1dca\",\r\n          \"email_destino\": \"guilherme@hubsoft.com.br\",\r\n          \"tipo_envio\": \"manual\",\r\n          \"tipo_documento\": \"nota_fiscal_produto\",\r\n          \"data_envio\": \"2022-02-25 10:00:30\",\r\n          \"enviado\": true,\r\n          \"mensagem_erro\": null,\r\n          \"id_email_enviado\": 1417,\r\n          \"data_envio_br\": \"25/02/2022 10:00\",\r\n          \"data_envio_timestamp\": 1645794030000\r\n      }\r\n  ]\r\n}"
+									"body": "{\r\n  \"status\": \"success\",\r\n  \"msg\": \"Um total de 2/3 email(s) foram enviados com sucesso\",\r\n  \"emails_enviados\": [\r\n      {\r\n          \"id_cliente\": 23285,\r\n          \"id_usuario\": 1,\r\n          \"id_usuario_envio\": 915,\r\n          \"host\": \"smtp.mailtrap.io\",\r\n          \"email_origem\": \"b860cbd1ea1dca\",\r\n          \"email_destino\": \"naotem@naotem.com.br\",\r\n          \"tipo_envio\": \"manual\",\r\n          \"tipo_documento\": \"nota_fiscal_produto\",\r\n          \"data_envio\": \"2022-02-25 09:59:46\",\r\n          \"enviado\": true,\r\n          \"mensagem_erro\": null,\r\n          \"id_email_enviado\": 1416,\r\n          \"data_envio_br\": \"25/02/2022 09:59\",\r\n          \"data_envio_timestamp\": 1645793986000\r\n      },\r\n      {\r\n          \"id_cliente\": 23285,\r\n          \"id_usuario\": 1,\r\n          \"id_usuario_envio\": 915,\r\n          \"host\": \"smtp.mailtrap.io\",\r\n          \"email_origem\": \"b860cbd1ea1dca\",\r\n          \"email_destino\": \"email1@email.com.br\",\r\n          \"tipo_envio\": \"manual\",\r\n          \"tipo_documento\": \"nota_fiscal_produto\",\r\n          \"data_envio\": \"2022-02-25 10:00:30\",\r\n          \"enviado\": true,\r\n          \"mensagem_erro\": null,\r\n          \"id_email_enviado\": 1417,\r\n          \"data_envio_br\": \"25/02/2022 10:00\",\r\n          \"data_envio_timestamp\": 1645794030000\r\n      }\r\n  ]\r\n}"
 								}
 							]
 						}
@@ -3050,37 +3065,37 @@
 	],
 	"variable": [
 		{
-			"id": "c2b03c69-e661-4c03-9d2b-55c5c1377306",
+			"id": "68c05a79-f85a-4852-99c3-39c4467155e9",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "6965e58f-eaec-4f97-a1b5-0e5eaa474257",
+			"id": "69f5831e-ed0d-418d-905f-4146e3940746",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "f8cc7647-1ef0-4d2e-b16c-82b4844a8ddf",
+			"id": "6c1f7431-e478-4416-8770-2fec53057583",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "75f6f070-2856-4bd8-ac09-134ea571cbc6",
+			"id": "88c144da-e525-4786-82d4-b53ae2c07b6a",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "ab3eb40e-be2c-4000-8e08-599b8fc0e591",
+			"id": "2424031f-4434-49cf-b071-9e144e1eefa4",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "236a813a-deff-4834-b181-fbc9994bc4d1",
+			"id": "56607bfd-a575-46d8-a71e-fc29a5c7bcc5",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "618d7865-2219-41c8-b703-0cd106d12a24",
+			"id": "413bdbde-638e-45bb-a9d3-4d1b99c1f890",
 			"key": "access_token",
 			"value": ""
 		}
