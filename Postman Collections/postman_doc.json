@@ -1824,8 +1824,23 @@
 										"key": "Authorization",
 										"value": "{{access_token}}",
 										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
 									}
 								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \"id_ordem_servico\":\"1493\",\n   \"data_inicio_programado\":\"2020-11-23\",\n   \"hora_inicio_programado\":\"08:00:00\",\n   \"data_termino_programado\":\"2020-11-23\",\n   \"hora_termino_programado\":\"09:30:00\",\n   \"id_usuario_antigo\":4,\n   \"id_usuario_novo\":1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": "{{url}}/api/v1/integracao/ordem_servico/reagendar"
 							},
 							"_postman_previewlanguage": "json",
@@ -3357,37 +3372,37 @@
 	],
 	"variable": [
 		{
-			"id": "8cd190b2-e5bd-401d-a665-b799cb5d6d8e",
+			"id": "ea4578ff-917c-4cfa-ad84-e99cfe7175f5",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "4a450cfd-f26d-4a03-ac5f-4653b8a22553",
+			"id": "5cf31068-143e-4a40-bace-a0c40d7a7a8e",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "7422ea40-2605-4bfe-b381-cc8cecd178d5",
+			"id": "e28e84b2-11d6-4929-b405-10bb3897c4af",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "4778a1ee-f193-4717-b216-a8c571c05ac2",
+			"id": "4752a8a3-c2eb-4191-92b4-e808458ce9cb",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "99ece80d-87c7-428a-9348-02ee08a9203b",
+			"id": "7c6bef15-1db6-47aa-9ed4-916268e2f031",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "1857a516-fc58-41c0-8099-76b0543931af",
+			"id": "955b8ef9-d69e-4d95-a05d-bfbce56ae196",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "fc2024e8-d325-4be5-9cac-0381847b9ff2",
+			"id": "07b3482e-05d5-4cde-a880-41d57d3294c5",
 			"key": "access_token",
 			"value": ""
 		}
