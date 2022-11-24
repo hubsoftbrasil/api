@@ -2621,7 +2621,7 @@
 								}
 							}
 						},
-						"url": "{{url}}/api/v1/integracao/pbx/ligacao/notificar",
+						"url": "{{url}}/api/v1/integracao/pbx/ligacao/cancelar",
 						"description": "**POST**\n\nAtravés deste `endpoint`, de ambas as rotas poderão ser realizadas as notificações e cancelamento de ligações.\n\n**Aviso**\n\n**`IMPORTANTE:`** Ao realizar a requisição na rota de `«notificação»`, o sistema irá automaticamente abrir uma janela pro usuário de destino, com os dados da chamada: ramal, identificador interno, telefone de origem da ligação. Caso algum cliente tenha sido identificado, será possível abrir o atendimento e já fornecer o protocolo ao cliente, caso contrário terá a opção de consultar um cliente na base. Ao realizar a requisição na rota de `«cancelamento»` da ligação, a janela de ligação será fechada automaticamente caso ela ainda esteja aberta.\n\n**Atributos da Requisição de ambas as rotas**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| ramal | Número de ramal correspondente ao usuário | **(Obrigatório caso o identificador_interno não seja informado)** |\n| identificador_interno | ID Interno correspondente ao usuário | **(Obrigatório caso o ramal não seja informado)** |\n| codigo_cliente | Código único do cliente | Não |\n| id_cliente | Identificador (chave primária) do cliente | Não |\n| telefone | Telefone da ligação externa do PBX | Não |\n| ligacao_params | Objeto JSON para serem informados parametros da ligação | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| ramal | Deve ser um valor numérico | Nenhum |\n| identificador_interno | Deve ser um valor alfanumérico | Nenhum |\n| codigo_cliente | Deve ser um valor númerico e existir na base de dados | Nenhum |\n| id_cliente | Deve ser um valor númerico e existir na base de dados | Nenhum |\n| telefone | Deve ser um valor númerico | Nenhum |\n| ligacao_params | Deve ser um objeto no formato JSON | Nenhum |"
 					},
 					"response": [
@@ -2652,7 +2652,7 @@
 										}
 									}
 								},
-								"url": "{{url}}/api/v1/integracao/pbx/ligacao/notificar"
+								"url": "{{url}}/api/v1/integracao/pbx/ligacao/cancelar"
 							},
 							"_postman_previewlanguage": "json",
 							"header": null,
@@ -3465,37 +3465,37 @@
 	],
 	"variable": [
 		{
-			"id": "dc832498-d711-45c7-80a1-03cc69afd2e2",
+			"id": "a34a4e5c-5af9-4564-be55-f39a666e1177",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "5f2dcbe2-6059-46f4-a19e-e34fa64672fa",
+			"id": "91418737-20fa-49c8-a94b-e7626bc56398",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "132afdb4-3057-48d7-93c3-5c206d6a4103",
+			"id": "9fd7b77a-6ca6-4c2e-b12c-efe9056ced1b",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "e4517f24-d2d9-4aad-851b-b2636d437cac",
+			"id": "602b4781-9c2d-4339-9c48-359e2f6143a2",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "882868ef-b1fb-4a6a-bd6c-5e5bbc68856f",
+			"id": "a1c87f25-260f-48e8-a123-73eb9dafe1cb",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "b99de8ef-2f9f-4f35-9cfd-6cc1ce98c5f1",
+			"id": "c540f2f3-1694-48c8-9a9e-17d5ef91b6ba",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "7674b262-e55c-4caa-8a76-e866865c2dec",
+			"id": "b520d4ea-1a23-490e-b0a6-3cb8da2f6549",
 			"key": "access_token",
 			"value": ""
 		}
