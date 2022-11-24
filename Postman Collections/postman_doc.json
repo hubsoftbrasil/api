@@ -2622,7 +2622,7 @@
 							}
 						},
 						"url": "{{url}}/api/v1/integracao/pbx/ligacao/cancelar",
-						"description": "**POST**\n\nAtravés deste `endpoint`, de ambas as rotas poderão ser realizadas as notificações e cancelamento de ligações.\n\n**Aviso**\n\n**`IMPORTANTE:`** Ao realizar a requisição na rota de `«notificação»`, o sistema irá automaticamente abrir uma janela pro usuário de destino, com os dados da chamada: ramal, identificador interno, telefone de origem da ligação. Caso algum cliente tenha sido identificado, será possível abrir o atendimento e já fornecer o protocolo ao cliente, caso contrário terá a opção de consultar um cliente na base. Ao realizar a requisição na rota de `«cancelamento»` da ligação, a janela de ligação será fechada automaticamente caso ela ainda esteja aberta.\n\n**Atributos da Requisição de ambas as rotas**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| ramal | Número de ramal correspondente ao usuário | **(Obrigatório caso o identificador_interno não seja informado)** |\n| identificador_interno | ID Interno correspondente ao usuário | **(Obrigatório caso o ramal não seja informado)** |\n| codigo_cliente | Código único do cliente | Não |\n| id_cliente | Identificador (chave primária) do cliente | Não |\n| telefone | Telefone da ligação externa do PBX | Não |\n| ligacao_params | Objeto JSON para serem informados parametros da ligação | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| ramal | Deve ser um valor numérico | Nenhum |\n| identificador_interno | Deve ser um valor alfanumérico | Nenhum |\n| codigo_cliente | Deve ser um valor númerico e existir na base de dados | Nenhum |\n| id_cliente | Deve ser um valor númerico e existir na base de dados | Nenhum |\n| telefone | Deve ser um valor númerico | Nenhum |\n| ligacao_params | Deve ser um objeto no formato JSON | Nenhum |"
+						"description": "**POST**\n\nAtravés deste `endpoint`, será realizado o cancelamento de um notificação realizada anteriormente.\n\n**Aviso**\n\n**`IMPORTANTE:`** Ao realizar a requisição na rota de `«notificação»`, o sistema irá automaticamente abrir uma janela pro usuário de destino, com os dados da chamada: ramal, identificador interno, telefone de origem da ligação. Caso algum cliente tenha sido identificado, será possível abrir o atendimento e já fornecer o protocolo ao cliente, caso contrário terá a opção de consultar um cliente na base. Ao realizar a requisição na rota de `«cancelamento»` da ligação, a janela de ligação será fechada automaticamente caso ela ainda esteja aberta.\n\n**Atributos da Requisição de ambas as rotas**\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| ramal | Deve ser um valor numérico | Nenhum |\n| identificador_interno | Deve ser um valor alfanumérico | Nenhum |\n| telefone | Deve ser um valor númerico | Nenhum |"
 					},
 					"response": [
 						{
@@ -3465,37 +3465,37 @@
 	],
 	"variable": [
 		{
-			"id": "fd7b632c-cfc4-456e-a654-9c66da3aaed2",
+			"id": "6c6d7c37-22e3-45f6-abc9-5c521e7a77cc",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "56ac8a82-b1f9-4ef3-a26d-e4a2dbe6b49d",
+			"id": "90717e2a-c9fd-4c88-bc09-4a6130d7cd0e",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "68f5c40e-cc31-44ad-97b5-90a38c18c7a1",
+			"id": "da68689b-c259-458e-bf2b-c541e9632af7",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "dce6d4e0-9bf4-4bde-9022-7b30bfad0b0a",
+			"id": "912c4f68-b53b-424d-be61-b185d5d3ccf8",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "78a8a9b1-2edc-4a33-a145-26dee6875d8f",
+			"id": "76be81c0-5da0-445d-a459-d9cb4737c81a",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "6c3580a8-bd6e-4ed6-95e5-1bbd014f8021",
+			"id": "fe5aca9c-d064-4569-af68-82f646ad326e",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "27629a9b-9419-469e-ad96-9c84ab62a2c8",
+			"id": "873b13e1-06ec-419a-80d3-12f36d12b47f",
 			"key": "access_token",
 			"value": ""
 		}
