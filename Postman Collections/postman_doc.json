@@ -1566,7 +1566,7 @@
 							]
 						},
 						{
-							"name": "Liquidar Fatura",
+							"name": "Liquidar",
 							"id": "a6479c96-24ab-4e9b-96a3-6904c3018cab",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -3479,37 +3479,37 @@
 	],
 	"variable": [
 		{
-			"id": "caa9eede-6685-4f72-9ba0-0dde67850321",
+			"id": "256718fc-f666-49f7-8727-c638149c873c",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "faca2400-91bc-4986-af37-06b8ed74356c",
+			"id": "0c844bec-b71d-4a07-9e39-a89671ca612e",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "818f38e4-2bca-4a04-a579-78bec2b5f0cc",
+			"id": "331ff7e1-0c34-4820-8f00-9e41239fab8c",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "03e46e29-89d5-482f-8bf6-552bb1f85aee",
+			"id": "6ed26c6a-6754-4dd8-8d1c-8c756a7116b0",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "c8a073c1-98a6-4e60-aa1f-3d931f6804d2",
+			"id": "32a73482-ca75-463f-bc58-df3264e2e34a",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "192e0fb6-2212-4543-9450-c1ed68cbdad6",
+			"id": "d8053de1-4a94-419b-b28b-4892de157531",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "25d38c34-79ed-4177-a222-5dcf1ccf797d",
+			"id": "b053fbc1-9d9a-40c7-a471-5090b2c80d52",
 			"key": "access_token",
 			"value": ""
 		}
