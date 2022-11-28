@@ -83,7 +83,7 @@
 				}
 			],
 			"id": "4a682004-f355-42bd-b35b-a040fb1e2987",
-			"description": "**Necessário**\n\nPara autenticar na API, será necessário possuir os seguintes dados em mãos:\n\n\\* client_id  \n\\* client_secret  \n\\* username  \n\\* password\n\nApós a autenticação você receberá um `access_token` que deverá ser utilizado nos demais endpoints.\n\nEsse token deverá ser enviado no `Header Authorization` no seguinte formato:\n\n`Bearer`\n\n**IMPORTANTE:** O token irá expirar conforme o tempo retornado no parametro `expires_in`.\n\n**Observação:** O valor 2592000 é equivalente a 30 dias. Sugerimos que armazenem o token e reutilizem o mesmo, conforme for necessário. Será necessário gerar um novo token sempre que o mesmo expirar. Porém, caso não queira esperar o token expirar, você poderá programar sua aplicação para gerar um novo token, recomendamos a geração de um novo token a cada 24 horas ou sempre que receber um `HTTP 401` com resultado de alguma request.\n\n**Observação 2:** Caso a API retorne em qualquer momento o código de status `HTTP 401`, significa que é necessário gerar um novo token, pois o mesmo pode ter sido cancelado / expirado manualmente através de algum usuário administrador do sistema (por exemplo, durante atualizações o sistema poderá invalidar todos os TOKENS, fazendo com que uma nova autenticação seja necessária)"
+			"description": "**Necessário**\n\nPara autenticar na API, será necessário possuir os seguintes dados em mãos:\n\n\\* client_id  \n\\* client_secret  \n\\* username  \n\\* password\n\nApós a autenticação você receberá um `access_token` que deverá ser utilizado nos demais endpoints.\n\nEsse token deverá ser enviado no `Header Authorization` no seguinte formato:\n\n`Bearer`\n\n**IMPORTANTE:** O token irá expirar conforme o tempo retornado no parametro `expires_in`.\n\n**Observação:** O valor 2592000 é equivalente a 30 dias. Sugerimos que armazenem o token e reutilizem o mesmo, conforme for necessário. Será necessário gerar um novo token sempre que o mesmo expirar. Porém, caso não queira esperar o token expirar, você poderá programar sua aplicação para gerar um novo token, recomendamos a geração de um novo token a cada 24 horas ou sempre que receber um `HTTP 401` no status de alguma requisição.\n\n**Observação 2:** Caso a API retorne em qualquer momento o código de status `HTTP 401`, significa que é necessário gerar um novo token, pois o mesmo pode ter sido cancelado / expirado manualmente através de algum usuário administrador do sistema (por exemplo, durante atualizações o sistema poderá invalidar todos os TOKENS, fazendo com que uma nova autenticação seja necessária)"
 		},
 		{
 			"name": "Atendimento",
@@ -3505,37 +3505,37 @@
 	],
 	"variable": [
 		{
-			"id": "64ba2956-5937-4360-a703-660639b23af5",
+			"id": "7ab5b69c-f10c-4842-a2e5-ace87f0617fb",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "f3b86737-c980-4e86-acf9-f5151b163fcc",
+			"id": "634dd90d-f657-4ad2-ad9b-2ec79824af65",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "1c67852f-3ad7-4a3d-8cc2-ae4d5d05ffa2",
+			"id": "85111871-05f5-4501-9000-e310a550f583",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "a4f0f229-3226-4936-8e11-ea8f1c3e46b8",
+			"id": "0b6bf7c9-c0c8-4f65-9daa-2b71fc4476bc",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "bb61d8ee-3764-415f-ad12-c8224a6aef68",
+			"id": "1fa9a7fd-39fa-4380-8e2c-dd4be44530ba",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "74baaf4e-7aff-44ae-8cb0-0cbfc177df7a",
+			"id": "129bd104-d079-4a82-b921-ee17ee375034",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "ec750435-b7a4-49f4-a5bd-a21e75695877",
+			"id": "6d4ad58e-e9c8-4ca1-88c1-9e26a2e55565",
 			"key": "access_token",
 			"value": ""
 		}
