@@ -1295,6 +1295,149 @@
 					]
 				},
 				{
+					"name": "Todos",
+					"id": "e28752c0-ad8a-4296-83c6-1eb7c2f51363",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/v1/integracao/cliente/all?data_inicio&data_fim&cancelado&ultima_conexao&codigo_pacote&relacoes&limit&offset&order_by&order_type",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"integracao",
+								"cliente",
+								"all"
+							],
+							"query": [
+								{
+									"key": "data_inicio",
+									"value": null,
+									"description": "(opcional) Valor no formato DateTime (YYYY-MM-DD)"
+								},
+								{
+									"key": "data_fim",
+									"value": null,
+									"description": "(opcional)  Valor no formato DateTime (YYYY-MM-DD) Obs: Maior ou igual data_inicio"
+								},
+								{
+									"key": "cancelado",
+									"value": null,
+									"description": "(opcional) sim,nao"
+								},
+								{
+									"key": "ultima_conexao",
+									"value": null,
+									"description": "(opcional) sim,nao"
+								},
+								{
+									"key": "codigo_pacote",
+									"value": null,
+									"description": "(opcional) Valor no formato string"
+								},
+								{
+									"key": "relacoes",
+									"value": null,
+									"description": "(opcional) endereco_instalacao,endereco_cadastral,endereco_cobranca,endereco_fiscal,pacotes,interface,interface_roteamento,equipamento_conexao,equipamento_roteamento,grupos,porta_atendimento,senhas,status_conexao"
+								},
+								{
+									"key": "limit",
+									"value": null,
+									"description": "(opcional) Número Inteiro maior que 0"
+								},
+								{
+									"key": "offset",
+									"value": null,
+									"description": "(opcional) Número Inteiro maior que 0"
+								},
+								{
+									"key": "order_by",
+									"value": null,
+									"description": "(opcional) data_cadastro,data_fechamento"
+								},
+								{
+									"key": "order_type",
+									"value": null,
+									"description": "(opcional) asc,desc"
+								}
+							]
+						},
+						"description": "### **Esse endpoint foi descontinuado. A partir de 01/01/2023 não retornará mais respostas. Utilize o endpoint \"Todos\" para realizar a consulta de todos os clientes.**\n\nNo método `GET`, irá consultar os dados dos clientes e retornar um `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| **Atributo** | **Descrição** | **Obrigatório** |\n| --- | --- | --- |\n| data_inicio | Data de Cadastro Inicial | Não |\n| data_fim | Data de Cadastro Final | Não |\n| cancelado | Retornar serviços cancelados | Não |\n| ultima_conexao | Informa se deseja trazer os dados da última conexão | Não |\n| codigo_pacote | Retorna apenas os clientes que contém pacotes com o código especificado | Não |\n| relacoes | Carrega apenas os relacionamentos especificados | Não |\n| limit | Limite de resultados | Não |\n| offset | Deslocamento em relação ao limite de dados | Não |\n| order_by | Campo que será utilizado para ordenação | Não |\n| order_type | Tipo de Ordenação | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| **Atributo** | **Descrição** | **Valor Default** |\n| --- | --- | --- |\n| data_inicio | Valor no formato DateTime (YYYY-MM-DD) | Nenhum |\n| data_fim | Valor no formato DateTime (YYYY-MM-DD) Obs: Maior ou igual data_inicio | Nenhum |\n| cancelado | sim,nao | nao |\n| ultima_conexao | sim,nao | nao |\n| codigo_pacote | Valor no formato string | Nenhum |\n| relacoes | endereco_instalacao, endereco_cadastral, endereco_cobranca, endereco_fiscal, pacotes, interface, interface_roteamento, equipamento_conexao, equipamento_roteamento, grupos, porta_atendimento, senhas, status_conexao | Nenhum |\n| limit | Número Inteiro maior que 0 | Nenhum |\n| offset | Número Inteiro maior que 0 | Nenhum |\n| order_by | data_cadastro,data_fechamento | data_cadastro |\n| order_type | asc,desc | asc |\n\n**IMPORTANTE:** Por se tratar de uma requisição que poderá trazer uma quantidade muito grande dados, o sistema irá armazenar o resultado da requisição em um Cache. Portanto, em chamadas consecutivas em curtos intervalos de tempo dessa rota, o sistema irá retornar o mesmo resultado. Recomendamos o uso dessa API poucas vezes ao dia (EX: 1 vez de madrugada e outra na parte da tarde por exemplo). Chamadas consecutivas nessa API pode parar seu sistema."
+					},
+					"response": [
+						{
+							"id": "ac5452f0-0a4e-441b-a383-53b084fab1a3",
+							"name": "Sucesso",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/api/v1/integracao/cliente/all"
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Dados consultados com sucesso\",\n    \"clientes\": [\n        {\n            \"id_cliente\": 11201,\n            \"codigo_cliente\": 421,\n            \"nome_razaosocial\": \"GUILHERME SILVA\",\n            \"nome_fantasia\": null,\n            \"tipo_pessoa\": \"pf\",\n            \"cpf_cnpj\": \"10682083681\",\n            \"telefone_primario\": \"37988242968\",\n            \"telefone_secundario\": \"37988242968\",\n            \"telefone_terciario\": \"\",\n            \"email_principal\": \"guilherme@silva.com.br\",\n            \"email_secundario\": null,\n            \"rg\": \"MG16999888\",\n            \"rg_emissao\": null,\n            \"inscricao_municipal\": null,\n            \"inscricao_estadual\": null,\n            \"data_cadastro\": \"2017-08-05 00:00:00\",\n            \"data_nascmento\": \"1969-12-31 04:00:00\",\n            \"servicos\": [\n                {\n                    \"id_cliente_servico\": 11201,\n                    \"id_servico\": 100,\n                    \"numero_plano\": 1,\n                    \"nome\": \"4M\",\n                    \"valor\": 119.9,\n                    \"status\": \"Serviço Habilitado\",\n                    \"status_prefixo\": \"servico_habilitado\",\n                    \"tecnologia\": \"WIRELESS\",\n                    \"login\": \"guilhermesilva1068\",\n                    \"senha\": \"123\",\n                    \"ipv4\": \"10.99.2.203\",\n                    \"ipv6\": null,\n                    \"interface\": {\n                        \"nome\": \"PON5\",\n                        \"tipo\": \"gpon\",\n                        \"called_sid\": null\n                    },\n                    \"interface_roteamento\": {\n                        \"nome\": \"ether8\",\n                        \"tipo\": \"ethernet\",\n                        \"called_sid\": null\n                    },\n                    \"equipamento_conexao\": {\n                        \"nome\": \"OLT XPTO\",\n                        \"ipv4\": \"192.168.2.100\",\n                        \"ipv6\": null\n                    },\n                    \"equipamento_roteamento\": {\n                        \"nome\": \"CONCENTRADOR XPTO\",\n                        \"ipv4\": \"172.17.24.98\",\n                        \"ipv6\": null\n                    },\n                    \"pacotes\": [\n                        {\n                            \"id_pacote\": 1,\n                            \"codigo\": \"meu_codigo_personalizado_1\",\n                            \"descricao\": \"IP FIXO\",\n                            \"valor\": \"20\",\n                            \"observacoes\": \"IP FIXO 189.79.21.21\",\n                            \"data_cadastro\": \"2019-11-21 16:43:56\"\n                        },\n                        {\n                            \"id_pacote\": 2,\n                            \"codigo\": \"meu_codigo_personalizado_2\",\n                            \"descricao\": \"TV\",\n                            \"valor\": \"20\",\n                            \"observacoes\": \"ASSINATURA DE TV\",\n                            \"data_cadastro\": \"2019-11-20 16:43:56\"\n                        }\n                    ],\n                    \"senhas\": [\n                        {\n                            \"id_cliente_servico_senha\": 6,\n                            \"descricao\": \"Teste\",\n                            \"usuario\": \"xpto123\",\n                            \"senha\": \"abc123\"\n                        }\n                    ],\n                    \"endereco_cadastral\": {\n                        \"completo\": \"RUA DONA MARIA DAS DORES, 541 - NOSSA SENHORA DAS GRACAS, DIVINóPOLIS/MG - IGREJA\",\n                        \"logradouro\": \"RUA\",\n                        \"endereco\": \"DONA MARIA DAS DORES\",\n                        \"numero\": \"541\",\n                        \"complemento\": \"IGREJA\",\n                        \"bairro\": \"NOSSA SENHORA DAS GRACAS\",\n                        \"cep\": \"35501-048\",\n                        \"estado\": \"MG\",\n                        \"uf\": \"MINAS GERAIS\",\n                        \"cidade\": \"Divinópolis\",\n                        \"coordenadas\": {\n                            \"latitude\": null,\n                            \"longitude\": null\n                        }\n                    },\n                    \"endereco_instalacao\": {\n                        \"completo\": \"RUA MINAS GERAIS, 1793 - IPIRANGA, DIVINÓPOLIS/MG\",\n                        \"logradouro\": \"RUA\",\n                        \"endereco\": \"MINAS GERAIS\",\n                        \"numero\": \"1793\",\n                        \"complemento\": \"\",\n                        \"bairro\": \"IPIRANGA\",\n                        \"cep\": \"35502-026\",\n                        \"estado\": \"MG\",\n                        \"uf\": \"MINAS GERAIS\",\n                        \"cidade\": \"Divinópolis\",\n                        \"coordenadas\": {\n                            \"latitude\": -20.086592,\n                            \"longitude\": -45.290962\n                        }\n                    },\n                    \"endereco_fiscal\": {\n                        \"completo\": \"RUA GOIAS, 86 - PORTO VELHO, DIVINÓPOLIS/MG - APTO 101\",\n                        \"logradouro\": \"RUA\",\n                        \"endereco\": \"GOIAS\",\n                        \"numero\": \"86\",\n                        \"complemento\": \"APTO 101\",\n                        \"bairro\": \"PORTO VELHO\",\n                        \"cep\": \"35500-000\",\n                        \"estado\": \"MG\",\n                        \"uf\": \"MINAS GERAIS\",\n                        \"cidade\": \"Divinópolis\",\n                        \"coordenadas\": {\n                            \"latitude\": null,\n                            \"longitude\": null\n                        }\n                    },\n                    \"endereco_cobranca\": {\n                        \"completo\": \"RUA SEBASTIAO PARDINI, 58 - CENTRO, DIVINÓPOLIS/MG - 202\",\n                        \"logradouro\": \"RUA\",\n                        \"endereco\": \"SEBASTIAO PARDINI\",\n                        \"numero\": \"58\",\n                        \"complemento\": \"202\",\n                        \"bairro\": \"CENTRO\",\n                        \"cep\": \"35500-000\",\n                        \"estado\": \"MG\",\n                        \"uf\": \"MINAS GERAIS\",\n                        \"cidade\": \"Divinópolis\",\n                        \"coordenadas\": {\n                            \"latitude\": null,\n                            \"longitude\": null\n                        }\n                    }\n                }\n            ]\n        },\n        {\n            \"id_cliente\": 11202,\n            \"codigo_cliente\": 422,\n            \"nome_razaosocial\": \"GUILHERME COSTA\",\n            \"nome_fantasia\": null,\n            \"tipo_pessoa\": \"pf\",\n            \"cpf_cnpj\": \"05333614622\",\n            \"telefone_primario\": \"37999450812\",\n            \"telefone_secundario\": \"37999452812\",\n            \"telefone_terciario\": \"\",\n            \"email_principal\": null,\n            \"email_secundario\": null,\n            \"rg\": \"MG11298180\",\n            \"rg_emissao\": null,\n            \"inscricao_municipal\": null,\n            \"inscricao_estadual\": null,\n            \"data_cadastro\": \"2017-04-26 00:00:00\",\n            \"data_nascmento\": \"1969-12-31 00:00:00\",\n            \"servicos\": [\n                {\n                    \"id_cliente_servico\": 11302,\n                    \"id_servico\": 1023,\n                    \"numero_plano\": 2,\n                    \"nome\": \"24M\",\n                    \"valor\": 119.9,\n                    \"status\": \"Serviço Habilitado\",\n                    \"status_prefixo\": \"servico_habilitado\",\n                    \"tecnologia\": \"FIBRA\",\n                    \"login\": \"guilhermesouza0533\",\n                    \"senha\": \"123\",\n                    \"ipv4\": \"10.99.1.118\",\n                    \"ipv6\": null,\n                    \"interface\": {\n                        \"nome\": \"PON5\",\n                        \"tipo\": \"gpon\",\n                        \"called_sid\": null\n                    },\n                    \"interface_roteamento\": {\n                        \"nome\": \"ether8\",\n                        \"tipo\": \"ethernet\",\n                        \"called_sid\": null\n                    },\n                    \"equipamento_conexao\": {\n                        \"nome\": \"OLT XPTO\",\n                        \"ipv4\": \"192.168.2.100\",\n                        \"ipv6\": null\n                    },\n                    \"equipamento_roteamento\": {\n                        \"nome\": \"CONCENTRADOR XPTO\",\n                        \"ipv4\": \"172.17.24.98\",\n                        \"ipv6\": null\n                    },\n                    \"pacotes\": [],\n                    \"senhas\": [],\n                    \"endereco_cadastral\": {\n                        \"completo\": \"RUA GERALDO RODRIGUES DA COSTA, 5 - CENTRO, SANTO ANTôNIO DO MONTE/MG\",\n                        \"logradouro\": \"RUA\",\n                        \"endereco\": \"GERALDO RODRIGUES DA COSTA\",\n                        \"numero\": \"5\",\n                        \"complemento\": \"\",\n                        \"bairro\": \"CENTRO\",\n                        \"cep\": \"35560000\",\n                        \"estado\": \"MG\",\n                        \"uf\": \"MINAS GERAIS\",\n                        \"cidade\": \"Santo Antônio do Monte\",\n                        \"coordenadas\": {\n                            \"latitude\": null,\n                            \"longitude\": null\n                        }\n                    },\n                    \"endereco_instalacao\": {\n                        \"completo\": \"RUA JOÃO J FERNANDES, 900 - BARRETOS, NOVA SERRANA/MG - AREA RURAL\",\n                        \"logradouro\": \"RUA\",\n                        \"endereco\": \"JOÃO J FERNANDES\",\n                        \"numero\": \"900\",\n                        \"complemento\": \"AREA RURAL\",\n                        \"bairro\": \"BARRETOS\",\n                        \"cep\": \"35519-000\",\n                        \"estado\": \"MG\",\n                        \"uf\": \"MINAS GERAIS\",\n                        \"cidade\": \"Nova Serrana\",\n                        \"coordenadas\": {\n                            \"latitude\": -19.8562717,\n                            \"longitude\": -45.0105913\n                        }\n                    },\n                    \"endereco_fiscal\": {\n                        \"completo\": \"RUA RITA DOS SANTOS MESQUITA, 233 - SANTO AGOSTINHO, PERDIGãO/MG\",\n                        \"logradouro\": \"RUA\",\n                        \"endereco\": \"RITA DOS SANTOS MESQUITA\",\n                        \"numero\": \"233\",\n                        \"complemento\": \"\",\n                        \"bairro\": \"SANTO AGOSTINHO\",\n                        \"cep\": \"35545-000\",\n                        \"estado\": \"MG\",\n                        \"uf\": \"MINAS GERAIS\",\n                        \"cidade\": \"Perdigão\",\n                        \"coordenadas\": {\n                            \"latitude\": null,\n                            \"longitude\": null\n                        }\n                    },\n                    \"endereco_cobranca\": {\n                        \"completo\": \"RUA DOIS, 221 - BARRETINHOS, NOVA SERRANA/MG - AREA RURAL\",\n                        \"logradouro\": \"RUA\",\n                        \"endereco\": \"DOIS\",\n                        \"numero\": \"221\",\n                        \"complemento\": \"AREA RURAL\",\n                        \"bairro\": \"BARRETINHOS\",\n                        \"cep\": \"35519-000\",\n                        \"estado\": \"MG\",\n                        \"uf\": \"MINAS GERAIS\",\n                        \"cidade\": \"Nova Serrana\",\n                        \"coordenadas\": {\n                            \"latitude\": null,\n                            \"longitude\": null\n                        }\n                    }\n                }\n            ]\n        }\n    ]\n}"
+						},
+						{
+							"id": "0cd87261-9314-40bc-97b4-7e4ef8c553df",
+							"name": "Sucesso - Consulta com Relações",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/v1/integracao/cliente/all?relacoes=pacotes,senhas",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"integracao",
+										"cliente",
+										"all"
+									],
+									"query": [
+										{
+											"key": "relacoes",
+											"value": "pacotes,senhas"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\":\"success\",\n    \"msg\":\"Dados consultados com sucesso\",\n    \"clientes\":[\n        {\n            \"id_cliente\":11201,\n            \"codigo_cliente\":421,\n            \"nome_razaosocial\":\"GUILHERME SILVA\",\n            \"nome_fantasia\":null,\n            \"tipo_pessoa\":\"pf\",\n            \"cpf_cnpj\":\"10682083681\",\n            \"telefone_primario\":\"37988242968\",\n            \"telefone_secundario\":\"37988242968\",\n            \"telefone_terciario\":\"\",\n            \"email_principal\":\"guilherme@silva.com.br\",\n            \"email_secundario\":null,\n            \"rg\":\"MG16999888\",\n            \"rg_emissao\":null,\n            \"inscricao_municipal\":null,\n            \"inscricao_estadual\":null,\n            \"data_cadastro\":\"2017-08-05 00:00:00\",\n            \"data_nascmento\":\"1969-12-31 04:00:00\",\n            \"servicos\":[\n                {\n                    \"id_cliente_servico\":11201,\n                    \"id_servico\":100,\n                    \"numero_plano\":1,\n                    \"nome\":\"4M\",\n                    \"valor\":119.9,\n                    \"status\":\"Serviço Habilitado\",\n                    \"status_prefixo\":\"servico_habilitado\",\n                    \"tecnologia\":\"WIRELESS\",\n                    \"login\":\"guilhermesilva1068\",\n                    \"senha\":\"123\",\n                    \"ipv4\":\"10.99.2.203\",\n                    \"ipv6\":null,\n                    \"pacotes\":[\n                           {\n                            \"id_pacote\": 1,\n                            \"codigo\":\"meu_codigo_personalizado_1\",\n                            \"descricao\": \"IP FIXO\",\n                            \"valor\": \"20\",\n                            \"observacoes\": \"IP FIXO 189.79.21.21\",\n                            \"data_cadastro\": \"2019-11-21 16:43:56\"\n                        },\n                        {\n                            \"id_pacote\": 2,\n                            \"codigo\":\"meu_codigo_personalizado_2\",\n                            \"descricao\": \"TV\",\n                            \"valor\": \"20\",\n                            \"observacoes\": \"ASSINATURA DE TV\",\n                            \"data_cadastro\": \"2019-11-20 16:43:56\"\n                        }\n                    ],\n                    \"senhas\": [\n                        {\n                            \"id_cliente_servico_senha\": 6,\n                            \"descricao\": \"Teste\",\n                            \"usuario\": \"xpto123\",\n                            \"senha\": \"abc123\"\n                        }\n                    ]\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
 					"name": "Consultar Cliente",
 					"id": "e54e9bd8-b9e3-423a-a1da-9193894f522a",
 					"protocolProfileBehavior": {
@@ -3505,37 +3648,37 @@
 	],
 	"variable": [
 		{
-			"id": "2b89cc56-7ddc-4691-94c8-9f8503041fd3",
+			"id": "66fbb0ae-0f66-46ec-9fa7-adb8e7657069",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "3236410c-6b21-4080-b9e3-68eabea76abd",
+			"id": "f7980487-5f04-4c1f-939c-9df14feda2f4",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "81c13b13-3279-4faf-9bce-d4ae7cb9c453",
+			"id": "0d8bba24-12bf-4559-9911-3a01d3bb9efe",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "7e9c41a4-f5cb-4aa7-8e3f-1e9d7228dd89",
+			"id": "729c7c82-dbf6-4cb9-b9ef-853dc172d9b6",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "6b660911-299b-4803-a8c4-da35e6a47a30",
+			"id": "783d42c6-789d-4a1e-8622-4ffc3ce98cdd",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "8ffa88d0-e6c3-4458-bd1f-1bc57b9991df",
+			"id": "1220bd45-ea0f-4c11-949d-03c179a4cb0f",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "5db4e4b3-542b-47ec-92d2-a65ed4105d78",
+			"id": "a24e7829-1989-43aa-ab31-365858aaab7f",
 			"key": "access_token",
 			"value": ""
 		}
