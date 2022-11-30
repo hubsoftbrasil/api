@@ -1231,7 +1231,7 @@
 								}
 							]
 						},
-						"description": "**GET**\n\nNo método `GET`, irá consultar os dados dos clientes e retornar um `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| **Atributo** | **Descrição** | **Obrigatório** |\n| --- | --- | --- |\n| data_inicio | Data de Cadastro Inicial | Não |\n| data_fim | Data de Cadastro Final | Não |\n| cancelado | Retornar serviços cancelados | Não |\n| ultima_conexao | Informa se deseja trazer os dados da última conexão | Não |\n| codigo_pacote | Retorna apenas os clientes que contém pacotes com o código especificado | Não |\n| relacoes | Carrega apenas os relacionamentos especificados | Não |\n| limit | Limite de resultados | Não |\n| offset | Deslocamento em relação ao limite de dados | Não |\n| order_by | Campo que será utilizado para ordenação | Não |\n| order_type | Tipo de Ordenação | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| **Atributo** | **Descrição** | **Valor Default** |\n| --- | --- | --- |\n| data_inicio | Valor no formato DateTime (YYYY-MM-DD) | Nenhum |\n| data_fim | Valor no formato DateTime (YYYY-MM-DD) Obs: Maior ou igual data_inicio | Nenhum |\n| cancelado | sim,nao | nao |\n| ultima_conexao | sim,nao | nao |\n| codigo_pacote | Valor no formato string | Nenhum |\n| relacoes | endereco_instalacao, endereco_cadastral, endereco_cobranca, endereco_fiscal, pacotes, interface, interface_roteamento, equipamento_conexao, equipamento_roteamento, grupos, porta_atendimento, senhas, status_conexao | Nenhum |\n| limit | Número Inteiro maior que 0 | Nenhum |\n| offset | Número Inteiro maior que 0 | Nenhum |\n| order_by | data_cadastro,data_fechamento | data_cadastro |\n| order_type | asc,desc | asc |\n\n**IMPORTANTE:** Por se tratar de uma requisição que poderá trazer uma quantidade muito grande dados, o sistema irá armazenar o resultado da requisição em um Cache. Portanto, em chamadas consecutivas em curtos intervalos de tempo dessa rota, o sistema irá retornar o mesmo resultado. Recomendamos o uso dessa API poucas vezes ao dia (EX: 1 vez de madrugada e outra na parte da tarde por exemplo). Chamadas consecutivas nessa API pode parar seu sistema."
+						"description": "### **Esse endpoint foi descontinuado. A partir de 01/01/2023 não retornará mais respostas. Utilize o endpoint \"Todos\" para realizar a consulta de todos os clientes.**\n\nNo método `GET`, irá consultar os dados dos clientes e retornar um `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| **Atributo** | **Descrição** | **Obrigatório** |\n| --- | --- | --- |\n| data_inicio | Data de Cadastro Inicial | Não |\n| data_fim | Data de Cadastro Final | Não |\n| cancelado | Retornar serviços cancelados | Não |\n| ultima_conexao | Informa se deseja trazer os dados da última conexão | Não |\n| codigo_pacote | Retorna apenas os clientes que contém pacotes com o código especificado | Não |\n| relacoes | Carrega apenas os relacionamentos especificados | Não |\n| limit | Limite de resultados | Não |\n| offset | Deslocamento em relação ao limite de dados | Não |\n| order_by | Campo que será utilizado para ordenação | Não |\n| order_type | Tipo de Ordenação | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| **Atributo** | **Descrição** | **Valor Default** |\n| --- | --- | --- |\n| data_inicio | Valor no formato DateTime (YYYY-MM-DD) | Nenhum |\n| data_fim | Valor no formato DateTime (YYYY-MM-DD) Obs: Maior ou igual data_inicio | Nenhum |\n| cancelado | sim,nao | nao |\n| ultima_conexao | sim,nao | nao |\n| codigo_pacote | Valor no formato string | Nenhum |\n| relacoes | endereco_instalacao, endereco_cadastral, endereco_cobranca, endereco_fiscal, pacotes, interface, interface_roteamento, equipamento_conexao, equipamento_roteamento, grupos, porta_atendimento, senhas, status_conexao | Nenhum |\n| limit | Número Inteiro maior que 0 | Nenhum |\n| offset | Número Inteiro maior que 0 | Nenhum |\n| order_by | data_cadastro,data_fechamento | data_cadastro |\n| order_type | asc,desc | asc |\n\n**IMPORTANTE:** Por se tratar de uma requisição que poderá trazer uma quantidade muito grande dados, o sistema irá armazenar o resultado da requisição em um Cache. Portanto, em chamadas consecutivas em curtos intervalos de tempo dessa rota, o sistema irá retornar o mesmo resultado. Recomendamos o uso dessa API poucas vezes ao dia (EX: 1 vez de madrugada e outra na parte da tarde por exemplo). Chamadas consecutivas nessa API pode parar seu sistema."
 					},
 					"response": [
 						{
@@ -3505,37 +3505,37 @@
 	],
 	"variable": [
 		{
-			"id": "ad8dbad4-e3be-44fa-bfcd-1c3436132add",
+			"id": "2b89cc56-7ddc-4691-94c8-9f8503041fd3",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "201368af-cb47-4120-b2f4-5c132de5eacc",
+			"id": "3236410c-6b21-4080-b9e3-68eabea76abd",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "6c8ad010-72ff-448c-aaf8-3a634bf98d06",
+			"id": "81c13b13-3279-4faf-9bce-d4ae7cb9c453",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "6eaa9c28-3008-4994-89a2-5ba4e23875ac",
+			"id": "7e9c41a4-f5cb-4aa7-8e3f-1e9d7228dd89",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "f4c5c821-fe06-41bd-bf2b-05a72f800717",
+			"id": "6b660911-299b-4803-a8c4-da35e6a47a30",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "1e3e9837-309e-421f-87fd-285387d52018",
+			"id": "8ffa88d0-e6c3-4458-bd1f-1bc57b9991df",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "68a6df57-3180-4dee-9d76-77538e7a1ffa",
+			"id": "5db4e4b3-542b-47ec-92d2-a65ed4105d78",
 			"key": "access_token",
 			"value": ""
 		}
