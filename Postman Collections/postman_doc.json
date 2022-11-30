@@ -1152,7 +1152,7 @@
 					"id": "1ba90c81-93bd-40a5-a287-32d405268325"
 				},
 				{
-					"name": "All (Todos os Clientes)",
+					"name": "All (Descontinuado)",
 					"id": "f0068073-f3d6-489c-9aa7-40451b85e97b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -3505,37 +3505,37 @@
 	],
 	"variable": [
 		{
-			"id": "ff670772-a127-480d-9a3a-149e574234c7",
+			"id": "ad8dbad4-e3be-44fa-bfcd-1c3436132add",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "013c3cc8-0d7e-4dad-8a3f-9f336588e30e",
+			"id": "201368af-cb47-4120-b2f4-5c132de5eacc",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "f93fe039-65a0-4463-b4fa-6c0f3880e531",
+			"id": "6c8ad010-72ff-448c-aaf8-3a634bf98d06",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "7d6c5f4b-1252-41bf-9f8d-830478cedc90",
+			"id": "6eaa9c28-3008-4994-89a2-5ba4e23875ac",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "76f2d9fb-b8ce-47c1-8189-61ffd1c40e2e",
+			"id": "f4c5c821-fe06-41bd-bf2b-05a72f800717",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "28bfcd1a-15fe-4029-88f3-fac636b69e05",
+			"id": "1e3e9837-309e-421f-87fd-285387d52018",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "8ebd0dfe-1c2b-4e11-8101-7581daf2c32e",
+			"id": "68a6df57-3180-4dee-9d76-77538e7a1ffa",
 			"key": "access_token",
 			"value": ""
 		}
