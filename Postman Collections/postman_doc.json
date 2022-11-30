@@ -1380,7 +1380,7 @@
 										"type": "text"
 									}
 								],
-								"url": "{{url}}/api/v1/integracao/cliente/all"
+								"url": "{{url}}/api/v1/integracao/cliente/todos"
 							},
 							"_postman_previewlanguage": "json",
 							"header": null,
@@ -3639,37 +3639,37 @@
 	],
 	"variable": [
 		{
-			"id": "94c896a2-9a9c-4603-a76e-dc83d7e62437",
+			"id": "70d40091-b955-4109-8640-484cd70c737b",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "e3bcc5b7-16c0-4c25-9fcc-fd6b0bbe96d2",
+			"id": "e8e15bc3-1f76-4f7a-8a9c-4196e65bd7be",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "f86c01c4-81d4-4017-887a-9bef2658a3b8",
+			"id": "a74ea213-8856-4c34-bf77-b128875ae3c5",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "14b9ab48-ad30-4942-88df-6a9207f87e4f",
+			"id": "16a81eff-5904-4efb-ad1c-42c030199bdf",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "015587b8-5f0f-45e0-809c-01eccf7e95e7",
+			"id": "ffb3962b-55de-4949-810a-8c96781f8a63",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "bfbaedaf-9aa8-46f6-ae78-b7623dd20a44",
+			"id": "0027fe2b-3cb0-4171-afd2-65815927d052",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "73a5bad5-2880-4288-9ccc-5a3a0daa0a91",
+			"id": "0d4460d5-dca7-4c45-a434-c20b5d5f5ce6",
 			"key": "access_token",
 			"value": ""
 		}
