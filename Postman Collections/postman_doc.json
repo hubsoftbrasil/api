@@ -1438,7 +1438,7 @@
 					]
 				},
 				{
-					"name": "Consultar Cliente",
+					"name": "Consultar",
 					"id": "e54e9bd8-b9e3-423a-a1da-9193894f522a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -3648,37 +3648,37 @@
 	],
 	"variable": [
 		{
-			"id": "66fbb0ae-0f66-46ec-9fa7-adb8e7657069",
+			"id": "c80d3082-a9e5-44ad-84ca-22ace9609b8d",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "f7980487-5f04-4c1f-939c-9df14feda2f4",
+			"id": "4a7291f9-692d-4079-8ad6-edf4d6aa2b6a",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "0d8bba24-12bf-4559-9911-3a01d3bb9efe",
+			"id": "ea9a1720-a1e6-4883-80b0-c273dedac4ba",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "729c7c82-dbf6-4cb9-b9ef-853dc172d9b6",
+			"id": "f0d0b17b-c94e-463e-8e1b-20131966f742",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "783d42c6-789d-4a1e-8622-4ffc3ce98cdd",
+			"id": "6de6d543-8a70-481e-b477-de138bfd520c",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "1220bd45-ea0f-4c11-949d-03c179a4cb0f",
+			"id": "93296813-0144-4135-90f6-046347bc9fe6",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "a24e7829-1989-43aa-ab31-365858aaab7f",
+			"id": "f9cf2e4e-2dda-4bfc-8ee6-0a6f0a50df51",
 			"key": "access_token",
 			"value": ""
 		}
