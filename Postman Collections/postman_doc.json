@@ -1310,7 +1310,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{url}}/api/v1/integracao/cliente/all?data_inicio&data_fim&cancelado&ultima_conexao&codigo_pacote&relacoes&limit&offset&order_by&order_type",
+							"raw": "{{url}}/api/v1/integracao/cliente/todos?pagina&itens_por_pagina&data_inicio&data_fim&cancelado&possui_pacote&codigo_pacote&relacoes",
 							"host": [
 								"{{url}}"
 							],
@@ -1319,58 +1319,49 @@
 								"v1",
 								"integracao",
 								"cliente",
-								"all"
+								"todos"
 							],
 							"query": [
 								{
+									"key": "pagina",
+									"value": null,
+									"description": "(Obrigatório) Número da Página que deseja consultar. Primeira página = 0"
+								},
+								{
+									"key": "itens_por_pagina",
+									"value": null,
+									"description": "(Obrigatório) Total de Itens por Página (Min: 1 e Max: 500)"
+								},
+								{
 									"key": "data_inicio",
 									"value": null,
-									"description": "(opcional) Valor no formato DateTime (YYYY-MM-DD)"
+									"description": "(opcional) Valor no formato Date (YYYY-MM-DD). Obs: Menor ou igual a data fim"
 								},
 								{
 									"key": "data_fim",
 									"value": null,
-									"description": "(opcional)  Valor no formato DateTime (YYYY-MM-DD) Obs: Maior ou igual data_inicio"
+									"description": "(opcional) Valor no formato Date (YYYY-MM-DD) Obs: Maior ou igual data_inicio"
 								},
 								{
 									"key": "cancelado",
 									"value": null,
-									"description": "(opcional) sim,nao"
+									"description": "(opcional) Indicar se deseja ou não trazer clientes cancelados. Valor aceitos: sim,nao"
 								},
 								{
-									"key": "ultima_conexao",
+									"key": "possui_pacote",
 									"value": null,
-									"description": "(opcional) sim,nao"
+									"description": "(opcional) Indica se deseja trazer apenas clientes que possuem ou não pacotes. Valores aceitos: sim,nao",
+									"type": "text"
 								},
 								{
 									"key": "codigo_pacote",
 									"value": null,
-									"description": "(opcional) Valor no formato string"
+									"description": "(opcional) Irá trazer somentes os clientes que possuirem pacotes com esse código"
 								},
 								{
 									"key": "relacoes",
 									"value": null,
 									"description": "(opcional) endereco_instalacao,endereco_cadastral,endereco_cobranca,endereco_fiscal,pacotes,interface,interface_roteamento,equipamento_conexao,equipamento_roteamento,grupos,porta_atendimento,senhas,status_conexao"
-								},
-								{
-									"key": "limit",
-									"value": null,
-									"description": "(opcional) Número Inteiro maior que 0"
-								},
-								{
-									"key": "offset",
-									"value": null,
-									"description": "(opcional) Número Inteiro maior que 0"
-								},
-								{
-									"key": "order_by",
-									"value": null,
-									"description": "(opcional) data_cadastro,data_fechamento"
-								},
-								{
-									"key": "order_type",
-									"value": null,
-									"description": "(opcional) asc,desc"
 								}
 							]
 						},
@@ -3648,37 +3639,37 @@
 	],
 	"variable": [
 		{
-			"id": "c80d3082-a9e5-44ad-84ca-22ace9609b8d",
+			"id": "f673d964-0218-46b7-b5bc-0aa612d012d0",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "4a7291f9-692d-4079-8ad6-edf4d6aa2b6a",
+			"id": "b61b4488-876f-4633-9357-20b34c0e1fa3",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "ea9a1720-a1e6-4883-80b0-c273dedac4ba",
+			"id": "588f49ab-a96a-49d4-89ed-fa2db6ee2f39",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "f0d0b17b-c94e-463e-8e1b-20131966f742",
+			"id": "f15b3dbf-445f-41e6-bd3b-03f7d6e34591",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "6de6d543-8a70-481e-b477-de138bfd520c",
+			"id": "095909ed-5428-458d-9596-faf27102c2dd",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "93296813-0144-4135-90f6-046347bc9fe6",
+			"id": "026e9009-4063-42fd-9ce9-e4ef2ffdfcee",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "f9cf2e4e-2dda-4bfc-8ee6-0a6f0a50df51",
+			"id": "2d4f46da-cf04-4f70-b24a-f7c87b1dc0cc",
 			"key": "access_token",
 			"value": ""
 		}
