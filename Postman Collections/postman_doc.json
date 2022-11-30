@@ -1310,7 +1310,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{url}}/api/v1/integracao/cliente/todos?pagina&itens_por_pagina&data_inicio&data_fim&cancelado&possui_pacote&codigo_pacote&relacoes",
+							"raw": "{{url}}/api/v1/integracao/cliente/todos?pagina=0&itens_por_pagina=100&data_inicio&data_fim&cancelado&possui_pacote&codigo_pacote&relacoes",
 							"host": [
 								"{{url}}"
 							],
@@ -1324,12 +1324,12 @@
 							"query": [
 								{
 									"key": "pagina",
-									"value": null,
-									"description": "(Obrigatório) Número da Página que deseja consultar. Primeira página = 0"
+									"value": "0",
+									"description": "(Obrigatório) Número da Página que deseja consultar. Primeira página = "
 								},
 								{
 									"key": "itens_por_pagina",
-									"value": null,
+									"value": "100",
 									"description": "(Obrigatório) Total de Itens por Página (Min: 1 e Max: 500)"
 								},
 								{
@@ -1350,8 +1350,7 @@
 								{
 									"key": "possui_pacote",
 									"value": null,
-									"description": "(opcional) Indica se deseja trazer apenas clientes que possuem ou não pacotes. Valores aceitos: sim,nao",
-									"type": "text"
+									"description": "(opcional) Indica se deseja trazer apenas clientes que possuem ou não pacotes. Valores aceitos: sim,nao"
 								},
 								{
 									"key": "codigo_pacote",
@@ -3639,37 +3638,37 @@
 	],
 	"variable": [
 		{
-			"id": "332a0160-c9ed-4e18-afc4-818f5c91517d",
+			"id": "8a0a32ff-aa76-4b4e-a63f-42755381f1da",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "5eef88e0-6442-41da-9e78-d5b9b30d445a",
+			"id": "90045188-06a2-433e-9bc9-9285b13b34e9",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "f68e0393-9867-4b92-b45d-4fa7751c1be2",
+			"id": "d3f6df22-ad1b-4ba9-8599-bbb3e83fe541",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "648e1f77-1c95-49d0-8e44-bcf35a71d3fa",
+			"id": "87eea2c8-37e6-403a-b498-c2066b5bc990",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "8605fbd8-d6a7-4a75-bf88-93b61a4022fd",
+			"id": "952d68f0-4cc5-4f24-b5fc-be14716e89c0",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "061b14ee-1122-4f88-9ba5-8bdf56ed3bb0",
+			"id": "5371d8e3-4c33-4161-968c-ca7403a29d42",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "f8eedf6b-5d54-4c4f-a9e1-a87a3358a12e",
+			"id": "f6f98f26-00ec-4911-8d16-7270e13404f1",
 			"key": "access_token",
 			"value": ""
 		}
