@@ -248,7 +248,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"id_cliente_servico\": \"11000\",\n    \"descricao\": \"Abertura de atendimento de teste\",\n    \"nome\": \"Nome do Usuário Solicitante\",\n    \"telefone\": \"37999112233\",\n    \"email\": \"teste@teste.com.br\",\n    \"abrir_os\": true\n}",
+									"raw": "{\n    \"id_cliente_servico\": \"11000\",\n    \"descricao\": \"Abertura de atendimento de teste\",\n    \"nome\": \"Nome do Usuário Solicitante\",\n    \"telefone\": \"37999112233\",\n    \"email\": \"teste@teste.com.br\",\n    \"abrir_os\": true,\n    \"parametros\":{\n        \"id_ligacao\":\"1233882731973123\",\n        \"data_inicio\":\"20/12/2023 09:32:11\",\n        \"data_termino\":\"20/20/2023 09:37:21\",\n        \"atendimento\":\"João Silva\",\n        \"ramal\":\"12342\",\n        \"url_chamada\":\"https://meuservidorpbx.com.br/ligacao/1233882731973123.mp3\",\n        \"caminho_ura\":\"1000 -> 1003 -> 2000 -> 2001\"\n    }\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3600,37 +3600,37 @@
 	],
 	"variable": [
 		{
-			"id": "6b0ad62f-7778-49ef-aa44-8e29c02ff6da",
+			"id": "5d8668f5-b9e5-4187-9a21-582af7ad657d",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "f8d7aee0-0701-4388-9480-065c594b36a7",
+			"id": "bc5fc71d-1d2a-4fe1-8df2-4fc0918092e1",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "88d0896c-abbd-4705-becb-ce8e89151709",
+			"id": "f02d0a7d-21af-4ada-ad1e-b89cb37e8421",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "6234db65-4fc0-46b6-b4c8-e7ef8f2de73d",
+			"id": "d4698f4b-a11e-4d4d-b014-3842f080925d",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "7eb8a713-c73c-4043-ad38-1572e3d2b12b",
+			"id": "a2a7daf6-3be3-481b-9cc2-da3cd20fb552",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "064d46e9-c5ca-4d8f-8034-1bd2c97f4386",
+			"id": "59528345-48f9-48e7-bb58-e5af7c530c3b",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "6417e55b-db03-4391-9dec-c63cfb62d253",
+			"id": "aebdadcc-17e5-4da6-bd5a-bac1c721ec12",
 			"key": "access_token",
 			"value": ""
 		}
