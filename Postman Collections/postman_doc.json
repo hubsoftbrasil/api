@@ -231,7 +231,7 @@
 							}
 						},
 						"url": "{{url}}/api/v1/integracao/atendimento",
-						"description": "**POST**\n\nNo método `POST`, será possível consultar os atendimentos em aberto/fechados dos clientes e obter o retorno no formato `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico | Identificador do serviço do cliente | Sim |\n| id_tipo_atendimento | Identificador do tipo de atendimento | Não |\n| descricao | Descrição detalhada do atendimento | Sim |\n| nome | Nome do solicitante | Sim |\n| telefone | Telefone do solicitante | Sim |\n| email | Email do solicitante | Não |\n| abrir_os | Indica se deve abrir Ordem de Serviço ou não | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico | Número Inteiro | Nenhum |\n| id_tipo_atendimento | Número Inteiro | Nenhum |\n| descricao | Campo Livre (Qualquer valor é aceito) | Nenhum |\n| nome | Campo Livre (Qualquer valor é aceito) | Nenhum |\n| telefone | Telefone no formato (DDNNNNNNNNN). | Nenhum |\n| email | Caso enviado deve ser no formato e-mail (EX: [user@dominio.com](mailto:user@dominio.com)) | Nenhum |\n| abrir_os | Caso enviado, deve conter um valor boolean (true | false) |\n\n**Observação: Se o parâmetro id_tipo_atendimento não for enviado, o atendimento será aberto com o tipo padrão SAC.**"
+						"description": "**POST**\n\nNo método `POST`, será possível consultar os atendimentos em aberto/fechados dos clientes e obter o retorno no formato `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico | Identificador do serviço do cliente | Sim |\n| id_tipo_atendimento | Identificador do tipo de atendimento | Não |\n| descricao | Descrição detalhada do atendimento | Sim |\n| nome | Nome do solicitante | Sim |\n| telefone | Telefone do solicitante | Sim |\n| email | Email do solicitante | Não |\n| abrir_os | Indica se deve abrir Ordem de Serviço ou não | Não |\n| parametros | Parâmetros Dinâmicos. Array de dados. | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico | Número Inteiro | Nenhum |\n| id_tipo_atendimento | Número Inteiro | Nenhum |\n| descricao | Campo Livre (Qualquer valor é aceito) | Nenhum |\n| nome | Campo Livre (Qualquer valor é aceito) | Nenhum |\n| telefone | Telefone no formato (DDNNNNNNNNN). | Nenhum |\n| email | Caso enviado deve ser no formato e-mail (EX: [user@dominio.com](mailto:user@dominio.com)) | Nenhum |\n| abrir_os | Caso enviado, deve conter um valor boolean (true | false |\n| parametros | Nos parâmetros dinâmicos podem ser enviados qualquer informação. |  |\n\n**Observação: Se o parâmetro id_tipo_atendimento não for enviado, o atendimento será aberto com o tipo padrão SAC.**\n\nObservação 2: Veja que na abertura do atendimento existe a possibilidade de enviar parâmetros dinâmicos. Esses parâmetros todos serão armazendos juntamente com o atendimento . Por exemplo se a sua plataforma for um sistema Omnichannel (PBX, WhatsApp, Messenger, etc), você pode armazar o ID da Conversa/Chamada, Data de Início, Data de Término, Atendimento, etc. Quanto mais informações você envia para o HubSoft, mais completo ficará a visualização do atendimento."
 					},
 					"response": [
 						{
@@ -3600,37 +3600,37 @@
 	],
 	"variable": [
 		{
-			"id": "9b912761-b9fe-42dc-b88e-b770d50743a1",
+			"id": "6b0ad62f-7778-49ef-aa44-8e29c02ff6da",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "62502b23-6f9f-4c19-8d17-5bf829b70cae",
+			"id": "f8d7aee0-0701-4388-9480-065c594b36a7",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "f838cebd-37fd-40c6-8d1c-50f322c0ee85",
+			"id": "88d0896c-abbd-4705-becb-ce8e89151709",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "a15dfb66-a4e8-4cd2-9b99-8daceada3bd8",
+			"id": "6234db65-4fc0-46b6-b4c8-e7ef8f2de73d",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "e44635a3-9f15-4dbe-8085-182cd9c08e49",
+			"id": "7eb8a713-c73c-4043-ad38-1572e3d2b12b",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "4fe97fac-b336-4be5-9c79-940ae833b6e6",
+			"id": "064d46e9-c5ca-4d8f-8034-1bd2c97f4386",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "f5796374-635d-4a9f-8ab8-b52e005cb4c9",
+			"id": "6417e55b-db03-4391-9dec-c63cfb62d253",
 			"key": "access_token",
 			"value": ""
 		}
