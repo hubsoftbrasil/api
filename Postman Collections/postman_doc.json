@@ -223,7 +223,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n        \"id_cliente_servico\":\"11000\",\n        \"descricao\":\"Abertura de atendimento de teste\",\n        \"nome\":\"Nome do Usuário Solicitante\",\n        \"telefone\":\"37999112233\",\n        \"email\":\"teste@teste.com.br\",\n        \"abrir_os\":true\n}",
+							"raw": "{\n        \"id_cliente_servico\":\"11000\",\n        \"descricao\":\"Abertura de atendimento de teste\",\n        \"nome\":\"Nome do Usuário Solicitante\",\n        \"telefone\":\"37999112233\",\n        \"email\":\"teste@teste.com.br\",\n        \"abrir_os\":true,\n        \"parametros\":{\n            \"parametro1\":\"Teste\",\n            \"parametro2\":\"Teste2\",\n            \"parametro3\":\"Teste3\"\n        }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -3600,37 +3600,37 @@
 	],
 	"variable": [
 		{
-			"id": "2784ec0b-1e9a-426c-8036-4fec0c632dfd",
+			"id": "9b912761-b9fe-42dc-b88e-b770d50743a1",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "30849b2b-9c28-49df-a94b-2c62c804ff6f",
+			"id": "62502b23-6f9f-4c19-8d17-5bf829b70cae",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "437caabf-248c-4c6e-a637-86e03d5188d2",
+			"id": "f838cebd-37fd-40c6-8d1c-50f322c0ee85",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "9765b091-0e04-421d-83aa-d4487251d6a0",
+			"id": "a15dfb66-a4e8-4cd2-9b99-8daceada3bd8",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "1d3f923f-2924-43e4-839e-6d78b3322938",
+			"id": "e44635a3-9f15-4dbe-8085-182cd9c08e49",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "ba67b931-6c20-4025-8116-00ccfc1a87f9",
+			"id": "4fe97fac-b336-4be5-9c79-940ae833b6e6",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "6f3dba73-9299-43c3-ae28-b921a0f77c8d",
+			"id": "f5796374-635d-4a9f-8ab8-b52e005cb4c9",
 			"key": "access_token",
 			"value": ""
 		}
