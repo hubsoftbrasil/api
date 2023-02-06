@@ -1411,7 +1411,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{url}}/api/v1/integracao/estoque/produto?pagina=0&itens_por_pagina=10&data_inicio=2000-01-01&data_fim=2023-12-31",
+									"raw": "{{url}}/api/v1/integracao/estoque/produto?pagina=0&itens_por_pagina=100&data_inicio=YYYY-MM-DD&data_fim=YYYY-MM-DD",
 									"host": [
 										"{{url}}"
 									],
@@ -1430,17 +1430,17 @@
 										},
 										{
 											"key": "itens_por_pagina",
-											"value": "10",
+											"value": "100",
 											"description": "(Opcional) Itens por Página. Se não preenchido será atributo 100 por padrão. Máximo: 500"
 										},
 										{
 											"key": "data_inicio",
-											"value": "2000-01-01",
+											"value": "YYYY-MM-DD",
 											"description": "(Opcional) Data de Cadastro Início da Consulta no formato YYYY-MM-DD"
 										},
 										{
 											"key": "data_fim",
-											"value": "2023-12-31",
+											"value": "YYYY-MM-DD",
 											"description": "(Opcional) Data de Cadastro Final da Consulta no formato YYYY-MM-DD"
 										}
 									]
@@ -6003,37 +6003,37 @@
 	],
 	"variable": [
 		{
-			"id": "1c6832d2-7b15-48b7-b49e-6f461425eb12",
+			"id": "d11438ca-f242-4fd8-a667-69ade3f3653a",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "3a8483c3-a060-459f-b1db-fff2fa8c8177",
+			"id": "11250129-abae-4b0d-856d-233ac4d141b4",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "3e7a5901-ed79-4dc7-9a61-aa729dfb927f",
+			"id": "e237f8d6-dd76-4d98-9ad7-9d5720b7d162",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "7b200183-281b-4baa-a758-2a233a46cd26",
+			"id": "47706bbd-d4cf-40c7-8ef4-c345626f2d78",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "cbe89a79-4e67-480b-b534-b510c570960b",
+			"id": "88441987-504b-4cb6-8fa5-286c2e9bf989",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "88d484c2-6139-41c6-887f-675e1ab1f6b0",
+			"id": "89326f12-9ba8-4748-afaf-adfa07ccd25d",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "fa33dc55-f5c5-4452-9436-3bc8a4c866e4",
+			"id": "14423e86-b929-4d73-a233-7b7c3ab3ba6c",
 			"key": "access_token",
 			"value": ""
 		}
