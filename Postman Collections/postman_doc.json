@@ -100,7 +100,7 @@
 							{
 								"key": "Authorization",
 								"value": "{{access_token}}",
-								"type": "text"
+								"description": "Bearer Token obtido na autenticação"
 							}
 						],
 						"url": {
@@ -218,7 +218,7 @@
 							{
 								"key": "Authorization",
 								"value": "{{access_token}}",
-								"type": "text"
+								"description": "Bearer Token obtido na autenticação"
 							}
 						],
 						"body": {
@@ -231,7 +231,7 @@
 							}
 						},
 						"url": "{{url}}/api/v1/integracao/atendimento",
-						"description": "**POST**\n\nNo método `POST`, será possível consultar os atendimentos em aberto/fechados dos clientes e obter o retorno no formato `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico | Identificador do serviço do cliente | Sim |\n| id_tipo_atendimento | Identificador do tipo de atendimento | Não |\n| descricao | Descrição detalhada do atendimento | Sim |\n| nome | Nome do solicitante | Sim |\n| telefone | Telefone do solicitante | Sim |\n| email | Email do solicitante | Não |\n| abrir_os | Indica se deve abrir Ordem de Serviço ou não | Não |\n| parametros | Parâmetros Dinâmicos. Array de dados. | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico | Número Inteiro | Nenhum |\n| id_tipo_atendimento | Número Inteiro | Nenhum |\n| descricao | Campo Livre (Qualquer valor é aceito) | Nenhum |\n| nome | Campo Livre (Qualquer valor é aceito) | Nenhum |\n| telefone | Telefone no formato (DDNNNNNNNNN). | Nenhum |\n| email | Caso enviado deve ser no formato e-mail (EX: [user@dominio.com](mailto:user@dominio.com)) | Nenhum |\n| abrir_os | Caso enviado, deve conter um valor boolean (true | false |\n| parametros | Nos parâmetros dinâmicos podem ser enviados qualquer informação. |  |\n\n**Observação: Se o parâmetro id_tipo_atendimento não for enviado, o atendimento será aberto com o tipo padrão SAC.**\n\nObservação 2: Veja que na abertura do atendimento existe a possibilidade de enviar parâmetros dinâmicos. Esses parâmetros todos serão armazendos juntamente com o atendimento . Por exemplo se a sua plataforma for um sistema Omnichannel (PBX, WhatsApp, Messenger, etc), você pode armazar o ID da Conversa/Chamada, Data de Início, Data de Término, Atendimento, etc. Quanto mais informações você envia para o HubSoft, mais completo ficará a visualização do atendimento."
+						"description": "**POST**\n\nNo método `POST`, será possível adicionar os atendimentos em aberto/fechados dos clientes e obter o retorno no formato `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico | Identificador do serviço do cliente | Sim |\n| id_tipo_atendimento | Identificador do tipo de atendimento | Não |\n| descricao | Descrição detalhada do atendimento | Sim |\n| nome | Nome do solicitante | Sim |\n| telefone | Telefone do solicitante | Sim |\n| email | Email do solicitante | Não |\n| abrir_os | Indica se deve abrir Ordem de Serviço ou não | Não |\n| parametros | Parâmetros Dinâmicos. Array de dados. | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico | Número Inteiro | Nenhum |\n| id_tipo_atendimento | Número Inteiro | Nenhum |\n| descricao | Campo Livre (Qualquer valor é aceito) | Nenhum |\n| nome | Campo Livre (Qualquer valor é aceito) | Nenhum |\n| telefone | Telefone no formato (DDNNNNNNNNN). | Nenhum |\n| email | Caso enviado deve ser no formato e-mail (EX: [user@dominio.com](mailto:user@dominio.com)) | Nenhum |\n| abrir_os | Caso enviado, deve conter um valor boolean (true | false |\n| parametros | Nos parâmetros dinâmicos podem ser enviados qualquer informação. |  |\n\n**Observação: Se o parâmetro id_tipo_atendimento não for enviado, o atendimento será aberto com o tipo padrão SAC.**\n\nObservação 2: Veja que na abertura do atendimento existe a possibilidade de enviar parâmetros dinâmicos. Esses parâmetros todos serão armazendos juntamente com o atendimento . Por exemplo se a sua plataforma for um sistema Omnichannel (PBX, WhatsApp, Messenger, etc), você pode armazar o ID da Conversa/Chamada, Data de Início, Data de Término, Atendimento, etc. Quanto mais informações você envia para o HubSoft, mais completo ficará a visualização do atendimento."
 					},
 					"response": [
 						{
@@ -286,8 +286,7 @@
 							{
 								"key": "Authorization",
 								"value": "{{access_token}}",
-								"description": "Token Obtido na etapa de Autenticação",
-								"type": "text"
+								"description": "Bearer Token obtido na autenticação"
 							}
 						],
 						"body": {
@@ -395,7 +394,7 @@
 									{
 										"key": "Authorization",
 										"value": "{{access_token}}",
-										"type": "text"
+										"description": "Bearer Token obtido na autenticação"
 									}
 								],
 								"url": "{{url}}/api/v1/integracao/cliente/atendimento",
@@ -442,7 +441,7 @@
 									{
 										"key": "Authorization",
 										"value": "{{access_token}}",
-										"type": "text"
+										"description": "Bearer Token obtido na autenticação"
 									}
 								],
 								"url": "{{url}}/api/v1/integracao/cliente/financeiro",
@@ -476,7 +475,7 @@
 									{
 										"key": "Authorization",
 										"value": "{{access_token}}",
-										"type": "text"
+										"description": "Bearer Token obtido na autenticação"
 									}
 								],
 								"body": {
@@ -536,7 +535,7 @@
 									{
 										"key": "Authorization",
 										"value": "{{access_token}}",
-										"type": "text"
+										"description": "Bearer Token obtido na autenticação"
 									}
 								],
 								"body": {
@@ -601,7 +600,7 @@
 									{
 										"key": "Authorization",
 										"value": "{{access_token}}",
-										"type": "text"
+										"description": "Bearer Token obtido na autenticação"
 									}
 								],
 								"body": {
@@ -672,7 +671,7 @@
 									{
 										"key": "Authorization",
 										"value": "{{access_token}}",
-										"type": "text"
+										"description": "Bearer Token obtido na autenticação"
 									}
 								],
 								"url": "{{url}}/api/v1/integracao/cliente/nota_fiscal",
@@ -706,7 +705,7 @@
 									{
 										"key": "Authorization",
 										"value": "{{access_token}}",
-										"type": "text"
+										"description": "Bearer Token obtido na autenticação"
 									}
 								],
 								"body": {
@@ -777,7 +776,7 @@
 									{
 										"key": "Authorization",
 										"value": "{{access_token}}",
-										"type": "text"
+										"description": "Bearer Token obtido na autenticação"
 									}
 								],
 								"url": "{{url}}/api/v1/integracao/cliente/ordem_servico",
@@ -817,7 +816,7 @@
 									{
 										"key": "Authorization",
 										"value": "{{access_token}}",
-										"type": "text"
+										"description": "Bearer Token obtido na autenticação"
 									}
 								],
 								"body": {
@@ -877,7 +876,7 @@
 									{
 										"key": "Authorization",
 										"value": "{{access_token}}",
-										"type": "text"
+										"description": "Bearer Token obtido na autenticação"
 									}
 								],
 								"body": {
@@ -942,7 +941,7 @@
 									{
 										"key": "Authorization",
 										"value": "{{access_token}}",
-										"type": "text"
+										"description": "Bearer Token obtido na autenticação"
 									}
 								],
 								"body": {
@@ -1007,7 +1006,7 @@
 									{
 										"key": "Authorization",
 										"value": "{{access_token}}",
-										"type": "text"
+										"description": "Bearer Token obtido na autenticação"
 									}
 								],
 								"url": "{{url}}/api/v1/integracao/cliente/solicitar_desconexao/<id_cliente_servico>",
@@ -1061,7 +1060,7 @@
 									{
 										"key": "Authorization",
 										"value": "{{access_token}}",
-										"type": "text"
+										"description": "Bearer Token obtido na autenticação"
 									}
 								],
 								"url": "{{url}}/api/v1/integracao/cliente/extrato_conexao",
@@ -1095,7 +1094,7 @@
 									{
 										"key": "Authorization",
 										"value": "{{access_token}}",
-										"type": "text"
+										"description": "Bearer Token obtido na autenticação"
 									}
 								],
 								"body": {
@@ -1152,149 +1151,6 @@
 					"id": "1ba90c81-93bd-40a5-a287-32d405268325"
 				},
 				{
-					"name": "All (Descontinuado)",
-					"id": "f0068073-f3d6-489c-9aa7-40451b85e97b",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "{{access_token}}",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "{{url}}/api/v1/integracao/cliente/all?data_inicio&data_fim&cancelado&ultima_conexao&codigo_pacote&relacoes&limit&offset&order_by&order_type",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"api",
-								"v1",
-								"integracao",
-								"cliente",
-								"all"
-							],
-							"query": [
-								{
-									"key": "data_inicio",
-									"value": null,
-									"description": "(opcional) Valor no formato DateTime (YYYY-MM-DD)"
-								},
-								{
-									"key": "data_fim",
-									"value": null,
-									"description": "(opcional)  Valor no formato DateTime (YYYY-MM-DD) Obs: Maior ou igual data_inicio"
-								},
-								{
-									"key": "cancelado",
-									"value": null,
-									"description": "(opcional) sim,nao"
-								},
-								{
-									"key": "ultima_conexao",
-									"value": null,
-									"description": "(opcional) sim,nao"
-								},
-								{
-									"key": "codigo_pacote",
-									"value": null,
-									"description": "(opcional) Valor no formato string"
-								},
-								{
-									"key": "relacoes",
-									"value": null,
-									"description": "(opcional) endereco_instalacao,endereco_cadastral,endereco_cobranca,endereco_fiscal,pacotes,interface,interface_roteamento,equipamento_conexao,equipamento_roteamento,grupos,porta_atendimento,senhas,status_conexao"
-								},
-								{
-									"key": "limit",
-									"value": null,
-									"description": "(opcional) Número Inteiro maior que 0"
-								},
-								{
-									"key": "offset",
-									"value": null,
-									"description": "(opcional) Número Inteiro maior que 0"
-								},
-								{
-									"key": "order_by",
-									"value": null,
-									"description": "(opcional) data_cadastro,data_fechamento"
-								},
-								{
-									"key": "order_type",
-									"value": null,
-									"description": "(opcional) asc,desc"
-								}
-							]
-						},
-						"description": "### **Esse endpoint foi descontinuado. A partir de 01/01/2023 não retornará mais respostas. Utilize o endpoint \"Todos\" para realizar a consulta de todos os clientes.**\n\nNo método `GET`, irá consultar os dados dos clientes e retornar um `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| **Atributo** | **Descrição** | **Obrigatório** |\n| --- | --- | --- |\n| data_inicio | Data de Cadastro Inicial | Não |\n| data_fim | Data de Cadastro Final | Não |\n| cancelado | Retornar serviços cancelados | Não |\n| ultima_conexao | Informa se deseja trazer os dados da última conexão | Não |\n| codigo_pacote | Retorna apenas os clientes que contém pacotes com o código especificado | Não |\n| relacoes | Carrega apenas os relacionamentos especificados | Não |\n| limit | Limite de resultados | Não |\n| offset | Deslocamento em relação ao limite de dados | Não |\n| order_by | Campo que será utilizado para ordenação | Não |\n| order_type | Tipo de Ordenação | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| **Atributo** | **Descrição** | **Valor Default** |\n| --- | --- | --- |\n| data_inicio | Valor no formato DateTime (YYYY-MM-DD) | Nenhum |\n| data_fim | Valor no formato DateTime (YYYY-MM-DD) Obs: Maior ou igual data_inicio | Nenhum |\n| cancelado | sim,nao | nao |\n| ultima_conexao | sim,nao | nao |\n| codigo_pacote | Valor no formato string | Nenhum |\n| relacoes | endereco_instalacao, endereco_cadastral, endereco_cobranca, endereco_fiscal, pacotes, interface, interface_roteamento, equipamento_conexao, equipamento_roteamento, grupos, porta_atendimento, senhas, status_conexao | Nenhum |\n| limit | Número Inteiro maior que 0 | Nenhum |\n| offset | Número Inteiro maior que 0 | Nenhum |\n| order_by | data_cadastro,data_fechamento | data_cadastro |\n| order_type | asc,desc | asc |\n\n**IMPORTANTE:** Por se tratar de uma requisição que poderá trazer uma quantidade muito grande dados, o sistema irá armazenar o resultado da requisição em um Cache. Portanto, em chamadas consecutivas em curtos intervalos de tempo dessa rota, o sistema irá retornar o mesmo resultado. Recomendamos o uso dessa API poucas vezes ao dia (EX: 1 vez de madrugada e outra na parte da tarde por exemplo). Chamadas consecutivas nessa API pode parar seu sistema."
-					},
-					"response": [
-						{
-							"id": "ada54e1a-4851-4f18-8d26-3c0fc045ddeb",
-							"name": "Sucesso",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "{{access_token}}",
-										"type": "text"
-									}
-								],
-								"url": "{{url}}/api/v1/integracao/cliente/all"
-							},
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Dados consultados com sucesso\",\n    \"clientes\": [\n        {\n            \"id_cliente\": 11201,\n            \"codigo_cliente\": 421,\n            \"nome_razaosocial\": \"GUILHERME SILVA\",\n            \"nome_fantasia\": null,\n            \"tipo_pessoa\": \"pf\",\n            \"cpf_cnpj\": \"10682083681\",\n            \"telefone_primario\": \"37988242968\",\n            \"telefone_secundario\": \"37988242968\",\n            \"telefone_terciario\": \"\",\n            \"email_principal\": \"guilherme@silva.com.br\",\n            \"email_secundario\": null,\n            \"rg\": \"MG16999888\",\n            \"rg_emissao\": null,\n            \"inscricao_municipal\": null,\n            \"inscricao_estadual\": null,\n            \"data_cadastro\": \"2017-08-05 00:00:00\",\n            \"data_nascmento\": \"1969-12-31 04:00:00\",\n            \"servicos\": [\n                {\n                    \"id_cliente_servico\": 11201,\n                    \"id_servico\": 100,\n                    \"numero_plano\": 1,\n                    \"nome\": \"4M\",\n                    \"valor\": 119.9,\n                    \"status\": \"Serviço Habilitado\",\n                    \"status_prefixo\": \"servico_habilitado\",\n                    \"tecnologia\": \"WIRELESS\",\n                    \"login\": \"guilhermesilva1068\",\n                    \"senha\": \"123\",\n                    \"ipv4\": \"10.99.2.203\",\n                    \"ipv6\": null,\n                    \"interface\": {\n                        \"nome\": \"PON5\",\n                        \"tipo\": \"gpon\",\n                        \"called_sid\": null\n                    },\n                    \"interface_roteamento\": {\n                        \"nome\": \"ether8\",\n                        \"tipo\": \"ethernet\",\n                        \"called_sid\": null\n                    },\n                    \"equipamento_conexao\": {\n                        \"nome\": \"OLT XPTO\",\n                        \"ipv4\": \"192.168.2.100\",\n                        \"ipv6\": null\n                    },\n                    \"equipamento_roteamento\": {\n                        \"nome\": \"CONCENTRADOR XPTO\",\n                        \"ipv4\": \"172.17.24.98\",\n                        \"ipv6\": null\n                    },\n                    \"pacotes\": [\n                        {\n                            \"id_pacote\": 1,\n                            \"codigo\": \"meu_codigo_personalizado_1\",\n                            \"descricao\": \"IP FIXO\",\n                            \"valor\": \"20\",\n                            \"observacoes\": \"IP FIXO 189.79.21.21\",\n                            \"data_cadastro\": \"2019-11-21 16:43:56\"\n                        },\n                        {\n                            \"id_pacote\": 2,\n                            \"codigo\": \"meu_codigo_personalizado_2\",\n                            \"descricao\": \"TV\",\n                            \"valor\": \"20\",\n                            \"observacoes\": \"ASSINATURA DE TV\",\n                            \"data_cadastro\": \"2019-11-20 16:43:56\"\n                        }\n                    ],\n                    \"senhas\": [\n                        {\n                            \"id_cliente_servico_senha\": 6,\n                            \"descricao\": \"Teste\",\n                            \"usuario\": \"xpto123\",\n                            \"senha\": \"abc123\"\n                        }\n                    ],\n                    \"endereco_cadastral\": {\n                        \"completo\": \"RUA DONA MARIA DAS DORES, 541 - NOSSA SENHORA DAS GRACAS, DIVINóPOLIS/MG - IGREJA\",\n                        \"logradouro\": \"RUA\",\n                        \"endereco\": \"DONA MARIA DAS DORES\",\n                        \"numero\": \"541\",\n                        \"complemento\": \"IGREJA\",\n                        \"bairro\": \"NOSSA SENHORA DAS GRACAS\",\n                        \"cep\": \"35501-048\",\n                        \"estado\": \"MG\",\n                        \"uf\": \"MINAS GERAIS\",\n                        \"cidade\": \"Divinópolis\",\n                        \"coordenadas\": {\n                            \"latitude\": null,\n                            \"longitude\": null\n                        }\n                    },\n                    \"endereco_instalacao\": {\n                        \"completo\": \"RUA MINAS GERAIS, 1793 - IPIRANGA, DIVINÓPOLIS/MG\",\n                        \"logradouro\": \"RUA\",\n                        \"endereco\": \"MINAS GERAIS\",\n                        \"numero\": \"1793\",\n                        \"complemento\": \"\",\n                        \"bairro\": \"IPIRANGA\",\n                        \"cep\": \"35502-026\",\n                        \"estado\": \"MG\",\n                        \"uf\": \"MINAS GERAIS\",\n                        \"cidade\": \"Divinópolis\",\n                        \"coordenadas\": {\n                            \"latitude\": -20.086592,\n                            \"longitude\": -45.290962\n                        }\n                    },\n                    \"endereco_fiscal\": {\n                        \"completo\": \"RUA GOIAS, 86 - PORTO VELHO, DIVINÓPOLIS/MG - APTO 101\",\n                        \"logradouro\": \"RUA\",\n                        \"endereco\": \"GOIAS\",\n                        \"numero\": \"86\",\n                        \"complemento\": \"APTO 101\",\n                        \"bairro\": \"PORTO VELHO\",\n                        \"cep\": \"35500-000\",\n                        \"estado\": \"MG\",\n                        \"uf\": \"MINAS GERAIS\",\n                        \"cidade\": \"Divinópolis\",\n                        \"coordenadas\": {\n                            \"latitude\": null,\n                            \"longitude\": null\n                        }\n                    },\n                    \"endereco_cobranca\": {\n                        \"completo\": \"RUA SEBASTIAO PARDINI, 58 - CENTRO, DIVINÓPOLIS/MG - 202\",\n                        \"logradouro\": \"RUA\",\n                        \"endereco\": \"SEBASTIAO PARDINI\",\n                        \"numero\": \"58\",\n                        \"complemento\": \"202\",\n                        \"bairro\": \"CENTRO\",\n                        \"cep\": \"35500-000\",\n                        \"estado\": \"MG\",\n                        \"uf\": \"MINAS GERAIS\",\n                        \"cidade\": \"Divinópolis\",\n                        \"coordenadas\": {\n                            \"latitude\": null,\n                            \"longitude\": null\n                        }\n                    }\n                }\n            ]\n        },\n        {\n            \"id_cliente\": 11202,\n            \"codigo_cliente\": 422,\n            \"nome_razaosocial\": \"GUILHERME COSTA\",\n            \"nome_fantasia\": null,\n            \"tipo_pessoa\": \"pf\",\n            \"cpf_cnpj\": \"05333614622\",\n            \"telefone_primario\": \"37999450812\",\n            \"telefone_secundario\": \"37999452812\",\n            \"telefone_terciario\": \"\",\n            \"email_principal\": null,\n            \"email_secundario\": null,\n            \"rg\": \"MG11298180\",\n            \"rg_emissao\": null,\n            \"inscricao_municipal\": null,\n            \"inscricao_estadual\": null,\n            \"data_cadastro\": \"2017-04-26 00:00:00\",\n            \"data_nascmento\": \"1969-12-31 00:00:00\",\n            \"servicos\": [\n                {\n                    \"id_cliente_servico\": 11302,\n                    \"id_servico\": 1023,\n                    \"numero_plano\": 2,\n                    \"nome\": \"24M\",\n                    \"valor\": 119.9,\n                    \"status\": \"Serviço Habilitado\",\n                    \"status_prefixo\": \"servico_habilitado\",\n                    \"tecnologia\": \"FIBRA\",\n                    \"login\": \"guilhermesouza0533\",\n                    \"senha\": \"123\",\n                    \"ipv4\": \"10.99.1.118\",\n                    \"ipv6\": null,\n                    \"interface\": {\n                        \"nome\": \"PON5\",\n                        \"tipo\": \"gpon\",\n                        \"called_sid\": null\n                    },\n                    \"interface_roteamento\": {\n                        \"nome\": \"ether8\",\n                        \"tipo\": \"ethernet\",\n                        \"called_sid\": null\n                    },\n                    \"equipamento_conexao\": {\n                        \"nome\": \"OLT XPTO\",\n                        \"ipv4\": \"192.168.2.100\",\n                        \"ipv6\": null\n                    },\n                    \"equipamento_roteamento\": {\n                        \"nome\": \"CONCENTRADOR XPTO\",\n                        \"ipv4\": \"172.17.24.98\",\n                        \"ipv6\": null\n                    },\n                    \"pacotes\": [],\n                    \"senhas\": [],\n                    \"endereco_cadastral\": {\n                        \"completo\": \"RUA GERALDO RODRIGUES DA COSTA, 5 - CENTRO, SANTO ANTôNIO DO MONTE/MG\",\n                        \"logradouro\": \"RUA\",\n                        \"endereco\": \"GERALDO RODRIGUES DA COSTA\",\n                        \"numero\": \"5\",\n                        \"complemento\": \"\",\n                        \"bairro\": \"CENTRO\",\n                        \"cep\": \"35560000\",\n                        \"estado\": \"MG\",\n                        \"uf\": \"MINAS GERAIS\",\n                        \"cidade\": \"Santo Antônio do Monte\",\n                        \"coordenadas\": {\n                            \"latitude\": null,\n                            \"longitude\": null\n                        }\n                    },\n                    \"endereco_instalacao\": {\n                        \"completo\": \"RUA JOÃO J FERNANDES, 900 - BARRETOS, NOVA SERRANA/MG - AREA RURAL\",\n                        \"logradouro\": \"RUA\",\n                        \"endereco\": \"JOÃO J FERNANDES\",\n                        \"numero\": \"900\",\n                        \"complemento\": \"AREA RURAL\",\n                        \"bairro\": \"BARRETOS\",\n                        \"cep\": \"35519-000\",\n                        \"estado\": \"MG\",\n                        \"uf\": \"MINAS GERAIS\",\n                        \"cidade\": \"Nova Serrana\",\n                        \"coordenadas\": {\n                            \"latitude\": -19.8562717,\n                            \"longitude\": -45.0105913\n                        }\n                    },\n                    \"endereco_fiscal\": {\n                        \"completo\": \"RUA RITA DOS SANTOS MESQUITA, 233 - SANTO AGOSTINHO, PERDIGãO/MG\",\n                        \"logradouro\": \"RUA\",\n                        \"endereco\": \"RITA DOS SANTOS MESQUITA\",\n                        \"numero\": \"233\",\n                        \"complemento\": \"\",\n                        \"bairro\": \"SANTO AGOSTINHO\",\n                        \"cep\": \"35545-000\",\n                        \"estado\": \"MG\",\n                        \"uf\": \"MINAS GERAIS\",\n                        \"cidade\": \"Perdigão\",\n                        \"coordenadas\": {\n                            \"latitude\": null,\n                            \"longitude\": null\n                        }\n                    },\n                    \"endereco_cobranca\": {\n                        \"completo\": \"RUA DOIS, 221 - BARRETINHOS, NOVA SERRANA/MG - AREA RURAL\",\n                        \"logradouro\": \"RUA\",\n                        \"endereco\": \"DOIS\",\n                        \"numero\": \"221\",\n                        \"complemento\": \"AREA RURAL\",\n                        \"bairro\": \"BARRETINHOS\",\n                        \"cep\": \"35519-000\",\n                        \"estado\": \"MG\",\n                        \"uf\": \"MINAS GERAIS\",\n                        \"cidade\": \"Nova Serrana\",\n                        \"coordenadas\": {\n                            \"latitude\": null,\n                            \"longitude\": null\n                        }\n                    }\n                }\n            ]\n        }\n    ]\n}"
-						},
-						{
-							"id": "01ea2d3b-2c6e-42f6-9c26-45068a289dbd",
-							"name": "Sucesso - Consulta com Relações",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "{{access_token}}",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{url}}/api/v1/integracao/cliente/all?relacoes=pacotes,senhas",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"api",
-										"v1",
-										"integracao",
-										"cliente",
-										"all"
-									],
-									"query": [
-										{
-											"key": "relacoes",
-											"value": "pacotes,senhas"
-										}
-									]
-								}
-							},
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\n    \"status\":\"success\",\n    \"msg\":\"Dados consultados com sucesso\",\n    \"clientes\":[\n        {\n            \"id_cliente\":11201,\n            \"codigo_cliente\":421,\n            \"nome_razaosocial\":\"GUILHERME SILVA\",\n            \"nome_fantasia\":null,\n            \"tipo_pessoa\":\"pf\",\n            \"cpf_cnpj\":\"10682083681\",\n            \"telefone_primario\":\"37988242968\",\n            \"telefone_secundario\":\"37988242968\",\n            \"telefone_terciario\":\"\",\n            \"email_principal\":\"guilherme@silva.com.br\",\n            \"email_secundario\":null,\n            \"rg\":\"MG16999888\",\n            \"rg_emissao\":null,\n            \"inscricao_municipal\":null,\n            \"inscricao_estadual\":null,\n            \"data_cadastro\":\"2017-08-05 00:00:00\",\n            \"data_nascmento\":\"1969-12-31 04:00:00\",\n            \"servicos\":[\n                {\n                    \"id_cliente_servico\":11201,\n                    \"id_servico\":100,\n                    \"numero_plano\":1,\n                    \"nome\":\"4M\",\n                    \"valor\":119.9,\n                    \"status\":\"Serviço Habilitado\",\n                    \"status_prefixo\":\"servico_habilitado\",\n                    \"tecnologia\":\"WIRELESS\",\n                    \"login\":\"guilhermesilva1068\",\n                    \"senha\":\"123\",\n                    \"ipv4\":\"10.99.2.203\",\n                    \"ipv6\":null,\n                    \"pacotes\":[\n                           {\n                            \"id_pacote\": 1,\n                            \"codigo\":\"meu_codigo_personalizado_1\",\n                            \"descricao\": \"IP FIXO\",\n                            \"valor\": \"20\",\n                            \"observacoes\": \"IP FIXO 189.79.21.21\",\n                            \"data_cadastro\": \"2019-11-21 16:43:56\"\n                        },\n                        {\n                            \"id_pacote\": 2,\n                            \"codigo\":\"meu_codigo_personalizado_2\",\n                            \"descricao\": \"TV\",\n                            \"valor\": \"20\",\n                            \"observacoes\": \"ASSINATURA DE TV\",\n                            \"data_cadastro\": \"2019-11-20 16:43:56\"\n                        }\n                    ],\n                    \"senhas\": [\n                        {\n                            \"id_cliente_servico_senha\": 6,\n                            \"descricao\": \"Teste\",\n                            \"usuario\": \"xpto123\",\n                            \"senha\": \"abc123\"\n                        }\n                    ]\n                }\n            ]\n        }\n    ]\n}"
-						}
-					]
-				},
-				{
 					"name": "Todos",
 					"id": "e28752c0-ad8a-4296-83c6-1eb7c2f51363",
 					"protocolProfileBehavior": {
@@ -1306,7 +1162,7 @@
 							{
 								"key": "Authorization",
 								"value": "{{access_token}}",
-								"type": "text"
+								"description": "Bearer Token obtido na autenticação"
 							}
 						],
 						"url": {
@@ -1334,32 +1190,32 @@
 								},
 								{
 									"key": "data_inicio",
-									"value": null,
+									"value": "",
 									"description": "(opcional) Valor no formato Date (YYYY-MM-DD). Obs: Menor ou igual a data fim"
 								},
 								{
 									"key": "data_fim",
-									"value": null,
+									"value": "",
 									"description": "(opcional) Valor no formato Date (YYYY-MM-DD) Obs: Maior ou igual data_inicio"
 								},
 								{
 									"key": "cancelado",
-									"value": null,
+									"value": "",
 									"description": "(opcional) Indicar se deseja ou não trazer clientes cancelados. Valor aceitos: sim,nao"
 								},
 								{
 									"key": "possui_pacote",
-									"value": null,
+									"value": "",
 									"description": "(opcional) Indica se deseja trazer apenas clientes que possuem ou não pacotes. Valores aceitos: sim,nao"
 								},
 								{
 									"key": "codigo_pacote",
-									"value": null,
+									"value": "",
 									"description": "(opcional) Irá trazer somentes os clientes que possuirem pacotes com esse código"
 								},
 								{
 									"key": "relacoes",
-									"value": null,
+									"value": "",
 									"description": "(opcional) endereco_instalacao,endereco_cadastral,endereco_cobranca,endereco_fiscal,pacotes,interface,interface_roteamento,equipamento_conexao,equipamento_roteamento,grupos,porta_atendimento,senhas,status_conexao"
 								}
 							]
@@ -1401,7 +1257,7 @@
 							{
 								"key": "Authorization",
 								"value": "{{access_token}}",
-								"type": "text"
+								"description": "Bearer Token obtido na autenticação"
 							}
 						],
 						"url": {
@@ -1506,7 +1362,7 @@
 							{
 								"key": "Authorization",
 								"value": "{{access_token}}",
-								"type": "text"
+								"description": "Bearer Token obtido na autenticação"
 							}
 						],
 						"url": "{{url}}/api/v1/integracao/crm/all",
@@ -1534,6 +1390,2577 @@
 			"description": "**Necessário**\n\nPara fazer requisições nos dados de `CRM`, é necessário que você já possua o `access_token`, conseguido na etapa `(oAuth)`.\n\nOBS: Essa rota irá retornar todos os dados de `CRM.`"
 		},
 		{
+			"name": "Estoque",
+			"item": [
+				{
+					"name": "Produto",
+					"item": [
+						{
+							"name": "Listar",
+							"id": "2156d55a-4fff-4ce8-bade-713537c4b904",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"description": "Bearer Token obtido na autenticação"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/v1/integracao/estoque/produto?pagina=0&itens_por_pagina=10&data_inicio=2000-01-01&data_fim=2023-12-31",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"integracao",
+										"estoque",
+										"produto"
+									],
+									"query": [
+										{
+											"key": "pagina",
+											"value": "0",
+											"description": "(Obrigatório) Número da Página"
+										},
+										{
+											"key": "itens_por_pagina",
+											"value": "10",
+											"description": "(Opcional) Itens por Página. Se não preenchido será atributo 100 por padrão. Máximo: 500"
+										},
+										{
+											"key": "data_inicio",
+											"value": "2000-01-01",
+											"description": "(Opcional) Data de Cadastro Início da Consulta no formato YYYY-MM-DD"
+										},
+										{
+											"key": "data_fim",
+											"value": "2023-12-31",
+											"description": "(Opcional) Data de Cadastro Final da Consulta no formato YYYY-MM-DD"
+										}
+									]
+								},
+								"description": "**GET**\n\nNo método `GET`, irá consultar/listar os dados de produtos e retornar um `JSON` como resposta. Os dados serão retornados de forma paginada, portanto fique atento ao conjunto da dados \"paginacao\" que é retornado na resposta, para saber se será necessário consultar outras páginas ou não.\n\nOs seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| pagina | Página a ser exibida | Sim |\n| itens_por_pagina | Itens por Página a serem exibidos. Mínimo: 1, Máximo: 500. | Não |\n| data_inicio | Data de início da filtragem de dados | Não |\n| data_fim | Data final da filtragem de dados | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| pagina | Campo Inteiro (integer) | `NULL` |\n| itens_por_pagina | Campo Inteiro (integer) | 100 |\n| data_inicio | Campo no formato Date (YYYY-MM-DD) | `NULL` |\n| data_fim | Campo no formato Date (YYYY-MM-DD) | `NULL` |\n| apenas_quitado | sim,nao | nao |"
+							},
+							"response": [
+								{
+									"id": "45964184-1e10-4b6a-99dc-e65bba450046",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Bearer Token obtido na autenticação"
+											}
+										],
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/estoque/produto?pagina=0&itens_por_pagina=10&data_inicio=2000-01-01&data_fim=2023-12-31",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"estoque",
+												"produto"
+											],
+											"query": [
+												{
+													"key": "pagina",
+													"value": "0",
+													"description": "(Obrigatório) Número da Página"
+												},
+												{
+													"key": "itens_por_pagina",
+													"value": "10",
+													"description": "(Opcional) Itens por Página. Se não preenchido será atributo 100 por padrão. Máximo: 500"
+												},
+												{
+													"key": "data_inicio",
+													"value": "2000-01-01",
+													"description": "(Opcional) Data de Cadastro Início da Consulta no formato YYYY-MM-DD"
+												},
+												{
+													"key": "data_fim",
+													"value": "2023-12-31",
+													"description": "(Opcional) Data de Cadastro Final da Consulta no formato YYYY-MM-DD"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 06 Feb 2023 12:43:41 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 13:43:41 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Dados consultados com sucesso\",\n    \"paginacao\": {\n        \"primeira_pagina\": 0,\n        \"ultima_pagina\": 43,\n        \"pagina_atual\": 0,\n        \"total_registros\": 440\n    },\n    \"produtos\": [\n        {\n            \"id_produto\": 1,\n            \"nome\": \"Airgrid\",\n            \"descricao\": \"teste\",\n            \"valor_compra\": 280,\n            \"valor_venda\": 400,\n            \"codigo_ean\": null,\n            \"codigo_ean_trib\": null,\n            \"data_cadastro\": \"2017-09-22 11:54:45\",\n            \"ncm\": {\n                \"id_ncm\": 8834,\n                \"codigo\": \"85176249\",\n                \"descricao\": \"OUTROS ROTEADORES DIGITAIS\"\n            },\n            \"cst_origem\": null,\n            \"cst_tributacao\": null,\n            \"csosn\": null,\n            \"cest\": null,\n            \"unidade_medida\": {\n                \"id_unidade_medida\": 19,\n                \"nome\": \"Unidade\",\n                \"abreviacao\": \"UN\"\n            }\n        },\n        {\n            \"id_produto\": 38,\n            \"nome\": \"MINE RACK PARA SERVIDOR\",\n            \"descricao\": \"RACK\",\n            \"valor_compra\": 4969.5,\n            \"valor_venda\": 4969.5,\n            \"codigo_ean\": \"7896637665919\",\n            \"codigo_ean_trib\": \"7896637665919\",\n            \"data_cadastro\": \"2018-02-28 08:44:28\",\n            \"ncm\": {\n                \"id_ncm\": 8822,\n                \"codigo\": \"85176219\",\n                \"descricao\": \"OUTROS CONCENTRADORES\"\n            },\n            \"cst_origem\": null,\n            \"cst_tributacao\": null,\n            \"csosn\": null,\n            \"cest\": {\n                \"id_cest\": 2112,\n                \"codigo\": \"2108000\",\n                \"descricao\": \"Multiplexadores e concentradores\"\n            },\n            \"unidade_medida\": {\n                \"id_unidade_medida\": 12,\n                \"nome\": \"Peça\",\n                \"abreviacao\": \"PÇ\"\n            }\n        },\n        {\n            \"id_produto\": 39,\n            \"nome\": \"ONU OVERTEK\",\n            \"descricao\": null,\n            \"valor_compra\": 120,\n            \"valor_venda\": 165.9,\n            \"codigo_ean\": \"7896637668149\",\n            \"codigo_ean_trib\": \"7896637668149\",\n            \"data_cadastro\": \"2018-02-28 08:44:28\",\n            \"ncm\": {\n                \"id_ncm\": 8853,\n                \"codigo\": \"85176294\",\n                \"descricao\": \"TRADUT.D/PROTOCOLOS P/INTERCONEXÃO D/REDES\"\n            },\n            \"cst_origem\": null,\n            \"cst_tributacao\": null,\n            \"csosn\": null,\n            \"cest\": {\n                \"id_cest\": 2117,\n                \"codigo\": \"2108500\",\n                \"descricao\": \"Outros aparelhos de recepção, conversão e transmissão ou regeneração de voz, imagens ou outros dados, incluindo os aparelhos de comutação e roteamento\"\n            },\n            \"unidade_medida\": {\n                \"id_unidade_medida\": 12,\n                \"nome\": \"Peça\",\n                \"abreviacao\": \"PÇ\"\n            }\n        },\n        {\n            \"id_produto\": 59,\n            \"nome\": \"CABO OPTICO CFOA-SM-ASU-80-RA-012-NR\",\n            \"descricao\": null,\n            \"valor_compra\": 1.56,\n            \"valor_venda\": 1.56,\n            \"codigo_ean\": null,\n            \"codigo_ean_trib\": null,\n            \"data_cadastro\": \"2018-03-10 00:42:42\",\n            \"ncm\": {\n                \"id_ncm\": 9210,\n                \"codigo\": \"85447010\",\n                \"descricao\": \"CABOS FIBRA ÓPTICA REVEST.EXT.MAT.DIELÉTRICO\"\n            },\n            \"cst_origem\": null,\n            \"cst_tributacao\": null,\n            \"csosn\": null,\n            \"cest\": null,\n            \"unidade_medida\": {\n                \"id_unidade_medida\": 11,\n                \"nome\": \"Metro\",\n                \"abreviacao\": \"m\"\n            }\n        },\n        {\n            \"id_produto\": 110,\n            \"nome\": \"Antena LUCAS\",\n            \"descricao\": null,\n            \"valor_compra\": 65,\n            \"valor_venda\": 150,\n            \"codigo_ean\": null,\n            \"codigo_ean_trib\": null,\n            \"data_cadastro\": \"2018-07-03 15:58:12\",\n            \"ncm\": null,\n            \"cst_origem\": null,\n            \"cst_tributacao\": null,\n            \"csosn\": null,\n            \"cest\": null,\n            \"unidade_medida\": {\n                \"id_unidade_medida\": 19,\n                \"nome\": \"Unidade\",\n                \"abreviacao\": \"UN\"\n            }\n        },\n        {\n            \"id_produto\": 130,\n            \"nome\": \"APAR.TRANSCEPTOR P/FIBRA\",\n            \"descricao\": null,\n            \"valor_compra\": 435.28,\n            \"valor_venda\": 435.28,\n            \"codigo_ean\": \"SEM GTIN\",\n            \"codigo_ean_trib\": \"SEM GTIN\",\n            \"data_cadastro\": \"2018-08-01 15:22:18\",\n            \"ncm\": {\n                \"id_ncm\": 8840,\n                \"codigo\": \"85176259\",\n                \"descricao\": \"OUTS.EQUIPAMENTOS TERMINAIS OU REPETIDORES\"\n            },\n            \"cst_origem\": null,\n            \"cst_tributacao\": null,\n            \"csosn\": null,\n            \"cest\": {\n                \"id_cest\": 2083,\n                \"codigo\": \"2105600\",\n                \"descricao\": \"Aparelhos para transmissão ou recepção de voz, imagem ou outros dados em rede com fio, exceto os classificados nos códigos 8517.62.51, 8517.62.52 e 8517.62.53\"\n            },\n            \"unidade_medida\": {\n                \"id_unidade_medida\": 19,\n                \"nome\": \"Unidade\",\n                \"abreviacao\": \"UN\"\n            }\n        },\n        {\n            \"id_produto\": 131,\n            \"nome\": \"CABO DE 30 VOLTS\",\n            \"descricao\": null,\n            \"valor_compra\": 3,\n            \"valor_venda\": 5,\n            \"codigo_ean\": \"SEM GTIN\",\n            \"codigo_ean_trib\": \"SEM GTIN\",\n            \"data_cadastro\": \"2018-08-01 15:22:18\",\n            \"ncm\": {\n                \"id_ncm\": 9207,\n                \"codigo\": \"85444200\",\n                \"descricao\": \"OUTS.CONDUTS.ELÉTS.TENSÃO <=1000V,C/PEÇAS DE CONEXÃO\"\n            },\n            \"cst_origem\": null,\n            \"cst_tributacao\": null,\n            \"csosn\": null,\n            \"cest\": {\n                \"id_cest\": 1577,\n                \"codigo\": \"1200700\",\n                \"descricao\": \"Fios, cabos (incluídos os cabos coaxiais) e outros condutores, isolados ou não, para usos elétricos (incluídos os de cobre ou alumínio, envernizados ou oxidados anodicamente), mesmo com peças de conexão, inclusive fios e cabos elétricos, para tensão não superior a 1000V, para uso na construção; fios e cabos telefônicos e para transmissão de dados; cabos de fibras ópticas, constituídos de fibras embainhadas individualmente, mesmo com condutores elétricos ou munidos de peças de conexão; cordas, cabos, tranças\"\n            },\n            \"unidade_medida\": {\n                \"id_unidade_medida\": 5,\n                \"nome\": \"Kilograma\",\n                \"abreviacao\": \"kg\"\n            }\n        },\n        {\n            \"id_produto\": 132,\n            \"nome\": \"CONJ.TRILHOS/SUP/FIXADOR\",\n            \"descricao\": null,\n            \"valor_compra\": 240.21,\n            \"valor_venda\": 240.21,\n            \"codigo_ean\": \"SEM GTIN\",\n            \"codigo_ean_trib\": \"SEM GTIN\",\n            \"data_cadastro\": \"2018-08-01 15:22:19\",\n            \"ncm\": {\n                \"id_ncm\": 8433,\n                \"codigo\": \"84733099\",\n                \"descricao\": \"OUTS.PARTES ACESS.P/MÁQS.AUTOM.PROC.DADOS\"\n            },\n            \"cst_origem\": null,\n            \"cst_tributacao\": null,\n            \"csosn\": null,\n            \"cest\": {\n                \"id_cest\": 2060,\n                \"codigo\": \"2103500\",\n                \"descricao\": \"Partes e acessórios das máquinas da posição 84.71\"\n            },\n            \"unidade_medida\": {\n                \"id_unidade_medida\": 5,\n                \"nome\": \"Kilograma\",\n                \"abreviacao\": \"kg\"\n            }\n        },\n        {\n            \"id_produto\": 138,\n            \"nome\": \"ROTEADOR WIRELESS TP-LINK\",\n            \"descricao\": \"ROTEADOR WIRELESS TP-LINK 150 Mbps\",\n            \"valor_compra\": 100,\n            \"valor_venda\": 199,\n            \"codigo_ean\": null,\n            \"codigo_ean_trib\": null,\n            \"data_cadastro\": \"2018-10-09 15:04:10\",\n            \"ncm\": null,\n            \"cst_origem\": null,\n            \"cst_tributacao\": null,\n            \"csosn\": null,\n            \"cest\": null,\n            \"unidade_medida\": {\n                \"id_unidade_medida\": 19,\n                \"nome\": \"Unidade\",\n                \"abreviacao\": \"UN\"\n            }\n        },\n        {\n            \"id_produto\": 139,\n            \"nome\": \"BOBINA DROP\",\n            \"descricao\": \"BOBINA DROP\",\n            \"valor_compra\": 0.3,\n            \"valor_venda\": 0.75,\n            \"codigo_ean\": null,\n            \"codigo_ean_trib\": null,\n            \"data_cadastro\": \"2018-10-11 11:40:45\",\n            \"ncm\": null,\n            \"cst_origem\": null,\n            \"cst_tributacao\": null,\n            \"csosn\": null,\n            \"cest\": null,\n            \"unidade_medida\": {\n                \"id_unidade_medida\": 11,\n                \"nome\": \"Metro\",\n                \"abreviacao\": \"m\"\n            }\n        }\n    ]\n}"
+								},
+								{
+									"id": "82bc519a-0dc0-43d3-af0f-6773d1c31635",
+									"name": "Erro",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Bearer Token obtido na autenticação"
+											}
+										],
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/estoque/produto?itens_por_pagina=10&data_inicio=2000-01-01&data_fim=2023-12-31",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"estoque",
+												"produto"
+											],
+											"query": [
+												{
+													"key": "pagina",
+													"value": "0",
+													"description": "(Obrigatório) Número da Página",
+													"disabled": true
+												},
+												{
+													"key": "itens_por_pagina",
+													"value": "10",
+													"description": "(Opcional) Itens por Página. Se não preenchido será atributo 100 por padrão. Máximo: 500"
+												},
+												{
+													"key": "data_inicio",
+													"value": "2000-01-01",
+													"description": "(Opcional) Data de Cadastro Início da Consulta no formato YYYY-MM-DD"
+												},
+												{
+													"key": "data_fim",
+													"value": "2023-12-31",
+													"description": "(Opcional) Data de Cadastro Final da Consulta no formato YYYY-MM-DD"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 06 Feb 2023 12:44:08 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 13:44:08 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"error\",\n    \"msg\": \"Favor preencher os campos obrigatórios de acordo com as especificações\",\n    \"errors\": [\n        \"O campo pagina é obrigatório.\"\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Encontrar por ID",
+							"id": "e3301e59-81c0-4d6f-91d9-68aa68fbf48f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"description": "Bearer Token obtido na autenticação"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/v1/integracao/estoque/produto/:id_produto",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"integracao",
+										"estoque",
+										"produto",
+										":id_produto"
+									],
+									"variable": [
+										{
+											"id": "0376b67c-860d-450c-813c-58b21eb5d6d7",
+											"key": "id_produto",
+											"value": "49742",
+											"description": "(Integer) ID do Produto já cadastrado anteriormente"
+										}
+									]
+								},
+								"description": "**GET**\n\nNo método `GET`, será possível consultar um produto individualmente. Esse endpoint pode ser útil quando for necessário verificar / sincronizar produto por produto."
+							},
+							"response": [
+								{
+									"id": "bc6bc1e3-4830-4291-ac51-6892fe7b1d7e",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Bearer Token obtido na autenticação"
+											}
+										],
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/estoque/produto/:id_produto",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"estoque",
+												"produto",
+												":id_produto"
+											],
+											"variable": [
+												{
+													"key": "id_produto",
+													"value": "",
+													"description": "(Integer) ID do Produto já cadastrado anteriormente"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 06 Feb 2023 12:40:47 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 13:40:47 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Produto de ID 4974 consultado com sucesso\",\n    \"produto\": {\n        \"id_produto\": 4974,\n        \"nome\": \"Teste API Postman\",\n        \"descricao\": null,\n        \"valor_compra\": 0,\n        \"valor_venda\": 0,\n        \"codigo_ean\": null,\n        \"codigo_ean_trib\": null,\n        \"data_cadastro\": \"2023-01-31 10:05:54\",\n        \"ncm\": null,\n        \"cst_origem\": null,\n        \"cst_tributacao\": null,\n        \"csosn\": null,\n        \"cest\": null,\n        \"unidade_medida\": {\n            \"id_unidade_medida\": 186,\n            \"nome\": \"\",\n            \"abreviacao\": \"\"\n        }\n    }\n}"
+								},
+								{
+									"id": "b237e61b-5281-48bd-b375-fc61d8ffe299",
+									"name": "Erro",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Bearer Token obtido na autenticação"
+											}
+										],
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/estoque/produto/:id_produto",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"estoque",
+												"produto",
+												":id_produto"
+											],
+											"variable": [
+												{
+													"key": "id_produto",
+													"value": "49742",
+													"description": "(Integer) ID do Produto já cadastrado anteriormente"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 06 Feb 2023 12:41:40 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 13:41:40 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"error\",\n    \"msg\": \"Produto de ID 49742 não encontrado\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Adicionar",
+							"id": "976aad08-5ff8-4f2c-a1f4-6671be194cf4",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"description": "Bearer Token obtido na autenticação"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"unidade_medida\":\"UN\",\n    \"valor_compra\":25.93,\n    \"valor_venda\":39.99\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/v1/integracao/estoque/produto",
+								"description": "**POST**\n\nNo método `POST`, será possível adicionar novos produtos ao cadastro\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| nome | Nome do Produto | Sim |\n| unidade_medida | Sigla da unidade de medida (EX: `UN`, `L`, `KG`) | Sim |\n| valor_compra | Valor da Compra | Sim |\n| valor_venda | Valor de Venda | Sim |\n| estoque_minimo | Quantidade mínima total | Não |\n| codigo_ean | Código EAN | NÃO |\n| codigo_ean_trib | Código EAN Tributável | Não |\n| altura | Medida Altura | Não |\n| largura | Medida Lagura | Não |\n| profundidade | Medida Profundidade | Não |\n| espessura | Medida Espessa | Não |\n| comprimento | Medida Comprimento | Não |\n| peso_liquido | Medida Peso Líquido | Não |\n| peso_bruto | Medida Peso Bruto | Não |\n| agrupado | Indica se o Produto é do Tipo Agrupado ou não | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| nome | `String` | `NULL` |\n| unidade_medida | `String` | `NULL` |\n| valor_compra | `Numeric` | `NULL` |\n| valor_venda | `Numeric` | `NULL` |\n| estoque_minimo | `Numeric` | `NULL` |\n| codigo_ean | `Numeric` | `NULL` |\n| codigo_ean_trib | `Numeric` | `NULL` |\n| altura | `Numeric` | `NULL` |\n| largura | `Numeric` | `NULL` |\n| profundidade | `Numeric` | `NULL` |\n| espessura | `Numeric` | `NULL` |\n| comprimento | `Numeric` | `NULL` |\n| peso_liquido | `Numeric` | `NULL` |\n| peso_bruto | `Numeric` | `NULL` |\n| agrupado | `Boolean` | `false` |\n\n**Observação: O parâmetro agrupado irá indicar se o produto irá gerenciar os itens como patrimônio ou não. Caso o produto seja cadastrado com a opção agrupado =** **`false`** **(que é o padrão), significa que cada unidade do produto, precisará ter um** **`produto_item`** **(patrimônio) no estoque.**\n\nCaso o produto seja cadastrado com a opção `agrupado` = `true` siginfica que será necessário cadastrar apenas 1 item no local de estoque contendo toda a quantidade de estoque disponível, ou seja, estará tudo agrupado."
+							},
+							"response": [
+								{
+									"id": "58704e22-810f-4732-82eb-23e25868bc54",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"nome\":\"Nome do Meu Produto\",\n    \"unidade_medida\":\"UN\",\n    \"valor_compra\":25.93,\n    \"valor_venda\":39.99\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{url}}/api/v1/integracao/estoque/produto"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 06 Feb 2023 12:05:04 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 13:05:04 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Produto cadastrado com sucesso\",\n    \"produto\": {\n        \"id_produto\": 4976,\n        \"nome\": \"Nome do Meu Produto\",\n        \"descricao\": null,\n        \"valor_compra\": 25.93,\n        \"valor_venda\": 39.99,\n        \"codigo_ean\": null,\n        \"codigo_ean_trib\": null,\n        \"data_cadastro\": \"2023-02-06 09:05:04\",\n        \"ncm\": null,\n        \"cst_origem\": null,\n        \"cst_tributacao\": null,\n        \"csosn\": null,\n        \"cest\": null,\n        \"unidade_medida\": {\n            \"id_unidade_medida\": 19,\n            \"nome\": \"Unidade\",\n            \"abreviacao\": \"UN\"\n        }\n    }\n}"
+								},
+								{
+									"id": "9b179610-0362-407c-af05-6395a3140b40",
+									"name": "Erro",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"unidade_medida\":\"UN\",\n    \"valor_compra\":25.93,\n    \"valor_venda\":39.99\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{url}}/api/v1/integracao/estoque/produto"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 06 Feb 2023 12:05:40 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 13:05:40 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"error\",\n    \"msg\": \"Favor preencher os campos obrigatórios de acordo com as especificações\",\n    \"errors\": [\n        \"O campo nome é obrigatório.\"\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Editar",
+							"id": "7168a687-4e54-43b3-9442-7e06692da326",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"description": "Bearer Token obtido na autenticação"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\":\"Nome do Meu Produto Editado\",\n    \"unidade_medida\":\"UN\",\n    \"valor_compra\":99.90,\n    \"valor_venda\":199.90\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/v1/integracao/estoque/produto/:id_produto",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"integracao",
+										"estoque",
+										"produto",
+										":id_produto"
+									],
+									"variable": [
+										{
+											"id": "e1d37f28-c49b-4695-876c-2ab8f9ceb415",
+											"key": "id_produto",
+											"value": "4976",
+											"description": "(Integer) ID do Produto já cadastrado anteriormente"
+										}
+									]
+								},
+								"description": "**POST**\n\nNo método `PUT`, será possível editar os dados de cadastro do produto\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| nome | Nome do Produto | Sim |\n| unidade_medida | Sigla da unidade de medida (EX: `UN`, `L`, `KG`) | Sim |\n| valor_compra | Valor da Compra | Sim |\n| valor_venda | Valor de Venda | Sim |\n| estoque_minimo | Quantidade mínima total | Não |\n| codigo_ean | Código EAN | NÃO |\n| codigo_ean_trib | Código EAN Tributável | Não |\n| altura | Medida Altura | Não |\n| largura | Medida Lagura | Não |\n| profundidade | Medida Profundidade | Não |\n| espessura | Medida Espessa | Não |\n| comprimento | Medida Comprimento | Não |\n| peso_liquido | Medida Peso Líquido | Não |\n| peso_bruto | Medida Peso Bruto | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| nome | `String` | `NULL` |\n| unidade_medida | `String` | `NULL` |\n| valor_compra | `Numeric` | `NULL` |\n| valor_venda | `Numeric` | `NULL` |\n| estoque_minimo | `Numeric` | `NULL` |\n| codigo_ean | `Numeric` | `NULL` |\n| codigo_ean_trib | `Numeric` | `NULL` |\n| altura | `Numeric` | `NULL` |\n| largura | `Numeric` | `NULL` |\n| profundidade | `Numeric` | `NULL` |\n| espessura | `Numeric` | `NULL` |\n| comprimento | `Numeric` | `NULL` |\n| peso_liquido | `Numeric` | `NULL` |\n| peso_bruto | `Numeric` | `NULL` |\n\n**Observação: O parâmetro agrupado não é permitido alterar na edição via API. Caso seja necessário modificar esse parâmetro, o mesmo deverá ser ajustado via sistema, pois ao editar essa informação, o sistema poderá remover todos os patrimônios já cadastrados, ou seja, é uma função de impacto crítico.**"
+							},
+							"response": [
+								{
+									"id": "0a79a7e3-dda1-4900-82d0-6261c177160d",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Bearer Token obtido na autenticação"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"nome\":\"Nome do Meu Produto Editado\",\n    \"unidade_medida\":\"UN\",\n    \"valor_compra\":99.90,\n    \"valor_venda\":199.90\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/estoque/produto/:id_produto",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"estoque",
+												"produto",
+												":id_produto"
+											],
+											"variable": [
+												{
+													"key": "id_produto",
+													"value": "4976",
+													"description": "(Integer) ID do Produto já cadastrado anteriormente"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 06 Feb 2023 12:13:07 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 13:13:07 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Produto atualizado com sucesso\",\n    \"produto\": {\n        \"id_produto\": 4976,\n        \"nome\": \"Nome do Meu Produto Editado\",\n        \"descricao\": null,\n        \"valor_compra\": 99.9,\n        \"valor_venda\": 199.9,\n        \"codigo_ean\": null,\n        \"codigo_ean_trib\": null,\n        \"data_cadastro\": \"2023-02-06 09:05:04\",\n        \"ncm\": null,\n        \"cst_origem\": null,\n        \"cst_tributacao\": null,\n        \"csosn\": null,\n        \"cest\": null,\n        \"unidade_medida\": {\n            \"id_unidade_medida\": 19,\n            \"nome\": \"Unidade\",\n            \"abreviacao\": \"UN\"\n        }\n    }\n}"
+								},
+								{
+									"id": "dd0a6e1b-fbc4-4ad9-92c4-9b94adfc5e23",
+									"name": "Erro",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Bearer Token obtido na autenticação"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"unidade_medida\":\"UN\",\n    \"valor_compra\":25.93,\n    \"valor_venda\":39.99\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/estoque/produto/:id_produto",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"estoque",
+												"produto",
+												":id_produto"
+											],
+											"variable": [
+												{
+													"key": "id_produto",
+													"value": "4976",
+													"description": "(Integer) ID do Produto já cadastrado anteriormente"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 06 Feb 2023 12:11:55 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 13:11:55 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"error\",\n    \"msg\": \"Favor preencher os campos obrigatórios de acordo com as especificações\",\n    \"errors\": [\n        \"O campo nome é obrigatório.\"\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Apagar",
+							"id": "2030cdd6-7e0a-4cc3-9f6d-fac061d6b705",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"description": "Bearer Token obtido na autenticação"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/v1/integracao/estoque/produto/:id_produto",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"integracao",
+										"estoque",
+										"produto",
+										":id_produto"
+									],
+									"variable": [
+										{
+											"id": "9d6df348-5518-47c4-8f08-7d5d890cea42",
+											"key": "id_produto",
+											"value": "4976",
+											"description": "(Integer) ID do Produto já cadastrado anteriormente"
+										}
+									]
+								},
+								"description": "No método `DELETE`, será possível apagar o cadastro de um produto."
+							},
+							"response": [
+								{
+									"id": "06baf09b-d3df-47fe-a037-e8293c20dfae",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Bearer Token obtido na autenticação"
+											}
+										],
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/estoque/produto/:id_produto",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"estoque",
+												"produto",
+												":id_produto"
+											],
+											"variable": [
+												{
+													"key": "id_produto",
+													"value": "4976",
+													"description": "(Integer) ID do Produto já cadastrado anteriormente"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 06 Feb 2023 12:14:39 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 13:14:39 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Produto foi inativado com sucesso\"\n}"
+								},
+								{
+									"id": "9373583c-bb6e-4bce-ae8b-18eeb03c36fa",
+									"name": "Erro",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Bearer Token obtido na autenticação"
+											}
+										],
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/estoque/produto/:id_produto",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"estoque",
+												"produto",
+												":id_produto"
+											],
+											"variable": [
+												{
+													"key": "id_produto",
+													"value": "923193",
+													"description": "(Integer) ID do Produto já cadastrado anteriormente"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 06 Feb 2023 12:14:25 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 13:14:25 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"error\",\n    \"msg\": \"Produto de ID 923193 não encontrado\"\n}"
+								}
+							]
+						}
+					],
+					"id": "8448899f-a8a0-454a-b4bc-0e8b8babd5e8"
+				},
+				{
+					"name": "Produto Item (Patrimônios)",
+					"item": [
+						{
+							"name": "Listar",
+							"id": "d12b5ebc-cd31-491c-85c4-f5e54b4c27f5",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"description": "Bearer Token obtido na autenticação"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/v1/integracao/estoque/produto_item?id_produto=1&pagina=0&itens_por_pagina=10",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"integracao",
+										"estoque",
+										"produto_item"
+									],
+									"query": [
+										{
+											"key": "id_produto",
+											"value": "1",
+											"description": "(Obrigatório) ID do Produto que terão seus itens listados"
+										},
+										{
+											"key": "pagina",
+											"value": "0",
+											"description": "(Obrigatório) Número da Página"
+										},
+										{
+											"key": "itens_por_pagina",
+											"value": "10",
+											"description": "(Opcional) Itens por Página. Se não preenchido será atributo 100 por padrão. Máximo: 500"
+										}
+									]
+								},
+								"description": "**GET**\n\nNo método `GET`, irá consultar/listar os dados de produtos e retornar um `JSON` como resposta. Os dados serão retornados de forma paginada, portanto fique atento ao conjunto da dados \"paginacao\" que é retornado na resposta, para saber se será necessário consultar outras páginas ou não.\n\nOs seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| pagina | Página a ser exibida | Sim |\n| itens_por_pagina | Itens por Página a serem exibidos. Mínimo: 1, Máximo: 500. | Não |\n| data_inicio | Data de início da filtragem de dados | Não |\n| data_fim | Data final da filtragem de dados | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| pagina | Campo Inteiro (integer) | `NULL` |\n| itens_por_pagina | Campo Inteiro (integer) | 100 |\n| data_inicio | Campo no formato Date (YYYY-MM-DD) | `NULL` |\n| data_fim | Campo no formato Date (YYYY-MM-DD) | `NULL` |"
+							},
+							"response": [
+								{
+									"id": "241b96ba-4a11-4eea-b1a4-40369d56ff7d",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Bearer Token obtido na autenticação"
+											}
+										],
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/estoque/produto_item?id_produto=1&pagina=0&itens_por_pagina=10",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"estoque",
+												"produto_item"
+											],
+											"query": [
+												{
+													"key": "id_produto",
+													"value": "1",
+													"description": "(Obrigatório) ID do Produto que terão seus itens listados"
+												},
+												{
+													"key": "pagina",
+													"value": "0",
+													"description": "(Obrigatório) Número da Página"
+												},
+												{
+													"key": "itens_por_pagina",
+													"value": "10",
+													"description": "(Opcional) Itens por Página. Se não preenchido será atributo 100 por padrão. Máximo: 500"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 06 Feb 2023 12:51:58 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 13:51:58 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Dados consultados com sucesso\",\n    \"paginacao\": {\n        \"primeira_pagina\": 0,\n        \"ultima_pagina\": 4397,\n        \"pagina_atual\": 0,\n        \"total_registros\": 43971\n    },\n    \"produto_itens\": [\n        {\n            \"id_produto_item\": 1,\n            \"produto\": {\n                \"id_produto\": 1,\n                \"nome\": \"Airgrid\",\n                \"agrupado\": false\n            },\n            \"local_estoque\": {\n                \"id_local_estoque\": 1,\n                \"descricao\": \"Estoque na Cidade XPTO\"\n            },\n            \"produto_item_status\": {\n                \"id_produto_item_status\": 1,\n                \"descricao\": \"Vendido\",\n                \"prefixo\": \"vendido\"\n            },\n            \"identificador_proprio\": null,\n            \"codigo_item\": 43948,\n            \"numero_serie\": null,\n            \"mac_address\": null,\n            \"observacoes\": \"teste de observação\"\n        },\n        {\n            \"id_produto_item\": 2,\n            \"produto\": {\n                \"id_produto\": 1,\n                \"nome\": \"Airgrid\",\n                \"agrupado\": false\n            },\n            \"local_estoque\": {\n                \"id_local_estoque\": 4,\n                \"descricao\": \"Local de Estoque de Teste\"\n            },\n            \"produto_item_status\": {\n                \"id_produto_item_status\": 8,\n                \"descricao\": \"DESCARTADO\",\n                \"prefixo\": \"descartado\"\n            },\n            \"identificador_proprio\": null,\n            \"codigo_item\": 43949,\n            \"numero_serie\": \"12341341234\",\n            \"mac_address\": null,\n            \"observacoes\": \"teste de observação 3\"\n        },\n        {\n            \"id_produto_item\": 3,\n            \"produto\": {\n                \"id_produto\": 1,\n                \"nome\": \"Airgrid\",\n                \"agrupado\": false\n            },\n            \"local_estoque\": {\n                \"id_local_estoque\": 16,\n                \"descricao\": \"LOCAL PARA TESTE WIKI\"\n            },\n            \"produto_item_status\": {\n                \"id_produto_item_status\": 2,\n                \"descricao\": \"ESTOQUE\",\n                \"prefixo\": \"estoque\"\n            },\n            \"identificador_proprio\": null,\n            \"codigo_item\": 12342,\n            \"numero_serie\": \"123131231\",\n            \"mac_address\": \"00:AA:BB:33:DD:EE\",\n            \"observacoes\": \"teste\"\n        },\n        {\n            \"id_produto_item\": 4,\n            \"produto\": {\n                \"id_produto\": 1,\n                \"nome\": \"Airgrid\",\n                \"agrupado\": false\n            },\n            \"local_estoque\": {\n                \"id_local_estoque\": 1,\n                \"descricao\": \"Estoque na Cidade XPTO\"\n            },\n            \"produto_item_status\": {\n                \"id_produto_item_status\": 5,\n                \"descricao\": \"Perdido\",\n                \"prefixo\": \"perdido\"\n            },\n            \"identificador_proprio\": null,\n            \"codigo_item\": 12358,\n            \"numero_serie\": null,\n            \"mac_address\": null,\n            \"observacoes\": null\n        },\n        {\n            \"id_produto_item\": 5,\n            \"produto\": {\n                \"id_produto\": 1,\n                \"nome\": \"Airgrid\",\n                \"agrupado\": false\n            },\n            \"local_estoque\": {\n                \"id_local_estoque\": 1,\n                \"descricao\": \"Estoque na Cidade XPTO\"\n            },\n            \"produto_item_status\": {\n                \"id_produto_item_status\": 1,\n                \"descricao\": \"Vendido\",\n                \"prefixo\": \"vendido\"\n            },\n            \"identificador_proprio\": null,\n            \"codigo_item\": 12359,\n            \"numero_serie\": null,\n            \"mac_address\": null,\n            \"observacoes\": \"teste de observações 2\"\n        },\n        {\n            \"id_produto_item\": 6,\n            \"produto\": {\n                \"id_produto\": 1,\n                \"nome\": \"Airgrid\",\n                \"agrupado\": false\n            },\n            \"local_estoque\": {\n                \"id_local_estoque\": 1,\n                \"descricao\": \"Estoque na Cidade XPTO\"\n            },\n            \"produto_item_status\": {\n                \"id_produto_item_status\": 6,\n                \"descricao\": \"MANUTENÇÃO\",\n                \"prefixo\": \"manutencao\"\n            },\n            \"identificador_proprio\": null,\n            \"codigo_item\": 12360,\n            \"numero_serie\": \"123412342\",\n            \"mac_address\": null,\n            \"observacoes\": \"teste de observação 3\"\n        },\n        {\n            \"id_produto_item\": 7,\n            \"produto\": {\n                \"id_produto\": 1,\n                \"nome\": \"Airgrid\",\n                \"agrupado\": false\n            },\n            \"local_estoque\": {\n                \"id_local_estoque\": 1,\n                \"descricao\": \"Estoque na Cidade XPTO\"\n            },\n            \"produto_item_status\": {\n                \"id_produto_item_status\": 10,\n                \"descricao\": \"Ordem de Serviço\",\n                \"prefixo\": \"ordem_servico\"\n            },\n            \"identificador_proprio\": null,\n            \"codigo_item\": 45361,\n            \"numero_serie\": null,\n            \"mac_address\": null,\n            \"observacoes\": null\n        },\n        {\n            \"id_produto_item\": 8,\n            \"produto\": {\n                \"id_produto\": 1,\n                \"nome\": \"Airgrid\",\n                \"agrupado\": false\n            },\n            \"local_estoque\": {\n                \"id_local_estoque\": 1,\n                \"descricao\": \"Estoque na Cidade XPTO\"\n            },\n            \"produto_item_status\": {\n                \"id_produto_item_status\": 10,\n                \"descricao\": \"Ordem de Serviço\",\n                \"prefixo\": \"ordem_servico\"\n            },\n            \"identificador_proprio\": null,\n            \"codigo_item\": 43950,\n            \"numero_serie\": null,\n            \"mac_address\": null,\n            \"observacoes\": null\n        },\n        {\n            \"id_produto_item\": 9,\n            \"produto\": {\n                \"id_produto\": 1,\n                \"nome\": \"Airgrid\",\n                \"agrupado\": false\n            },\n            \"local_estoque\": {\n                \"id_local_estoque\": 1,\n                \"descricao\": \"Estoque na Cidade XPTO\"\n            },\n            \"produto_item_status\": {\n                \"id_produto_item_status\": 1,\n                \"descricao\": \"Vendido\",\n                \"prefixo\": \"vendido\"\n            },\n            \"identificador_proprio\": null,\n            \"codigo_item\": 963,\n            \"numero_serie\": null,\n            \"mac_address\": null,\n            \"observacoes\": null\n        },\n        {\n            \"id_produto_item\": 10,\n            \"produto\": {\n                \"id_produto\": 1,\n                \"nome\": \"Airgrid\",\n                \"agrupado\": false\n            },\n            \"local_estoque\": {\n                \"id_local_estoque\": 1,\n                \"descricao\": \"Estoque na Cidade XPTO\"\n            },\n            \"produto_item_status\": {\n                \"id_produto_item_status\": 1,\n                \"descricao\": \"Vendido\",\n                \"prefixo\": \"vendido\"\n            },\n            \"identificador_proprio\": null,\n            \"codigo_item\": 43951,\n            \"numero_serie\": null,\n            \"mac_address\": null,\n            \"observacoes\": null\n        }\n    ]\n}"
+								},
+								{
+									"id": "f711c7f7-e88d-4ffb-ba62-7584c3f1957f",
+									"name": "Erro",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Bearer Token obtido na autenticação"
+											}
+										],
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/estoque/produto_item",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"estoque",
+												"produto_item"
+											],
+											"query": [
+												{
+													"key": "id_produto",
+													"value": "1",
+													"description": "(Obrigatório) ID do Produto que terão seus itens listados",
+													"disabled": true
+												},
+												{
+													"key": "pagina",
+													"value": "0",
+													"description": "(Obrigatório) Número da Página",
+													"disabled": true
+												},
+												{
+													"key": "itens_por_pagina",
+													"value": "10",
+													"description": "(Opcional) Itens por Página. Se não preenchido será atributo 100 por padrão. Máximo: 500",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 06 Feb 2023 12:52:58 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 13:52:58 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"error\",\n    \"msg\": \"Favor preencher os campos obrigatórios de acordo com as especificações\",\n    \"errors\": [\n        \"O campo id produto é obrigatório.\",\n        \"O campo pagina é obrigatório.\"\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Encontrar por ID",
+							"id": "9e99a697-8945-447f-939c-133d1a4258d1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"description": "Bearer Token obtido na autenticação"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/v1/integracao/estoque/produto_item/:id_produto_item",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"integracao",
+										"estoque",
+										"produto_item",
+										":id_produto_item"
+									],
+									"variable": [
+										{
+											"id": "dbcec77f-ad9d-4e3f-bf6c-e055bf884df9",
+											"key": "id_produto_item",
+											"value": "323131231",
+											"description": "(Integer) ID do Produto Item já cadastrado anteriormente"
+										}
+									]
+								},
+								"description": "**GET**\n\nNo método `GET`, será possível consultar um produto individualmente. Esse endpoint pode ser útil quando for necessário verificar / sincronizar produto por produto."
+							},
+							"response": [
+								{
+									"id": "da71cdbd-945b-46f1-a210-2e42fe0671cc",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Bearer Token obtido na autenticação"
+											}
+										],
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/estoque/produto_item/:id_produto_item",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"estoque",
+												"produto_item",
+												":id_produto_item"
+											],
+											"variable": [
+												{
+													"key": "id_produto_item",
+													"value": "3",
+													"description": "(Integer) ID do Produto Item já cadastrado anteriormente"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 06 Feb 2023 12:56:41 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 13:56:41 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Item de Produto de ID 3 consultado com sucesso\",\n    \"produto\": {\n        \"id_produto_item\": 3,\n        \"produto\": {\n            \"id_produto\": 1,\n            \"nome\": \"Airgrid\",\n            \"agrupado\": false\n        },\n        \"local_estoque\": {\n            \"id_local_estoque\": 16,\n            \"descricao\": \"LOCAL PARA TESTE WIKI\"\n        },\n        \"produto_item_status\": {\n            \"id_produto_item_status\": 2,\n            \"descricao\": \"ESTOQUE\",\n            \"prefixo\": \"estoque\"\n        },\n        \"identificador_proprio\": null,\n        \"codigo_item\": 12342,\n        \"numero_serie\": \"123131231\",\n        \"mac_address\": \"00:AA:BB:33:DD:EE\",\n        \"observacoes\": \"teste\"\n    }\n}"
+								},
+								{
+									"id": "57216064-3785-47f2-b700-cb10b7a27e6e",
+									"name": "Erro",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Bearer Token obtido na autenticação"
+											}
+										],
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/estoque/produto_item/:id_produto_item",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"estoque",
+												"produto_item",
+												":id_produto_item"
+											],
+											"variable": [
+												{
+													"key": "id_produto_item",
+													"value": "323131231abc",
+													"description": "(Integer) ID do Produto Item já cadastrado anteriormente"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 06 Feb 2023 13:09:19 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 14:09:19 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"error\",\n    \"msg\": \"Favor preencher os campos obrigatórios de acordo com as especificações\",\n    \"errors\": [\n        \"O campo id_produto_item deve ser do tipo integer\"\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Adicionar",
+							"id": "6137caec-7dd3-4049-879b-fc878b0a7b63",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"description": "Bearer Token obtido na autenticação"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id_produto\":1,\n    \"id_local_estoque\":9\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/v1/integracao/estoque/produto_item",
+								"description": "**POST**\n\nNo método `POST`, será possível adicionar novos itens de produtos (patrimônios). Os itens podem conter campos que são muito úteis para a empresa, como o Número de Série, MAC Address, Identificador Próprio, etc, portanto, quanto mais informações forem enviadas aqui, melhor ficará a identificação dos itens.\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_produto | ID do Produto já cadastrado anteriormente | Sim |\n| id_local_estoque | ID do Local de Estoque já cadastrado anteriormente | Sim |\n| numero_serie | Número de Série | Não |\n| mac_address | MAC Address | Não |\n| identificador_proprio | Identificador Interno da Empresa ou ID do Item em outro sistema | Não |\n| observacoes | Observações livres | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_produto | `Integer` | `NULL` |\n| id_local_estoque | `Integer` | `NULL` |\n| numero_serie | `String` | `NULL` |\n| mac_address | `String` | `NULL` |\n| identificador_proprio | `String` | `NULL` |\n| observacoes | `LongText` | `NULL` |"
+							},
+							"response": [
+								{
+									"id": "6296b7cb-919c-44e5-b232-dcebd06cf72e",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Bearer Token obtido na autenticação"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id_produto\":1,\n    \"id_local_estoque\":9\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{url}}/api/v1/integracao/estoque/produto_item"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 06 Feb 2023 13:12:01 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 14:12:01 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Cadastro realizado com sucesso\",\n    \"produto_item\": {\n        \"id_produto_item\": 213346,\n        \"produto\": {\n            \"id_produto\": 1,\n            \"nome\": \"Airgrid\",\n            \"agrupado\": false\n        },\n        \"local_estoque\": {\n            \"id_local_estoque\": 9,\n            \"descricao\": \"HUBSOFT\"\n        },\n        \"produto_item_status\": {\n            \"id_produto_item_status\": 2,\n            \"descricao\": \"ESTOQUE\",\n            \"prefixo\": \"estoque\"\n        },\n        \"identificador_proprio\": null,\n        \"codigo_item\": 177686,\n        \"numero_serie\": null,\n        \"mac_address\": null,\n        \"observacoes\": null\n    }\n}"
+								},
+								{
+									"id": "b6e408ab-3e19-4e65-b8ed-828d1e66d723",
+									"name": "Erro",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Bearer Token obtido na autenticação"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id_produto\":1,\n    \"id_local_estoque\":9999\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{url}}/api/v1/integracao/estoque/produto_item"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 06 Feb 2023 13:12:27 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 14:12:27 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"error\",\n    \"msg\": \"Local de Estoque de ID 9999 não encontrado\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Editar",
+							"id": "a723aa26-db46-4aa3-aea9-b29dee4bf4db",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"description": "Bearer Token obtido na autenticação"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"mac_address\":\"00:11:22:AA:BB:CC\",\n    \"numero_serie\":\"SN111222333999\",\n    \"identificador_proprio\":\"95f5d435-c302-463e-ad2e-748025fca05e\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/v1/integracao/estoque/produto_item/:id_produto_item",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"integracao",
+										"estoque",
+										"produto_item",
+										":id_produto_item"
+									],
+									"variable": [
+										{
+											"id": "24af308d-7d28-4c76-ae64-77ed2a466ad4",
+											"key": "id_produto_item",
+											"value": "213346",
+											"description": "(Integer) ID do Produto Item já cadastrado anteriormente"
+										}
+									]
+								},
+								"description": "**POST**\n\nNo método `PUT`, será possível editar os dados de cadastro do item de produto.\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_produto | ID do Produto já cadastrado anteriormente | Sim |\n| id_local_estoque | ID do Local de Estoque já cadastrado anteriormente | Sim |\n| numero_serie | Número de Série | Não |\n| mac_address | MAC Address | Não |\n| identificador_proprio | Identificador Interno da Empresa ou ID do Item em outro sistema | Não |\n| observacoes | Observações livres | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_produto | `Integer` | `NULL` |\n| id_local_estoque | `Integer` | `NULL` |\n| numero_serie | `String` | `NULL` |\n| mac_address | `String` | `NULL` |\n| identificador_proprio | `String` | `NULL` |\n| observacoes | `LongText` | `NULL` |"
+							},
+							"response": [
+								{
+									"id": "47cc587e-82c5-48e0-95d0-6a8f9412aacc",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Bearer Token obtido na autenticação"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"mac_address\":\"00:11:22:AA:BB:CC\",\n    \"numero_serie\":\"SN111222333999\",\n    \"identificador_proprio\":\"95f5d435-c302-463e-ad2e-748025fca05e\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/estoque/produto_item/:id_produto_item",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"estoque",
+												"produto_item",
+												":id_produto_item"
+											],
+											"variable": [
+												{
+													"key": "id_produto_item",
+													"value": "213346",
+													"description": "(Integer) ID do Produto Item já cadastrado anteriormente"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 06 Feb 2023 13:29:29 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 14:29:29 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Edição realizado com sucesso\",\n    \"produto_item\": {\n        \"id_produto_item\": 213346,\n        \"produto\": {\n            \"id_produto\": 1,\n            \"nome\": \"Airgrid\",\n            \"agrupado\": false\n        },\n        \"local_estoque\": {\n            \"id_local_estoque\": 9,\n            \"descricao\": \"HUBSOFT\"\n        },\n        \"produto_item_status\": {\n            \"id_produto_item_status\": 2,\n            \"descricao\": \"ESTOQUE\",\n            \"prefixo\": \"estoque\"\n        },\n        \"identificador_proprio\": \"95f5d435-c302-463e-ad2e-748025fca05e\",\n        \"codigo_item\": 177686,\n        \"numero_serie\": \"SN111222333999\",\n        \"mac_address\": \"00:11:22:AA:BB:CC\",\n        \"observacoes\": null\n    }\n}"
+								},
+								{
+									"id": "39383198-2ec7-4e18-acd5-e0ff56148b39",
+									"name": "Erro",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Bearer Token obtido na autenticação"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"mac_address\":\"00:11:22:AA:BB:CC\",\n    \"numero_serie\":\"SN111222333999\",\n    \"identificador_proprio\":\"95f5d435-c302-463e-ad2e-748025fca05e\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/estoque/produto_item/:id_produto_item",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"estoque",
+												"produto_item",
+												":id_produto_item"
+											],
+											"variable": [
+												{
+													"key": "id_produto_item",
+													"value": "213346abc",
+													"description": "(Integer) ID do Produto Item já cadastrado anteriormente"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 06 Feb 2023 13:30:35 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 14:30:35 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"error\",\n    \"msg\": \"Favor preencher os campos obrigatórios de acordo com as especificações\",\n    \"errors\": [\n        \"O campo id_produto_item deve ser do tipo integer\"\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Apagar",
+							"id": "e3df1fdb-584a-47fa-8d99-7e8394948ab0",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"description": "Bearer Token obtido na autenticação"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/v1/integracao/estoque/produto_item/:id_produto_item",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"integracao",
+										"estoque",
+										"produto_item",
+										":id_produto_item"
+									],
+									"variable": [
+										{
+											"id": "1f57c008-553b-4457-a511-122e65be463e",
+											"key": "id_produto_item",
+											"value": "213346",
+											"description": "(Integer) ID do Produto Item já cadastrado anteriormente"
+										}
+									]
+								},
+								"description": "No método `DELETE`, será possível apagar um item de produto. Para que ele seja removido, o mesmo precisa estar no estatus \"estoque\", se ele estiver em qualquer outro status, significa que o mesmo está movimentado / sendo utilizado, portanto não será possível remover."
+							},
+							"response": [
+								{
+									"id": "7d7900f3-a5b7-40bf-b159-890011b820ea",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Bearer Token obtido na autenticação"
+											}
+										],
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/estoque/produto_item/:id_produto_item",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"estoque",
+												"produto_item",
+												":id_produto_item"
+											],
+											"variable": [
+												{
+													"key": "id_produto_item",
+													"value": "213346",
+													"description": "(Integer) ID do Produto Item já cadastrado anteriormente"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 06 Feb 2023 13:41:42 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 14:41:42 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Item do Produto apagado com sucesso\"\n}"
+								},
+								{
+									"id": "62f651e1-ab56-465f-aa51-efb4bfb6ad49",
+									"name": "Erro",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Bearer Token obtido na autenticação"
+											}
+										],
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/estoque/produto_item/:id_produto_item",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"estoque",
+												"produto_item",
+												":id_produto_item"
+											],
+											"variable": [
+												{
+													"key": "id_produto_item",
+													"value": "213346abc",
+													"description": "(Integer) ID do Produto Item já cadastrado anteriormente"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 06 Feb 2023 13:40:16 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 14:40:16 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"error\",\n    \"msg\": \"Favor preencher os campos obrigatórios de acordo com as especificações\",\n    \"errors\": [\n        \"O campo id_produto_item deve ser do tipo integer\"\n    ]\n}"
+								}
+							]
+						}
+					],
+					"id": "67f30b18-daba-4b96-bc44-35072db76cee"
+				}
+			],
+			"id": "3619cf3a-3e0f-4166-b498-1d3a7624a6d7"
+		},
+		{
 			"name": "Financeiro",
 			"item": [
 				{
@@ -1551,7 +3978,7 @@
 									{
 										"key": "Authorization",
 										"value": "{{access_token}}",
-										"type": "text"
+										"description": "Bearer Token obtido na autenticação"
 									}
 								],
 								"body": {
@@ -1622,30 +4049,10 @@
 									{
 										"key": "Authorization",
 										"value": "{{access_token}}",
-										"type": "text",
-										"description": "Bearer"
+										"description": "Bearer Token obtido na autenticação"
 									}
 								],
-								"url": {
-									"raw": "{{url}}/api/v1/integracao/financeiro/fatura?=",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"api",
-										"v1",
-										"integracao",
-										"financeiro",
-										"fatura"
-									],
-									"query": [
-										{
-											"key": "",
-											"value": "",
-											"type": "text"
-										}
-									]
-								},
+								"url": "{{url}}/api/v1/integracao/financeiro/fatura",
 								"description": "**GET**\n\nNo método `GET`, irá consultar/listar os dados de faturas e retornar um `JSON` como resposta. Os dados serão retornados de forma paginada, portanto fique atento ao conjunto da dados \"paginacao\" que é retornado na resposta, para saber se será necessário consultar outras páginas ou não.\n\nOs seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| pagina | Página a ser exibida | Não |\n| itens_por_pagina | Itens por Página a serem exibidos. Mínimo: 1, Máximo: 500. | Não |\n| documento | CNPJ da Empresa emissora da fatura | Não |\n| busca | Tipo de busca que deseja fazer no cliente | Não |\n| termo_busca | Termo utilizado para fazer a busca | Não |\n| tipo_data | Tipo de data que será utilizada | Não |\n| tipo_resultado | Tipo de resultado que será devolvido na resposta | Não |\n| data_inicio | Data de início da filtragem de dados | Não |\n| data_fim | Data final da filtragem de dados | Não |\n| apenas_quitado | Indica o status desejado das faturas | Não |\n| valor_zerado | Indica se deseja listar as faturs com valor = 0 | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| pagina | Campo Inteiro (integer) | 0 |\n| itens_por_pagina | Campo Inteiro (integer) | 50 |\n| documento | CNPJ da Empresa emissora | `NULL` |\n| busca | id_cliente, codigo_cliente, cpf_cnpj, id_cliente_servico | `NULL` |\n| termo_busca | Campo livre (Qualquer valor será aceito) | `NULL` |\n| tipo_data | data_vencimento, data_pagamento, data_cadastro | data_vencimento |\n| tipo_resultado | simplificado, detalhado | simplificado |\n| data_inicio | Campo no formato Date (YYYY-MM-DD) | 10 dias anterioes à data atual |\n| data_fim | Campo no formato Date (YYYY-MM-DD) | Data Atual |\n| apenas_quitado | sim,nao | nao |\n| valor_zerado | sim,nao | nao |"
 							},
 							"response": [
@@ -1703,8 +4110,7 @@
 									{
 										"key": "Authorization",
 										"value": "{{access_token}}",
-										"type": "text",
-										"description": "Bearer"
+										"description": "Bearer Token obtido na autenticação"
 									}
 								],
 								"body": {
@@ -1799,7 +4205,7 @@
 							{
 								"key": "Authorization",
 								"value": "{{access_token}}",
-								"type": "text"
+								"description": "Bearer Token obtido na autenticação"
 							}
 						],
 						"body": {
@@ -1859,7 +4265,7 @@
 							{
 								"key": "Authorization",
 								"value": "{{access_token}}",
-								"type": "text"
+								"description": "Bearer Token obtido na autenticação"
 							}
 						],
 						"body": {
@@ -1924,7 +4330,7 @@
 							{
 								"key": "Authorization",
 								"value": "{{access_token}}",
-								"type": "text"
+								"description": "Bearer Token obtido na autenticação"
 							}
 						],
 						"body": {
@@ -1989,7 +4395,7 @@
 							{
 								"key": "Authorization",
 								"value": "{{access_token}}",
-								"type": "text"
+								"description": "Bearer Token obtido na autenticação"
 							}
 						],
 						"body": {
@@ -2064,7 +4470,7 @@
 									{
 										"key": "Authorization",
 										"value": "{{access_token}}",
-										"type": "text"
+										"description": "Bearer Token obtido na autenticação"
 									}
 								],
 								"url": {
@@ -2356,7 +4762,7 @@
 									{
 										"key": "Authorization",
 										"value": "{{access_token}}",
-										"type": "text"
+										"description": "Bearer Token obtido na autenticação"
 									}
 								],
 								"url": {
@@ -2670,7 +5076,7 @@
 							{
 								"key": "Authorization",
 								"value": "{{access_token}}",
-								"type": "text"
+								"description": "Bearer Token obtido na autenticação"
 							}
 						],
 						"body": {
@@ -2735,7 +5141,7 @@
 							{
 								"key": "Authorization",
 								"value": "{{access_token}}",
-								"type": "text"
+								"description": "Bearer Token obtido na autenticação"
 							}
 						],
 						"body": {
@@ -2807,7 +5213,7 @@
 							{
 								"key": "Authorization",
 								"value": "{{access_token}}",
-								"type": "text"
+								"description": "Bearer Token obtido na autenticação"
 							}
 						],
 						"url": "{{url}}/api/v1/integracao/prospecto/all",
@@ -2848,7 +5254,7 @@
 							{
 								"key": "Authorization",
 								"value": "{{access_token}}",
-								"type": "text"
+								"description": "Bearer Token obtido na autenticação"
 							}
 						],
 						"url": {
@@ -3039,7 +5445,7 @@
 							{
 								"key": "Authorization",
 								"value": "{{access_token}}",
-								"type": "text"
+								"description": "Bearer Token obtido na autenticação"
 							}
 						],
 						"body": {
@@ -3124,7 +5530,7 @@
 							{
 								"key": "Authorization",
 								"value": "{{access_token}}",
-								"type": "text"
+								"description": "Bearer Token obtido na autenticação"
 							}
 						],
 						"url": {
@@ -3243,7 +5649,7 @@
 							{
 								"key": "Authorization",
 								"value": "{{access_token}}",
-								"type": "text"
+								"description": "Bearer Token obtido na autenticação"
 							}
 						],
 						"url": "{{url}}/api/v1/integracao/rede/equipamento",
@@ -3284,7 +5690,7 @@
 							{
 								"key": "Authorization",
 								"value": "{{access_token}}",
-								"type": "text"
+								"description": "Bearer Token obtido na autenticação"
 							}
 						],
 						"url": "{{url}}/api/v1/integracao/rede/pop",
@@ -3319,7 +5725,7 @@
 							{
 								"key": "Authorization",
 								"value": "{{access_token}}",
-								"type": "text"
+								"description": "Bearer Token obtido na autenticação"
 							}
 						],
 						"url": "{{url}}/api/v1/integracao/rede/zona_atendimento",
@@ -3367,7 +5773,7 @@
 							{
 								"key": "Authorization",
 								"value": "{{access_token}}",
-								"type": "text"
+								"description": "Bearer Token obtido na autenticação"
 							}
 						],
 						"url": "{{url}}/api/v1/integracao/configuracao/caixa_financeiro",
@@ -3408,7 +5814,7 @@
 							{
 								"key": "Authorization",
 								"value": "{{access_token}}",
-								"type": "text"
+								"description": "Bearer Token obtido na autenticação"
 							}
 						],
 						"url": "{{url}}/api/v1/integracao/configuracao/cidade",
@@ -3449,7 +5855,7 @@
 							{
 								"key": "Authorization",
 								"value": "{{access_token}}",
-								"type": "text"
+								"description": "Bearer Token obtido na autenticação"
 							}
 						],
 						"url": "{{url}}/api/v1/integracao/configuracao/meio_pagamento",
@@ -3490,7 +5896,7 @@
 							{
 								"key": "Authorization",
 								"value": "{{access_token}}",
-								"type": "text"
+								"description": "Bearer Token obtido na autenticação"
 							}
 						],
 						"url": "{{url}}/api/v1/integracao/configuracao/tipo_atendimento",
@@ -3537,7 +5943,7 @@
 							{
 								"key": "Authorization",
 								"value": "{{access_token}}",
-								"type": "text"
+								"description": "Bearer Token obtido na autenticação"
 							}
 						],
 						"url": "{{url}}/api/v1/integracao/configuracao/tipo_servico",
@@ -3600,37 +6006,37 @@
 	],
 	"variable": [
 		{
-			"id": "5d8668f5-b9e5-4187-9a21-582af7ad657d",
+			"id": "0da2c3af-7135-4f54-b632-a54cba379c42",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "bc5fc71d-1d2a-4fe1-8df2-4fc0918092e1",
+			"id": "ab5042a4-ea38-4b09-8915-3e42a310bdbc",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "f02d0a7d-21af-4ada-ad1e-b89cb37e8421",
+			"id": "9bc5aa55-8360-4449-8628-694090b58778",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "d4698f4b-a11e-4d4d-b014-3842f080925d",
+			"id": "d956e2c8-7228-4293-9de1-ec03720e184f",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "a2a7daf6-3be3-481b-9cc2-da3cd20fb552",
+			"id": "c238c7ee-f852-4d30-958d-aa0c246d86b2",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "59528345-48f9-48e7-bb58-e5af7c530c3b",
+			"id": "1cee95ae-3982-4d3d-9e1a-5475f78b73ab",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "aebdadcc-17e5-4da6-bd5a-bac1c721ec12",
+			"id": "1dd4bf81-a7bf-4f50-9b25-314a689f2932",
 			"key": "access_token",
 			"value": ""
 		}
