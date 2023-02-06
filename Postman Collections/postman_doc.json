@@ -1411,7 +1411,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{url}}/api/v1/integracao/estoque/produto?pagina=0&itens_por_pagina=100&data_inicio=YYYY-MM-DD&data_fim=YYYY-MM-DD",
+									"raw": "{{url}}/api/v1/integracao/estoque/local_estoque?pagina=0&itens_por_pagina=100",
 									"host": [
 										"{{url}}"
 									],
@@ -1420,7 +1420,7 @@
 										"v1",
 										"integracao",
 										"estoque",
-										"produto"
+										"local_estoque"
 									],
 									"query": [
 										{
@@ -1432,16 +1432,6 @@
 											"key": "itens_por_pagina",
 											"value": "100",
 											"description": "(Opcional) Itens por Página. Se não preenchido será atributo 100 por padrão. Máximo: 500"
-										},
-										{
-											"key": "data_inicio",
-											"value": "YYYY-MM-DD",
-											"description": "(Opcional) Data de Cadastro Início da Consulta no formato YYYY-MM-DD"
-										},
-										{
-											"key": "data_fim",
-											"value": "YYYY-MM-DD",
-											"description": "(Opcional) Data de Cadastro Final da Consulta no formato YYYY-MM-DD"
 										}
 									]
 								},
@@ -6545,37 +6535,37 @@
 	],
 	"variable": [
 		{
-			"id": "3da2b644-c61e-4728-baa9-080b6778dbfd",
+			"id": "e0bc1558-8e45-466e-a40c-23ca9044f292",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "48fd2299-a11b-499f-b429-c26a19e65af1",
+			"id": "6b7afdd0-9727-4b76-b6f8-0d647aeecb84",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "1f51976b-7ff0-4feb-85f8-816b3ec62f2e",
+			"id": "508e3873-9e6e-46d0-954f-e505a9333533",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "634aaeac-26ba-4295-9f96-678c391d131f",
+			"id": "71acfaf7-b7dc-40d3-818e-0ce23c8d4b93",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "d12659a5-70aa-4560-b35e-3c8f562cd7f7",
+			"id": "894c1666-ce33-418c-a4a7-3489c940223a",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "632a344e-8118-4ff1-b280-e705a5e033ff",
+			"id": "daad567b-2e18-454a-a1ae-bb3a321078f4",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "30155772-2826-470d-a4ef-ac81c5c88687",
+			"id": "6bd76e49-c427-4564-b828-705d57e0747d",
 			"key": "access_token",
 			"value": ""
 		}
