@@ -1437,125 +1437,7 @@
 								},
 								"description": "**GET**\n\nNo método `GET`, irá consultar/listar os dados de locais de estoque e retornar um `JSON` como resposta. Os dados serão retornados de forma paginada, portanto fique atento ao conjunto da dados \"paginacao\" que é retornado na resposta, para saber se será necessário consultar outras páginas ou não.\n\nOs seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| pagina | Página a ser exibida | Sim |\n| itens_por_pagina | Itens por Página a serem exibidos. Mínimo: 1, Máximo: 500. | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| pagina | `Integer` | `NULL` |\n| itens_por_pagina | `Integer` | 100 |"
 							},
-							"response": [
-								{
-									"id": "4c8f8b6c-c7d8-4d84-bad4-f4a66af63680",
-									"name": "Sucesso",
-									"originalRequest": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "Authorization",
-												"value": "{{access_token}}",
-												"description": "Bearer Token obtido na autenticação"
-											}
-										],
-										"url": {
-											"raw": "{{url}}/api/v1/integracao/estoque/produto?pagina=0&itens_por_pagina=10&data_inicio=2000-01-01&data_fim=2023-12-31",
-											"host": [
-												"{{url}}"
-											],
-											"path": [
-												"api",
-												"v1",
-												"integracao",
-												"estoque",
-												"produto"
-											],
-											"query": [
-												{
-													"key": "pagina",
-													"value": "0",
-													"description": "(Obrigatório) Número da Página"
-												},
-												{
-													"key": "itens_por_pagina",
-													"value": "10",
-													"description": "(Opcional) Itens por Página. Se não preenchido será atributo 100 por padrão. Máximo: 500"
-												},
-												{
-													"key": "data_inicio",
-													"value": "2000-01-01",
-													"description": "(Opcional) Data de Cadastro Início da Consulta no formato YYYY-MM-DD"
-												},
-												{
-													"key": "data_fim",
-													"value": "2023-12-31",
-													"description": "(Opcional) Data de Cadastro Final da Consulta no formato YYYY-MM-DD"
-												}
-											]
-										}
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Server",
-											"value": "nginx/1.16.1"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										},
-										{
-											"key": "Vary",
-											"value": "Accept-Encoding"
-										},
-										{
-											"key": "X-Powered-By",
-											"value": "PHP/7.1.33"
-										},
-										{
-											"key": "Access-Control-Allow-Origin",
-											"value": "*"
-										},
-										{
-											"key": "Access-Control-Allow-Methods",
-											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
-										},
-										{
-											"key": "Access-Control-Allow-Headers",
-											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
-										},
-										{
-											"key": "Access-Control-Max-Age",
-											"value": "1728000"
-										},
-										{
-											"key": "Access-Control-Allow-Credentials",
-											"value": "true"
-										},
-										{
-											"key": "Cache-Control",
-											"value": "no-cache, private"
-										},
-										{
-											"key": "Date",
-											"value": "Mon, 06 Feb 2023 12:43:41 GMT"
-										},
-										{
-											"key": "Set-Cookie",
-											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 13:43:41 GMT; Max-Age=3600; path=/; httponly"
-										},
-										{
-											"key": "Content-Encoding",
-											"value": "gzip"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Dados consultados com sucesso\",\n    \"paginacao\": {\n        \"primeira_pagina\": 0,\n        \"ultima_pagina\": 43,\n        \"pagina_atual\": 0,\n        \"total_registros\": 440\n    },\n    \"produtos\": [\n        {\n            \"id_produto\": 1,\n            \"nome\": \"Airgrid\",\n            \"descricao\": \"teste\",\n            \"valor_compra\": 280,\n            \"valor_venda\": 400,\n            \"codigo_ean\": null,\n            \"codigo_ean_trib\": null,\n            \"data_cadastro\": \"2017-09-22 11:54:45\",\n            \"ncm\": {\n                \"id_ncm\": 8834,\n                \"codigo\": \"85176249\",\n                \"descricao\": \"OUTROS ROTEADORES DIGITAIS\"\n            },\n            \"cst_origem\": null,\n            \"cst_tributacao\": null,\n            \"csosn\": null,\n            \"cest\": null,\n            \"unidade_medida\": {\n                \"id_unidade_medida\": 19,\n                \"nome\": \"Unidade\",\n                \"abreviacao\": \"UN\"\n            }\n        },\n        {\n            \"id_produto\": 38,\n            \"nome\": \"MINE RACK PARA SERVIDOR\",\n            \"descricao\": \"RACK\",\n            \"valor_compra\": 4969.5,\n            \"valor_venda\": 4969.5,\n            \"codigo_ean\": \"7896637665919\",\n            \"codigo_ean_trib\": \"7896637665919\",\n            \"data_cadastro\": \"2018-02-28 08:44:28\",\n            \"ncm\": {\n                \"id_ncm\": 8822,\n                \"codigo\": \"85176219\",\n                \"descricao\": \"OUTROS CONCENTRADORES\"\n            },\n            \"cst_origem\": null,\n            \"cst_tributacao\": null,\n            \"csosn\": null,\n            \"cest\": {\n                \"id_cest\": 2112,\n                \"codigo\": \"2108000\",\n                \"descricao\": \"Multiplexadores e concentradores\"\n            },\n            \"unidade_medida\": {\n                \"id_unidade_medida\": 12,\n                \"nome\": \"Peça\",\n                \"abreviacao\": \"PÇ\"\n            }\n        },\n        {\n            \"id_produto\": 39,\n            \"nome\": \"ONU OVERTEK\",\n            \"descricao\": null,\n            \"valor_compra\": 120,\n            \"valor_venda\": 165.9,\n            \"codigo_ean\": \"7896637668149\",\n            \"codigo_ean_trib\": \"7896637668149\",\n            \"data_cadastro\": \"2018-02-28 08:44:28\",\n            \"ncm\": {\n                \"id_ncm\": 8853,\n                \"codigo\": \"85176294\",\n                \"descricao\": \"TRADUT.D/PROTOCOLOS P/INTERCONEXÃO D/REDES\"\n            },\n            \"cst_origem\": null,\n            \"cst_tributacao\": null,\n            \"csosn\": null,\n            \"cest\": {\n                \"id_cest\": 2117,\n                \"codigo\": \"2108500\",\n                \"descricao\": \"Outros aparelhos de recepção, conversão e transmissão ou regeneração de voz, imagens ou outros dados, incluindo os aparelhos de comutação e roteamento\"\n            },\n            \"unidade_medida\": {\n                \"id_unidade_medida\": 12,\n                \"nome\": \"Peça\",\n                \"abreviacao\": \"PÇ\"\n            }\n        },\n        {\n            \"id_produto\": 59,\n            \"nome\": \"CABO OPTICO CFOA-SM-ASU-80-RA-012-NR\",\n            \"descricao\": null,\n            \"valor_compra\": 1.56,\n            \"valor_venda\": 1.56,\n            \"codigo_ean\": null,\n            \"codigo_ean_trib\": null,\n            \"data_cadastro\": \"2018-03-10 00:42:42\",\n            \"ncm\": {\n                \"id_ncm\": 9210,\n                \"codigo\": \"85447010\",\n                \"descricao\": \"CABOS FIBRA ÓPTICA REVEST.EXT.MAT.DIELÉTRICO\"\n            },\n            \"cst_origem\": null,\n            \"cst_tributacao\": null,\n            \"csosn\": null,\n            \"cest\": null,\n            \"unidade_medida\": {\n                \"id_unidade_medida\": 11,\n                \"nome\": \"Metro\",\n                \"abreviacao\": \"m\"\n            }\n        },\n        {\n            \"id_produto\": 110,\n            \"nome\": \"Antena LUCAS\",\n            \"descricao\": null,\n            \"valor_compra\": 65,\n            \"valor_venda\": 150,\n            \"codigo_ean\": null,\n            \"codigo_ean_trib\": null,\n            \"data_cadastro\": \"2018-07-03 15:58:12\",\n            \"ncm\": null,\n            \"cst_origem\": null,\n            \"cst_tributacao\": null,\n            \"csosn\": null,\n            \"cest\": null,\n            \"unidade_medida\": {\n                \"id_unidade_medida\": 19,\n                \"nome\": \"Unidade\",\n                \"abreviacao\": \"UN\"\n            }\n        },\n        {\n            \"id_produto\": 130,\n            \"nome\": \"APAR.TRANSCEPTOR P/FIBRA\",\n            \"descricao\": null,\n            \"valor_compra\": 435.28,\n            \"valor_venda\": 435.28,\n            \"codigo_ean\": \"SEM GTIN\",\n            \"codigo_ean_trib\": \"SEM GTIN\",\n            \"data_cadastro\": \"2018-08-01 15:22:18\",\n            \"ncm\": {\n                \"id_ncm\": 8840,\n                \"codigo\": \"85176259\",\n                \"descricao\": \"OUTS.EQUIPAMENTOS TERMINAIS OU REPETIDORES\"\n            },\n            \"cst_origem\": null,\n            \"cst_tributacao\": null,\n            \"csosn\": null,\n            \"cest\": {\n                \"id_cest\": 2083,\n                \"codigo\": \"2105600\",\n                \"descricao\": \"Aparelhos para transmissão ou recepção de voz, imagem ou outros dados em rede com fio, exceto os classificados nos códigos 8517.62.51, 8517.62.52 e 8517.62.53\"\n            },\n            \"unidade_medida\": {\n                \"id_unidade_medida\": 19,\n                \"nome\": \"Unidade\",\n                \"abreviacao\": \"UN\"\n            }\n        },\n        {\n            \"id_produto\": 131,\n            \"nome\": \"CABO DE 30 VOLTS\",\n            \"descricao\": null,\n            \"valor_compra\": 3,\n            \"valor_venda\": 5,\n            \"codigo_ean\": \"SEM GTIN\",\n            \"codigo_ean_trib\": \"SEM GTIN\",\n            \"data_cadastro\": \"2018-08-01 15:22:18\",\n            \"ncm\": {\n                \"id_ncm\": 9207,\n                \"codigo\": \"85444200\",\n                \"descricao\": \"OUTS.CONDUTS.ELÉTS.TENSÃO <=1000V,C/PEÇAS DE CONEXÃO\"\n            },\n            \"cst_origem\": null,\n            \"cst_tributacao\": null,\n            \"csosn\": null,\n            \"cest\": {\n                \"id_cest\": 1577,\n                \"codigo\": \"1200700\",\n                \"descricao\": \"Fios, cabos (incluídos os cabos coaxiais) e outros condutores, isolados ou não, para usos elétricos (incluídos os de cobre ou alumínio, envernizados ou oxidados anodicamente), mesmo com peças de conexão, inclusive fios e cabos elétricos, para tensão não superior a 1000V, para uso na construção; fios e cabos telefônicos e para transmissão de dados; cabos de fibras ópticas, constituídos de fibras embainhadas individualmente, mesmo com condutores elétricos ou munidos de peças de conexão; cordas, cabos, tranças\"\n            },\n            \"unidade_medida\": {\n                \"id_unidade_medida\": 5,\n                \"nome\": \"Kilograma\",\n                \"abreviacao\": \"kg\"\n            }\n        },\n        {\n            \"id_produto\": 132,\n            \"nome\": \"CONJ.TRILHOS/SUP/FIXADOR\",\n            \"descricao\": null,\n            \"valor_compra\": 240.21,\n            \"valor_venda\": 240.21,\n            \"codigo_ean\": \"SEM GTIN\",\n            \"codigo_ean_trib\": \"SEM GTIN\",\n            \"data_cadastro\": \"2018-08-01 15:22:19\",\n            \"ncm\": {\n                \"id_ncm\": 8433,\n                \"codigo\": \"84733099\",\n                \"descricao\": \"OUTS.PARTES ACESS.P/MÁQS.AUTOM.PROC.DADOS\"\n            },\n            \"cst_origem\": null,\n            \"cst_tributacao\": null,\n            \"csosn\": null,\n            \"cest\": {\n                \"id_cest\": 2060,\n                \"codigo\": \"2103500\",\n                \"descricao\": \"Partes e acessórios das máquinas da posição 84.71\"\n            },\n            \"unidade_medida\": {\n                \"id_unidade_medida\": 5,\n                \"nome\": \"Kilograma\",\n                \"abreviacao\": \"kg\"\n            }\n        },\n        {\n            \"id_produto\": 138,\n            \"nome\": \"ROTEADOR WIRELESS TP-LINK\",\n            \"descricao\": \"ROTEADOR WIRELESS TP-LINK 150 Mbps\",\n            \"valor_compra\": 100,\n            \"valor_venda\": 199,\n            \"codigo_ean\": null,\n            \"codigo_ean_trib\": null,\n            \"data_cadastro\": \"2018-10-09 15:04:10\",\n            \"ncm\": null,\n            \"cst_origem\": null,\n            \"cst_tributacao\": null,\n            \"csosn\": null,\n            \"cest\": null,\n            \"unidade_medida\": {\n                \"id_unidade_medida\": 19,\n                \"nome\": \"Unidade\",\n                \"abreviacao\": \"UN\"\n            }\n        },\n        {\n            \"id_produto\": 139,\n            \"nome\": \"BOBINA DROP\",\n            \"descricao\": \"BOBINA DROP\",\n            \"valor_compra\": 0.3,\n            \"valor_venda\": 0.75,\n            \"codigo_ean\": null,\n            \"codigo_ean_trib\": null,\n            \"data_cadastro\": \"2018-10-11 11:40:45\",\n            \"ncm\": null,\n            \"cst_origem\": null,\n            \"cst_tributacao\": null,\n            \"csosn\": null,\n            \"cest\": null,\n            \"unidade_medida\": {\n                \"id_unidade_medida\": 11,\n                \"nome\": \"Metro\",\n                \"abreviacao\": \"m\"\n            }\n        }\n    ]\n}"
-								}
-							]
+							"response": []
 						},
 						{
 							"name": "Encontrar por ID",
@@ -6416,37 +6298,37 @@
 	],
 	"variable": [
 		{
-			"id": "20393504-484d-4a5a-bacc-ca9581bc19b7",
+			"id": "d6390b52-dde0-48d4-8b10-338844bddd27",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "df9eb360-6a78-4eaa-aa29-1e913fd4af97",
+			"id": "7921d020-e7bb-4db4-8eeb-5a16149009d5",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "3428e55a-0bea-4190-b904-6466f16295f4",
+			"id": "f0927bbe-12d4-43af-a40f-0f61e65b808d",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "248b0380-0a19-46b6-97c4-da46c653a159",
+			"id": "f8a725d2-424e-4f49-a3f2-b56c58274940",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "1c466d40-be76-4c94-bd1c-995b1bd6154a",
+			"id": "47b17266-1d24-43a5-ae2b-5cf3755188ef",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "d8a33285-79cd-4e21-9854-6447cf0d1a1e",
+			"id": "0e299532-af51-4ba1-ba9c-3aa8b3a7083a",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "5fef3f38-3e8c-46bd-b617-cd79d79103b9",
+			"id": "b2f6026f-ba30-4b90-a8d7-b27c4d64b849",
 			"key": "access_token",
 			"value": ""
 		}
