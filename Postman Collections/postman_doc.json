@@ -1693,7 +1693,111 @@
 								},
 								"description": "**GET**\n\nNo método `GET`, será possível consultar um produto individualmente. Esse endpoint pode ser útil quando for necessário verificar / sincronizar produto por produto."
 							},
-							"response": []
+							"response": [
+								{
+									"id": "2ea0aff4-1318-45c8-8a2b-53a70c2093af",
+									"name": "Encontrar por ID",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Bearer Token obtido na autenticação"
+											}
+										],
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/estoque/local_estoque/:id_local_estoque",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"estoque",
+												"local_estoque",
+												":id_local_estoque"
+											],
+											"variable": [
+												{
+													"key": "id_local_estoque",
+													"value": "5",
+													"description": "ID do Local de Estoque já cadastrado"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 06 Feb 2023 19:06:10 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=rHpfhkRYjRgjQF1nydGrU9ASDTevFKWqZ0T7lZ0N; expires=Mon, 06-Feb-2023 20:06:10 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Local de Estoque de ID 5 consultado com sucesso\",\n    \"produto\": {\n        \"id_local_estoque\": 5,\n        \"descricao\": \"ALMOXARIFADO\",\n        \"empresa\": {\n            \"id_empresa\": 1,\n            \"nome_razaosocial\": \"SERVIÇOS DE TECNOLOGIA\",\n            \"cnpj\": \"36636392000127\"\n        },\n        \"endereco\": {\n            \"endereco\": \"AVENIDA BRASIL\",\n            \"numero\": \"77\",\n            \"complemento\": null,\n            \"referencia\": null,\n            \"bairro\": \"CENTRO\",\n            \"cidade\": \"SANTO ANTÔNIO DO MONTE\",\n            \"estado\": \"MG\",\n            \"pais\": \"BRASIL\",\n            \"cep\": \"35560000\",\n            \"ibge\": \"3160405\"\n        },\n        \"data_cadastro\": \"2018-04-23 14:06:36\"\n    }\n}"
+								}
+							]
 						}
 					],
 					"id": "6b290156-f9d4-42a6-9483-13ac92ea45ab"
@@ -6307,37 +6411,37 @@
 	],
 	"variable": [
 		{
-			"id": "22253d28-1d78-4067-935f-9d9b8ed70884",
+			"id": "06309c38-028b-4402-914e-602250cbe78c",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "b8f053ed-10c9-4751-8daa-cf4eef49d945",
+			"id": "4fd0a1ba-0f3c-4625-a46c-71e3daedc10d",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "d9331c90-fac9-4b4f-ac14-c9bd8aa1ed8e",
+			"id": "e9d6efb4-5c9f-44c6-9878-3a7f72b0602a",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "837a0a57-0959-4b56-9375-141810a223e6",
+			"id": "f1973814-1701-4e4a-bd27-c09ba870a773",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "e75d06db-9b68-4bb6-acab-e54b2aaefb20",
+			"id": "c56cbe9a-794f-4614-b689-5482c3535a52",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "1a63a95f-5e18-4be9-a04c-860cd4dcbbbf",
+			"id": "0a5217f7-6672-4034-affd-24c8a5d2f7a8",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "bf3017ee-27fc-417e-99b3-c3df6ae7e1ab",
+			"id": "9d4a8394-6556-46c4-8a7b-9d801746a3eb",
 			"key": "access_token",
 			"value": ""
 		}
