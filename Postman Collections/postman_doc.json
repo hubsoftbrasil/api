@@ -1435,7 +1435,7 @@
 										}
 									]
 								},
-								"description": "**GET**\n\nNo método `GET`, irá consultar/listar os dados de produtos e retornar um `JSON` como resposta. Os dados serão retornados de forma paginada, portanto fique atento ao conjunto da dados \"paginacao\" que é retornado na resposta, para saber se será necessário consultar outras páginas ou não.\n\nOs seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| pagina | Página a ser exibida | Sim |\n| itens_por_pagina | Itens por Página a serem exibidos. Mínimo: 1, Máximo: 500. | Não |\n| data_inicio | Data de início da filtragem de dados | Não |\n| data_fim | Data final da filtragem de dados | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| pagina | Campo Inteiro (integer) | `NULL` |\n| itens_por_pagina | Campo Inteiro (integer) | 100 |\n| data_inicio | Campo no formato Date (YYYY-MM-DD) | `NULL` |\n| data_fim | Campo no formato Date (YYYY-MM-DD) | `NULL` |\n| apenas_quitado | sim,nao | nao |"
+								"description": "**GET**\n\nNo método `GET`, irá consultar/listar os dados de locais de estoque e retornar um `JSON` como resposta. Os dados serão retornados de forma paginada, portanto fique atento ao conjunto da dados \"paginacao\" que é retornado na resposta, para saber se será necessário consultar outras páginas ou não.\n\nOs seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| pagina | Página a ser exibida | Sim |\n| itens_por_pagina | Itens por Página a serem exibidos. Mínimo: 1, Máximo: 500. | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| pagina | `Integer` | `NULL` |\n| itens_por_pagina | `Integer` | 100 |"
 							},
 							"response": [
 								{
@@ -6533,37 +6533,37 @@
 	],
 	"variable": [
 		{
-			"id": "4ac10d62-5e4e-4aa7-b405-4dd0ea035b76",
+			"id": "d809f44c-1d10-408c-bb9f-1bb0a793e0eb",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "690c5b88-40e6-4b89-be67-f06327908733",
+			"id": "44cf1ce0-8aed-4f80-a912-4a03ff6602c1",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "93b308e7-e0c9-47a1-a8f8-665b65c97519",
+			"id": "a20edbd7-3259-4d38-9966-a0cb2810e8d4",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "6227ee74-f19c-4ded-b4d8-20cbec0acb3c",
+			"id": "58c02551-9b3d-49b2-ac95-a18905ca9f2e",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "2f17e820-2529-4075-9dcd-cd70547b38ba",
+			"id": "76c2dac3-0fcb-4a97-b9ee-70638ff65116",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "e6bd1364-cdf8-4c1e-9b2d-825ebf052d51",
+			"id": "51e9407a-8966-4855-a970-c738e7bd1f5a",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "0fadddf0-e28b-4d29-9132-5a251fa1c876",
+			"id": "465ed283-c8cd-4856-b503-41623512575b",
 			"key": "access_token",
 			"value": ""
 		}
