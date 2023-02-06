@@ -1691,7 +1691,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{url}}/api/v1/integracao/estoque/produto/:id_produto",
+									"raw": "{{url}}/api/v1/integracao/estoque/produto/:id_local_estoque",
 									"host": [
 										"{{url}}"
 									],
@@ -1701,14 +1701,12 @@
 										"integracao",
 										"estoque",
 										"produto",
-										":id_produto"
+										":id_local_estoque"
 									],
 									"variable": [
 										{
-											"id": "0376b67c-860d-450c-813c-58b21eb5d6d7",
-											"key": "id_produto",
-											"value": "49742",
-											"description": "(Integer) ID do Produto já cadastrado anteriormente"
+											"key": "id_local_estoque",
+											"value": null
 										}
 									]
 								},
@@ -6535,37 +6533,37 @@
 	],
 	"variable": [
 		{
-			"id": "e0bc1558-8e45-466e-a40c-23ca9044f292",
+			"id": "458fcbde-6a49-4773-9212-86fb77e5d959",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "6b7afdd0-9727-4b76-b6f8-0d647aeecb84",
+			"id": "5deb6496-88c1-4eca-ae9e-57db15c9b6b1",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "508e3873-9e6e-46d0-954f-e505a9333533",
+			"id": "6215ee5a-bd32-4fe2-babc-0691314f3d61",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "71acfaf7-b7dc-40d3-818e-0ce23c8d4b93",
+			"id": "f2e5c81d-987d-4284-9cbb-cfc1730c709a",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "894c1666-ce33-418c-a4a7-3489c940223a",
+			"id": "a8b2ba27-3f39-4018-9439-5ea2849324b7",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "daad567b-2e18-454a-a1ae-bb3a321078f4",
+			"id": "89538d7f-0dc0-471a-a917-068bf6fffed9",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "6bd76e49-c427-4564-b828-705d57e0747d",
+			"id": "edab80dd-1350-46f8-9f20-97916195668d",
 			"key": "access_token",
 			"value": ""
 		}
