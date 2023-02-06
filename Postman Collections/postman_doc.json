@@ -2990,9 +2990,8 @@
 									],
 									"variable": [
 										{
-											"id": "dbcec77f-ad9d-4e3f-bf6c-e055bf884df9",
 											"key": "id_produto_item",
-											"value": "323131231",
+											"value": "integer",
 											"description": "(Integer) ID do Produto Item já cadastrado anteriormente"
 										}
 									]
@@ -6006,37 +6005,37 @@
 	],
 	"variable": [
 		{
-			"id": "a3c8d37a-c1cd-465d-a442-d6a65a82fd32",
+			"id": "d81e5704-cdeb-4a3f-a4f2-1918197f7e8d",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "fb7bf32d-fc64-430f-a9d1-6d481e2e7c5a",
+			"id": "027bf10d-7141-42b6-98e3-5cb03687936c",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "97f1fa09-ad79-4832-9077-3ffb530e0df4",
+			"id": "77198bf0-71f1-49ed-b2bb-3759c25ab22a",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "46585b9b-a0da-49a7-9d72-4f2642d55a73",
+			"id": "dca7f967-c730-4e25-bbd5-2718451ed8ad",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "fcd77312-76b4-4894-9b3f-cc81940aae23",
+			"id": "aa6bb0a6-08be-467c-81ca-6ba803dac709",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "69fe6a6c-0fdf-4f1c-bb08-ead8c8035acd",
+			"id": "e03eccb3-a42a-43df-b8cd-66edda32c2b0",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "0985475c-dc3a-4493-8600-450688bf3cf1",
+			"id": "6d3ed7b4-944f-4498-bb65-42fda7591677",
 			"key": "access_token",
 			"value": ""
 		}
