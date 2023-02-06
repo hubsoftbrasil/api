@@ -1695,109 +1695,6 @@
 							},
 							"response": [
 								{
-									"id": "a22f616f-3faf-48f5-910c-91c9d4a8dedc",
-									"name": "Sucesso",
-									"originalRequest": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "Authorization",
-												"value": "{{access_token}}",
-												"description": "Bearer Token obtido na autenticação"
-											}
-										],
-										"url": {
-											"raw": "{{url}}/api/v1/integracao/estoque/produto/:id_produto",
-											"host": [
-												"{{url}}"
-											],
-											"path": [
-												"api",
-												"v1",
-												"integracao",
-												"estoque",
-												"produto",
-												":id_produto"
-											],
-											"variable": [
-												{
-													"key": "id_produto",
-													"value": "",
-													"description": "(Integer) ID do Produto já cadastrado anteriormente"
-												}
-											]
-										}
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Server",
-											"value": "nginx/1.16.1"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										},
-										{
-											"key": "Vary",
-											"value": "Accept-Encoding"
-										},
-										{
-											"key": "X-Powered-By",
-											"value": "PHP/7.1.33"
-										},
-										{
-											"key": "Access-Control-Allow-Origin",
-											"value": "*"
-										},
-										{
-											"key": "Access-Control-Allow-Methods",
-											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
-										},
-										{
-											"key": "Access-Control-Allow-Headers",
-											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
-										},
-										{
-											"key": "Access-Control-Max-Age",
-											"value": "1728000"
-										},
-										{
-											"key": "Access-Control-Allow-Credentials",
-											"value": "true"
-										},
-										{
-											"key": "Cache-Control",
-											"value": "no-cache, private"
-										},
-										{
-											"key": "Date",
-											"value": "Mon, 06 Feb 2023 12:40:47 GMT"
-										},
-										{
-											"key": "Set-Cookie",
-											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 13:40:47 GMT; Max-Age=3600; path=/; httponly"
-										},
-										{
-											"key": "Content-Encoding",
-											"value": "gzip"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Produto de ID 4974 consultado com sucesso\",\n    \"produto\": {\n        \"id_produto\": 4974,\n        \"nome\": \"Teste API Postman\",\n        \"descricao\": null,\n        \"valor_compra\": 0,\n        \"valor_venda\": 0,\n        \"codigo_ean\": null,\n        \"codigo_ean_trib\": null,\n        \"data_cadastro\": \"2023-01-31 10:05:54\",\n        \"ncm\": null,\n        \"cst_origem\": null,\n        \"cst_tributacao\": null,\n        \"csosn\": null,\n        \"cest\": null,\n        \"unidade_medida\": {\n            \"id_unidade_medida\": 186,\n            \"nome\": \"\",\n            \"abreviacao\": \"\"\n        }\n    }\n}"
-								},
-								{
 									"id": "e465c43b-7ba3-4b38-8be9-9b5b0e90b771",
 									"name": "Erro",
 									"originalRequest": {
@@ -6514,37 +6411,37 @@
 	],
 	"variable": [
 		{
-			"id": "4402c3b2-58d8-4671-b739-1d17185e39eb",
+			"id": "a77e0543-2e8c-48d2-aec6-015a86195aeb",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "58666fc9-7da0-4811-9faf-5669c35b4659",
+			"id": "f2d5d0df-4a54-4cc7-be82-b5f46a6f4970",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "e3fd883c-8453-462e-b1a7-dceae95647b8",
+			"id": "ac03b001-8129-4851-abd7-b22143914d1b",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "9e8054e4-3911-4a8a-9eb6-4151a25b924d",
+			"id": "235222de-6e7b-4e2e-8899-e0699db316b1",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "73605d16-6e52-450c-bc24-8a2e8481a24e",
+			"id": "a0ccd6d8-2830-4689-96d1-ed371d9fbae8",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "12da6ef1-3d80-4c11-9b43-080b5b58c497",
+			"id": "50490521-aeac-433b-bfcf-ce132b46ae29",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "2cd2f431-8d66-445b-8e33-b6a055bf8036",
+			"id": "45c20483-3af7-41e9-9dd2-f6d2093892a9",
 			"key": "access_token",
 			"value": ""
 		}
