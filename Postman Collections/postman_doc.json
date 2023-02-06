@@ -1796,6 +1796,109 @@
 									"cookie": [],
 									"responseTime": null,
 									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Local de Estoque de ID 5 consultado com sucesso\",\n    \"produto\": {\n        \"id_local_estoque\": 5,\n        \"descricao\": \"ALMOXARIFADO\",\n        \"empresa\": {\n            \"id_empresa\": 1,\n            \"nome_razaosocial\": \"SERVIÇOS DE TECNOLOGIA\",\n            \"cnpj\": \"36636392000127\"\n        },\n        \"endereco\": {\n            \"endereco\": \"AVENIDA BRASIL\",\n            \"numero\": \"77\",\n            \"complemento\": null,\n            \"referencia\": null,\n            \"bairro\": \"CENTRO\",\n            \"cidade\": \"SANTO ANTÔNIO DO MONTE\",\n            \"estado\": \"MG\",\n            \"pais\": \"BRASIL\",\n            \"cep\": \"35560000\",\n            \"ibge\": \"3160405\"\n        },\n        \"data_cadastro\": \"2018-04-23 14:06:36\"\n    }\n}"
+								},
+								{
+									"id": "33e66ec6-1307-4659-bb18-b2e4a6ea7c84",
+									"name": "Encontrar por ID",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Bearer Token obtido na autenticação"
+											}
+										],
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/estoque/local_estoque/:id_local_estoque",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"estoque",
+												"local_estoque",
+												":id_local_estoque"
+											],
+											"variable": [
+												{
+													"key": "id_local_estoque",
+													"value": "9999",
+													"description": "ID do Local de Estoque já cadastrado"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 06 Feb 2023 19:06:52 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=rHpfhkRYjRgjQF1nydGrU9ASDTevFKWqZ0T7lZ0N; expires=Mon, 06-Feb-2023 20:06:52 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"error\",\n    \"msg\": \"Item de Produto de ID 9999 não encontrado\"\n}"
 								}
 							]
 						}
@@ -6411,37 +6514,37 @@
 	],
 	"variable": [
 		{
-			"id": "dbe2b0f7-5a4c-4bb6-bad7-30446628e335",
+			"id": "e34b0fab-b3fd-4cac-bf35-7580e5acd5c1",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "3739d7f8-dbda-41ac-b7f4-0745fa2ade5d",
+			"id": "8282f656-b467-4c12-905c-04af4052b22e",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "1c2e61e5-891c-42f1-8276-3e60c30ac18b",
+			"id": "2cd048ab-d1df-4ed8-9032-e07cb815af54",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "bf759ecd-9e1b-4f8d-8efb-92bf91b5a07c",
+			"id": "bc61a620-5e99-4c89-8bde-aa56935e09fe",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "8a7b8d01-b3e8-4ce1-b164-0e13cce26cd8",
+			"id": "8941b672-e67a-490c-af47-02e8ae370782",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "8de7a49e-fe58-47a7-b78c-0daacf1168e6",
+			"id": "679af481-95a4-44eb-8285-c57037a6e769",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "f3004ce9-e707-4ff8-9e80-0a721a38036e",
+			"id": "8fad9fc7-ac5a-4c90-b3bd-6896ba745f45",
 			"key": "access_token",
 			"value": ""
 		}
