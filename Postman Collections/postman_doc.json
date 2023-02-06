@@ -1977,7 +1977,7 @@
 										}
 									]
 								},
-								"description": "**GET**\n\nNo método `GET`, irá consultar/listar os dados de produtos e retornar um `JSON` como resposta. Os dados serão retornados de forma paginada, portanto fique atento ao conjunto da dados \"paginacao\" que é retornado na resposta, para saber se será necessário consultar outras páginas ou não.\n\nOs seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| pagina | Página a ser exibida | Sim |\n| itens_por_pagina | Itens por Página a serem exibidos. Mínimo: 1, Máximo: 500. | Não |\n| data_inicio | Data de início da filtragem de dados | Não |\n| data_fim | Data final da filtragem de dados | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| pagina | Campo Inteiro (integer) | `NULL` |\n| itens_por_pagina | Campo Inteiro (integer) | 100 |\n| data_inicio | Campo no formato Date (YYYY-MM-DD) | `NULL` |\n| data_fim | Campo no formato Date (YYYY-MM-DD) | `NULL` |\n| apenas_quitado | sim,nao | nao |"
+								"description": "**GET**\n\nNo método `GET`, irá consultar/listar os dados de produtos e retornar um `JSON` como resposta. Os dados serão retornados de forma paginada, portanto fique atento ao conjunto da dados \"paginacao\" que é retornado na resposta, para saber se será necessário consultar outras páginas ou não.\n\nOs seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| pagina | Página a ser exibida | Sim |\n| itens_por_pagina | Itens por Página a serem exibidos. Mínimo: 1, Máximo: 500. | Não |\n| data_inicio | Data de início da filtragem de dados | Não |\n| data_fim | Data final da filtragem de dados | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| pagina | Campo Inteiro (integer) | `NULL` |\n| itens_por_pagina | Campo Inteiro (integer) | 100 |\n| data_inicio | Campo no formato Date (YYYY-MM-DD) | `NULL` |\n| data_fim | Campo no formato Date (YYYY-MM-DD) | `NULL` |"
 							},
 							"response": [
 								{
@@ -6533,37 +6533,37 @@
 	],
 	"variable": [
 		{
-			"id": "d809f44c-1d10-408c-bb9f-1bb0a793e0eb",
+			"id": "f5fd68d1-f282-4af6-ae2a-5f74f22775bc",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "44cf1ce0-8aed-4f80-a912-4a03ff6602c1",
+			"id": "af87e8b8-a792-4e6b-babe-a6c42e2b2734",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "a20edbd7-3259-4d38-9966-a0cb2810e8d4",
+			"id": "c528053d-d590-490f-9f3a-6d819336c09f",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "58c02551-9b3d-49b2-ac95-a18905ca9f2e",
+			"id": "47602c67-757a-44ea-9743-7c5c8f78e795",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "76c2dac3-0fcb-4a97-b9ee-70638ff65116",
+			"id": "b0e499b3-23b8-4d72-bf3e-d31a0495dfb4",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "51e9407a-8966-4855-a970-c738e7bd1f5a",
+			"id": "7f87ddfa-3ab1-4d63-b14f-af4092132043",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "465ed283-c8cd-4856-b503-41623512575b",
+			"id": "2a53bde6-4a3e-45c3-adc6-846caa7ae149",
 			"key": "access_token",
 			"value": ""
 		}
