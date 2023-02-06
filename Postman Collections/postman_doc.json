@@ -1671,7 +1671,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{url}}/api/v1/integracao/estoque/produto/:id_local_estoque",
+									"raw": "{{url}}/api/v1/integracao/estoque/local_estoque/:id_local_estoque",
 									"host": [
 										"{{url}}"
 									],
@@ -1680,13 +1680,13 @@
 										"v1",
 										"integracao",
 										"estoque",
-										"produto",
+										"local_estoque",
 										":id_local_estoque"
 									],
 									"variable": [
 										{
 											"key": "id_local_estoque",
-											"value": null,
+											"value": "integer",
 											"description": "ID do Local de Estoque já cadastrado"
 										}
 									]
@@ -6514,37 +6514,37 @@
 	],
 	"variable": [
 		{
-			"id": "013b0904-82aa-4d53-a065-6c2a4b47ebd1",
+			"id": "831c311c-fb58-4aa8-af6b-42649970caf0",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "02193cb2-0ee2-40f6-a545-ef16558bb94a",
+			"id": "92ad3c68-1c3a-40b8-90aa-77bc1271d601",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "1f0ec324-1bd2-4dad-8184-5fa67db698c5",
+			"id": "5399c8c0-5859-4fe4-ad71-8c97bfeba5ea",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "93460d58-7b3a-4c45-afc3-6ed5846b7e1c",
+			"id": "6f937281-4c5a-4a3b-af6f-0c7e91e255e1",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "0db56413-752a-4c5f-8ec7-d5a15cce5336",
+			"id": "3cfa9a73-16a8-4a79-8c9f-2f04b96d14a1",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "4cdb78c1-3b6a-47bd-8f04-6c1b5fb34e1f",
+			"id": "4b985db6-84b9-4727-b768-5a871eec08ab",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "5614cef6-ea2a-478c-b10f-d4115bce3c47",
+			"id": "2e425035-a86d-4397-93ab-f7c83c3a3333",
 			"key": "access_token",
 			"value": ""
 		}
