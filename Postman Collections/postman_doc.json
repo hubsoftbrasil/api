@@ -3466,9 +3466,8 @@
 									],
 									"variable": [
 										{
-											"id": "24af308d-7d28-4c76-ae64-77ed2a466ad4",
 											"key": "id_produto_item",
-											"value": "213346",
+											"value": "integer",
 											"description": "(Integer) ID do Produto Item já cadastrado anteriormente"
 										}
 									]
@@ -6005,37 +6004,37 @@
 	],
 	"variable": [
 		{
-			"id": "d81e5704-cdeb-4a3f-a4f2-1918197f7e8d",
+			"id": "19ef0ce3-477c-4fe1-91e8-a00b2899e649",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "027bf10d-7141-42b6-98e3-5cb03687936c",
+			"id": "a06def3f-d843-4c07-a582-d78145917a03",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "77198bf0-71f1-49ed-b2bb-3759c25ab22a",
+			"id": "40475760-6b34-48a6-b06f-9e3cfe119ea3",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "dca7f967-c730-4e25-bbd5-2718451ed8ad",
+			"id": "20094d0b-08eb-44e7-b823-957cb2535f14",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "aa6bb0a6-08be-467c-81ca-6ba803dac709",
+			"id": "ad9c31ff-099d-4318-b140-2f8ae9e56023",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "e03eccb3-a42a-43df-b8cd-66edda32c2b0",
+			"id": "fe446cd1-679a-4326-b54e-f7ee03081661",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "6d3ed7b4-944f-4498-bb65-42fda7591677",
+			"id": "a0b72635-9b9d-422f-824b-f2c395802823",
 			"key": "access_token",
 			"value": ""
 		}
