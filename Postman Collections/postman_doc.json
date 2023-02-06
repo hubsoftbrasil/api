@@ -1795,7 +1795,7 @@
 									],
 									"cookie": [],
 									"responseTime": null,
-									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Local de Estoque de ID 5 consultado com sucesso\",\n    \"produto\": {\n        \"id_local_estoque\": 5,\n        \"descricao\": \"ALMOXARIFADO\",\n        \"empresa\": {\n            \"id_empresa\": 1,\n            \"nome_razaosocial\": \"SERVIÇOS DE TECNOLOGIA\",\n            \"cnpj\": \"36636392000127\"\n        },\n        \"endereco\": {\n            \"endereco\": \"AVENIDA BRASIL\",\n            \"numero\": \"77\",\n            \"complemento\": null,\n            \"referencia\": null,\n            \"bairro\": \"CENTRO\",\n            \"cidade\": \"SANTO ANTÔNIO DO MONTE\",\n            \"estado\": \"MG\",\n            \"pais\": \"BRASIL\",\n            \"cep\": \"35560000\",\n            \"ibge\": \"3160405\"\n        },\n        \"data_cadastro\": \"2018-04-23 14:06:36\"\n    }\n}"
+									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Local de Estoque de ID 5 consultado com sucesso\",\n    \"local_estoque\": {\n        \"id_local_estoque\": 5,\n        \"descricao\": \"ALMOXARIFADO\",\n        \"empresa\": {\n            \"id_empresa\": 1,\n            \"nome_razaosocial\": \"SERVIÇOS DE TECNOLOGIA\",\n            \"cnpj\": \"36636392000127\"\n        },\n        \"endereco\": {\n            \"endereco\": \"AVENIDA BRASIL\",\n            \"numero\": \"77\",\n            \"complemento\": null,\n            \"referencia\": null,\n            \"bairro\": \"CENTRO\",\n            \"cidade\": \"SANTO ANTÔNIO DO MONTE\",\n            \"estado\": \"MG\",\n            \"pais\": \"BRASIL\",\n            \"cep\": \"35560000\",\n            \"ibge\": \"3160405\"\n        },\n        \"data_cadastro\": \"2018-04-23 14:06:36\"\n    }\n}"
 								},
 								{
 									"id": "33e66ec6-1307-4659-bb18-b2e4a6ea7c84",
@@ -6514,37 +6514,37 @@
 	],
 	"variable": [
 		{
-			"id": "e63e6010-f6e3-4a21-b2d5-d5735a7a2806",
+			"id": "e5394fd7-971c-466f-a547-70562c226764",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "82e16e64-1469-4007-9abb-6393629ad5ac",
+			"id": "a568712a-34b0-40a7-82a8-f902bee861a3",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "fc4d2399-2135-40f5-9e06-d058d2a8d24c",
+			"id": "e84b62ff-8184-4669-beaf-a2b10a6a7bad",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "39d9c959-8a28-4617-93f8-251eddf5c44d",
+			"id": "389f5443-485b-4e3f-98d3-535a8b100529",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "106628bc-232a-49ed-8619-f18ca9cc81ff",
+			"id": "79a154e9-f5a7-479b-b4ab-ac2049a51a23",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "8b5f6bfc-3ca3-4c7f-8fb1-4e78b1db65f3",
+			"id": "dd06f2b7-e3b6-4903-9e48-06c13f750ab7",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "378266be-9779-4efb-9bab-51476d4f4e4f",
+			"id": "abd6d100-dc67-4a95-a7b1-fa9453f0c818",
 			"key": "access_token",
 			"value": ""
 		}
