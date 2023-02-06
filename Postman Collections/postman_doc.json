@@ -1932,257 +1932,6 @@
 									"body": "{\n    \"status\": \"error\",\n    \"msg\": \"Produto de ID 49742 não encontrado\"\n}"
 								}
 							]
-						},
-						{
-							"name": "Apagar",
-							"id": "69bbb46a-f917-4fea-9ac2-cea6ecd4c53b",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "noauth"
-								},
-								"method": "DELETE",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "{{access_token}}",
-										"description": "Bearer Token obtido na autenticação"
-									}
-								],
-								"url": {
-									"raw": "{{url}}/api/v1/integracao/estoque/produto/:id_produto",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"api",
-										"v1",
-										"integracao",
-										"estoque",
-										"produto",
-										":id_produto"
-									],
-									"variable": [
-										{
-											"id": "88eaffd5-1d5f-4e36-93ef-ba89686285e7",
-											"key": "id_produto",
-											"value": "integer",
-											"description": "(Integer) ID do Produto já cadastrado anteriormente"
-										}
-									]
-								},
-								"description": "No método `DELETE`, será possível apagar o cadastro de um produto."
-							},
-							"response": [
-								{
-									"id": "05bf0a2c-6bb5-4829-a18e-4dc8cbe034f0",
-									"name": "Sucesso",
-									"originalRequest": {
-										"method": "DELETE",
-										"header": [
-											{
-												"key": "Authorization",
-												"value": "{{access_token}}",
-												"description": "Bearer Token obtido na autenticação"
-											}
-										],
-										"url": {
-											"raw": "{{url}}/api/v1/integracao/estoque/produto/:id_produto",
-											"host": [
-												"{{url}}"
-											],
-											"path": [
-												"api",
-												"v1",
-												"integracao",
-												"estoque",
-												"produto",
-												":id_produto"
-											],
-											"variable": [
-												{
-													"key": "id_produto",
-													"value": "4976",
-													"description": "(Integer) ID do Produto já cadastrado anteriormente"
-												}
-											]
-										}
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Server",
-											"value": "nginx/1.16.1"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										},
-										{
-											"key": "Vary",
-											"value": "Accept-Encoding"
-										},
-										{
-											"key": "X-Powered-By",
-											"value": "PHP/7.1.33"
-										},
-										{
-											"key": "Access-Control-Allow-Origin",
-											"value": "*"
-										},
-										{
-											"key": "Access-Control-Allow-Methods",
-											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
-										},
-										{
-											"key": "Access-Control-Allow-Headers",
-											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
-										},
-										{
-											"key": "Access-Control-Max-Age",
-											"value": "1728000"
-										},
-										{
-											"key": "Access-Control-Allow-Credentials",
-											"value": "true"
-										},
-										{
-											"key": "Cache-Control",
-											"value": "no-cache, private"
-										},
-										{
-											"key": "Date",
-											"value": "Mon, 06 Feb 2023 12:14:39 GMT"
-										},
-										{
-											"key": "Set-Cookie",
-											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 13:14:39 GMT; Max-Age=3600; path=/; httponly"
-										},
-										{
-											"key": "Content-Encoding",
-											"value": "gzip"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Produto foi inativado com sucesso\"\n}"
-								},
-								{
-									"id": "47992f16-9d90-45d8-87ea-b56510a8d657",
-									"name": "Erro",
-									"originalRequest": {
-										"method": "DELETE",
-										"header": [
-											{
-												"key": "Authorization",
-												"value": "{{access_token}}",
-												"description": "Bearer Token obtido na autenticação"
-											}
-										],
-										"url": {
-											"raw": "{{url}}/api/v1/integracao/estoque/produto/:id_produto",
-											"host": [
-												"{{url}}"
-											],
-											"path": [
-												"api",
-												"v1",
-												"integracao",
-												"estoque",
-												"produto",
-												":id_produto"
-											],
-											"variable": [
-												{
-													"key": "id_produto",
-													"value": "923193",
-													"description": "(Integer) ID do Produto já cadastrado anteriormente"
-												}
-											]
-										}
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Server",
-											"value": "nginx/1.16.1"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										},
-										{
-											"key": "Vary",
-											"value": "Accept-Encoding"
-										},
-										{
-											"key": "X-Powered-By",
-											"value": "PHP/7.1.33"
-										},
-										{
-											"key": "Access-Control-Allow-Origin",
-											"value": "*"
-										},
-										{
-											"key": "Access-Control-Allow-Methods",
-											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
-										},
-										{
-											"key": "Access-Control-Allow-Headers",
-											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
-										},
-										{
-											"key": "Access-Control-Max-Age",
-											"value": "1728000"
-										},
-										{
-											"key": "Access-Control-Allow-Credentials",
-											"value": "true"
-										},
-										{
-											"key": "Cache-Control",
-											"value": "no-cache, private"
-										},
-										{
-											"key": "Date",
-											"value": "Mon, 06 Feb 2023 12:14:25 GMT"
-										},
-										{
-											"key": "Set-Cookie",
-											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 13:14:25 GMT; Max-Age=3600; path=/; httponly"
-										},
-										{
-											"key": "Content-Encoding",
-											"value": "gzip"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"status\": \"error\",\n    \"msg\": \"Produto de ID 923193 não encontrado\"\n}"
-								}
-							]
 						}
 					],
 					"id": "6b290156-f9d4-42a6-9483-13ac92ea45ab"
@@ -6796,37 +6545,37 @@
 	],
 	"variable": [
 		{
-			"id": "973704a0-f050-467a-bae2-7dd364f22307",
+			"id": "3da2b644-c61e-4728-baa9-080b6778dbfd",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "1792042f-2e8e-41af-b17e-90460c55d8a4",
+			"id": "48fd2299-a11b-499f-b429-c26a19e65af1",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "162f8d21-6727-4a0d-8dfa-6de90610cc13",
+			"id": "1f51976b-7ff0-4feb-85f8-816b3ec62f2e",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "8c1d427a-e709-4ba5-912f-fea5aa24ba48",
+			"id": "634aaeac-26ba-4295-9f96-678c391d131f",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "255b1f54-a2d7-4261-88fc-ba54c7f57b0b",
+			"id": "d12659a5-70aa-4560-b35e-3c8f562cd7f7",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "bd0fe3f4-f521-4a9b-a602-c8aedfca18ca",
+			"id": "632a344e-8118-4ff1-b280-e705a5e033ff",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "f758e888-4cf6-4918-ac27-7e426831fda6",
+			"id": "30155772-2826-470d-a4ef-ac81c5c88687",
 			"key": "access_token",
 			"value": ""
 		}
