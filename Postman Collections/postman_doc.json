@@ -1924,7 +1924,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{url}}/api/v1/integracao/estoque/movimento_produto?pagina=0&itens_por_pagina=10&data_inicio=2023-01-01 00:00:00&data_fim=2023-01-10 23:59:59&tipo_data=edicao",
+									"raw": "{{url}}/api/v1/integracao/estoque/movimento_produto?pagina=integer&itens_por_pagina=integer&data_inicio=YYYY-MM-DD HH:mm:ss&data_fim=YYYY-MM-DD HH:mm:ss&tipo_data=cadastro,edicao,movimento",
 									"host": [
 										"{{url}}"
 									],
@@ -1938,27 +1938,27 @@
 									"query": [
 										{
 											"key": "pagina",
-											"value": "0",
+											"value": "integer",
 											"description": "(Obrigatório) Número da Página"
 										},
 										{
 											"key": "itens_por_pagina",
-											"value": "10",
+											"value": "integer",
 											"description": "(Opcional) Itens por Página. Se não preenchido será atributo 100 por padrão. Máximo: 500"
 										},
 										{
 											"key": "data_inicio",
-											"value": "2023-01-01 00:00:00",
+											"value": "YYYY-MM-DD HH:mm:ss",
 											"description": "(Opcional) Data no Formato `DateTime`"
 										},
 										{
 											"key": "data_fim",
-											"value": "2023-01-10 23:59:59",
+											"value": "YYYY-MM-DD HH:mm:ss",
 											"description": "(Opcional) Data no Formato `DateTime`"
 										},
 										{
 											"key": "tipo_data",
-											"value": "edicao",
+											"value": "cadastro,edicao,movimento",
 											"description": "(Opcional) Determina o tipo de data que será utilizado para filtrar. Se nada for preenchido será filtrado pela data de cadastro como padrão."
 										}
 									]
@@ -7058,37 +7058,37 @@
 	],
 	"variable": [
 		{
-			"id": "cfdb1d55-de4c-46de-b268-d4d3690a39ad",
+			"id": "f3686a80-ccd9-4400-954d-81311b0006eb",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "1d2f09b6-5b69-4ef9-a0bd-630dc076793e",
+			"id": "b192f9e2-a918-4b48-92c2-95c5a27192ac",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "2cec3fb6-d5c4-4cb0-8683-67d8faa1ac99",
+			"id": "21b4cbb7-c8b8-4518-93d2-27e62e007dce",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "104cab65-49a7-4975-bb2d-aa1b3d691106",
+			"id": "0a8e6d89-80fb-4496-a2f9-f8e22f349354",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "7778558b-6db9-448f-89b8-dde3e0ee0533",
+			"id": "629fc652-dbfa-4e80-80ef-1ceb6c5857c9",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "796ef86b-7cf8-4e2a-9663-6a8a89bd60f8",
+			"id": "06542a50-d75f-417a-8765-d8a0d42049c6",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "9653d312-d00b-44d6-b5be-d2e8d36977e9",
+			"id": "bc275feb-9443-4549-9934-8cc0843028cf",
 			"key": "access_token",
 			"value": ""
 		}
