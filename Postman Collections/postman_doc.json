@@ -3754,7 +3754,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{url}}/api/v1/integracao/estoque/produto_item?id_produto=integer&pagina=0&itens_por_pagina=100",
+									"raw": "{{url}}/api/v1/integracao/estoque/produto_item?id_produto=integer&pagina=integer&itens_por_pagina=integer",
 									"host": [
 										"{{url}}"
 									],
@@ -3773,12 +3773,12 @@
 										},
 										{
 											"key": "pagina",
-											"value": "0",
+											"value": "integer",
 											"description": "(Obrigatório) Número da Página"
 										},
 										{
 											"key": "itens_por_pagina",
-											"value": "100",
+											"value": "integer",
 											"description": "(Opcional) Itens por Página. Se não preenchido será atributo 100 por padrão. Máximo: 500"
 										}
 									]
@@ -7058,37 +7058,37 @@
 	],
 	"variable": [
 		{
-			"id": "4fdaca51-0a17-48b8-b1e2-cf2716925ff4",
+			"id": "cfdb1d55-de4c-46de-b268-d4d3690a39ad",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "79faacba-dadd-4630-a96c-2c1ffc130f35",
+			"id": "1d2f09b6-5b69-4ef9-a0bd-630dc076793e",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "06cf2ae2-8ab1-464d-8257-370cd76d0767",
+			"id": "2cec3fb6-d5c4-4cb0-8683-67d8faa1ac99",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "c22e059c-d127-4f9a-a867-6b9ec29fb929",
+			"id": "104cab65-49a7-4975-bb2d-aa1b3d691106",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "2d6fb0dd-b75d-4a7d-bb05-d19f5766424a",
+			"id": "7778558b-6db9-448f-89b8-dde3e0ee0533",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "41d7d717-dacb-4cd8-a833-9ab555812475",
+			"id": "796ef86b-7cf8-4e2a-9663-6a8a89bd60f8",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "3ed9a283-f1d8-4e12-95d8-419749ac08fc",
+			"id": "9653d312-d00b-44d6-b5be-d2e8d36977e9",
 			"key": "access_token",
 			"value": ""
 		}
