@@ -1166,7 +1166,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{url}}/api/v1/integracao/cliente/todos?pagina=0&itens_por_pagina=100&data_inicio&data_fim&cancelado&possui_pacote&codigo_pacote&relacoes",
+							"raw": "{{url}}/api/v1/integracao/cliente/todos?pagina=0&itens_por_pagina=100&data_inicio=&data_fim=&cancelado=&possui_pacote=&codigo_pacote=&relacoes=",
 							"host": [
 								"{{url}}"
 							],
@@ -1904,6 +1904,535 @@
 						}
 					],
 					"id": "6b290156-f9d4-42a6-9483-13ac92ea45ab"
+				},
+				{
+					"name": "Movimentação de Produtos",
+					"item": [
+						{
+							"name": "Listar",
+							"id": "670f2162-b9cd-4612-a1ee-863a35eaa29b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"description": "Bearer Token obtido na autenticação"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/v1/integracao/estoque/movimento_produto?pagina=0&itens_por_pagina=10&data_inicio=YYYY-MM-DD HH:mm:ss&data_fim=YYYY-MM-DD HH:mm:ss&tipo_data=cadastro, edicao, movimento",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"integracao",
+										"estoque",
+										"movimento_produto"
+									],
+									"query": [
+										{
+											"key": "pagina",
+											"value": "0",
+											"description": "(Obrigatório) Número da Página"
+										},
+										{
+											"key": "itens_por_pagina",
+											"value": "10",
+											"description": "(Opcional) Itens por Página. Se não preenchido será atributo 100 por padrão. Máximo: 500"
+										},
+										{
+											"key": "data_inicio",
+											"value": "YYYY-MM-DD HH:mm:ss",
+											"description": "(Opcional) Data no Formato `DateTime`"
+										},
+										{
+											"key": "data_fim",
+											"value": "YYYY-MM-DD HH:mm:ss",
+											"description": "(Opcional) Data no Formato `DateTime`"
+										},
+										{
+											"key": "tipo_data",
+											"value": "cadastro, edicao, movimento",
+											"description": "(Opcional) Determina o tipo de data que será utilizado para filtrar. Se nada for preenchido será filtrado pela data de cadastro como padrão."
+										}
+									]
+								},
+								"description": "**GET**\n\nNo método `GET`, irá consultar/listar os dados de movimentações de produtos e retornar um `JSON` como resposta. Os dados serão retornados de forma paginada, portanto fique atento ao conjunto da dados \"paginacao\" que é retornado na resposta, para saber se será necessário consultar outras páginas ou não.\n\nOs seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| pagina | Página a ser exibida | Sim |\n| itens_por_pagina | Itens por Página a serem exibidos. Mínimo: 1, Máximo: 500. | Não |\n| data_inicio | Data Inicial do Período desejado | Não |\n| data_fim | Data Final do Período desejado | Não |\n| tipo_data | Tipo de Data que será utilizada para filtrar | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| pagina | `Integer` | `NULL` |\n| itens_por_pagina | `Integer` | 100 |\n| data_inicio | `DateTime` (YYYY-MM-DD HH:mm:ss) | `NULL` |\n| data_fim | `DateTime` (YYYY-MM-DD HH:mm:ss) | `NULL` |\n| tipo_data | `cadastro`, `edicao`, `movimento` | `cadastro` |\n\nA data de `cadastro` é a data que o registro foi criado no sistema.\n\nA data de `edicao` é a data que essa movimentação foi modificada pela última vez. A cada modificação essa data é atualizada. Utilizar essa data é muito útil para fazer sincronização entre sistemas.\n\nA data de `movimento` é a data que de fato ocorreu essa movimentação. Um usuário pode ter esquecido de lançar um movimento e fazer o mesmo retroativo."
+							},
+							"response": [
+								{
+									"id": "7fba64e0-55fb-4d88-a62b-573790fccdda",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Bearer Token obtido na autenticação"
+											}
+										],
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/estoque/movimento_produto?pagina=0&itens_por_pagina=10",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"estoque",
+												"movimento_produto"
+											],
+											"query": [
+												{
+													"key": "pagina",
+													"value": "0",
+													"description": "(Obrigatório) Número da Página"
+												},
+												{
+													"key": "itens_por_pagina",
+													"value": "10",
+													"description": "(Opcional) Itens por Página. Se não preenchido será atributo 100 por padrão. Máximo: 500"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 07 Feb 2023 01:53:15 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=TdcmdqPKftzDZz4MI86pqT8YcOR6WNoHSkrxritr; expires=Tue, 07-Feb-2023 02:53:15 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Dados consultados com sucesso\",\n    \"paginacao\": {\n        \"primeira_pagina\": 0,\n        \"ultima_pagina\": 164,\n        \"pagina_atual\": 0,\n        \"total_registros\": 1644\n    },\n    \"locais_estoque\": [\n        {\n            \"id_movimento_produto\": 1,\n            \"codigo_movimento\": 1,\n            \"data_movimento\": \"2018-01-29 17:54:29\",\n            \"data_cadastro\": \"2018-01-29 15:54:52\",\n            \"data_atualizacao\": \"2022-01-07 16:46:52\",\n            \"valor_total\": \"400\",\n            \"movimento_produto_itens\": [\n                {\n                    \"id_movimento_produto_item\": 30,\n                    \"valor_unitario\": 400,\n                    \"quantidade\": 1,\n                    \"valor_total\": 400,\n                    \"produto_item\": {\n                        \"id_produto_item\": 2,\n                        \"produto\": {\n                            \"id_produto\": 1,\n                            \"nome\": \"Airgrid\",\n                            \"agrupado\": false\n                        },\n                        \"local_estoque\": {\n                            \"id_local_estoque\": 4,\n                            \"descricao\": \"Local de Estoque de Teste\"\n                        },\n                        \"produto_item_status\": {\n                            \"id_produto_item_status\": 8,\n                            \"descricao\": \"DESCARTADO\",\n                            \"prefixo\": \"descartado\"\n                        },\n                        \"identificador_proprio\": null,\n                        \"codigo_item\": 43949,\n                        \"numero_serie\": \"12341341234\",\n                        \"mac_address\": null,\n                        \"observacoes\": \"teste de observação 3\"\n                    }\n                }\n            ],\n            \"tipo_movimento_produto\": {\n                \"id_tipo_movimento_produto\": 2,\n                \"descricao\": \"Comodato\",\n                \"prefixo\": \"comodato\",\n                \"produto_item_status\": {\n                    \"id_produto_item_status\": 4,\n                    \"descricao\": \"* COMODATO *\",\n                    \"prefixo\": \"comodato\"\n                }\n            },\n            \"usuario_responsavel\": {\n                \"id_usuario_responsavel\": 1,\n                \"nome\": \"Master\",\n                \"email\": \"master@hubsoft.com.br\"\n            },\n            \"usuario_cadastro\": {\n                \"id_usuario_cadastro\": 1,\n                \"nome\": \"Master\",\n                \"email\": \"master@hubsoft.com.br\"\n            },\n            \"cliente_servico\": {\n                \"id_cliente_servico\": 12714,\n                \"numero_plano\": null,\n                \"cliente\": {\n                    \"id_cliente\": 11940,\n                    \"nome_razaosocial\": null,\n                    \"cpf_cnpj\": null\n                }\n            }\n        },\n        {\n            \"id_movimento_produto\": 2,\n            \"codigo_movimento\": 2,\n            \"data_movimento\": \"2018-01-29 17:54:58\",\n            \"data_cadastro\": \"2018-01-29 15:55:50\",\n            \"data_atualizacao\": \"2018-01-29 15:55:50\",\n            \"valor_total\": \"364\",\n            \"movimento_produto_itens\": [\n                {\n                    \"id_movimento_produto_item\": 31,\n                    \"valor_unitario\": 364,\n                    \"quantidade\": 1,\n                    \"valor_total\": 364,\n                    \"produto_item\": {\n                        \"id_produto_item\": 6,\n                        \"produto\": {\n                            \"id_produto\": 1,\n                            \"nome\": \"Airgrid\",\n                            \"agrupado\": false\n                        },\n                        \"local_estoque\": {\n                            \"id_local_estoque\": 1,\n                            \"descricao\": \"Estoque na Cidade XPTO\"\n                        },\n                        \"produto_item_status\": {\n                            \"id_produto_item_status\": 6,\n                            \"descricao\": \"MANUTENÇÃO\",\n                            \"prefixo\": \"manutencao\"\n                        },\n                        \"identificador_proprio\": null,\n                        \"codigo_item\": 12360,\n                        \"numero_serie\": \"123412342\",\n                        \"mac_address\": null,\n                        \"observacoes\": \"teste de observação 3\"\n                    }\n                }\n            ],\n            \"tipo_movimento_produto\": {\n                \"id_tipo_movimento_produto\": 1,\n                \"descricao\": \"Venda\",\n                \"prefixo\": \"venda\",\n                \"produto_item_status\": {\n                    \"id_produto_item_status\": 1,\n                    \"descricao\": \"Vendido\",\n                    \"prefixo\": \"vendido\"\n                }\n            },\n            \"usuario_responsavel\": {\n                \"id_usuario_responsavel\": 1,\n                \"nome\": \"Master\",\n                \"email\": \"master@hubsoft.com.br\"\n            },\n            \"usuario_cadastro\": {\n                \"id_usuario_cadastro\": 1,\n                \"nome\": \"Master\",\n                \"email\": \"master@hubsoft.com.br\"\n            },\n            \"cliente_servico\": {\n                \"id_cliente_servico\": 12714,\n                \"numero_plano\": null,\n                \"cliente\": {\n                    \"id_cliente\": 11940,\n                    \"nome_razaosocial\": null,\n                    \"cpf_cnpj\": null\n                }\n            }\n        },\n        {\n            \"id_movimento_produto\": 13,\n            \"codigo_movimento\": 3,\n            \"data_movimento\": \"2018-01-31 17:24:30\",\n            \"data_cadastro\": \"2018-01-31 15:33:16\",\n            \"data_atualizacao\": \"2022-01-07 16:46:53\",\n            \"valor_total\": \"728\",\n            \"movimento_produto_itens\": [\n                {\n                    \"id_movimento_produto_item\": 12,\n                    \"valor_unitario\": 364,\n                    \"quantidade\": 1,\n                    \"valor_total\": 364,\n                    \"produto_item\": {\n                        \"id_produto_item\": 9,\n                        \"produto\": {\n                            \"id_produto\": 1,\n                            \"nome\": \"Airgrid\",\n                            \"agrupado\": false\n                        },\n                        \"local_estoque\": {\n                            \"id_local_estoque\": 1,\n                            \"descricao\": \"Estoque na Cidade XPTO\"\n                        },\n                        \"produto_item_status\": {\n                            \"id_produto_item_status\": 1,\n                            \"descricao\": \"Vendido\",\n                            \"prefixo\": \"vendido\"\n                        },\n                        \"identificador_proprio\": null,\n                        \"codigo_item\": 963,\n                        \"numero_serie\": null,\n                        \"mac_address\": null,\n                        \"observacoes\": null\n                    }\n                },\n                {\n                    \"id_movimento_produto_item\": 13,\n                    \"valor_unitario\": 364,\n                    \"quantidade\": 1,\n                    \"valor_total\": 364,\n                    \"produto_item\": {\n                        \"id_produto_item\": 32,\n                        \"produto\": {\n                            \"id_produto\": 1,\n                            \"nome\": \"Airgrid\",\n                            \"agrupado\": false\n                        },\n                        \"local_estoque\": {\n                            \"id_local_estoque\": 1,\n                            \"descricao\": \"Estoque na Cidade XPTO\"\n                        },\n                        \"produto_item_status\": {\n                            \"id_produto_item_status\": 1,\n                            \"descricao\": \"Vendido\",\n                            \"prefixo\": \"vendido\"\n                        },\n                        \"identificador_proprio\": null,\n                        \"codigo_item\": 12304,\n                        \"numero_serie\": \"1231231\",\n                        \"mac_address\": \"AA:BB:CC:22:22:22\",\n                        \"observacoes\": null\n                    }\n                }\n            ],\n            \"tipo_movimento_produto\": {\n                \"id_tipo_movimento_produto\": 1,\n                \"descricao\": \"Venda\",\n                \"prefixo\": \"venda\",\n                \"produto_item_status\": {\n                    \"id_produto_item_status\": 1,\n                    \"descricao\": \"Vendido\",\n                    \"prefixo\": \"vendido\"\n                }\n            },\n            \"usuario_responsavel\": {\n                \"id_usuario_responsavel\": 1,\n                \"nome\": \"Master\",\n                \"email\": \"master@hubsoft.com.br\"\n            },\n            \"usuario_cadastro\": {\n                \"id_usuario_cadastro\": 1,\n                \"nome\": \"Master\",\n                \"email\": \"master@hubsoft.com.br\"\n            },\n            \"cliente_servico\": {\n                \"id_cliente_servico\": 12714,\n                \"numero_plano\": null,\n                \"cliente\": {\n                    \"id_cliente\": 11940,\n                    \"nome_razaosocial\": null,\n                    \"cpf_cnpj\": null\n                }\n            }\n        },\n        {\n            \"id_movimento_produto\": 16,\n            \"codigo_movimento\": 4,\n            \"data_movimento\": \"2018-01-31 18:25:00\",\n            \"data_cadastro\": \"2018-01-31 16:28:43\",\n            \"data_atualizacao\": \"2022-01-07 16:46:53\",\n            \"valor_total\": \"728\",\n            \"movimento_produto_itens\": [\n                {\n                    \"id_movimento_produto_item\": 18,\n                    \"valor_unitario\": 364,\n                    \"quantidade\": 1,\n                    \"valor_total\": 364,\n                    \"produto_item\": {\n                        \"id_produto_item\": 10,\n                        \"produto\": {\n                            \"id_produto\": 1,\n                            \"nome\": \"Airgrid\",\n                            \"agrupado\": false\n                        },\n                        \"local_estoque\": {\n                            \"id_local_estoque\": 1,\n                            \"descricao\": \"Estoque na Cidade XPTO\"\n                        },\n                        \"produto_item_status\": {\n                            \"id_produto_item_status\": 1,\n                            \"descricao\": \"Vendido\",\n                            \"prefixo\": \"vendido\"\n                        },\n                        \"identificador_proprio\": null,\n                        \"codigo_item\": 43951,\n                        \"numero_serie\": null,\n                        \"mac_address\": null,\n                        \"observacoes\": null\n                    }\n                },\n                {\n                    \"id_movimento_produto_item\": 19,\n                    \"valor_unitario\": 364,\n                    \"quantidade\": 1,\n                    \"valor_total\": 364,\n                    \"produto_item\": {\n                        \"id_produto_item\": 11,\n                        \"produto\": {\n                            \"id_produto\": 1,\n                            \"nome\": \"Airgrid\",\n                            \"agrupado\": false\n                        },\n                        \"local_estoque\": {\n                            \"id_local_estoque\": 2,\n                            \"descricao\": \"Estoque na Cidade XPTO (Não Fiscal)\"\n                        },\n                        \"produto_item_status\": {\n                            \"id_produto_item_status\": 9,\n                            \"descricao\": \"DEFEITO\",\n                            \"prefixo\": \"defeito\"\n                        },\n                        \"identificador_proprio\": null,\n                        \"codigo_item\": 43952,\n                        \"numero_serie\": null,\n                        \"mac_address\": null,\n                        \"observacoes\": null\n                    }\n                }\n            ],\n            \"tipo_movimento_produto\": {\n                \"id_tipo_movimento_produto\": 1,\n                \"descricao\": \"Venda\",\n                \"prefixo\": \"venda\",\n                \"produto_item_status\": {\n                    \"id_produto_item_status\": 1,\n                    \"descricao\": \"Vendido\",\n                    \"prefixo\": \"vendido\"\n                }\n            },\n            \"usuario_responsavel\": {\n                \"id_usuario_responsavel\": 1,\n                \"nome\": \"Master\",\n                \"email\": \"master@hubsoft.com.br\"\n            },\n            \"usuario_cadastro\": {\n                \"id_usuario_cadastro\": 1,\n                \"nome\": \"Master\",\n                \"email\": \"master@hubsoft.com.br\"\n            },\n            \"cliente_servico\": {\n                \"id_cliente_servico\": 12714,\n                \"numero_plano\": null,\n                \"cliente\": {\n                    \"id_cliente\": 11940,\n                    \"nome_razaosocial\": null,\n                    \"cpf_cnpj\": null\n                }\n            }\n        },\n        {\n            \"id_movimento_produto\": 17,\n            \"codigo_movimento\": 5,\n            \"data_movimento\": \"2018-01-31 18:39:13\",\n            \"data_cadastro\": \"2018-01-31 16:39:29\",\n            \"data_atualizacao\": \"2022-01-07 16:46:53\",\n            \"valor_total\": \"364\",\n            \"movimento_produto_itens\": [\n                {\n                    \"id_movimento_produto_item\": 20,\n                    \"valor_unitario\": 364,\n                    \"quantidade\": 1,\n                    \"valor_total\": 364,\n                    \"produto_item\": {\n                        \"id_produto_item\": 31,\n                        \"produto\": {\n                            \"id_produto\": 1,\n                            \"nome\": \"Airgrid\",\n                            \"agrupado\": false\n                        },\n                        \"local_estoque\": {\n                            \"id_local_estoque\": 1,\n                            \"descricao\": \"Estoque na Cidade XPTO\"\n                        },\n                        \"produto_item_status\": {\n                            \"id_produto_item_status\": 10,\n                            \"descricao\": \"Ordem de Serviço\",\n                            \"prefixo\": \"ordem_servico\"\n                        },\n                        \"identificador_proprio\": null,\n                        \"codigo_item\": 43970,\n                        \"numero_serie\": null,\n                        \"mac_address\": null,\n                        \"observacoes\": null\n                    }\n                }\n            ],\n            \"tipo_movimento_produto\": {\n                \"id_tipo_movimento_produto\": 2,\n                \"descricao\": \"Comodato\",\n                \"prefixo\": \"comodato\",\n                \"produto_item_status\": {\n                    \"id_produto_item_status\": 4,\n                    \"descricao\": \"* COMODATO *\",\n                    \"prefixo\": \"comodato\"\n                }\n            },\n            \"usuario_responsavel\": {\n                \"id_usuario_responsavel\": 1,\n                \"nome\": \"Master\",\n                \"email\": \"master@hubsoft.com.br\"\n            },\n            \"usuario_cadastro\": {\n                \"id_usuario_cadastro\": 1,\n                \"nome\": \"Master\",\n                \"email\": \"master@hubsoft.com.br\"\n            },\n            \"cliente_servico\": {\n                \"id_cliente_servico\": 12714,\n                \"numero_plano\": null,\n                \"cliente\": {\n                    \"id_cliente\": 11940,\n                    \"nome_razaosocial\": null,\n                    \"cpf_cnpj\": null\n                }\n            }\n        },\n        {\n            \"id_movimento_produto\": 18,\n            \"codigo_movimento\": 6,\n            \"data_movimento\": \"2018-01-31 18:46:27\",\n            \"data_cadastro\": \"2018-01-31 16:46:39\",\n            \"data_atualizacao\": \"2022-01-07 16:46:53\",\n            \"valor_total\": \"364\",\n            \"movimento_produto_itens\": [\n                {\n                    \"id_movimento_produto_item\": 21,\n                    \"valor_unitario\": 364,\n                    \"quantidade\": 1,\n                    \"valor_total\": 364,\n                    \"produto_item\": {\n                        \"id_produto_item\": 20,\n                        \"produto\": {\n                            \"id_produto\": 1,\n                            \"nome\": \"Airgrid\",\n                            \"agrupado\": false\n                        },\n                        \"local_estoque\": {\n                            \"id_local_estoque\": 1,\n                            \"descricao\": \"Estoque na Cidade XPTO\"\n                        },\n                        \"produto_item_status\": {\n                            \"id_produto_item_status\": 1,\n                            \"descricao\": \"Vendido\",\n                            \"prefixo\": \"vendido\"\n                        },\n                        \"identificador_proprio\": null,\n                        \"codigo_item\": 43959,\n                        \"numero_serie\": null,\n                        \"mac_address\": null,\n                        \"observacoes\": null\n                    }\n                }\n            ],\n            \"tipo_movimento_produto\": {\n                \"id_tipo_movimento_produto\": 2,\n                \"descricao\": \"Comodato\",\n                \"prefixo\": \"comodato\",\n                \"produto_item_status\": {\n                    \"id_produto_item_status\": 4,\n                    \"descricao\": \"* COMODATO *\",\n                    \"prefixo\": \"comodato\"\n                }\n            },\n            \"usuario_responsavel\": {\n                \"id_usuario_responsavel\": 1,\n                \"nome\": \"Master\",\n                \"email\": \"master@hubsoft.com.br\"\n            },\n            \"usuario_cadastro\": {\n                \"id_usuario_cadastro\": 1,\n                \"nome\": \"Master\",\n                \"email\": \"master@hubsoft.com.br\"\n            },\n            \"cliente_servico\": {\n                \"id_cliente_servico\": 12714,\n                \"numero_plano\": null,\n                \"cliente\": {\n                    \"id_cliente\": 11940,\n                    \"nome_razaosocial\": null,\n                    \"cpf_cnpj\": null\n                }\n            }\n        },\n        {\n            \"id_movimento_produto\": 19,\n            \"codigo_movimento\": 7,\n            \"data_movimento\": \"2018-01-31 18:57:44\",\n            \"data_cadastro\": \"2018-01-31 16:57:55\",\n            \"data_atualizacao\": \"2022-01-07 16:46:53\",\n            \"valor_total\": \"364\",\n            \"movimento_produto_itens\": [\n                {\n                    \"id_movimento_produto_item\": 22,\n                    \"valor_unitario\": 364,\n                    \"quantidade\": 1,\n                    \"valor_total\": 364,\n                    \"produto_item\": {\n                        \"id_produto_item\": 25,\n                        \"produto\": {\n                            \"id_produto\": 1,\n                            \"nome\": \"Airgrid\",\n                            \"agrupado\": false\n                        },\n                        \"local_estoque\": {\n                            \"id_local_estoque\": 1,\n                            \"descricao\": \"Estoque na Cidade XPTO\"\n                        },\n                        \"produto_item_status\": {\n                            \"id_produto_item_status\": 2,\n                            \"descricao\": \"ESTOQUE\",\n                            \"prefixo\": \"estoque\"\n                        },\n                        \"identificador_proprio\": null,\n                        \"codigo_item\": 43964,\n                        \"numero_serie\": null,\n                        \"mac_address\": null,\n                        \"observacoes\": null\n                    }\n                }\n            ],\n            \"tipo_movimento_produto\": {\n                \"id_tipo_movimento_produto\": 2,\n                \"descricao\": \"Comodato\",\n                \"prefixo\": \"comodato\",\n                \"produto_item_status\": {\n                    \"id_produto_item_status\": 4,\n                    \"descricao\": \"* COMODATO *\",\n                    \"prefixo\": \"comodato\"\n                }\n            },\n            \"usuario_responsavel\": {\n                \"id_usuario_responsavel\": 1,\n                \"nome\": \"Master\",\n                \"email\": \"master@hubsoft.com.br\"\n            },\n            \"usuario_cadastro\": {\n                \"id_usuario_cadastro\": 1,\n                \"nome\": \"Master\",\n                \"email\": \"master@hubsoft.com.br\"\n            },\n            \"cliente_servico\": {\n                \"id_cliente_servico\": 12714,\n                \"numero_plano\": null,\n                \"cliente\": {\n                    \"id_cliente\": 11940,\n                    \"nome_razaosocial\": null,\n                    \"cpf_cnpj\": null\n                }\n            }\n        },\n        {\n            \"id_movimento_produto\": 21,\n            \"codigo_movimento\": 9,\n            \"data_movimento\": \"2018-01-31 17:32:14\",\n            \"data_cadastro\": \"2018-01-31 17:32:14\",\n            \"data_atualizacao\": \"2022-01-07 16:46:53\",\n            \"valor_total\": \"400\",\n            \"movimento_produto_itens\": [\n                {\n                    \"id_movimento_produto_item\": 23,\n                    \"valor_unitario\": 400,\n                    \"quantidade\": 1,\n                    \"valor_total\": 400,\n                    \"produto_item\": {\n                        \"id_produto_item\": 11,\n                        \"produto\": {\n                            \"id_produto\": 1,\n                            \"nome\": \"Airgrid\",\n                            \"agrupado\": false\n                        },\n                        \"local_estoque\": {\n                            \"id_local_estoque\": 2,\n                            \"descricao\": \"Estoque na Cidade XPTO (Não Fiscal)\"\n                        },\n                        \"produto_item_status\": {\n                            \"id_produto_item_status\": 9,\n                            \"descricao\": \"DEFEITO\",\n                            \"prefixo\": \"defeito\"\n                        },\n                        \"identificador_proprio\": null,\n                        \"codigo_item\": 43952,\n                        \"numero_serie\": null,\n                        \"mac_address\": null,\n                        \"observacoes\": null\n                    }\n                }\n            ],\n            \"tipo_movimento_produto\": {\n                \"id_tipo_movimento_produto\": 3,\n                \"descricao\": \"Devolução\",\n                \"prefixo\": \"devolucao\",\n                \"produto_item_status\": {\n                    \"id_produto_item_status\": 2,\n                    \"descricao\": \"ESTOQUE\",\n                    \"prefixo\": \"estoque\"\n                }\n            },\n            \"usuario_responsavel\": {\n                \"id_usuario_responsavel\": 1,\n                \"nome\": \"Master\",\n                \"email\": \"master@hubsoft.com.br\"\n            },\n            \"usuario_cadastro\": {\n                \"id_usuario_cadastro\": 1,\n                \"nome\": \"Master\",\n                \"email\": \"master@hubsoft.com.br\"\n            },\n            \"cliente_servico\": {\n                \"id_cliente_servico\": 12714,\n                \"numero_plano\": null,\n                \"cliente\": {\n                    \"id_cliente\": 11940,\n                    \"nome_razaosocial\": null,\n                    \"cpf_cnpj\": null\n                }\n            }\n        },\n        {\n            \"id_movimento_produto\": 22,\n            \"codigo_movimento\": 10,\n            \"data_movimento\": \"2018-01-31 17:42:12\",\n            \"data_cadastro\": \"2018-01-31 17:42:12\",\n            \"data_atualizacao\": \"2022-01-07 16:46:53\",\n            \"valor_total\": \"400\",\n            \"movimento_produto_itens\": [\n                {\n                    \"id_movimento_produto_item\": 24,\n                    \"valor_unitario\": 400,\n                    \"quantidade\": 1,\n                    \"valor_total\": 400,\n                    \"produto_item\": {\n                        \"id_produto_item\": 31,\n                        \"produto\": {\n                            \"id_produto\": 1,\n                            \"nome\": \"Airgrid\",\n                            \"agrupado\": false\n                        },\n                        \"local_estoque\": {\n                            \"id_local_estoque\": 1,\n                            \"descricao\": \"Estoque na Cidade XPTO\"\n                        },\n                        \"produto_item_status\": {\n                            \"id_produto_item_status\": 10,\n                            \"descricao\": \"Ordem de Serviço\",\n                            \"prefixo\": \"ordem_servico\"\n                        },\n                        \"identificador_proprio\": null,\n                        \"codigo_item\": 43970,\n                        \"numero_serie\": null,\n                        \"mac_address\": null,\n                        \"observacoes\": null\n                    }\n                }\n            ],\n            \"tipo_movimento_produto\": {\n                \"id_tipo_movimento_produto\": 3,\n                \"descricao\": \"Devolução\",\n                \"prefixo\": \"devolucao\",\n                \"produto_item_status\": {\n                    \"id_produto_item_status\": 2,\n                    \"descricao\": \"ESTOQUE\",\n                    \"prefixo\": \"estoque\"\n                }\n            },\n            \"usuario_responsavel\": {\n                \"id_usuario_responsavel\": 1,\n                \"nome\": \"Master\",\n                \"email\": \"master@hubsoft.com.br\"\n            },\n            \"usuario_cadastro\": {\n                \"id_usuario_cadastro\": 1,\n                \"nome\": \"Master\",\n                \"email\": \"master@hubsoft.com.br\"\n            },\n            \"cliente_servico\": {\n                \"id_cliente_servico\": 12714,\n                \"numero_plano\": null,\n                \"cliente\": {\n                    \"id_cliente\": 11940,\n                    \"nome_razaosocial\": null,\n                    \"cpf_cnpj\": null\n                }\n            }\n        },\n        {\n            \"id_movimento_produto\": 23,\n            \"codigo_movimento\": 11,\n            \"data_movimento\": \"2018-01-31 19:48:34\",\n            \"data_cadastro\": \"2018-01-31 17:48:50\",\n            \"data_atualizacao\": \"2022-01-07 16:46:53\",\n            \"valor_total\": \"364\",\n            \"movimento_produto_itens\": [\n                {\n                    \"id_movimento_produto_item\": 25,\n                    \"valor_unitario\": 364,\n                    \"quantidade\": 1,\n                    \"valor_total\": 364,\n                    \"produto_item\": {\n                        \"id_produto_item\": 31,\n                        \"produto\": {\n                            \"id_produto\": 1,\n                            \"nome\": \"Airgrid\",\n                            \"agrupado\": false\n                        },\n                        \"local_estoque\": {\n                            \"id_local_estoque\": 1,\n                            \"descricao\": \"Estoque na Cidade XPTO\"\n                        },\n                        \"produto_item_status\": {\n                            \"id_produto_item_status\": 10,\n                            \"descricao\": \"Ordem de Serviço\",\n                            \"prefixo\": \"ordem_servico\"\n                        },\n                        \"identificador_proprio\": null,\n                        \"codigo_item\": 43970,\n                        \"numero_serie\": null,\n                        \"mac_address\": null,\n                        \"observacoes\": null\n                    }\n                }\n            ],\n            \"tipo_movimento_produto\": {\n                \"id_tipo_movimento_produto\": 2,\n                \"descricao\": \"Comodato\",\n                \"prefixo\": \"comodato\",\n                \"produto_item_status\": {\n                    \"id_produto_item_status\": 4,\n                    \"descricao\": \"* COMODATO *\",\n                    \"prefixo\": \"comodato\"\n                }\n            },\n            \"usuario_responsavel\": {\n                \"id_usuario_responsavel\": 1,\n                \"nome\": \"Master\",\n                \"email\": \"master@hubsoft.com.br\"\n            },\n            \"usuario_cadastro\": {\n                \"id_usuario_cadastro\": 1,\n                \"nome\": \"Master\",\n                \"email\": \"master@hubsoft.com.br\"\n            },\n            \"cliente_servico\": {\n                \"id_cliente_servico\": 12672,\n                \"numero_plano\": null,\n                \"cliente\": {\n                    \"id_cliente\": 11942,\n                    \"nome_razaosocial\": null,\n                    \"cpf_cnpj\": null\n                }\n            }\n        }\n    ]\n}"
+								},
+								{
+									"id": "91822629-71c1-402f-95e9-2491b2d1feea",
+									"name": "Erro",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Bearer Token obtido na autenticação"
+											}
+										],
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/estoque/movimento_produto?itens_por_pagina=10",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"estoque",
+												"movimento_produto"
+											],
+											"query": [
+												{
+													"key": "pagina",
+													"value": "0",
+													"description": "(Obrigatório) Número da Página",
+													"disabled": true
+												},
+												{
+													"key": "itens_por_pagina",
+													"value": "10",
+													"description": "(Opcional) Itens por Página. Se não preenchido será atributo 100 por padrão. Máximo: 500"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 07 Feb 2023 01:53:52 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=TdcmdqPKftzDZz4MI86pqT8YcOR6WNoHSkrxritr; expires=Tue, 07-Feb-2023 02:53:52 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"error\",\n    \"msg\": \"Favor preencher os campos obrigatórios de acordo com as especificações\",\n    \"errors\": [\n        \"O campo pagina é obrigatório.\"\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Encontrar por ID",
+							"id": "613101a0-b8d3-41b7-b307-f164b573d9d8",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"description": "Bearer Token obtido na autenticação"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/v1/integracao/estoque/movimento_produto/:id_movimento_produto",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"integracao",
+										"estoque",
+										"movimento_produto",
+										":id_movimento_produto"
+									],
+									"variable": [
+										{
+											"id": "752b0cb8-ad93-4512-9600-0f9abc712a23",
+											"key": "id_movimento_produto",
+											"value": "integer",
+											"description": "ID da Movimentação de Produtos"
+										}
+									]
+								},
+								"description": "**GET**\n\nNo método `GET`, será possível consultar um produto individualmente. Esse endpoint pode ser útil quando for necessário verificar / sincronizar produto por produto."
+							},
+							"response": [
+								{
+									"id": "207f28f2-300a-4766-90bf-dedc9678e12b",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Bearer Token obtido na autenticação"
+											}
+										],
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/estoque/movimento_produto/:id_movimento_produto",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"estoque",
+												"movimento_produto",
+												":id_movimento_produto"
+											],
+											"variable": [
+												{
+													"key": "id_movimento_produto",
+													"value": "1850",
+													"description": "ID da Movimentação de Produtos"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 07 Feb 2023 01:59:29 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=TdcmdqPKftzDZz4MI86pqT8YcOR6WNoHSkrxritr; expires=Tue, 07-Feb-2023 02:59:29 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Movimento de Produto de ID 1850 consultado com sucesso\",\n    \"movimento_produto\": {\n        \"id_movimento_produto\": 1850,\n        \"codigo_movimento\": 1248,\n        \"data_movimento\": \"2021-09-30 00:00:00\",\n        \"data_cadastro\": \"2021-09-30 09:11:57\",\n        \"data_atualizacao\": \"2022-01-07 16:47:05\",\n        \"valor_total\": \"38000\",\n        \"movimento_produto_itens\": [\n            {\n                \"id_movimento_produto_item\": 2133,\n                \"valor_unitario\": 5,\n                \"quantidade\": 7600,\n                \"valor_total\": 38000,\n                \"produto_item\": {\n                    \"id_produto_item\": 18990,\n                    \"produto\": {\n                        \"id_produto\": 131,\n                        \"nome\": \"CABO DE 30 VOLTS\",\n                        \"agrupado\": true\n                    },\n                    \"local_estoque\": {\n                        \"id_local_estoque\": 9,\n                        \"descricao\": \"HUBSOFT\"\n                    },\n                    \"produto_item_status\": {\n                        \"id_produto_item_status\": 4,\n                        \"descricao\": \"* COMODATO *\",\n                        \"prefixo\": \"comodato\"\n                    },\n                    \"identificador_proprio\": null,\n                    \"codigo_item\": 485,\n                    \"numero_serie\": null,\n                    \"mac_address\": null,\n                    \"observacoes\": null,\n                    \"quantidade\": 7600\n                }\n            }\n        ],\n        \"tipo_movimento_produto\": {\n            \"id_tipo_movimento_produto\": 2,\n            \"descricao\": \"Comodato\",\n            \"prefixo\": \"comodato\",\n            \"produto_item_status\": {\n                \"id_produto_item_status\": 4,\n                \"descricao\": \"* COMODATO *\",\n                \"prefixo\": \"comodato\"\n            }\n        },\n        \"usuario_responsavel\": {\n            \"id_usuario_responsavel\": 37,\n            \"nome\": \"Izabella\",\n            \"email\": \"izabella@hubsoft.com.br\"\n        },\n        \"usuario_cadastro\": {\n            \"id_usuario_cadastro\": 37,\n            \"nome\": \"Izabella\",\n            \"email\": \"izabella@hubsoft.com.br\"\n        },\n        \"cliente_servico\": {\n            \"id_cliente_servico\": 11341,\n            \"numero_plano\": null,\n            \"cliente\": {\n                \"id_cliente\": 10826,\n                \"nome_razaosocial\": \"ALINE APARECIDA RODRIGUES\",\n                \"cpf_cnpj\": \"11553476689\"\n            }\n        }\n    }\n}"
+								},
+								{
+									"id": "18fe7182-61d7-4e78-8e86-e07da03e41ea",
+									"name": "Erro",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Bearer Token obtido na autenticação"
+											}
+										],
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/estoque/movimento_produto/:id_movimento_produto",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"estoque",
+												"movimento_produto",
+												":id_movimento_produto"
+											],
+											"variable": [
+												{
+													"key": "id_movimento_produto",
+													"value": "9999",
+													"description": "ID da Movimentação de Produtos"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 07 Feb 2023 02:00:34 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=TdcmdqPKftzDZz4MI86pqT8YcOR6WNoHSkrxritr; expires=Tue, 07-Feb-2023 03:00:34 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"error\",\n    \"msg\": \"Movimentro de Produto de ID 9999 não encontrado\"\n}"
+								}
+							]
+						}
+					],
+					"id": "c5885e5c-7867-4156-9625-d180310e6c6f"
 				},
 				{
 					"name": "Produto",
@@ -6514,37 +7043,37 @@
 	],
 	"variable": [
 		{
-			"id": "e5394fd7-971c-466f-a547-70562c226764",
+			"id": "859e4a6f-f155-4983-8e45-528c4597b2dc",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "a568712a-34b0-40a7-82a8-f902bee861a3",
+			"id": "a495f7c8-62a1-4316-9e2c-f669318d54d7",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "e84b62ff-8184-4669-beaf-a2b10a6a7bad",
+			"id": "92554cff-00e4-47fb-9b1b-d4e5b0d3d6ab",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "389f5443-485b-4e3f-98d3-535a8b100529",
+			"id": "5a30b548-a5da-42b3-91ce-1b502edee616",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "79a154e9-f5a7-479b-b4ab-ac2049a51a23",
+			"id": "948275c4-f948-4b0e-8701-c99584985a04",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "dd06f2b7-e3b6-4903-9e48-06c13f750ab7",
+			"id": "6ab0d4da-9d3e-4c5f-8986-87ea21c9456a",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "abd6d100-dc67-4a95-a7b1-fa9453f0c818",
+			"id": "43fa4dfe-d1d3-4eb7-8f2c-89fc8828f926",
 			"key": "access_token",
 			"value": ""
 		}
