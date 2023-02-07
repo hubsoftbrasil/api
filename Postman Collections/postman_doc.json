@@ -3783,7 +3783,7 @@
 										}
 									]
 								},
-								"description": "**GET**\n\nNo método `GET`, irá consultar/listar os dados de produtos e retornar um `JSON` como resposta. Os dados serão retornados de forma paginada, portanto fique atento ao conjunto da dados \"paginacao\" que é retornado na resposta, para saber se será necessário consultar outras páginas ou não.\n\nOs seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| pagina | Página a ser exibida | Sim |\n| itens_por_pagina | Itens por Página a serem exibidos. Mínimo: 1, Máximo: 500. | Não |\n| data_inicio | Data de início da filtragem de dados | Não |\n| data_fim | Data final da filtragem de dados | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| pagina | Campo Inteiro (integer) | `NULL` |\n| itens_por_pagina | Campo Inteiro (integer) | 100 |\n| data_inicio | Campo no formato Date (YYYY-MM-DD) | `NULL` |\n| data_fim | Campo no formato Date (YYYY-MM-DD) | `NULL` |"
+								"description": "**GET**\n\nNo método `GET`, irá consultar/listar os dados de produtos e retornar um `JSON` como resposta. Os dados serão retornados de forma paginada, portanto fique atento ao conjunto da dados \"paginacao\" que é retornado na resposta, para saber se será necessário consultar outras páginas ou não.\n\nOs seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_produto | ID do Produto | Sim |\n| pagina | Página a ser exibida | Sim |\n| itens_por_pagina | Itens por Página a serem exibidos. Mínimo: 1, Máximo: 500. | Não |\n| data_inicio | Data de início da filtragem de dados | Não |\n| data_fim | Data final da filtragem de dados | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_produto | `Integer` |  |\n| pagina | `Integer` | `NULL` |\n| itens_por_pagina | `Integer` | 100 |\n| data_inicio | `Date`(YYYY-MM-DD) | `NULL` |\n| data_fim | `Date` (YYYY-MM-DD) | `NULL` |"
 							},
 							"response": [
 								{
@@ -7058,37 +7058,37 @@
 	],
 	"variable": [
 		{
-			"id": "c368262a-8b8f-4a6c-a4de-1f8985429ac4",
+			"id": "4fdaca51-0a17-48b8-b1e2-cf2716925ff4",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "9602e861-fc75-4d2e-b1d5-75aab1cabcb4",
+			"id": "79faacba-dadd-4630-a96c-2c1ffc130f35",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "58fb5f2e-67a3-4520-9943-a29ab8473a68",
+			"id": "06cf2ae2-8ab1-464d-8257-370cd76d0767",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "480eb304-1ac2-46b8-bc86-5be6549fd1c0",
+			"id": "c22e059c-d127-4f9a-a867-6b9ec29fb929",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "b7b3da6d-e92d-465f-9caa-8e86c01cf946",
+			"id": "2d6fb0dd-b75d-4a7d-bb05-d19f5766424a",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "a7bb4a8d-7d58-4d37-98ef-0a8b9356b7f1",
+			"id": "41d7d717-dacb-4cd8-a833-9ab555812475",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "917119e0-d1c8-4ad5-8c17-0f66d6edc705",
+			"id": "3ed9a283-f1d8-4e12-95d8-419749ac08fc",
 			"key": "access_token",
 			"value": ""
 		}
