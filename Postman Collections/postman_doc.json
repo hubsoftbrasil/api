@@ -4776,7 +4776,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"ids_produto_item\":[101738,101740],\n    \"id_local_estoque\":5,\n    \"status\":\"estoque\"\n}",
+									"raw": "{\n    \"ids_produto_item\":[101738,101740]\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -7183,37 +7183,37 @@
 	],
 	"variable": [
 		{
-			"id": "55b1113a-1f78-4f53-9312-032f42d25e14",
+			"id": "d193ea4d-2fe2-4706-8226-dd20b6c30df1",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "392e72f6-e625-469f-af97-ba14fd1d4214",
+			"id": "ebb7eb2b-655b-4e8c-b726-31e3e2474087",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "6ae33527-3c06-46c4-931d-2c01077f25a4",
+			"id": "c955c8bf-a621-45db-9829-cc070d928182",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "84ff502f-ef3c-4657-bdd2-0b5e75b1ed7c",
+			"id": "37f1d5ba-314b-46e3-8169-b076b7528c26",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "8c1b5d70-2745-4ce1-9982-3e5bea599f38",
+			"id": "80719077-d85b-4eca-8486-914c2119af86",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "fc6ecd24-f4c9-40bb-9be0-cd0615731516",
+			"id": "1f083245-d7ff-445d-aeba-2f8cc3e1553c",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "a721c823-4a17-422a-859e-97a4ed466f2c",
+			"id": "e0d60889-73be-40d6-98a5-30cc1a959538",
 			"key": "access_token",
 			"value": ""
 		}
