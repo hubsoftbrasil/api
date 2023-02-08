@@ -4290,7 +4290,7 @@
 									}
 								},
 								"url": "{{url}}/api/v1/integracao/estoque/produto_item",
-								"description": "**POST**\n\nNo método `POST`, será possível adicionar novos itens de produtos (patrimônios). Os itens podem conter campos que são muito úteis para a empresa, como o Número de Série, MAC Address, Identificador Próprio, etc, portanto, quanto mais informações forem enviadas aqui, melhor ficará a identificação dos itens.\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_produto | ID do Produto já cadastrado anteriormente | Sim |\n| id_local_estoque | ID do Local de Estoque já cadastrado anteriormente | Sim |\n| numero_serie | Número de Série | Não |\n| mac_address | MAC Address | Não |\n| identificador_proprio | Identificador Interno da Empresa ou ID do Item em outro sistema | Não |\n| observacoes | Observações livres | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_produto | `Integer` | `NULL` |\n| id_local_estoque | `Integer` | `NULL` |\n| numero_serie | `String` | `NULL` |\n| mac_address | `String` | `NULL` |\n| identificador_proprio | `String` | `NULL` |\n| observacoes | `LongText` | `NULL` |"
+								"description": "**POST**\n\nNo método `POST`, será possível adicionar novos itens de produtos (patrimônios). Os itens podem conter campos que são muito úteis para a empresa, como o Número de Série, MAC Address, Identificador Próprio, etc, portanto, quanto mais informações forem enviadas aqui, melhor ficará a identificação dos itens.\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_produto | ID do Produto já cadastrado anteriormente | Sim |\n| id_local_estoque | ID do Local de Estoque já cadastrado anteriormente | Sim |\n| numero_serie | Número de Série | Não |\n| mac_address | MAC Address | Não |\n| identificador_proprio | Identificador Interno da Empresa ou ID do Item em outro sistema | Não |\n| observacoes | Observações livres | Não |\n| quantidade | Quantidade | Obrigatório em Produtos do tipo AGRUPADO |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_produto | `Integer` | `NULL` |\n| id_local_estoque | `Integer` | `NULL` |\n| numero_serie | `String` | `NULL` |\n| mac_address | `String` | `NULL` |\n| identificador_proprio | `String` | `NULL` |\n| observacoes | `LongText` | `NULL` |\n| quantidade | `Numeric` | `NULL` |\n\nObservação: O campo `quantidade` deverá ser prenchido obrigatóriamente caso o atributo `agrupado` do produto possua o valor `true`. Para esses casos lançamos apenas a quantidade em cima do total."
 							},
 							"response": [
 								{
@@ -4644,6 +4644,263 @@
 								},
 								{
 									"id": "39383198-2ec7-4e18-acd5-e0ff56148b39",
+									"name": "Erro",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Bearer Token obtido na autenticação"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"mac_address\":\"00:11:22:AA:BB:CC\",\n    \"numero_serie\":\"SN111222333999\",\n    \"identificador_proprio\":\"95f5d435-c302-463e-ad2e-748025fca05e\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/estoque/produto_item/:id_produto_item",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"estoque",
+												"produto_item",
+												":id_produto_item"
+											],
+											"variable": [
+												{
+													"key": "id_produto_item",
+													"value": "213346abc",
+													"description": "(Integer) ID do Produto Item já cadastrado anteriormente"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 06 Feb 2023 13:30:35 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 14:30:35 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"error\",\n    \"msg\": \"Favor preencher os campos obrigatórios de acordo com as especificações\",\n    \"errors\": [\n        \"O campo id_produto_item deve ser do tipo integer\"\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Movimentar",
+							"id": "5c698d82-eb15-4c6f-87c6-e2b5d267c2ba",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"description": "Bearer Token obtido na autenticação"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"ids_produto_item\":[101738,101740],\n    \"id_local_estoque\":5,\n    \"status\":\"estoque\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/v1/integracao/estoque/produto_item/movimentar",
+								"description": "Através desse endpoint, será possível fazer a movimentação do item de produto, permitindo assim, alterar:\n\n- Status do Item\n- Local de Estque do Item\n    \n\nOs atributos podem/devem conter os seguintes valores:\n\n| **Atributo** | **Descrição** | **Obrigatório** | **Valor Default** |\n| --- | --- | --- | --- |\n| ids_produtos | `Array` | Sim | `NULL` |\n| id_local_estoque | `Integer` | Não | `NULL` |\n| status | `OneOf: baixa_manual`,`defeito,descartado`,`estoque`,`manutencao`,`perdido`,`teste` | Não | `NULL` |\n| observacao | `String` | Não | `NULL` |\n\nÉ obrigatório enviar pelo menos um dos campos abaixo:\n\n- `id_local_estoque`\n- `status`"
+							},
+							"response": [
+								{
+									"id": "7ceb3336-9055-4755-bff0-791c13b22b82",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Bearer Token obtido na autenticação"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"mac_address\":\"00:11:22:AA:BB:CC\",\n    \"numero_serie\":\"SN111222333999\",\n    \"identificador_proprio\":\"95f5d435-c302-463e-ad2e-748025fca05e\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/estoque/produto_item/:id_produto_item",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"estoque",
+												"produto_item",
+												":id_produto_item"
+											],
+											"variable": [
+												{
+													"key": "id_produto_item",
+													"value": "213346",
+													"description": "(Integer) ID do Produto Item já cadastrado anteriormente"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 06 Feb 2023 13:29:29 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 14:29:29 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Edição realizado com sucesso\",\n    \"produto_item\": {\n        \"id_produto_item\": 213346,\n        \"produto\": {\n            \"id_produto\": 1,\n            \"nome\": \"Airgrid\",\n            \"agrupado\": false\n        },\n        \"local_estoque\": {\n            \"id_local_estoque\": 9,\n            \"descricao\": \"HUBSOFT\"\n        },\n        \"produto_item_status\": {\n            \"id_produto_item_status\": 2,\n            \"descricao\": \"ESTOQUE\",\n            \"prefixo\": \"estoque\"\n        },\n        \"identificador_proprio\": \"95f5d435-c302-463e-ad2e-748025fca05e\",\n        \"codigo_item\": 177686,\n        \"numero_serie\": \"SN111222333999\",\n        \"mac_address\": \"00:11:22:AA:BB:CC\",\n        \"observacoes\": null\n    }\n}"
+								},
+								{
+									"id": "e14daeb0-6a6d-4e60-95fa-717f06a2d771",
 									"name": "Erro",
 									"originalRequest": {
 										"method": "PUT",
@@ -7058,37 +7315,37 @@
 	],
 	"variable": [
 		{
-			"id": "8ef57c9d-dd21-49c1-9797-48d26e37351e",
+			"id": "d9fe7f8c-ca4d-4d5e-aa63-8072a7995e66",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "81360b70-f6f6-41f6-8b02-631526fc609f",
+			"id": "87c40b99-c2f9-48f1-a96a-d2c79a0d126b",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "bc8dc809-8062-4dae-9648-f6a82dc6ddf2",
+			"id": "c50ad070-da89-4cb1-ab81-20cc0b2edd6c",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "6e68db0b-861a-4d48-b523-6766f26f3d36",
+			"id": "5301b7c7-49ca-4c5f-af3f-8e2021fff330",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "a9002303-ec6c-4a75-aaa4-f6c1ef70bcb3",
+			"id": "3a04ea48-cc56-4196-9442-b4782b472c93",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "db8fe766-cbe9-43cf-b1be-a1db80ba0afb",
+			"id": "0fd5be9a-bfa9-444a-8ecf-d4566f8cb6c9",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "a6a809cd-1fcb-4a19-abac-1b29518999e0",
+			"id": "1988bf88-f384-4353-9fc2-cb793e7219ef",
 			"key": "access_token",
 			"value": ""
 		}
