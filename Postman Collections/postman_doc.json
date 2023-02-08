@@ -4898,118 +4898,6 @@
 									"cookie": [],
 									"responseTime": null,
 									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Edição realizado com sucesso\",\n    \"produto_item\": {\n        \"id_produto_item\": 213346,\n        \"produto\": {\n            \"id_produto\": 1,\n            \"nome\": \"Airgrid\",\n            \"agrupado\": false\n        },\n        \"local_estoque\": {\n            \"id_local_estoque\": 9,\n            \"descricao\": \"HUBSOFT\"\n        },\n        \"produto_item_status\": {\n            \"id_produto_item_status\": 2,\n            \"descricao\": \"ESTOQUE\",\n            \"prefixo\": \"estoque\"\n        },\n        \"identificador_proprio\": \"95f5d435-c302-463e-ad2e-748025fca05e\",\n        \"codigo_item\": 177686,\n        \"numero_serie\": \"SN111222333999\",\n        \"mac_address\": \"00:11:22:AA:BB:CC\",\n        \"observacoes\": null\n    }\n}"
-								},
-								{
-									"id": "e14daeb0-6a6d-4e60-95fa-717f06a2d771",
-									"name": "Erro",
-									"originalRequest": {
-										"method": "PUT",
-										"header": [
-											{
-												"key": "Authorization",
-												"value": "{{access_token}}",
-												"description": "Bearer Token obtido na autenticação"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n    \"mac_address\":\"00:11:22:AA:BB:CC\",\n    \"numero_serie\":\"SN111222333999\",\n    \"identificador_proprio\":\"95f5d435-c302-463e-ad2e-748025fca05e\"\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{url}}/api/v1/integracao/estoque/produto_item/:id_produto_item",
-											"host": [
-												"{{url}}"
-											],
-											"path": [
-												"api",
-												"v1",
-												"integracao",
-												"estoque",
-												"produto_item",
-												":id_produto_item"
-											],
-											"variable": [
-												{
-													"key": "id_produto_item",
-													"value": "213346abc",
-													"description": "(Integer) ID do Produto Item já cadastrado anteriormente"
-												}
-											]
-										}
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Server",
-											"value": "nginx/1.16.1"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										},
-										{
-											"key": "Vary",
-											"value": "Accept-Encoding"
-										},
-										{
-											"key": "X-Powered-By",
-											"value": "PHP/7.1.33"
-										},
-										{
-											"key": "Access-Control-Allow-Origin",
-											"value": "*"
-										},
-										{
-											"key": "Access-Control-Allow-Methods",
-											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
-										},
-										{
-											"key": "Access-Control-Allow-Headers",
-											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
-										},
-										{
-											"key": "Access-Control-Max-Age",
-											"value": "1728000"
-										},
-										{
-											"key": "Access-Control-Allow-Credentials",
-											"value": "true"
-										},
-										{
-											"key": "Cache-Control",
-											"value": "no-cache, private"
-										},
-										{
-											"key": "Date",
-											"value": "Mon, 06 Feb 2023 13:30:35 GMT"
-										},
-										{
-											"key": "Set-Cookie",
-											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 14:30:35 GMT; Max-Age=3600; path=/; httponly"
-										},
-										{
-											"key": "Content-Encoding",
-											"value": "gzip"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"status\": \"error\",\n    \"msg\": \"Favor preencher os campos obrigatórios de acordo com as especificações\",\n    \"errors\": [\n        \"O campo id_produto_item deve ser do tipo integer\"\n    ]\n}"
 								}
 							]
 						},
@@ -7315,37 +7203,37 @@
 	],
 	"variable": [
 		{
-			"id": "6e46512a-6a13-4248-a48c-cd2ab552db9a",
+			"id": "820bc94a-14dd-4a35-ba69-f81647317c0b",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "981daefd-a6aa-449f-a15e-c7a97754e430",
+			"id": "1787f1be-e872-4c0a-955c-7d55da9713ce",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "4c3392b9-3822-4339-b1bc-73fbf7c7cd77",
+			"id": "5ca82998-3189-4498-882d-f4a5b9f50a2e",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "07395816-d21c-44ae-8358-8b619c40574e",
+			"id": "34891f82-b3fd-4373-a2d5-2fb23c7c5739",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "420dc06f-cc9f-48e2-b32c-eb8eb5d0cf01",
+			"id": "6ad87b2f-9d38-40c4-9368-6dceeaec2b98",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "c516b49c-41b5-4b77-bef1-87a4c54bc492",
+			"id": "eb09d45f-9edd-4e05-95e5-f3e4d470196e",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "8d999552-f66b-4e16-94d5-0ad004414c49",
+			"id": "55001347-ea49-44d8-aec2-9d992a134455",
 			"key": "access_token",
 			"value": ""
 		}
