@@ -4878,6 +4878,98 @@
 									"cookie": [],
 									"responseTime": null,
 									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Itens movimentados com sucesso\"\n}"
+								},
+								{
+									"id": "4b1e65ae-0df0-4cfc-90dd-6105f0769e2c",
+									"name": "Movimentar",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Bearer Token obtido na autenticação"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"ids_produto_item\":[101738,101740]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{url}}/api/v1/integracao/estoque/produto_item/movimentar"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 08 Feb 2023 14:47:53 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=SJhGNy7n7PQLiDSapccYgdXQoxVj8ET5aybcd72e; expires=Wed, 08-Feb-2023 15:47:53 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"error\",\n    \"msg\": \"Local de Estoque ou Status devem estar preenchidos. Preencha pelo menos um dos dois e tente novamente.\",\n    \"errors\": []\n}"
 								}
 							]
 						},
@@ -7183,37 +7275,37 @@
 	],
 	"variable": [
 		{
-			"id": "d193ea4d-2fe2-4706-8226-dd20b6c30df1",
+			"id": "47eb255a-0b0b-406e-96f4-515a43e61248",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "ebb7eb2b-655b-4e8c-b726-31e3e2474087",
+			"id": "9b55de45-622a-4f7d-88c5-469c35606bc5",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "c955c8bf-a621-45db-9829-cc070d928182",
+			"id": "827d9906-e48f-413f-9d8c-1ba5dd0ee73c",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "37f1d5ba-314b-46e3-8169-b076b7528c26",
+			"id": "ff1fe582-825c-4754-8b82-8ddcc1b4aa29",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "80719077-d85b-4eca-8486-914c2119af86",
+			"id": "ac1d9de4-bc11-4b5f-8b28-b39329264cb9",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "1f083245-d7ff-445d-aeba-2f8cc3e1553c",
+			"id": "2b1c18d0-b02a-4718-b11b-9d3aeb16a68f",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "e0d60889-73be-40d6-98a5-30cc1a959538",
+			"id": "e49dd7fc-8470-42ee-bd74-0b0b75e3e3dd",
 			"key": "access_token",
 			"value": ""
 		}
