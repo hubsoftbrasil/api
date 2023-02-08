@@ -4784,7 +4784,7 @@
 									}
 								},
 								"url": "{{url}}/api/v1/integracao/estoque/produto_item/movimentar",
-								"description": "Através desse endpoint, será possível fazer a movimentação do item de produto, permitindo assim, alterar:\n\n- Status do Item\n- Local de Estque do Item\n    \n\nOs atributos podem/devem conter os seguintes valores:\n\n| **Atributo** | **Descrição** | **Obrigatório** | **Valor Default** |\n| --- | --- | --- | --- |\n| ids_produtos | `Array` | Sim | `NULL` |\n| id_local_estoque | `Integer` | Não | `NULL` |\n| status | `OneOf: baixa_manual`,`defeito,descartado`,`estoque`,`manutencao`,`perdido`,`teste` | Não | `NULL` |\n| observacao | `String` | Não | `NULL` |\n\nÉ obrigatório enviar pelo menos um dos campos abaixo:\n\n- `id_local_estoque`\n- `status`"
+								"description": "Através desse endpoint, será possível fazer a movimentação do item de produto, permitindo assim, alterar:\n\n- Status do Item\n- Local de Estque do Item\n    \n\nOs atributos podem/devem conter os seguintes valores:\n\n| **Atributo** | **Descrição** | **Obrigatório** | **Valor Default** |\n| --- | --- | --- | --- |\n| ids_produtos | `Array` | Sim | `NULL` |\n| id_local_estoque | `Integer` | Não | `NULL` |\n| status | `OneOf: baixa_manual`,`defeito,descartado`,`estoque`,`manutencao`,`perdido`,`teste` | Não | `NULL` |\n| observacao | `String` | Não | `NULL` |\n\nO campo `status` deverá ter um dos seguintes valores, caso seja utilizado:\n\n- `baixa_manual`\n- `defeito`\n- `descartado`\n- `estoque`\n- `manutencao`\n- `perdido`\n- `teste`\n    \n\nÉ obrigatório enviar pelo menos um dos campos abaixo:\n\n- `id_local_estoque`\n- `status`"
 							},
 							"response": [
 								{
@@ -7315,37 +7315,37 @@
 	],
 	"variable": [
 		{
-			"id": "d9fe7f8c-ca4d-4d5e-aa63-8072a7995e66",
+			"id": "37f063e5-aceb-4d7d-9e0d-927273058170",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "87c40b99-c2f9-48f1-a96a-d2c79a0d126b",
+			"id": "020f69b3-5031-4065-8f4f-af02a5509a4f",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "c50ad070-da89-4cb1-ab81-20cc0b2edd6c",
+			"id": "28bbc3be-176f-4329-94b7-f53532cef717",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "5301b7c7-49ca-4c5f-af3f-8e2021fff330",
+			"id": "1e221ea5-af5f-481b-a211-e60a4bc58d6b",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "3a04ea48-cc56-4196-9442-b4782b472c93",
+			"id": "a44d7ed0-6754-448e-b662-a882d6283192",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "0fd5be9a-bfa9-444a-8ecf-d4566f8cb6c9",
+			"id": "ed5d2816-ba30-4093-b4d4-6eab763ac357",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "1988bf88-f384-4353-9fc2-cb793e7219ef",
+			"id": "4ddeb1ba-2788-414d-ad6d-a990df3332f3",
 			"key": "access_token",
 			"value": ""
 		}
