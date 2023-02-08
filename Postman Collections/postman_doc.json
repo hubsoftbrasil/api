@@ -4786,7 +4786,100 @@
 								"url": "{{url}}/api/v1/integracao/estoque/produto_item/movimentar",
 								"description": "Através desse endpoint, será possível fazer a movimentação do item de produto, permitindo assim, alterar:\n\n- Status do Item\n- Local de Estque do Item\n    \n\nOs atributos podem/devem conter os seguintes valores:\n\n| **Atributo** | **Descrição** | **Obrigatório** | **Valor Default** |\n| --- | --- | --- | --- |\n| ids_produtos | `Array` | Sim | `NULL` |\n| id_local_estoque | `Integer` | Não | `NULL` |\n| status | `String` | Não | `NULL` |\n| observacao | `String` | Não | `NULL` |\n\nO campo `status` deverá ter um dos seguintes valores, caso seja utilizado:\n\n- `baixa_manual`\n- `defeito`\n- `descartado`\n- `estoque`\n- `manutencao`\n- `perdido`\n- `teste`\n    \n\nÉ obrigatório enviar pelo menos um dos campos abaixo:\n\n- `id_local_estoque`\n- `status`"
 							},
-							"response": []
+							"response": [
+								{
+									"id": "18df6b6f-fd85-449a-81a8-bf8f464bddec",
+									"name": "Movimentar",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Bearer Token obtido na autenticação"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"ids_produto_item\":[101738,101740],\n    \"id_local_estoque\":5,\n    \"status\":\"estoque\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{url}}/api/v1/integracao/estoque/produto_item/movimentar"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 08 Feb 2023 14:47:31 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=SJhGNy7n7PQLiDSapccYgdXQoxVj8ET5aybcd72e; expires=Wed, 08-Feb-2023 15:47:31 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Itens movimentados com sucesso\"\n}"
+								}
+							]
 						},
 						{
 							"name": "Apagar",
@@ -7090,37 +7183,37 @@
 	],
 	"variable": [
 		{
-			"id": "bd741208-e61e-40bc-b8ba-c07b3ad115b1",
+			"id": "2e1ab3dc-72b8-4a80-a964-07d360aff10e",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "e3e5e7b2-a482-4725-963a-7acf47643c3c",
+			"id": "9d7bcd86-14cb-4e57-9e3d-c0d10ef64bb1",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "620150ce-f1a2-4d71-ab30-27d434ad91cb",
+			"id": "e1a23b11-5fe9-40d0-9579-e33a6307f5a2",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "97d6986a-7060-4afc-8b04-20bae68fa877",
+			"id": "50278223-2730-4583-901e-e5a924ca07ee",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "891d18fe-7d57-4cf0-89c3-096241f2089c",
+			"id": "21d7f43b-8055-4e8b-a0c0-591c575944d9",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "1fe26ec8-0d0d-47fb-8db0-9d9470475998",
+			"id": "f136f3de-654a-48d3-8f5e-5b226a547b99",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "b25d6493-4bd7-4018-8d3a-9a612f5d69eb",
+			"id": "5fd87947-5e05-4a5b-90f7-8122cb07799a",
 			"key": "access_token",
 			"value": ""
 		}
