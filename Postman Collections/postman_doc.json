@@ -4786,120 +4786,7 @@
 								"url": "{{url}}/api/v1/integracao/estoque/produto_item/movimentar",
 								"description": "Através desse endpoint, será possível fazer a movimentação do item de produto, permitindo assim, alterar:\n\n- Status do Item\n- Local de Estque do Item\n    \n\nOs atributos podem/devem conter os seguintes valores:\n\n| **Atributo** | **Descrição** | **Obrigatório** | **Valor Default** |\n| --- | --- | --- | --- |\n| ids_produtos | `Array` | Sim | `NULL` |\n| id_local_estoque | `Integer` | Não | `NULL` |\n| status | `String` | Não | `NULL` |\n| observacao | `String` | Não | `NULL` |\n\nO campo `status` deverá ter um dos seguintes valores, caso seja utilizado:\n\n- `baixa_manual`\n- `defeito`\n- `descartado`\n- `estoque`\n- `manutencao`\n- `perdido`\n- `teste`\n    \n\nÉ obrigatório enviar pelo menos um dos campos abaixo:\n\n- `id_local_estoque`\n- `status`"
 							},
-							"response": [
-								{
-									"id": "7ceb3336-9055-4755-bff0-791c13b22b82",
-									"name": "Sucesso",
-									"originalRequest": {
-										"method": "PUT",
-										"header": [
-											{
-												"key": "Authorization",
-												"value": "{{access_token}}",
-												"description": "Bearer Token obtido na autenticação"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n    \"mac_address\":\"00:11:22:AA:BB:CC\",\n    \"numero_serie\":\"SN111222333999\",\n    \"identificador_proprio\":\"95f5d435-c302-463e-ad2e-748025fca05e\"\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{url}}/api/v1/integracao/estoque/produto_item/:id_produto_item",
-											"host": [
-												"{{url}}"
-											],
-											"path": [
-												"api",
-												"v1",
-												"integracao",
-												"estoque",
-												"produto_item",
-												":id_produto_item"
-											],
-											"variable": [
-												{
-													"key": "id_produto_item",
-													"value": "213346",
-													"description": "(Integer) ID do Produto Item já cadastrado anteriormente"
-												}
-											]
-										}
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Server",
-											"value": "nginx/1.16.1"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										},
-										{
-											"key": "Vary",
-											"value": "Accept-Encoding"
-										},
-										{
-											"key": "X-Powered-By",
-											"value": "PHP/7.1.33"
-										},
-										{
-											"key": "Access-Control-Allow-Origin",
-											"value": "*"
-										},
-										{
-											"key": "Access-Control-Allow-Methods",
-											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
-										},
-										{
-											"key": "Access-Control-Allow-Headers",
-											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
-										},
-										{
-											"key": "Access-Control-Max-Age",
-											"value": "1728000"
-										},
-										{
-											"key": "Access-Control-Allow-Credentials",
-											"value": "true"
-										},
-										{
-											"key": "Cache-Control",
-											"value": "no-cache, private"
-										},
-										{
-											"key": "Date",
-											"value": "Mon, 06 Feb 2023 13:29:29 GMT"
-										},
-										{
-											"key": "Set-Cookie",
-											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 14:29:29 GMT; Max-Age=3600; path=/; httponly"
-										},
-										{
-											"key": "Content-Encoding",
-											"value": "gzip"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Edição realizado com sucesso\",\n    \"produto_item\": {\n        \"id_produto_item\": 213346,\n        \"produto\": {\n            \"id_produto\": 1,\n            \"nome\": \"Airgrid\",\n            \"agrupado\": false\n        },\n        \"local_estoque\": {\n            \"id_local_estoque\": 9,\n            \"descricao\": \"HUBSOFT\"\n        },\n        \"produto_item_status\": {\n            \"id_produto_item_status\": 2,\n            \"descricao\": \"ESTOQUE\",\n            \"prefixo\": \"estoque\"\n        },\n        \"identificador_proprio\": \"95f5d435-c302-463e-ad2e-748025fca05e\",\n        \"codigo_item\": 177686,\n        \"numero_serie\": \"SN111222333999\",\n        \"mac_address\": \"00:11:22:AA:BB:CC\",\n        \"observacoes\": null\n    }\n}"
-								}
-							]
+							"response": []
 						},
 						{
 							"name": "Apagar",
@@ -7203,37 +7090,37 @@
 	],
 	"variable": [
 		{
-			"id": "820bc94a-14dd-4a35-ba69-f81647317c0b",
+			"id": "bd741208-e61e-40bc-b8ba-c07b3ad115b1",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "1787f1be-e872-4c0a-955c-7d55da9713ce",
+			"id": "e3e5e7b2-a482-4725-963a-7acf47643c3c",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "5ca82998-3189-4498-882d-f4a5b9f50a2e",
+			"id": "620150ce-f1a2-4d71-ab30-27d434ad91cb",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "34891f82-b3fd-4373-a2d5-2fb23c7c5739",
+			"id": "97d6986a-7060-4afc-8b04-20bae68fa877",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "6ad87b2f-9d38-40c4-9368-6dceeaec2b98",
+			"id": "891d18fe-7d57-4cf0-89c3-096241f2089c",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "eb09d45f-9edd-4e05-95e5-f3e4d470196e",
+			"id": "1fe26ec8-0d0d-47fb-8db0-9d9470475998",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "55001347-ea49-44d8-aec2-9d992a134455",
+			"id": "b25d6493-4bd7-4018-8d3a-9a612f5d69eb",
 			"key": "access_token",
 			"value": ""
 		}
