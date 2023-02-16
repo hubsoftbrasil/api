@@ -204,6 +204,87 @@
 					]
 				},
 				{
+					"name": "Todos",
+					"id": "fcdd407c-21e9-46cf-9f0d-5a1913e1720b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{access_token}}",
+								"type": "text",
+								"description": "Bearer Token obtido na autenticação"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/v1/integracao/atendimento/todos?pagina=0&itens_por_pagina=0&data_inicio=&data_fim=&relacoes=",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"integracao",
+								"atendimento",
+								"todos"
+							],
+							"query": [
+								{
+									"key": "pagina",
+									"value": "0",
+									"description": "(Obrigatório) Número da Página que deseja consultar. Primeira página = "
+								},
+								{
+									"key": "itens_por_pagina",
+									"value": "0",
+									"description": "(Obrigatório) Total de Itens por Página (Min: 1 e Max: 500)"
+								},
+								{
+									"key": "data_inicio",
+									"value": "",
+									"description": "(opcional) Valor no formato Date (YYYY-MM-DD). Obs: Menor ou igual a data fim"
+								},
+								{
+									"key": "data_fim",
+									"value": "",
+									"description": "(opcional) Valor no formato Date (YYYY-MM-DD) Obs: Maior ou igual data_inicio"
+								},
+								{
+									"key": "relacoes",
+									"value": "",
+									"description": "(opcional) cliente_servico,usuarios_responsaveis,atendimento_mensagem"
+								}
+							]
+						},
+						"description": "No método `GET`, irá consultar os dados dos atendimentos e retornar um `JSON` como resposta. O resultado é retornado de forma paginada, portanto é importante fazer um loop de consultas em sua aplicação, caso queria percorrer os dados em sua totalidade.\n\nOs seguintes parâmetros podem/devem ser utilizados:\n\n| **Atributo** | **Descrição** | **Obrigatório** |\n| --- | --- | --- |\n| pagina | Número da Página da Consulta | **Sim** |\n| itens_por_pagina | Quantidade de Registro por Página da consulta | **Sim** |\n| data_inicio | Data de Cadastro Inicial | Não |\n| data_fim | Data de Cadastro Final | Não |\n| relacoes | Carrega apenas os relacionamentos especificados | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| **Atributo** | **Descrição** | **Valor Default** |\n| --- | --- | --- |\n| pagina | Valor númerico. A primeira página será 0 | Nenhum |\n| itens_por_pagina | Valor númerico. Mínimo: 1, Máximo: 500 | Nenhum |\n| data_inicio | Valor no formato DateTime (YYYY-MM-DD) | Nenhum |\n| data_fim | Valor no formato DateTime (YYYY-MM-DD) Obs: Maior ou igual data_inicio | Nenhum |\n| relacoes | atendimento_mensagem | Nenhum |\n\n**IMPORTANTE:** Lembre-se que essa é uma requisição que poderá retornar um volume muito grande de dados, portanto, utilize as relações com cautela, pois quanto mais relações forem utilizados, maior poderá ser o tempo de resposta da API."
+					},
+					"response": [
+						{
+							"id": "1c68b91b-778a-4fe9-b59e-e901325cdfdb",
+							"name": "Sucesso",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": "/api/v1/integracao/atendimento/todos"
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Dados consultados com sucesso\",\n    \"paginacao\": {\n        \"primeira_pagina\": 0,\n        \"ultima_pagina\": 38,\n        \"pagina_atual\": 0,\n        \"total_registros\": 39\n    },\n    \"atendimentos\": [\n        {\n            \"id_atendimento\": 5448,\n            \"id_atendimento_status\": 23,\n            \"id_tipo_atendimento\": 125,\n            \"id_cliente_servico\": 17812,\n            \"id_usuario_responsavel\": null,\n            \"id_usuario_abertura\": 4903,\n            \"protocolo\": \"20221229180833379797\",\n            \"data_cadastro\": \"2022-12-29 18:08:33\",\n            \"data_fechamento\": null,\n            \"rascunho\": false,\n            \"status_fechamento\": null,\n            \"descricao_fechamento\": null,\n            \"id_motivo_fechamento_atendimento\": null,\n            \"deleted_at\": null,\n            \"avaliacao\": null,\n            \"comentario_avaliacao\": null,\n            \"ordem_servico_count\": 0,\n            \"ordem_servico_fechada\": 0,\n            \"ordem_servico_aberta\": 0,\n            \"ingressado\": false,\n            \"data_cadastro_br\": \"29/12/2022 18:08\",\n            \"data_cadastro_timestamp\": 1672348113000,\n            \"data_fechamento_br\": null,\n            \"data_fechamento_timestamp\": null,\n            \"minutos_em_aberto\": 61486,\n            \"tempo_restante\": \"-1023h 46min\",\n            \"percentual_tempo_restante\": 0,\n            \"percentual_color_class\": \"white-fg md-red-bg\",\n            \"status\": {\n                \"id_atendimento_status\": 23,\n                \"prefixo\": \"aguardando_analise\",\n                \"descricao\": \"Aguardando Análise\",\n                \"cor\": \"md-deep-orange-A700-bg\",\n                \"abrir_ordem_servico\": false,\n                \"display\": \"Aguardando Análise\"\n            },\n            \"tipo_atendimento\": {\n                \"id_tipo_atendimento\": 125,\n                \"descricao\": \"COMERCIAL\",\n                \"checklists\": []\n            },\n            \"cliente_servico\": {\n                \"id_cliente_servico\": 17812,\n                \"id_cliente\": 24930,\n                \"id_servico\": 2735,\n                \"numero_plano\": 6,\n                \"display\": \"(6) (MIGRACAO-TESTEMAP) COMBO 10 MEGA - RÁDIO\",\n                \"endereco_numero_completo\": \"RUA PADRE PAULO, 308 - MAE CHIQUINHA, SANTO ANTÔNIO DO MONTE/MG | CEP: 35560-000\",\n                \"endereco_instalacao\": {\n                    \"id_cliente_servico_endereco\": 73553,\n                    \"id_endereco_numero\": 52635,\n                    \"id_cliente_servico\": 17812,\n                    \"tipo\": \"instalacao\",\n                    \"endereco_numero\": {\n                        \"id_endereco_numero\": 52635,\n                        \"numero\": \"308\",\n                        \"complemento\": null,\n                        \"coordenadas\": {\n                            \"type\": \"Point\",\n                            \"coordinates\": [\n                                -45.292858,\n                                -20.092926\n                            ]\n                        },\n                        \"ativo\": true,\n                        \"id_cidade\": 7674,\n                        \"bairro\": \"MAE CHIQUINHA\",\n                        \"referencia\": null,\n                        \"endereco\": \"RUA PADRE PAULO\",\n                        \"cep\": \"35560000\",\n                        \"atualizar_coords_auto\": false,\n                        \"id_condominio\": null,\n                        \"cidade\": {\n                            \"id_cidade\": 7674,\n                            \"id_estado\": 65,\n                            \"nome\": \"Santo Antônio do Monte\",\n                            \"estado\": {\n                                \"id_estado\": 65,\n                                \"sigla\": \"MG\"\n                            }\n                        }\n                    }\n                },\n                \"servico\": {\n                    \"id_servico\": 2735,\n                    \"descricao\": \"(Migracao-TesteMap) COMBO 10 MEGA - RÁDIO\",\n                    \"id_servico_grupo\": 51,\n                    \"servico_grupo\": {\n                        \"id_servico_grupo\": 51,\n                        \"descricao\": \"GRUPO DE TESTE\",\n                        \"data_cadastro\": \"2020-04-15 13:52:01\",\n                        \"ativo\": true\n                    }\n                },\n                \"cliente\": {\n                    \"id_cliente\": 24930,\n                    \"ativo\": true,\n                    \"codigo_cliente\": 1864,\n                    \"nome_razaosocial\": \"LAVYNIA\",\n                    \"display\": \"(1864) LAVYNIA\"\n                }\n            },\n            \"usuarios_responsaveis\": [],\n            \"atendimento_mensagem\": [\n                {\n                    \"id_atendimento_mensagem\": 376,\n                    \"id_atendimento\": 5448,\n                    \"mensagem\": \"TESTE\",\n                    \"data_cadastro_br\": \"10/02/2023 10:55\",\n                    \"data_cadastro_timestamp\": 1676037311000\n                },\n                {\n                    \"id_atendimento_mensagem\": 375,\n                    \"id_atendimento\": 5448,\n                    \"mensagem\": \"TESTE\",\n                    \"data_cadastro_br\": \"10/02/2023 10:55\",\n                    \"data_cadastro_timestamp\": 1676037311000\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
 					"name": "Adicionar",
 					"id": "51f78a40-e296-495b-b073-4f34c3115437",
 					"protocolProfileBehavior": {
@@ -369,87 +450,6 @@
 							"cookie": [],
 							"responseTime": null,
 							"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Atendimento atualizado com sucesso\",\n    \"atendimento\": {\n        \"id_atendimento\": 1114,\n        \"protocolo\": \"202003051452007\",\n        \"id_cliente_servico\": 13677,\n        \"id_tipo_atendimento\": 44,\n        \"id_usuario_abertura\": 56,\n        \"id_usuario_fechamento\": 1,\n        \"descricao_abertura\": \"INSTALAÇÃO NOVA\",\n        \"descricao_fechamento\": \"Fechamento automático.\",\n        \"data_cadastro\": \"2020-03-05 14:52:00\",\n        \"data_fechamento\": \"2020-03-11 09:56:10\",\n        \"ip_cadastro\": null,\n        \"id_usuario_responsavel\": 22,\n        \"id_setor_responsavel\": null,\n        \"destino\": \"usuario\",\n        \"status_fechamento\": \"concluido\",\n        \"id_motivo_fechamento_atendimento\": 5,\n        \"id_atendimento_status\": 24,\n        \"resultado_diagnostico\": null,\n        \"nome_contato\": \"TESTE APRESENT\",\n        \"telefone_contato\": \"3734151100\",\n        \"email_contato\": null,\n        \"rascunho\": false,\n        \"deleted_at\": null,\n        \"id_origem_contato\": null,\n        \"avaliacao\": null,\n        \"comentario_avaliacao\": null,\n        \"push_notification_enviado\": false,\n        \"data_cadastro_br\": \"05/03/2020 14:52\",\n        \"data_cadastro_timestamp\": 1583430720000,\n        \"data_fechamento_br\": \"11/03/2020 09:56\",\n        \"data_fechamento_timestamp\": 1583931370000,\n        \"minutos_em_aberto\": 8344,\n        \"tempo_restante\": \"-138h 4min\",\n        \"percentual_tempo_restante\": 0,\n        \"percentual_color_class\": \"white-fg md-red-bg\"\n    }\n}"
-						}
-					]
-				},
-				{
-					"name": "Todos",
-					"id": "fcdd407c-21e9-46cf-9f0d-5a1913e1720b",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "{{access_token}}",
-								"type": "text",
-								"description": "Bearer Token obtido na autenticação"
-							}
-						],
-						"url": {
-							"raw": "{{url}}/api/v1/integracao/atendimento/todos?pagina=0&itens_por_pagina=0&data_inicio=&data_fim=&relacoes=",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"api",
-								"v1",
-								"integracao",
-								"atendimento",
-								"todos"
-							],
-							"query": [
-								{
-									"key": "pagina",
-									"value": "0",
-									"description": "(Obrigatório) Número da Página que deseja consultar. Primeira página = "
-								},
-								{
-									"key": "itens_por_pagina",
-									"value": "0",
-									"description": "(Obrigatório) Total de Itens por Página (Min: 1 e Max: 500)"
-								},
-								{
-									"key": "data_inicio",
-									"value": "",
-									"description": "(opcional) Valor no formato Date (YYYY-MM-DD). Obs: Menor ou igual a data fim"
-								},
-								{
-									"key": "data_fim",
-									"value": "",
-									"description": "(opcional) Valor no formato Date (YYYY-MM-DD) Obs: Maior ou igual data_inicio"
-								},
-								{
-									"key": "relacoes",
-									"value": "",
-									"description": "(opcional) atendimento_mensagem"
-								}
-							]
-						},
-						"description": "No método `GET`, irá consultar os dados dos atendimentos e retornar um `JSON` como resposta. O resultado é retornado de forma paginada, portanto é importante fazer um loop de consultas em sua aplicação, caso queria percorrer os dados em sua totalidade.\n\nOs seguintes parâmetros podem/devem ser utilizados:\n\n| **Atributo** | **Descrição** | **Obrigatório** |\n| --- | --- | --- |\n| pagina | Número da Página da Consulta | **Sim** |\n| itens_por_pagina | Quantidade de Registro por Página da consulta | **Sim** |\n| data_inicio | Data de Cadastro Inicial | Não |\n| data_fim | Data de Cadastro Final | Não |\n| relacoes | Carrega apenas os relacionamentos especificados | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| **Atributo** | **Descrição** | **Valor Default** |\n| --- | --- | --- |\n| pagina | Valor númerico. A primeira página será 0 | Nenhum |\n| itens_por_pagina | Valor númerico. Mínimo: 1, Máximo: 500 | Nenhum |\n| data_inicio | Valor no formato DateTime (YYYY-MM-DD) | Nenhum |\n| data_fim | Valor no formato DateTime (YYYY-MM-DD) Obs: Maior ou igual data_inicio | Nenhum |\n| relacoes | atendimento_mensagem | Nenhum |\n\n**IMPORTANTE:** Lembre-se que essa é uma requisição que poderá retornar um volume muito grande de dados, portanto, utilize as relações com cautela, pois quanto mais relações forem utilizados, maior poderá ser o tempo de resposta da API."
-					},
-					"response": [
-						{
-							"id": "1c68b91b-778a-4fe9-b59e-e901325cdfdb",
-							"name": "Sucesso",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "",
-										"type": "text"
-									}
-								],
-								"url": "/api/v1/integracao/atendimento/todos"
-							},
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Dados consultados com sucesso\",\n    \"paginacao\": {\n        \"primeira_pagina\": 0,\n        \"ultima_pagina\": 38,\n        \"pagina_atual\": 0,\n        \"total_registros\": 39\n    },\n    \"atendimentos\": [\n        {\n            \"id_atendimento\": 5448,\n            \"id_atendimento_status\": 23,\n            \"id_tipo_atendimento\": 125,\n            \"id_cliente_servico\": 17812,\n            \"id_usuario_responsavel\": null,\n            \"id_usuario_abertura\": 4903,\n            \"protocolo\": \"20221229180833379797\",\n            \"data_cadastro\": \"2022-12-29 18:08:33\",\n            \"data_fechamento\": null,\n            \"rascunho\": false,\n            \"status_fechamento\": null,\n            \"descricao_fechamento\": null,\n            \"id_motivo_fechamento_atendimento\": null,\n            \"deleted_at\": null,\n            \"avaliacao\": null,\n            \"comentario_avaliacao\": null,\n            \"ordem_servico_count\": 0,\n            \"ordem_servico_fechada\": 0,\n            \"ordem_servico_aberta\": 0,\n            \"ingressado\": false,\n            \"data_cadastro_br\": \"29/12/2022 18:08\",\n            \"data_cadastro_timestamp\": 1672348113000,\n            \"data_fechamento_br\": null,\n            \"data_fechamento_timestamp\": null,\n            \"minutos_em_aberto\": 61486,\n            \"tempo_restante\": \"-1023h 46min\",\n            \"percentual_tempo_restante\": 0,\n            \"percentual_color_class\": \"white-fg md-red-bg\",\n            \"status\": {\n                \"id_atendimento_status\": 23,\n                \"prefixo\": \"aguardando_analise\",\n                \"descricao\": \"Aguardando Análise\",\n                \"cor\": \"md-deep-orange-A700-bg\",\n                \"abrir_ordem_servico\": false,\n                \"display\": \"Aguardando Análise\"\n            },\n            \"tipo_atendimento\": {\n                \"id_tipo_atendimento\": 125,\n                \"descricao\": \"COMERCIAL\",\n                \"checklists\": []\n            },\n            \"cliente_servico\": {\n                \"id_cliente_servico\": 17812,\n                \"id_cliente\": 24930,\n                \"id_servico\": 2735,\n                \"numero_plano\": 6,\n                \"display\": \"(6) (MIGRACAO-TESTEMAP) COMBO 10 MEGA - RÁDIO\",\n                \"endereco_numero_completo\": \"RUA PADRE PAULO, 308 - MAE CHIQUINHA, SANTO ANTÔNIO DO MONTE/MG | CEP: 35560-000\",\n                \"endereco_instalacao\": {\n                    \"id_cliente_servico_endereco\": 73553,\n                    \"id_endereco_numero\": 52635,\n                    \"id_cliente_servico\": 17812,\n                    \"tipo\": \"instalacao\",\n                    \"endereco_numero\": {\n                        \"id_endereco_numero\": 52635,\n                        \"numero\": \"308\",\n                        \"complemento\": null,\n                        \"coordenadas\": {\n                            \"type\": \"Point\",\n                            \"coordinates\": [\n                                -45.292858,\n                                -20.092926\n                            ]\n                        },\n                        \"ativo\": true,\n                        \"id_cidade\": 7674,\n                        \"bairro\": \"MAE CHIQUINHA\",\n                        \"referencia\": null,\n                        \"endereco\": \"RUA PADRE PAULO\",\n                        \"cep\": \"35560000\",\n                        \"atualizar_coords_auto\": false,\n                        \"id_condominio\": null,\n                        \"cidade\": {\n                            \"id_cidade\": 7674,\n                            \"id_estado\": 65,\n                            \"nome\": \"Santo Antônio do Monte\",\n                            \"estado\": {\n                                \"id_estado\": 65,\n                                \"sigla\": \"MG\"\n                            }\n                        }\n                    }\n                },\n                \"servico\": {\n                    \"id_servico\": 2735,\n                    \"descricao\": \"(Migracao-TesteMap) COMBO 10 MEGA - RÁDIO\",\n                    \"id_servico_grupo\": 51,\n                    \"servico_grupo\": {\n                        \"id_servico_grupo\": 51,\n                        \"descricao\": \"GRUPO DE TESTE\",\n                        \"data_cadastro\": \"2020-04-15 13:52:01\",\n                        \"ativo\": true\n                    }\n                },\n                \"cliente\": {\n                    \"id_cliente\": 24930,\n                    \"ativo\": true,\n                    \"codigo_cliente\": 1864,\n                    \"nome_razaosocial\": \"LAVYNIA\",\n                    \"display\": \"(1864) LAVYNIA\"\n                }\n            },\n            \"usuarios_responsaveis\": [],\n            \"atendimento_mensagem\": [\n                {\n                    \"id_atendimento_mensagem\": 376,\n                    \"id_atendimento\": 5448,\n                    \"mensagem\": \"TESTE\",\n                    \"data_cadastro_br\": \"10/02/2023 10:55\",\n                    \"data_cadastro_timestamp\": 1676037311000\n                },\n                {\n                    \"id_atendimento_mensagem\": 375,\n                    \"id_atendimento\": 5448,\n                    \"mensagem\": \"TESTE\",\n                    \"data_cadastro_br\": \"10/02/2023 10:55\",\n                    \"data_cadastro_timestamp\": 1676037311000\n                }\n            ]\n        }\n    ]\n}"
 						}
 					]
 				}
@@ -7356,37 +7356,37 @@
 	],
 	"variable": [
 		{
-			"id": "245c82aa-ec4b-4baa-8426-ff686347f3dc",
+			"id": "3c129b7b-6204-4bbe-a07b-1da7d8725751",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "49925614-eb3e-46a6-b370-c8c1fc68614f",
+			"id": "24c05d4b-3892-40aa-85ef-5a9be5675fe5",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "9792a5c4-bc25-4ba1-92bd-276d0dd8788a",
+			"id": "9869ea3e-f8da-4749-acc5-bcecb4365427",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "6192681e-f612-4bea-9246-7444a9f2c5af",
+			"id": "00c40f96-357c-40e4-82ce-6d6215572e85",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "bc03aae6-baf5-42e8-b1ed-14ec9d28b07b",
+			"id": "c5f60730-3c81-44c6-9a58-347abcc2786b",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "96bb34e6-06be-42c7-97e0-b6899231198b",
+			"id": "89876688-f5c1-4682-a14f-d48f311930f1",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "cd092d4b-352a-49e7-84d9-d339264685f8",
+			"id": "6fd567a4-8e47-4d00-8501-ce10e914711a",
 			"key": "access_token",
 			"value": ""
 		}
