@@ -259,7 +259,7 @@
 								}
 							]
 						},
-						"description": "No método `GET`, irá consultar os dados dos atendimentos e retornar um `JSON` como resposta. O resultado é retornado de forma paginada, portanto é importante fazer um loop de consultas em sua aplicação, caso queria percorrer os dados em sua totalidade.\n\nOs seguintes parâmetros podem/devem ser utilizados:\n\n| **Atributo** | **Descrição** | **Obrigatório** |\n| --- | --- | --- |\n| pagina | Número da Página da Consulta | **Sim** |\n| itens_por_pagina | Quantidade de Registro por Página da consulta | **Sim** |\n| data_inicio | Data de Cadastro Inicial | Não |\n| data_fim | Data de Cadastro Final | Não |\n| relacoes | Carrega apenas os relacionamentos especificados | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| **Atributo** | **Descrição** | **Valor Default** |\n| --- | --- | --- |\n| pagina | Valor númerico. A primeira página será 0 | Nenhum |\n| itens_por_pagina | Valor númerico. Mínimo: 1, Máximo: 500 | Nenhum |\n| data_inicio | Valor no formato DateTime (YYYY-MM-DD) | Nenhum |\n| data_fim | Valor no formato DateTime (YYYY-MM-DD) Obs: Maior ou igual data_inicio | Nenhum |\n| relacoes | atendimento_mensagem | Nenhum |\n\n**IMPORTANTE:** Lembre-se que essa é uma requisição que poderá retornar um volume muito grande de dados, portanto, utilize as relações com cautela, pois quanto mais relações forem utilizados, maior poderá ser o tempo de resposta da API."
+						"description": "No método `GET`, irá consultar os dados dos atendimentos e retornar um `JSON` como resposta. O resultado é retornado de forma paginada, portanto é importante fazer um loop de consultas em sua aplicação, caso queria percorrer os dados em sua totalidade.\n\nOs seguintes parâmetros podem/devem ser utilizados:\n\n| **Atributo** | **Descrição** | **Obrigatório** |\n| --- | --- | --- |\n| pagina | Número da Página da Consulta | **Sim** |\n| itens_por_pagina | Quantidade de Registro por Página da consulta | **Sim** |\n| data_inicio | Data de Cadastro Inicial | Não |\n| data_fim | Data de Cadastro Final | Não |\n| relacoes | Carrega apenas os relacionamentos especificados | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| **Atributo** | **Descrição** | **Valor Default** |\n| --- | --- | --- |\n| pagina | Valor númerico. A primeira página será 0 | Nenhum |\n| itens_por_pagina | Valor númerico. Mínimo: 1, Máximo: 500 | Nenhum |\n| data_inicio | Valor no formato DateTime (YYYY-MM-DD) | Nenhum |\n| data_fim | Valor no formato DateTime (YYYY-MM-DD) Obs: Maior ou igual data_inicio | Nenhum |\n| relacoes | cliente_servico,usuarios_responsaveis,atendimento_mensagem | Nenhum |\n\n**IMPORTANTE:** Lembre-se que essa é uma requisição que poderá retornar um volume muito grande de dados, portanto, utilize as relações com cautela, pois quanto mais relações forem utilizados, maior poderá ser o tempo de resposta da API."
 					},
 					"response": [
 						{
@@ -7356,37 +7356,37 @@
 	],
 	"variable": [
 		{
-			"id": "3c129b7b-6204-4bbe-a07b-1da7d8725751",
+			"id": "81d6e4b6-d4d4-4b65-8b67-1213fc4d45c6",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "24c05d4b-3892-40aa-85ef-5a9be5675fe5",
+			"id": "75f244c3-244d-4ad7-8a31-170edac099f0",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "9869ea3e-f8da-4749-acc5-bcecb4365427",
+			"id": "06dc436c-0bc0-4603-a66c-657ef60bde21",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "00c40f96-357c-40e4-82ce-6d6215572e85",
+			"id": "b475269f-caf9-41e8-ae07-ad505928ec76",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "c5f60730-3c81-44c6-9a58-347abcc2786b",
+			"id": "3e60e0f7-0321-4b53-a302-48813be2310e",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "89876688-f5c1-4682-a14f-d48f311930f1",
+			"id": "40111c78-f0bc-4696-ba4a-936cfac856d7",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "6fd567a4-8e47-4d00-8501-ce10e914711a",
+			"id": "1d8d0d6f-8b6f-43ef-bc74-71bc0e6aa721",
 			"key": "access_token",
 			"value": ""
 		}
