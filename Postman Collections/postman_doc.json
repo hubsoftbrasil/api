@@ -898,6 +898,11 @@
 										"key": "Authorization",
 										"value": "{{access_token}}",
 										"description": "Bearer Token obtido na autenticação"
+									},
+									{
+										"key": "senha",
+										"value": "",
+										"type": "text"
 									}
 								],
 								"body": {
@@ -909,7 +914,7 @@
 										}
 									}
 								},
-								"url": "{{url}}/api/v1/integracao/cliente/autenticacao",
+								"url": "{{url}}/api/v1/integracao/cliente/autenticacao/usuario=cpf_cnpj&senha=senha",
 								"description": "Através desse `endpoint` será possível realizar a autenticação do cliente, com seu usuário e senha. Essa autenticação respeita os mesmos dados que o cliente utiliza para conectar na Central do Assinante `WEB` ou `APP`. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| usuario | Usuário de Autenticação da Central | Sim |\n| senha | Senha de Autenticação da Central | Sim |\n\nCom esse endpoint é possível criar outras soluções para os clientes da empresa e manter toda a autenticação centralizada na central do assinante do HubSoft. Por exemplo, é possível criar plataformas de conteúdo e o cliente usar o mesmo login e senha em todas elas."
 							},
 							"response": [
@@ -7356,37 +7361,37 @@
 	],
 	"variable": [
 		{
-			"id": "81d6e4b6-d4d4-4b65-8b67-1213fc4d45c6",
+			"id": "ca4a345e-3a42-4127-a8e2-775281dd67ff",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "75f244c3-244d-4ad7-8a31-170edac099f0",
+			"id": "da17d6b6-da0c-445c-94a1-1b4eb8e68454",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "06dc436c-0bc0-4603-a66c-657ef60bde21",
+			"id": "694fc6aa-5ff8-4a19-aa1c-f81751a3a02b",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "b475269f-caf9-41e8-ae07-ad505928ec76",
+			"id": "10e34a9d-4435-452c-a567-610fc9b3c6e0",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "3e60e0f7-0321-4b53-a302-48813be2310e",
+			"id": "fb7617d5-e7ae-4ccf-8901-9884d6fbfcdf",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "40111c78-f0bc-4696-ba4a-936cfac856d7",
+			"id": "3ca725fe-307f-4f98-b010-dd6b662bea10",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "1d8d0d6f-8b6f-43ef-bc74-71bc0e6aa721",
+			"id": "1d2e8b88-595c-47f7-847a-cd362135c8d1",
 			"key": "access_token",
 			"value": ""
 		}
