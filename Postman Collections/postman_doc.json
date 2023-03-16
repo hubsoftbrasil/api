@@ -910,7 +910,7 @@
 									}
 								},
 								"url": "{{url}}/api/v1/integracao/cliente/autenticacao/",
-								"description": "**Necessário**\n\nPara fazer requisições nos dados de clientes, é necessário que você já possua o TOKEN, conseguido na etapa (Autenticação)\n\nAs requisições de clientes, devem ser feitos na rota:\n\n```\n/api/v1/integracao/cliente\n\n```\n\nAtravés desse `endpoint` será possível realizar a autenticação do cliente, com seu usuário e senha. Essa autenticação respeita os mesmos dados que o cliente utiliza para conectar na Central do Assinante `WEB` ou `APP`. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| usuario | Usuário de Autenticação da Central | Sim |\n| senha | Senha de Autenticação da Central | Sim |\n\nCom esse endpoint é possível criar outras soluções para os clientes da empresa e manter toda a autenticação centralizada na central do assinante do HubSoft. Por exemplo, é possível criar plataformas de conteúdo e o cliente usar o mesmo login e senha em todas elas."
+								"description": "**Necessário**\n\nPara fazer requisições nos dados de clientes, é necessário que você já possua o TOKEN, conseguido na etapa (Autenticação)\n\nAs requisições de clientes, devem ser feitos na rota:\n\nStartFragment\n\n`/api/v1/integracao/cliente`  \n\nEndFragment\n\nAtravés desse `endpoint` será possível realizar a autenticação do cliente, com seu usuário e senha. Essa autenticação respeita os mesmos dados que o cliente utiliza para conectar na Central do Assinante `WEB` ou `APP`. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| usuario | Usuário de Autenticação da Central | Sim |\n| senha | Senha de Autenticação da Central | Sim |\n\nCom esse endpoint é possível criar outras soluções para os clientes da empresa e manter toda a autenticação centralizada na central do assinante do HubSoft. Por exemplo, é possível criar plataformas de conteúdo e o cliente usar o mesmo login e senha em todas elas."
 							},
 							"response": [
 								{
@@ -7356,37 +7356,37 @@
 	],
 	"variable": [
 		{
-			"id": "08d15368-ec4c-4257-b536-cb7c8623c082",
+			"id": "bf6ea3b8-6042-4628-a3b4-73dd9702b64a",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "5f34761d-3117-4689-80a7-3c1062d3cf60",
+			"id": "df7105bb-3fbd-4e9e-a51e-b0d1631a1186",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "6673efef-862e-428c-9f67-eb1aea4a4d2e",
+			"id": "7e84e1b8-1bc0-4287-8a4c-f94f94850f56",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "83f3d7e2-dfde-4617-bd56-fb34049a5bac",
+			"id": "656f36be-458b-4090-b342-a309e53216a1",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "02fc7ab0-4fd8-4711-bcfb-368616dcf622",
+			"id": "cc6ccbc0-07d5-4c13-aa44-bd4085be0c41",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "764049d5-f221-461a-b9f9-aface729c51b",
+			"id": "f17eaded-d664-4a87-ad76-020e07a1d417",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "6b105291-8efd-4b17-90ae-a88715b1f0cb",
+			"id": "5c0fb29d-0162-4429-b739-937b882c66d3",
 			"key": "access_token",
 			"value": ""
 		}
