@@ -910,7 +910,7 @@
 									}
 								},
 								"url": "{{url}}/api/v1/integracao/cliente/autenticacao/",
-								"description": "Através desse `endpoint` será possível realizar a autenticação do cliente, com seu usuário e senha. Essa autenticação respeita os mesmos dados que o cliente utiliza para conectar na Central do Assinante `WEB` ou `APP`. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| usuario | Usuário de Autenticação da Central | Sim |\n| senha | Senha de Autenticação da Central | Sim |\n\nCom esse endpoint é possível criar outras soluções para os clientes da empresa e manter toda a autenticação centralizada na central do assinante do HubSoft. Por exemplo, é possível criar plataformas de conteúdo e o cliente usar o mesmo login e senha em todas elas."
+								"description": "StartFragment\n\n**Necessário**\n\nPara fazer requisições nos dados de clientes, é necessário que você já possua o TOKEN, conseguido na etapa (Autenticação)\n\nAs requisições de clientes, devem ser feitos na rota:\n\n```\n/api/v1/integracao/cliente\n```\n\nEndFragment\n\n  \n  \nAtravés desse `endpoint` será possível realizar a autenticação do cliente, com seu usuário e senha. Essa autenticação respeita os mesmos dados que o cliente utiliza para conectar na Central do Assinante `WEB` ou `APP`. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| usuario | Usuário de Autenticação da Central | Sim |\n| senha | Senha de Autenticação da Central | Sim |\n\nCom esse endpoint é possível criar outras soluções para os clientes da empresa e manter toda a autenticação centralizada na central do assinante do HubSoft. Por exemplo, é possível criar plataformas de conteúdo e o cliente usar o mesmo login e senha em todas elas."
 							},
 							"response": [
 								{
@@ -7356,37 +7356,37 @@
 	],
 	"variable": [
 		{
-			"id": "4da836be-ffcf-486d-b25a-a92f6af85757",
+			"id": "b33acadc-6ffb-4c23-aff9-592f132c1c98",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "ee134fea-7e79-4714-b530-3893b592fcd0",
+			"id": "d41622db-2f43-46d7-ab6b-96436c228de4",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "f7754890-7438-4c7b-811a-e6338ad1d926",
+			"id": "a8e89864-f27c-4fba-a0a2-d433fbabb5f8",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "c33bb69c-0264-481b-acd8-9181ec0b3b34",
+			"id": "8b657ed3-1c33-43aa-8666-d2506a375076",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "3f42c2e9-2727-42d3-ab14-c34cc81ea9a2",
+			"id": "37efe78c-77ff-49ab-b760-8d2766cbe713",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "dad0086d-308a-451d-b945-cd85f89ccc91",
+			"id": "e301ea38-574b-4265-ad65-2324eb831e73",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "ab3f65d6-66fb-47bc-990b-2ab1005510ad",
+			"id": "7dced322-117c-4bf8-a940-6bdd9eeb807e",
 			"key": "access_token",
 			"value": ""
 		}
