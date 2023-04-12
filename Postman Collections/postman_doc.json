@@ -5863,7 +5863,7 @@
 										}
 									]
 								},
-								"description": "No método `GET`, será possível consultar as NFSe emitidas e obter o retorno no formato `JSON` como resposta. Os seguintes `Query Params` podem/devem ser utilizados\n\n| **Atributo** | **Descrição** | **Obrigatório** |\n| --- | --- | --- |\n| `data_inicio` | Data Inicial no formato YYYY-MM-DD | Sim |\n| `data_fim` | Data Final no formato YYYY-MM-DD | Sim |\n| `documento` | CNPJ da Empresa emissora da NFSe | Sim |\n| `pagina` | Página a ser exibida | Sim |\n| `itens_por_pagina` | Itens por Página a serem exibidos. Mínimo: 1, Máximo: 500 | Sim |\n| id_nfse | Filtra a NFSe pelo ID | Não |\n| numero | Filtra a NFSe pelo número | Não |"
+								"description": "No método `GET`, será possível consultar as NFSe emitidas e obter o retorno no formato `JSON` como resposta. Os seguintes `Query Params` podem/devem ser utilizados\n\n| **Atributo** | **Descrição** | **Obrigatório** |\n| --- | --- | --- |\n| `data_inicio` | Data Inicial no formato YYYY-MM-DD | Sim |\n| `data_fim` | Data Final no formato YYYY-MM-DD | Sim |\n| `documento` | CNPJ da Empresa emissora da NFSe | Sim |\n| `pagina` | Página a ser exibida | Sim |\n| `itens_por_pagina` | Itens por Página a serem exibidos. Mínimo: 1, Máximo: 500 | Sim |\n| `id_nfse` | Filtra a NFSe pelo ID | Não |\n| `numero` | Filtra a NFSe pelo número | Não |"
 							},
 							"response": [
 								{
@@ -7356,37 +7356,37 @@
 	],
 	"variable": [
 		{
-			"id": "c7a26af0-c3f7-4f82-a9d9-de2051847e1d",
+			"id": "42842f8f-da46-4ad5-af4f-b1ea57186666",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "2f2299f6-2b10-4570-8a45-2379810695c6",
+			"id": "b2480926-f46d-44e3-80a4-63f32b54ab62",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "c6f83c5b-58ee-4ca1-b208-ded9f3f5423e",
+			"id": "00dbda24-ba2c-4ff3-a4fc-1dedd44312eb",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "0d244b39-34b4-44c9-acd4-d57ff2405923",
+			"id": "d330a96e-0421-4e82-8460-f11cb30a9a10",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "0ef4136f-8448-44f5-a047-bbd292c25a47",
+			"id": "3a34848b-9826-46ee-a643-ccb59468a8fc",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "db62f9ae-4f00-418b-8334-ff3129377e07",
+			"id": "ee612ffb-fc74-4b10-8856-4e0e860150f7",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "2b07513a-dbc1-4ec1-babe-bf285ed496bc",
+			"id": "cf3b77b0-d543-4392-bf8f-9b2758e7aab9",
 			"key": "access_token",
 			"value": ""
 		}
