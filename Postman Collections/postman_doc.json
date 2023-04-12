@@ -5824,7 +5824,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{url}}/api/v1/integracao/nota_fiscal/nfse?data_inicio=2020-01-01&data_fim=2022-08-31&documento=295074870001851&pagina=0&itens_por_pagina=10",
+									"raw": "{{url}}/api/v1/integracao/nota_fiscal/nfse?data_inicio=2020-01-01&data_fim=2022-08-31&documento=29507487000170&pagina=0&itens_por_pagina=10",
 									"host": [
 										"{{url}}"
 									],
@@ -5848,7 +5848,7 @@
 										},
 										{
 											"key": "documento",
-											"value": "295074870001851",
+											"value": "29507487000170",
 											"description": "(Obrigatório) CNPJ da Empresa emissora da NFSe"
 										},
 										{
@@ -7356,37 +7356,37 @@
 	],
 	"variable": [
 		{
-			"id": "365617b4-edfd-4950-8078-c39e764e5507",
+			"id": "ec77fe67-d0a9-4dd8-96a7-6530610ef839",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "5c68d20d-d4d6-4cd5-9978-30e87d24a31f",
+			"id": "11eee045-9b69-43c4-8344-7de0fae4d13d",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "6b60c73a-2b71-4fe6-9dda-6bd16a6a4636",
+			"id": "20078044-715d-45fd-bb06-01da4d5e848d",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "8d94e33a-6734-4570-b4be-12172471dc00",
+			"id": "8f2781c8-6485-4dc3-96fb-d6723d2c7502",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "5e08a73f-9660-4013-aa2c-a4837327e2d4",
+			"id": "d83e43fa-3630-4475-a5c1-9423b63205d8",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "d5bbc493-1bfe-4c61-9ab8-be8beb8a2347",
+			"id": "9732c05f-18a7-4b7c-a018-17ac70e3c1bb",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "831e7be0-af37-4867-b3a4-0384a04ef9c3",
+			"id": "469b6874-2e36-4a6b-b7f9-7e1c2ca2a511",
 			"key": "access_token",
 			"value": ""
 		}
