@@ -5509,7 +5509,7 @@
 									"header": null,
 									"cookie": [],
 									"responseTime": null,
-									"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Liquidação efetuada com sucesso\",\r\n    \"recibo\": {\r\n        \"id_recibo\": 2514,\r\n        \"numero_recibo\": \"622fffb79b057\",\r\n        \"data_pagamento\": \"2022-11-23\",\r\n        \"valor_pago\": 89.9,\r\n        \"cliente\": {\r\n            \"codigo_cliente\": 1382,\r\n            \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO\",\r\n            \"cpf_cnpj\": \"12345678900\"\r\n        }\r\n    }\r\n}"
+									"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Liquidação efetuada com sucesso\",\r\n    \"recibo\": {\r\n        \"id_recibo\": 2514,\r\n        \"numero_recibo\": \"622fffb79b057\",\r\n        \"data_pagamento\": \"2022-11-23\",\r\n        \"data_credito\": \"2022-11-23\",\r\n        \"valor_pago\": 89.9,\r\n        \"cliente\": {\r\n            \"codigo_cliente\": 1382,\r\n            \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO\",\r\n            \"cpf_cnpj\": \"12345678900\"\r\n        }\r\n    }\r\n}"
 								},
 								{
 									"id": "12ff3ba3-f243-40fa-bc68-b39e3d784933",
@@ -7356,37 +7356,37 @@
 	],
 	"variable": [
 		{
-			"id": "e14e653e-29d1-407c-84aa-4a17457b082a",
+			"id": "129febbd-5f97-44fe-9cba-1454eac39f8b",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "2e6222bf-50c5-4bb3-9b91-ad4c27c495fd",
+			"id": "88564428-84d8-4530-a8f9-70f857adf346",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "1c56fc6c-a244-4100-8015-0b526558bbf0",
+			"id": "88cef950-db9d-41f4-a2d6-7eedcc102728",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "2f0dbc57-fdfe-4795-bdc6-7538f2a32e77",
+			"id": "2a62f40d-8603-411c-a75b-2db91f05c75d",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "9fd8ad9a-c13e-4b32-a612-b35cfe2c8806",
+			"id": "43e362cf-5f08-4a26-a21b-56889f5763ef",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "a1a1b6fb-814e-4f3a-8e55-c85039264dcc",
+			"id": "c38e50dc-dbe8-4491-87e3-dc02dc4a5526",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "6a85fb1b-a216-4297-a817-c410212aab8c",
+			"id": "5a8a65cf-f777-4766-ae13-fdb5504967e0",
 			"key": "access_token",
 			"value": ""
 		}
