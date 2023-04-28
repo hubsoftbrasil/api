@@ -5473,7 +5473,7 @@
 									}
 								},
 								"url": "{{url}}/api/v1/integracao/financeiro/fatura/liquidar",
-								"description": "Através desse `endpoint`, será possível fazer a liquidação de uma fatura no HubSoft. Esse endpoint é normalmente utilizado, quando se deseja utilizar uma forma externa ao HubSoft para receber o boleto de um cliente, por exemplo, um aplicativo customizado, uma central do assinante customizada, totem para auto atendimento, etc.\n\nOs seguintes parâmetros podem/devem ser utilizados:\n\n| **Atributo** | **Descrição** | **Obrigatório** |\n| --- | --- | --- |\n| id_fatura | ID da Fatura | Sim |\n| id_caixa_financeiro | ID do Caixa Financeiro | Sim |\n| data_pagamento | Data do Pagamento | Sim |\n| data_credito | Data do Crédito | Não |\n| valor_pago | Valor Pago | Sim |\n| juros | Valor de Juros/Multas | Não |\n| meio_pagamento | Meio de Pagamento | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| **Atributo** | **Descrição** | **Valor Default** |\n| --- | --- | --- |\n| id_fatura | Campo Inteiro (integer) | `NULL` |\n| id_caixa_financeiro | Campo Inteiro (integer) | `NULL` |\n| data_pagamento | Campo no formato Date (YYYY-MM-DD) | `NULL` |\n| data_credito | Campo no formato Date (YYYY-MM-DD) | data_pagamento |\n| valor_pago | Campo númerico com 2 casas decimais. EX: R$ 99,85 = 99.87 | `NULL` |\n| juros | Campo númerico com 2 casas decimais. EX: R$ 99,90 = 99.90 | `NULL` |\n| meio_pagamento | Prefixo do Meio de Pagamento. | dinheiro |\n\nO campo `meio_pagamento` possui por padrão os seguintes prefixos:\n\n- `boleto`\n- `cartao_credito`\n- `cartao_debito`\n- `cheque`\n- `debito_automatico`\n- `dinheiro`\n- `pix`\n- `transferencia`\n    \n\nPorém, caso seja necessário utilizar outros meios de pagamento, basta fazer o cadastro pela interface WEB do sisema em `Configuração > Financeiro > Meios de Pagamento`\n\nPara consultar via API todos os meios de pagamento, você pode verificar através do endpoint de [Configuração > Meio de Pagamento](https://docs.hubsoft.com.br/#e3ef9dcf-aaf7-4ebd-a6b2-f890827653e3)\n\nPara consultar via API todos os IDs dos Caixas Financeiros disponíveis, você pode verificar através do endpoint de [Configuração > Caixa Financeiro](https://docs.hubsoft.com.br/#431b8688-0ae9-44b1-bc16-5ae888b0dc99)"
+								"description": "Através desse `endpoint`, será possível fazer a liquidação de uma fatura no HubSoft. Esse endpoint é normalmente utilizado, quando se deseja utilizar uma forma externa ao HubSoft para receber o boleto de um cliente, por exemplo, um aplicativo customizado, uma central do assinante customizada, totem para auto atendimento, etc.\n\nOs seguintes parâmetros podem/devem ser utilizados:\n\n| **Atributo** | **Descrição** | **Obrigatório** |\n| --- | --- | --- |\n| id_fatura | ID da Fatura | Sim |\n| id_caixa_financeiro | ID do Caixa Financeiro | Sim |\n| data_pagamento | Data do Pagamento | Sim |\n| data_credito | Data do Crédito | Não |\n| valor_pago | Valor Pago | Sim |\n| juros | Valor de Juros/Multas | Não |\n| meio_pagamento | Meio de Pagamento | Não |\n| tarifa | Tarifa | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| **Atributo** | **Descrição** | **Valor Default** |\n| --- | --- | --- |\n| id_fatura | Campo Inteiro (integer) | `NULL` |\n| id_caixa_financeiro | Campo Inteiro (integer) | `NULL` |\n| data_pagamento | Campo no formato Date (YYYY-MM-DD) | `NULL` |\n| data_credito | Campo no formato Date (YYYY-MM-DD) | data_pagamento |\n| valor_pago | Campo númerico com 2 casas decimais. EX: R$ 99,85 = 99.87 | `NULL` |\n| juros | Campo númerico com 2 casas decimais. EX: R$ 99,90 = 99.90 | `NULL` |\n| meio_pagamento | Prefixo do Meio de Pagamento. | dinheiro |\n| tarifa | Campo númerico com 2 casas decimais. EX: R$ 2.10 | Nota 1 |\n\nO campo `meio_pagamento` possui por padrão os seguintes prefixos:\n\n- `boleto`\n- `cartao_credito`\n- `cartao_debito`\n- `cheque`\n- `debito_automatico`\n- `dinheiro`\n- `pix`\n- `transferencia`\n    \n\nPorém, caso seja necessário utilizar outros meios de pagamento, basta fazer o cadastro pela interface WEB do sisema em `Configuração > Financeiro > Meios de Pagamento`\n\nPara consultar via API todos os meios de pagamento, você pode verificar através do endpoint de [Configuração > Meio de Pagamento](https://docs.hubsoft.com.br/#e3ef9dcf-aaf7-4ebd-a6b2-f890827653e3)\n\nPara consultar via API todos os IDs dos Caixas Financeiros disponíveis, você pode verificar através do endpoint de [Configuração > Caixa Financeiro](https://docs.hubsoft.com.br/#431b8688-0ae9-44b1-bc16-5ae888b0dc99)\n\nNota 1: O campo de tarifa caso não seja passado na request, irá validar se possui a tarifa com ocorrencia liquidado_api cadastrada na configuração da forma de cobrança, caso tenha, utiliza ela, senão irá possuir o valor 0."
 							},
 							"response": [
 								{
@@ -7356,37 +7356,37 @@
 	],
 	"variable": [
 		{
-			"id": "dad128de-914f-46d5-b003-152c55054255",
+			"id": "68f499e8-b110-4024-a775-b0aff6138ab1",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "f7ae690b-096d-4a04-9b6f-462f23c366f4",
+			"id": "579ab7d6-6f3b-4205-966e-d7e0add71bf6",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "d05d0cf1-ae2b-40af-937e-376888eadda5",
+			"id": "a62960fc-1fd9-4574-85e7-c35e07815149",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "1b1136f3-5119-45de-9674-a535c54da073",
+			"id": "5b2fb797-0897-4784-8424-cf4c616ee5cf",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "4d596e9a-ca03-4a5d-819e-f24f0d372f3e",
+			"id": "78f7bf94-1acf-425c-b24d-12e6cc1e6098",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "004a729e-461c-483c-a20d-f5aaeaf31bc7",
+			"id": "9f2b045c-0fa3-49aa-8c9b-3ccb54a11b84",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "c71f9d01-cdfe-4bcc-b228-8e3c8ba0b981",
+			"id": "28ae3c42-d356-496e-a7b9-5b153e55ee58",
 			"key": "access_token",
 			"value": ""
 		}
