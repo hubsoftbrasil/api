@@ -5509,7 +5509,7 @@
 									"header": null,
 									"cookie": [],
 									"responseTime": null,
-									"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Liquidação efetuada com sucesso\",\r\n    \"recibo\": {\r\n        \"id_recibo\": 2514,\r\n        \"numero_recibo\": \"622fffb79b057\",\r\n        \"data_pagamento\": \"2022-11-23\",\r\n        \"data_credito\": \"2022-11-23\",\r\n        \"valor_pago\": 89.9,\r\n        \"tarifa\":2.10,\r\n        \"cliente\": {\r\n            \"codigo_cliente\": 1382,\r\n            \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO\",\r\n            \"cpf_cnpj\": \"12345678900\"\r\n        }\r\n    }\r\n}"
+									"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Liquidação efetuada com sucesso\",\r\n    \"recibo\": {\r\n        \"id_recibo\": 2514,\r\n        \"numero_recibo\": \"622fffb79b057\",\r\n        \"data_pagamento\": \"2022-11-23\",\r\n        \"data_credito\": \"2022-11-23\",\r\n        \"valor_pago\": 89.9,\r\n        \"tarifa\":2.1,\r\n        \"cliente\": {\r\n            \"codigo_cliente\": 1382,\r\n            \"nome_razaosocial\": \"GUILHERME DA COSTA COUTO\",\r\n            \"cpf_cnpj\": \"12345678900\"\r\n        }\r\n    }\r\n}"
 								},
 								{
 									"id": "12ff3ba3-f243-40fa-bc68-b39e3d784933",
@@ -7356,37 +7356,37 @@
 	],
 	"variable": [
 		{
-			"id": "5580db3a-143e-4168-b914-69bee21152a3",
+			"id": "dad128de-914f-46d5-b003-152c55054255",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "85b52d50-c49c-4cd0-8387-588775df11bb",
+			"id": "f7ae690b-096d-4a04-9b6f-462f23c366f4",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "071ebd66-2f7f-4b21-a0ef-38d2f9c9f568",
+			"id": "d05d0cf1-ae2b-40af-937e-376888eadda5",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "8fbae82d-59e9-4a67-adb9-2371d4f99a9f",
+			"id": "1b1136f3-5119-45de-9674-a535c54da073",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "da18c76b-65bb-4f4f-a5a8-be725f348c1f",
+			"id": "4d596e9a-ca03-4a5d-819e-f24f0d372f3e",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "bf93b695-0d7b-4fe2-beef-6f58ecac46d2",
+			"id": "004a729e-461c-483c-a20d-f5aaeaf31bc7",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "02e7c57b-1c5c-4981-bf72-c7c849ef0d8b",
+			"id": "c71f9d01-cdfe-4bcc-b228-8e3c8ba0b981",
 			"key": "access_token",
 			"value": ""
 		}
