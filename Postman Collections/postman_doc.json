@@ -6808,7 +6808,7 @@
 							}
 						},
 						"url": "{{url}}/api/v1/integracao/prospecto",
-						"description": "A rota em questão é do tipo `POST` e o corpo da requisição deve possuir os campos abaixo no JSON.\n\n| Campo | Descrição | Obrigatório |\n| --- | --- | --- |\n| cep | CEP referente ao endereço de instalação | Sim |\n| servico.id_servico | Identificador único do serviço / plano de contratação | Sim |\n| servico.valor | Valor em reais (R$) do serviço / plano ofertado | Sim |\n| nome_razaosocial | Nome ou Razão Social do contratante | Sim |\n| cpf_cnpj | CPF ou CNPJ do contratante | Não |\n| telefone | Telefone principal do contratante | Sim |\n| email | email principal do contratante | Não |\n| observacao | Campo livre para observações do contratante | Não |\n| tipo_pessoa | Informar «pj» para pessoa jurídica ou «pf» para pessoa física | Sim |\n| bairro | Bairro referente ao endereço de instalação | Sim |\n| endereco | Endereço referente ao local de instalação | Sim |\n| numero | Número referente ao endereço de instalação | Sim |\n| id_crm | ID referente ao CRM que será vinculado o prospecto | Nao |\n\n\\* Tipo de valores aceitos pelos campos:\n\n| Campo | Tipo |\n| --- | --- |\n| cep | Numérico |\n| servico.id_servico | Numérico |\n| servico.valor | Numérico |\n| nome_razaosocial | Texto |\n| cpf_cnpj | Numérico |\n| telefone | Numérico |\n| email | Texto |\n| observacao | Texto |\n| tipo_pessoa | Texto |\n| bairro | Texto |\n| endereco | Texto |\n| numero | Numérico |\n| id_crm | Numérico |"
+						"description": "A rota em questão é do tipo `POST` e o corpo da requisição deve possuir os campos abaixo no JSON.\n\n| Campo | Descrição | Obrigatório |\n| --- | --- | --- |\n| cep | CEP referente ao endereço de instalação | Sim |\n| servico.id_servico | Identificador único do serviço / plano de contratação | Sim |\n| servico.valor | Valor em reais (R$) do serviço / plano ofertado | Sim |\n| nome_razaosocial | Nome ou Razão Social do contratante | Sim |\n| cpf_cnpj | CPF ou CNPJ do contratante | Não |\n| telefone | Telefone principal do contratante | Sim |\n| email | email principal do contratante | Não |\n| observacao | Campo livre para observações do contratante | Não |\n| tipo_pessoa | Informar «pj» para pessoa jurídica ou «pf» para pessoa física | Sim |\n| bairro | Bairro referente ao endereço de instalação | Sim |\n| endereco | Endereço referente ao local de instalação | Sim |\n| numero | Número referente ao endereço de instalação | Sim |\n| latitude | Latitude referente ao endereço de instalação | Não |\n| longitude | Longitude referente ao endereço de instalação | Não |\n| id_crm | ID referente ao CRM que será vinculado o prospecto | Nao |\n\n\\* Tipo de valores aceitos pelos campos:\n\n| Campo | Tipo |\n| --- | --- |\n| cep | Numérico |\n| servico.id_servico | Numérico |\n| servico.valor | Numérico |\n| nome_razaosocial | Texto |\n| cpf_cnpj | Numérico |\n| telefone | Numérico |\n| email | Texto |\n| observacao | Texto |\n| tipo_pessoa | Texto |\n| bairro | Texto |\n| endereco | Texto |\n| numero | Numérico |\n| latitude | Numérico |\n| longitude | Númerico |\n| id_crm | Numérico |"
 					},
 					"response": [
 						{
@@ -7356,37 +7356,37 @@
 	],
 	"variable": [
 		{
-			"id": "7d849e17-d50e-4e8d-a15b-7a9c030af3e6",
+			"id": "af95e2dc-1938-4895-ae76-b994123780b3",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "6a2cad38-a8d1-4496-b18a-5696330eca60",
+			"id": "3129a3ed-a5ea-4c00-b25a-58c8c21efb72",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "f4928ee1-4cf7-4967-9c1c-2926798c8282",
+			"id": "8de2f5ad-fcf7-413a-9f69-21921291e896",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "69e1cbb8-6e9f-413a-b7cd-89e3be784186",
+			"id": "f604537f-39f5-41d2-b655-de87b7700ee1",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "17f8d2c0-b709-49a8-8b71-b1774d294df0",
+			"id": "5b785ca7-b699-42e3-a820-895d7058f9b2",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "73e4a813-fa48-43f0-8ffa-c480e5957306",
+			"id": "70d5dbf7-f0b0-4620-acc2-340a3cee2890",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "ed8d0be2-b2af-46f7-9e4a-f5c73541fc67",
+			"id": "7a51406a-ebeb-48b5-a7b7-1b40e771633d",
 			"key": "access_token",
 			"value": ""
 		}
