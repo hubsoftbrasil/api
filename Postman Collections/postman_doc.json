@@ -6800,7 +6800,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n   \"cep\":\"35560000\",\n   \"servico\":{\n      \"id_servico\":1,\n      \"valor\":100\n   },\n   \"cpf_cnpj\":\"68346567000158\",\n   \"telefone\":\"3732818000\",\n   \"nome_razaosocial\":\"Empresa XPTO LTDA\",\n   \"tipo_pessoa\":\"pj\",\n   \"bairro\":\"Centro\",\n   \"endereco\":\"Praça Getúlio Vargas\",\n   \"numero\":77\n}",
+							"raw": "{\n   \"cep\":\"35560000\",\n   \"servico\":{\n      \"id_servico\":1,\n      \"valor\":100\n   },\n   \"cpf_cnpj\":\"68346567000158\",\n   \"telefone\":\"3732818000\",\n   \"nome_razaosocial\":\"Empresa XPTO LTDA\",\n   \"tipo_pessoa\":\"pj\",\n   \"bairro\":\"Centro\",\n   \"endereco\":\"Praça Getúlio Vargas\",\n   \"numero\":77,\n   \"latitude\":\"-20.0916229\",\n   \"longitude\":\"-45.2929515\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -7356,37 +7356,37 @@
 	],
 	"variable": [
 		{
-			"id": "af95e2dc-1938-4895-ae76-b994123780b3",
+			"id": "dfbda4b5-e948-4c40-aefc-de24f1bd3c77",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "3129a3ed-a5ea-4c00-b25a-58c8c21efb72",
+			"id": "0271b8f3-3ca3-4f92-81f2-d8d8ad6730b2",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "8de2f5ad-fcf7-413a-9f69-21921291e896",
+			"id": "9c2df4ff-cdff-4ad2-8a86-ba7127d53c0b",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "f604537f-39f5-41d2-b655-de87b7700ee1",
+			"id": "4f7d57ee-37bc-4433-ae42-a592c4072582",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "5b785ca7-b699-42e3-a820-895d7058f9b2",
+			"id": "eab6f821-0f32-487c-b4f7-ef0ac97e9ad8",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "70d5dbf7-f0b0-4620-acc2-340a3cee2890",
+			"id": "a8ee4583-b28f-4205-b57d-13e0a9208703",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "7a51406a-ebeb-48b5-a7b7-1b40e771633d",
+			"id": "09691a92-3c46-43e5-9be9-850fc55d2ec9",
 			"key": "access_token",
 			"value": ""
 		}
