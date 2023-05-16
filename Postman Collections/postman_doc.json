@@ -5473,7 +5473,7 @@
 									}
 								},
 								"url": "{{url}}/api/v1/integracao/financeiro/fatura/liquidar",
-								"description": "Através desse `endpoint`, será possível fazer a liquidação de uma fatura no HubSoft. Esse endpoint é normalmente utilizado, quando se deseja utilizar uma forma externa ao HubSoft para receber o boleto de um cliente, por exemplo, um aplicativo customizado, uma central do assinante customizada, totem para auto atendimento, etc.\n\nOs seguintes parâmetros podem/devem ser utilizados:\n\n| **Atributo** | **Descrição** | **Obrigatório** |\n| --- | --- | --- |\n| id_fatura | ID da Fatura | Sim |\n| id_caixa_financeiro | ID do Caixa Financeiro | Sim |\n| data_pagamento | Data do Pagamento | Sim |\n| data_credito | Data do Crédito | Não |\n| valor_pago | Valor Pago | Sim |\n| juros | Valor de Juros/Multas | Não |\n| meio_pagamento | Meio de Pagamento | Não |\n| tarifa | Tarifa | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| **Atributo** | **Descrição** | **Valor Default** |\n| --- | --- | --- |\n| id_fatura | Campo Inteiro (integer) | `NULL` |\n| id_caixa_financeiro | Campo Inteiro (integer) | `NULL` |\n| data_pagamento | Campo no formato Date (YYYY-MM-DD) | `NULL` |\n| data_credito | Campo no formato Date (YYYY-MM-DD) | data_pagamento |\n| valor_pago | Campo númerico com 2 casas decimais. EX: R$ 99,85 = 99.87 | `NULL` |\n| juros | Campo númerico com 2 casas decimais. EX: R$ 99,90 = 99.90 | `NULL` |\n| meio_pagamento | Prefixo do Meio de Pagamento. | dinheiro |\n| tarifa | Campo númerico com 2 casas decimais. EX: R$ 2.10 | Nota 1 |\n\nO campo `meio_pagamento` possui por padrão os seguintes prefixos:\n\n- `boleto`\n- `cartao_credito`\n- `cartao_debito`\n- `cheque`\n- `debito_automatico`\n- `dinheiro`\n- `pix`\n- `transferencia`\n    \n\nPorém, caso seja necessário utilizar outros meios de pagamento, basta fazer o cadastro pela interface WEB do sisema em `Configuração > Financeiro > Meios de Pagamento`\n\nPara consultar via API todos os meios de pagamento, você pode verificar através do endpoint de [Configuração > Meio de Pagamento](https://docs.hubsoft.com.br/#e3ef9dcf-aaf7-4ebd-a6b2-f890827653e3)\n\nPara consultar via API todos os IDs dos Caixas Financeiros disponíveis, você pode verificar através do endpoint de [Configuração > Caixa Financeiro](https://docs.hubsoft.com.br/#431b8688-0ae9-44b1-bc16-5ae888b0dc99)\n\nNota 1: O campo de tarifa caso não seja passado na request, irá validar se possui a tarifa com ocorrencia liquidado_api cadastrada na configuração da forma de cobrança, caso tenha, utiliza ela, senão irá possuir o valor 0."
+								"description": "Através desse `endpoint`, será possível fazer a liquidação de uma fatura no HubSoft. Esse endpoint é normalmente utilizado, quando se deseja utilizar uma forma externa ao HubSoft para receber o boleto de um cliente, por exemplo, um aplicativo customizado, uma central do assinante customizada, totem para auto atendimento, etc.\n\nOs seguintes parâmetros podem/devem ser utilizados:\n\n| **Atributo** | **Descrição** | **Obrigatório** |\n| --- | --- | --- |\n| id_fatura | ID da Fatura | Sim |\n| id_caixa_financeiro | ID do Caixa Financeiro | Sim |\n| data_pagamento | Data do Pagamento | Sim |\n| data_credito | Data do Crédito | Não |\n| valor_pago | Valor Pago | Sim |\n| juros | Valor de Juros/Multas | Não |\n| meio_pagamento | Meio de Pagamento | Não |\n| tarifa | Valor de Tarifas Bancárias | Não |\n| desconto | Valor de Descontos concedidos | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| **Atributo** | **Descrição** | **Valor Default** |\n| --- | --- | --- |\n| id_fatura | Campo Inteiro (integer) | `NULL` |\n| id_caixa_financeiro | Campo Inteiro (integer) | `NULL` |\n| data_pagamento | Campo no formato Date (YYYY-MM-DD) | `NULL` |\n| data_credito | Campo no formato Date (YYYY-MM-DD) | data_pagamento |\n| valor_pago | Campo númerico com 2 casas decimais. EX: R$ 99,85 = 99.87 | `NULL` |\n| juros | Campo númerico com 2 casas decimais. EX: R$ 99,90 = 99.90 | `NULL` |\n| meio_pagamento | Prefixo do Meio de Pagamento. | dinheiro |\n| tarifa | Campo númerico com 2 casas decimais. EX: R$ 2.10 = 2.10 | Nota 1\\* |\n| desconto | Campo número com 2 casas decimais. Ex: R$ 0.99 = 0.99 | Nota 2\\* |\n\nO campo `meio_pagamento` possui por padrão os seguintes prefixos:\n\n- `boleto`\n- `cartao_credito`\n- `cartao_debito`\n- `cheque`\n- `debito_automatico`\n- `dinheiro`\n- `pix`\n- `transferencia`\n    \n\nPorém, caso seja necessário utilizar outros meios de pagamento, basta fazer o cadastro pela interface WEB do sisema em `Configuração > Financeiro > Meios de Pagamento`\n\nPara consultar via API todos os meios de pagamento, você pode verificar através do endpoint de [Configuração > Meio de Pagamento](https://docs.hubsoft.com.br/#e3ef9dcf-aaf7-4ebd-a6b2-f890827653e3)\n\nPara consultar via API todos os IDs dos Caixas Financeiros disponíveis, você pode verificar através do endpoint de [Configuração > Caixa Financeiro](https://docs.hubsoft.com.br/#431b8688-0ae9-44b1-bc16-5ae888b0dc99)\n\n- **Nota 1:** O campo de `tarifa` caso não seja passado na request, irá validar se possui a tarifa com ocorrencia liquidado_api cadastrada na configuração da forma de cobrança, caso tenha, utiliza ela, senão irá possuir o valor 0.\n- **Nota 2:** O campo de `desconto` mesmo sendo enviado na request, não subtrai do saldo final. Ele apenas será documentado no sistema, porém para abater o saldo final, deverá já ser enviado no campo `valor_pago`"
 							},
 							"response": [
 								{
@@ -7356,37 +7356,37 @@
 	],
 	"variable": [
 		{
-			"id": "dfbda4b5-e948-4c40-aefc-de24f1bd3c77",
+			"id": "5d28e43e-dfbf-497b-929f-983f9e977315",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "0271b8f3-3ca3-4f92-81f2-d8d8ad6730b2",
+			"id": "c2b2f595-5037-4852-aca2-990f953445c8",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "9c2df4ff-cdff-4ad2-8a86-ba7127d53c0b",
+			"id": "7e5e4825-3895-4611-b42a-0ad081335e1a",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "4f7d57ee-37bc-4433-ae42-a592c4072582",
+			"id": "3fdea179-e087-4053-b661-5e0314fa8aed",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "eab6f821-0f32-487c-b4f7-ef0ac97e9ad8",
+			"id": "6756ccc1-d264-4f15-ab50-a0c24cbbf57a",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "a8ee4583-b28f-4205-b57d-13e0a9208703",
+			"id": "43139b6f-31fd-4235-9ea3-67fce2348355",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "09691a92-3c46-43e5-9be9-850fc55d2ec9",
+			"id": "67906df7-8af7-42c2-8bc6-cd49e9a11713",
 			"key": "access_token",
 			"value": ""
 		}
