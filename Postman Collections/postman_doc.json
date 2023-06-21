@@ -2102,7 +2102,7 @@
 									},
 									"status": "OK",
 									"code": 200,
-									"_postman_previewlanguage": "Text",
+									"_postman_previewlanguage": "json",
 									"header": [
 										{
 											"key": "Server",
@@ -2110,7 +2110,10 @@
 										},
 										{
 											"key": "Content-Type",
-											"value": "application/json"
+											"name": "Content-Type",
+											"value": "application/json",
+											"description": "",
+											"type": "text"
 										},
 										{
 											"key": "Transfer-Encoding",
@@ -7356,37 +7359,37 @@
 	],
 	"variable": [
 		{
-			"id": "5d28e43e-dfbf-497b-929f-983f9e977315",
+			"id": "0dfecdd1-35e4-479b-8cb1-2584028101d1",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "c2b2f595-5037-4852-aca2-990f953445c8",
+			"id": "f554692c-9fce-42d1-87c1-76a0aaf88cb9",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "7e5e4825-3895-4611-b42a-0ad081335e1a",
+			"id": "0cac40a9-140b-4752-b108-ae06df29cad0",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "3fdea179-e087-4053-b661-5e0314fa8aed",
+			"id": "f1d50e34-2f2e-4e78-8218-0ebb05988ad4",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "6756ccc1-d264-4f15-ab50-a0c24cbbf57a",
+			"id": "7eb2b42f-f10e-461b-9676-5cefb50d0783",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "43139b6f-31fd-4235-9ea3-67fce2348355",
+			"id": "cbc2eda9-d4d4-47ed-9c0e-9d9a6716a38e",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "67906df7-8af7-42c2-8bc6-cd49e9a11713",
+			"id": "d0ef3d00-a76c-4433-a989-0a6a0908a4d7",
 			"key": "access_token",
 			"value": ""
 		}
