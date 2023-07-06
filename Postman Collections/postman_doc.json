@@ -7002,7 +7002,28 @@
 							"request": {
 								"method": "POST",
 								"header": [],
-								"url": "{{url}}/api/v1/integracao/rede/cpe/todos"
+								"url": {
+									"raw": "{{url}}/api/v1/integracao/rede/cpe/todos?Authorization={{access_token}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"integracao",
+										"rede",
+										"cpe",
+										"todos"
+									],
+									"query": [
+										{
+											"key": "Authorization",
+											"value": "{{access_token}}",
+											"description": "Token de autorização",
+											"type": "text"
+										}
+									]
+								}
 							},
 							"response": []
 						}
@@ -7378,37 +7399,37 @@
 	],
 	"variable": [
 		{
-			"id": "5db16377-0a60-4c03-9483-13a6449f2c38",
+			"id": "7fe6529b-0598-425c-8612-69b838657d44",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "fd4b6dad-9f0e-4d60-abaf-129833d75f19",
+			"id": "7453afcc-df42-4639-9d36-c8cae7c42d0d",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "4b80c556-5256-4640-8a1b-3b785cbab7ab",
+			"id": "4cb2c828-2d6f-4828-a3e2-b5f0b681a4c5",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "d2cc60ae-0b93-4b49-a612-d3d17d2398b0",
+			"id": "00f5437c-908f-4099-a958-e6fb1b089f2f",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "ae1326c7-626f-46e7-a257-2169be8deb1e",
+			"id": "8acc97d1-bfd3-4c76-b69b-a8370f699fbd",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "677afbee-965c-4671-a072-f244d994290d",
+			"id": "2eeb821a-7520-4dd2-9651-1f5907fed644",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "17c9d261-57f2-4be7-8b6a-6e25f8c31a9f",
+			"id": "ffe70fe4-3cdc-4377-a7c4-11b7767a2d00",
 			"key": "access_token",
 			"value": ""
 		}
