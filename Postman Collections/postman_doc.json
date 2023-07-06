@@ -7037,6 +7037,12 @@
 												"name": "Content-Type",
 												"value": "application/json",
 												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Token de autorização",
+												"type": "text"
 											}
 										],
 										"body": {
@@ -7049,7 +7055,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{url}}/api/v1/integracao/rede/cpe/todos?Authorization={{access_token}}",
+											"raw": "{{url}}/api/v1/integracao/rede/cpe/todos?pagina=1&itens_por_pagina=20&data_inicio&data_fim",
 											"host": [
 												"{{url}}"
 											],
@@ -7063,9 +7069,27 @@
 											],
 											"query": [
 												{
-													"key": "Authorization",
-													"value": "{{access_token}}",
-													"description": "Token de autorização"
+													"key": "pagina",
+													"value": "1",
+													"description": "(Obrigatório) Número da página desejada"
+												},
+												{
+													"key": "itens_por_pagina",
+													"value": "20",
+													"description": "(Obrigatório) Quantidade de itens desejados por página",
+													"type": "text"
+												},
+												{
+													"key": "data_inicio",
+													"value": null,
+													"description": "(Opcional) Filtra CPEs que foram vistas a partir dessa data",
+													"type": "text"
+												},
+												{
+													"key": "data_fim",
+													"value": null,
+													"description": "(Opcional) Filtra CPEs que foram vistas até esta data",
+													"type": "text"
 												}
 											]
 										}
@@ -7450,37 +7474,37 @@
 	],
 	"variable": [
 		{
-			"id": "eb421e17-8fb3-4ca7-aa23-cda7c012d740",
+			"id": "fdff8edc-9967-422c-8a1e-dd6780bdea08",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "8ab42a85-9631-4187-bc14-51a05241c664",
+			"id": "7797a476-baff-4446-855d-a3ce5fc4ba46",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "df1f20fe-82ba-403c-9b28-00375f17b5e2",
+			"id": "75331f3d-d76d-434b-9d95-ea9475cb2e84",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "91bcfed5-ac4b-4601-9eef-089d9c6461c5",
+			"id": "8899bed7-36c8-456f-b8d9-26fd14d6dec6",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "ef93a31c-963d-43bd-b382-9cb30c54a183",
+			"id": "11e6dd4e-57e8-444e-b17d-a3d3113ef7d8",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "27043715-26ce-47c3-b436-e4d07ed982e5",
+			"id": "bec17696-4987-464a-986a-7ca331cf1f41",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "fdddfb3a-da28-48e7-90b7-07164ef247e1",
+			"id": "85032762-1879-4c5b-96c7-22dd9b7eb961",
 			"key": "access_token",
 			"value": ""
 		}
