@@ -6991,6 +6991,11 @@
 			"name": "Rede",
 			"item": [
 				{
+					"name": "New Folder",
+					"item": [],
+					"id": "20839aeb-7c52-42b0-8c0a-dc21e817c4d5"
+				},
+				{
 					"name": "Equipamento",
 					"id": "5664d62d-b76a-4f9f-8d03-a3197d84cad2",
 					"protocolProfileBehavior": {
@@ -7371,37 +7376,37 @@
 	],
 	"variable": [
 		{
-			"id": "5a291369-4a4e-4bca-9245-2e3e24d9f0e9",
+			"id": "68b8a648-44ce-4ec6-a29a-3d6d91b81dee",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "b7843b60-4ee2-497a-a7c7-0802662c1d73",
+			"id": "3d7a9feb-6d50-4f5d-9f90-8c6e4cdb04ce",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "18bf8eb6-9a28-4467-ae22-c1d14052b22b",
+			"id": "eecbdfd7-5b95-4323-b242-271b242d71f9",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "5c49c695-5f48-476a-aac6-008b6b1da6a0",
+			"id": "9eaac123-3217-4756-b12d-c4076dd80e80",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "03f509d0-21d2-4739-b586-96a92025ae28",
+			"id": "0051eb0c-f337-4c74-b929-d6f89c2be8cc",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "3d46792d-bf08-47d1-ba92-e251d221d34e",
+			"id": "a1d11cb1-702d-47ef-8997-e8af3215a28d",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "7c036571-6294-4a19-8c47-590341a1a517",
+			"id": "31625e66-e078-4e3b-90b4-ea04133a2a03",
 			"key": "access_token",
 			"value": ""
 		}
