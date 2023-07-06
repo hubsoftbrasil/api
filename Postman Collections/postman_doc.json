@@ -7055,7 +7055,8 @@
 										}
 									]
 								},
-								"url": "{{url}}/api/v1/integracao/rede/cpe/todos"
+								"url": "{{url}}/api/v1/integracao/rede/cpe/todos",
+								"description": "O método **POST** /todos permite filtrar as CPEs de forma paginada. Somente CPEs que possuem assinantes associados serão retornadas. O atributo **parametros** retorna até 5 parâmetros por CPE."
 							},
 							"response": [
 								{
@@ -7503,37 +7504,37 @@
 	],
 	"variable": [
 		{
-			"id": "97d53b10-7281-442a-9d6c-ee6288025a23",
+			"id": "fa2f9d08-2e93-409d-9ea6-4ea4a700c207",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "8fba1830-40d4-4af0-a393-7b37f7478280",
+			"id": "984d4e65-53dd-4cf9-9ace-d961e9bc8046",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "d8c451cf-1e8a-46bc-99cf-3beeb0e5ded7",
+			"id": "90f0ac32-9ab9-4495-9ac9-f9b48b5dd982",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "5d487e06-d6cb-496b-8e60-775eae5f9df4",
+			"id": "acb096f6-a7f3-47e0-a463-f25ee3392efd",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "011417e2-e77d-4c98-aad8-07452989c2fc",
+			"id": "16a53554-ee76-44dd-b428-f59ca5c9899f",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "8c9c2884-e14b-4147-98d1-db8992d90cf7",
+			"id": "a4508f13-7f02-4ac9-b90b-0ec8a58eac37",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "dececf65-8a92-44d5-8b36-a3eafd8253b1",
+			"id": "02386a87-e3e2-472f-acbc-aedd3987c293",
 			"key": "access_token",
 			"value": ""
 		}
