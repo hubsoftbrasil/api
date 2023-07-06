@@ -7026,45 +7026,36 @@
 							"request": {
 								"method": "POST",
 								"header": [],
-								"url": {
-									"raw": "{{url}}/api/v1/integracao/rede/cpe/todos?pagina=1&itens_por_pagina=20&data_inicial&data_fim",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"api",
-										"v1",
-										"integracao",
-										"rede",
-										"cpe",
-										"todos"
-									],
-									"query": [
+								"body": {
+									"mode": "formdata",
+									"formdata": [
 										{
 											"key": "pagina",
 											"value": "1",
-											"description": "(Obrigatório) Número da página desejada"
+											"description": "(Obrigatório) Número da página desejada",
+											"type": "text"
 										},
 										{
 											"key": "itens_por_pagina",
 											"value": "20",
-											"description": "(Obrigatório) Quantidade de itens por página. De 20 até 500",
+											"description": "(Obrigatório) Itens por página. De 20 até 500",
 											"type": "text"
 										},
 										{
-											"key": "data_inicial",
-											"value": null,
-											"description": "(Opcional) Filtra somente CPEs vistas as partir desta data",
+											"key": "data_inicio",
+											"value": "",
+											"description": "(Opcional) Filtra CPEs que foram vistas a partir desta data",
 											"type": "text"
 										},
 										{
 											"key": "data_fim",
-											"value": null,
-											"description": "(Opcional) Filtra somente CPEs vistas até esta data",
+											"value": "",
+											"description": "(Opcional) Filtra CPEs que foram vistas até esta data",
 											"type": "text"
 										}
 									]
-								}
+								},
+								"url": "{{url}}/api/v1/integracao/rede/cpe/todos"
 							},
 							"response": [
 								{
@@ -7515,37 +7506,37 @@
 	],
 	"variable": [
 		{
-			"id": "0b3cb8e6-7bf5-4162-91bf-0797e0cae9cc",
+			"id": "c724f0c1-21d7-4ddc-aefb-f2e4ab8cc440",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "20ee5226-8921-46c9-9737-a34b9269187f",
+			"id": "7479a191-c78e-4bb3-b2de-added7a9788d",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "3252d0c5-e0eb-4ac0-ae79-ae1241f51a55",
+			"id": "2cee7edd-c054-47e3-92fd-a7d9f30484eb",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "f7fac947-27d8-4662-9d94-b85f86d05fb3",
+			"id": "a882f36b-eecc-49bc-8239-ea0cf7696d14",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "afc73489-0413-41be-8858-3a11a4c5e781",
+			"id": "70faceb5-e9c6-44af-9e1c-2778a4c386c5",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "457640e6-7feb-45d5-91df-7d2ea3f51e7e",
+			"id": "910a541c-7146-4bf7-a970-84dd14e080d9",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "4adf8058-e0de-45a0-bafb-311f1f083629",
+			"id": "cfa7359e-5351-4e68-9e19-73e27e9af5d7",
 			"key": "access_token",
 			"value": ""
 		}
