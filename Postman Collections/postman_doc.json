@@ -7031,7 +7031,23 @@
 									"name": "Todos",
 									"originalRequest": {
 										"method": "POST",
-										"header": [],
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"pagina\": 1,\r\n    \"itens_por_pagina\": 30\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
 										"url": {
 											"raw": "{{url}}/api/v1/integracao/rede/cpe/todos?Authorization={{access_token}}",
 											"host": [
@@ -7049,8 +7065,7 @@
 												{
 													"key": "Authorization",
 													"value": "{{access_token}}",
-													"description": "Token de autorização",
-													"type": "text"
+													"description": "Token de autorização"
 												}
 											]
 										}
@@ -7059,7 +7074,7 @@
 									"header": null,
 									"cookie": [],
 									"responseTime": null,
-									"body": null
+									"body": "{\r\n    \"status\": \"success\",\r\n    \"paginacao\": {\r\n        \"primeira_pagina\": 0,\r\n        \"ultima_pagina\": 0,\r\n        \"pagina_atual\": 1,\r\n        \"total_registros\": 1\r\n    },\r\n    \"cpes\": [\r\n        {\r\n            \"id_cpe\": 71524,\r\n            \"phy_addr\": \"485754437D38A19E\",\r\n            \"data_ultima_atualizacao\": \"2023-07-06 14:48:59\",\r\n            \"historico_parametros\": [\r\n                {\r\n                    \"id_cpe_parametro_historico\": 44084,\r\n                    \"id_cpe\": 71524,\r\n                    \"parametros\": {\r\n                        \"tx_signal\": 23.5,\r\n                        \"rx_signal\": 24\r\n                    },\r\n                    \"created_at\": \"2023-07-06 14:48:59\",\r\n                    \"updated_at\": \"2023-07-06 14:48:59\",\r\n                    \"warnings\": [],\r\n                    \"data_cadastro_br\": \"06/07/2023 14:48:59\"\r\n                }\r\n            ],\r\n            \"servicos\": [\r\n                {\r\n                    \"id_cliente\": 11942,\r\n                    \"id_servico\": 1394,\r\n                    \"codigo_cliente\": 1161,\r\n                    \"nome_razaosocial\": \"JOSE DA SILVA PEREIRA\",\r\n                    \"cpf_cnpj\": \"12312312313\",\r\n                    \"servico\": \"100MB + HBO\",\r\n                    \"status\": \"servico_habilitado\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}"
 								}
 							]
 						}
@@ -7435,37 +7450,37 @@
 	],
 	"variable": [
 		{
-			"id": "624ed327-6605-480b-9bc2-e026a137977c",
+			"id": "ff667a2d-f368-465f-b63a-b237d875b22c",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "dc65dc60-ca59-4762-b3ca-89edc9c8eb3f",
+			"id": "a3b013ee-4d3d-411d-bb8d-bdaa3a165e5b",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "787429db-56bf-400c-b978-914d0c8e06c9",
+			"id": "2cf5aded-0e1c-4dbb-9121-bfc149dcd64b",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "f7baa117-be98-455a-a40a-a86c5e1666b6",
+			"id": "8ce5800e-5186-448c-8402-9a17a7180b4b",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "2bd30955-b55e-414b-b30b-e13ab33279e1",
+			"id": "4998c62e-dc4b-44d1-8764-95af2e72e6db",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "ede7a75c-8247-43b0-98a4-9df8308cacd3",
+			"id": "9f2731ad-14c0-4179-8522-b94327b53a5b",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "ff57c74e-c86d-4fa9-9121-6100c678ebf3",
+			"id": "8fd96cba-a0a6-4cb7-a206-ef5f0b58b139",
 			"key": "access_token",
 			"value": ""
 		}
