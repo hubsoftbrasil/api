@@ -7000,8 +7000,9 @@
 								"disableBodyPruning": true
 							},
 							"request": {
-								"method": "GET",
-								"header": []
+								"method": "POST",
+								"header": [],
+								"url": "{{url}}/api/v1/integracao/rede/cpe/todos"
 							},
 							"response": []
 						}
@@ -7377,37 +7378,37 @@
 	],
 	"variable": [
 		{
-			"id": "f73b1ffa-d886-4435-97b6-434fee22aa00",
+			"id": "5db16377-0a60-4c03-9483-13a6449f2c38",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "ef9f5e83-90b5-4c2d-ba8d-3cad5831a72a",
+			"id": "fd4b6dad-9f0e-4d60-abaf-129833d75f19",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "c07172a0-32e0-49c1-8c68-83cbfc40439a",
+			"id": "4b80c556-5256-4640-8a1b-3b785cbab7ab",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "cbd4aa35-7d06-43b4-aa0c-945fcca3b907",
+			"id": "d2cc60ae-0b93-4b49-a612-d3d17d2398b0",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "e040dd46-0164-478b-ae11-c45f1f1b8cbf",
+			"id": "ae1326c7-626f-46e7-a257-2169be8deb1e",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "92907d2d-2d40-4733-befd-668d654d99c9",
+			"id": "677afbee-965c-4671-a072-f244d994290d",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "64fe0205-5481-4011-a16c-dc758ffd44f7",
+			"id": "17c9d261-57f2-4be7-8b6a-6e25f8c31a9f",
 			"key": "access_token",
 			"value": ""
 		}
