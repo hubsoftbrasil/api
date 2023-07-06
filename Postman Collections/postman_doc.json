@@ -6991,7 +6991,7 @@
 			"name": "Rede",
 			"item": [
 				{
-					"name": "New Folder",
+					"name": "CPE",
 					"item": [],
 					"id": "20839aeb-7c52-42b0-8c0a-dc21e817c4d5"
 				},
@@ -7376,37 +7376,37 @@
 	],
 	"variable": [
 		{
-			"id": "68b8a648-44ce-4ec6-a29a-3d6d91b81dee",
+			"id": "3963b4b4-c0dd-48a5-be89-e9156807127a",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "3d7a9feb-6d50-4f5d-9f90-8c6e4cdb04ce",
+			"id": "b4d79098-313a-48aa-aff8-7f05126bb635",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "eecbdfd7-5b95-4323-b242-271b242d71f9",
+			"id": "4873253f-4d93-4dcb-bfba-61c965c70872",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "9eaac123-3217-4756-b12d-c4076dd80e80",
+			"id": "d12193dc-c2d0-45ba-9e86-2d982635b39f",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "0051eb0c-f337-4c74-b929-d6f89c2be8cc",
+			"id": "6cc3846c-7260-4338-9bae-620190704215",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "a1d11cb1-702d-47ef-8997-e8af3215a28d",
+			"id": "1da468ad-7ba9-4f8a-b651-483ea24cf884",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "31625e66-e078-4e3b-90b4-ea04133a2a03",
+			"id": "6c60c738-1cd9-45d5-a868-572d81a5e1a3",
 			"key": "access_token",
 			"value": ""
 		}
