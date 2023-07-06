@@ -5827,7 +5827,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{url}}/api/v1/integracao/nota_fiscal/nfse?data_inicio=2020-01-01&data_fim=2022-08-31&documento=29507487000170&pagina=0&itens_por_pagina=10",
+									"raw": "{{url}}/api/v1/integracao/nota_fiscal/nfse?data_inicio=2020-01-01&data_fim=2022-08-31&documento=29507487000170&pagina=0&itens_por_pagina=10&order_type&order_by",
 									"host": [
 										"{{url}}"
 									],
@@ -5863,6 +5863,18 @@
 											"key": "itens_por_pagina",
 											"value": "10",
 											"description": "(Obrigatório) Itens por Página a serem exibidos. Mínimo: 1, Máximo: 500"
+										},
+										{
+											"key": "order_type",
+											"value": null,
+											"description": "(Opcional) Tipo de ordenação: asc, desc",
+											"type": "text"
+										},
+										{
+											"key": "order_by",
+											"value": null,
+											"description": "(Opcional) Coluna para ordenação: id_nfse, numero",
+											"type": "text"
 										}
 									]
 								},
@@ -7474,37 +7486,37 @@
 	],
 	"variable": [
 		{
-			"id": "fdff8edc-9967-422c-8a1e-dd6780bdea08",
+			"id": "1025387d-1f08-4034-9558-e6e5b03f264d",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "7797a476-baff-4446-855d-a3ce5fc4ba46",
+			"id": "04c008f6-c7bb-47cd-a41f-dc5fb8dd22ee",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "75331f3d-d76d-434b-9d95-ea9475cb2e84",
+			"id": "033c5cea-6648-4e37-9c70-5410f54f2953",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "8899bed7-36c8-456f-b8d9-26fd14d6dec6",
+			"id": "c7806818-19cd-4ecc-b85e-be20f75ddbea",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "11e6dd4e-57e8-444e-b17d-a3d3113ef7d8",
+			"id": "8c26f584-8bbb-44fd-8018-3d911e3b1ce2",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "bec17696-4987-464a-986a-7ca331cf1f41",
+			"id": "a3bc4e87-2a69-47c9-a21b-fb43e9a4f84d",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "85032762-1879-4c5b-96c7-22dd9b7eb961",
+			"id": "9867a5e3-2cfe-4a38-a01e-13a0a25d0368",
 			"key": "access_token",
 			"value": ""
 		}
