@@ -7108,20 +7108,17 @@
 												{
 													"key": "itens_por_pagina",
 													"value": "20",
-													"description": "(Obrigatório) Quantidade de itens desejados por página",
-													"type": "text"
+													"description": "(Obrigatório) Quantidade de itens desejados por página"
 												},
 												{
 													"key": "data_inicio",
 													"value": null,
-													"description": "(Opcional) Filtra CPEs que foram vistas a partir dessa data",
-													"type": "text"
+													"description": "(Opcional) Filtra CPEs que foram vistas a partir dessa data"
 												},
 												{
 													"key": "data_fim",
 													"value": null,
-													"description": "(Opcional) Filtra CPEs que foram vistas até esta data",
-													"type": "text"
+													"description": "(Opcional) Filtra CPEs que foram vistas até esta data"
 												}
 											]
 										}
@@ -7130,7 +7127,7 @@
 									"header": null,
 									"cookie": [],
 									"responseTime": null,
-									"body": "{\r\n    \"status\": \"success\",\r\n    \"paginacao\": {\r\n        \"primeira_pagina\": 0,\r\n        \"ultima_pagina\": 0,\r\n        \"pagina_atual\": 1,\r\n        \"total_registros\": 1\r\n    },\r\n    \"cpes\": [\r\n        {\r\n            \"id_cpe\": 71524,\r\n            \"phy_addr\": \"485754437D38A19E\",\r\n            \"data_ultima_atualizacao\": \"2023-07-06 14:48:59\",\r\n            \"historico_parametros\": [\r\n                {\r\n                    \"id_cpe_parametro_historico\": 44084,\r\n                    \"id_cpe\": 71524,\r\n                    \"parametros\": {\r\n                        \"tx_signal\": 23.5,\r\n                        \"rx_signal\": 24\r\n                    },\r\n                    \"created_at\": \"2023-07-06 14:48:59\",\r\n                    \"updated_at\": \"2023-07-06 14:48:59\",\r\n                    \"warnings\": [],\r\n                    \"data_cadastro_br\": \"06/07/2023 14:48:59\"\r\n                }\r\n            ],\r\n            \"servicos\": [\r\n                {\r\n                    \"id_cliente\": 11942,\r\n                    \"id_servico\": 1394,\r\n                    \"codigo_cliente\": 1161,\r\n                    \"nome_razaosocial\": \"JOSE DA SILVA PEREIRA\",\r\n                    \"cpf_cnpj\": \"12312312313\",\r\n                    \"servico\": \"100MB + HBO\",\r\n                    \"status\": \"servico_habilitado\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}"
+									"body": "{\r\n    \"status\": \"success\",\r\n    \"paginacao\": {\r\n        \"primeira_pagina\": 0,\r\n        \"ultima_pagina\": 0,\r\n        \"pagina_atual\": 1,\r\n        \"total_registros\": 1\r\n    },\r\n    \"cpes\": [\r\n        {\r\n            \"id_cpe\": 71524,\r\n            \"phy_addr\": \"485754437D38A19E\",\r\n            \"data_ultima_atualizacao\": \"2023-07-06 14:48:59\",\r\n            \"historico_parametros\": [\r\n                {\r\n                    \"id_cpe\": 71524,\r\n                    \"parametros\": {\r\n                        \"tx_signal\": 23.5,\r\n                        \"rx_signal\": 24\r\n                    },\r\n                    \"created_at\": \"2023-07-06 14:48:59\",\r\n                    \"data_cadastro_br\": \"06/07/2023 14:48:59\"\r\n                }\r\n            ],\r\n            \"servicos\": [\r\n                {\r\n                    \"id_cliente\": 11942,\r\n                    \"id_servico\": 1394,\r\n                    \"codigo_cliente\": 1161,\r\n                    \"nome_razaosocial\": \"ANTONIO MODESTO AMARAL SOUSA\",\r\n                    \"cpf_cnpj\": \"09350298694\",\r\n                    \"servico\": \"100MB + HBO\",\r\n                    \"status\": \"servico_habilitado\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}"
 								}
 							]
 						}
@@ -7506,37 +7503,37 @@
 	],
 	"variable": [
 		{
-			"id": "c724f0c1-21d7-4ddc-aefb-f2e4ab8cc440",
+			"id": "837010ab-e44d-4384-b02d-10c116ae496b",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "7479a191-c78e-4bb3-b2de-added7a9788d",
+			"id": "aef23767-c7a3-46ff-8008-25812a98eaf3",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "2cee7edd-c054-47e3-92fd-a7d9f30484eb",
+			"id": "db5f8d50-7042-47a7-9eb0-751fce7d6a9c",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "a882f36b-eecc-49bc-8239-ea0cf7696d14",
+			"id": "4e8f18fa-11eb-4378-99e4-613d9348a1f2",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "70faceb5-e9c6-44af-9e1c-2778a4c386c5",
+			"id": "02351b3a-a05a-4447-b1d4-5aeddb6ef701",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "910a541c-7146-4bf7-a970-84dd14e080d9",
+			"id": "4391945f-b96f-4f08-a35a-7874266aa0ff",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "cfa7359e-5351-4e68-9e19-73e27e9af5d7",
+			"id": "3b0b8782-93c5-4748-8d45-c93f1bb71aa0",
 			"key": "access_token",
 			"value": ""
 		}
