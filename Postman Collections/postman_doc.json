@@ -7025,7 +7025,43 @@
 									]
 								}
 							},
-							"response": []
+							"response": [
+								{
+									"id": "5b4aa7db-f4e2-4e67-871b-bf1df070f830",
+									"name": "Todos",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/rede/cpe/todos?Authorization={{access_token}}",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"rede",
+												"cpe",
+												"todos"
+											],
+											"query": [
+												{
+													"key": "Authorization",
+													"value": "{{access_token}}",
+													"description": "Token de autorização",
+													"type": "text"
+												}
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"responseTime": null,
+									"body": null
+								}
+							]
 						}
 					],
 					"id": "20839aeb-7c52-42b0-8c0a-dc21e817c4d5"
@@ -7399,37 +7435,37 @@
 	],
 	"variable": [
 		{
-			"id": "7fe6529b-0598-425c-8612-69b838657d44",
+			"id": "624ed327-6605-480b-9bc2-e026a137977c",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "7453afcc-df42-4639-9d36-c8cae7c42d0d",
+			"id": "dc65dc60-ca59-4762-b3ca-89edc9c8eb3f",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "4cb2c828-2d6f-4828-a3e2-b5f0b681a4c5",
+			"id": "787429db-56bf-400c-b978-914d0c8e06c9",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "00f5437c-908f-4099-a958-e6fb1b089f2f",
+			"id": "f7baa117-be98-455a-a40a-a86c5e1666b6",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "8acc97d1-bfd3-4c76-b69b-a8370f699fbd",
+			"id": "2bd30955-b55e-414b-b30b-e13ab33279e1",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "2eeb821a-7520-4dd2-9651-1f5907fed644",
+			"id": "ede7a75c-8247-43b0-98a4-9df8308cacd3",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "ffe70fe4-3cdc-4377-a7c4-11b7767a2d00",
+			"id": "ff57c74e-c86d-4fa9-9121-6100c678ebf3",
 			"key": "access_token",
 			"value": ""
 		}
