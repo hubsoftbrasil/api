@@ -6187,7 +6187,7 @@
 										}
 									]
 								},
-								"description": "No método `GET`, será possível consultar as Notas de Telecom emitidas e obter o retorno no formato `JSON` como resposta. Os seguintes `Query Params` podem/devem ser utilizados\n\n| **Atributo** | **Descrição** | **Obrigatório** |\n| --- | --- | --- |\n| `data_inicio` | Data Inicial no formato YYYY-MM-DD | Sim |\n| `data_fim` | Data Final no formato YYYY-MM-DD | Sim |\n| `documento` | CNPJ da Empresa emitente | Sim |\n| `modelo` | Modelo da Nota Fiscal. Valores aceitos: 0,21,22 | Sim |\n| `pagina` | Página a ser exibida | Sim |\n| `itens_por_pagina` | Itens por Página a serem exibidos. Mínimo: 1, Máximo: 500 | Sim |\n| `id_nota_fiscal` | Filtra pelo ID da Nota | Não |\n| `numero` | Filtra pelo número da Nota | Não |"
+								"description": "No método `GET`, será possível consultar as Notas de Telecom emitidas e obter o retorno no formato `JSON` como resposta. Os seguintes `Query Params` podem/devem ser utilizados\n\n| **Atributo** | **Descrição** | **Obrigatório** |\n| --- | --- | --- |\n| `data_inicio` | Data Inicial no formato YYYY-MM-DD | Sim |\n| `data_fim` | Data Final no formato YYYY-MM-DD | Sim |\n| `documento` | CNPJ da Empresa emitente | Sim |\n| `modelo` | Modelo da Nota Fiscal. Valores aceitos: 0,21,22 | Sim |\n| `pagina` | Página a ser exibida | Sim |\n| `itens_por_pagina` | Itens por Página a serem exibidos. Mínimo: 1, Máximo: 500 | Sim |\n| `id_nota_fiscal` | Filtra pelo ID da Nota | Não |\n| `numero` | Filtra pelo número da Nota | Não |\n| `order_type` | Tipo de ordenação: asc, desc | Não |\n| `order_by` | Coluna para ordenação: id_nota_fiscal, numero_nota | Não |"
 							},
 							"response": [
 								{
@@ -7503,37 +7503,37 @@
 	],
 	"variable": [
 		{
-			"id": "04c2ae62-d219-42cf-9693-2b3f3acfe8d0",
+			"id": "97d53b10-7281-442a-9d6c-ee6288025a23",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "0628cc35-22e0-464c-bf92-8b201603dcdb",
+			"id": "8fba1830-40d4-4af0-a393-7b37f7478280",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "b267368d-e769-4f22-9746-d2ca0f1ac34a",
+			"id": "d8c451cf-1e8a-46bc-99cf-3beeb0e5ded7",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "529bb833-506a-47a5-83df-350ffe2321c6",
+			"id": "5d487e06-d6cb-496b-8e60-775eae5f9df4",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "62058724-930f-4c10-aa64-3f8ab99803d4",
+			"id": "011417e2-e77d-4c98-aad8-07452989c2fc",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "5f62ad76-8673-4be8-aa23-3c2a16d79082",
+			"id": "8c9c2884-e14b-4147-98d1-db8992d90cf7",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "fa6cfb12-eb4b-453a-acbd-b701ff4c20e9",
+			"id": "dececf65-8a92-44d5-8b36-a3eafd8253b1",
 			"key": "access_token",
 			"value": ""
 		}
