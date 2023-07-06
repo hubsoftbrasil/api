@@ -6131,7 +6131,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{url}}/api/v1/integracao/nota_fiscal/telecom?data_inicio=2020-01-01&data_fim=2022-08-31&documento=29507487000185&modelo=21&pagina=0&itens_por_pagina=10",
+									"raw": "{{url}}/api/v1/integracao/nota_fiscal/telecom?data_inicio=2020-01-01&data_fim=2022-08-31&documento=29507487000185&modelo=21&pagina=0&itens_por_pagina=10&order_type&order_by",
 									"host": [
 										"{{url}}"
 									],
@@ -6172,6 +6172,18 @@
 											"key": "itens_por_pagina",
 											"value": "10",
 											"description": "Quantidade de Itens por Página. Mínimo: 1, Máximo: 500"
+										},
+										{
+											"key": "order_type",
+											"value": null,
+											"description": "(Opcional) Tipo de ordenação: asc, desc",
+											"type": "text"
+										},
+										{
+											"key": "order_by",
+											"value": null,
+											"description": "(Opcional) Coluna para ordenação: id_nota_fiscal, numero_nota",
+											"type": "text"
 										}
 									]
 								},
@@ -7486,37 +7498,37 @@
 	],
 	"variable": [
 		{
-			"id": "1025387d-1f08-4034-9558-e6e5b03f264d",
+			"id": "1a877cf7-9773-451c-ba85-e42e99da3fa7",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "04c008f6-c7bb-47cd-a41f-dc5fb8dd22ee",
+			"id": "c8a5ce14-9743-4477-88ad-4d2f550b6f62",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "033c5cea-6648-4e37-9c70-5410f54f2953",
+			"id": "da10b13b-ed5a-4c3d-9b59-41df54e9b02f",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "c7806818-19cd-4ecc-b85e-be20f75ddbea",
+			"id": "3665c4e3-b28e-49b2-a23a-3e7c33242370",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "8c26f584-8bbb-44fd-8018-3d911e3b1ce2",
+			"id": "1f08a53f-0893-402f-b994-40772febaa79",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "a3bc4e87-2a69-47c9-a21b-fb43e9a4f84d",
+			"id": "f0a9cce0-03fe-4590-aead-043828e6bba8",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "9867a5e3-2cfe-4a38-a01e-13a0a25d0368",
+			"id": "9641be0d-10df-4265-8ef2-da7a2b1eea5c",
 			"key": "access_token",
 			"value": ""
 		}
