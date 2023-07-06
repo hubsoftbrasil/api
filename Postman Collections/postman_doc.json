@@ -7108,7 +7108,7 @@
 					]
 				},
 				{
-					"name": "New Request",
+					"name": "CPE",
 					"id": "f6a8050e-be33-40b4-8bdc-20f024439aa1",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -7371,37 +7371,37 @@
 	],
 	"variable": [
 		{
-			"id": "190d675b-d44e-421b-a744-0fa10766aeb4",
+			"id": "5a291369-4a4e-4bca-9245-2e3e24d9f0e9",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "9639614b-b061-4d60-a74b-5747b831e41e",
+			"id": "b7843b60-4ee2-497a-a7c7-0802662c1d73",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "c80568e0-50c5-474e-a513-abf0a784dacd",
+			"id": "18bf8eb6-9a28-4467-ae22-c1d14052b22b",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "6c329f09-dbe3-43c3-8b46-2edf093ccf64",
+			"id": "5c49c695-5f48-476a-aac6-008b6b1da6a0",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "2e875aac-3b89-425b-9690-21e4d302c666",
+			"id": "03f509d0-21d2-4739-b586-96a92025ae28",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "98bb8ffc-f772-4f4a-b528-0f202193a4bf",
+			"id": "3d46792d-bf08-47d1-ba92-e251d221d34e",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "fe5b3d33-9463-4dbe-8944-ffa3a2ebc67b",
+			"id": "7c036571-6294-4a19-8c47-590341a1a517",
 			"key": "access_token",
 			"value": ""
 		}
