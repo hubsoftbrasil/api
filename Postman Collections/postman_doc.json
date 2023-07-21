@@ -6152,7 +6152,7 @@
 										}
 									]
 								},
-								"description": "No método `PUT`, será possível editar uma NFSE especificada pelo seu `ID`. Essa função é útil para empresas que utilizam sistemas próprios e/ou que não são integrados nativamente pelo HubSoft.\n\nOs campos abaixo estão disponíveis para serem editados:\n\n| **Atributo** | **Descrição** | **Obrigatório** |\n| --- | --- | --- |\n| `id_externo` | Identificador no sistema externo ao HubSoft | Sim |\n| `numero` | Número da NFSe | Sim |\n| `serie` | Série da NFSe | Sim |\n| `data_emissao` | Data de Emissão. Formato: `Y-m-d H:i:s` | Sim |\n| `lote_rps` | Lote do RPS | Sim |\n| `link_pdf` | Link do PDF da NFSe. Formato: `URL` | Não |\n| `link_xml` | Link do XML da NFSe. Formato: `URL` | Não |\n| `link_prefeitura` | Link da NFSe na Prefeitura. Formato: `URL` | Não |\n| `status` | Status da Nota. Disponíveis: | Não |\n| `codigo_verificacao` |  |  |"
+								"description": "No método `PUT`, será possível editar uma NFSE especificada pelo seu `ID`. Essa função é útil para empresas que utilizam sistemas próprios e/ou que não são integrados nativamente pelo HubSoft.\n\nOs campos abaixo estão disponíveis para serem editados:\n\n| **Atributo** | **Descrição** | **Obrigatório** |\n| --- | --- | --- |\n| `id_externo` | Identificador no sistema externo ao HubSoft | Não |\n| `numero` | Número da NFSe | Não |\n| `serie` | Série da NFSe | Não |\n| `data_emissao` | Data de Emissão. Formato: `Y-m-d H:i:s` | Não |\n| `lote_rps` | Lote do RPS | Não |\n| `link_pdf` | Link do PDF da NFSe. Formato: `URL` | Não |\n| `link_xml` | Link do XML da NFSe. Formato: `URL` | Não |\n| `link_prefeitura` | Link da NFSe na Prefeitura. Formato: `URL` | Não |\n| `status` | Status da Nota. Disponíveis:  <br>`pendente   em_transmissao   transmitido   autorizado`  <br>`rejeitado`  <br>`em_cancelamento`  <br>`cancelamento_transmitido`  <br>`cancelamento_rejeitado`  <br>`cancelado` | Não |\n| `codigo_verificacao` | Código de Verificação da NFSe | Não |"
 							},
 							"response": [
 								{
@@ -7733,37 +7733,37 @@
 	],
 	"variable": [
 		{
-			"id": "651c86b2-5648-41e3-b372-e58afb1e970e",
+			"id": "c4df9512-0784-473b-8ece-f3d0c77fd6f0",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "11cb9edd-2aef-412a-a656-fc96d70713ed",
+			"id": "6333b5ef-6fde-4658-acef-38446ce9cd03",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "fae3de0b-602e-4db0-bd1e-b723f355a1bb",
+			"id": "7c099ec8-8568-4d4c-aa82-9c37a3668f2a",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "45e58845-a6e3-45e4-9ee9-a87c78005320",
+			"id": "aa48556a-f5cd-4513-b996-4a3fc9c73191",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "723dd0bc-2021-4539-9702-3518a3af1dc7",
+			"id": "e8cf2ae3-592d-4b2a-8962-a2fb96fabf75",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "ec6f5963-70c1-441b-b817-90831a0500e1",
+			"id": "0d62a841-d347-45f1-91ba-4a1b4fae9288",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "0dd4ef43-1782-48eb-a27c-b4b062411f44",
+			"id": "c4c395d0-e91e-4e96-9169-2148c94c0470",
 			"key": "access_token",
 			"value": ""
 		}
