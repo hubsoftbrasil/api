@@ -6109,7 +6109,7 @@
 							]
 						},
 						{
-							"name": "Listar NFSEs Copy",
+							"name": "Editar",
 							"id": "14d7034b-c4f2-4ba6-9b01-16175759ab20",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -7801,37 +7801,37 @@
 	],
 	"variable": [
 		{
-			"id": "8cd9d68e-bcdc-4e06-a0b5-5891abd1ed2d",
+			"id": "89f56101-76e0-4b34-95e7-18e4a0bb4342",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "9dc5be9b-2315-4672-99c0-17ce37a8d51a",
+			"id": "eabefc21-e869-4a34-ae90-35429f977b44",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "f682bff1-4806-47c2-bcb9-3210c444d21b",
+			"id": "55046d61-7add-4a2f-a013-34a2702f81c2",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "15188ee0-026e-4deb-802f-42286f5a50cc",
+			"id": "bb8ee70f-96f5-494e-81da-551535082929",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "6565e55e-051c-4098-ac36-394d62c3457f",
+			"id": "07e20505-2b56-45e8-8ce0-4a5704abfc52",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "103c92f6-cca1-4535-abfe-85a7f0254a21",
+			"id": "3918a114-0e97-4346-8f5b-e40d15c224b2",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "92e35dc2-5d74-40a0-8fa5-f32ed826045c",
+			"id": "17561226-e8ba-4fd5-a587-843bb9e486ec",
 			"key": "access_token",
 			"value": ""
 		}
