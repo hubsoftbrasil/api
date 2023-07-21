@@ -6152,7 +6152,7 @@
 										}
 									]
 								},
-								"description": "No método `PUT`, será possível editar uma NFSE especificada pelo seu `ID`. Essa função é útil para empresas que utilizam sistemas próprios e/ou que não são integrados nativamente pelo HubSoft.\n\nOs campos abaixo estão disponíveis para serem editados:\n\n| **Atributo** | **Descrição** | **Obrigatório** |\n| --- | --- | --- |\n| `data_inicio` | Data Inicial no formato YYYY-MM-DD | Sim |\n| `data_fim` | Data Final no formato YYYY-MM-DD | Sim |\n| `documento` | CNPJ da Empresa emissora da NFSe | Sim |\n| `pagina` | Página a ser exibida | Sim |\n| `itens_por_pagina` | Itens por Página a serem exibidos. Mínimo: 1, Máximo: 500 | Sim |\n| `id_nfse` | Filtra a NFSe pelo ID | Não |\n| `numero` | Filtra a NFSe pelo número | Não |\n| `order_type` | Tipo de ordenação: asc, desc | Não |\n| `order_by` | Coluna para ordenação: id_nfse, numero | Não |"
+								"description": "No método `PUT`, será possível editar uma NFSE especificada pelo seu `ID`. Essa função é útil para empresas que utilizam sistemas próprios e/ou que não são integrados nativamente pelo HubSoft.\n\nOs campos abaixo estão disponíveis para serem editados:\n\n| **Atributo** | **Descrição** | **Obrigatório** |\n| --- | --- | --- |\n| `id_externo` | Data Inicial no formato YYYY-MM-DD | Sim |\n| `numero` | Data Final no formato YYYY-MM-DD | Sim |\n| `serie` | CNPJ da Empresa emissora da NFSe | Sim |\n| `data_emissao` | Página a ser exibida | Sim |\n| `lote_rps` | Itens por Página a serem exibidos. Mínimo: 1, Máximo: 500 | Sim |\n| `link_pdf` | Filtra a NFSe pelo ID | Não |\n| `link_xml` | Filtra a NFSe pelo número | Não |\n| `link_prefeitura` | Tipo de ordenação: asc, desc | Não |\n| `order_by` | Coluna para ordenação: id_nfse, numero | Não |"
 							},
 							"response": [
 								{
@@ -7733,37 +7733,37 @@
 	],
 	"variable": [
 		{
-			"id": "14479186-6eaa-4933-98d4-6d14cff3f4b1",
+			"id": "257a2adf-3c26-4cee-aaab-cce25a817ef7",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "1aba725b-64b1-4983-ae60-65076ff566ab",
+			"id": "db7b9f6d-25e1-45f4-80e8-473ece70a814",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "05e8f928-f9ba-476f-b38d-d00c8ab3471f",
+			"id": "cf3d23f4-6073-4b61-bae1-bf6a9b3f291f",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "41c5337b-e02d-4a49-854f-00622a3bda36",
+			"id": "a4645707-62e3-47dd-bcca-df740e952e65",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "14c27b4c-f356-4fdb-af23-7168263f14f0",
+			"id": "8558742b-59b3-4add-a065-6330b1103dae",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "87735756-5491-407a-8bad-5cdc1d70ff09",
+			"id": "238aef65-e447-4cab-bd2b-0a3a16dd8d04",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "d7e44ae2-3852-4914-bc9a-e432a8dda5d9",
+			"id": "399fd0e4-bab7-4f58-8963-346acf9e6c5c",
 			"key": "access_token",
 			"value": ""
 		}
