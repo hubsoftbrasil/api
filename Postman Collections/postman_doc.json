@@ -6115,7 +6115,7 @@
 								"disableBodyPruning": true
 							},
 							"request": {
-								"method": "GET",
+								"method": "PUT",
 								"header": [
 									{
 										"key": "Authorization",
@@ -6123,8 +6123,17 @@
 										"description": "Bearer Token obtido na autenticação"
 									}
 								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id_externo\":\"\",\n    \"numero\":\"\",\n    \"serie\":\"\",\n    \"data_emissao\":\"Y-m-d H:i:s\",\n    \"lote_rps\":\"\",\n    \"link_pdf\":\"https://url.com/pdf\",\n    \"link_xml\":\"https://url.com/xml\",\n    \"link_prefeitura\":\"https://prefeitura.gov.br/nfse/123456\",\n    \"status\":\"\",\n    \"codigo_verificao\":\"\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": {
-									"raw": "{{url}}/api/v1/integracao/nota_fiscal/nfse?data_inicio=2020-01-01&data_fim=2022-08-31&documento=29507487000170&pagina=0&itens_por_pagina=10&order_type&order_by",
+									"raw": "{{url}}/api/v1/integracao/nota_fiscal/nfse/:id_nfse",
 									"host": [
 										"{{url}}"
 									],
@@ -6133,45 +6142,13 @@
 										"v1",
 										"integracao",
 										"nota_fiscal",
-										"nfse"
+										"nfse",
+										":id_nfse"
 									],
-									"query": [
+									"variable": [
 										{
-											"key": "data_inicio",
-											"value": "2020-01-01",
-											"description": "(Obrigatório) Data Inicial no formato YYYY-MM-DD"
-										},
-										{
-											"key": "data_fim",
-											"value": "2022-08-31",
-											"description": "(Obrigatório) Data Final no formato YYYY-MM-DD"
-										},
-										{
-											"key": "documento",
-											"value": "29507487000170",
-											"description": "(Obrigatório) CNPJ da Empresa emissora da NFSe"
-										},
-										{
-											"key": "pagina",
-											"value": "0",
-											"description": "(Obrigatório) Página a ser exibida"
-										},
-										{
-											"key": "itens_por_pagina",
-											"value": "10",
-											"description": "(Obrigatório) Itens por Página a serem exibidos. Mínimo: 1, Máximo: 500"
-										},
-										{
-											"key": "order_type",
-											"value": null,
-											"description": "(Opcional) Tipo de ordenação: asc, desc",
-											"type": "text"
-										},
-										{
-											"key": "order_by",
-											"value": null,
-											"description": "(Opcional) Coluna para ordenação: id_nfse, numero",
-											"type": "text"
+											"key": "id_nfse",
+											"value": "Identificador da NFSe"
 										}
 									]
 								},
@@ -7801,37 +7778,37 @@
 	],
 	"variable": [
 		{
-			"id": "89f56101-76e0-4b34-95e7-18e4a0bb4342",
+			"id": "1b4f919a-519b-4cc7-ad46-53494bdd58ff",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "eabefc21-e869-4a34-ae90-35429f977b44",
+			"id": "b058739c-e6ad-4d87-b710-bfd74f5be7d2",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "55046d61-7add-4a2f-a013-34a2702f81c2",
+			"id": "9f6a569d-4249-4c85-8057-2bf1f637b6cf",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "bb8ee70f-96f5-494e-81da-551535082929",
+			"id": "9d7dd104-5759-419e-a852-cf7735b53822",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "07e20505-2b56-45e8-8ce0-4a5704abfc52",
+			"id": "96ff4689-f925-4ad2-8715-da8900769e58",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "3918a114-0e97-4346-8f5b-e40d15c224b2",
+			"id": "f55f7693-d698-49ca-97b3-cd6827131c13",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "17561226-e8ba-4fd5-a587-843bb9e486ec",
+			"id": "eb8fca96-b8e7-4f5a-ac54-fa4e3d8f40a2",
 			"key": "access_token",
 			"value": ""
 		}
