@@ -6107,18 +6107,6 @@
 									"body": "{\n    \"status\": \"error\",\n    \"msg\": \"Favor preencher os campos obrigatórios de acordo com as especificações\",\n    \"errors\": [\n        \"O campo documento não possui um valor válido.\"\n    ]\n}"
 								}
 							]
-						},
-						{
-							"name": "New Request",
-							"id": "082b9ead-3d26-4ff2-bf96-e81770e6db49",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": []
-							},
-							"response": []
 						}
 					],
 					"id": "136fa044-8aa0-4fee-9c36-acfac7ecedea",
@@ -7516,37 +7504,37 @@
 	],
 	"variable": [
 		{
-			"id": "79f54913-d861-4c14-953d-8367839c07e5",
+			"id": "ae2d75a8-7e63-41e1-b62a-a9fcc14b3f68",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "e7f54a78-c841-487d-b6e0-c3687cff16c1",
+			"id": "c8ce6377-96ac-4535-9769-0056edc46544",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "e5d0b7bf-cc91-40de-9908-b5eadd3decfa",
+			"id": "7998503f-1ed4-4203-9b33-e0abe4ed36dc",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "bda4b8f0-660d-470c-85bb-1359245c3cd4",
+			"id": "09dbcd3c-7e97-404e-8a67-6fa91b90cfc4",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "a9cc6ed8-22a3-42bc-abfb-70beb4dc1449",
+			"id": "4f14e0d2-cc1b-4043-892f-1d2d83b46cc8",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "2004e670-d5e7-4687-bd47-d9920c1444b1",
+			"id": "1a468926-102a-4212-b6d9-f4036e1dc31f",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "465ae2b7-bbaa-4884-8cfb-acf441eb2c94",
+			"id": "7dcdcb57-503a-4340-ac0c-78b712a3ea10",
 			"key": "access_token",
 			"value": ""
 		}
