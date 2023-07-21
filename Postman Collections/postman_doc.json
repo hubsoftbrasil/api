@@ -6413,7 +6413,7 @@
 					"name": "Telecom (21/22)",
 					"item": [
 						{
-							"name": "Listar Notas Telecom",
+							"name": "Listar",
 							"id": "faf35d3d-b2e0-409f-b3b5-bb96136bd69b",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -7801,37 +7801,37 @@
 	],
 	"variable": [
 		{
-			"id": "8ce8fbad-be50-4d5f-b26e-dd3daf8285cb",
+			"id": "8cd9d68e-bcdc-4e06-a0b5-5891abd1ed2d",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "077a2e02-75de-471d-ad82-a97111bf1794",
+			"id": "9dc5be9b-2315-4672-99c0-17ce37a8d51a",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "195c8bb5-885c-4198-9fda-90d9aac91a72",
+			"id": "f682bff1-4806-47c2-bcb9-3210c444d21b",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "a900ea53-f88b-427f-aaa0-ee0b69588d92",
+			"id": "15188ee0-026e-4deb-802f-42286f5a50cc",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "298be704-d24b-4266-be42-b4bd9f691cde",
+			"id": "6565e55e-051c-4098-ac36-394d62c3457f",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "f18a2bdd-9e35-41f7-b6f5-3c0a0626bd4f",
+			"id": "103c92f6-cca1-4535-abfe-85a7f0254a21",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "ac1c8a30-43f2-4ce8-98ce-a1ba9c13788b",
+			"id": "92e35dc2-5d74-40a0-8fa5-f32ed826045c",
 			"key": "access_token",
 			"value": ""
 		}
