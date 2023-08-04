@@ -1260,7 +1260,7 @@
 									}
 								},
 								"url": "{{url}}/api/v1/integracao/cliente/contrato/adicionar_contrato",
-								"description": "**POST**\n\nAtravés deste `endpoint`, será possível fazer o cadastro de contratos para o serviço do cliente.\n\n**Aviso**\n\n`IMPORTANTE`: É necessário informar o `id_cliente_servico`, o `id_contrato e o id_empresa`, eles podem retornados nas rotas Clientes > Consulta e Configuração > Modelos de Contrato e Configuração > Empresas respectivamente\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico | Identificador único do serviço do cliente | Sim |\n| id_contrato | Identificador único do modelo de contrato | Sim |\n| id_empresa | Identificador único da empresa | Sim |\n| descricao | Descrição textual para o evento. | Sim |\n| valor | Campo númerico (aceita valor decimal separado por ponto. Ex.: 10.2). | Sim |\n| parcelado | Boolean para identificar se o evento é parcelado ou não | Sim |\n| numero_total_parcelas | Valor maior que 0 para identificar o total de parcelas | Sim (Se parcelado = true) |\n| mes_primeira_parcela | Valor inteiro que representa o mês do ano (Dezembro = 12). Utilizado para verificar o mês da primeira parcela | Sim (Se parcelado = true) |\n| ano_primeira_parcela | Valor inteiro que representa o ano. Utilizado para verificar o ano da primeira parcela | Sim (Se parcelado = true) |\n| proximo_faturamento | Boolean para identificar se o evento será lançado no próximo faturamento | Sim (Se parcelado = false) |\n| mes_processar | Valor inteiro que representa o mês do ano (Dezembro = 12). Utilizado para verificar o mês de processamento do faturamento | Sim (Se proximo_faturamento = false) |\n| ano_processar | Valor inteiro que representa o ano. Utilizado para verificar o ano de processamento do faturamento | Sim (Se proximo_faturamento = false) |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico | Deve conter um número inteiro maior que 0 | Nenhum |\n| id_tipo_servico | Deve conter um número inteiro maior que 0 | Nenhum |\n| tipo | Textual | Nenhum |\n| descricao | Textual | Nenhum |\n| valor | Número Inteiro/Decimal | Nenhum |\n| parcelado | Boolean | Nenhum |\n| numero_total_parcelas | Número Inteiro | Nenhum |\n| mes_primeira_parcela | Número Inteiro (maior que 0 e menor que 13) | Nenhum |\n| ano_primeira_parcela | Número Inteiro | Nenhum |\n| proximo_faturamento | Boolean | Nenhum |\n| mes_processar | Número Inteiro (maior que 0 e menor que 13) | Nenhum |\n| ano_processar | Número Inteiro | Nenhum |"
+								"description": "**POST**\n\nAtravés deste `endpoint`, será possível fazer o cadastro de contratos para o serviço do cliente.\n\n**Aviso**\n\n`IMPORTANTE`: É necessário informar o `id_cliente_servico`, o `id_contrato e o id_empresa`, eles podem retornados nas rotas Clientes > Consulta e Configuração > Modelos de Contrato e Configuração > Empresas respectivamente\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico | Identificador único do serviço do cliente | Sim |\n| id_contrato | Identificador único do modelo de contrato | Sim |\n| id_empresa | Identificador único da empresa | Sim |\n| autorizacao_nome | Descrição textual para o evento. | Sim |\n| valor | Campo númerico (aceita valor decimal separado por ponto. Ex.: 10.2). | Sim |\n| parcelado | Boolean para identificar se o evento é parcelado ou não | Sim |\n| numero_total_parcelas | Valor maior que 0 para identificar o total de parcelas | Sim (Se parcelado = true) |\n| mes_primeira_parcela | Valor inteiro que representa o mês do ano (Dezembro = 12). Utilizado para verificar o mês da primeira parcela | Sim (Se parcelado = true) |\n| ano_primeira_parcela | Valor inteiro que representa o ano. Utilizado para verificar o ano da primeira parcela | Sim (Se parcelado = true) |\n| proximo_faturamento | Boolean para identificar se o evento será lançado no próximo faturamento | Sim (Se parcelado = false) |\n| mes_processar | Valor inteiro que representa o mês do ano (Dezembro = 12). Utilizado para verificar o mês de processamento do faturamento | Sim (Se proximo_faturamento = false) |\n| ano_processar | Valor inteiro que representa o ano. Utilizado para verificar o ano de processamento do faturamento | Sim (Se proximo_faturamento = false) |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico | Deve conter um número inteiro maior que 0 | Nenhum |\n| id_tipo_servico | Deve conter um número inteiro maior que 0 | Nenhum |\n| tipo | Textual | Nenhum |\n| descricao | Textual | Nenhum |\n| valor | Número Inteiro/Decimal | Nenhum |\n| parcelado | Boolean | Nenhum |\n| numero_total_parcelas | Número Inteiro | Nenhum |\n| mes_primeira_parcela | Número Inteiro (maior que 0 e menor que 13) | Nenhum |\n| ano_primeira_parcela | Número Inteiro | Nenhum |\n| proximo_faturamento | Boolean | Nenhum |\n| mes_processar | Número Inteiro (maior que 0 e menor que 13) | Nenhum |\n| ano_processar | Número Inteiro | Nenhum |"
 							},
 							"response": [
 								{
@@ -7917,37 +7917,37 @@
 	],
 	"variable": [
 		{
-			"id": "155b90da-8922-46cc-975c-bfd159abfeb0",
+			"id": "c45c2625-016e-4dc7-826d-557e37db469b",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "dcbc2e24-608a-4ae9-b501-a9ab7e23ee09",
+			"id": "e8457700-08c0-459f-a3cf-07426da95f86",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "2c11b544-d40b-4566-8f2e-bb93449e6e96",
+			"id": "146fd79c-e9d0-4196-9028-acaee97e48e8",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "4c546f43-d941-4e11-9084-b08102e391c6",
+			"id": "8ceb9646-e126-48a9-bc4d-c05728725045",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "d5fdcd56-94db-4b46-885c-5d969f6cd475",
+			"id": "1cfe32d6-98cf-4385-9c88-88f5e2398dc4",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "ef9a64dd-1419-4317-9ad8-90aa84274797",
+			"id": "0e4ef00e-36f0-44ad-a87b-6d495e501d4a",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "55bf44e8-d565-4354-a491-95c4a214e0fe",
+			"id": "c04ee998-97aa-44bf-b130-3733360ce685",
 			"key": "access_token",
 			"value": ""
 		}
