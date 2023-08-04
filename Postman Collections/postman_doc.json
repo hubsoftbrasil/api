@@ -574,6 +574,71 @@
 									"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Contrato adicionado com sucesso para este Serviço\",\r\n    \"cliente_servico_contrato\": {\r\n        \"id_cliente_servico_contrato\": 9320,\r\n        \"id_cliente_servico\": 18950,\r\n        \"id_contrato\": 10,\r\n        \"validade\": 12,\r\n        \"numero_contrato\": 6432,\r\n        \"id_empresa\": 3,\r\n        \"autorizacao_nome\": \"BIANCA COUTO\",\r\n        \"autorizacao_cpf\": \"12704685614\",\r\n        \"autorizacao_rg\": \"MG-1904960\",\r\n        \"informacao_adicional\": \"CONTRATO ADICIONADO VIA API\",\r\n        \"data_cadastro_br\": \"04/08/2023 13:41\",\r\n        \"contrato\": {\r\n            \"id_contrato\": 10,\r\n            \"descricao\": \"TERMO DE CONTRATAÇÃO E AUTORIZAÇÃO DE DÉBITOS EQUIPAMENTO EM COMODATO(JANAUBA) \",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null\r\n        },\r\n        \"empresa\": {\r\n            \"id_empresa\": 3,\r\n            \"display\": \"TELECOM E HARDWARE LTDA (CNPJ: 09.613.622/0001-60)\"\r\n        },\r\n        \"cliente_servico\": {\r\n            \"id_cliente_servico\": 18950,\r\n            \"display\": \"(5) 1.5-MBPS-PROMOCIONAL-WIRELESS-2018/09 COELHO\",\r\n            \"cliente\": {\r\n                \"id_cliente\": 25246,\r\n                \"display\": \"(2082) BORGES SILVA\"\r\n            }\r\n        }\r\n    }\r\n}"
 								}
 							]
+						},
+						{
+							"name": "Remover",
+							"id": "50f9bebc-10dd-4f4d-988c-479f5f8d1848",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"description": "Bearer Token obtido na autenticação"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id_cliente_servico\": 18950,\n    \"id_contrato\": 10,\n    \"id_empresa\": 3,\n    \"autorizacao_nome\": \"BIANCA COUTO\",\n    \"autorizacao_cpf\": \"39415497076\",\n    \"informacao_adicional\": \"CONTRATO FOI GRAVADO\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/v1/integracao/cliente/contrato/adicionar_contrato",
+								"description": "**POST**\n\nAtravés deste `endpoint`, será possível fazer o cadastro de contratos para o serviço do cliente.\n\n**Aviso**\n\n`IMPORTANTE`: É necessário informar o `id_cliente_servico`, o `id_contrato e o id_empresa`, eles podem retornados nas rotas Clientes > Consulta e Configuração > Modelos de Contrato e Configuração > Empresas respectivamente\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico | Identificador único do serviço do cliente | Sim |\n| id_contrato | Identificador único do modelo de contrato | Sim |\n| id_empresa | Identificador único da empresa | Sim |\n| autorizacao_nome | Nome do Reponsável Autorização | Não |\n| autorizacao_cpf | CPF do Reponsável Autorização | Não |\n| autorizacao_rg | RG do Reponsável Autorização | Não |\n| informacao_adicional | Informação Adicional do Contrato do Cliente | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico | Deve conter um número inteiro maior que 0 | Nenhum |\n| id_contrato | Deve conter um número inteiro maior que 0 | Nenhum |\n| id_empresa | Deve conter um número inteiro maior que 0 | Nenhum |\n| autorizacao_nome | Textual | Nenhum |\n| autorizacao_cpf | Textual | Nenhum |\n| autorizacao_rg | Textual | Nenhum |\n| informacao_adicional | Textual | Nenhum |"
+							},
+							"response": [
+								{
+									"id": "07d23e43-c9ed-4885-9e41-baf4ffe50634",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n   \"id_cliente_servico\":13579,\n   \"id_tipo_servico\":2,\n   \"descricao\":\"Acréscimo Ref Compra de Produto ABC\",\n   \"parcelado\":false,\n   \"proximo_faturamento\":true,\n   \"tipo\":\"acrescimo\",\n   \"valor\":10.3\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{url}}/api/v1/integracao/cliente/contrato/adicionar_contrato"
+									},
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Contrato adicionado com sucesso para este Serviço\",\r\n    \"cliente_servico_contrato\": {\r\n        \"id_cliente_servico_contrato\": 9320,\r\n        \"id_cliente_servico\": 18950,\r\n        \"id_contrato\": 10,\r\n        \"validade\": 12,\r\n        \"numero_contrato\": 6432,\r\n        \"id_empresa\": 3,\r\n        \"autorizacao_nome\": \"BIANCA COUTO\",\r\n        \"autorizacao_cpf\": \"12704685614\",\r\n        \"autorizacao_rg\": \"MG-1904960\",\r\n        \"informacao_adicional\": \"CONTRATO ADICIONADO VIA API\",\r\n        \"data_cadastro_br\": \"04/08/2023 13:41\",\r\n        \"contrato\": {\r\n            \"id_contrato\": 10,\r\n            \"descricao\": \"TERMO DE CONTRATAÇÃO E AUTORIZAÇÃO DE DÉBITOS EQUIPAMENTO EM COMODATO(JANAUBA) \",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null\r\n        },\r\n        \"empresa\": {\r\n            \"id_empresa\": 3,\r\n            \"display\": \"TELECOM E HARDWARE LTDA (CNPJ: 09.613.622/0001-60)\"\r\n        },\r\n        \"cliente_servico\": {\r\n            \"id_cliente_servico\": 18950,\r\n            \"display\": \"(5) 1.5-MBPS-PROMOCIONAL-WIRELESS-2018/09 COELHO\",\r\n            \"cliente\": {\r\n                \"id_cliente\": 25246,\r\n                \"display\": \"(2082) BORGES SILVA\"\r\n            }\r\n        }\r\n    }\r\n}"
+								}
+							]
 						}
 					],
 					"id": "1dbc4e54-9caf-4db2-bec6-e9b30dc12a54"
@@ -7917,37 +7982,37 @@
 	],
 	"variable": [
 		{
-			"id": "406362d8-a435-45be-8da2-1eb444d6f542",
+			"id": "4fdb8cb3-1e74-45b7-babb-277387fbc178",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "9cecf986-c0d5-49e2-a0b2-59addfd8ab17",
+			"id": "0db414b5-a9fe-4147-8b5c-70342ac116da",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "dcd44bc1-364d-430b-b0a7-6133ecf312c2",
+			"id": "823c35f5-a4ad-490f-86ca-d7abdbecc1b2",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "16bae556-f2a7-4d55-a1e3-f917f6cbe042",
+			"id": "9bdf75a7-7527-4d35-9447-d065c4903340",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "01c1205b-5b03-4533-9126-0fde35ed8ba3",
+			"id": "8ea54a2d-6786-4838-9324-657a8b1b9e83",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "65c22aca-f602-4376-8ba4-e03bf6443b7f",
+			"id": "c59dccaa-68f3-44d8-acf2-6030d889d20d",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "a0394ab1-486c-4e38-8d15-cc805024f021",
+			"id": "b6d9f50f-39ea-49d5-806a-920c95996d13",
 			"key": "access_token",
 			"value": ""
 		}
