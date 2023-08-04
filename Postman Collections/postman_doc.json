@@ -1265,7 +1265,7 @@
 							"response": [
 								{
 									"id": "5cfd88c7-c9e4-4d02-a4df-bb4c38a3fc6c",
-									"name": "Evento de Faturamento",
+									"name": "Cliente Servico Contrato",
 									"originalRequest": {
 										"method": "POST",
 										"header": [
@@ -7917,37 +7917,37 @@
 	],
 	"variable": [
 		{
-			"id": "f61fbc81-efbc-4324-a199-f430ddd5410f",
+			"id": "2a34e142-ad37-4076-b698-0219eec1f020",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "c89da222-21a1-487f-bfbc-0d305bd16bc5",
+			"id": "3b00fcac-ddb1-4cc7-9acf-3c19a37de779",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "206a88bc-fb86-465f-918a-40f2f581d88a",
+			"id": "2c834598-510c-4220-8b50-9081385ec93a",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "626feff3-0f77-43d3-ba24-c60c140ffdac",
+			"id": "f89485c7-d284-4146-91d8-ea6297d1b294",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "55959913-a06c-4a54-9a2f-8290733feb2b",
+			"id": "df73503b-675f-4527-9662-f819e9636798",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "50d48cc8-f3b6-4084-99c5-9c1000c95a7f",
+			"id": "de766c3a-1c84-4e6f-8873-30ddebdec491",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "7949dcaa-fe12-453b-bbb7-15d2df2ede7e",
+			"id": "c4d3771a-021e-4047-841f-9179752968b9",
 			"key": "access_token",
 			"value": ""
 		}
