@@ -592,14 +592,14 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"id_cliente_servico\": 18950,\n    \"id_contrato\": 10,\n    \"id_empresa\": 3,\n    \"autorizacao_nome\": \"BIANCA COUTO\",\n    \"autorizacao_cpf\": \"39415497076\",\n    \"informacao_adicional\": \"CONTRATO FOI GRAVADO\"\n}",
+									"raw": "{\n    \"id_cliente_servico_contrato\": 9308,\n    \"motivo\": \"SERÁ ADICIONADO OUTRO CONTRATO\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
 										}
 									}
 								},
-								"url": "{{url}}/api/v1/integracao/cliente/contrato/adicionar_contrato",
+								"url": "{{url}}/api/v1/integracao/cliente/contrato/remover_contrato",
 								"description": "**POST**\n\nAtravés deste `endpoint`, será possível fazer o cadastro de contratos para o serviço do cliente.\n\n**Aviso**\n\n`IMPORTANTE`: É necessário informar o `id_cliente_servico`, o `id_contrato e o id_empresa`, eles podem retornados nas rotas Clientes > Consulta e Configuração > Modelos de Contrato e Configuração > Empresas respectivamente\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico | Identificador único do serviço do cliente | Sim |\n| id_contrato | Identificador único do modelo de contrato | Sim |\n| id_empresa | Identificador único da empresa | Sim |\n| autorizacao_nome | Nome do Reponsável Autorização | Não |\n| autorizacao_cpf | CPF do Reponsável Autorização | Não |\n| autorizacao_rg | RG do Reponsável Autorização | Não |\n| informacao_adicional | Informação Adicional do Contrato do Cliente | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico | Deve conter um número inteiro maior que 0 | Nenhum |\n| id_contrato | Deve conter um número inteiro maior que 0 | Nenhum |\n| id_empresa | Deve conter um número inteiro maior que 0 | Nenhum |\n| autorizacao_nome | Textual | Nenhum |\n| autorizacao_cpf | Textual | Nenhum |\n| autorizacao_rg | Textual | Nenhum |\n| informacao_adicional | Textual | Nenhum |"
 							},
 							"response": [
@@ -7982,37 +7982,37 @@
 	],
 	"variable": [
 		{
-			"id": "4fdb8cb3-1e74-45b7-babb-277387fbc178",
+			"id": "2116fc57-2539-4bdb-a227-45055c5eac2c",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "0db414b5-a9fe-4147-8b5c-70342ac116da",
+			"id": "a1eda83a-d740-46c6-b9e1-2dc2678dc4a6",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "823c35f5-a4ad-490f-86ca-d7abdbecc1b2",
+			"id": "8c48c63b-b1a1-4bfb-91d2-1cc65dfdb140",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "9bdf75a7-7527-4d35-9447-d065c4903340",
+			"id": "e1001d7a-9c1f-4fdf-bfb9-d475713e28d7",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "8ea54a2d-6786-4838-9324-657a8b1b9e83",
+			"id": "c3fe2a65-c027-4939-a43e-4d76c9c2db5f",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "c59dccaa-68f3-44d8-acf2-6030d889d20d",
+			"id": "9c4f5bab-8217-4aca-9551-14b9def9cbee",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "b6d9f50f-39ea-49d5-806a-920c95996d13",
+			"id": "f50b5013-730a-4796-b9d7-9f3457ed8e5c",
 			"key": "access_token",
 			"value": ""
 		}
