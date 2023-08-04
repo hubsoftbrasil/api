@@ -7793,7 +7793,7 @@
 								"description": "Bearer Token obtido na autenticação"
 							}
 						],
-						"url": "{{url}}/api/v1/integracao/configuracao/modelo_contrato",
+						"url": "{{url}}/api/v1/integracao/configuracao/empresa",
 						"description": "Através desse `endpoint` será possível consultar os modelos de contratos que estão cadastrados e ativos no sistema.\n\n`OBSERVAÇÃO`: O uso dessa API será muito útil para complementar a API de Adicionar Contratos no Cliente, onde se faz necessário enviar obrigatóriamente o ID do Contrato."
 					},
 					"response": [
@@ -8023,37 +8023,37 @@
 	],
 	"variable": [
 		{
-			"id": "d66f62cc-15ec-419c-8391-832fc6889941",
+			"id": "5299c59c-b9bd-456f-ab04-ce4ec5cd9ed1",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "eb9011ae-aff6-4838-a5c3-703358ebe74c",
+			"id": "07c50c61-817d-4625-8302-55e95a712973",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "c522f2af-1391-4463-adc2-e96750b887d3",
+			"id": "fe0456ab-605a-45cf-aa93-8bff10170921",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "4333b314-5e32-4308-b4fc-517af04f30a8",
+			"id": "a711d16b-e873-4eaf-85c9-29bfebaab9b1",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "1e7d6421-774b-4589-80c9-deaffbac4abd",
+			"id": "5f6aa7fd-0b57-44cc-a307-70b5db413947",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "974e825d-5458-489a-bfea-69f7f7722d4c",
+			"id": "fceba90a-2d70-4e56-9c57-feb46633a363",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "cd3eb0bc-fe57-44af-a35b-1ee9be3788a8",
+			"id": "36c8c7d3-8c3a-4407-8cee-455e7c0c3080",
 			"key": "access_token",
 			"value": ""
 		}
