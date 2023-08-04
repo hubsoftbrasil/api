@@ -571,7 +571,7 @@
 									"header": null,
 									"cookie": [],
 									"responseTime": null,
-									"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"1 Evento(s) de Faturamento de acréscimo cadastrados com sucesso. VALOR TOTAL: R$ 10.30\",\r\n    \"eventos_faturamento\": [\r\n        {\r\n            \"id_evento_faturamento\": 9714,\r\n            \"descricao\": \"Acréscimo Ref Compra de Produto ABC\",\r\n            \"valor\": 10.3\r\n        }\r\n    ]\r\n}"
+									"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Contrato adicionado com sucesso para este Serviço\",\r\n    \"cliente_servico_contrato\": {\r\n        \"id_cliente_servico_contrato\": 9320,\r\n        \"id_cliente_servico\": 18950,\r\n        \"id_contrato\": 10,\r\n        \"validade\": 12,\r\n        \"numero_contrato\": 6432,\r\n        \"id_empresa\": 3,\r\n        \"autorizacao_nome\": \"BIANCA COUTO\",\r\n        \"autorizacao_cpf\": \"12704685614\",\r\n        \"autorizacao_rg\": \"MG-1904960\",\r\n        \"informacao_adicional\": \"CONTRATO ADICIONADO VIA API\",\r\n        \"data_cadastro_br\": \"04/08/2023 13:41\",\r\n        \"contrato\": {\r\n            \"id_contrato\": 10,\r\n            \"descricao\": \"TERMO DE CONTRATAÇÃO E AUTORIZAÇÃO DE DÉBITOS EQUIPAMENTO EM COMODATO(JANAUBA) \",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null\r\n        },\r\n        \"empresa\": {\r\n            \"id_empresa\": 3,\r\n            \"display\": \"TELECOM E HARDWARE LTDA (CNPJ: 09.613.622/0001-60)\"\r\n        },\r\n        \"cliente_servico\": {\r\n            \"id_cliente_servico\": 18950,\r\n            \"display\": \"(5) 1.5-MBPS-PROMOCIONAL-WIRELESS-2018/09 COELHO\",\r\n            \"cliente\": {\r\n                \"id_cliente\": 25246,\r\n                \"display\": \"(2082) BORGES SILVA\"\r\n            }\r\n        }\r\n    }\r\n}"
 								}
 							]
 						}
@@ -7917,37 +7917,37 @@
 	],
 	"variable": [
 		{
-			"id": "c4006731-9109-4b4e-b78e-5b150319c87b",
+			"id": "0dfcf921-f311-44d0-b4b4-68f45c145f5d",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "8543d439-eacc-4d6e-9e03-341bc6df7572",
+			"id": "1ada2694-6ac4-4f14-9459-f8471b0e1630",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "bdef15ec-c42c-474a-80c2-4e8d6ccfca67",
+			"id": "dc3cee42-33ed-4404-9e55-079a7492a455",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "9990eef1-4e4d-4dff-a669-cc5b2bdc8941",
+			"id": "11dfaa5f-bdff-4685-8fb6-b6953b5773b1",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "386f95b8-d7f1-4b40-855d-94fcc0772f72",
+			"id": "22862c7d-7da5-4884-aabc-9d51a92897fb",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "db25d51e-04a7-45c3-a472-bc379be86988",
+			"id": "9d596c3e-ba55-4c55-a293-b9a489f73f15",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "0e8c829b-056d-4f99-bf6b-f554002b07a1",
+			"id": "c6d42db1-1a31-41bc-99f7-c0d604cf73e8",
 			"key": "access_token",
 			"value": ""
 		}
