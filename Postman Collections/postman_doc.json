@@ -7738,88 +7738,6 @@
 					]
 				},
 				{
-					"name": "Modelos de Contrato",
-					"id": "1042337a-ce78-4981-86df-a46b616352bf",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "{{access_token}}",
-								"description": "Bearer Token obtido na autenticação"
-							}
-						],
-						"url": "{{url}}/api/v1/integracao/configuracao/modelo_contrato",
-						"description": "Através desse `endpoint` será possível consultar os modelos de contratos que estão cadastrados e ativos no sistema.\n\n`OBSERVAÇÃO`: O uso dessa API será muito útil para complementar a API de Adicionar Contratos no Cliente, onde se faz necessário enviar obrigatóriamente o ID do Contrato."
-					},
-					"response": [
-						{
-							"id": "83d08435-60d1-4004-9da7-9d120f3a5ff9",
-							"name": "Consulta",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "{{access_token}}",
-										"type": "text"
-									}
-								],
-								"url": "{{url}}/api/v1/integracao/configuracao/modelo_contrato"
-							},
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Modelos de Contratos consultados com sucesso\",\r\n    \"modelos_contrato\": [\r\n        {\r\n            \"id_contrato\": 10,\r\n            \"descricao\": \"TERMO DE CONTRATAÇÃO E AUTORIZAÇÃO DE DÉBITOS EQUIPAMENTO EM COMODATO\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null,\r\n            \"permite_renovar_vigencia_servico\": false,\r\n            \"id_empresa\": 1,\r\n            \"empresa\": {\r\n                \"id_empresa\": 1,\r\n                \"nome_razaosocial\": \"SERVIÇOS DE TECNOLOGIA\",\r\n                \"cnpj\": \"36636392000127\",\r\n                \"display\": \"SERVIÇOS DE TECNOLOGIA (CNPJ: 36.636.392/0001-27)\"\r\n            }\r\n        },\r\n        {\r\n            \"id_contrato\": 18,\r\n            \"descricao\": \"CONTRATO 1 PROVEINTER\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null,\r\n            \"permite_renovar_vigencia_servico\": false,\r\n            \"id_empresa\": 3,\r\n            \"empresa\": {\r\n                \"id_empresa\": 3,\r\n                \"nome_razaosocial\": \"TELECOM E HARDWARE LTDA\",\r\n                \"cnpj\": \"09613622000160\",\r\n                \"display\": \"TELECOM E HARDWARE LTDA (CNPJ: 09.613.622/0001-60)\"\r\n            }\r\n        },\r\n        {\r\n            \"id_contrato\": 7,\r\n            \"descricao\": \"CONTRATO - \",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null,\r\n            \"permite_renovar_vigencia_servico\": false,\r\n            \"id_empresa\": 14,\r\n            \"empresa\": {\r\n                \"id_empresa\": 14,\r\n                \"nome_razaosocial\": \"COMUNICAÇÕES LTDA\",\r\n                \"cnpj\": \"24605227000129\",\r\n                \"display\": \"COMUNICAÇÕES LTDA (CNPJ: 24.605.227/0001-29)\"\r\n            }\r\n        },\r\n        {\r\n            \"id_contrato\": 19,\r\n            \"descricao\": \"CONTRATO 2\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null,\r\n            \"permite_renovar_vigencia_servico\": false,\r\n            \"id_empresa\": 3,\r\n            \"empresa\": {\r\n                \"id_empresa\": 3,\r\n                \"nome_razaosocial\": \"TELECOM E HARDWARE LTDA\",\r\n                \"cnpj\": \"09613622000160\",\r\n                \"display\": \"TELECOM E HARDWARE LTDA (CNPJ: 09.613.622/0001-60)\"\r\n            }\r\n        },\r\n        {\r\n            \"id_contrato\": 13,\r\n            \"descricao\": \"Termo de Contratação (SCM)\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null,\r\n            \"permite_renovar_vigencia_servico\": false,\r\n            \"id_empresa\": 1,\r\n            \"empresa\": {\r\n                \"id_empresa\": 1,\r\n                \"nome_razaosocial\": \"SERVIÇOS DE TECNOLOGIA\",\r\n                \"cnpj\": \"36636392000127\",\r\n                \"display\": \"SERVIÇOS DE TECNOLOGIA (CNPJ: 36.636.392/0001-27)\"\r\n            }\r\n        },\r\n        {\r\n            \"id_contrato\": 15,\r\n            \"descricao\": \"TERMO DE CONTRATAÇÃO\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null,\r\n            \"permite_renovar_vigencia_servico\": false,\r\n            \"id_empresa\": 1,\r\n            \"empresa\": {\r\n                \"id_empresa\": 1,\r\n                \"nome_razaosocial\": \"SERVIÇOS DE TECNOLOGIA\",\r\n                \"cnpj\": \"36636392000127\",\r\n                \"display\": \"SERVIÇOS DE TECNOLOGIA (CNPJ: 36.636.392/0001-27)\"\r\n            }\r\n        },\r\n        {\r\n            \"id_contrato\": 20,\r\n            \"descricao\": \"TERMO DE COMODATO\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null,\r\n            \"permite_renovar_vigencia_servico\": false,\r\n            \"id_empresa\": 3,\r\n            \"empresa\": {\r\n                \"id_empresa\": 3,\r\n                \"nome_razaosocial\": \"TELECOM E HARDWARE LTDA\",\r\n                \"cnpj\": \"09613622000160\",\r\n                \"display\": \"TELECOM E HARDWARE LTDA (CNPJ: 09.613.622/0001-60)\"\r\n            }\r\n        },\r\n        {\r\n            \"id_contrato\": 16,\r\n            \"descricao\": \"TERMO DE BENEFÍCIO\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null,\r\n            \"permite_renovar_vigencia_servico\": false,\r\n            \"id_empresa\": 1,\r\n            \"empresa\": {\r\n                \"id_empresa\": 1,\r\n                \"nome_razaosocial\": \"SERVIÇOS DE TECNOLOGIA\",\r\n                \"cnpj\": \"36636392000127\",\r\n                \"display\": \"SERVIÇOS DE TECNOLOGIA (CNPJ: 36.636.392/0001-27)\"\r\n            }\r\n        },\r\n        {\r\n            \"id_contrato\": 6,\r\n            \"descricao\": \"TERMO ADESÃO\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null,\r\n            \"permite_renovar_vigencia_servico\": false,\r\n            \"id_empresa\": 1,\r\n            \"empresa\": {\r\n                \"id_empresa\": 1,\r\n                \"nome_razaosocial\": \"SERVIÇOS DE TECNOLOGIA\",\r\n                \"cnpj\": \"36636392000127\",\r\n                \"display\": \"SERVIÇOS DE TECNOLOGIA (CNPJ: 36.636.392/0001-27)\"\r\n            }\r\n        },\r\n        {\r\n            \"id_contrato\": 14,\r\n            \"descricao\": \"CONTRATO\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null,\r\n            \"permite_renovar_vigencia_servico\": false,\r\n            \"id_empresa\": 13,\r\n            \"empresa\": {\r\n                \"id_empresa\": 13,\r\n                \"nome_razaosocial\": \"WIFI Tecnologia\",\r\n                \"cnpj\": \"30913704000540\",\r\n                \"display\": \"WIFI Tecnologia (CNPJ: 30.913.704/0005-40)\"\r\n            }\r\n        },\r\n        {\r\n            \"id_contrato\": 52,\r\n            \"descricao\": \"Contrato empresa x\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null,\r\n            \"permite_renovar_vigencia_servico\": false,\r\n            \"id_empresa\": 25,\r\n            \"empresa\": {\r\n                \"id_empresa\": 25,\r\n                \"nome_razaosocial\": \"TELECOMUNICAÇÕES\",\r\n                \"cnpj\": \"71593394000187\",\r\n                \"display\": \"TELECOMUNICAÇÕES (CNPJ: 71.593.394/0001-87)\"\r\n            }\r\n        },\r\n        {\r\n            \"id_contrato\": 33,\r\n            \"descricao\": \"Contrato Comodato (empresa y)\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null,\r\n            \"permite_renovar_vigencia_servico\": false,\r\n            \"id_empresa\": 1,\r\n            \"empresa\": {\r\n                \"id_empresa\": 1,\r\n                \"nome_razaosocial\": \"SERVIÇOS DE TECNOLOGIA\",\r\n                \"cnpj\": \"36636392000127\",\r\n                \"display\": \"SERVIÇOS DE TECNOLOGIA (CNPJ: 36.636.392/0001-27)\"\r\n            }\r\n        },\r\n        {\r\n            \"id_contrato\": 34,\r\n            \"descricao\": \"Contrato de SCM - Termo\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null,\r\n            \"permite_renovar_vigencia_servico\": false,\r\n            \"id_empresa\": 1,\r\n            \"empresa\": {\r\n                \"id_empresa\": 1,\r\n                \"nome_razaosocial\": \"SERVIÇOS DE TECNOLOGIA\",\r\n                \"cnpj\": \"36636392000127\",\r\n                \"display\": \"SERVIÇOS DE TECNOLOGIA (CNPJ: 36.636.392/0001-27)\"\r\n            }\r\n        },\r\n        {\r\n            \"id_contrato\": 53,\r\n            \"descricao\": \"CONTRATO EQUIPAMENTOS EM COMODATO\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": true,\r\n            \"valor_multa\": \"100\",\r\n            \"permite_renovar_vigencia_servico\": false,\r\n            \"id_empresa\": 14,\r\n            \"empresa\": {\r\n                \"id_empresa\": 14,\r\n                \"nome_razaosocial\": \"COMUNICAÇÕES LTDA\",\r\n                \"cnpj\": \"24605227000129\",\r\n                \"display\": \"COMUNICAÇÕES LTDA (CNPJ: 24.605.227/0001-29)\"\r\n            }\r\n        }\r\n    ]\r\n}"
-						}
-					]
-				},
-				{
-					"name": "Empresas",
-					"id": "d998c390-1592-4bb4-87c9-9b52baea1209",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "{{access_token}}",
-								"description": "Bearer Token obtido na autenticação"
-							}
-						],
-						"url": "{{url}}/api/v1/integracao/configuracao/modelo_contrato",
-						"description": "Através desse `endpoint` será possível consultar os modelos de contratos que estão cadastrados e ativos no sistema.\n\n`OBSERVAÇÃO`: O uso dessa API será muito útil para complementar a API de Adicionar Contratos no Cliente, onde se faz necessário enviar obrigatóriamente o ID do Contrato."
-					},
-					"response": [
-						{
-							"id": "8493efb9-27a4-45ee-8cf8-23c0430f844d",
-							"name": "Consulta",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "{{access_token}}",
-										"type": "text"
-									}
-								],
-								"url": "{{url}}/api/v1/integracao/configuracao/modelo_contrato"
-							},
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Modelos de Contratos consultados com sucesso\",\r\n    \"modelos_contrato\": [\r\n        {\r\n            \"id_contrato\": 10,\r\n            \"descricao\": \"TERMO DE CONTRATAÇÃO E AUTORIZAÇÃO DE DÉBITOS EQUIPAMENTO EM COMODATO\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null,\r\n            \"permite_renovar_vigencia_servico\": false,\r\n            \"id_empresa\": 1,\r\n            \"empresa\": {\r\n                \"id_empresa\": 1,\r\n                \"nome_razaosocial\": \"SERVIÇOS DE TECNOLOGIA\",\r\n                \"cnpj\": \"36636392000127\",\r\n                \"display\": \"SERVIÇOS DE TECNOLOGIA (CNPJ: 36.636.392/0001-27)\"\r\n            }\r\n        },\r\n        {\r\n            \"id_contrato\": 18,\r\n            \"descricao\": \"CONTRATO 1 PROVEINTER\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null,\r\n            \"permite_renovar_vigencia_servico\": false,\r\n            \"id_empresa\": 3,\r\n            \"empresa\": {\r\n                \"id_empresa\": 3,\r\n                \"nome_razaosocial\": \"TELECOM E HARDWARE LTDA\",\r\n                \"cnpj\": \"09613622000160\",\r\n                \"display\": \"TELECOM E HARDWARE LTDA (CNPJ: 09.613.622/0001-60)\"\r\n            }\r\n        },\r\n        {\r\n            \"id_contrato\": 7,\r\n            \"descricao\": \"CONTRATO - \",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null,\r\n            \"permite_renovar_vigencia_servico\": false,\r\n            \"id_empresa\": 14,\r\n            \"empresa\": {\r\n                \"id_empresa\": 14,\r\n                \"nome_razaosocial\": \"COMUNICAÇÕES LTDA\",\r\n                \"cnpj\": \"24605227000129\",\r\n                \"display\": \"COMUNICAÇÕES LTDA (CNPJ: 24.605.227/0001-29)\"\r\n            }\r\n        },\r\n        {\r\n            \"id_contrato\": 19,\r\n            \"descricao\": \"CONTRATO 2\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null,\r\n            \"permite_renovar_vigencia_servico\": false,\r\n            \"id_empresa\": 3,\r\n            \"empresa\": {\r\n                \"id_empresa\": 3,\r\n                \"nome_razaosocial\": \"TELECOM E HARDWARE LTDA\",\r\n                \"cnpj\": \"09613622000160\",\r\n                \"display\": \"TELECOM E HARDWARE LTDA (CNPJ: 09.613.622/0001-60)\"\r\n            }\r\n        },\r\n        {\r\n            \"id_contrato\": 13,\r\n            \"descricao\": \"Termo de Contratação (SCM)\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null,\r\n            \"permite_renovar_vigencia_servico\": false,\r\n            \"id_empresa\": 1,\r\n            \"empresa\": {\r\n                \"id_empresa\": 1,\r\n                \"nome_razaosocial\": \"SERVIÇOS DE TECNOLOGIA\",\r\n                \"cnpj\": \"36636392000127\",\r\n                \"display\": \"SERVIÇOS DE TECNOLOGIA (CNPJ: 36.636.392/0001-27)\"\r\n            }\r\n        },\r\n        {\r\n            \"id_contrato\": 15,\r\n            \"descricao\": \"TERMO DE CONTRATAÇÃO\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null,\r\n            \"permite_renovar_vigencia_servico\": false,\r\n            \"id_empresa\": 1,\r\n            \"empresa\": {\r\n                \"id_empresa\": 1,\r\n                \"nome_razaosocial\": \"SERVIÇOS DE TECNOLOGIA\",\r\n                \"cnpj\": \"36636392000127\",\r\n                \"display\": \"SERVIÇOS DE TECNOLOGIA (CNPJ: 36.636.392/0001-27)\"\r\n            }\r\n        },\r\n        {\r\n            \"id_contrato\": 20,\r\n            \"descricao\": \"TERMO DE COMODATO\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null,\r\n            \"permite_renovar_vigencia_servico\": false,\r\n            \"id_empresa\": 3,\r\n            \"empresa\": {\r\n                \"id_empresa\": 3,\r\n                \"nome_razaosocial\": \"TELECOM E HARDWARE LTDA\",\r\n                \"cnpj\": \"09613622000160\",\r\n                \"display\": \"TELECOM E HARDWARE LTDA (CNPJ: 09.613.622/0001-60)\"\r\n            }\r\n        },\r\n        {\r\n            \"id_contrato\": 16,\r\n            \"descricao\": \"TERMO DE BENEFÍCIO\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null,\r\n            \"permite_renovar_vigencia_servico\": false,\r\n            \"id_empresa\": 1,\r\n            \"empresa\": {\r\n                \"id_empresa\": 1,\r\n                \"nome_razaosocial\": \"SERVIÇOS DE TECNOLOGIA\",\r\n                \"cnpj\": \"36636392000127\",\r\n                \"display\": \"SERVIÇOS DE TECNOLOGIA (CNPJ: 36.636.392/0001-27)\"\r\n            }\r\n        },\r\n        {\r\n            \"id_contrato\": 6,\r\n            \"descricao\": \"TERMO ADESÃO\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null,\r\n            \"permite_renovar_vigencia_servico\": false,\r\n            \"id_empresa\": 1,\r\n            \"empresa\": {\r\n                \"id_empresa\": 1,\r\n                \"nome_razaosocial\": \"SERVIÇOS DE TECNOLOGIA\",\r\n                \"cnpj\": \"36636392000127\",\r\n                \"display\": \"SERVIÇOS DE TECNOLOGIA (CNPJ: 36.636.392/0001-27)\"\r\n            }\r\n        },\r\n        {\r\n            \"id_contrato\": 14,\r\n            \"descricao\": \"CONTRATO\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null,\r\n            \"permite_renovar_vigencia_servico\": false,\r\n            \"id_empresa\": 13,\r\n            \"empresa\": {\r\n                \"id_empresa\": 13,\r\n                \"nome_razaosocial\": \"WIFI Tecnologia\",\r\n                \"cnpj\": \"30913704000540\",\r\n                \"display\": \"WIFI Tecnologia (CNPJ: 30.913.704/0005-40)\"\r\n            }\r\n        },\r\n        {\r\n            \"id_contrato\": 52,\r\n            \"descricao\": \"Contrato empresa x\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null,\r\n            \"permite_renovar_vigencia_servico\": false,\r\n            \"id_empresa\": 25,\r\n            \"empresa\": {\r\n                \"id_empresa\": 25,\r\n                \"nome_razaosocial\": \"TELECOMUNICAÇÕES\",\r\n                \"cnpj\": \"71593394000187\",\r\n                \"display\": \"TELECOMUNICAÇÕES (CNPJ: 71.593.394/0001-87)\"\r\n            }\r\n        },\r\n        {\r\n            \"id_contrato\": 33,\r\n            \"descricao\": \"Contrato Comodato (empresa y)\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null,\r\n            \"permite_renovar_vigencia_servico\": false,\r\n            \"id_empresa\": 1,\r\n            \"empresa\": {\r\n                \"id_empresa\": 1,\r\n                \"nome_razaosocial\": \"SERVIÇOS DE TECNOLOGIA\",\r\n                \"cnpj\": \"36636392000127\",\r\n                \"display\": \"SERVIÇOS DE TECNOLOGIA (CNPJ: 36.636.392/0001-27)\"\r\n            }\r\n        },\r\n        {\r\n            \"id_contrato\": 34,\r\n            \"descricao\": \"Contrato de SCM - Termo\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null,\r\n            \"permite_renovar_vigencia_servico\": false,\r\n            \"id_empresa\": 1,\r\n            \"empresa\": {\r\n                \"id_empresa\": 1,\r\n                \"nome_razaosocial\": \"SERVIÇOS DE TECNOLOGIA\",\r\n                \"cnpj\": \"36636392000127\",\r\n                \"display\": \"SERVIÇOS DE TECNOLOGIA (CNPJ: 36.636.392/0001-27)\"\r\n            }\r\n        },\r\n        {\r\n            \"id_contrato\": 53,\r\n            \"descricao\": \"CONTRATO EQUIPAMENTOS EM COMODATO\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": true,\r\n            \"valor_multa\": \"100\",\r\n            \"permite_renovar_vigencia_servico\": false,\r\n            \"id_empresa\": 14,\r\n            \"empresa\": {\r\n                \"id_empresa\": 14,\r\n                \"nome_razaosocial\": \"COMUNICAÇÕES LTDA\",\r\n                \"cnpj\": \"24605227000129\",\r\n                \"display\": \"COMUNICAÇÕES LTDA (CNPJ: 24.605.227/0001-29)\"\r\n            }\r\n        }\r\n    ]\r\n}"
-						}
-					]
-				},
-				{
 					"name": "Cidades",
 					"id": "97b11dd6-69c0-4591-ba65-a5b6a42b7ed5",
 					"protocolProfileBehavior": {
@@ -7861,6 +7779,47 @@
 					]
 				},
 				{
+					"name": "Empresas",
+					"id": "d998c390-1592-4bb4-87c9-9b52baea1209",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{access_token}}",
+								"description": "Bearer Token obtido na autenticação"
+							}
+						],
+						"url": "{{url}}/api/v1/integracao/configuracao/modelo_contrato",
+						"description": "Através desse `endpoint` será possível consultar os modelos de contratos que estão cadastrados e ativos no sistema.\n\n`OBSERVAÇÃO`: O uso dessa API será muito útil para complementar a API de Adicionar Contratos no Cliente, onde se faz necessário enviar obrigatóriamente o ID do Contrato."
+					},
+					"response": [
+						{
+							"id": "8493efb9-27a4-45ee-8cf8-23c0430f844d",
+							"name": "Consulta",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/api/v1/integracao/configuracao/empresa"
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Empresas consultados com sucesso\",\r\n    \"empresas\": [\r\n        {\r\n            \"id_empresa\": 37,\r\n            \"nome_razaosocial\": \"HUBSOFT BRASIL LTDA\",\r\n            \"cnpj\": \"29507487000185\",\r\n            \"display\": \"HUBSOFT BRASIL LTDA (CNPJ: 29.507.487/0001-85)\"\r\n        }\r\n    ]\r\n}"
+						}
+					]
+				},
+				{
 					"name": "Meios de Pagamento",
 					"id": "e3ef9dcf-aaf7-4ebd-a6b2-f890827653e3",
 					"protocolProfileBehavior": {
@@ -7898,6 +7857,47 @@
 							"cookie": [],
 							"responseTime": null,
 							"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Meios de Pagamento consultados com sucesso\",\r\n    \"meios_pagamento\": [\r\n        {\r\n            \"descricao\": \"Boleto\",\r\n            \"prefixo\": \"boleto\"\r\n        },\r\n        {\r\n            \"descricao\": \"Cartão de Crédito\",\r\n            \"prefixo\": \"cartao_credito\"\r\n        },\r\n        {\r\n            \"descricao\": \"Cartão de Débito\",\r\n            \"prefixo\": \"cartao_debito\"\r\n        },\r\n        {\r\n            \"descricao\": \"Cheque\",\r\n            \"prefixo\": \"cheque\"\r\n        },\r\n        {\r\n            \"descricao\": \"Débito Automático\",\r\n            \"prefixo\": \"debito_automatico\"\r\n        },\r\n        {\r\n            \"descricao\": \"Dinheiro\",\r\n            \"prefixo\": \"dinheiro\"\r\n        },\r\n        {\r\n            \"descricao\": \"PIX\",\r\n            \"prefixo\": \"pix\"\r\n        },\r\n        {\r\n            \"descricao\": \"Transferência Bancária\",\r\n            \"prefixo\": \"transferencia_bancaria\"\r\n        }\r\n    ]\r\n}"
+						}
+					]
+				},
+				{
+					"name": "Modelos de Contrato",
+					"id": "1042337a-ce78-4981-86df-a46b616352bf",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{access_token}}",
+								"description": "Bearer Token obtido na autenticação"
+							}
+						],
+						"url": "{{url}}/api/v1/integracao/configuracao/modelo_contrato",
+						"description": "Através desse `endpoint` será possível consultar os modelos de contratos que estão cadastrados e ativos no sistema.\n\n`OBSERVAÇÃO`: O uso dessa API será muito útil para complementar a API de Adicionar Contratos no Cliente, onde se faz necessário enviar obrigatóriamente o ID do Contrato."
+					},
+					"response": [
+						{
+							"id": "83d08435-60d1-4004-9da7-9d120f3a5ff9",
+							"name": "Consulta",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/api/v1/integracao/configuracao/modelo_contrato"
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Modelos de Contratos consultados com sucesso\",\r\n    \"modelos_contrato\": [\r\n        {\r\n            \"id_contrato\": 10,\r\n            \"descricao\": \"TERMO DE CONTRATAÇÃO E AUTORIZAÇÃO DE DÉBITOS EQUIPAMENTO EM COMODATO\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null,\r\n            \"permite_renovar_vigencia_servico\": false,\r\n            \"id_empresa\": 1,\r\n            \"empresa\": {\r\n                \"id_empresa\": 1,\r\n                \"nome_razaosocial\": \"SERVIÇOS DE TECNOLOGIA\",\r\n                \"cnpj\": \"36636392000127\",\r\n                \"display\": \"SERVIÇOS DE TECNOLOGIA (CNPJ: 36.636.392/0001-27)\"\r\n            }\r\n        },\r\n        {\r\n            \"id_contrato\": 18,\r\n            \"descricao\": \"CONTRATO 1 PROVEINTER\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null,\r\n            \"permite_renovar_vigencia_servico\": false,\r\n            \"id_empresa\": 3,\r\n            \"empresa\": {\r\n                \"id_empresa\": 3,\r\n                \"nome_razaosocial\": \"TELECOM E HARDWARE LTDA\",\r\n                \"cnpj\": \"09613622000160\",\r\n                \"display\": \"TELECOM E HARDWARE LTDA (CNPJ: 09.613.622/0001-60)\"\r\n            }\r\n        },\r\n        {\r\n            \"id_contrato\": 7,\r\n            \"descricao\": \"CONTRATO - \",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null,\r\n            \"permite_renovar_vigencia_servico\": false,\r\n            \"id_empresa\": 14,\r\n            \"empresa\": {\r\n                \"id_empresa\": 14,\r\n                \"nome_razaosocial\": \"COMUNICAÇÕES LTDA\",\r\n                \"cnpj\": \"24605227000129\",\r\n                \"display\": \"COMUNICAÇÕES LTDA (CNPJ: 24.605.227/0001-29)\"\r\n            }\r\n        },\r\n        {\r\n            \"id_contrato\": 19,\r\n            \"descricao\": \"CONTRATO 2\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null,\r\n            \"permite_renovar_vigencia_servico\": false,\r\n            \"id_empresa\": 3,\r\n            \"empresa\": {\r\n                \"id_empresa\": 3,\r\n                \"nome_razaosocial\": \"TELECOM E HARDWARE LTDA\",\r\n                \"cnpj\": \"09613622000160\",\r\n                \"display\": \"TELECOM E HARDWARE LTDA (CNPJ: 09.613.622/0001-60)\"\r\n            }\r\n        },\r\n        {\r\n            \"id_contrato\": 13,\r\n            \"descricao\": \"Termo de Contratação (SCM)\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null,\r\n            \"permite_renovar_vigencia_servico\": false,\r\n            \"id_empresa\": 1,\r\n            \"empresa\": {\r\n                \"id_empresa\": 1,\r\n                \"nome_razaosocial\": \"SERVIÇOS DE TECNOLOGIA\",\r\n                \"cnpj\": \"36636392000127\",\r\n                \"display\": \"SERVIÇOS DE TECNOLOGIA (CNPJ: 36.636.392/0001-27)\"\r\n            }\r\n        },\r\n        {\r\n            \"id_contrato\": 15,\r\n            \"descricao\": \"TERMO DE CONTRATAÇÃO\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null,\r\n            \"permite_renovar_vigencia_servico\": false,\r\n            \"id_empresa\": 1,\r\n            \"empresa\": {\r\n                \"id_empresa\": 1,\r\n                \"nome_razaosocial\": \"SERVIÇOS DE TECNOLOGIA\",\r\n                \"cnpj\": \"36636392000127\",\r\n                \"display\": \"SERVIÇOS DE TECNOLOGIA (CNPJ: 36.636.392/0001-27)\"\r\n            }\r\n        },\r\n        {\r\n            \"id_contrato\": 20,\r\n            \"descricao\": \"TERMO DE COMODATO\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null,\r\n            \"permite_renovar_vigencia_servico\": false,\r\n            \"id_empresa\": 3,\r\n            \"empresa\": {\r\n                \"id_empresa\": 3,\r\n                \"nome_razaosocial\": \"TELECOM E HARDWARE LTDA\",\r\n                \"cnpj\": \"09613622000160\",\r\n                \"display\": \"TELECOM E HARDWARE LTDA (CNPJ: 09.613.622/0001-60)\"\r\n            }\r\n        },\r\n        {\r\n            \"id_contrato\": 16,\r\n            \"descricao\": \"TERMO DE BENEFÍCIO\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null,\r\n            \"permite_renovar_vigencia_servico\": false,\r\n            \"id_empresa\": 1,\r\n            \"empresa\": {\r\n                \"id_empresa\": 1,\r\n                \"nome_razaosocial\": \"SERVIÇOS DE TECNOLOGIA\",\r\n                \"cnpj\": \"36636392000127\",\r\n                \"display\": \"SERVIÇOS DE TECNOLOGIA (CNPJ: 36.636.392/0001-27)\"\r\n            }\r\n        },\r\n        {\r\n            \"id_contrato\": 6,\r\n            \"descricao\": \"TERMO ADESÃO\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null,\r\n            \"permite_renovar_vigencia_servico\": false,\r\n            \"id_empresa\": 1,\r\n            \"empresa\": {\r\n                \"id_empresa\": 1,\r\n                \"nome_razaosocial\": \"SERVIÇOS DE TECNOLOGIA\",\r\n                \"cnpj\": \"36636392000127\",\r\n                \"display\": \"SERVIÇOS DE TECNOLOGIA (CNPJ: 36.636.392/0001-27)\"\r\n            }\r\n        },\r\n        {\r\n            \"id_contrato\": 14,\r\n            \"descricao\": \"CONTRATO\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null,\r\n            \"permite_renovar_vigencia_servico\": false,\r\n            \"id_empresa\": 13,\r\n            \"empresa\": {\r\n                \"id_empresa\": 13,\r\n                \"nome_razaosocial\": \"WIFI Tecnologia\",\r\n                \"cnpj\": \"30913704000540\",\r\n                \"display\": \"WIFI Tecnologia (CNPJ: 30.913.704/0005-40)\"\r\n            }\r\n        },\r\n        {\r\n            \"id_contrato\": 52,\r\n            \"descricao\": \"Contrato empresa x\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null,\r\n            \"permite_renovar_vigencia_servico\": false,\r\n            \"id_empresa\": 25,\r\n            \"empresa\": {\r\n                \"id_empresa\": 25,\r\n                \"nome_razaosocial\": \"TELECOMUNICAÇÕES\",\r\n                \"cnpj\": \"71593394000187\",\r\n                \"display\": \"TELECOMUNICAÇÕES (CNPJ: 71.593.394/0001-87)\"\r\n            }\r\n        },\r\n        {\r\n            \"id_contrato\": 33,\r\n            \"descricao\": \"Contrato Comodato (empresa y)\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null,\r\n            \"permite_renovar_vigencia_servico\": false,\r\n            \"id_empresa\": 1,\r\n            \"empresa\": {\r\n                \"id_empresa\": 1,\r\n                \"nome_razaosocial\": \"SERVIÇOS DE TECNOLOGIA\",\r\n                \"cnpj\": \"36636392000127\",\r\n                \"display\": \"SERVIÇOS DE TECNOLOGIA (CNPJ: 36.636.392/0001-27)\"\r\n            }\r\n        },\r\n        {\r\n            \"id_contrato\": 34,\r\n            \"descricao\": \"Contrato de SCM - Termo\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null,\r\n            \"permite_renovar_vigencia_servico\": false,\r\n            \"id_empresa\": 1,\r\n            \"empresa\": {\r\n                \"id_empresa\": 1,\r\n                \"nome_razaosocial\": \"SERVIÇOS DE TECNOLOGIA\",\r\n                \"cnpj\": \"36636392000127\",\r\n                \"display\": \"SERVIÇOS DE TECNOLOGIA (CNPJ: 36.636.392/0001-27)\"\r\n            }\r\n        },\r\n        {\r\n            \"id_contrato\": 53,\r\n            \"descricao\": \"CONTRATO EQUIPAMENTOS EM COMODATO\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": true,\r\n            \"valor_multa\": \"100\",\r\n            \"permite_renovar_vigencia_servico\": false,\r\n            \"id_empresa\": 14,\r\n            \"empresa\": {\r\n                \"id_empresa\": 14,\r\n                \"nome_razaosocial\": \"COMUNICAÇÕES LTDA\",\r\n                \"cnpj\": \"24605227000129\",\r\n                \"display\": \"COMUNICAÇÕES LTDA (CNPJ: 24.605.227/0001-29)\"\r\n            }\r\n        }\r\n    ]\r\n}"
 						}
 					]
 				},
@@ -8023,37 +8023,37 @@
 	],
 	"variable": [
 		{
-			"id": "3d7dc465-8d71-4618-90da-bdf13178dba7",
+			"id": "d66f62cc-15ec-419c-8391-832fc6889941",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "d4016870-3613-4d41-8453-787e2f18e1f2",
+			"id": "eb9011ae-aff6-4838-a5c3-703358ebe74c",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "c35da4cb-d204-4252-a260-928ee4ca90dd",
+			"id": "c522f2af-1391-4463-adc2-e96750b887d3",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "8568a388-2c86-4bc4-8dd9-b3699faa9808",
+			"id": "4333b314-5e32-4308-b4fc-517af04f30a8",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "b0ab5706-ff7d-4573-9f29-2ea8cc6300f4",
+			"id": "1e7d6421-774b-4589-80c9-deaffbac4abd",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "97dc54f9-1455-4620-8385-dc4107c9889f",
+			"id": "974e825d-5458-489a-bfea-69f7f7722d4c",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "f2e7b076-13c1-4d39-b045-62b57a105c96",
+			"id": "cd3eb0bc-fe57-44af-a35b-1ee9be3788a8",
 			"key": "access_token",
 			"value": ""
 		}
