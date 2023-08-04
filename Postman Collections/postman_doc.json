@@ -7794,7 +7794,7 @@
 							}
 						],
 						"url": "{{url}}/api/v1/integracao/configuracao/empresa",
-						"description": "Através desse `endpoint` será possível consultar os modelos de contratos que estão cadastrados e ativos no sistema.\n\n`OBSERVAÇÃO`: O uso dessa API será muito útil para complementar a API de Adicionar Contratos no Cliente, onde se faz necessário enviar obrigatóriamente o ID do Contrato."
+						"description": "Através desse `endpoint` será possível consultar as empresas que estão cadastrados e ativas no sistema.\n\n`OBSERVAÇÃO`: O uso dessa API será muito útil para complementar a API de Adicionar Contratos no Cliente, onde se faz necessário enviar obrigatóriamente o ID da Empresa."
 					},
 					"response": [
 						{
@@ -8023,37 +8023,37 @@
 	],
 	"variable": [
 		{
-			"id": "5299c59c-b9bd-456f-ab04-ce4ec5cd9ed1",
+			"id": "c280d33d-caa2-4672-9609-a400ca5be124",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "07c50c61-817d-4625-8302-55e95a712973",
+			"id": "c30f5145-4674-4e2c-ba42-011ef2468162",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "fe0456ab-605a-45cf-aa93-8bff10170921",
+			"id": "c4e75827-bde3-4e22-ae36-cf17df169e26",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "a711d16b-e873-4eaf-85c9-29bfebaab9b1",
+			"id": "c8fcc222-3782-4e2b-ad00-f651f2cd4a28",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "5f6aa7fd-0b57-44cc-a307-70b5db413947",
+			"id": "afcfd5b2-5d07-45c7-a5c4-7e3b066fabcc",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "fceba90a-2d70-4e56-9c57-feb46633a363",
+			"id": "3929de67-c049-49df-ac71-1230e93d1a7c",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "36c8c7d3-8c3a-4407-8cee-455e7c0c3080",
+			"id": "60f9e907-e057-45f6-9068-9ba89823de6b",
 			"key": "access_token",
 			"value": ""
 		}
