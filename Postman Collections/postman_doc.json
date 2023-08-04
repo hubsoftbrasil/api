@@ -540,7 +540,7 @@
 							"response": [
 								{
 									"id": "5cfd88c7-c9e4-4d02-a4df-bb4c38a3fc6c",
-									"name": "Cliente Servico Contrato",
+									"name": "Sucesso",
 									"originalRequest": {
 										"method": "POST",
 										"header": [
@@ -7917,37 +7917,37 @@
 	],
 	"variable": [
 		{
-			"id": "0dfcf921-f311-44d0-b4b4-68f45c145f5d",
+			"id": "5e9f4d95-4f24-4b23-addf-4958a4286133",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "1ada2694-6ac4-4f14-9459-f8471b0e1630",
+			"id": "40f42a34-e59e-442b-9a78-acb93929aaf0",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "dc3cee42-33ed-4404-9e55-079a7492a455",
+			"id": "6a763ab9-c11a-4893-8752-04c1f46f0417",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "11dfaa5f-bdff-4685-8fb6-b6953b5773b1",
+			"id": "807de969-a80f-42a0-a38f-97a4844fa486",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "22862c7d-7da5-4884-aabc-9d51a92897fb",
+			"id": "1c60ea9f-f22e-4360-b114-feb2d78b538c",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "9d596c3e-ba55-4c55-a293-b9a489f73f15",
+			"id": "f8f14664-b498-41b1-b12d-81872b75ba9b",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "c6d42db1-1a31-41bc-99f7-c0d604cf73e8",
+			"id": "c00ba369-88e3-4f2d-a6d0-bbebc4cea0db",
 			"key": "access_token",
 			"value": ""
 		}
