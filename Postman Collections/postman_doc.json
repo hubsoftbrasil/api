@@ -600,7 +600,7 @@
 									}
 								},
 								"url": "{{url}}/api/v1/integracao/cliente/contrato/remover_contrato",
-								"description": "**POST**\n\nAtravés deste `endpoint`, será possível fazer o cadastro de contratos para o serviço do cliente.\n\n**Aviso**\n\n`IMPORTANTE`: É necessário informar o `id_cliente_servico`, o `id_contrato e o id_empresa`, eles podem retornados nas rotas Clientes > Consulta e Configuração > Modelos de Contrato e Configuração > Empresas respectivamente\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico | Identificador único do serviço do cliente | Sim |\n| id_contrato | Identificador único do modelo de contrato | Sim |\n| id_empresa | Identificador único da empresa | Sim |\n| autorizacao_nome | Nome do Reponsável Autorização | Não |\n| autorizacao_cpf | CPF do Reponsável Autorização | Não |\n| autorizacao_rg | RG do Reponsável Autorização | Não |\n| informacao_adicional | Informação Adicional do Contrato do Cliente | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico | Deve conter um número inteiro maior que 0 | Nenhum |\n| id_contrato | Deve conter um número inteiro maior que 0 | Nenhum |\n| id_empresa | Deve conter um número inteiro maior que 0 | Nenhum |\n| autorizacao_nome | Textual | Nenhum |\n| autorizacao_cpf | Textual | Nenhum |\n| autorizacao_rg | Textual | Nenhum |\n| informacao_adicional | Textual | Nenhum |"
+								"description": "**POST**\n\nAtravés deste `endpoint`, será possível remover os contratos do o serviço do cliente.\n\n**Aviso**\n\n`IMPORTANTE`: É necessário informar o `id_cliente_servico`, o `id_contrato e o id_empresa`, eles podem retornados nas rotas Clientes > Consulta e Configuração > Modelos de Contrato e Configuração > Empresas respectivamente\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico | Identificador único do serviço do cliente | Sim |\n| id_contrato | Identificador único do modelo de contrato | Sim |\n| id_empresa | Identificador único da empresa | Sim |\n| autorizacao_nome | Nome do Reponsável Autorização | Não |\n| autorizacao_cpf | CPF do Reponsável Autorização | Não |\n| autorizacao_rg | RG do Reponsável Autorização | Não |\n| informacao_adicional | Informação Adicional do Contrato do Cliente | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico | Deve conter um número inteiro maior que 0 | Nenhum |\n| id_contrato | Deve conter um número inteiro maior que 0 | Nenhum |\n| id_empresa | Deve conter um número inteiro maior que 0 | Nenhum |\n| autorizacao_nome | Textual | Nenhum |\n| autorizacao_cpf | Textual | Nenhum |\n| autorizacao_rg | Textual | Nenhum |\n| informacao_adicional | Textual | Nenhum |"
 							},
 							"response": [
 								{
@@ -7982,37 +7982,37 @@
 	],
 	"variable": [
 		{
-			"id": "be1539ef-dffc-4de1-9c57-779d65a893ff",
+			"id": "a4d2309e-4c04-4e37-aad2-9889372b283b",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "b91a11ed-0bef-4e21-812f-0635c7aa289c",
+			"id": "81062795-468b-4500-9b3e-b3773a6caa7c",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "be4487f3-b27b-4eea-b8e2-eb06b0f60296",
+			"id": "116c2fe1-578b-4961-890e-3dda10bcde94",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "bbcdbfe0-8df5-4a76-a4a7-6215b5a545a0",
+			"id": "74f0ccae-82bc-415b-86fe-00852c50b5f9",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "823de67f-05ff-44b4-bab2-3b6e590bfaab",
+			"id": "d0a260e8-1b2b-4f00-b7ab-1090bcdabadb",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "36d17ba2-37a9-45de-a0f3-9930c5010c33",
+			"id": "fd6511bb-5ed0-408d-ba55-94ac0acaf52c",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "828ec0bd-9959-4cb4-b972-ee2ec11ac4a3",
+			"id": "08aad9ab-d13e-4b47-bbdb-0bb0dd8a619f",
 			"key": "access_token",
 			"value": ""
 		}
