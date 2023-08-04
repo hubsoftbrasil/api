@@ -565,7 +565,7 @@
 												}
 											}
 										},
-										"url": "{{url}}/api/v1/integracao/financeiro/evento_faturamento"
+										"url": "{{url}}/api/v1/integracao/cliente/contrato/adicionar_contrato"
 									},
 									"_postman_previewlanguage": "json",
 									"header": null,
@@ -7917,37 +7917,37 @@
 	],
 	"variable": [
 		{
-			"id": "5e9f4d95-4f24-4b23-addf-4958a4286133",
+			"id": "406362d8-a435-45be-8da2-1eb444d6f542",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "40f42a34-e59e-442b-9a78-acb93929aaf0",
+			"id": "9cecf986-c0d5-49e2-a0b2-59addfd8ab17",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "6a763ab9-c11a-4893-8752-04c1f46f0417",
+			"id": "dcd44bc1-364d-430b-b0a7-6133ecf312c2",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "807de969-a80f-42a0-a38f-97a4844fa486",
+			"id": "16bae556-f2a7-4d55-a1e3-f917f6cbe042",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "1c60ea9f-f22e-4360-b114-feb2d78b538c",
+			"id": "01c1205b-5b03-4533-9126-0fde35ed8ba3",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "f8f14664-b498-41b1-b12d-81872b75ba9b",
+			"id": "65c22aca-f602-4376-8ba4-e03bf6443b7f",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "c00ba369-88e3-4f2d-a6d0-bbebc4cea0db",
+			"id": "a0394ab1-486c-4e38-8d15-cc805024f021",
 			"key": "access_token",
 			"value": ""
 		}
