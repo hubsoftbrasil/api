@@ -592,7 +592,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"id_cliente_servico_contrato\": 9308,\n    \"motivo\": \"SERÁ ADICIONADO OUTRO CONTRATO\"\n}",
+									"raw": "{\n    \"id_cliente_servico_contrato\": 9308,\n    \"motivo\": \"SERÁ ADICIONADO OUTRO CONTRATO PARA O CLIENTE\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -7982,37 +7982,37 @@
 	],
 	"variable": [
 		{
-			"id": "83d56ee4-3143-4278-99fb-1c8d66fbfd2c",
+			"id": "fbebe131-39e2-4867-b000-0fbc8f497500",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "fc2dc745-a58e-4c7f-bfd1-62e33938cf70",
+			"id": "45cb2b25-ebd6-4908-a721-601c4c27149d",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "bd8c2496-8fb5-44c1-b1db-c7bc9ccf3942",
+			"id": "a334f65e-9ede-467c-9b76-c772ebf730cf",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "da998dcf-99e7-43a4-90e2-ceaed70ac082",
+			"id": "8fe4009d-c9de-4fed-982d-839601678278",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "b25fc409-2638-4b5b-b08b-53599837457b",
+			"id": "d7953eaf-76e3-46e6-b46e-f55b016a1ba5",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "ba602e63-112d-428f-baad-303acd10a5aa",
+			"id": "643210c3-d76d-4ca4-a738-ad0eba8b3930",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "641e41af-a32d-4222-8530-d7e93f4b6f42",
+			"id": "ca3e69ab-c7c1-4f3b-846a-466375cc91ed",
 			"key": "access_token",
 			"value": ""
 		}
