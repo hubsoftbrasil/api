@@ -558,7 +558,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n   \"id_cliente_servico\":13579,\n   \"id_tipo_servico\":2,\n   \"descricao\":\"Acréscimo Ref Compra de Produto ABC\",\n   \"parcelado\":false,\n   \"proximo_faturamento\":true,\n   \"tipo\":\"acrescimo\",\n   \"valor\":10.3\n}",
+											"raw": "{\n    \"id_cliente_servico\": 18950,\n    \"id_contrato\": 10,\n    \"id_empresa\": 3,\n    \"autorizacao_nome\": \"BIANCA COUTO\",\n    \"autorizacao_cpf\": \"39415497076\",\n    \"informacao_adicional\": \"CONTRATO FOI GRAVADO\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -7982,37 +7982,37 @@
 	],
 	"variable": [
 		{
-			"id": "fbebe131-39e2-4867-b000-0fbc8f497500",
+			"id": "84487ce2-6c8e-4832-9101-fe6c016d30ca",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "45cb2b25-ebd6-4908-a721-601c4c27149d",
+			"id": "676e40b3-5d84-44a7-84e1-2f507c011887",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "a334f65e-9ede-467c-9b76-c772ebf730cf",
+			"id": "3d1b3e5f-7940-4a5b-b2d9-b0ebc6344ba0",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "8fe4009d-c9de-4fed-982d-839601678278",
+			"id": "8698b23e-6252-4ead-94c7-445c9c6bddef",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "d7953eaf-76e3-46e6-b46e-f55b016a1ba5",
+			"id": "d3483cc0-bc1d-46bb-acdb-248e9a659fc4",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "643210c3-d76d-4ca4-a738-ad0eba8b3930",
+			"id": "92063ab2-4465-4c6e-8845-2bc7c11f5116",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "ca3e69ab-c7c1-4f3b-846a-466375cc91ed",
+			"id": "97e26926-e16a-44c6-ad2b-0739c4f6e612",
 			"key": "access_token",
 			"value": ""
 		}
