@@ -630,13 +630,13 @@
 												}
 											}
 										},
-										"url": "{{url}}/api/v1/integracao/cliente/contrato/adicionar_contrato"
+										"url": "{{url}}/api/v1/integracao/cliente/contrato/remover_contrato"
 									},
 									"_postman_previewlanguage": "json",
 									"header": null,
 									"cookie": [],
 									"responseTime": null,
-									"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Contrato adicionado com sucesso para este Serviço\",\r\n    \"cliente_servico_contrato\": {\r\n        \"id_cliente_servico_contrato\": 9320,\r\n        \"id_cliente_servico\": 18950,\r\n        \"id_contrato\": 10,\r\n        \"validade\": 12,\r\n        \"numero_contrato\": 6432,\r\n        \"id_empresa\": 3,\r\n        \"autorizacao_nome\": \"BIANCA COUTO\",\r\n        \"autorizacao_cpf\": \"12704685614\",\r\n        \"autorizacao_rg\": \"MG-1904960\",\r\n        \"informacao_adicional\": \"CONTRATO ADICIONADO VIA API\",\r\n        \"data_cadastro_br\": \"04/08/2023 13:41\",\r\n        \"contrato\": {\r\n            \"id_contrato\": 10,\r\n            \"descricao\": \"TERMO DE CONTRATAÇÃO E AUTORIZAÇÃO DE DÉBITOS EQUIPAMENTO EM COMODATO(JANAUBA) \",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null\r\n        },\r\n        \"empresa\": {\r\n            \"id_empresa\": 3,\r\n            \"display\": \"TELECOM E HARDWARE LTDA (CNPJ: 09.613.622/0001-60)\"\r\n        },\r\n        \"cliente_servico\": {\r\n            \"id_cliente_servico\": 18950,\r\n            \"display\": \"(5) 1.5-MBPS-PROMOCIONAL-WIRELESS-2018/09 COELHO\",\r\n            \"cliente\": {\r\n                \"id_cliente\": 25246,\r\n                \"display\": \"(2082) BORGES SILVA\"\r\n            }\r\n        }\r\n    }\r\n}"
+									"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Contrato inativado com sucesso\",\r\n    \"cliente_servico_contrato\": {\r\n        \"id_cliente_servico_contrato\": 9308,\r\n        \"id_cliente_servico\": 18950,\r\n        \"id_contrato\": 77,\r\n        \"validade\": 12,\r\n        \"numero_contrato\": 6421,\r\n        \"id_empresa\": 14,\r\n        \"deleted_at_br\": \"04/08/2023 14:26:42\",\r\n        \"contrato\": {\r\n            \"id_contrato\": 77,\r\n            \"descricao\": \"-Ápice - Contrato Cliente Rádio\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null\r\n        },\r\n        \"empresa\": {\r\n            \"id_empresa\": 14,\r\n            \"display\": \"COMUNICAÇÕES LTDA (CNPJ: 24.605.227/0001-29)\"\r\n        },\r\n        \"cliente_servico\": {\r\n            \"id_cliente_servico\": 18950,\r\n            \"display\": \"(5) 1.5-MBPS-PROMOCIONAL-WIRELESS-2018/09 COELHO\",\r\n            \"cliente\": {\r\n                \"id_cliente\": 25246,\r\n                \"display\": \"(2082) BORGES SILVA\"\r\n            }\r\n        }\r\n    }\r\n}"
 								}
 							]
 						}
@@ -7982,37 +7982,37 @@
 	],
 	"variable": [
 		{
-			"id": "2116fc57-2539-4bdb-a227-45055c5eac2c",
+			"id": "be1539ef-dffc-4de1-9c57-779d65a893ff",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "a1eda83a-d740-46c6-b9e1-2dc2678dc4a6",
+			"id": "b91a11ed-0bef-4e21-812f-0635c7aa289c",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "8c48c63b-b1a1-4bfb-91d2-1cc65dfdb140",
+			"id": "be4487f3-b27b-4eea-b8e2-eb06b0f60296",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "e1001d7a-9c1f-4fdf-bfb9-d475713e28d7",
+			"id": "bbcdbfe0-8df5-4a76-a4a7-6215b5a545a0",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "c3fe2a65-c027-4939-a43e-4d76c9c2db5f",
+			"id": "823de67f-05ff-44b4-bab2-3b6e590bfaab",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "9c4f5bab-8217-4aca-9551-14b9def9cbee",
+			"id": "36d17ba2-37a9-45de-a0f3-9930c5010c33",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "f50b5013-730a-4796-b9d7-9f3457ed8e5c",
+			"id": "828ec0bd-9959-4cb4-b972-ee2ec11ac4a3",
 			"key": "access_token",
 			"value": ""
 		}
