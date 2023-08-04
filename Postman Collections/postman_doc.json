@@ -1234,20 +1234,7 @@
 				},
 				{
 					"name": "Contrato",
-					"item": [
-						{
-							"name": "New Request",
-							"id": "bb794d5e-e9c9-4cf0-86a5-9c9417aaaf6b",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": []
-							},
-							"response": []
-						}
-					],
+					"item": [],
 					"id": "1dbc4e54-9caf-4db2-bec6-e9b30dc12a54"
 				},
 				{
@@ -7864,37 +7851,37 @@
 	],
 	"variable": [
 		{
-			"id": "7392bc9a-dd9e-430a-9d81-965e8cbaabdf",
+			"id": "e310e4a2-1a7f-4077-8d9c-31dd4797bd95",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "faa21c42-c6ca-42fc-b965-f0d6bcd2d069",
+			"id": "74ef0181-5a63-4f13-8104-99ceb0e33c10",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "7f19c087-3b01-407d-b0fa-e8041e82d851",
+			"id": "8b5dc1de-64f5-4601-b99f-d0495a532652",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "73c55b8b-b28f-454e-ba14-46a7fb47b5a5",
+			"id": "1b9ffdec-21e5-4f6e-8367-621535b54052",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "44a7fe76-c2c4-42bb-9883-3b85209c899d",
+			"id": "2e034a7c-a125-47ff-b12c-2423f7cf529f",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "85100074-a9b9-4c89-8334-d7a09315abb0",
+			"id": "062741c5-28ac-4926-9b7e-3fe984b5bf9f",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "5dd57d29-5370-4525-a4e9-991c64212601",
+			"id": "e6fc9458-8ef8-4558-a1c2-c6218668d578",
 			"key": "access_token",
 			"value": ""
 		}
