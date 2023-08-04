@@ -508,6 +508,77 @@
 					"id": "fdc03940-7916-487f-9295-8eb86433ba2e"
 				},
 				{
+					"name": "Contrato",
+					"item": [
+						{
+							"name": "Adicionar",
+							"id": "db580897-ad72-47fd-a71e-4402cb9c2362",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"description": "Bearer Token obtido na autenticação"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id_cliente_servico\": 18950,\n    \"id_contrato\": 10,\n    \"id_empresa\": 3,\n    \"autorizacao_nome\": \"BIANCA COUTO\",\n    \"autorizacao_cpf\": \"39415497076\",\n    \"informacao_adicional\": \"CONTRATO FOI GRAVADO\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/v1/integracao/cliente/contrato/adicionar_contrato",
+								"description": "**POST**\n\nAtravés deste `endpoint`, será possível fazer o cadastro de contratos para o serviço do cliente.\n\n**Aviso**\n\n`IMPORTANTE`: É necessário informar o `id_cliente_servico`, o `id_contrato e o id_empresa`, eles podem retornados nas rotas Clientes > Consulta e Configuração > Modelos de Contrato e Configuração > Empresas respectivamente\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico | Identificador único do serviço do cliente | Sim |\n| id_contrato | Identificador único do modelo de contrato | Sim |\n| id_empresa | Identificador único da empresa | Sim |\n| autorizacao_nome | Nome do Reponsável Autorização | Não |\n| autorizacao_cpf | CPF do Reponsável Autorização | Não |\n| autorizacao_rg | RG do Reponsável Autorização | Não |\n| informacao_adicional | Informação Adicional do Contrato do Cliente | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico | Deve conter um número inteiro maior que 0 | Nenhum |\n| id_contrato | Deve conter um número inteiro maior que 0 | Nenhum |\n| id_empresa | Deve conter um número inteiro maior que 0 | Nenhum |\n| autorizacao_nome | Textual | Nenhum |\n| autorizacao_cpf | Textual | Nenhum |\n| autorizacao_rg | Textual | Nenhum |\n| informacao_adicional | Textual | Nenhum |"
+							},
+							"response": [
+								{
+									"id": "5cfd88c7-c9e4-4d02-a4df-bb4c38a3fc6c",
+									"name": "Cliente Servico Contrato",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n   \"id_cliente_servico\":13579,\n   \"id_tipo_servico\":2,\n   \"descricao\":\"Acréscimo Ref Compra de Produto ABC\",\n   \"parcelado\":false,\n   \"proximo_faturamento\":true,\n   \"tipo\":\"acrescimo\",\n   \"valor\":10.3\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{url}}/api/v1/integracao/financeiro/evento_faturamento"
+									},
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"1 Evento(s) de Faturamento de acréscimo cadastrados com sucesso. VALOR TOTAL: R$ 10.30\",\r\n    \"eventos_faturamento\": [\r\n        {\r\n            \"id_evento_faturamento\": 9714,\r\n            \"descricao\": \"Acréscimo Ref Compra de Produto ABC\",\r\n            \"valor\": 10.3\r\n        }\r\n    ]\r\n}"
+								}
+							]
+						}
+					],
+					"id": "1dbc4e54-9caf-4db2-bec6-e9b30dc12a54"
+				},
+				{
 					"name": "Financeiro",
 					"item": [
 						{
@@ -1231,77 +1302,6 @@
 						}
 					],
 					"id": "1ba90c81-93bd-40a5-a287-32d405268325"
-				},
-				{
-					"name": "Contrato",
-					"item": [
-						{
-							"name": "Adicionar",
-							"id": "db580897-ad72-47fd-a71e-4402cb9c2362",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "{{access_token}}",
-										"description": "Bearer Token obtido na autenticação"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"id_cliente_servico\": 18950,\n    \"id_contrato\": 10,\n    \"id_empresa\": 3,\n    \"autorizacao_nome\": \"BIANCA COUTO\",\n    \"autorizacao_cpf\": \"39415497076\",\n    \"informacao_adicional\": \"INFORMAÇÃO ADICIONAL CONTRATO\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{url}}/api/v1/integracao/cliente/contrato/adicionar_contrato",
-								"description": "**POST**\n\nAtravés deste `endpoint`, será possível fazer o cadastro de contratos para o serviço do cliente.\n\n**Aviso**\n\n`IMPORTANTE`: É necessário informar o `id_cliente_servico`, o `id_contrato e o id_empresa`, eles podem retornados nas rotas Clientes > Consulta e Configuração > Modelos de Contrato e Configuração > Empresas respectivamente\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico | Identificador único do serviço do cliente | Sim |\n| id_contrato | Identificador único do modelo de contrato | Sim |\n| id_empresa | Identificador único da empresa | Sim |\n| autorizacao_nome | Nome do Reponsável Autorização | Não |\n| autorizacao_cpf | CPF do Reponsável Autorização | Não |\n| autorizacao_rg | RG do Reponsável Autorização | Não |\n| informacao_adicional | Informação Adicional do Contrato do Cliente | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico | Deve conter um número inteiro maior que 0 | Nenhum |\n| id_contrato | Deve conter um número inteiro maior que 0 | Nenhum |\n| id_empresa | Deve conter um número inteiro maior que 0 | Nenhum |\n| autorizacao_nome | Textual | Nenhum |\n| autorizacao_cpf | Textual | Nenhum |\n| autorizacao_rg | Textual | Nenhum |\n| informacao_adicional | Textual | Nenhum |"
-							},
-							"response": [
-								{
-									"id": "5cfd88c7-c9e4-4d02-a4df-bb4c38a3fc6c",
-									"name": "Cliente Servico Contrato",
-									"originalRequest": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Authorization",
-												"value": "{{access_token}}",
-												"type": "text"
-											},
-											{
-												"key": "Content-Type",
-												"name": "Content-Type",
-												"value": "application/json",
-												"type": "text"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n   \"id_cliente_servico\":13579,\n   \"id_tipo_servico\":2,\n   \"descricao\":\"Acréscimo Ref Compra de Produto ABC\",\n   \"parcelado\":false,\n   \"proximo_faturamento\":true,\n   \"tipo\":\"acrescimo\",\n   \"valor\":10.3\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{url}}/api/v1/integracao/financeiro/evento_faturamento"
-									},
-									"_postman_previewlanguage": "json",
-									"header": null,
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"1 Evento(s) de Faturamento de acréscimo cadastrados com sucesso. VALOR TOTAL: R$ 10.30\",\r\n    \"eventos_faturamento\": [\r\n        {\r\n            \"id_evento_faturamento\": 9714,\r\n            \"descricao\": \"Acréscimo Ref Compra de Produto ABC\",\r\n            \"valor\": 10.3\r\n        }\r\n    ]\r\n}"
-								}
-							]
-						}
-					],
-					"id": "1dbc4e54-9caf-4db2-bec6-e9b30dc12a54"
 				},
 				{
 					"name": "Todos",
@@ -7917,37 +7917,37 @@
 	],
 	"variable": [
 		{
-			"id": "f39a0792-2a1c-4c86-b948-8d827e3e8c46",
+			"id": "c4006731-9109-4b4e-b78e-5b150319c87b",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "780aa88f-c2db-4c24-850b-649c111b3bd7",
+			"id": "8543d439-eacc-4d6e-9e03-341bc6df7572",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "6dcde160-59ea-4978-a638-fffb2d94feab",
+			"id": "bdef15ec-c42c-474a-80c2-4e8d6ccfca67",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "c8741261-0f4f-423d-aec5-a8052e305b37",
+			"id": "9990eef1-4e4d-4dff-a669-cc5b2bdc8941",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "bc23ae10-6952-4673-bd5e-12dd7f115e18",
+			"id": "386f95b8-d7f1-4b40-855d-94fcc0772f72",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "3f2b255c-6b92-4736-b5e7-ddd6f62e3925",
+			"id": "db25d51e-04a7-45c3-a472-bc379be86988",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "e4a10415-b3fe-472f-9a0f-411838345da5",
+			"id": "0e8c829b-056d-4f99-bf6b-f554002b07a1",
 			"key": "access_token",
 			"value": ""
 		}
