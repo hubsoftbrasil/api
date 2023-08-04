@@ -7617,7 +7617,7 @@
 							}
 						],
 						"url": "{{url}}/api/v1/integracao/configuracao/modelo_contrato",
-						"description": "Através desse `endpoint` será possível consultar os caixas finaneiros que estão cadastrados e ativos no sistema.\n\n`OBSERVAÇÃO`: O uso dessa API será muito útil para complementar a API de Liquidação de faturas, onde se faz necessário enviar obrigatóriamente o ID do Caixa Financeiro onde se deseja realizar a liquidação."
+						"description": "Através desse `endpoint` será possível consultar os modelos de contratos que estão cadastrados e ativos no sistema.\n\n`OBSERVAÇÃO`: O uso dessa API será muito útil para complementar a API de Adicionar Contratos no Cliente, onde se faz necessário enviar obrigatóriamente o ID do Contrato."
 					},
 					"response": [
 						{
@@ -7846,37 +7846,37 @@
 	],
 	"variable": [
 		{
-			"id": "723e391f-2bf3-4ca9-9de5-eec1dd1e7e2b",
+			"id": "1d41dc74-0a73-43aa-94bf-73523e31184e",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "5dd0a363-315c-4d79-9894-47ca7b6ac6bf",
+			"id": "66d8b811-78d7-46e2-9348-0a97a15831eb",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "a3bdde37-add7-4033-8171-5917d3da6143",
+			"id": "7d1b4051-c2ae-49f5-b8b6-b96ad1c689e5",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "2cc40bd3-92ec-4d13-bccf-80e0c98c24da",
+			"id": "f8093a85-3e70-4fd2-b769-b403334c0563",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "3e4cb981-fdaf-4d1e-addb-920076b1e2e6",
+			"id": "001c19b1-80e6-455e-8c3b-87fa89a47382",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "0dcf8d71-afd4-4a24-85be-d1c09280f6a0",
+			"id": "4a5665dc-3cbf-4568-9c0b-4317657b0152",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "9ca541fa-724a-4023-b1ef-7713c2faa737",
+			"id": "1493a8b1-eed5-4d63-8e18-f749b0926d2c",
 			"key": "access_token",
 			"value": ""
 		}
