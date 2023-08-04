@@ -1252,14 +1252,14 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n   \"id_cliente_servico\":13579,\n   \"id_tipo_servico\":2,\n   \"descricao\":\"Acréscimo Ref Compra de Produto ABC\",\n   \"parcelado\":false,\n   \"proximo_faturamento\":true,\n   \"tipo\":\"acrescimo\",\n   \"valor\":10.3\n}",
+									"raw": "{\n    \"id_cliente_servico\": 18950,\n    \"id_contrato\": 10,\n    \"id_empresa\": 3,\n    \"autorizacao_nome\": \"BIANCA COUTO\",\n    \"autorizacao_cpf\": \"39415497076\",\n    \"informacao_adicional\": \"INFORMAÇÃO ADICIONAL CONTRATO\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
 										}
 									}
 								},
-								"url": "{{url}}/api/v1/integracao/financeiro/evento_faturamento",
+								"url": "{{url}}/api/v1/integracao/cliente/contrato/adicionar_contrato",
 								"description": "**POST**\n\nAtravés deste `endpoint`, será possível fazer o cadastro de evento de faturamento. Pode ser cadastrado um evento de Acréscimo ou Desconto, permitindo também parcelamento.\n\n**Aviso**\n\n`IMPORTANTE`: É necessário informar o `id_cliente_servico` e o `id_tipo_servico,` ambos retornados nas rotas Clientes > Consulta e Tipo de Serviço > All respectivamente\n\n`IMPORTANTE 2:` Ao enviar a o parâmetro parcelado como true, os parâmetros `numero_total_parcelas`, `mes_primeira_parcela` e `ano_primeira_parcela` tornam-se obrigatórios\n\n`IMPORTANTE 3`: Ao enviar a o parâmetro parcelado como false, o parâmetro `proximo_faturamento` torna-se obrigatório. Caso ele seja enviado como false, os parâmetros `mes_processar` e `ano_processar` também deverão ser enviados\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico | Identificador único do serviço do cliente | Sim |\n| id_tipo_servico | Identificador único do tipo de serviço | Sim |\n| tipo | Textual (aceita os valores acrescimo e desconto). | Sim |\n| descricao | Descrição textual para o evento. | Sim |\n| valor | Campo númerico (aceita valor decimal separado por ponto. Ex.: 10.2). | Sim |\n| parcelado | Boolean para identificar se o evento é parcelado ou não | Sim |\n| numero_total_parcelas | Valor maior que 0 para identificar o total de parcelas | Sim (Se parcelado = true) |\n| mes_primeira_parcela | Valor inteiro que representa o mês do ano (Dezembro = 12). Utilizado para verificar o mês da primeira parcela | Sim (Se parcelado = true) |\n| ano_primeira_parcela | Valor inteiro que representa o ano. Utilizado para verificar o ano da primeira parcela | Sim (Se parcelado = true) |\n| proximo_faturamento | Boolean para identificar se o evento será lançado no próximo faturamento | Sim (Se parcelado = false) |\n| mes_processar | Valor inteiro que representa o mês do ano (Dezembro = 12). Utilizado para verificar o mês de processamento do faturamento | Sim (Se proximo_faturamento = false) |\n| ano_processar | Valor inteiro que representa o ano. Utilizado para verificar o ano de processamento do faturamento | Sim (Se proximo_faturamento = false) |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico | Deve conter um número inteiro maior que 0 | Nenhum |\n| id_tipo_servico | Deve conter um número inteiro maior que 0 | Nenhum |\n| tipo | Textual | Nenhum |\n| descricao | Textual | Nenhum |\n| valor | Número Inteiro/Decimal | Nenhum |\n| parcelado | Boolean | Nenhum |\n| numero_total_parcelas | Número Inteiro | Nenhum |\n| mes_primeira_parcela | Número Inteiro (maior que 0 e menor que 13) | Nenhum |\n| ano_primeira_parcela | Número Inteiro | Nenhum |\n| proximo_faturamento | Boolean | Nenhum |\n| mes_processar | Número Inteiro (maior que 0 e menor que 13) | Nenhum |\n| ano_processar | Número Inteiro | Nenhum |"
 							},
 							"response": [
@@ -7917,37 +7917,37 @@
 	],
 	"variable": [
 		{
-			"id": "2a34e142-ad37-4076-b698-0219eec1f020",
+			"id": "ac805ecc-e856-4035-a931-74d6e9edf9ac",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "3b00fcac-ddb1-4cc7-9acf-3c19a37de779",
+			"id": "7c8c0c6b-cb21-49a8-a913-3d03a9378cbb",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "2c834598-510c-4220-8b50-9081385ec93a",
+			"id": "9f517885-f2d6-428a-8248-e1ed0b12586e",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "f89485c7-d284-4146-91d8-ea6297d1b294",
+			"id": "3dff43d7-c9bf-4df9-9f44-9fbafe0bcc3a",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "df73503b-675f-4527-9662-f819e9636798",
+			"id": "09482627-6f52-446a-8531-a62642eed444",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "de766c3a-1c84-4e6f-8873-30ddebdec491",
+			"id": "4c3a2555-57c8-4d3f-86ae-da1778f51f5d",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "c4d3771a-021e-4047-841f-9179752968b9",
+			"id": "05c9291f-09f6-4ff9-a310-424241957ad9",
 			"key": "access_token",
 			"value": ""
 		}
