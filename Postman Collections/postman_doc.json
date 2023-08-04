@@ -7738,7 +7738,7 @@
 					]
 				},
 				{
-					"name": "Modelos de Contratos",
+					"name": "Modelos de Contrato",
 					"id": "1042337a-ce78-4981-86df-a46b616352bf",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -7982,37 +7982,37 @@
 	],
 	"variable": [
 		{
-			"id": "4bab2807-d936-4a60-94a4-03cc335ac01f",
+			"id": "df0e11ff-b53d-4039-a696-04a1aff5a42a",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "7a9de96d-1b1e-472a-a64d-79f1a3ccd5dd",
+			"id": "74c0588f-5fb5-48e8-b3e0-42c3cb0a6a08",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "8b096045-9af6-4a28-8661-c3794349e7a2",
+			"id": "ee71dad4-4fb2-4080-add7-804d46eb4370",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "24b56ec5-d800-466d-95b3-e6e6e86458fa",
+			"id": "0dc76d3e-041a-450d-b762-5b92d666a546",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "027182b0-3dd7-493e-977e-bbda778882c5",
+			"id": "f23d2cbc-cc6e-4dc9-a7f2-5412ec8da675",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "a3b43526-c40b-408d-a4f4-9451e34c3a5f",
+			"id": "1ce0fbc2-e75c-425e-87ab-9d86477d2d9f",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "b284bd2b-3123-4440-b2fe-74a82d369dcc",
+			"id": "f83f004d-4a93-4768-a814-bd3fcc6aaee9",
 			"key": "access_token",
 			"value": ""
 		}
