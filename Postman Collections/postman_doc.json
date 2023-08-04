@@ -600,7 +600,7 @@
 									}
 								},
 								"url": "{{url}}/api/v1/integracao/cliente/contrato/remover_contrato",
-								"description": "**POST**\n\nAtravés deste `endpoint`, será possível remover os contratos do o serviço do cliente.\n\n**Aviso**\n\n`IMPORTANTE`: É necessário informar o `id_cliente_servico_contrato`, eles podem retornados nas rotas Clientes > Consulta.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico_contrato | Identificador único do serviço do cliente | Sim |\n| motivo | Identificador único do modelo de contrato | Sim |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico_contrato | Deve conter um número inteiro maior que 0 | Nenhum |\n| autorizacao_cpf | Textual | Nenhum |"
+								"description": "**POST**\n\nAtravés deste `endpoint`, será possível remover os contratos do o serviço do cliente.\n\n**Aviso**\n\n`IMPORTANTE`: É necessário informar o `id_cliente_servico_contrato`, eles podem retornados nas rotas Clientes > Consulta.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico_contrato | Identificador único do contrato do serviço do cliente | Sim |\n| motivo | Descrição textual do motivo da remoção do contrato. | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico_contrato | Deve conter um número inteiro maior que 0 | Nenhum |\n| motivo | Textual | Nenhum |"
 							},
 							"response": [
 								{
@@ -7982,37 +7982,37 @@
 	],
 	"variable": [
 		{
-			"id": "fed0cab6-32f4-4f45-9e3a-fc1a7dd03954",
+			"id": "83d56ee4-3143-4278-99fb-1c8d66fbfd2c",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "86a381be-3844-4001-9dd0-a2ea8897b255",
+			"id": "fc2dc745-a58e-4c7f-bfd1-62e33938cf70",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "e492dfae-ec3f-46bf-af69-929bae38c6de",
+			"id": "bd8c2496-8fb5-44c1-b1db-c7bc9ccf3942",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "1ad1c615-77c1-44d4-ad99-f5bb75904fef",
+			"id": "da998dcf-99e7-43a4-90e2-ceaed70ac082",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "23a139c2-6b94-4915-82d0-2e3f8c4deb4d",
+			"id": "b25fc409-2638-4b5b-b08b-53599837457b",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "f3654405-8ece-4db2-821a-b32ea4b35ddc",
+			"id": "ba602e63-112d-428f-baad-303acd10a5aa",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "1a7c09fc-b32f-4589-b703-5af50050ed0b",
+			"id": "641e41af-a32d-4222-8530-d7e93f4b6f42",
 			"key": "access_token",
 			"value": ""
 		}
