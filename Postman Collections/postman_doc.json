@@ -639,6 +639,71 @@
 									"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Contrato inativado com sucesso\",\r\n    \"cliente_servico_contrato\": {\r\n        \"id_cliente_servico_contrato\": 9308,\r\n        \"id_cliente_servico\": 18950,\r\n        \"id_contrato\": 77,\r\n        \"validade\": 12,\r\n        \"numero_contrato\": 6421,\r\n        \"id_empresa\": 14,\r\n        \"deleted_at_br\": \"04/08/2023 14:26:42\",\r\n        \"contrato\": {\r\n            \"id_contrato\": 77,\r\n            \"descricao\": \"-Ápice - Contrato Cliente Rádio\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null\r\n        },\r\n        \"empresa\": {\r\n            \"id_empresa\": 14,\r\n            \"display\": \"COMUNICAÇÕES LTDA (CNPJ: 24.605.227/0001-29)\"\r\n        },\r\n        \"cliente_servico\": {\r\n            \"id_cliente_servico\": 18950,\r\n            \"display\": \"(5) 1.5-MBPS-PROMOCIONAL-WIRELESS-2018/09 COELHO\",\r\n            \"cliente\": {\r\n                \"id_cliente\": 25246,\r\n                \"display\": \"(2082) BORGES SILVA\"\r\n            }\r\n        }\r\n    }\r\n}"
 								}
 							]
+						},
+						{
+							"name": "Marcar como Aceito",
+							"id": "bc97e6b7-673a-4c6b-ad3a-c5fd522cceaa",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"description": "Bearer Token obtido na autenticação"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id_cliente_servico_contrato\": 9308,\n    \"motivo\": \"SERÁ ADICIONADO OUTRO CONTRATO PARA O CLIENTE\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/v1/integracao/cliente/contrato/remover_contrato",
+								"description": "**POST**\n\nAtravés deste `endpoint`, será possível remover os contratos do o serviço do cliente.\n\n**Aviso**\n\n`IMPORTANTE`: É necessário informar o `id_cliente_servico_contrato`, eles podem retornados nas rotas Clientes > Consulta.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico_contrato | Identificador único do contrato do serviço do cliente | Sim |\n| motivo | Descrição textual do motivo da remoção do contrato. | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico_contrato | Deve conter um número inteiro maior que 0 | Nenhum |\n| motivo | Textual | Nenhum |"
+							},
+							"response": [
+								{
+									"id": "5614d7e0-ee09-4210-929c-090de21a2e76",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id_cliente_servico_contrato\": 9308,\n    \"motivo\": \"SERÁ ADICIONADO OUTRO CONTRATO PARA O CLIENTE\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{url}}/api/v1/integracao/cliente/contrato/remover_contrato"
+									},
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Contrato inativado com sucesso\",\r\n    \"cliente_servico_contrato\": {\r\n        \"id_cliente_servico_contrato\": 9308,\r\n        \"id_cliente_servico\": 18950,\r\n        \"id_contrato\": 77,\r\n        \"validade\": 12,\r\n        \"numero_contrato\": 6421,\r\n        \"id_empresa\": 14,\r\n        \"deleted_at_br\": \"04/08/2023 14:26:42\",\r\n        \"contrato\": {\r\n            \"id_contrato\": 77,\r\n            \"descricao\": \"-Ápice - Contrato Cliente Rádio\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null\r\n        },\r\n        \"empresa\": {\r\n            \"id_empresa\": 14,\r\n            \"display\": \"COMUNICAÇÕES LTDA (CNPJ: 24.605.227/0001-29)\"\r\n        },\r\n        \"cliente_servico\": {\r\n            \"id_cliente_servico\": 18950,\r\n            \"display\": \"(5) 1.5-MBPS-PROMOCIONAL-WIRELESS-2018/09 COELHO\",\r\n            \"cliente\": {\r\n                \"id_cliente\": 25246,\r\n                \"display\": \"(2082) BORGES SILVA\"\r\n            }\r\n        }\r\n    }\r\n}"
+								}
+							]
 						}
 					],
 					"id": "1dbc4e54-9caf-4db2-bec6-e9b30dc12a54"
@@ -8023,37 +8088,37 @@
 	],
 	"variable": [
 		{
-			"id": "c280d33d-caa2-4672-9609-a400ca5be124",
+			"id": "e38d1337-1d61-4c0a-ad89-48d4860f48d2",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "c30f5145-4674-4e2c-ba42-011ef2468162",
+			"id": "b5eb8d20-b888-4839-928f-b57f9870046a",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "c4e75827-bde3-4e22-ae36-cf17df169e26",
+			"id": "12023954-e66b-4822-b597-0ba8624b1602",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "c8fcc222-3782-4e2b-ad00-f651f2cd4a28",
+			"id": "86f1528e-e017-4c1d-b17a-1130838759dd",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "afcfd5b2-5d07-45c7-a5c4-7e3b066fabcc",
+			"id": "c4fd23b2-abc1-467a-b83b-3a57f9f05ea2",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "3929de67-c049-49df-ac71-1230e93d1a7c",
+			"id": "f1e9587b-c5bd-49fb-b469-18c21cf12c65",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "60f9e907-e057-45f6-9068-9ba89823de6b",
+			"id": "beea272d-a8be-4355-822c-73dc8fdc469f",
 			"key": "access_token",
 			"value": ""
 		}
