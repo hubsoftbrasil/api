@@ -665,7 +665,7 @@
 									}
 								},
 								"url": "{{url}}/api/v1/integracao/cliente/contrato/aceitar_contrato",
-								"description": "**POST**\n\nAtravés deste `endpoint`, será possível marcar como aceito os contratos vinculados no serviço do cliente.\n\n**Aviso**\n\n`IMPORTANTE`: É necessário informar o(s) `ids_cliente_servico_contrato`, é necessário ser um array, pode contar somente um id ou mais, eles podem retornados nas rotas Clientes > Consulta.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| ids_cliente_servico_contrato | Identificadores único dos contrato do serviço do cliente | Sim |\n| motivo | Descrição textual do motivo da remoção do contrato. | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico_contrato | Deve conter um número inteiro maior que 0 | Nenhum |\n| motivo | Textual | Nenhum |"
+								"description": "**POST**\n\nAtravés deste `endpoint`, será possível marcar como aceito os contratos vinculados no serviço do cliente.\n\n**Aviso**\n\n`IMPORTANTE`: É necessário informar o(s) `ids_cliente_servico_contrato`, é necessário ser um array, pode contar somente um id ou mais, eles podem retornados nas rotas Clientes > Consulta.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| ids_cliente_servico_contrato | Identificadores único dos contrato do serviço do cliente | Sim |\n| data_aceito | Data do Aceite do Contrato | Sim |\n| observacao | Textual com o motivo de estar marcando aqueles contratos como aceitos | Sim |\n| hora_aceito | Hora do Aceite do Contrato | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| ids_cliente_servico_contrato | Array com os número inteiro maiores que 0 | Nenhum |\n| data_aceito | Date (YYYY-MM-DD) | Nenhum |\n| observacao | Textual | Nenhum |\n| hora_aceito | Hora (HH:MI) | 00:00 |"
 							},
 							"response": [
 								{
@@ -8088,37 +8088,37 @@
 	],
 	"variable": [
 		{
-			"id": "9ab37220-c853-4b39-be6d-ba8e410274c8",
+			"id": "d8c5e155-aa25-4623-b5d3-47f52f5c758a",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "c2a67d2f-63a4-48ae-b98d-cf465cc09817",
+			"id": "686f31ef-5b65-4936-a7ed-870df16aab3d",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "26816da4-8d87-49e2-8997-d103fd43131c",
+			"id": "ed76b95d-fd70-4e0e-aeac-9ca58ade9f4a",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "05ce5ecc-c5df-4a50-ac20-5e833afe9838",
+			"id": "69d28281-cf7c-43c7-975b-f365aefd8671",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "45f156ae-6724-45e2-a4ff-c688ba3da62a",
+			"id": "35899fd2-2875-4779-9b0a-0c7cdbb304a6",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "5492c3ae-bd74-4d27-9498-077129c2f98e",
+			"id": "9efa21e2-f1f3-4b5b-9d31-eaf66673a579",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "67652e15-5e87-44c1-9351-0ef6f7941a52",
+			"id": "bca3ce78-4ac4-4053-95e2-08409e03ef41",
 			"key": "access_token",
 			"value": ""
 		}
