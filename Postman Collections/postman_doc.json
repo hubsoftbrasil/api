@@ -665,7 +665,7 @@
 									}
 								},
 								"url": "{{url}}/api/v1/integracao/cliente/contrato/aceitar_contrato",
-								"description": "**POST**\n\nAtravés deste `endpoint`, será possível marcar como aceito os contratos vinculados no serviço do cliente.\n\n**Aviso**\n\n`IMPORTANTE`: É necessário informar o `id_cliente_servico_contrato`, eles podem retornados nas rotas Clientes > Consulta.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico_contrato | Identificador único do contrato do serviço do cliente | Sim |\n| motivo | Descrição textual do motivo da remoção do contrato. | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico_contrato | Deve conter um número inteiro maior que 0 | Nenhum |\n| motivo | Textual | Nenhum |"
+								"description": "**POST**\n\nAtravés deste `endpoint`, será possível marcar como aceito os contratos vinculados no serviço do cliente.\n\n**Aviso**\n\n`IMPORTANTE`: É necessário informar o(s) `ids_cliente_servico_contrato`, é necessário ser um array, pode contar somente um id ou mais, eles podem retornados nas rotas Clientes > Consulta.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| ids_cliente_servico_contrato | Identificadores único dos contrato do serviço do cliente | Sim |\n| motivo | Descrição textual do motivo da remoção do contrato. | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico_contrato | Deve conter um número inteiro maior que 0 | Nenhum |\n| motivo | Textual | Nenhum |"
 							},
 							"response": [
 								{
@@ -8088,37 +8088,37 @@
 	],
 	"variable": [
 		{
-			"id": "7064cdf8-316f-491b-9a7a-ff08d427ec7f",
+			"id": "6cc7657b-0a6d-411b-840e-ab1a3e78db8e",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "98838c25-4638-4ca7-846b-abac10ac2682",
+			"id": "0a309f6e-a0b2-4943-ac39-612f10081bfc",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "5d02c921-3ef0-4dd5-84b2-5bcefe606df0",
+			"id": "05129c2f-15e9-4d17-80d3-d5c6ebfaac27",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "8b2ab291-df06-467e-849d-dc6728f94a2f",
+			"id": "f6b18c0a-a56a-49f0-99f8-493426bc99ff",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "703fa381-b076-48e5-94e8-0649031121f8",
+			"id": "1ac2186d-634f-40d4-b7dd-61ac0c20e8f9",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "74cab4cd-dd21-438b-a613-1d2f77af223e",
+			"id": "1e806623-0063-4b63-b98a-c41045476e4d",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "57116e8c-0976-43fa-ba34-e27517108032",
+			"id": "26e56e0c-d710-4ba9-8270-6e3a487ac3ee",
 			"key": "access_token",
 			"value": ""
 		}
