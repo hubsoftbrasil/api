@@ -665,7 +665,7 @@
 									}
 								},
 								"url": "{{url}}/api/v1/integracao/cliente/contrato/aceitar_contrato",
-								"description": "**POST**\n\nAtravés deste `endpoint`, será possível marcar como aceito os contratos vinculados nos serviços dos clientes.\n\n**Aviso**\n\n`IMPORTANTE`: É necessário informar o(s) `ids_cliente_servico_contrato`, é necessário ser um array, pode contar somente um id ou mais, eles podem retornados nas rotas Clientes > Consulta.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| ids_cliente_servico_contrato | Identificadores único dos contrato do serviço do cliente | Sim |\n| data_aceito | Data do Aceite do Contrato | Sim |\n| observacao | Textual com o motivo de estar marcando aqueles contratos como aceitos | Sim |\n| hora_aceito | Hora do Aceite do Contrato | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| ids_cliente_servico_contrato | Array com os número inteiro maiores que 0 | Nenhum |\n| data_aceito | Date (YYYY-MM-DD) | Nenhum |\n| observacao | Textual | Nenhum |\n| hora_aceito | Hora (HH:MI) | 00:00 |"
+								"description": "**POST**\n\nAtravés deste `endpoint`, será possível marcar como aceito os contratos vinculados nos serviços dos clientes.\n\n**Aviso**\n\n`IMPORTANTE`: É necessário informar o(s) `ids_cliente_servico_contrato`, é necessário ser um array, pode contar somente um id ou mais, eles podem retornados nas rotas Clientes > Consulta.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| ids_cliente_servico_contrato | Identificadores único dos contratos dos serviços dos clientes | Sim |\n| data_aceito | Data do Aceite do Contrato | Sim |\n| observacao | Textual com o motivo de estar marcando aqueles contratos como aceitos | Sim |\n| hora_aceito | Hora do Aceite do Contrato | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| ids_cliente_servico_contrato | Array com os número inteiro maiores que 0 | Nenhum |\n| data_aceito | Date (YYYY-MM-DD) | Nenhum |\n| observacao | Textual | Nenhum |\n| hora_aceito | Hora (HH:MI) | 00:00 |"
 							},
 							"response": [
 								{
@@ -8088,37 +8088,37 @@
 	],
 	"variable": [
 		{
-			"id": "fa208367-d131-4f46-a1f3-d45a72b6d71a",
+			"id": "e113174b-370e-4ae7-968d-3c2b6ed6d04a",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "5275c5d2-c633-4c42-93ca-4d0d8f1c1171",
+			"id": "fc77c68e-6f9f-4560-aeb0-b6998e66b8e9",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "37cea0de-ef37-4535-8a99-1592db6fa0d2",
+			"id": "d8e11188-52d1-4f89-957f-400853038a05",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "8d7357cc-8e47-41f9-a42e-7683a5f95bee",
+			"id": "8b50d6c6-91b6-4655-b3b9-32b6851705cb",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "bdc83ade-041a-4b56-be42-b98c9fb30451",
+			"id": "80c2ce3b-bf30-48f3-8e7a-646749bc1475",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "9db13516-0413-4ccc-87ce-067c6a17225f",
+			"id": "f809f66c-3122-4b2c-8a94-1af07c29e081",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "ca99cb95-e981-4961-b3d6-6c6bbde13266",
+			"id": "fa2a50c0-d7f2-4542-bf0b-75fd85995c6f",
 			"key": "access_token",
 			"value": ""
 		}
