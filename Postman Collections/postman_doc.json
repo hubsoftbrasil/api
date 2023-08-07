@@ -688,20 +688,20 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"id_cliente_servico_contrato\": 9308,\n    \"motivo\": \"SERÁ ADICIONADO OUTRO CONTRATO PARA O CLIENTE\"\n}",
+											"raw": "{\n    \"ids_cliente_servico_contrato\": [9342, 9343],\n    \"data_aceito\": \"2023-08-07\",\n    \"hora_aceito\": \"14:35\",\n    \"observacao\": \"ACEITOU O CONTRATO POR LINK\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
 												}
 											}
 										},
-										"url": "{{url}}/api/v1/integracao/cliente/contrato/remover_contrato"
+										"url": "{{url}}/api/v1/integracao/cliente/contrato/aceitar_contrato"
 									},
 									"_postman_previewlanguage": "json",
 									"header": null,
 									"cookie": [],
 									"responseTime": null,
-									"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Contrato inativado com sucesso\",\r\n    \"cliente_servico_contrato\": {\r\n        \"id_cliente_servico_contrato\": 9308,\r\n        \"id_cliente_servico\": 18950,\r\n        \"id_contrato\": 77,\r\n        \"validade\": 12,\r\n        \"numero_contrato\": 6421,\r\n        \"id_empresa\": 14,\r\n        \"deleted_at_br\": \"04/08/2023 14:26:42\",\r\n        \"contrato\": {\r\n            \"id_contrato\": 77,\r\n            \"descricao\": \"-Ápice - Contrato Cliente Rádio\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null\r\n        },\r\n        \"empresa\": {\r\n            \"id_empresa\": 14,\r\n            \"display\": \"COMUNICAÇÕES LTDA (CNPJ: 24.605.227/0001-29)\"\r\n        },\r\n        \"cliente_servico\": {\r\n            \"id_cliente_servico\": 18950,\r\n            \"display\": \"(5) 1.5-MBPS-PROMOCIONAL-WIRELESS-2018/09 COELHO\",\r\n            \"cliente\": {\r\n                \"id_cliente\": 25246,\r\n                \"display\": \"(2082) BORGES SILVA\"\r\n            }\r\n        }\r\n    }\r\n}"
+									"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"2 contrato(s) foi(ram) aceito(s) com sucesso!\",\r\n    \"itens_aceito\": [\r\n        {\r\n            \"id_cliente_servico_contrato\": 9342,\r\n            \"data_aceito_br\": \"07/08/2023 14:35\",\r\n            \"aceito\": true,\r\n            \"numero_contrato\": 6452,\r\n            \"cliente_servico\": {\r\n                \"id_cliente_servico\": 18960,\r\n                \"id_cliente\": 25261,\r\n                \"display\": \"(1) 100MB-PACOTE-ADICIONAL\",\r\n                \"cliente\": {\r\n                    \"id_cliente\": 25261,\r\n                    \"display\": \"(2090) TESTE\"\r\n                }\r\n            },\r\n            \"contrato\": {\r\n                \"id_contrato\": 156,\r\n                \"descricao\": \"200 Mega s/fidelidade - conta fidelidade\"\r\n            }\r\n        },\r\n        {\r\n            \"id_cliente_servico_contrato\": 9343,\r\n            \"data_aceito_br\": \"07/08/2023 14:35\",\r\n            \"aceito\": true,\r\n            \"numero_contrato\": 6453,\r\n            \"cliente_servico\": {\r\n                \"id_cliente_servico\": 18960,\r\n                \"id_cliente\": 25261,\r\n                \"display\": \"(1) 100MB-PACOTE-ADICIONAL\",\r\n                \"cliente\": {\r\n                    \"id_cliente\": 25261,\r\n                    \"display\": \"(2090) TESTE\"\r\n                }\r\n            },\r\n            \"contrato\": {\r\n                \"id_contrato\": 48,\r\n                \"descricao\": \"CONTRATO DE PRESTAÇÃO DE SERVIÇOS \"\r\n            }\r\n        }\r\n    ]\r\n}"
 								}
 							]
 						}
@@ -8088,37 +8088,37 @@
 	],
 	"variable": [
 		{
-			"id": "e38d1337-1d61-4c0a-ad89-48d4860f48d2",
+			"id": "2d09a139-d842-4508-a7c5-2bb28246cb31",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "b5eb8d20-b888-4839-928f-b57f9870046a",
+			"id": "b8695f04-d1ee-4c99-badf-83d007b85e3f",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "12023954-e66b-4822-b597-0ba8624b1602",
+			"id": "662f2ab2-b7f7-4c0a-9987-36d4d9b1fad5",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "86f1528e-e017-4c1d-b17a-1130838759dd",
+			"id": "6bcb9783-6e99-448d-93ed-48a3cc37d77e",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "c4fd23b2-abc1-467a-b83b-3a57f9f05ea2",
+			"id": "fc7856c6-75aa-4a93-a4e7-dddcd9e74373",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "f1e9587b-c5bd-49fb-b469-18c21cf12c65",
+			"id": "ad6584e1-e198-436a-a0ac-9c1084217209",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "beea272d-a8be-4355-822c-73dc8fdc469f",
+			"id": "03a50840-869c-49f0-9ccd-984be5cd0f12",
 			"key": "access_token",
 			"value": ""
 		}
