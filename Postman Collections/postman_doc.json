@@ -683,7 +683,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"id_fatura\":\"11000\",\n    \"email_adicional\":[\n        \"email1@email.com\",\n        \"email2@email.com\"\n    ]\n}",
+											"raw": "{\n    \"id_cliente_servico\":\"18937\",\n    \"ids_cliente_servico_contrato\": [9346],\n    \"email_adicional\":[\n        \"email1@email.com\",\n        \"email2@email.com\"\n    ]\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -696,7 +696,7 @@
 									"header": null,
 									"cookie": [],
 									"responseTime": null,
-									"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"As faturas foram adicionadas para serem disparadas por e-mail. Por se tratar de um processo de envio massivo, o sistema fará o agendamento do disparo. Dentro de alguns minutos o cliente irá receber os e-mails com as faturas. OBS: Para cada fatura selecionada será enviado um e-mail\",\r\n    \"job\": {\r\n        \"tries\": 1,\r\n        \"timeout\": 172800,\r\n        \"memory\": 2048,\r\n        \"faturas\": [\r\n            {\r\n                \"id_fatura\": 50949\r\n            }\r\n        ],\r\n        \"emails\": [\r\n            {\r\n                \"id_contato\": null,\r\n                \"id_cliente\": 12025,\r\n                \"email\": \"macielrsf@gmail.com\",\r\n                \"nome\": \"MACIEL RODRIGUES\",\r\n                \"name\": \"MACIEL RODRIGUES\",\r\n                \"permite_enviar_email\": true,\r\n                \"origem\": \"cadastro_cliente\"\r\n            },\r\n            {\r\n                \"id_contato\": null,\r\n                \"id_cliente\": 12025,\r\n                \"email\": \"macielrsf@gmail.com\",\r\n                \"nome\": \"MACIEL RODRIGUES\",\r\n                \"name\": \"MACIEL RODRIGUES\",\r\n                \"permite_enviar_email\": true,\r\n                \"origem\": \"cadastro_cliente\"\r\n            },\r\n            {\r\n                \"id_contato\": 12035,\r\n                \"id_cliente\": 12025,\r\n                \"email\": \"macielrsf@gmail.com\",\r\n                \"nome\": \"MACIEL RODRIGUES\",\r\n                \"name\": \"MACIEL RODRIGUES\",\r\n                \"permite_enviar_email\": \"sim\",\r\n                \"origem\": \"contato\"\r\n            }\r\n        ],\r\n        \"connection\": null,\r\n        \"queue\": \"hubsoft-prioritario\",\r\n        \"delay\": {\r\n            \"date\": \"2019-10-07 13:39:48.000000\",\r\n            \"timezone_type\": 3,\r\n            \"timezone\": \"America/Sao_Paulo\"\r\n        }\r\n    }\r\n}"
+									"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Um total de 3 / 3 email(s) foram enviados com sucesso\",\r\n    \"emails_enviados\": [\r\n        {\r\n            \"id_cliente\": 25246,\r\n            \"id_usuario\": 1045,\r\n            \"id_usuario_envio\": 1045,\r\n            \"host\": \"smtp.mailtrap.io\",\r\n            \"email_origem\": \"b860cbd1ea1dca\",\r\n            \"email_destino\": \"sara.borges@hubsoft.com.br\",\r\n            \"tipo_envio\": \"manual\",\r\n            \"tipo_documento\": \"contrato\",\r\n            \"data_envio\": \"2023-08-09 14:42:38\",\r\n            \"enviado\": true,\r\n            \"mensagem_erro\": null,\r\n            \"assunto\": \"Contrato Digital\",\r\n            \"id_email_enviado\": 2023,\r\n            \"data_envio_br\": \"09/08/2023 14:42\",\r\n            \"data_envio_timestamp\": 1691602958000\r\n        },\r\n        {\r\n            \"id_cliente\": 25246,\r\n            \"id_usuario\": 1045,\r\n            \"id_usuario_envio\": 1045,\r\n            \"host\": \"smtp.mailtrap.io\",\r\n            \"email_origem\": \"b860cbd1ea1dca\",\r\n            \"email_destino\": \"email1@email.com\",\r\n            \"tipo_envio\": \"manual\",\r\n            \"tipo_documento\": \"contrato\",\r\n            \"data_envio\": \"2023-08-09 14:42:42\",\r\n            \"enviado\": true,\r\n            \"mensagem_erro\": null,\r\n            \"assunto\": \"Contrato Digital\",\r\n            \"id_email_enviado\": 2024,\r\n            \"data_envio_br\": \"09/08/2023 14:42\",\r\n            \"data_envio_timestamp\": 1691602962000\r\n        },\r\n        {\r\n            \"id_cliente\": 25246,\r\n            \"id_usuario\": 1045,\r\n            \"id_usuario_envio\": 1045,\r\n            \"host\": \"smtp.mailtrap.io\",\r\n            \"email_origem\": \"b860cbd1ea1dca\",\r\n            \"email_destino\": \"email2@email.com\",\r\n            \"tipo_envio\": \"manual\",\r\n            \"tipo_documento\": \"contrato\",\r\n            \"data_envio\": \"2023-08-09 14:42:46\",\r\n            \"enviado\": true,\r\n            \"mensagem_erro\": null,\r\n            \"assunto\": \"Contrato Digital\",\r\n            \"id_email_enviado\": 2025,\r\n            \"data_envio_br\": \"09/08/2023 14:42\",\r\n            \"data_envio_timestamp\": 1691602966000\r\n        }\r\n    ]\r\n}"
 								}
 							]
 						},
@@ -8148,37 +8148,37 @@
 	],
 	"variable": [
 		{
-			"id": "a140e292-1a45-4c3c-bf2c-36db9938a073",
+			"id": "5911da6d-156a-4832-90ca-b70f01f35fc4",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "030d452f-159d-4307-a034-b0fe0bbffc3c",
+			"id": "2dfea382-08a5-4d49-ade9-9b8f804e481a",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "81123601-a3a0-45d5-85df-6bf8f9ea0a91",
+			"id": "3e3e99c2-6100-4c80-a1aa-f9a4f8bb662b",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "61ee0e90-6386-4718-880e-13dd1b1da693",
+			"id": "9ba76c44-6831-48ef-b1c6-5a0b7e16f49b",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "5bc303fe-f7ce-4e87-8496-00a99d6a70e1",
+			"id": "a3f8a05f-fd42-4598-9e6d-9ba671c6ab7e",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "157b2010-fd86-4022-8b0c-f86b281221ad",
+			"id": "a8bb62db-02a0-41bc-a3a4-503c8a19c88b",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "f4712543-e75d-4cd5-ace5-f560f11a218c",
+			"id": "2defb56a-fceb-4983-b1c2-68e391d84ec1",
 			"key": "access_token",
 			"value": ""
 		}
