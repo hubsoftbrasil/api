@@ -641,6 +641,66 @@
 							]
 						},
 						{
+							"name": "Enviar por Email",
+							"id": "e0a6b1e9-c692-4ff6-bb96-2ffd74ae4746",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"description": "Bearer Token obtido na autenticação"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id_fatura\":\"11000\",\n    \"email_adicional\":[\n        \"email1@email.com\",\n        \"email2@email.com\"\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/v1/integracao/cliente/financeiro/enviar_email",
+								"description": "**POST**\n\nAtravés deste `endpoint,` será possível fazer o disparo dos contratos não aceitos do cliente por e-mail.\n\nCaso não seja passado os Podem ser passados e-mails adicionais, além dos que já estão cadastrados no sistema.\n\n**Aviso**\n\n`IMPORTANTE`: O sistema vai fazer a validação dos dados de e-mail e verificar se a `API` possui um servidor de e-mail válido configurado. Caso todas as regras sejam atendidas, o disparo do e-mail será efetuado instantaneamente, ou seja, é enviado em tempo real. Por esse motivo, o tempo de resposta da `API`, irá variar de acordo com a quantidade de e-mails que está na requisição para ser disparado.\n\n`IMPORTANTE 2`: O(s) servidor(es) de e-mails configurados no HubSoft possuem configuração de timeout entre um disparo e outro, dessa forma evita-se que o servidor seja adicionado em `BlackLists` de `SPAM`. Por esse motivo, a chamada da `API`, poderá ter um tempo de resposta diferente do comum.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_fatura | Identificador único da fatura do cliente | Sim |\n| email_adicional | Outros e-mails adicionais, podem ser enviados na requisição. | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_fatura | Deve conter um número inteiro maior que 0 | Nenhum |\n| email_adicional | Deve conter um array de strings (emails) | Nenhum |"
+							},
+							"response": [
+								{
+									"id": "ea6afd61-46e6-4a5c-955a-ea56d0b8de28",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id_fatura\":\"11000\",\n    \"email_adicional\":[\n        \"email1@email.com\",\n        \"email2@email.com\"\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{url}}/api/v1/integracao/cliente/financeiro/enviar_email"
+									},
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"As faturas foram adicionadas para serem disparadas por e-mail. Por se tratar de um processo de envio massivo, o sistema fará o agendamento do disparo. Dentro de alguns minutos o cliente irá receber os e-mails com as faturas. OBS: Para cada fatura selecionada será enviado um e-mail\",\r\n    \"job\": {\r\n        \"tries\": 1,\r\n        \"timeout\": 172800,\r\n        \"memory\": 2048,\r\n        \"faturas\": [\r\n            {\r\n                \"id_fatura\": 50949\r\n            }\r\n        ],\r\n        \"emails\": [\r\n            {\r\n                \"id_contato\": null,\r\n                \"id_cliente\": 12025,\r\n                \"email\": \"macielrsf@gmail.com\",\r\n                \"nome\": \"MACIEL RODRIGUES\",\r\n                \"name\": \"MACIEL RODRIGUES\",\r\n                \"permite_enviar_email\": true,\r\n                \"origem\": \"cadastro_cliente\"\r\n            },\r\n            {\r\n                \"id_contato\": null,\r\n                \"id_cliente\": 12025,\r\n                \"email\": \"macielrsf@gmail.com\",\r\n                \"nome\": \"MACIEL RODRIGUES\",\r\n                \"name\": \"MACIEL RODRIGUES\",\r\n                \"permite_enviar_email\": true,\r\n                \"origem\": \"cadastro_cliente\"\r\n            },\r\n            {\r\n                \"id_contato\": 12035,\r\n                \"id_cliente\": 12025,\r\n                \"email\": \"macielrsf@gmail.com\",\r\n                \"nome\": \"MACIEL RODRIGUES\",\r\n                \"name\": \"MACIEL RODRIGUES\",\r\n                \"permite_enviar_email\": \"sim\",\r\n                \"origem\": \"contato\"\r\n            }\r\n        ],\r\n        \"connection\": null,\r\n        \"queue\": \"hubsoft-prioritario\",\r\n        \"delay\": {\r\n            \"date\": \"2019-10-07 13:39:48.000000\",\r\n            \"timezone_type\": 3,\r\n            \"timezone\": \"America/Sao_Paulo\"\r\n        }\r\n    }\r\n}"
+								}
+							]
+						},
+						{
 							"name": "Marcar como Aceito",
 							"id": "bc97e6b7-673a-4c6b-ad3a-c5fd522cceaa",
 							"protocolProfileBehavior": {
@@ -702,66 +762,6 @@
 									"cookie": [],
 									"responseTime": null,
 									"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"2 contrato(s) foi(ram) aceito(s) com sucesso!\",\r\n    \"itens_aceito\": [\r\n        {\r\n            \"id_cliente_servico_contrato\": 9342,\r\n            \"data_aceito_br\": \"07/08/2023 14:35\",\r\n            \"aceito\": true,\r\n            \"numero_contrato\": 6452,\r\n            \"cliente_servico\": {\r\n                \"id_cliente_servico\": 18960,\r\n                \"id_cliente\": 25261,\r\n                \"display\": \"(1) 100MB-PACOTE-ADICIONAL\",\r\n                \"cliente\": {\r\n                    \"id_cliente\": 25261,\r\n                    \"display\": \"(2090) TESTE\"\r\n                }\r\n            },\r\n            \"contrato\": {\r\n                \"id_contrato\": 156,\r\n                \"descricao\": \"200 Mega s/fidelidade - conta fidelidade\"\r\n            }\r\n        },\r\n        {\r\n            \"id_cliente_servico_contrato\": 9343,\r\n            \"data_aceito_br\": \"07/08/2023 14:35\",\r\n            \"aceito\": true,\r\n            \"numero_contrato\": 6453,\r\n            \"cliente_servico\": {\r\n                \"id_cliente_servico\": 18960,\r\n                \"id_cliente\": 25261,\r\n                \"display\": \"(1) 100MB-PACOTE-ADICIONAL\",\r\n                \"cliente\": {\r\n                    \"id_cliente\": 25261,\r\n                    \"display\": \"(2090) TESTE\"\r\n                }\r\n            },\r\n            \"contrato\": {\r\n                \"id_contrato\": 48,\r\n                \"descricao\": \"CONTRATO DE PRESTAÇÃO DE SERVIÇOS \"\r\n            }\r\n        }\r\n    ]\r\n}"
-								}
-							]
-						},
-						{
-							"name": "Enviar por Email",
-							"id": "e0a6b1e9-c692-4ff6-bb96-2ffd74ae4746",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "{{access_token}}",
-										"description": "Bearer Token obtido na autenticação"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"id_fatura\":\"11000\",\n    \"email_adicional\":[\n        \"email1@email.com\",\n        \"email2@email.com\"\n    ]\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{url}}/api/v1/integracao/cliente/financeiro/enviar_email",
-								"description": "**POST**\n\nAtravés deste `endpoint,` será possível fazer o disparo da fatura do cliente por e-mail. Podem ser passados e-mails adicionais, além dos que já estão cadastrados no sistema.\n\n**Aviso**\n\n`IMPORTANTE`: O sistema vai fazer a validação dos dados de e-mail e verificar se a `API` possui um servidor de e-mail válido configurado. Caso todas as regras sejam atendidas, o disparo do e-mail será efetuado instantaneamente, ou seja, é enviado em tempo real. Por esse motivo, o tempo de resposta da `API`, irá variar de acordo com a quantidade de e-mails que está na requisição para ser disparado.\n\n`IMPORTANTE 2`: O(s) servidor(es) de e-mails configurados no HubSoft possuem configuração de timeout entre um disparo e outro, dessa forma evita-se que o servidor seja adicionado em `BlackLists` de `SPAM`. Por esse motivo, a chamada da `API`, poderá ter um tempo de resposta diferente do comum.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_fatura | Identificador único da fatura do cliente | Sim |\n| email_adicional | Outros e-mails adicionais, podem ser enviados na requisição. | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_fatura | Deve conter um número inteiro maior que 0 | Nenhum |\n| email_adicional | Deve conter um array de strings (emails) | Nenhum |"
-							},
-							"response": [
-								{
-									"id": "ea6afd61-46e6-4a5c-955a-ea56d0b8de28",
-									"name": "Sucesso",
-									"originalRequest": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Content-Type",
-												"name": "Content-Type",
-												"value": "application/json",
-												"type": "text"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n    \"id_fatura\":\"11000\",\n    \"email_adicional\":[\n        \"email1@email.com\",\n        \"email2@email.com\"\n    ]\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{url}}/api/v1/integracao/cliente/financeiro/enviar_email"
-									},
-									"_postman_previewlanguage": "json",
-									"header": null,
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"As faturas foram adicionadas para serem disparadas por e-mail. Por se tratar de um processo de envio massivo, o sistema fará o agendamento do disparo. Dentro de alguns minutos o cliente irá receber os e-mails com as faturas. OBS: Para cada fatura selecionada será enviado um e-mail\",\r\n    \"job\": {\r\n        \"tries\": 1,\r\n        \"timeout\": 172800,\r\n        \"memory\": 2048,\r\n        \"faturas\": [\r\n            {\r\n                \"id_fatura\": 50949\r\n            }\r\n        ],\r\n        \"emails\": [\r\n            {\r\n                \"id_contato\": null,\r\n                \"id_cliente\": 12025,\r\n                \"email\": \"macielrsf@gmail.com\",\r\n                \"nome\": \"MACIEL RODRIGUES\",\r\n                \"name\": \"MACIEL RODRIGUES\",\r\n                \"permite_enviar_email\": true,\r\n                \"origem\": \"cadastro_cliente\"\r\n            },\r\n            {\r\n                \"id_contato\": null,\r\n                \"id_cliente\": 12025,\r\n                \"email\": \"macielrsf@gmail.com\",\r\n                \"nome\": \"MACIEL RODRIGUES\",\r\n                \"name\": \"MACIEL RODRIGUES\",\r\n                \"permite_enviar_email\": true,\r\n                \"origem\": \"cadastro_cliente\"\r\n            },\r\n            {\r\n                \"id_contato\": 12035,\r\n                \"id_cliente\": 12025,\r\n                \"email\": \"macielrsf@gmail.com\",\r\n                \"nome\": \"MACIEL RODRIGUES\",\r\n                \"name\": \"MACIEL RODRIGUES\",\r\n                \"permite_enviar_email\": \"sim\",\r\n                \"origem\": \"contato\"\r\n            }\r\n        ],\r\n        \"connection\": null,\r\n        \"queue\": \"hubsoft-prioritario\",\r\n        \"delay\": {\r\n            \"date\": \"2019-10-07 13:39:48.000000\",\r\n            \"timezone_type\": 3,\r\n            \"timezone\": \"America/Sao_Paulo\"\r\n        }\r\n    }\r\n}"
 								}
 							]
 						}
@@ -8148,37 +8148,37 @@
 	],
 	"variable": [
 		{
-			"id": "fc5f36d2-6d70-4f10-a08c-84c6047f8bd6",
+			"id": "405259a7-f7ad-46b3-a23d-064dd44126f5",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "815e59eb-719f-435d-9c07-7b8f3b44fbbc",
+			"id": "02948315-3f71-4907-a0db-ae0ef7d6e0bc",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "363153ad-815d-4737-a52c-6569b6aadfa5",
+			"id": "81d16d93-4218-40cf-99c2-014d0500e0af",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "8cd457a7-920b-44a0-b7a0-711f73cf09e3",
+			"id": "6a765f7a-2cd0-452b-a294-991a6eddd88d",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "89875102-222d-4344-be0b-4ec4b83d53b6",
+			"id": "1f9bd5f8-f163-4cf6-b847-9f007cf770bb",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "e3b68088-85b1-4033-a495-3500157f53b6",
+			"id": "224f2e71-eb85-49a0-92f3-b487b821fa08",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "1fb974d5-5ba9-4927-8b83-d34215303e4d",
+			"id": "88045763-d952-467a-aba6-1aa67fe009bd",
 			"key": "access_token",
 			"value": ""
 		}
