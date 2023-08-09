@@ -707,7 +707,7 @@
 								"disableBodyPruning": true
 							},
 							"request": {
-								"method": "POST",
+								"method": "PUT",
 								"header": [
 									{
 										"key": "Authorization",
@@ -8148,37 +8148,37 @@
 	],
 	"variable": [
 		{
-			"id": "5911da6d-156a-4832-90ca-b70f01f35fc4",
+			"id": "12cfbd64-ab66-4e9b-80f1-ef6e59bdeb94",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "2dfea382-08a5-4d49-ade9-9b8f804e481a",
+			"id": "1b5e8cc6-a5d5-4259-8c7f-00b45ce818c2",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "3e3e99c2-6100-4c80-a1aa-f9a4f8bb662b",
+			"id": "d0c434f4-450c-40c3-9f87-0dbb9355cf2d",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "9ba76c44-6831-48ef-b1c6-5a0b7e16f49b",
+			"id": "db2c5630-3066-4674-b8e8-b976cd330ea4",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "a3f8a05f-fd42-4598-9e6d-9ba671c6ab7e",
+			"id": "87c4e403-8c8a-41fe-832a-8ed30eb5041d",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "a8bb62db-02a0-41bc-a3a4-503c8a19c88b",
+			"id": "60b7bf70-7acf-4508-a469-f5281fc1f475",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "2defb56a-fceb-4983-b1c2-68e391d84ec1",
+			"id": "028d7387-34cb-403c-be29-e1e282074b43",
 			"key": "access_token",
 			"value": ""
 		}
