@@ -737,14 +737,6 @@
 										"contrato",
 										":id_cliente_servico_contrato"
 									],
-									"query": [
-										{
-											"key": "",
-											"value": null,
-											"type": "text",
-											"disabled": true
-										}
-									],
 									"variable": [
 										{
 											"key": "id_cliente_servico_contrato",
@@ -8176,37 +8168,37 @@
 	],
 	"variable": [
 		{
-			"id": "10f638de-a00f-45f9-9fad-2546fd57ca0e",
+			"id": "276ef77b-55bc-423c-b1e7-95900fb3facd",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "d2798ecf-dd85-4340-9543-da5fe20eabb7",
+			"id": "5f9021d7-5cb4-4756-9362-5cbe479087dc",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "965610ba-e5a6-4cf4-922a-9aecf54a3ee4",
+			"id": "79cd1de9-a1c9-4dbb-addc-0d89dc0410ca",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "731801b4-17e6-45ae-b0ee-b47dcd923807",
+			"id": "c69ed81a-dab0-4650-b807-0c4ecc0d4334",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "20be774f-767a-414f-9be5-58eefa403f54",
+			"id": "51622cdf-f0fe-4d92-8759-1dc215312035",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "bbce5dad-caa5-4a6d-a90a-a372cface8b4",
+			"id": "6e538637-fd91-43b6-9cb9-877d5ed025ec",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "b47fb8ed-038c-486e-aec2-6e022e5001aa",
+			"id": "c70ae067-bc35-4f7f-8eaa-672032c4c674",
 			"key": "access_token",
 			"value": ""
 		}
