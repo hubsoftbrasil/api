@@ -704,6 +704,71 @@
 									"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"2 contrato(s) foi(ram) aceito(s) com sucesso!\",\r\n    \"itens_aceito\": [\r\n        {\r\n            \"id_cliente_servico_contrato\": 9342,\r\n            \"data_aceito_br\": \"07/08/2023 14:35\",\r\n            \"aceito\": true,\r\n            \"numero_contrato\": 6452,\r\n            \"cliente_servico\": {\r\n                \"id_cliente_servico\": 18960,\r\n                \"id_cliente\": 25261,\r\n                \"display\": \"(1) 100MB-PACOTE-ADICIONAL\",\r\n                \"cliente\": {\r\n                    \"id_cliente\": 25261,\r\n                    \"display\": \"(2090) TESTE\"\r\n                }\r\n            },\r\n            \"contrato\": {\r\n                \"id_contrato\": 156,\r\n                \"descricao\": \"200 Mega s/fidelidade - conta fidelidade\"\r\n            }\r\n        },\r\n        {\r\n            \"id_cliente_servico_contrato\": 9343,\r\n            \"data_aceito_br\": \"07/08/2023 14:35\",\r\n            \"aceito\": true,\r\n            \"numero_contrato\": 6453,\r\n            \"cliente_servico\": {\r\n                \"id_cliente_servico\": 18960,\r\n                \"id_cliente\": 25261,\r\n                \"display\": \"(1) 100MB-PACOTE-ADICIONAL\",\r\n                \"cliente\": {\r\n                    \"id_cliente\": 25261,\r\n                    \"display\": \"(2090) TESTE\"\r\n                }\r\n            },\r\n            \"contrato\": {\r\n                \"id_contrato\": 48,\r\n                \"descricao\": \"CONTRATO DE PRESTAÇÃO DE SERVIÇOS \"\r\n            }\r\n        }\r\n    ]\r\n}"
 								}
 							]
+						},
+						{
+							"name": "Enviar por Email",
+							"id": "e8dce308-3567-438c-ba8e-fb3cf09c12bc",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"description": "Bearer Token obtido na autenticação"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"ids_cliente_servico_contrato\": [9342, 9343],\n    \"data_aceito\": \"2023-08-07\",\n    \"hora_aceito\": \"14:35\",\n    \"observacao\": \"ACEITOU O CONTRATO POR LINK\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/v1/integracao/cliente/contrato/aceitar_contrato",
+								"description": "**POST**\n\nAtravés deste `endpoint`, será possível marcar como aceito os contratos vinculados nos serviços dos clientes.\n\n**Aviso**\n\n`IMPORTANTE`: É necessário informar o(s) `ids_cliente_servico_contrato`, é necessário ser um array, pode contar somente um id ou mais, eles podem retornados nas rotas Clientes > Consulta.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| ids_cliente_servico_contrato | Identificadores único dos contratos dos serviços dos clientes | Sim |\n| data_aceito | Data do Aceite do Contrato | Sim |\n| observacao | Textual com o motivo de estar marcando aqueles contratos como aceitos | Sim |\n| hora_aceito | Hora do Aceite do Contrato | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| ids_cliente_servico_contrato | Array com os número inteiro maiores que 0. ( \\[1234, 456\\] ) | Nenhum |\n| data_aceito | Date (YYYY-MM-DD) | Nenhum |\n| observacao | Textual | Nenhum |\n| hora_aceito | Hora (HH:MI) | 00:00 |"
+							},
+							"response": [
+								{
+									"id": "c059b6c2-df9a-469c-b8a7-e05e43ad0b23",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"ids_cliente_servico_contrato\": [9342, 9343],\n    \"data_aceito\": \"2023-08-07\",\n    \"hora_aceito\": \"14:35\",\n    \"observacao\": \"ACEITOU O CONTRATO POR LINK\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{url}}/api/v1/integracao/cliente/contrato/aceitar_contrato"
+									},
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"2 contrato(s) foi(ram) aceito(s) com sucesso!\",\r\n    \"itens_aceito\": [\r\n        {\r\n            \"id_cliente_servico_contrato\": 9342,\r\n            \"data_aceito_br\": \"07/08/2023 14:35\",\r\n            \"aceito\": true,\r\n            \"numero_contrato\": 6452,\r\n            \"cliente_servico\": {\r\n                \"id_cliente_servico\": 18960,\r\n                \"id_cliente\": 25261,\r\n                \"display\": \"(1) 100MB-PACOTE-ADICIONAL\",\r\n                \"cliente\": {\r\n                    \"id_cliente\": 25261,\r\n                    \"display\": \"(2090) TESTE\"\r\n                }\r\n            },\r\n            \"contrato\": {\r\n                \"id_contrato\": 156,\r\n                \"descricao\": \"200 Mega s/fidelidade - conta fidelidade\"\r\n            }\r\n        },\r\n        {\r\n            \"id_cliente_servico_contrato\": 9343,\r\n            \"data_aceito_br\": \"07/08/2023 14:35\",\r\n            \"aceito\": true,\r\n            \"numero_contrato\": 6453,\r\n            \"cliente_servico\": {\r\n                \"id_cliente_servico\": 18960,\r\n                \"id_cliente\": 25261,\r\n                \"display\": \"(1) 100MB-PACOTE-ADICIONAL\",\r\n                \"cliente\": {\r\n                    \"id_cliente\": 25261,\r\n                    \"display\": \"(2090) TESTE\"\r\n                }\r\n            },\r\n            \"contrato\": {\r\n                \"id_contrato\": 48,\r\n                \"descricao\": \"CONTRATO DE PRESTAÇÃO DE SERVIÇOS \"\r\n            }\r\n        }\r\n    ]\r\n}"
+								}
+							]
 						}
 					],
 					"id": "1dbc4e54-9caf-4db2-bec6-e9b30dc12a54"
@@ -8088,37 +8153,37 @@
 	],
 	"variable": [
 		{
-			"id": "270fd270-b449-4770-b3e1-6f71abf7936c",
+			"id": "c05e83d3-6082-454e-8b01-077df6d1172a",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "29b59e7f-d26e-473b-9cbf-25a3d21017ad",
+			"id": "744b6736-e9d0-4c66-9c91-e54e5481bffe",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "7c2cb1a6-742d-47bf-be54-76643941baa6",
+			"id": "7c64889d-3586-4abc-8208-bb546568b39d",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "e3ccd625-f607-4ee0-82f6-770742b139a4",
+			"id": "dc34a43f-ecf7-4595-8e24-8a87f190513d",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "369e5c19-30fd-4c2b-914e-0fdfd2eaec0c",
+			"id": "7a35b494-29e3-4a13-9c72-bb5895a0d744",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "2e250709-af63-4278-a91c-63525be58c97",
+			"id": "4d8fa9e2-3a89-40a4-8865-c549f12cbb13",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "11258b78-8f48-4581-aa02-9a8827a61219",
+			"id": "61dd2a3c-99e6-4a21-9f3e-9b269c825d38",
 			"key": "access_token",
 			"value": ""
 		}
