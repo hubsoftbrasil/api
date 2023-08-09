@@ -753,7 +753,7 @@
 										}
 									]
 								},
-								"description": "**POST**\n\nAtravés deste `endpoint`, será possível remover os contratos do o serviço do cliente.\n\n**Aviso**\n\n`IMPORTANTE`: É necessário informar o `id_cliente_servico_contrato`, eles podem retornados nas rotas Clientes > Consulta.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico_contrato | Identificador único do contrato do serviço do cliente | Sim |\n| motivo | Descrição textual do motivo da remoção do contrato. | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico_contrato | Deve conter um número inteiro maior que 0 | Nenhum |\n| motivo | Textual | Nenhum |"
+								"description": "No método `DELETE`, será possível remover os contratos do o serviço do cliente.\n\n**Aviso**\n\n`IMPORTANTE`: É necessário informar o `id_cliente_servico_contrato`, eles podem retornados nas rotas Clientes > Consulta.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| motivo | Descrição textual do motivo da remoção do contrato. | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| motivo | Textual | Nenhum |"
 							},
 							"response": [
 								{
@@ -8176,37 +8176,37 @@
 	],
 	"variable": [
 		{
-			"id": "4d9e1bc0-331f-4800-b480-3d22a58c3734",
+			"id": "de40cf66-efeb-4069-96b9-a1d913b3c4f1",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "e14b7b94-0918-4942-ac57-08ccd4337a5d",
+			"id": "a37d5444-d0cb-4ef1-b9f4-92d6a642301f",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "81752f0c-bd51-494e-938a-5432988248ae",
+			"id": "9e771669-f281-4dee-9a92-76fc248cba9a",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "9e83aac6-581e-4be7-9f46-6cc77a9c1dc9",
+			"id": "24fc3a92-3d48-4d55-9588-90bcd8774713",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "2414cd64-8cca-41ee-a369-2c8bf19182c6",
+			"id": "5e86e121-0b3b-43c4-9315-2b6de77bcf8e",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "78373108-9e16-4b90-9ade-c37ad32fd339",
+			"id": "b24b1196-ec7c-43da-9d1f-1eb4e99ca13d",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "c03d3e63-2ab7-4b94-8ed2-a3d8c65a6b80",
+			"id": "619412ae-b730-4665-b49e-61474758a648",
 			"key": "access_token",
 			"value": ""
 		}
