@@ -665,7 +665,7 @@
 									}
 								},
 								"url": "{{url}}/api/v1/integracao/cliente/contrato/enviar_email",
-								"description": "**POST**\n\nAtravés deste `endpoint,` será possível fazer o disparo dos contratos não aceitos do cliente por e-mail.\n\nCaso não seja passado os `IMPORTANTE` ser passados e-mails adicionais, além dos que já estão cadastrados no sistema.\n\n**Aviso**\n\n`IMPORTANTE`: O sistema vai fazer a validação dos dados de e-mail e verificar se a `API` possui um servidor de e-mail válido configurado. Caso todas as regras sejam atendidas, o disparo do e-mail será efetuado instantaneamente, ou seja, é enviado em tempo real. Por esse motivo, o tempo de resposta da `API`, irá variar de acordo com a quantidade de e-mails que está na requisição para ser disparado.\n\n`IMPORTANTE 2`: O(s) servidor(es) de e-mails configurados no HubSoft possuem configuração de timeout entre um disparo e outro, dessa forma evita-se que o servidor seja adicionado em `BlackLists` de `SPAM`. Por esse motivo, a chamada da `API`, poderá ter um tempo de resposta diferente do comum.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_fatura | Identificador único da fatura do cliente | Sim |\n| email_adicional | Outros e-mails adicionais, podem ser enviados na requisição. | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_fatura | Deve conter um número inteiro maior que 0 | Nenhum |\n| email_adicional | Deve conter um array de strings (emails) | Nenhum |"
+								"description": "**POST**\n\nAtravés deste `endpoint,` será possível fazer o disparo dos contratos não aceitos do cliente por e-mail.\n\nCaso não seja passado os `ids_cliente_servico_contrato`, será enviado todos os contratos pendentes daquele cliente servico.\n\nTambém podem ser passados e-mails adicionais, além dos que já estão cadastrados no sistema.\n\n**Aviso**\n\n`IMPORTANTE`: O sistema vai fazer a validação dos dados de e-mail e verificar se a `API` possui um servidor de e-mail válido configurado. Caso todas as regras sejam atendidas, o disparo do e-mail será efetuado instantaneamente, ou seja, é enviado em tempo real. Por esse motivo, o tempo de resposta da `API`, irá variar de acordo com a quantidade de e-mails que está na requisição para ser disparado.\n\n`IMPORTANTE 2`: O(s) servidor(es) de e-mails configurados no HubSoft possuem configuração de timeout entre um disparo e outro, dessa forma evita-se que o servidor seja adicionado em `BlackLists` de `SPAM`. Por esse motivo, a chamada da `API`, poderá ter um tempo de resposta diferente do comum.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_fatura | Identificador único da fatura do cliente | Sim |\n| email_adicional | Outros e-mails adicionais, podem ser enviados na requisição. | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_fatura | Deve conter um número inteiro maior que 0 | Nenhum |\n| email_adicional | Deve conter um array de strings (emails) | Nenhum |"
 							},
 							"response": [
 								{
@@ -8148,37 +8148,37 @@
 	],
 	"variable": [
 		{
-			"id": "1338e203-4c40-4bc3-b98c-1ad78405dc58",
+			"id": "6f8944b7-cc37-4ccd-8ef6-71ebe8a7c737",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "440a79e9-10ca-49b0-ac47-071aa09af3ca",
+			"id": "c9e606c9-8704-4790-a2ea-83928905d3ce",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "0a912247-1254-404a-8d56-a9891d016ed3",
+			"id": "3fc0ef97-00bc-4284-a97a-7d3bfd25b576",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "d149464d-8442-40db-b1a4-e79903248145",
+			"id": "6dc5b622-014d-4e54-bd15-413201032791",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "5df27d33-6081-42e7-b1d0-f71bafac5fb6",
+			"id": "f284ce81-55a0-4c5a-898a-d196db33b122",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "e90c6aeb-fce6-488a-ac0a-1ff62aa8f871",
+			"id": "f6223528-aeb6-47ec-a999-abfcdb1f1232",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "72ece9cc-729e-4667-af4b-04e9a7636cdc",
+			"id": "393f5bdf-9aaa-4c09-8b27-c9d78a59f86b",
 			"key": "access_token",
 			"value": ""
 		}
