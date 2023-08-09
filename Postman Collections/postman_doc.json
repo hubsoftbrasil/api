@@ -725,7 +725,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{url}}/api/v1/integracao/cliente/contrato/remover_contrato/:id_cliente_servico_contrato",
+									"raw": "{{url}}/api/v1/integracao/cliente/contrato/:id_cliente_servico_contrato",
 									"host": [
 										"{{url}}"
 									],
@@ -735,7 +735,6 @@
 										"integracao",
 										"cliente",
 										"contrato",
-										"remover_contrato",
 										":id_cliente_servico_contrato"
 									],
 									"query": [
@@ -8177,37 +8176,37 @@
 	],
 	"variable": [
 		{
-			"id": "06fb8a7d-cdd1-46d7-82b8-40929f143f9c",
+			"id": "4d9e1bc0-331f-4800-b480-3d22a58c3734",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "5fc658c3-e507-4035-80cf-2908d0295729",
+			"id": "e14b7b94-0918-4942-ac57-08ccd4337a5d",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "14f38cc7-28dc-43eb-9b4a-c254cc6f0da2",
+			"id": "81752f0c-bd51-494e-938a-5432988248ae",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "b9e119ca-23c9-492a-849d-e7eb996c2248",
+			"id": "9e83aac6-581e-4be7-9f46-6cc77a9c1dc9",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "9d09dda4-9f1a-49b9-9db4-9b5d6a33e901",
+			"id": "2414cd64-8cca-41ee-a369-2c8bf19182c6",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "558cf8e6-da05-4244-9358-8a78f5ee347f",
+			"id": "78373108-9e16-4b90-9ade-c37ad32fd339",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "c14edb24-5139-4b0b-8b03-32f9101120c9",
+			"id": "c03d3e63-2ab7-4b94-8ed2-a3d8c65a6b80",
 			"key": "access_token",
 			"value": ""
 		}
