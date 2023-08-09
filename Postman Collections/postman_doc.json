@@ -657,7 +657,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"id_fatura\":\"11000\",\n    \"email_adicional\":[\n        \"email1@email.com\",\n        \"email2@email.com\"\n    ]\n}",
+									"raw": "{\n    \"id_cliente_servico\":\"18937\",\n    \"ids_cliente_servico_contrato\": [9346],\n    \"email_adicional\":[\n        \"email1@email.com\",\n        \"email2@email.com\"\n    ]\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -665,7 +665,7 @@
 									}
 								},
 								"url": "{{url}}/api/v1/integracao/cliente/financeiro/enviar_email",
-								"description": "**POST**\n\nAtravés deste `endpoint,` será possível fazer o disparo dos contratos não aceitos do cliente por e-mail.\n\nCaso não seja passado os `IMPORTANTE` Podem ser passados e-mails adicionais, além dos que já estão cadastrados no sistema.\n\n**Aviso**\n\n`IMPORTANTE`: O sistema vai fazer a validação dos dados de e-mail e verificar se a `API` possui um servidor de e-mail válido configurado. Caso todas as regras sejam atendidas, o disparo do e-mail será efetuado instantaneamente, ou seja, é enviado em tempo real. Por esse motivo, o tempo de resposta da `API`, irá variar de acordo com a quantidade de e-mails que está na requisição para ser disparado.\n\n`IMPORTANTE 2`: O(s) servidor(es) de e-mails configurados no HubSoft possuem configuração de timeout entre um disparo e outro, dessa forma evita-se que o servidor seja adicionado em `BlackLists` de `SPAM`. Por esse motivo, a chamada da `API`, poderá ter um tempo de resposta diferente do comum.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_fatura | Identificador único da fatura do cliente | Sim |\n| email_adicional | Outros e-mails adicionais, podem ser enviados na requisição. | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_fatura | Deve conter um número inteiro maior que 0 | Nenhum |\n| email_adicional | Deve conter um array de strings (emails) | Nenhum |"
+								"description": "**POST**\n\nAtravés deste `endpoint,` será possível fazer o disparo dos contratos não aceitos do cliente por e-mail.\n\nCaso não seja passado os Podem ser passados e-mails adicionais, além dos que já estão cadastrados no sistema.\n\n**Aviso**\n\n`IMPORTANTE`: O sistema vai fazer a validação dos dados de e-mail e verificar se a `API` possui um servidor de e-mail válido configurado. Caso todas as regras sejam atendidas, o disparo do e-mail será efetuado instantaneamente, ou seja, é enviado em tempo real. Por esse motivo, o tempo de resposta da `API`, irá variar de acordo com a quantidade de e-mails que está na requisição para ser disparado.\n\n`IMPORTANTE 2`: O(s) servidor(es) de e-mails configurados no HubSoft possuem configuração de timeout entre um disparo e outro, dessa forma evita-se que o servidor seja adicionado em `BlackLists` de `SPAM`. Por esse motivo, a chamada da `API`, poderá ter um tempo de resposta diferente do comum.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_fatura | Identificador único da fatura do cliente | Sim |\n| email_adicional | Outros e-mails adicionais, podem ser enviados na requisição. | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_fatura | Deve conter um número inteiro maior que 0 | Nenhum |\n| email_adicional | Deve conter um array de strings (emails) | Nenhum |"
 							},
 							"response": [
 								{
@@ -8148,37 +8148,37 @@
 	],
 	"variable": [
 		{
-			"id": "d009e5c8-893a-4006-ba2b-d9394fe78763",
+			"id": "32c36455-b7e2-49c5-b493-7f4a66eb6288",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "3aaacb1a-a9c0-428a-b2fc-1dff8b34ff99",
+			"id": "1aee2cfd-e020-40e7-b182-03e4c50d0f05",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "61e2d4ae-b511-437d-b842-73001a01cf17",
+			"id": "4a61e345-be56-46b7-a980-a811709b28b4",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "f5cfab65-3f90-4fb2-a1c7-577aa867f12d",
+			"id": "6f6723f1-4a80-4441-a6a8-8676517cd71c",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "22d53703-4755-4c84-8d12-240238b3c015",
+			"id": "eef73ba4-bb49-46e8-88ef-3bd354bb745e",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "fad47864-ea6a-4c6a-afb1-02413615314f",
+			"id": "e8f65164-8eb6-4193-b0e3-b9e807a297e9",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "86e884a8-a980-4ddc-b7d6-d743e3db40cf",
+			"id": "86438a34-4832-460c-9325-9abace245795",
 			"key": "access_token",
 			"value": ""
 		}
