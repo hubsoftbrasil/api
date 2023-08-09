@@ -582,7 +582,7 @@
 								"disableBodyPruning": true
 							},
 							"request": {
-								"method": "POST",
+								"method": "DELETE",
 								"header": [
 									{
 										"key": "Authorization",
@@ -592,14 +592,43 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"id_cliente_servico_contrato\": 9308,\n    \"motivo\": \"SERÁ ADICIONADO OUTRO CONTRATO PARA O CLIENTE\"\n}",
+									"raw": "{\n    \"motivo\": \"SERÁ ADICIONADO OUTRO CONTRATO PARA O CLIENTE\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
 										}
 									}
 								},
-								"url": "{{url}}/api/v1/integracao/cliente/contrato/remover_contrato",
+								"url": {
+									"raw": "{{url}}/api/v1/integracao/cliente/contrato/remover_contrato/:id_cliente_servico_contrato",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"integracao",
+										"cliente",
+										"contrato",
+										"remover_contrato",
+										":id_cliente_servico_contrato"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"type": "text",
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"key": "id_cliente_servico_contrato",
+											"value": "integer",
+											"description": "(Integer) ID do Cliente Servico Contrato já cadastrado anteriormente"
+										}
+									]
+								},
 								"description": "**POST**\n\nAtravés deste `endpoint`, será possível remover os contratos do o serviço do cliente.\n\n**Aviso**\n\n`IMPORTANTE`: É necessário informar o `id_cliente_servico_contrato`, eles podem retornados nas rotas Clientes > Consulta.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico_contrato | Identificador único do contrato do serviço do cliente | Sim |\n| motivo | Descrição textual do motivo da remoção do contrato. | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico_contrato | Deve conter um número inteiro maior que 0 | Nenhum |\n| motivo | Textual | Nenhum |"
 							},
 							"response": [
@@ -8148,37 +8177,37 @@
 	],
 	"variable": [
 		{
-			"id": "12cfbd64-ab66-4e9b-80f1-ef6e59bdeb94",
+			"id": "e5fb0dfb-c78c-4388-85fe-09d04489dc3f",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "1b5e8cc6-a5d5-4259-8c7f-00b45ce818c2",
+			"id": "fd7975d2-7d84-4958-b1c6-0501599ece19",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "d0c434f4-450c-40c3-9f87-0dbb9355cf2d",
+			"id": "29109094-0d6e-46ab-a486-1611b8e8c3ef",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "db2c5630-3066-4674-b8e8-b976cd330ea4",
+			"id": "c74e5bdd-c4e9-47f0-978f-8e9d310e6f03",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "87c4e403-8c8a-41fe-832a-8ed30eb5041d",
+			"id": "d7b0edf5-255a-40ef-a363-5ff8359372be",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "60b7bf70-7acf-4508-a469-f5281fc1f475",
+			"id": "57b88cde-ef45-4583-be07-28b322ca98f9",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "028d7387-34cb-403c-be29-e1e282074b43",
+			"id": "d039ab86-68ea-4b27-b960-ef0e314a47f8",
 			"key": "access_token",
 			"value": ""
 		}
