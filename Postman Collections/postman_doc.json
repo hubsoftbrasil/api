@@ -753,7 +753,7 @@
 										}
 									]
 								},
-								"description": "No método `DELETE`, será possível remover os contratos do o serviço do cliente.\n\n**Aviso**\n\n`IMPORTANTE`: É necessário informar o `id_cliente_servico_contrato`, eles podem retornados nas rotas Clientes > Consulta.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| motivo | Descrição textual do motivo da remoção do contrato. | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| motivo | Textual | Nenhum |"
+								"description": "No método `DELETE`, será possível remover os contratos do o serviço do cliente.\n\n**Aviso**\n\n`IMPORTANTE`: É necessário informar na requisição o `id_cliente_servico_contrato`, eles podem retornados nas rotas Clientes > Consulta.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| motivo | Descrição textual do motivo da remoção do contrato. | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| motivo | Textual | Nenhum |"
 							},
 							"response": [
 								{
@@ -8176,37 +8176,37 @@
 	],
 	"variable": [
 		{
-			"id": "28a1e051-7797-4fd9-98e4-47b6d65a7b2f",
+			"id": "10f638de-a00f-45f9-9fad-2546fd57ca0e",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "947078cd-d479-4eb0-ac8b-1243adb9e18f",
+			"id": "d2798ecf-dd85-4340-9543-da5fe20eabb7",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "be8c9cae-fcbe-4b7d-bbef-b689ade3d6dd",
+			"id": "965610ba-e5a6-4cf4-922a-9aecf54a3ee4",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "9e256c8b-b97a-4863-9a6d-85822258651b",
+			"id": "731801b4-17e6-45ae-b0ee-b47dcd923807",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "f2dc1b38-882e-4825-8be4-c6674c9d8382",
+			"id": "20be774f-767a-414f-9be5-58eefa403f54",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "691ce103-fe7e-4f19-83bb-2a6a6ad410dc",
+			"id": "bbce5dad-caa5-4a6d-a90a-a372cface8b4",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "1699d825-cf82-453d-81be-a4d6e885d0f6",
+			"id": "b47fb8ed-038c-486e-aec2-6e022e5001aa",
 			"key": "access_token",
 			"value": ""
 		}
