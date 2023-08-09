@@ -576,100 +576,6 @@
 							]
 						},
 						{
-							"name": "Remover",
-							"id": "50f9bebc-10dd-4f4d-988c-479f5f8d1848",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "DELETE",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "{{access_token}}",
-										"description": "Bearer Token obtido na autenticação"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"motivo\": \"SERÁ ADICIONADO OUTRO CONTRATO PARA O CLIENTE\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{url}}/api/v1/integracao/cliente/contrato/remover_contrato/:id_cliente_servico_contrato",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"api",
-										"v1",
-										"integracao",
-										"cliente",
-										"contrato",
-										"remover_contrato",
-										":id_cliente_servico_contrato"
-									],
-									"query": [
-										{
-											"key": "",
-											"value": null,
-											"type": "text",
-											"disabled": true
-										}
-									],
-									"variable": [
-										{
-											"key": "id_cliente_servico_contrato",
-											"value": "integer",
-											"description": "(Integer) ID do Cliente Servico Contrato já cadastrado anteriormente"
-										}
-									]
-								},
-								"description": "**POST**\n\nAtravés deste `endpoint`, será possível remover os contratos do o serviço do cliente.\n\n**Aviso**\n\n`IMPORTANTE`: É necessário informar o `id_cliente_servico_contrato`, eles podem retornados nas rotas Clientes > Consulta.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico_contrato | Identificador único do contrato do serviço do cliente | Sim |\n| motivo | Descrição textual do motivo da remoção do contrato. | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico_contrato | Deve conter um número inteiro maior que 0 | Nenhum |\n| motivo | Textual | Nenhum |"
-							},
-							"response": [
-								{
-									"id": "07d23e43-c9ed-4885-9e41-baf4ffe50634",
-									"name": "Sucesso",
-									"originalRequest": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Authorization",
-												"value": "{{access_token}}",
-												"type": "text"
-											},
-											{
-												"key": "Content-Type",
-												"name": "Content-Type",
-												"value": "application/json",
-												"type": "text"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n    \"id_cliente_servico_contrato\": 9308,\n    \"motivo\": \"SERÁ ADICIONADO OUTRO CONTRATO PARA O CLIENTE\"\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{url}}/api/v1/integracao/cliente/contrato/remover_contrato"
-									},
-									"_postman_previewlanguage": "json",
-									"header": null,
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Contrato inativado com sucesso\",\r\n    \"cliente_servico_contrato\": {\r\n        \"id_cliente_servico_contrato\": 9308,\r\n        \"id_cliente_servico\": 18950,\r\n        \"id_contrato\": 77,\r\n        \"validade\": 12,\r\n        \"numero_contrato\": 6421,\r\n        \"id_empresa\": 14,\r\n        \"deleted_at_br\": \"04/08/2023 14:26:42\",\r\n        \"contrato\": {\r\n            \"id_contrato\": 77,\r\n            \"descricao\": \"-Ápice - Contrato Cliente Rádio\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null\r\n        },\r\n        \"empresa\": {\r\n            \"id_empresa\": 14,\r\n            \"display\": \"COMUNICAÇÕES LTDA (CNPJ: 24.605.227/0001-29)\"\r\n        },\r\n        \"cliente_servico\": {\r\n            \"id_cliente_servico\": 18950,\r\n            \"display\": \"(5) 1.5-MBPS-PROMOCIONAL-WIRELESS-2018/09 COELHO\",\r\n            \"cliente\": {\r\n                \"id_cliente\": 25246,\r\n                \"display\": \"(2082) BORGES SILVA\"\r\n            }\r\n        }\r\n    }\r\n}"
-								}
-							]
-						},
-						{
 							"name": "Enviar por Email",
 							"id": "e0a6b1e9-c692-4ff6-bb96-2ffd74ae4746",
 							"protocolProfileBehavior": {
@@ -791,6 +697,100 @@
 									"cookie": [],
 									"responseTime": null,
 									"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"2 contrato(s) foi(ram) aceito(s) com sucesso!\",\r\n    \"itens_aceito\": [\r\n        {\r\n            \"id_cliente_servico_contrato\": 9342,\r\n            \"data_aceito_br\": \"07/08/2023 14:35\",\r\n            \"aceito\": true,\r\n            \"numero_contrato\": 6452,\r\n            \"cliente_servico\": {\r\n                \"id_cliente_servico\": 18960,\r\n                \"id_cliente\": 25261,\r\n                \"display\": \"(1) 100MB-PACOTE-ADICIONAL\",\r\n                \"cliente\": {\r\n                    \"id_cliente\": 25261,\r\n                    \"display\": \"(2090) TESTE\"\r\n                }\r\n            },\r\n            \"contrato\": {\r\n                \"id_contrato\": 156,\r\n                \"descricao\": \"200 Mega s/fidelidade - conta fidelidade\"\r\n            }\r\n        },\r\n        {\r\n            \"id_cliente_servico_contrato\": 9343,\r\n            \"data_aceito_br\": \"07/08/2023 14:35\",\r\n            \"aceito\": true,\r\n            \"numero_contrato\": 6453,\r\n            \"cliente_servico\": {\r\n                \"id_cliente_servico\": 18960,\r\n                \"id_cliente\": 25261,\r\n                \"display\": \"(1) 100MB-PACOTE-ADICIONAL\",\r\n                \"cliente\": {\r\n                    \"id_cliente\": 25261,\r\n                    \"display\": \"(2090) TESTE\"\r\n                }\r\n            },\r\n            \"contrato\": {\r\n                \"id_contrato\": 48,\r\n                \"descricao\": \"CONTRATO DE PRESTAÇÃO DE SERVIÇOS \"\r\n            }\r\n        }\r\n    ]\r\n}"
+								}
+							]
+						},
+						{
+							"name": "Remover",
+							"id": "50f9bebc-10dd-4f4d-988c-479f5f8d1848",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"description": "Bearer Token obtido na autenticação"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"motivo\": \"SERÁ ADICIONADO OUTRO CONTRATO PARA O CLIENTE\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/v1/integracao/cliente/contrato/remover_contrato/:id_cliente_servico_contrato",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"integracao",
+										"cliente",
+										"contrato",
+										"remover_contrato",
+										":id_cliente_servico_contrato"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"type": "text",
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"key": "id_cliente_servico_contrato",
+											"value": "integer",
+											"description": "(Integer) ID do Cliente Servico Contrato já cadastrado anteriormente"
+										}
+									]
+								},
+								"description": "**POST**\n\nAtravés deste `endpoint`, será possível remover os contratos do o serviço do cliente.\n\n**Aviso**\n\n`IMPORTANTE`: É necessário informar o `id_cliente_servico_contrato`, eles podem retornados nas rotas Clientes > Consulta.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico_contrato | Identificador único do contrato do serviço do cliente | Sim |\n| motivo | Descrição textual do motivo da remoção do contrato. | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico_contrato | Deve conter um número inteiro maior que 0 | Nenhum |\n| motivo | Textual | Nenhum |"
+							},
+							"response": [
+								{
+									"id": "07d23e43-c9ed-4885-9e41-baf4ffe50634",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id_cliente_servico_contrato\": 9308,\n    \"motivo\": \"SERÁ ADICIONADO OUTRO CONTRATO PARA O CLIENTE\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{url}}/api/v1/integracao/cliente/contrato/remover_contrato"
+									},
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Contrato inativado com sucesso\",\r\n    \"cliente_servico_contrato\": {\r\n        \"id_cliente_servico_contrato\": 9308,\r\n        \"id_cliente_servico\": 18950,\r\n        \"id_contrato\": 77,\r\n        \"validade\": 12,\r\n        \"numero_contrato\": 6421,\r\n        \"id_empresa\": 14,\r\n        \"deleted_at_br\": \"04/08/2023 14:26:42\",\r\n        \"contrato\": {\r\n            \"id_contrato\": 77,\r\n            \"descricao\": \"-Ápice - Contrato Cliente Rádio\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null\r\n        },\r\n        \"empresa\": {\r\n            \"id_empresa\": 14,\r\n            \"display\": \"COMUNICAÇÕES LTDA (CNPJ: 24.605.227/0001-29)\"\r\n        },\r\n        \"cliente_servico\": {\r\n            \"id_cliente_servico\": 18950,\r\n            \"display\": \"(5) 1.5-MBPS-PROMOCIONAL-WIRELESS-2018/09 COELHO\",\r\n            \"cliente\": {\r\n                \"id_cliente\": 25246,\r\n                \"display\": \"(2082) BORGES SILVA\"\r\n            }\r\n        }\r\n    }\r\n}"
 								}
 							]
 						}
@@ -8177,37 +8177,37 @@
 	],
 	"variable": [
 		{
-			"id": "e5fb0dfb-c78c-4388-85fe-09d04489dc3f",
+			"id": "c5e1d688-d405-4b81-996a-ad26fbf936dd",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "fd7975d2-7d84-4958-b1c6-0501599ece19",
+			"id": "2ae1ee94-6931-4df1-a1f0-a4be906b82aa",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "29109094-0d6e-46ab-a486-1611b8e8c3ef",
+			"id": "8e29f2c3-d471-485a-bb21-673557dfa408",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "c74e5bdd-c4e9-47f0-978f-8e9d310e6f03",
+			"id": "ee2e7df7-a74e-4587-a365-429603f6def0",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "d7b0edf5-255a-40ef-a363-5ff8359372be",
+			"id": "299be32e-7d6d-4441-a1f6-eb6d5604555f",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "57b88cde-ef45-4583-be07-28b322ca98f9",
+			"id": "ec7f26f3-c3ee-4462-8a0f-09b775d1c07d",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "d039ab86-68ea-4b27-b960-ef0e314a47f8",
+			"id": "2ef16c93-6159-442b-939d-e539b7737ff8",
 			"key": "access_token",
 			"value": ""
 		}
