@@ -535,7 +535,7 @@
 									}
 								},
 								"url": "{{url}}/api/v1/integracao/cliente/contrato/adicionar_contrato",
-								"description": "**POST**\n\nAtravés deste `endpoint`, será possível fazer o cadastro de contratos para o serviço do cliente.\n\n**Aviso**\n\n`IMPORTANTE`: É necessário informar o `id_cliente_servico`, o `id_contrato e o id_empresa`, eles podem retornados nas rotas Clientes > Consulta e Configuração > Modelos de Contrato e Configuração > Empresas respectivamente\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico | Identificador único do serviço do cliente | Sim |\n| id_contrato | Identificador único do modelo de contrato | Sim |\n| id_empresa | Identificador único da empresa | Sim |\n| autorizacao_nome | Nome do Reponsável Autorização | Não |\n| autorizacao_cpf | CPF do Reponsável Autorização | Não |\n| autorizacao_rg | RG do Reponsável Autorização | Não |\n| informacao_adicional | Informação Adicional do Contrato do Cliente | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico | Deve conter um número inteiro maior que 0 | Nenhum |\n| id_contrato | Deve conter um número inteiro maior que 0 | Nenhum |\n| id_empresa | Deve conter um número inteiro maior que 0 | Nenhum |\n| autorizacao_nome | Textual | Nenhum |\n| autorizacao_cpf | Textual | Nenhum |\n| autorizacao_rg | Textual | Nenhum |\n| informacao_adicional | Textual | Nenhum |"
+								"description": "**POST**\n\nAtravés deste `endpoint`, será possível fazer o cadastro de contratos para o serviço do cliente.\n\n**Aviso**\n\n`IMPORTANTE`: É necessário informar o `id_cliente_servico`, o `id_contrato e o id_empresa`, eles podem retornados nas rotas Clientes > Consulta (passar o parametro incluir_contrato) e Configuração > Modelos de Contrato e Configuração > Empresas respectivamente\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico | Identificador único do serviço do cliente | Sim |\n| id_contrato | Identificador único do modelo de contrato | Sim |\n| id_empresa | Identificador único da empresa | Sim |\n| autorizacao_nome | Nome do Reponsável Autorização | Não |\n| autorizacao_cpf | CPF do Reponsável Autorização | Não |\n| autorizacao_rg | RG do Reponsável Autorização | Não |\n| informacao_adicional | Informação Adicional do Contrato do Cliente | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico | Deve conter um número inteiro maior que 0 | Nenhum |\n| id_contrato | Deve conter um número inteiro maior que 0 | Nenhum |\n| id_empresa | Deve conter um número inteiro maior que 0 | Nenhum |\n| autorizacao_nome | Textual | Nenhum |\n| autorizacao_cpf | Textual | Nenhum |\n| autorizacao_rg | Textual | Nenhum |\n| informacao_adicional | Textual | Nenhum |"
 							},
 							"response": [
 								{
@@ -8168,37 +8168,37 @@
 	],
 	"variable": [
 		{
-			"id": "cc0861ca-4986-4d21-999b-57f2855cc553",
+			"id": "5070529f-e214-4c40-a3c4-78180d5382e6",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "2df69ed7-00ed-405c-a762-d35c4960d8de",
+			"id": "a68dee2f-b1c3-4703-948f-ab8d287796d2",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "bf7d305d-4371-4d28-9ebe-8dd3ae3a32b1",
+			"id": "8ae16b21-a780-4aab-bab1-4949215b7d3c",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "111bd192-d0be-44c2-b355-5aad96a4d3a0",
+			"id": "ae8fd0d5-e66e-4310-8458-e915d67cd381",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "34406389-abdf-4e18-b4b4-743c0f749e80",
+			"id": "563de67a-7770-42e7-96ef-987d00efcfc4",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "54a8f4a4-95bd-44a8-9c8f-4b835ed51e4c",
+			"id": "be80cb64-e6f7-4705-811c-b13fdaf9bd72",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "a3e47d11-20d0-4333-b250-6b5728392d14",
+			"id": "64cf7eb1-2f23-46aa-827f-a013431e4283",
 			"key": "access_token",
 			"value": ""
 		}
