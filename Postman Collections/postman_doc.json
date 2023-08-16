@@ -8083,13 +8083,13 @@
 										"type": "text"
 									}
 								],
-								"url": "{{url}}/api/v1/integracao/configuracao/tipo_servico"
+								"url": "{{url}}/api/v1/integracao/configuracao/motivo_contratacao"
 							},
 							"_postman_previewlanguage": "json",
 							"header": [],
 							"cookie": [],
 							"responseTime": null,
-							"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Dados consultados com sucesso\",\n    \"tipos_servico\": [\n        {\n            \"id_tipo_servico\": 3,\n            \"descricao\": \"Taxa de Instalação\",\n            \"bloquear\": true,\n            \"display\": \"Taxa de Instalação\"\n        },\n        {\n            \"id_tipo_servico\": 4,\n            \"descricao\": \"Ordem de Serviço\",\n            \"bloquear\": true,\n            \"display\": \"Ordem de Serviço\"\n        }\n    ],\n    \"encrypted\": false\n}"
+							"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Dados consultados com sucesso\",\n    \"motivos_contratacao\": [\n        {\n            \"id_motivo_contratacao\": 1,\n            \"descricao\": \"Indicação\"\n        },\n        {\n            \"id_motivo_contratacao\": 2,\n            \"descricao\": \"Promoção\"\n        }\n    ],\n    \"encrypted\": false\n}"
 						}
 					]
 				},
@@ -8262,37 +8262,37 @@
 	],
 	"variable": [
 		{
-			"id": "ecb81bec-20d5-4a38-a9a5-f535234a5c47",
+			"id": "66128f59-ad09-4c89-a99b-e88014e3eb61",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "c93311e3-8192-4239-a54d-81db281840c0",
+			"id": "913efa6e-b530-4459-bc30-55788de99cc9",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "577c923b-4254-4b0f-ac90-0a30f52e6ea2",
+			"id": "88a3bb71-a250-4581-894b-d9c83e8d3894",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "e96345d4-3a8b-4b23-8fda-8b5b58017438",
+			"id": "4f4759b8-23d0-48fb-8547-3dc7b7d8f55f",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "1e394bcd-d0ce-4e64-bd92-ac29ba8c1ff9",
+			"id": "37cc11d7-2ad4-4d82-9d6f-43c13888a471",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "5594d8e5-c840-41c9-a722-46d2c9914aa0",
+			"id": "34f8fd8c-2f51-485b-b0b8-3b1e594f1ed6",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "665424c3-cf81-48eb-aaf6-e9c574f7473e",
+			"id": "457a847f-6ea7-46f6-beb4-b456831c63de",
 			"key": "access_token",
 			"value": ""
 		}
