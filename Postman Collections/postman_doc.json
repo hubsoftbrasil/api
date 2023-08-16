@@ -8130,13 +8130,13 @@
 										"type": "text"
 									}
 								],
-								"url": "{{url}}/api/v1/integracao/configuracao/tipo_servico"
+								"url": "{{url}}/api/v1/integracao/configuracao/origem_cliente"
 							},
 							"_postman_previewlanguage": "json",
 							"header": [],
 							"cookie": [],
 							"responseTime": null,
-							"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Dados consultados com sucesso\",\n    \"tipos_servico\": [\n        {\n            \"id_tipo_servico\": 3,\n            \"descricao\": \"Taxa de Instalação\",\n            \"bloquear\": true,\n            \"display\": \"Taxa de Instalação\"\n        },\n        {\n            \"id_tipo_servico\": 4,\n            \"descricao\": \"Ordem de Serviço\",\n            \"bloquear\": true,\n            \"display\": \"Ordem de Serviço\"\n        }\n    ],\n    \"encrypted\": false\n}"
+							"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Dados consultados com sucesso\",\n    \"origens_cliente\": [\n        {\n            \"id_origem_cliente\": 1,\n            \"descricao\": \"Instagram\"\n        },\n        {\n            \"id_origem_cliente\": 2,\n            \"descricao\": \"Facebook\"\n        }\n    ],\n    \"encrypted\": false\n}"
 						}
 					]
 				},
@@ -8262,37 +8262,37 @@
 	],
 	"variable": [
 		{
-			"id": "65e3dbcf-11f4-4766-a4c6-afece1e4f0cf",
+			"id": "ecb81bec-20d5-4a38-a9a5-f535234a5c47",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "1b7f1393-8a6f-4408-b4a4-55e7fa8e7053",
+			"id": "c93311e3-8192-4239-a54d-81db281840c0",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "42ba2d3c-eae8-41b6-b029-000ee06a16e8",
+			"id": "577c923b-4254-4b0f-ac90-0a30f52e6ea2",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "e105e0be-4cc1-4376-9b9a-b48cc456aa89",
+			"id": "e96345d4-3a8b-4b23-8fda-8b5b58017438",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "3e0aa17a-d213-4bc6-aa43-8c443389daa2",
+			"id": "1e394bcd-d0ce-4e64-bd92-ac29ba8c1ff9",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "be6ef8e3-c181-40c6-953a-99f583fc178a",
+			"id": "5594d8e5-c840-41c9-a722-46d2c9914aa0",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "f49d6e3a-e61d-4a75-9f1f-c0dc054d0d01",
+			"id": "665424c3-cf81-48eb-aaf6-e9c574f7473e",
 			"key": "access_token",
 			"value": ""
 		}
