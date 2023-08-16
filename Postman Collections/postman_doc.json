@@ -7417,7 +7417,7 @@
 							}
 						},
 						"url": "{{url}}/api/v1/integracao/prospecto",
-						"description": "A rota em questão é do tipo `POST` e o corpo da requisição deve possuir os campos abaixo no JSON.\n\n| Campo | Descrição | Obrigatório |\n| --- | --- | --- |\n| cep | CEP referente ao endereço de instalação | Sim |\n| servico.id_servico | Identificador único do serviço / plano de contratação | Sim |\n| servico.valor | Valor em reais (R$) do serviço / plano ofertado | Sim |\n| nome_razaosocial | Nome ou Razão Social do contratante | Sim |\n| cpf_cnpj | CPF ou CNPJ do contratante | Não |\n| telefone | Telefone principal do contratante | Sim |\n| email | email principal do contratante | Não |\n| observacao | Campo livre para observações do contratante | Não |\n| tipo_pessoa | Informar «pj» para pessoa jurídica ou «pf» para pessoa física | Sim |\n| bairro | Bairro referente ao endereço de instalação | Sim |\n| endereco | Endereço referente ao local de instalação | Sim |\n| numero | Número referente ao endereço de instalação | Sim |\n| latitude | Latitude referente ao endereço de instalação | Não |\n| longitude | Longitude referente ao endereço de instalação | Não |\n| id_crm | ID referente ao CRM que será vinculado o prospecto | Nao |\n| id_origem_cliente | ID referente a Origem do Cliente que será vinculado o prospecto | Nao |\n| id_motivo_contratacao | ID referente ao Motivo de Contratao que será vinculado o prospecto | Nao |\n\n\\* Tipo de valores aceitos pelos campos:\n\n| Campo | Tipo |\n| --- | --- |\n| cep | Numérico |\n| servico.id_servico | Numérico |\n| servico.valor | Numérico |\n| nome_razaosocial | Texto |\n| cpf_cnpj | Numérico |\n| telefone | Numérico |\n| email | Texto |\n| observacao | Texto |\n| tipo_pessoa | Texto |\n| bairro | Texto |\n| endereco | Texto |\n| numero | Numérico |\n| latitude | Numérico |\n| longitude | Númerico |\n| id_crm | Numérico |\n| id_origem_cliente | Numérico |\n| id_motivo_contratacao | Numérico |"
+						"description": "A rota em questão é do tipo `POST` e o copo da requisição deve possuir os campos abaixo no JSON.\n\n**Obs.:** _A obrigatoriedade dos campos pode ser personalizada pelo usuário no sistema._\n\n| Campo | Descrição | Obrigatório |\n| --- | --- | --- |\n| cep | CEP referente ao endereço de instalação | Sim |\n| servico.id_servico | Identificador único do serviço / plano de contratação | Sim |\n| servico.valor | Valor em reais (R$) do serviço / plano ofertado | Sim |\n| nome_razaosocial | Nome ou Razão Social do contratante | Sim |\n| cpf_cnpj | CPF ou CNPJ do contratante | Não |\n| telefone | Telefone principal do contratante | Sim |\n| email | email principal do contratante | Não |\n| observacao | Campo livre para observações do contratante | Não |\n| tipo_pessoa | Informar «pj» para pessoa jurídica ou «pf» para pessoa física | Sim |\n| bairro | Bairro referente ao endereço de instalação | Sim |\n| endereco | Endereço referente ao local de instalação | Sim |\n| numero | Número referente ao endereço de instalação | Sim |\n| latitude | Latitude referente ao endereço de instalação | Não |\n| longitude | Longitude referente ao endereço de instalação | Não |\n| id_crm | ID referente ao CRM que será vinculado o prospecto | Nao |\n| id_origem_cliente | ID referente a Origem do Cliente que será vinculado o prospecto | Nao |\n| id_motivo_contratacao | ID referente ao Motivo de Contratao que será vinculado o prospecto | Nao |\n\n\\* Tipo de valores aceitos pelos campos:\n\n| Campo | Tipo |\n| --- | --- |\n| cep | Numérico |\n| servico.id_servico | Numérico |\n| servico.valor | Numérico |\n| nome_razaosocial | Texto |\n| cpf_cnpj | Numérico |\n| telefone | Numérico |\n| email | Texto |\n| observacao | Texto |\n| tipo_pessoa | Texto |\n| bairro | Texto |\n| endereco | Texto |\n| numero | Numérico |\n| latitude | Numérico |\n| longitude | Númerico |\n| id_crm | Numérico |\n| id_origem_cliente | Numérico |\n| id_motivo_contratacao | Numérico |"
 					},
 					"response": [
 						{
@@ -8262,37 +8262,37 @@
 	],
 	"variable": [
 		{
-			"id": "5217df98-b006-42ea-a4d3-f7040095a28c",
+			"id": "314724f6-5552-4c34-a24d-cb40560f375c",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "6f797f85-4895-4bf2-9df1-e77172f04d7c",
+			"id": "6951bfd1-59d1-4ca7-874c-12f7762b0e82",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "d52a6b9b-9489-4d78-9936-b3c8f8e35b7d",
+			"id": "a4037f19-847b-4af3-a2f8-b10bf38be9d4",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "4ab28487-dc06-49e6-9280-9f24b98e2101",
+			"id": "290ad427-cf0a-4c58-a76c-8d120a0b0a41",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "f393e782-97e9-4671-a830-26a3c4dd0a92",
+			"id": "0d1de20b-d61d-4e1b-8690-488b142a1b29",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "19709f26-ac08-4408-8f29-61dad0c65747",
+			"id": "f11b28ae-0074-4912-ba3a-e98b7cafec09",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "8bba5d93-3a2c-4a5b-a001-49d3b19cee4e",
+			"id": "3559e438-0e3d-4d64-af81-e605e19848cc",
 			"key": "access_token",
 			"value": ""
 		}
