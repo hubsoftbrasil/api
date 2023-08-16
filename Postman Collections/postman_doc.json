@@ -8108,7 +8108,7 @@
 								"description": "Bearer Token obtido na autenticação"
 							}
 						],
-						"url": "{{url}}/api/v1/integracao/configuracao/tipo_servico",
+						"url": "{{url}}/api/v1/integracao/configuracao/origem_cliente",
 						"description": "No método `GET`, irá consultar os dados dos tipos de serviço e irá retornar um `JSON` como resposta."
 					},
 					"response": [
@@ -8262,37 +8262,37 @@
 	],
 	"variable": [
 		{
-			"id": "a4e1b155-ef31-4f5d-8dfe-4fb8df1bc975",
+			"id": "65e3dbcf-11f4-4766-a4c6-afece1e4f0cf",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "90988deb-1ecf-40c0-8d75-44c9cbb382fb",
+			"id": "1b7f1393-8a6f-4408-b4a4-55e7fa8e7053",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "8ba61889-1445-4b80-91f7-74d3f86f26f2",
+			"id": "42ba2d3c-eae8-41b6-b029-000ee06a16e8",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "516a3107-c12e-4d27-9c3a-3206209b0f7d",
+			"id": "e105e0be-4cc1-4376-9b9a-b48cc456aa89",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "8bbde921-5f84-4ca2-9dad-558fd42292d4",
+			"id": "3e0aa17a-d213-4bc6-aa43-8c443389daa2",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "dc6c2000-d466-4694-88ad-c333c0a93e11",
+			"id": "be6ef8e3-c181-40c6-953a-99f583fc178a",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "3f2c3279-4681-4454-b3ba-6831a4ac69a4",
+			"id": "f49d6e3a-e61d-4a75-9f1f-c0dc054d0d01",
 			"key": "access_token",
 			"value": ""
 		}
