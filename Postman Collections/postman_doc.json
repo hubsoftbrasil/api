@@ -8139,6 +8139,53 @@
 							"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Dados consultados com sucesso\",\n    \"tipos_servico\": [\n        {\n            \"id_tipo_servico\": 3,\n            \"descricao\": \"Taxa de Instalação\",\n            \"bloquear\": true,\n            \"display\": \"Taxa de Instalação\"\n        },\n        {\n            \"id_tipo_servico\": 4,\n            \"descricao\": \"Ordem de Serviço\",\n            \"bloquear\": true,\n            \"display\": \"Ordem de Serviço\"\n        }\n    ],\n    \"encrypted\": false\n}"
 						}
 					]
+				},
+				{
+					"name": "Origens de Cliente",
+					"id": "077e963b-6ef3-49c4-b1b1-177045180c12",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{access_token}}",
+								"description": "Bearer Token obtido na autenticação"
+							}
+						],
+						"url": "{{url}}/api/v1/integracao/configuracao/tipo_servico",
+						"description": "No método `GET`, irá consultar os dados dos tipos de serviço e irá retornar um `JSON` como resposta."
+					},
+					"response": [
+						{
+							"id": "d4f3db91-6a40-48dd-9959-4f25fbf0ffd1",
+							"name": "Sucesso",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/api/v1/integracao/configuracao/tipo_servico"
+							},
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Dados consultados com sucesso\",\n    \"tipos_servico\": [\n        {\n            \"id_tipo_servico\": 3,\n            \"descricao\": \"Taxa de Instalação\",\n            \"bloquear\": true,\n            \"display\": \"Taxa de Instalação\"\n        },\n        {\n            \"id_tipo_servico\": 4,\n            \"descricao\": \"Ordem de Serviço\",\n            \"bloquear\": true,\n            \"display\": \"Ordem de Serviço\"\n        }\n    ],\n    \"encrypted\": false\n}"
+						}
+					]
 				}
 			],
 			"id": "df07f265-98f3-41b4-aada-085c92eb7209"
@@ -8168,37 +8215,37 @@
 	],
 	"variable": [
 		{
-			"id": "5070529f-e214-4c40-a3c4-78180d5382e6",
+			"id": "c274e634-a6ed-4aed-85fa-16b7109f982e",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "a68dee2f-b1c3-4703-948f-ab8d287796d2",
+			"id": "2b523e5e-7dab-455a-8787-85d39204a77b",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "8ae16b21-a780-4aab-bab1-4949215b7d3c",
+			"id": "314b1a42-f48e-4346-979d-8b5f4aa01c8b",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "ae8fd0d5-e66e-4310-8458-e915d67cd381",
+			"id": "97339deb-daa4-43c8-9450-a9e8ed1855db",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "563de67a-7770-42e7-96ef-987d00efcfc4",
+			"id": "7fb14c14-5c90-45bc-8d22-82852ffcca2e",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "be80cb64-e6f7-4705-811c-b13fdaf9bd72",
+			"id": "cd0e89e8-cdfe-4d63-8975-e50064fab9e4",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "64cf7eb1-2f23-46aa-827f-a013431e4283",
+			"id": "e6c1fd4d-be24-47dc-8fd6-c361c86aa465",
 			"key": "access_token",
 			"value": ""
 		}
