@@ -7865,13 +7865,13 @@
 										"type": "text"
 									}
 								],
-								"url": "{{url}}/api/v1/integracao/rede/zona_atendimento"
+								"url": "{{url}}/api/v1/integracao/rede/caixa_optica"
 							},
 							"_postman_previewlanguage": "json",
 							"header": null,
 							"cookie": [],
 							"responseTime": null,
-							"body": " {\r\n    \"status\": \"success\",\r\n    \"msg\": \"Dados consultados com sucesso.\",\r\n    \"zonas_atendimento\": [\r\n        {\r\n            \"id_zona_atendimento\": 12,\r\n            \"nome\": \"FIBRA - PIUMHI - A1R3\",\r\n            \"descricao\": \"ATENDIMENTO FIBRA AREA 1 ROTA 3 EM PIUMHI - TESTE\",\r\n            \"interfaces\": [\r\n                {\r\n                    \"id_interface_conexao\": 355,\r\n                    \"nome\": \"A1R3_INTELBRAS\",\r\n                    \"descricao\": null,\r\n                    \"tipo\": \"gpon\",\r\n                    \"equipamento_conexao\": {\r\n                        \"nome\": \"PIU_CHASSI_INTELBRAS_ESCRIT?RIO_02\",\r\n                        \"ipv4\": \"10.37.1.249\",\r\n                        \"ipv6\": null,\r\n                        \"modelo\": \"8820G\",\r\n                        \"fabricante\": \"INTELBRAS\"\r\n                    }\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id_zona_atendimento\": 13,\r\n            \"nome\": \"WIRELESS RAUL\",\r\n            \"descricao\": \"REDE WIRELESS PERTO DO AP RAUL\",\r\n            \"interfaces\": [\r\n                {\r\n                    \"id_interface_conexao\": 51,\r\n                    \"nome\": \"ath0\",\r\n                    \"descricao\": null,\r\n                    \"tipo\": \"wireless\",\r\n                    \"equipamento_conexao\": {\r\n                        \"nome\": \"AP_RAUL\",\r\n                        \"ipv4\": \"10.20.72.12\",\r\n                        \"ipv6\": null,\r\n                        \"modelo\": \"BULLET2\",\r\n                        \"fabricante\": \"UBIQUITI\"\r\n                    }\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id_zona_atendimento\": 10,\r\n            \"nome\": \"SDT - FIBRA - AREA 9\",\r\n            \"descricao\": \"AREA 9 DE FIBRA EM SAMONTE\",\r\n            \"interfaces\": [\r\n                {\r\n                    \"id_interface_conexao\": 327,\r\n                    \"nome\": \"SDT_A9R3_A9R4\",\r\n                    \"descricao\": null,\r\n                    \"tipo\": \"epon\",\r\n                    \"equipamento_conexao\": {\r\n                        \"nome\": \"FIBERHOME-SDT\",\r\n                        \"ipv4\": \"10.20.14.34\",\r\n                        \"ipv6\": null,\r\n                        \"modelo\": \"AN5516-06\",\r\n                        \"fabricante\": \"FIBERHOME\"\r\n                    }\r\n                },\r\n                {\r\n                    \"id_interface_conexao\": 330,\r\n                    \"nome\": \"Teste Panhaque\",\r\n                    \"descricao\": null,\r\n                    \"tipo\": \"epon\",\r\n                    \"equipamento_conexao\": {\r\n                        \"nome\": \"FIBERHOME-SDT\",\r\n                        \"ipv4\": \"10.20.14.34\",\r\n                        \"ipv6\": null,\r\n                        \"modelo\": \"AN5516-06\",\r\n                        \"fabricante\": \"FIBERHOME\"\r\n                    }\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id_zona_atendimento\": 14,\r\n            \"nome\": \"PIUMHI - FIBRA -A4\",\r\n            \"descricao\": \"AREA 04 DE FIBRA EM PIUMHI\",\r\n            \"interfaces\": [\r\n                {\r\n                    \"id_interface_conexao\": 353,\r\n                    \"nome\": \"PIU_A4R1_A4R2\",\r\n                    \"descricao\": null,\r\n                    \"tipo\": \"gpon\",\r\n                    \"equipamento_conexao\": {\r\n                        \"nome\": \"PIU_CHASSI_INTELBRAS_ARMARIO_RENATO\",\r\n                        \"ipv4\": \"10.37.8.3\",\r\n                        \"ipv6\": null,\r\n                        \"modelo\": \"8820G\",\r\n                        \"fabricante\": \"INTELBRAS\"\r\n                    }\r\n                }\r\n            ]\r\n        }\r\n    ]"
+							"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Dados consultados com sucesso.\",\r\n    \"caixas_opticas\": [\r\n        {\r\n            \"id_caixa_optica\": 1,\r\n            \"nome\": \"A1-A1\",\r\n            \"display\": \"A1-A1\"\r\n        },\r\n        {\r\n            \"id_caixa_optica\": 2,\r\n            \"nome\": \"B1-B1\",\r\n            \"display\": \"B1-B1\"\r\n        }\r\n    ]\r\n}"
 						}
 					]
 				}
@@ -8444,37 +8444,37 @@
 	],
 	"variable": [
 		{
-			"id": "1e01f070-4b07-4d27-b6cf-032a7f8afd5b",
+			"id": "ae188ce4-3285-4b36-b69a-642f3d0ae9a7",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "2cc27159-1ec5-49d3-8d51-b3ad6071065d",
+			"id": "8b859156-c984-4102-8df8-fc42909897ad",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "1cdc3955-b1bd-4782-b28e-532bdafa0ece",
+			"id": "845f2fc7-1e17-47b4-a403-599ba7021c57",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "0c1793bc-445b-4821-a6f0-9b1d37923324",
+			"id": "2d8d72aa-15fc-4848-9a98-96e658a37524",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "19708aa4-b1dd-4449-b0e2-3a11b9afa8b2",
+			"id": "18d8c6a8-ffcd-46ce-920c-66a7592f2b12",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "884f6236-c05f-4adb-93ee-c7c4874e755d",
+			"id": "75f6e32e-e02b-47db-8672-7174f5275531",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "a85aef16-85b2-4759-afbb-a41aa0dc4a5e",
+			"id": "2e7a8fbb-9e9b-4579-989a-c61c52614b33",
 			"key": "access_token",
 			"value": ""
 		}
