@@ -7850,7 +7850,7 @@
 							}
 						],
 						"url": "{{url}}/api/v1/integracao/rede/caixa_optica",
-						"description": "**GET**\n\nNo método `GET`, será possível consultar as Zonas de Atendimento que estão cadastradas no sistema:\n\n**Nota**\n\n`OBSERVAÇÃO`: Uma zona de atendimento poderá conter 0 ou mais interfaces de conexão configuradas. O ideal de se utilizar essa rota da `API,` é que todas as Interfaces de Conexões, estejam associadas com as Zonas de Atendimento de forma correta. Verifique com o gestor da Rede do provedor, para verificar se todos os cadastros estão corretos."
+						"description": "**GET**\n\nNo método `GET`, será possível consultar as Caixas Ópticas que estão cadastradas no sistema."
 					},
 					"response": [
 						{
@@ -8444,37 +8444,37 @@
 	],
 	"variable": [
 		{
-			"id": "8fc23584-9d55-451d-aec8-0f75e5d85cb9",
+			"id": "1e01f070-4b07-4d27-b6cf-032a7f8afd5b",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "2d681fb6-3a3b-49c3-bfdd-46585d57f825",
+			"id": "2cc27159-1ec5-49d3-8d51-b3ad6071065d",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "135feaab-04d1-4e7e-a73d-88b72a273eef",
+			"id": "1cdc3955-b1bd-4782-b28e-532bdafa0ece",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "3bf8478e-8359-4f45-bc10-452c3c170e1c",
+			"id": "0c1793bc-445b-4821-a6f0-9b1d37923324",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "8ea4508b-7651-4e51-9c06-4228c3ed2b5b",
+			"id": "19708aa4-b1dd-4449-b0e2-3a11b9afa8b2",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "1bc0c15e-b634-4feb-98b1-a269df47c923",
+			"id": "884f6236-c05f-4adb-93ee-c7c4874e755d",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "59b36880-285b-46ae-9767-580a90213905",
+			"id": "a85aef16-85b2-4759-afbb-a41aa0dc4a5e",
 			"key": "access_token",
 			"value": ""
 		}
