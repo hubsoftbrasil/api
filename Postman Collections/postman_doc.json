@@ -8371,7 +8371,7 @@
 							"header": [],
 							"cookie": [],
 							"responseTime": null,
-							"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Dados consultados com sucesso.\",\n    \"grupo_cliente_servico\": [\n        {\n            \"id\": 1,\n            \"display\": \"Residencial\",\n            \"ativo\": true\n        },\n        {\n            \"id\": 2,\n            \"display\": \"Serviços Cortesias \",\n            \"ativo\": true\n        }\n    ]\n}"
+							"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Dados consultados com sucesso.\",\n    \"servico_status\": [\n        {\n            \"id_servico_status\": 1,\n            \"descricao\": \"Serviço Habilitado\",\n            \"prefixo\": \"servico_habilitado\"\n        },\n        {\n            \"id_servico_status\": 2,\n            \"descricao\": \"Cancelado\",\n            \"prefixo\": \"cancelado\"\n        }\n    ]\n}"
 						}
 					]
 				}
@@ -8403,37 +8403,37 @@
 	],
 	"variable": [
 		{
-			"id": "05459289-ce04-439c-9ffd-5ef66eac0c38",
+			"id": "449d5131-7e27-46e1-a02e-6643012cae8e",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "3039a671-5250-4ad9-94af-64f09abb3a57",
+			"id": "0bc5758f-13d8-454b-a414-7f6657ae573e",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "80d66056-6c79-417d-902e-770735390064",
+			"id": "09967717-85b0-4e24-89d8-8f0facb349d2",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "1ccc63fa-30ab-4c6c-a8ea-d064d5d6acb6",
+			"id": "a29f50e9-8238-44f7-9e7e-1ebffbfeb6e9",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "e17712ea-c6d5-49b1-81fc-4a5a00070427",
+			"id": "4d35dfe0-4608-4cb1-b95e-b7e7b46f6168",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "1e1351dc-0aea-4eca-9309-468ce5af19ea",
+			"id": "a131cf47-2c6d-49e9-b309-4d21d97e9fd7",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "c9eea395-785b-48f8-8fb4-af74202651c4",
+			"id": "3117ac5b-777e-4391-8eaa-a32eb2f8b610",
 			"key": "access_token",
 			"value": ""
 		}
