@@ -7833,6 +7833,47 @@
 							"body": " {\r\n    \"status\": \"success\",\r\n    \"msg\": \"Dados consultados com sucesso.\",\r\n    \"zonas_atendimento\": [\r\n        {\r\n            \"id_zona_atendimento\": 12,\r\n            \"nome\": \"FIBRA - PIUMHI - A1R3\",\r\n            \"descricao\": \"ATENDIMENTO FIBRA AREA 1 ROTA 3 EM PIUMHI - TESTE\",\r\n            \"interfaces\": [\r\n                {\r\n                    \"id_interface_conexao\": 355,\r\n                    \"nome\": \"A1R3_INTELBRAS\",\r\n                    \"descricao\": null,\r\n                    \"tipo\": \"gpon\",\r\n                    \"equipamento_conexao\": {\r\n                        \"nome\": \"PIU_CHASSI_INTELBRAS_ESCRIT?RIO_02\",\r\n                        \"ipv4\": \"10.37.1.249\",\r\n                        \"ipv6\": null,\r\n                        \"modelo\": \"8820G\",\r\n                        \"fabricante\": \"INTELBRAS\"\r\n                    }\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id_zona_atendimento\": 13,\r\n            \"nome\": \"WIRELESS RAUL\",\r\n            \"descricao\": \"REDE WIRELESS PERTO DO AP RAUL\",\r\n            \"interfaces\": [\r\n                {\r\n                    \"id_interface_conexao\": 51,\r\n                    \"nome\": \"ath0\",\r\n                    \"descricao\": null,\r\n                    \"tipo\": \"wireless\",\r\n                    \"equipamento_conexao\": {\r\n                        \"nome\": \"AP_RAUL\",\r\n                        \"ipv4\": \"10.20.72.12\",\r\n                        \"ipv6\": null,\r\n                        \"modelo\": \"BULLET2\",\r\n                        \"fabricante\": \"UBIQUITI\"\r\n                    }\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id_zona_atendimento\": 10,\r\n            \"nome\": \"SDT - FIBRA - AREA 9\",\r\n            \"descricao\": \"AREA 9 DE FIBRA EM SAMONTE\",\r\n            \"interfaces\": [\r\n                {\r\n                    \"id_interface_conexao\": 327,\r\n                    \"nome\": \"SDT_A9R3_A9R4\",\r\n                    \"descricao\": null,\r\n                    \"tipo\": \"epon\",\r\n                    \"equipamento_conexao\": {\r\n                        \"nome\": \"FIBERHOME-SDT\",\r\n                        \"ipv4\": \"10.20.14.34\",\r\n                        \"ipv6\": null,\r\n                        \"modelo\": \"AN5516-06\",\r\n                        \"fabricante\": \"FIBERHOME\"\r\n                    }\r\n                },\r\n                {\r\n                    \"id_interface_conexao\": 330,\r\n                    \"nome\": \"Teste Panhaque\",\r\n                    \"descricao\": null,\r\n                    \"tipo\": \"epon\",\r\n                    \"equipamento_conexao\": {\r\n                        \"nome\": \"FIBERHOME-SDT\",\r\n                        \"ipv4\": \"10.20.14.34\",\r\n                        \"ipv6\": null,\r\n                        \"modelo\": \"AN5516-06\",\r\n                        \"fabricante\": \"FIBERHOME\"\r\n                    }\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id_zona_atendimento\": 14,\r\n            \"nome\": \"PIUMHI - FIBRA -A4\",\r\n            \"descricao\": \"AREA 04 DE FIBRA EM PIUMHI\",\r\n            \"interfaces\": [\r\n                {\r\n                    \"id_interface_conexao\": 353,\r\n                    \"nome\": \"PIU_A4R1_A4R2\",\r\n                    \"descricao\": null,\r\n                    \"tipo\": \"gpon\",\r\n                    \"equipamento_conexao\": {\r\n                        \"nome\": \"PIU_CHASSI_INTELBRAS_ARMARIO_RENATO\",\r\n                        \"ipv4\": \"10.37.8.3\",\r\n                        \"ipv6\": null,\r\n                        \"modelo\": \"8820G\",\r\n                        \"fabricante\": \"INTELBRAS\"\r\n                    }\r\n                }\r\n            ]\r\n        }\r\n    ]"
 						}
 					]
+				},
+				{
+					"name": "Caixa Optica",
+					"id": "200cee9a-59cf-464e-91f9-e8631e4c3951",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{access_token}}",
+								"description": "Bearer Token obtido na autenticação"
+							}
+						],
+						"url": "{{url}}/api/v1/integracao/rede/zona_atendimento",
+						"description": "**GET**\n\nNo método `GET`, será possível consultar as Zonas de Atendimento que estão cadastradas no sistema:\n\n**Nota**\n\n`OBSERVAÇÃO`: Uma zona de atendimento poderá conter 0 ou mais interfaces de conexão configuradas. O ideal de se utilizar essa rota da `API,` é que todas as Interfaces de Conexões, estejam associadas com as Zonas de Atendimento de forma correta. Verifique com o gestor da Rede do provedor, para verificar se todos os cadastros estão corretos."
+					},
+					"response": [
+						{
+							"id": "95bed3d4-020d-4e24-9be2-e778e657c803",
+							"name": "Zona de Atendimento",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/api/v1/integracao/rede/zona_atendimento"
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": " {\r\n    \"status\": \"success\",\r\n    \"msg\": \"Dados consultados com sucesso.\",\r\n    \"zonas_atendimento\": [\r\n        {\r\n            \"id_zona_atendimento\": 12,\r\n            \"nome\": \"FIBRA - PIUMHI - A1R3\",\r\n            \"descricao\": \"ATENDIMENTO FIBRA AREA 1 ROTA 3 EM PIUMHI - TESTE\",\r\n            \"interfaces\": [\r\n                {\r\n                    \"id_interface_conexao\": 355,\r\n                    \"nome\": \"A1R3_INTELBRAS\",\r\n                    \"descricao\": null,\r\n                    \"tipo\": \"gpon\",\r\n                    \"equipamento_conexao\": {\r\n                        \"nome\": \"PIU_CHASSI_INTELBRAS_ESCRIT?RIO_02\",\r\n                        \"ipv4\": \"10.37.1.249\",\r\n                        \"ipv6\": null,\r\n                        \"modelo\": \"8820G\",\r\n                        \"fabricante\": \"INTELBRAS\"\r\n                    }\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id_zona_atendimento\": 13,\r\n            \"nome\": \"WIRELESS RAUL\",\r\n            \"descricao\": \"REDE WIRELESS PERTO DO AP RAUL\",\r\n            \"interfaces\": [\r\n                {\r\n                    \"id_interface_conexao\": 51,\r\n                    \"nome\": \"ath0\",\r\n                    \"descricao\": null,\r\n                    \"tipo\": \"wireless\",\r\n                    \"equipamento_conexao\": {\r\n                        \"nome\": \"AP_RAUL\",\r\n                        \"ipv4\": \"10.20.72.12\",\r\n                        \"ipv6\": null,\r\n                        \"modelo\": \"BULLET2\",\r\n                        \"fabricante\": \"UBIQUITI\"\r\n                    }\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id_zona_atendimento\": 10,\r\n            \"nome\": \"SDT - FIBRA - AREA 9\",\r\n            \"descricao\": \"AREA 9 DE FIBRA EM SAMONTE\",\r\n            \"interfaces\": [\r\n                {\r\n                    \"id_interface_conexao\": 327,\r\n                    \"nome\": \"SDT_A9R3_A9R4\",\r\n                    \"descricao\": null,\r\n                    \"tipo\": \"epon\",\r\n                    \"equipamento_conexao\": {\r\n                        \"nome\": \"FIBERHOME-SDT\",\r\n                        \"ipv4\": \"10.20.14.34\",\r\n                        \"ipv6\": null,\r\n                        \"modelo\": \"AN5516-06\",\r\n                        \"fabricante\": \"FIBERHOME\"\r\n                    }\r\n                },\r\n                {\r\n                    \"id_interface_conexao\": 330,\r\n                    \"nome\": \"Teste Panhaque\",\r\n                    \"descricao\": null,\r\n                    \"tipo\": \"epon\",\r\n                    \"equipamento_conexao\": {\r\n                        \"nome\": \"FIBERHOME-SDT\",\r\n                        \"ipv4\": \"10.20.14.34\",\r\n                        \"ipv6\": null,\r\n                        \"modelo\": \"AN5516-06\",\r\n                        \"fabricante\": \"FIBERHOME\"\r\n                    }\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id_zona_atendimento\": 14,\r\n            \"nome\": \"PIUMHI - FIBRA -A4\",\r\n            \"descricao\": \"AREA 04 DE FIBRA EM PIUMHI\",\r\n            \"interfaces\": [\r\n                {\r\n                    \"id_interface_conexao\": 353,\r\n                    \"nome\": \"PIU_A4R1_A4R2\",\r\n                    \"descricao\": null,\r\n                    \"tipo\": \"gpon\",\r\n                    \"equipamento_conexao\": {\r\n                        \"nome\": \"PIU_CHASSI_INTELBRAS_ARMARIO_RENATO\",\r\n                        \"ipv4\": \"10.37.8.3\",\r\n                        \"ipv6\": null,\r\n                        \"modelo\": \"8820G\",\r\n                        \"fabricante\": \"INTELBRAS\"\r\n                    }\r\n                }\r\n            ]\r\n        }\r\n    ]"
+						}
+					]
 				}
 			],
 			"id": "ef75212f-275c-487d-a829-775dba7a895a",
@@ -8403,37 +8444,37 @@
 	],
 	"variable": [
 		{
-			"id": "5b30dbbb-3697-4a47-9bfb-1365ff4f1ddb",
+			"id": "6693cf3a-9de0-42e2-8a87-b2ea45507fcc",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "c40b1582-b5e8-4164-bafc-b4a8b777c10f",
+			"id": "72f323c3-9c9b-45d5-9f09-31bad05bd9d6",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "9bc657b6-d0d4-461a-940a-5cd240971761",
+			"id": "96c48668-3862-4929-ba81-3d5354265ff1",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "8e375e56-e90d-4892-84b0-572fb70ac597",
+			"id": "e927e7da-c498-4a0f-9271-f632b36b4d11",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "e3147446-80aa-4556-80df-9d2e81311f7c",
+			"id": "8551cd82-33a9-46d9-9f00-dfee243c21ea",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "13388cc5-c78d-4324-bd50-ce4192df5993",
+			"id": "713e9bea-df8e-4af2-9385-e8bcd079dbef",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "fdf818da-8d25-4101-bc88-ebbf1f11727f",
+			"id": "e7da589d-11b1-46e5-b633-f20ec43460a5",
 			"key": "access_token",
 			"value": ""
 		}
