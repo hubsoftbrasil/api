@@ -8327,6 +8327,53 @@
 							"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Dados consultados com sucesso.\",\n    \"grupo_cliente_servico\": [\n        {\n            \"id\": 1,\n            \"display\": \"Residencial\",\n            \"ativo\": true\n        },\n        {\n            \"id\": 2,\n            \"display\": \"Serviços Cortesias \",\n            \"ativo\": true\n        }\n    ]\n}"
 						}
 					]
+				},
+				{
+					"name": "Status de Serviço",
+					"id": "95bc413f-80fc-4c04-99f2-e556843de410",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{access_token}}",
+								"description": "Bearer Token obtido na autenticação"
+							}
+						],
+						"url": "{{url}}/api/v1/integracao/configuracao/grupo_cliente_servico",
+						"description": "No método `GET`, irá consultar os dados de grupos de serviço e irá retornar um `JSON` como resposta."
+					},
+					"response": [
+						{
+							"id": "9c0151f5-7e5e-4ffa-a621-dc0196b42947",
+							"name": "Sucesso",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/api/v1/integracao/configuracao/grupo_cliente_servico"
+							},
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Dados consultados com sucesso.\",\n    \"grupo_cliente_servico\": [\n        {\n            \"id\": 1,\n            \"display\": \"Residencial\",\n            \"ativo\": true\n        },\n        {\n            \"id\": 2,\n            \"display\": \"Serviços Cortesias \",\n            \"ativo\": true\n        }\n    ]\n}"
+						}
+					]
 				}
 			],
 			"id": "df07f265-98f3-41b4-aada-085c92eb7209"
@@ -8356,37 +8403,37 @@
 	],
 	"variable": [
 		{
-			"id": "e2b19d79-8e1f-4b95-a419-7967a6731fcf",
+			"id": "20589674-708d-434a-845c-222c9461d256",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "14399864-5ef3-4fc2-a246-71e4c83f5664",
+			"id": "0d2b1e73-a4dd-42d1-b098-167187929603",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "29c38fc0-8bc3-430c-b14a-f6bf453f4e7d",
+			"id": "79b5f01d-cb90-4cb6-ba54-fa509303e08e",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "ea9bc367-3d9b-4568-b9db-7bc219f24435",
+			"id": "491ffba2-9df3-4451-9963-0f67ba23d64d",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "c7f3b989-90fb-41c3-b718-90e7ac9c16b4",
+			"id": "95752da3-7778-43d1-a798-e348da4e5cc5",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "f98298a2-b144-4edd-9ebd-e3828cc7fa15",
+			"id": "a02daf73-6a73-4686-8374-bf612ebdbebd",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "8ab58a64-12f6-42cf-9a52-196d80c74695",
+			"id": "6aca3d9a-401b-4593-a02b-35d72fff990e",
 			"key": "access_token",
 			"value": ""
 		}
