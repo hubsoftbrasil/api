@@ -8296,7 +8296,7 @@
 								"description": "Bearer Token obtido na autenticação"
 							}
 						],
-						"url": "{{url}}/api/v1/integracao/configuracao/grupo_cliente",
+						"url": "{{url}}/api/v1/integracao/configuracao/grupo_cliente_servico",
 						"description": "No método `GET`, irá consultar os dados de grupos de cliente e irá retornar um `JSON` como resposta."
 					},
 					"response": [
@@ -8356,37 +8356,37 @@
 	],
 	"variable": [
 		{
-			"id": "9b54569e-605d-4469-80c7-59bd6859ca4c",
+			"id": "72dac425-8a55-4845-90eb-6854f5fb3e8a",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "9bffa53d-ec81-4e21-a2d9-c4803a16db32",
+			"id": "027eaf34-bc8c-4354-b406-0bee681419d5",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "3434e956-0dc7-403e-8da6-3efee867cf2d",
+			"id": "2fec3595-79d3-404f-8995-ba482836cad9",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "853a9f60-77bf-4e69-9c26-585a7953adf4",
+			"id": "f017b82a-3335-4aa4-a8eb-1e09d36877ad",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "487a0a01-b872-46b0-8cd3-c7487e0abf04",
+			"id": "a239900d-c6de-4ab9-9125-0231d468c93a",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "eb8cf8e9-3816-406f-9a18-9be6aa21d240",
+			"id": "540f16e4-02b3-4066-98d4-b34398b9235a",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "7672e547-e48d-469e-a836-3232e98eeea4",
+			"id": "06180398-fcf8-45ed-967d-f678a367585a",
 			"key": "access_token",
 			"value": ""
 		}
