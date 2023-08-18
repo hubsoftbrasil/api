@@ -8250,7 +8250,7 @@
 							}
 						],
 						"url": "{{url}}/api/v1/integracao/configuracao/grupo_cliente",
-						"description": "No método `GET`, irá consultar os dados dos tipos de serviço e irá retornar um `JSON` como resposta."
+						"description": "No método `GET`, irá consultar os dados de grupos de cliente e irá retornar um `JSON` como resposta."
 					},
 					"response": [
 						{
@@ -8309,37 +8309,37 @@
 	],
 	"variable": [
 		{
-			"id": "21c88399-b591-4af9-aec6-b7c3ed3766f2",
+			"id": "fcebd55d-d48f-4123-a3b3-5db6cb0ccb22",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "f2bec99a-80c9-4a68-88d2-c212c1fb68c9",
+			"id": "ff13f183-3ab6-4b93-8e80-14d854309fc3",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "e44477d1-9d81-47d1-8ce8-52d1375ba3a5",
+			"id": "1e54ff1d-d70b-48cc-a7d2-cb707d3b445c",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "600143d5-ef55-4396-8683-86c1637d81c7",
+			"id": "617358ed-968e-4b5f-966b-f421bd09ef55",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "ac4bd8c5-2f5f-4edc-a6e2-96344fea125e",
+			"id": "8be9a221-efc4-437a-8c82-b9b194cf1911",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "9bc42893-6f7d-4898-998e-1003400b4294",
+			"id": "908e7b2b-1e8d-49a2-b685-2c65be8444b7",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "161e4fab-7b2e-40b1-9832-9eef57dff752",
+			"id": "75a01a5b-540f-40d1-8ec9-b2d4c36188ea",
 			"key": "access_token",
 			"value": ""
 		}
