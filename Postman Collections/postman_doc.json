@@ -8277,7 +8277,7 @@
 							"header": [],
 							"cookie": [],
 							"responseTime": null,
-							"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Dados consultados com sucesso\",\n    \"tipos_servico\": [\n        {\n            \"id_tipo_servico\": 3,\n            \"descricao\": \"Taxa de Instalação\",\n            \"bloquear\": true,\n            \"display\": \"Taxa de Instalação\"\n        },\n        {\n            \"id_tipo_servico\": 4,\n            \"descricao\": \"Ordem de Serviço\",\n            \"bloquear\": true,\n            \"display\": \"Ordem de Serviço\"\n        }\n    ],\n    \"encrypted\": false\n}"
+							"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Dados consultados com sucesso.\",\n    \"grupo_cliente\": [\n        {\n            \"id_grupo_cliente\": 1,\n            \"display\": \"Clientes Empresariais\",\n            \"ativo\": true\n        },\n        {\n            \"id_grupo_cliente\": 2,\n            \"display\": \"Clientes Residenciais\",\n            \"ativo\": true\n        }\n    ]\n}"
 						}
 					]
 				}
@@ -8309,37 +8309,37 @@
 	],
 	"variable": [
 		{
-			"id": "252cfe51-a9c2-4fec-b6f8-80402be54910",
+			"id": "21c88399-b591-4af9-aec6-b7c3ed3766f2",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "ddd7d3c0-7d0f-431a-846d-3e67e50a0218",
+			"id": "f2bec99a-80c9-4a68-88d2-c212c1fb68c9",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "71bf5311-e9dd-4c4f-8b09-14829ee95b9b",
+			"id": "e44477d1-9d81-47d1-8ce8-52d1375ba3a5",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "64a24aaa-0f30-444a-b54d-164e528ae5f7",
+			"id": "600143d5-ef55-4396-8683-86c1637d81c7",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "bb760534-71ea-464b-a230-f868a682973d",
+			"id": "ac4bd8c5-2f5f-4edc-a6e2-96344fea125e",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "1d4f4a0f-d162-436e-b3ea-1002100a9e0e",
+			"id": "9bc42893-6f7d-4898-998e-1003400b4294",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "45143310-c134-4357-9b7e-1b49c716c778",
+			"id": "161e4fab-7b2e-40b1-9832-9eef57dff752",
 			"key": "access_token",
 			"value": ""
 		}
