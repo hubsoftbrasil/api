@@ -8323,7 +8323,7 @@
 					]
 				},
 				{
-					"name": "Grupo de Serviços",
+					"name": "Grupo de Serviço",
 					"id": "367f6404-1afb-41c3-bb3e-632df9d3fbf3",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -8444,37 +8444,37 @@
 	],
 	"variable": [
 		{
-			"id": "ae188ce4-3285-4b36-b69a-642f3d0ae9a7",
+			"id": "afc3aecd-4551-49f4-91e5-f35bc81797a3",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "8b859156-c984-4102-8df8-fc42909897ad",
+			"id": "ace00c01-7833-4751-bc27-8411e51fc882",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "845f2fc7-1e17-47b4-a403-599ba7021c57",
+			"id": "360a00ab-4dfc-4f67-8c71-1665dee3fd7c",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "2d8d72aa-15fc-4848-9a98-96e658a37524",
+			"id": "fa816e85-8a44-471e-af0a-efc1fcd96749",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "18d8c6a8-ffcd-46ce-920c-66a7592f2b12",
+			"id": "d7a370ee-4fd2-4721-8b86-0c39984a274a",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "75f6e32e-e02b-47db-8672-7174f5275531",
+			"id": "1e9f6aab-c02d-440c-b5b3-cf02e4545d48",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "2e7a8fbb-9e9b-4579-989a-c61c52614b33",
+			"id": "ca6edc4d-3822-4735-84ab-0a2c10691de1",
 			"key": "access_token",
 			"value": ""
 		}
