@@ -7849,7 +7849,7 @@
 								"description": "Bearer Token obtido na autenticação"
 							}
 						],
-						"url": "{{url}}/api/v1/integracao/rede/zona_atendimento",
+						"url": "{{url}}/api/v1/integracao/rede/caixa_optica",
 						"description": "**GET**\n\nNo método `GET`, será possível consultar as Zonas de Atendimento que estão cadastradas no sistema:\n\n**Nota**\n\n`OBSERVAÇÃO`: Uma zona de atendimento poderá conter 0 ou mais interfaces de conexão configuradas. O ideal de se utilizar essa rota da `API,` é que todas as Interfaces de Conexões, estejam associadas com as Zonas de Atendimento de forma correta. Verifique com o gestor da Rede do provedor, para verificar se todos os cadastros estão corretos."
 					},
 					"response": [
@@ -8444,37 +8444,37 @@
 	],
 	"variable": [
 		{
-			"id": "6693cf3a-9de0-42e2-8a87-b2ea45507fcc",
+			"id": "8fc23584-9d55-451d-aec8-0f75e5d85cb9",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "72f323c3-9c9b-45d5-9f09-31bad05bd9d6",
+			"id": "2d681fb6-3a3b-49c3-bfdd-46585d57f825",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "96c48668-3862-4929-ba81-3d5354265ff1",
+			"id": "135feaab-04d1-4e7e-a73d-88b72a273eef",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "e927e7da-c498-4a0f-9271-f632b36b4d11",
+			"id": "3bf8478e-8359-4f45-bc10-452c3c170e1c",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "8551cd82-33a9-46d9-9f00-dfee243c21ea",
+			"id": "8ea4508b-7651-4e51-9c06-4228c3ed2b5b",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "713e9bea-df8e-4af2-9385-e8bcd079dbef",
+			"id": "1bc0c15e-b634-4feb-98b1-a269df47c923",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "e7da589d-11b1-46e5-b633-f20ec43460a5",
+			"id": "59b36880-285b-46ae-9767-580a90213905",
 			"key": "access_token",
 			"value": ""
 		}
