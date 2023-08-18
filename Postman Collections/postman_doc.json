@@ -8280,6 +8280,53 @@
 							"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Dados consultados com sucesso.\",\n    \"grupo_cliente\": [\n        {\n            \"id_grupo_cliente\": 1,\n            \"display\": \"Clientes Empresariais\",\n            \"ativo\": true\n        },\n        {\n            \"id_grupo_cliente\": 2,\n            \"display\": \"Clientes Residenciais\",\n            \"ativo\": true\n        }\n    ]\n}"
 						}
 					]
+				},
+				{
+					"name": "Grupo de Serviços",
+					"id": "367f6404-1afb-41c3-bb3e-632df9d3fbf3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{access_token}}",
+								"description": "Bearer Token obtido na autenticação"
+							}
+						],
+						"url": "{{url}}/api/v1/integracao/configuracao/grupo_cliente",
+						"description": "No método `GET`, irá consultar os dados de grupos de cliente e irá retornar um `JSON` como resposta."
+					},
+					"response": [
+						{
+							"id": "1c09a88c-cb30-48b3-9bdb-474980ed4125",
+							"name": "Sucesso",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/api/v1/integracao/configuracao/grupo_cliente"
+							},
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Dados consultados com sucesso.\",\n    \"grupo_cliente\": [\n        {\n            \"id_grupo_cliente\": 1,\n            \"display\": \"Clientes Empresariais\",\n            \"ativo\": true\n        },\n        {\n            \"id_grupo_cliente\": 2,\n            \"display\": \"Clientes Residenciais\",\n            \"ativo\": true\n        }\n    ]\n}"
+						}
+					]
 				}
 			],
 			"id": "df07f265-98f3-41b4-aada-085c92eb7209"
@@ -8309,37 +8356,37 @@
 	],
 	"variable": [
 		{
-			"id": "9ba5d223-40a2-434c-8aca-7988efd90471",
+			"id": "9b54569e-605d-4469-80c7-59bd6859ca4c",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "0c410747-a00a-454e-95be-6f71ce84710d",
+			"id": "9bffa53d-ec81-4e21-a2d9-c4803a16db32",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "dd8e6cef-9c22-4645-beef-57a3d8d1da7c",
+			"id": "3434e956-0dc7-403e-8da6-3efee867cf2d",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "33d2a9c9-9925-463c-945c-25c8890593f3",
+			"id": "853a9f60-77bf-4e69-9c26-585a7953adf4",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "48ab7e7a-f5d2-4682-a46b-3e34e9a19cda",
+			"id": "487a0a01-b872-46b0-8cd3-c7487e0abf04",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "4848b9dc-e314-4ef5-aafb-ae354ad2e668",
+			"id": "eb8cf8e9-3816-406f-9a18-9be6aa21d240",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "d7d2d0d1-d94f-4a0c-809b-9e112eb43717",
+			"id": "7672e547-e48d-469e-a836-3232e98eeea4",
 			"key": "access_token",
 			"value": ""
 		}
