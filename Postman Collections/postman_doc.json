@@ -7936,7 +7936,7 @@
 										}
 									]
 								},
-								"description": "**POST**\n\nNo método `POST`, irá consultar os dados dos atendimentos e retornar um `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| data_inicio | Data de Cadastro Inicial | Sim |\n| data_fim | Data de Cadastro Final | Sim |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| data_inicio | Valor no formato DateTime (YYYY-MM-DD) | Nenhum |\n| data_fim | Valor no formato DateTime (YYYY-MM-DD) Obs: Maior ou igual data_inicio | Nenhum |"
+								"description": "**POST**\n\nNo método `POST`, irá consultar os dados de alertas e retornar um `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| ativo | Status do alerta | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| ativo | Caso enviado, deve conter um valor boolean (true/false) | Nenhum |"
 							},
 							"response": [
 								{
@@ -8815,37 +8815,37 @@
 	],
 	"variable": [
 		{
-			"id": "a06c923e-58c1-451f-a4b1-92d47bad920b",
+			"id": "77290a5e-6279-40a9-b9ea-bdae918b806c",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "0768897c-b79e-4c13-920c-a1d0a8aedf58",
+			"id": "f40635da-f0c7-4fae-a102-5b756a1a27c7",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "823ca9b2-6c3a-4de3-bc00-22ac2b629d93",
+			"id": "25614b85-8ea0-4114-9ded-b0a7cc6804fb",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "67145b5e-417f-4432-87cd-f1d0abda9684",
+			"id": "4bdd8495-217a-4bcf-a472-ff50a69478f0",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "1ecc49b2-d758-4770-a5bf-fd951b5b0498",
+			"id": "d2993d53-383b-4ce1-91d9-f50b89809b66",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "39f5f058-3dd3-4869-94b3-4456f5af8b89",
+			"id": "9a639aa8-da84-401c-9854-5b27913fae31",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "5bc5d919-59dd-4660-aba1-cc2995954e5d",
+			"id": "b9fcb9c8-0f71-4dc7-b992-d515f77eb6f0",
 			"key": "access_token",
 			"value": ""
 		}
