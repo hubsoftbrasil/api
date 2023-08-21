@@ -9113,7 +9113,7 @@
 										}
 									]
 								},
-								"description": "Através desse endpoint será possível editar o alerta e obter o retorno no formato JSON como resposta.  \nLembre de enviar o ID do alertacomo um parâmetro na URL, conforme o exemplo acima.  \nOs seguintes parâmetros podem/devem estar presentes no corpo do requisição:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| descricao | Descrição de abertura do atendimento (Opcional) | Não |\n| fechar_atendimento | Indica se deve ser fechado os atendimento e suas ordens de serviço | Sim |\n| parametros | Objeto JSON que poderá conter qualquer informação da integração | Sim |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| descricao | Texto | Nenhum |\n| fechar_atendimento | Boolean ( Verdadeiro ou Falso ) | false |\n| parametros | Array Associativo, JSON | Nenhum |"
+								"description": "Através desse endpoint será possível editar o alerta e obter o retorno no formato JSON como resposta.  \nLembre de enviar o ID do alertacomo um parâmetro na URL, conforme o exemplo acima.  \nOs seguintes parâmetros podem/devem estar presentes no corpo do requisição:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| descricao | Descrição do alerta | Sim |\n| visivel_via_api | Indica se estará disponivel via API | Sim |\n| atendimento | Indica se o alerta estará disponivel na abertura de atendimentos | Sim |\n| cidade | Array de cidades (pode conter os bairros também) | Não |\n| grupo_cliente | Array de grupos de cliente | Não |\n| grupo_cliente_servico | Array de grupos de serviço | Não |\n| interface_conexao | Array de interfaces de conexão | Não |\n| servico_status | Array de status do serviço | Não |\n| caixa_optica | Array de caixas opticas | Não |\n| data_inicio | Data de início do alerta | Não |\n| data_fim | Data de fim do alerta | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| descrição | Campo Livre (Qualquer valor é aceito) | Nenhum |\n| visivel_via_api | Booleano (true/false) | Nenhum |\n| atendimento | Booleano (true/false) | Nenhum |\n| cidade | Array de objetos contendo (id_cidade) e opcionalmente um array de bairros (contendo o nome do bairro) | Nenhum |\n| grupo_cliente | Array de objetos contendo (id_grupo_cliente) | Nenhum |\n| grupo_cliente_servico | Array de objetos contendo (id) | Nenhum |\n| interface_conexao | Array de objetos contendo (id_interface_conexao) | Nenhum |\n| caixa_optica | Array de objetos contendo (id_caixa_optica) | Nenhum |\n| servico_status | Array de objetos contendo (id_servico_status) | Nenhum |\n| data_inicio | Date (YYYY-MM-DD) | Nenhum |\n| data_fim | Date (YYYY-MM-DD) | Nenhum |"
 							},
 							"response": [
 								{
@@ -9733,37 +9733,37 @@
 	],
 	"variable": [
 		{
-			"id": "308809a9-1ec0-41f1-9991-75fa728e6931",
+			"id": "68ef8064-fc7b-4e27-ba3c-786676f6dff0",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "fc278270-0cc3-47b1-95e2-7ba4cc77dcc5",
+			"id": "b7b5196c-af53-4ea6-b2e7-f65361a5e2d3",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "6399b85c-115a-40e0-9738-486a63487958",
+			"id": "68d3d5fc-7254-4989-b5b1-a8e0ebf3e4cf",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "09160772-6cfd-4fa2-8a27-4bd4a646b6f5",
+			"id": "b4cfe2fb-4e15-4f41-813c-9b7fd5eb32a7",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "1500a28b-db0b-4a32-b1eb-680f627505c0",
+			"id": "8d19afcc-df63-41e7-b57f-c90f7f2a9380",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "2f8eabd5-ddba-4048-a13c-f7ed4c5c032e",
+			"id": "87086389-6cf3-47d7-8934-a52679850780",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "b3f448ea-67bf-4953-9c29-8bbc76c7f6b0",
+			"id": "83bbffce-22f6-4d3f-af1f-1281c5375468",
 			"key": "access_token",
 			"value": ""
 		}
