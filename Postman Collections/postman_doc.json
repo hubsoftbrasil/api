@@ -2834,6 +2834,1019 @@
 					"id": "c5885e5c-7867-4156-9625-d180310e6c6f"
 				},
 				{
+					"name": "Movimentações de Estoque (Em Desenvolvimento)",
+					"item": [
+						{
+							"name": "Listar",
+							"id": "a0b7b4e7-d594-412d-a699-947314d6bc23",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": ""
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/v1/integracao/estoque/movimento_estoque?pagina=integer&itens_por_pagina=integer&data_inicio=YYYY-MM-DD HH:mm:ss&data_fim=YYYY-MM-DD HH:mm:ss&tipo_data=cadastro,edicao,movimento",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"integracao",
+										"estoque",
+										"movimento_estoque"
+									],
+									"query": [
+										{
+											"key": "pagina",
+											"value": "integer",
+											"description": "(Obrigatório) Número da Página"
+										},
+										{
+											"key": "itens_por_pagina",
+											"value": "integer",
+											"description": "(Opcional) Itens por Página. Se não preenchido será atribuído 100 por padrão. Máximo: 500"
+										},
+										{
+											"key": "data_inicio",
+											"value": "YYYY-MM-DD HH:mm:ss",
+											"description": "(Opcional) Data no Formato `DateTime`"
+										},
+										{
+											"key": "data_fim",
+											"value": "YYYY-MM-DD HH:mm:ss",
+											"description": "(Opcional) Data no Formato `DateTime`"
+										},
+										{
+											"key": "tipo_data",
+											"value": "cadastro,edicao,movimento",
+											"description": "(Opcional) Determina o tipo de data que será utilizado para filtrar. Se nada for preenchido será filtrado pela data de cadastro como padrão."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "ba2421ed-ad88-45df-accc-eb48e667f4c7",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/estoque/movimento_estoque?pagina=1&10=integer&data_inicio=2023-08-01&data_fim=2023-08-31&tipo_data=cadastro",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"estoque",
+												"movimento_estoque"
+											],
+											"query": [
+												{
+													"key": "pagina",
+													"value": "1",
+													"description": "(Opcional) Número da Página. Se não preenchido será atribuído 1 por padrão"
+												},
+												{
+													"key": "10",
+													"value": "integer"
+												},
+												{
+													"key": "data_inicio",
+													"value": "2023-08-01",
+													"description": "(Opcional) Data no Formato `DateTime`"
+												},
+												{
+													"key": "data_fim",
+													"value": "2023-08-31",
+													"description": "(Opcional) Data no Formato `DateTime`"
+												},
+												{
+													"key": "tipo_data",
+													"value": "cadastro",
+													"description": "(Opcional) Determina o tipo de data que será utilizado para filtrar. Se nada for preenchido será filtrado pela data de cadastro como padrão."
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Aug 2023 14:27:44 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Aug 2023 14:27:43 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.4.28"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=smoiYmPqJ6VZgQLx98omH7JdCIc62fV0INffIE33; expires=Mon, 21-Aug-2023 15:27:44 GMT; Max-Age=3600; path=/; httponly"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Dados consultados com sucesso\",\n    \"paginacao\": {\n        \"primeira_pagina\": 0,\n        \"ultima_pagina\": 8,\n        \"pagina_atual\": 1,\n        \"total_registros\": 89\n    },\n    \"movimentos_estoque\": [\n        {\n            \"id_movimento_estoque\": 4339,\n            \"tipo\": \"entrada\",\n            \"local_estoque\": \"HUBSOFT\",\n            \"vinculo\": {\n                \"id_local_estoque\": 9,\n                \"id_empresa\": 1,\n                \"descricao\": \"HUBSOFT\",\n                \"id_endereco_numero\": 16702,\n                \"created_at\": \"2018-07-27 14:08:33\",\n                \"updated_at\": \"2022-07-08 10:54:42\",\n                \"deleted_at\": null,\n                \"ativo\": true,\n                \"fiscal\": false,\n                \"display\": \"HUBSOFT\"\n            },\n            \"codigo_movimento\": \"e80e5d53-ed79-4966-a6db-aee4fd1eeb58\",\n            \"data_movimento\": \"2023-08-02 09:51:39\",\n            \"data_cadastro\": \"2023-08-02 09:51:39\",\n            \"data_atualizacao\": \"2023-08-02 09:51:39\",\n            \"valor_total\": \"2000\",\n            \"observacao\": null,\n            \"produtos\": [\n                {\n                    \"id_movimento_estoque_produto\": 4754,\n                    \"produto\": \"Celular Xiaomi : 2 Unidade - (UN)\",\n                    \"valor\": \"2000\",\n                    \"quantidade\": 2,\n                    \"patrimonios\": [\n                        {\n                            \"id_produto_item\": 130085,\n                            \"produto\": {\n                                \"id_produto\": 676,\n                                \"nome\": \"Celular Xiaomi \",\n                                \"controle_patrimonial\": true\n                            },\n                            \"local_estoque\": {\n                                \"id_local_estoque\": 9,\n                                \"descricao\": \"HUBSOFT\"\n                            },\n                            \"produto_item_status\": {\n                                \"id_produto_item_status\": 2,\n                                \"descricao\": \"ESTOQUE\",\n                                \"prefixo\": \"estoque\"\n                            },\n                            \"identificador_proprio\": null,\n                            \"codigo_item\": 112983,\n                            \"numero_serie\": null,\n                            \"mac_address\": null,\n                            \"observacoes\": null\n                        },\n                        {\n                            \"id_produto_item\": 130086,\n                            \"produto\": {\n                                \"id_produto\": 676,\n                                \"nome\": \"Celular Xiaomi \",\n                                \"controle_patrimonial\": true\n                            },\n                            \"local_estoque\": {\n                                \"id_local_estoque\": 9,\n                                \"descricao\": \"HUBSOFT\"\n                            },\n                            \"produto_item_status\": {\n                                \"id_produto_item_status\": 2,\n                                \"descricao\": \"ESTOQUE\",\n                                \"prefixo\": \"estoque\"\n                            },\n                            \"identificador_proprio\": null,\n                            \"codigo_item\": 112984,\n                            \"numero_serie\": null,\n                            \"mac_address\": null,\n                            \"observacoes\": null\n                        }\n                    ]\n                }\n            ],\n            \"tipo_movimento_estoque\": {\n                \"id_tipo_movimento_estoque\": 11,\n                \"nome\": \"TRANSFERÊNCIA\",\n                \"prefixo\": \"transferencia\",\n                \"produto_item_status\": {\n                    \"id_produto_item_status\": 2,\n                    \"descricao\": \"ESTOQUE\",\n                    \"prefixo\": \"estoque\"\n                }\n            },\n            \"usuario_cadastro\": {\n                \"id_usuario_cadastro\": 205,\n                \"nome\": \"Elisson Carvalho\",\n                \"email\": \"elisson@hubsoft.com.br\"\n            }\n        },\n        {\n            \"id_movimento_estoque\": 4340,\n            \"tipo\": \"saida\",\n            \"local_estoque\": \"ALMOXARIFADO\",\n            \"vinculo\": {\n                \"id_local_estoque\": 5,\n                \"id_empresa\": 1,\n                \"descricao\": \"ALMOXARIFADO\",\n                \"id_endereco_numero\": 16547,\n                \"created_at\": \"2018-04-23 14:06:36\",\n                \"updated_at\": \"2022-07-13 15:12:46\",\n                \"deleted_at\": null,\n                \"ativo\": true,\n                \"fiscal\": true,\n                \"display\": \"ALMOXARIFADO\"\n            },\n            \"codigo_movimento\": \"e80e5d53-ed79-4966-a6db-aee4fd1eeb58\",\n            \"data_movimento\": \"2023-08-02 09:51:39\",\n            \"data_cadastro\": \"2023-08-02 09:51:39\",\n            \"data_atualizacao\": \"2023-08-02 09:51:39\",\n            \"valor_total\": \"2000\",\n            \"observacao\": null,\n            \"produtos\": [\n                {\n                    \"id_movimento_estoque_produto\": 4755,\n                    \"produto\": \"Celular Xiaomi : 2 Unidade - (UN)\",\n                    \"valor\": \"2000\",\n                    \"quantidade\": 2,\n                    \"patrimonios\": [\n                        {\n                            \"id_produto_item\": 130085,\n                            \"produto\": {\n                                \"id_produto\": 676,\n                                \"nome\": \"Celular Xiaomi \",\n                                \"controle_patrimonial\": true\n                            },\n                            \"local_estoque\": {\n                                \"id_local_estoque\": 9,\n                                \"descricao\": \"HUBSOFT\"\n                            },\n                            \"produto_item_status\": {\n                                \"id_produto_item_status\": 2,\n                                \"descricao\": \"ESTOQUE\",\n                                \"prefixo\": \"estoque\"\n                            },\n                            \"identificador_proprio\": null,\n                            \"codigo_item\": 112983,\n                            \"numero_serie\": null,\n                            \"mac_address\": null,\n                            \"observacoes\": null\n                        },\n                        {\n                            \"id_produto_item\": 130086,\n                            \"produto\": {\n                                \"id_produto\": 676,\n                                \"nome\": \"Celular Xiaomi \",\n                                \"controle_patrimonial\": true\n                            },\n                            \"local_estoque\": {\n                                \"id_local_estoque\": 9,\n                                \"descricao\": \"HUBSOFT\"\n                            },\n                            \"produto_item_status\": {\n                                \"id_produto_item_status\": 2,\n                                \"descricao\": \"ESTOQUE\",\n                                \"prefixo\": \"estoque\"\n                            },\n                            \"identificador_proprio\": null,\n                            \"codigo_item\": 112984,\n                            \"numero_serie\": null,\n                            \"mac_address\": null,\n                            \"observacoes\": null\n                        }\n                    ]\n                }\n            ],\n            \"tipo_movimento_estoque\": {\n                \"id_tipo_movimento_estoque\": 11,\n                \"nome\": \"TRANSFERÊNCIA\",\n                \"prefixo\": \"transferencia\",\n                \"produto_item_status\": {\n                    \"id_produto_item_status\": 2,\n                    \"descricao\": \"ESTOQUE\",\n                    \"prefixo\": \"estoque\"\n                }\n            },\n            \"usuario_cadastro\": {\n                \"id_usuario_cadastro\": 205,\n                \"nome\": \"Elisson Carvalho\",\n                \"email\": \"elisson@hubsoft.com.br\"\n            }\n        },\n        {\n            \"id_movimento_estoque\": 4341,\n            \"tipo\": \"entrada\",\n            \"local_estoque\": \"HUBSOFT\",\n            \"vinculo\": {\n                \"id_produto_compra\": 1152,\n                \"id_fornecedor\": 2593,\n                \"valor\": 20950.2,\n                \"data_compra\": \"2023-08-01\",\n                \"observacao\": null,\n                \"id_usuario\": 205,\n                \"created_at\": \"2023-08-02 09:53:18\",\n                \"updated_at\": \"2023-08-02 09:53:18\",\n                \"deleted_at\": null,\n                \"codigo_compra\": 499,\n                \"id_usuario_responsavel\": 205,\n                \"id_empresa\": 1,\n                \"id_xml_importado\": null,\n                \"id_status_compra\": 7,\n                \"data_compra_timestamp\": 1690902000000,\n                \"data_compra_br\": \"01/08/2023\",\n                \"data_cadastro_br\": \"02/08/2023\",\n                \"data_cadastro_timestamp\": \"02/08/2023 09:53:18\"\n            },\n            \"codigo_movimento\": \"2830aab6-9740-4bb2-a15a-df5b28b3a81e\",\n            \"data_movimento\": \"2023-08-02 09:53:18\",\n            \"data_cadastro\": \"2023-08-02 09:53:18\",\n            \"data_atualizacao\": \"2023-08-02 09:53:18\",\n            \"valor_total\": \"23380.1\",\n            \"observacao\": null,\n            \"produtos\": [\n                {\n                    \"id_movimento_estoque_produto\": 4756,\n                    \"produto\": \"Computador Desktop Dell XPS i1200-M30D: 2 Unidade - (UN)\",\n                    \"valor\": \"23380.1\",\n                    \"quantidade\": 2,\n                    \"patrimonios\": [\n                        {\n                            \"id_produto_item\": 214425,\n                            \"produto\": {\n                                \"id_produto\": 180,\n                                \"nome\": \"Computador Desktop Dell XPS i1200-M30D\",\n                                \"controle_patrimonial\": true\n                            },\n                            \"local_estoque\": {\n                                \"id_local_estoque\": 9,\n                                \"descricao\": \"HUBSOFT\"\n                            },\n                            \"produto_item_status\": {\n                                \"id_produto_item_status\": 2,\n                                \"descricao\": \"ESTOQUE\",\n                                \"prefixo\": \"estoque\"\n                            },\n                            \"identificador_proprio\": null,\n                            \"codigo_item\": 178759,\n                            \"numero_serie\": null,\n                            \"mac_address\": null,\n                            \"observacoes\": null\n                        },\n                        {\n                            \"id_produto_item\": 214426,\n                            \"produto\": {\n                                \"id_produto\": 180,\n                                \"nome\": \"Computador Desktop Dell XPS i1200-M30D\",\n                                \"controle_patrimonial\": true\n                            },\n                            \"local_estoque\": {\n                                \"id_local_estoque\": 9,\n                                \"descricao\": \"HUBSOFT\"\n                            },\n                            \"produto_item_status\": {\n                                \"id_produto_item_status\": 2,\n                                \"descricao\": \"ESTOQUE\",\n                                \"prefixo\": \"estoque\"\n                            },\n                            \"identificador_proprio\": null,\n                            \"codigo_item\": 178760,\n                            \"numero_serie\": null,\n                            \"mac_address\": null,\n                            \"observacoes\": null\n                        }\n                    ]\n                }\n            ],\n            \"tipo_movimento_estoque\": {\n                \"id_tipo_movimento_estoque\": 2,\n                \"nome\": \"COMPRA\",\n                \"prefixo\": \"compra\",\n                \"produto_item_status\": {\n                    \"id_produto_item_status\": 2,\n                    \"descricao\": \"ESTOQUE\",\n                    \"prefixo\": \"estoque\"\n                }\n            },\n            \"usuario_cadastro\": {\n                \"id_usuario_cadastro\": 205,\n                \"nome\": \"Elisson Carvalho\",\n                \"email\": \"elisson@hubsoft.com.br\"\n            }\n        },\n        {\n            \"id_movimento_estoque\": 4342,\n            \"tipo\": \"entrada\",\n            \"local_estoque\": \"ESTOQUEs AGUAS LINDAS\",\n            \"vinculo\": {\n                \"id_local_estoque\": 50,\n                \"id_empresa\": 1,\n                \"descricao\": \"ESTOQUEs AGUAS LINDAS\",\n                \"id_endereco_numero\": 33914,\n                \"created_at\": \"2019-11-06 14:42:17\",\n                \"updated_at\": \"2023-06-14 11:52:32\",\n                \"deleted_at\": null,\n                \"ativo\": false,\n                \"fiscal\": true,\n                \"display\": \"ESTOQUEs AGUAS LINDAS\"\n            },\n            \"codigo_movimento\": \"1eedaf41-ca43-46e2-a8e7-a91f7c776168\",\n            \"data_movimento\": \"2023-08-02 09:55:27\",\n            \"data_cadastro\": \"2023-08-02 09:55:27\",\n            \"data_atualizacao\": \"2023-08-02 09:55:27\",\n            \"valor_total\": null,\n            \"observacao\": null,\n            \"produtos\": [\n                {\n                    \"id_movimento_estoque_produto\": 4757,\n                    \"produto\": \"ROTEADOR TI5: 1 Unidade - (UN)\",\n                    \"valor\": \"0\",\n                    \"quantidade\": 1,\n                    \"patrimonios\": []\n                }\n            ],\n            \"tipo_movimento_estoque\": {\n                \"id_tipo_movimento_estoque\": 12,\n                \"nome\": \"RETORNO AO ESTOQUE\",\n                \"prefixo\": \"retorno_estoque\",\n                \"produto_item_status\": {\n                    \"id_produto_item_status\": 2,\n                    \"descricao\": \"ESTOQUE\",\n                    \"prefixo\": \"estoque\"\n                }\n            },\n            \"usuario_cadastro\": {\n                \"id_usuario_cadastro\": 205,\n                \"nome\": \"Elisson Carvalho\",\n                \"email\": \"elisson@hubsoft.com.br\"\n            }\n        },\n        {\n            \"id_movimento_estoque\": 4343,\n            \"tipo\": \"saida\",\n            \"local_estoque\": \"\",\n            \"vinculo\": {\n                \"id_cliente_servico\": 15399,\n                \"id_cliente\": 24151,\n                \"id_servico\": 2735,\n                \"id_vencimento\": 4,\n                \"id_forma_cobranca\": 86,\n                \"id_servico_status\": 9,\n                \"valor\": 103.07,\n                \"numero_plano\": 5,\n                \"data_cadastro\": \"2021-02-01 15:29:38\",\n                \"data_primeiro_vencimento\": \"2019-09-16 00:00:00\",\n                \"data_habilitacao\": \"2019-08-01 10:25:21\",\n                \"id_motivo_cancelamento\": null,\n                \"id_usuario_vendedor\": 205,\n                \"nota_fiscal_separado\": false,\n                \"carne\": false,\n                \"boleto_separado\": true,\n                \"data_venda\": \"2019-08-26 19:28:14\",\n                \"data_cancelamento\": null,\n                \"id_cliente_conta_bancaria\": null,\n                \"data_ultima_cobranca\": null,\n                \"origem\": \"migrado\",\n                \"anotacoes\": null,\n                \"data_ultima_suspensao\": null,\n                \"id_cliente_servico_antigo\": 13310,\n                \"referencia\": null,\n                \"_id_porta_atendimento\": null,\n                \"tipo_cobranca\": \"postecipada\",\n                \"id_cliente_servico_associado\": null,\n                \"validade\": 12,\n                \"data_reajuste\": \"2022-06-21\",\n                \"id_perfil_suspensao\": 2,\n                \"id_servico_tecnologia\": 1,\n                \"id_usuario_cadastro\": 205,\n                \"agrupamento_nota\": \"desagrupado\",\n                \"id_cliente_perfil_emissao_nota\": null,\n                \"id_cliente_cartao\": null,\n                \"cartao_recorrente\": false,\n                \"hash\": \"2919f0ff-e952-470c-b511-500a7d326afa\",\n                \"data_renovacao\": \"2022-06-21\",\n                \"display\": \"(5) COMBO 10 MEGA - NOVO\",\n                \"valor_desconto\": 0,\n                \"valor_acrescimo\": 103.07,\n                \"valor_pacotes\": 50,\n                \"valor_com_pacote\": 153.07,\n                \"data_cadastro_br\": \"01/02/2021 15:29\",\n                \"data_venda_br\": \"26/08/2019\",\n                \"data_habilitacao_br\": \"01/08/2019 10:25\",\n                \"data_primeiro_vencimento_br\": \"16-09-2019\",\n                \"data_cancelamento_br\": null,\n                \"data_reajuste_br\": \"21/06/2022\",\n                \"data_renovacao_br\": \"21/06/2022\",\n                \"dias_suspenso\": 0,\n                \"permite_associar\": true,\n                \"data_inicio_contrato\": \"2022-06-21\",\n                \"data_inicio_contrato_br\": \"21/06/2022\",\n                \"data_fim_contrato\": \"2023-06-21\",\n                \"data_fim_contrato_br\": \"21/06/2023\",\n                \"data_inicio_reajuste\": \"2022-06-21\",\n                \"data_inicio_reajuste_br\": \"21/06/2022\",\n                \"data_fim_reajuste\": \"2023-06-21\",\n                \"data_fim_reajuste_br\": \"21/06/2023\",\n                \"contrato_vencido\": true,\n                \"servico\": {\n                    \"id_servico\": 2735,\n                    \"id_servico_tecnologia\": 19,\n                    \"id_servico_grupo\": 51,\n                    \"id_servico_status\": 10,\n                    \"descricao\": \"COMBO 10 MEGA - NOVO\",\n                    \"valor\": 0,\n                    \"tipo_pagamento\": \"mensal\",\n                    \"comissao_vendedor\": \"10\",\n                    \"tipo_comissao\": \"porcentagem\",\n                    \"quantidade_pontos\": null,\n                    \"tipo_cobranca\": \"postecipada\",\n                    \"data_cadastro\": \"2022-06-15 09:07:25\",\n                    \"ip_cadastro\": \"127.0.0.1\",\n                    \"ativo\": true,\n                    \"autentica_radius\": true,\n                    \"carne\": false,\n                    \"emite_contrato\": false,\n                    \"id_cfps\": null,\n                    \"permite_comissao_vendedor\": false,\n                    \"garantia_banda_download\": \"100\",\n                    \"garantia_banda_upload\": \"50\",\n                    \"permite_associar\": true,\n                    \"id_sici_grupo_banda\": null,\n                    \"id_sici_grupo_tecnologia\": null,\n                    \"validade\": 11,\n                    \"permite_prospecto\": false,\n                    \"nome_exibicao\": \"\",\n                    \"permite_mvno\": true,\n                    \"id_perfil_migracao_servico\": 19,\n                    \"usa_rede_neutra\": false,\n                    \"permite_degustacao\": true,\n                    \"travar_pacotes\": false,\n                    \"nome_radius\": \"HUBSOFT-SERVICE-2735\",\n                    \"display\": \"COMBO 10 MEGA - NOVO - (R$ 0.00)\",\n                    \"valor_pacotes\": 69.9,\n                    \"valor_com_pacote\": 69.9\n                }\n            },\n            \"codigo_movimento\": \"1eedaf41-ca43-46e2-a8e7-a91f7c776168\",\n            \"data_movimento\": \"2023-08-02 09:55:27\",\n            \"data_cadastro\": \"2023-08-02 09:55:27\",\n            \"data_atualizacao\": \"2023-08-02 09:55:27\",\n            \"valor_total\": null,\n            \"observacao\": null,\n            \"produtos\": [\n                {\n                    \"id_movimento_estoque_produto\": 4758,\n                    \"produto\": \"ROTEADOR TI5: 1 Unidade - (UN)\",\n                    \"valor\": \"0\",\n                    \"quantidade\": 1,\n                    \"patrimonios\": []\n                }\n            ],\n            \"tipo_movimento_estoque\": {\n                \"id_tipo_movimento_estoque\": 6,\n                \"nome\": \"CLIENTE\",\n                \"prefixo\": \"cliente_servico\",\n                \"produto_item_status\": {\n                    \"id_produto_item_status\": \"\",\n                    \"descricao\": \"\",\n                    \"prefixo\": \"\"\n                }\n            },\n            \"usuario_cadastro\": {\n                \"id_usuario_cadastro\": 205,\n                \"nome\": \"Elisson Carvalho\",\n                \"email\": \"elisson@hubsoft.com.br\"\n            },\n            \"cliente_servico\": {\n                \"id_cliente_servico\": 15399,\n                \"numero_plano\": null,\n                \"cliente\": {\n                    \"id_cliente\": 24151,\n                    \"nome_razaosocial\": \"DEAN WINCHESTER\",\n                    \"cpf_cnpj\": \"35527189078\"\n                }\n            }\n        },\n        {\n            \"id_movimento_estoque\": 4344,\n            \"tipo\": \"entrada\",\n            \"local_estoque\": \"ALMOXARIFADO\",\n            \"vinculo\": {\n                \"id\": 4897,\n                \"name\": \"Iasmin\",\n                \"email\": \"iasmin@hubsoft.com.br\",\n                \"created_at\": \"2022-02-09 10:21:30\",\n                \"updated_at\": \"2023-07-18 17:21:18\",\n                \"ativo\": true,\n                \"id_imagem_upload\": null,\n                \"id_funcionario\": null,\n                \"vendedor\": true,\n                \"tecnico\": true,\n                \"master\": false,\n                \"altera_plano_inferior\": true,\n                \"rastreamento\": true,\n                \"telefone_primario\": null,\n                \"telefone_secundario\": null,\n                \"sobreposicao_ordem_servico\": true,\n                \"id_push_notification\": 715,\n                \"gravar_no_radius\": false,\n                \"alterar_senha_primeiro_acesso\": false,\n                \"acessa_chat\": true,\n                \"suporte\": true,\n                \"conta_pagar_completo\": true,\n                \"nota_fiscal_completo\": true,\n                \"nfse_completo\": true,\n                \"nfe_completo\": true,\n                \"tipo_permissao\": \"individual\",\n                \"id_grupo_permissao\": null,\n                \"permite_acesso_api\": false,\n                \"limitar_autorizacao_cpe_ao_estoque\": false,\n                \"solicitacao_compra_completo\": true,\n                \"email_verificado\": true,\n                \"selecao_fotos_galeria\": true,\n                \"enabled2fa\": true\n            },\n            \"codigo_movimento\": \"1679ad1e-dd43-4f75-a8f7-d6b7c1840baa\",\n            \"data_movimento\": \"2023-08-02 10:31:39\",\n            \"data_cadastro\": \"2023-08-02 10:31:39\",\n            \"data_atualizacao\": \"2023-08-02 10:31:39\",\n            \"valor_total\": \"135\",\n            \"observacao\": \"teste 1\",\n            \"produtos\": [\n                {\n                    \"id_movimento_estoque_produto\": 4759,\n                    \"produto\": \"ROTEADOR: 3 Unidade - (UN)\",\n                    \"valor\": \"135\",\n                    \"quantidade\": 3,\n                    \"patrimonios\": [\n                        {\n                            \"id_produto_item\": 200113,\n                            \"produto\": {\n                                \"id_produto\": 655,\n                                \"nome\": \"ROTEADOR\",\n                                \"controle_patrimonial\": true\n                            },\n                            \"local_estoque\": {\n                                \"id_local_estoque\": 5,\n                                \"descricao\": \"ALMOXARIFADO\"\n                            },\n                            \"produto_item_status\": {\n                                \"id_produto_item_status\": 11,\n                                \"descricao\": \"Usuário\",\n                                \"prefixo\": \"usuario\"\n                            },\n                            \"identificador_proprio\": null,\n                            \"codigo_item\": 164460,\n                            \"numero_serie\": null,\n                            \"mac_address\": null,\n                            \"observacoes\": null\n                        },\n                        {\n                            \"id_produto_item\": 200114,\n                            \"produto\": {\n                                \"id_produto\": 655,\n                                \"nome\": \"ROTEADOR\",\n                                \"controle_patrimonial\": true\n                            },\n                            \"local_estoque\": {\n                                \"id_local_estoque\": 5,\n                                \"descricao\": \"ALMOXARIFADO\"\n                            },\n                            \"produto_item_status\": {\n                                \"id_produto_item_status\": 11,\n                                \"descricao\": \"Usuário\",\n                                \"prefixo\": \"usuario\"\n                            },\n                            \"identificador_proprio\": null,\n                            \"codigo_item\": 164461,\n                            \"numero_serie\": null,\n                            \"mac_address\": null,\n                            \"observacoes\": null\n                        },\n                        {\n                            \"id_produto_item\": 200115,\n                            \"produto\": {\n                                \"id_produto\": 655,\n                                \"nome\": \"ROTEADOR\",\n                                \"controle_patrimonial\": true\n                            },\n                            \"local_estoque\": {\n                                \"id_local_estoque\": 5,\n                                \"descricao\": \"ALMOXARIFADO\"\n                            },\n                            \"produto_item_status\": {\n                                \"id_produto_item_status\": 11,\n                                \"descricao\": \"Usuário\",\n                                \"prefixo\": \"usuario\"\n                            },\n                            \"identificador_proprio\": null,\n                            \"codigo_item\": 164462,\n                            \"numero_serie\": null,\n                            \"mac_address\": null,\n                            \"observacoes\": null\n                        },\n                        {\n                            \"id_produto_item\": 200113,\n                            \"produto\": {\n                                \"id_produto\": 655,\n                                \"nome\": \"ROTEADOR\",\n                                \"controle_patrimonial\": true\n                            },\n                            \"local_estoque\": {\n                                \"id_local_estoque\": 5,\n                                \"descricao\": \"ALMOXARIFADO\"\n                            },\n                            \"produto_item_status\": {\n                                \"id_produto_item_status\": 11,\n                                \"descricao\": \"Usuário\",\n                                \"prefixo\": \"usuario\"\n                            },\n                            \"identificador_proprio\": null,\n                            \"codigo_item\": 164460,\n                            \"numero_serie\": null,\n                            \"mac_address\": null,\n                            \"observacoes\": null\n                        },\n                        {\n                            \"id_produto_item\": 200114,\n                            \"produto\": {\n                                \"id_produto\": 655,\n                                \"nome\": \"ROTEADOR\",\n                                \"controle_patrimonial\": true\n                            },\n                            \"local_estoque\": {\n                                \"id_local_estoque\": 5,\n                                \"descricao\": \"ALMOXARIFADO\"\n                            },\n                            \"produto_item_status\": {\n                                \"id_produto_item_status\": 11,\n                                \"descricao\": \"Usuário\",\n                                \"prefixo\": \"usuario\"\n                            },\n                            \"identificador_proprio\": null,\n                            \"codigo_item\": 164461,\n                            \"numero_serie\": null,\n                            \"mac_address\": null,\n                            \"observacoes\": null\n                        },\n                        {\n                            \"id_produto_item\": 200115,\n                            \"produto\": {\n                                \"id_produto\": 655,\n                                \"nome\": \"ROTEADOR\",\n                                \"controle_patrimonial\": true\n                            },\n                            \"local_estoque\": {\n                                \"id_local_estoque\": 5,\n                                \"descricao\": \"ALMOXARIFADO\"\n                            },\n                            \"produto_item_status\": {\n                                \"id_produto_item_status\": 11,\n                                \"descricao\": \"Usuário\",\n                                \"prefixo\": \"usuario\"\n                            },\n                            \"identificador_proprio\": null,\n                            \"codigo_item\": 164462,\n                            \"numero_serie\": null,\n                            \"mac_address\": null,\n                            \"observacoes\": null\n                        }\n                    ]\n                }\n            ],\n            \"tipo_movimento_estoque\": {\n                \"id_tipo_movimento_estoque\": 8,\n                \"nome\": \"USUÁRIO\",\n                \"prefixo\": \"usuario\",\n                \"produto_item_status\": {\n                    \"id_produto_item_status\": 11,\n                    \"descricao\": \"Usuário\",\n                    \"prefixo\": \"usuario\"\n                }\n            },\n            \"usuario_cadastro\": {\n                \"id_usuario_cadastro\": 4897,\n                \"nome\": \"Iasmin\",\n                \"email\": \"iasmin@hubsoft.com.br\"\n            }\n        },\n        {\n            \"id_movimento_estoque\": 4345,\n            \"tipo\": \"saida\",\n            \"local_estoque\": \"ALMOXARIFADO\",\n            \"vinculo\": {\n                \"id_local_estoque\": 5,\n                \"id_empresa\": 1,\n                \"descricao\": \"ALMOXARIFADO\",\n                \"id_endereco_numero\": 16547,\n                \"created_at\": \"2018-04-23 14:06:36\",\n                \"updated_at\": \"2022-07-13 15:12:46\",\n                \"deleted_at\": null,\n                \"ativo\": true,\n                \"fiscal\": true,\n                \"display\": \"ALMOXARIFADO\"\n            },\n            \"codigo_movimento\": \"1679ad1e-dd43-4f75-a8f7-d6b7c1840baa\",\n            \"data_movimento\": \"2023-08-02 10:31:39\",\n            \"data_cadastro\": \"2023-08-02 10:31:39\",\n            \"data_atualizacao\": \"2023-08-02 10:31:39\",\n            \"valor_total\": \"135\",\n            \"observacao\": null,\n            \"produtos\": [\n                {\n                    \"id_movimento_estoque_produto\": 4760,\n                    \"produto\": \"ROTEADOR: 3 Unidade - (UN)\",\n                    \"valor\": \"135\",\n                    \"quantidade\": 3,\n                    \"patrimonios\": [\n                        {\n                            \"id_produto_item\": 200113,\n                            \"produto\": {\n                                \"id_produto\": 655,\n                                \"nome\": \"ROTEADOR\",\n                                \"controle_patrimonial\": true\n                            },\n                            \"local_estoque\": {\n                                \"id_local_estoque\": 5,\n                                \"descricao\": \"ALMOXARIFADO\"\n                            },\n                            \"produto_item_status\": {\n                                \"id_produto_item_status\": 11,\n                                \"descricao\": \"Usuário\",\n                                \"prefixo\": \"usuario\"\n                            },\n                            \"identificador_proprio\": null,\n                            \"codigo_item\": 164460,\n                            \"numero_serie\": null,\n                            \"mac_address\": null,\n                            \"observacoes\": null\n                        },\n                        {\n                            \"id_produto_item\": 200114,\n                            \"produto\": {\n                                \"id_produto\": 655,\n                                \"nome\": \"ROTEADOR\",\n                                \"controle_patrimonial\": true\n                            },\n                            \"local_estoque\": {\n                                \"id_local_estoque\": 5,\n                                \"descricao\": \"ALMOXARIFADO\"\n                            },\n                            \"produto_item_status\": {\n                                \"id_produto_item_status\": 11,\n                                \"descricao\": \"Usuário\",\n                                \"prefixo\": \"usuario\"\n                            },\n                            \"identificador_proprio\": null,\n                            \"codigo_item\": 164461,\n                            \"numero_serie\": null,\n                            \"mac_address\": null,\n                            \"observacoes\": null\n                        },\n                        {\n                            \"id_produto_item\": 200115,\n                            \"produto\": {\n                                \"id_produto\": 655,\n                                \"nome\": \"ROTEADOR\",\n                                \"controle_patrimonial\": true\n                            },\n                            \"local_estoque\": {\n                                \"id_local_estoque\": 5,\n                                \"descricao\": \"ALMOXARIFADO\"\n                            },\n                            \"produto_item_status\": {\n                                \"id_produto_item_status\": 11,\n                                \"descricao\": \"Usuário\",\n                                \"prefixo\": \"usuario\"\n                            },\n                            \"identificador_proprio\": null,\n                            \"codigo_item\": 164462,\n                            \"numero_serie\": null,\n                            \"mac_address\": null,\n                            \"observacoes\": null\n                        }\n                    ]\n                }\n            ],\n            \"tipo_movimento_estoque\": {\n                \"id_tipo_movimento_estoque\": 15,\n                \"nome\": \"LOCAL DE ESTOQUE\",\n                \"prefixo\": \"local_estoque\",\n                \"produto_item_status\": {\n                    \"id_produto_item_status\": 2,\n                    \"descricao\": \"ESTOQUE\",\n                    \"prefixo\": \"estoque\"\n                }\n            },\n            \"usuario_cadastro\": {\n                \"id_usuario_cadastro\": 4897,\n                \"nome\": \"Iasmin\",\n                \"email\": \"iasmin@hubsoft.com.br\"\n            }\n        },\n        {\n            \"id_movimento_estoque\": 4346,\n            \"tipo\": \"entrada\",\n            \"local_estoque\": \"ESTOQUE GERAL EMPRESA 2B\",\n            \"vinculo\": {\n                \"id\": 4897,\n                \"name\": \"Iasmin\",\n                \"email\": \"iasmin@hubsoft.com.br\",\n                \"created_at\": \"2022-02-09 10:21:30\",\n                \"updated_at\": \"2023-07-18 17:21:18\",\n                \"ativo\": true,\n                \"id_imagem_upload\": null,\n                \"id_funcionario\": null,\n                \"vendedor\": true,\n                \"tecnico\": true,\n                \"master\": false,\n                \"altera_plano_inferior\": true,\n                \"rastreamento\": true,\n                \"telefone_primario\": null,\n                \"telefone_secundario\": null,\n                \"sobreposicao_ordem_servico\": true,\n                \"id_push_notification\": 715,\n                \"gravar_no_radius\": false,\n                \"alterar_senha_primeiro_acesso\": false,\n                \"acessa_chat\": true,\n                \"suporte\": true,\n                \"conta_pagar_completo\": true,\n                \"nota_fiscal_completo\": true,\n                \"nfse_completo\": true,\n                \"nfe_completo\": true,\n                \"tipo_permissao\": \"individual\",\n                \"id_grupo_permissao\": null,\n                \"permite_acesso_api\": false,\n                \"limitar_autorizacao_cpe_ao_estoque\": false,\n                \"solicitacao_compra_completo\": true,\n                \"email_verificado\": true,\n                \"selecao_fotos_galeria\": true,\n                \"enabled2fa\": true\n            },\n            \"codigo_movimento\": \"43e1e157-63ae-4803-92e3-1b6ce3cb55dd\",\n            \"data_movimento\": \"2023-08-02 10:32:28\",\n            \"data_cadastro\": \"2023-08-02 10:32:28\",\n            \"data_atualizacao\": \"2023-08-02 10:32:35\",\n            \"valor_total\": \"37.5\",\n            \"observacao\": null,\n            \"produtos\": [\n                {\n                    \"id_movimento_estoque_produto\": 4761,\n                    \"produto\": \"BOBINA DROP: 50 Metro - (m)\",\n                    \"valor\": \"37.5\",\n                    \"quantidade\": 50,\n                    \"patrimonios\": []\n                }\n            ],\n            \"tipo_movimento_estoque\": {\n                \"id_tipo_movimento_estoque\": 8,\n                \"nome\": \"USUÁRIO\",\n                \"prefixo\": \"usuario\",\n                \"produto_item_status\": {\n                    \"id_produto_item_status\": 11,\n                    \"descricao\": \"Usuário\",\n                    \"prefixo\": \"usuario\"\n                }\n            },\n            \"usuario_cadastro\": {\n                \"id_usuario_cadastro\": 4897,\n                \"nome\": \"Iasmin\",\n                \"email\": \"iasmin@hubsoft.com.br\"\n            }\n        },\n        {\n            \"id_movimento_estoque\": 4347,\n            \"tipo\": \"saida\",\n            \"local_estoque\": \"ESTOQUE GERAL EMPRESA 2B\",\n            \"vinculo\": {\n                \"id_local_estoque\": 90,\n                \"id_empresa\": 1,\n                \"descricao\": \"ESTOQUE GERAL EMPRESA 2B\",\n                \"id_endereco_numero\": 40799,\n                \"created_at\": \"2020-07-10 10:26:10\",\n                \"updated_at\": \"2022-12-07 16:55:55\",\n                \"deleted_at\": null,\n                \"ativo\": true,\n                \"fiscal\": true,\n                \"display\": \"ESTOQUE GERAL EMPRESA 2B\"\n            },\n            \"codigo_movimento\": \"43e1e157-63ae-4803-92e3-1b6ce3cb55dd\",\n            \"data_movimento\": \"2023-08-02 10:32:28\",\n            \"data_cadastro\": \"2023-08-02 10:32:28\",\n            \"data_atualizacao\": \"2023-08-02 10:32:28\",\n            \"valor_total\": \"37.5\",\n            \"observacao\": null,\n            \"produtos\": [\n                {\n                    \"id_movimento_estoque_produto\": 4762,\n                    \"produto\": \"BOBINA DROP: 50 Metro - (m)\",\n                    \"valor\": \"37.5\",\n                    \"quantidade\": 50,\n                    \"patrimonios\": []\n                }\n            ],\n            \"tipo_movimento_estoque\": {\n                \"id_tipo_movimento_estoque\": 15,\n                \"nome\": \"LOCAL DE ESTOQUE\",\n                \"prefixo\": \"local_estoque\",\n                \"produto_item_status\": {\n                    \"id_produto_item_status\": 2,\n                    \"descricao\": \"ESTOQUE\",\n                    \"prefixo\": \"estoque\"\n                }\n            },\n            \"usuario_cadastro\": {\n                \"id_usuario_cadastro\": 4897,\n                \"nome\": \"Iasmin\",\n                \"email\": \"iasmin@hubsoft.com.br\"\n            }\n        },\n        {\n            \"id_movimento_estoque\": 4348,\n            \"tipo\": \"entrada\",\n            \"local_estoque\": \"HUBSOFT\",\n            \"vinculo\": {\n                \"id_local_estoque\": 9,\n                \"id_empresa\": 1,\n                \"descricao\": \"HUBSOFT\",\n                \"id_endereco_numero\": 16702,\n                \"created_at\": \"2018-07-27 14:08:33\",\n                \"updated_at\": \"2022-07-08 10:54:42\",\n                \"deleted_at\": null,\n                \"ativo\": true,\n                \"fiscal\": false,\n                \"display\": \"HUBSOFT\"\n            },\n            \"codigo_movimento\": \"540ecbb1-e1c3-44ac-a5ee-04dbdc90eb02\",\n            \"data_movimento\": \"2023-08-02 10:47:03\",\n            \"data_cadastro\": \"2023-08-02 10:47:03\",\n            \"data_atualizacao\": \"2023-08-02 10:47:03\",\n            \"valor_total\": \"23002.88\",\n            \"observacao\": null,\n            \"produtos\": [\n                {\n                    \"id_movimento_estoque_produto\": 4763,\n                    \"produto\": \"Celular Xiaomi : 20 Unidade - (UN)\",\n                    \"valor\": \"20000\",\n                    \"quantidade\": 20,\n                    \"patrimonios\": [\n                        {\n                            \"id_produto_item\": 130087,\n                            \"produto\": {\n                                \"id_produto\": 676,\n                                \"nome\": \"Celular Xiaomi \",\n                                \"controle_patrimonial\": true\n                            },\n                            \"local_estoque\": {\n                                \"id_local_estoque\": 9,\n                                \"descricao\": \"HUBSOFT\"\n                            },\n                            \"produto_item_status\": {\n                                \"id_produto_item_status\": 2,\n                                \"descricao\": \"ESTOQUE\",\n                                \"prefixo\": \"estoque\"\n                            },\n                            \"identificador_proprio\": null,\n                            \"codigo_item\": 112985,\n                            \"numero_serie\": null,\n                            \"mac_address\": null,\n                            \"observacoes\": null\n                        },\n                        {\n                            \"id_produto_item\": 130088,\n                            \"produto\": {\n                                \"id_produto\": 676,\n                                \"nome\": \"Celular Xiaomi \",\n                                \"controle_patrimonial\": true\n                            },\n                            \"local_estoque\": {\n                                \"id_local_estoque\": 9,\n                                \"descricao\": \"HUBSOFT\"\n                            },\n                            \"produto_item_status\": {\n                                \"id_produto_item_status\": 2,\n                                \"descricao\": \"ESTOQUE\",\n                                \"prefixo\": \"estoque\"\n                            },\n                            \"identificador_proprio\": null,\n                            \"codigo_item\": 112986,\n                            \"numero_serie\": null,\n                            \"mac_address\": null,\n                            \"observacoes\": null\n                        },\n                        {\n                            \"id_produto_item\": 130184,\n                            \"produto\": {\n                                \"id_produto\": 676,\n                                \"nome\": \"Celular Xiaomi \",\n                                \"controle_patrimonial\": true\n                            },\n                            \"local_estoque\": {\n                                \"id_local_estoque\": 9,\n                                \"descricao\": \"HUBSOFT\"\n                            },\n                            \"produto_item_status\": {\n                                \"id_produto_item_status\": 2,\n                                \"descricao\": \"ESTOQUE\",\n                                \"prefixo\": \"estoque\"\n                            },\n                            \"identificador_proprio\": null,\n                            \"codigo_item\": 113080,\n                            \"numero_serie\": null,\n                            \"mac_address\": null,\n                            \"observacoes\": null\n                        },\n                        {\n                            \"id_produto_item\": 130185,\n                            \"produto\": {\n                                \"id_produto\": 676,\n                                \"nome\": \"Celular Xiaomi \",\n                                \"controle_patrimonial\": true\n                            },\n                            \"local_estoque\": {\n                                \"id_local_estoque\": 9,\n                                \"descricao\": \"HUBSOFT\"\n                            },\n                            \"produto_item_status\": {\n                                \"id_produto_item_status\": 2,\n                                \"descricao\": \"ESTOQUE\",\n                                \"prefixo\": \"estoque\"\n                            },\n                            \"identificador_proprio\": null,\n                            \"codigo_item\": 113081,\n                            \"numero_serie\": null,\n                            \"mac_address\": null,\n                            \"observacoes\": null\n                        },\n                        {\n                            \"id_produto_item\": 130186,\n                            \"produto\": {\n                                \"id_produto\": 676,\n                                \"nome\": \"Celular Xiaomi \",\n                                \"controle_patrimonial\": true\n                            },\n                            \"local_estoque\": {\n                                \"id_local_estoque\": 9,\n                                \"descricao\": \"HUBSOFT\"\n                            },\n                            \"produto_item_status\": {\n                                \"id_produto_item_status\": 2,\n                                \"descricao\": \"ESTOQUE\",\n                                \"prefixo\": \"estoque\"\n                            },\n                            \"identificador_proprio\": null,\n                            \"codigo_item\": 113082,\n                            \"numero_serie\": null,\n                            \"mac_address\": null,\n                            \"observacoes\": null\n                        },\n                        {\n                            \"id_produto_item\": 130187,\n                            \"produto\": {\n                                \"id_produto\": 676,\n                                \"nome\": \"Celular Xiaomi \",\n                                \"controle_patrimonial\": true\n                            },\n                            \"local_estoque\": {\n                                \"id_local_estoque\": 9,\n                                \"descricao\": \"HUBSOFT\"\n                            },\n                            \"produto_item_status\": {\n                                \"id_produto_item_status\": 2,\n                                \"descricao\": \"ESTOQUE\",\n                                \"prefixo\": \"estoque\"\n                            },\n                            \"identificador_proprio\": null,\n                            \"codigo_item\": 113083,\n                            \"numero_serie\": null,\n                            \"mac_address\": null,\n                            \"observacoes\": null\n                        },\n                        {\n                            \"id_produto_item\": 130188,\n                            \"produto\": {\n                                \"id_produto\": 676,\n                                \"nome\": \"Celular Xiaomi \",\n                                \"controle_patrimonial\": true\n                            },\n                            \"local_estoque\": {\n                                \"id_local_estoque\": 9,\n                                \"descricao\": \"HUBSOFT\"\n                            },\n                            \"produto_item_status\": {\n                                \"id_produto_item_status\": 2,\n                                \"descricao\": \"ESTOQUE\",\n                                \"prefixo\": \"estoque\"\n                            },\n                            \"identificador_proprio\": null,\n                            \"codigo_item\": 113084,\n                            \"numero_serie\": null,\n                            \"mac_address\": null,\n                            \"observacoes\": null\n                        },\n                        {\n                            \"id_produto_item\": 130189,\n                            \"produto\": {\n                                \"id_produto\": 676,\n                                \"nome\": \"Celular Xiaomi \",\n                                \"controle_patrimonial\": true\n                            },\n                            \"local_estoque\": {\n                                \"id_local_estoque\": 9,\n                                \"descricao\": \"HUBSOFT\"\n                            },\n                            \"produto_item_status\": {\n                                \"id_produto_item_status\": 2,\n                                \"descricao\": \"ESTOQUE\",\n                                \"prefixo\": \"estoque\"\n                            },\n                            \"identificador_proprio\": null,\n                            \"codigo_item\": 113085,\n                            \"numero_serie\": null,\n                            \"mac_address\": null,\n                            \"observacoes\": null\n                        },\n                        {\n                            \"id_produto_item\": 130190,\n                            \"produto\": {\n                                \"id_produto\": 676,\n                                \"nome\": \"Celular Xiaomi \",\n                                \"controle_patrimonial\": true\n                            },\n                            \"local_estoque\": {\n                                \"id_local_estoque\": 9,\n                                \"descricao\": \"HUBSOFT\"\n                            },\n                            \"produto_item_status\": {\n                                \"id_produto_item_status\": 2,\n                                \"descricao\": \"ESTOQUE\",\n                                \"prefixo\": \"estoque\"\n                            },\n                            \"identificador_proprio\": null,\n                            \"codigo_item\": 113086,\n                            \"numero_serie\": null,\n                            \"mac_address\": null,\n                            \"observacoes\": null\n                        },\n                        {\n                            \"id_produto_item\": 130197,\n                            \"produto\": {\n                                \"id_produto\": 676,\n                                \"nome\": \"Celular Xiaomi \",\n                                \"controle_patrimonial\": true\n                            },\n                            \"local_estoque\": {\n                                \"id_local_estoque\": 9,\n                                \"descricao\": \"HUBSOFT\"\n                            },\n                            \"produto_item_status\": {\n                                \"id_produto_item_status\": 2,\n                                \"descricao\": \"ESTOQUE\",\n                                \"prefixo\": \"estoque\"\n                            },\n                            \"identificador_proprio\": null,\n                            \"codigo_item\": 113093,\n                            \"numero_serie\": null,\n                            \"mac_address\": null,\n                            \"observacoes\": null\n                        },\n                        {\n                            \"id_produto_item\": 130198,\n                            \"produto\": {\n                                \"id_produto\": 676,\n                                \"nome\": \"Celular Xiaomi \",\n                                \"controle_patrimonial\": true\n                            },\n                            \"local_estoque\": {\n                                \"id_local_estoque\": 9,\n                                \"descricao\": \"HUBSOFT\"\n                            },\n                            \"produto_item_status\": {\n                                \"id_produto_item_status\": 2,\n                                \"descricao\": \"ESTOQUE\",\n                                \"prefixo\": \"estoque\"\n                            },\n                            \"identificador_proprio\": null,\n                            \"codigo_item\": 113094,\n                            \"numero_serie\": null,\n                            \"mac_address\": null,\n                            \"observacoes\": null\n                        },\n                        {\n                            \"id_produto_item\": 130199,\n                            \"produto\": {\n                                \"id_produto\": 676,\n                                \"nome\": \"Celular Xiaomi \",\n                                \"controle_patrimonial\": true\n                            },\n                            \"local_estoque\": {\n                                \"id_local_estoque\": 9,\n                                \"descricao\": \"HUBSOFT\"\n                            },\n                            \"produto_item_status\": {\n                                \"id_produto_item_status\": 2,\n                                \"descricao\": \"ESTOQUE\",\n                                \"prefixo\": \"estoque\"\n                            },\n                            \"identificador_proprio\": null,\n                            \"codigo_item\": 113095,\n                            \"numero_serie\": null,\n                            \"mac_address\": null,\n                            \"observacoes\": null\n                        },\n                        {\n                            \"id_produto_item\": 130200,\n                            \"produto\": {\n                                \"id_produto\": 676,\n                                \"nome\": \"Celular Xiaomi \",\n                                \"controle_patrimonial\": true\n                            },\n                            \"local_estoque\": {\n                                \"id_local_estoque\": 9,\n                                \"descricao\": \"HUBSOFT\"\n                            },\n                            \"produto_item_status\": {\n                                \"id_produto_item_status\": 2,\n                                \"descricao\": \"ESTOQUE\",\n                                \"prefixo\": \"estoque\"\n                            },\n                            \"identificador_proprio\": null,\n                            \"codigo_item\": 113096,\n                            \"numero_serie\": null,\n                            \"mac_address\": null,\n                            \"observacoes\": null\n                        },\n                        {\n                            \"id_produto_item\": 130201,\n                            \"produto\": {\n                                \"id_produto\": 676,\n                                \"nome\": \"Celular Xiaomi \",\n                                \"controle_patrimonial\": true\n                            },\n                            \"local_estoque\": {\n                                \"id_local_estoque\": 9,\n                                \"descricao\": \"HUBSOFT\"\n                            },\n                            \"produto_item_status\": {\n                                \"id_produto_item_status\": 2,\n                                \"descricao\": \"ESTOQUE\",\n                                \"prefixo\": \"estoque\"\n                            },\n                            \"identificador_proprio\": null,\n                            \"codigo_item\": 113097,\n                            \"numero_serie\": null,\n                            \"mac_address\": null,\n                            \"observacoes\": null\n                        },\n                        {\n                            \"id_produto_item\": 130202,\n                            \"produto\": {\n                                \"id_produto\": 676,\n                                \"nome\": \"Celular Xiaomi \",\n                                \"controle_patrimonial\": true\n                            },\n                            \"local_estoque\": {\n                                \"id_local_estoque\": 9,\n                                \"descricao\": \"HUBSOFT\"\n                            },\n                            \"produto_item_status\": {\n                                \"id_produto_item_status\": 2,\n                                \"descricao\": \"ESTOQUE\",\n                                \"prefixo\": \"estoque\"\n                            },\n                            \"identificador_proprio\": null,\n                            \"codigo_item\": 113098,\n                            \"numero_serie\": null,\n                            \"mac_address\": null,\n                            \"observacoes\": null\n                        },\n                        {\n                            \"id_produto_item\": 130204,\n                            \"produto\": {\n                                \"id_produto\": 676,\n                                \"nome\": \"Celular Xiaomi \",\n                                \"controle_patrimonial\": true\n                            },\n                            \"local_estoque\": {\n                                \"id_local_estoque\": 9,\n                                \"descricao\": \"HUBSOFT\"\n                            },\n                            \"produto_item_status\": {\n                                \"id_produto_item_status\": 2,\n                                \"descricao\": \"ESTOQUE\",\n                                \"prefixo\": \"estoque\"\n                            },\n                            \"identificador_proprio\": null,\n                            \"codigo_item\": 113100,\n                            \"numero_serie\": null,\n                            \"mac_address\": null,\n                            \"observacoes\": null\n                        },\n                        {\n                            \"id_produto_item\": 133278,\n                            \"produto\": {\n                                \"id_produto\": 676,\n                                \"nome\": \"Celular Xiaomi \",\n                                \"controle_patrimonial\": true\n                            },\n                            \"local_estoque\": {\n                                \"id_local_estoque\": 9,\n                                \"descricao\": \"HUBSOFT\"\n                            },\n                            \"produto_item_status\": {\n                                \"id_produto_item_status\": 2,\n                                \"descricao\": \"ESTOQUE\",\n                                \"prefixo\": \"estoque\"\n                            },\n                            \"identificador_proprio\": null,\n                            \"codigo_item\": 115730,\n                            \"numero_serie\": null,\n                            \"mac_address\": null,\n                            \"observacoes\": null\n                        },\n                        {\n                            \"id_produto_item\": 133279,\n                            \"produto\": {\n                                \"id_produto\": 676,\n                                \"nome\": \"Celular Xiaomi \",\n                                \"controle_patrimonial\": true\n                            },\n                            \"local_estoque\": {\n                                \"id_local_estoque\": 9,\n                                \"descricao\": \"HUBSOFT\"\n                            },\n                            \"produto_item_status\": {\n                                \"id_produto_item_status\": 2,\n                                \"descricao\": \"ESTOQUE\",\n                                \"prefixo\": \"estoque\"\n                            },\n                            \"identificador_proprio\": null,\n                            \"codigo_item\": 115731,\n                            \"numero_serie\": null,\n                            \"mac_address\": null,\n                            \"observacoes\": null\n                        },\n                        {\n                            \"id_produto_item\": 133280,\n                            \"produto\": {\n                                \"id_produto\": 676,\n                                \"nome\": \"Celular Xiaomi \",\n                                \"controle_patrimonial\": true\n                            },\n                            \"local_estoque\": {\n                                \"id_local_estoque\": 9,\n                                \"descricao\": \"HUBSOFT\"\n                            },\n                            \"produto_item_status\": {\n                                \"id_produto_item_status\": 2,\n                                \"descricao\": \"ESTOQUE\",\n                                \"prefixo\": \"estoque\"\n                            },\n                            \"identificador_proprio\": null,\n                            \"codigo_item\": 115732,\n                            \"numero_serie\": null,\n                            \"mac_address\": null,\n                            \"observacoes\": null\n                        },\n                        {\n                            \"id_produto_item\": 133281,\n                            \"produto\": {\n                                \"id_produto\": 676,\n                                \"nome\": \"Celular Xiaomi \",\n                                \"controle_patrimonial\": true\n                            },\n                            \"local_estoque\": {\n                                \"id_local_estoque\": 9,\n                                \"descricao\": \"HUBSOFT\"\n                            },\n                            \"produto_item_status\": {\n                                \"id_produto_item_status\": 2,\n                                \"descricao\": \"ESTOQUE\",\n                                \"prefixo\": \"estoque\"\n                            },\n                            \"identificador_proprio\": null,\n                            \"codigo_item\": 115733,\n                            \"numero_serie\": null,\n                            \"mac_address\": null,\n                            \"observacoes\": null\n                        }\n                    ]\n                },\n                {\n                    \"id_movimento_estoque_produto\": 4764,\n                    \"produto\": \"Mouse Xiaomi Gaming com fio/sem fio: 8 Unidade - (UN)\",\n                    \"valor\": \"2842.88\",\n                    \"quantidade\": 8,\n                    \"patrimonios\": [\n                        {\n                            \"id_produto_item\": 153818,\n                            \"produto\": {\n                                \"id_produto\": 3850,\n                                \"nome\": \"Mouse Xiaomi Gaming com fio/sem fio\",\n                                \"controle_patrimonial\": true\n                            },\n                            \"local_estoque\": {\n                                \"id_local_estoque\": 9,\n                                \"descricao\": \"HUBSOFT\"\n                            },\n                            \"produto_item_status\": {\n                                \"id_produto_item_status\": 2,\n                                \"descricao\": \"ESTOQUE\",\n                                \"prefixo\": \"estoque\"\n                            },\n                            \"identificador_proprio\": null,\n                            \"codigo_item\": 130834,\n                            \"numero_serie\": null,\n                            \"mac_address\": null,\n                            \"observacoes\": null\n                        },\n                        {\n                            \"id_produto_item\": 153819,\n                            \"produto\": {\n                                \"id_produto\": 3850,\n                                \"nome\": \"Mouse Xiaomi Gaming com fio/sem fio\",\n                                \"controle_patrimonial\": true\n                            },\n                            \"local_estoque\": {\n                                \"id_local_estoque\": 9,\n                                \"descricao\": \"HUBSOFT\"\n                            },\n                            \"produto_item_status\": {\n                                \"id_produto_item_status\": 2,\n                                \"descricao\": \"ESTOQUE\",\n                                \"prefixo\": \"estoque\"\n                            },\n                            \"identificador_proprio\": null,\n                            \"codigo_item\": 130835,\n                            \"numero_serie\": null,\n                            \"mac_address\": null,\n                            \"observacoes\": null\n                        },\n                        {\n                            \"id_produto_item\": 153820,\n                            \"produto\": {\n                                \"id_produto\": 3850,\n                                \"nome\": \"Mouse Xiaomi Gaming com fio/sem fio\",\n                                \"controle_patrimonial\": true\n                            },\n                            \"local_estoque\": {\n                                \"id_local_estoque\": 9,\n                                \"descricao\": \"HUBSOFT\"\n                            },\n                            \"produto_item_status\": {\n                                \"id_produto_item_status\": 2,\n                                \"descricao\": \"ESTOQUE\",\n                                \"prefixo\": \"estoque\"\n                            },\n                            \"identificador_proprio\": null,\n                            \"codigo_item\": 130836,\n                            \"numero_serie\": null,\n                            \"mac_address\": null,\n                            \"observacoes\": null\n                        },\n                        {\n                            \"id_produto_item\": 153821,\n                            \"produto\": {\n                                \"id_produto\": 3850,\n                                \"nome\": \"Mouse Xiaomi Gaming com fio/sem fio\",\n                                \"controle_patrimonial\": true\n                            },\n                            \"local_estoque\": {\n                                \"id_local_estoque\": 9,\n                                \"descricao\": \"HUBSOFT\"\n                            },\n                            \"produto_item_status\": {\n                                \"id_produto_item_status\": 2,\n                                \"descricao\": \"ESTOQUE\",\n                                \"prefixo\": \"estoque\"\n                            },\n                            \"identificador_proprio\": null,\n                            \"codigo_item\": 130837,\n                            \"numero_serie\": null,\n                            \"mac_address\": null,\n                            \"observacoes\": null\n                        },\n                        {\n                            \"id_produto_item\": 153822,\n                            \"produto\": {\n                                \"id_produto\": 3850,\n                                \"nome\": \"Mouse Xiaomi Gaming com fio/sem fio\",\n                                \"controle_patrimonial\": true\n                            },\n                            \"local_estoque\": {\n                                \"id_local_estoque\": 9,\n                                \"descricao\": \"HUBSOFT\"\n                            },\n                            \"produto_item_status\": {\n                                \"id_produto_item_status\": 2,\n                                \"descricao\": \"ESTOQUE\",\n                                \"prefixo\": \"estoque\"\n                            },\n                            \"identificador_proprio\": null,\n                            \"codigo_item\": 130838,\n                            \"numero_serie\": null,\n                            \"mac_address\": null,\n                            \"observacoes\": null\n                        },\n                        {\n                            \"id_produto_item\": 153823,\n                            \"produto\": {\n                                \"id_produto\": 3850,\n                                \"nome\": \"Mouse Xiaomi Gaming com fio/sem fio\",\n                                \"controle_patrimonial\": true\n                            },\n                            \"local_estoque\": {\n                                \"id_local_estoque\": 9,\n                                \"descricao\": \"HUBSOFT\"\n                            },\n                            \"produto_item_status\": {\n                                \"id_produto_item_status\": 2,\n                                \"descricao\": \"ESTOQUE\",\n                                \"prefixo\": \"estoque\"\n                            },\n                            \"identificador_proprio\": null,\n                            \"codigo_item\": 130839,\n                            \"numero_serie\": null,\n                            \"mac_address\": null,\n                            \"observacoes\": null\n                        },\n                        {\n                            \"id_produto_item\": 153825,\n                            \"produto\": {\n                                \"id_produto\": 3850,\n                                \"nome\": \"Mouse Xiaomi Gaming com fio/sem fio\",\n                                \"controle_patrimonial\": true\n                            },\n                            \"local_estoque\": {\n                                \"id_local_estoque\": 9,\n                                \"descricao\": \"HUBSOFT\"\n                            },\n                            \"produto_item_status\": {\n                                \"id_produto_item_status\": 2,\n                                \"descricao\": \"ESTOQUE\",\n                                \"prefixo\": \"estoque\"\n                            },\n                            \"identificador_proprio\": null,\n                            \"codigo_item\": 130841,\n                            \"numero_serie\": null,\n                            \"mac_address\": null,\n                            \"observacoes\": null\n                        },\n                        {\n                            \"id_produto_item\": 153826,\n                            \"produto\": {\n                                \"id_produto\": 3850,\n                                \"nome\": \"Mouse Xiaomi Gaming com fio/sem fio\",\n                                \"controle_patrimonial\": true\n                            },\n                            \"local_estoque\": {\n                                \"id_local_estoque\": 9,\n                                \"descricao\": \"HUBSOFT\"\n                            },\n                            \"produto_item_status\": {\n                                \"id_produto_item_status\": 2,\n                                \"descricao\": \"ESTOQUE\",\n                                \"prefixo\": \"estoque\"\n                            },\n                            \"identificador_proprio\": null,\n                            \"codigo_item\": 130842,\n                            \"numero_serie\": null,\n                            \"mac_address\": null,\n                            \"observacoes\": null\n                        }\n                    ]\n                },\n                {\n                    \"id_movimento_estoque_produto\": 4765,\n                    \"produto\": \"Bobina Fibra Óptica Vexus Drop: 1000 Metro - (m)\",\n                    \"valor\": \"160\",\n                    \"quantidade\": 1000,\n                    \"patrimonios\": []\n                }\n            ],\n            \"tipo_movimento_estoque\": {\n                \"id_tipo_movimento_estoque\": 11,\n                \"nome\": \"TRANSFERÊNCIA\",\n                \"prefixo\": \"transferencia\",\n                \"produto_item_status\": {\n                    \"id_produto_item_status\": 2,\n                    \"descricao\": \"ESTOQUE\",\n                    \"prefixo\": \"estoque\"\n                }\n            },\n            \"usuario_cadastro\": {\n                \"id_usuario_cadastro\": 205,\n                \"nome\": \"Elisson Carvalho\",\n                \"email\": \"elisson@hubsoft.com.br\"\n            }\n        }\n    ]\n}"
+								},
+								{
+									"id": "21e89759-07bf-431d-a521-336a3f4f7aeb",
+									"name": "Erro",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/estoque/movimento_estoque?itens_por_pagina=10&data_inicio=2023-08-01&data_fim=2023-08-31&tipo_data=cadastro",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"estoque",
+												"movimento_estoque"
+											],
+											"query": [
+												{
+													"key": "pagina",
+													"value": "1",
+													"description": "(Obrigatório) Número da Página",
+													"disabled": true
+												},
+												{
+													"key": "itens_por_pagina",
+													"value": "10",
+													"description": "(Opcional) Itens por Página. Se não preenchido será atribuído 100 por padrão. Máximo: 500"
+												},
+												{
+													"key": "data_inicio",
+													"value": "2023-08-01",
+													"description": "(Opcional) Data no Formato `DateTime`"
+												},
+												{
+													"key": "data_fim",
+													"value": "2023-08-31",
+													"description": "(Opcional) Data no Formato `DateTime`"
+												},
+												{
+													"key": "tipo_data",
+													"value": "cadastro",
+													"description": "(Opcional) Determina o tipo de data que será utilizado para filtrar. Se nada for preenchido será filtrado pela data de cadastro como padrão."
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Aug 2023 14:32:15 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Aug 2023 14:32:15 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.4.28"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=smoiYmPqJ6VZgQLx98omH7JdCIc62fV0INffIE33; expires=Mon, 21-Aug-2023 15:32:15 GMT; Max-Age=3600; path=/; httponly"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"error\",\n    \"msg\": \"Favor preencher os campos obrigatórios de acordo com as especificações\",\n    \"errors\": [\n        \"O campo pagina é obrigatório.\"\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Encontrar por ID",
+							"id": "4ec74b65-7730-4405-bafc-3b59cfb919ad",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": ""
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/v1/integracao/estoque/movimento_estoque/:id_movimento_estoque",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"integracao",
+										"estoque",
+										"movimento_estoque",
+										":id_movimento_estoque"
+									],
+									"variable": [
+										{
+											"id": "9ecfe6cb-b4c9-47b2-9778-1c0ac51c759f",
+											"key": "id_movimento_estoque",
+											"value": "integer",
+											"description": "ID da Movimentação de Estoque"
+										}
+									]
+								},
+								"description": "Através desse endpoint será possível capturar todos os dados de um movimento de estoque, seja ele de saída ou entrada."
+							},
+							"response": [
+								{
+									"id": "d6fdcc6a-2873-4f3d-a5ac-873810d1114f",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{url}}/api/v1/integracao/estoque/movimento_estoque/4492"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Aug 2023 14:56:41 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Aug 2023 14:56:41 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.4.28"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=smoiYmPqJ6VZgQLx98omH7JdCIc62fV0INffIE33; expires=Mon, 21-Aug-2023 15:56:41 GMT; Max-Age=3600; path=/; httponly"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Movimento de Estoque de ID 4492 consultado com sucesso\",\n    \"movimento_estoque\": {\n        \"id_movimento_estoque\": 4492,\n        \"tipo\": \"entrada\",\n        \"local_estoque\": \"Estoque na Cidade XPTO\",\n        \"vinculo\": {\n            \"id_local_estoque\": 1,\n            \"id_empresa\": 1,\n            \"descricao\": \"Estoque na Cidade XPTO\",\n            \"id_endereco_numero\": 12926,\n            \"created_at\": \"2017-09-22 11:52:26\",\n            \"updated_at\": \"2022-03-14 09:38:06\",\n            \"deleted_at\": null,\n            \"ativo\": true,\n            \"fiscal\": true,\n            \"display\": \"Estoque na Cidade XPTO\"\n        },\n        \"codigo_movimento\": \"ed89efdc-3867-4d95-84d3-04072a487bfc\",\n        \"data_movimento\": \"2023-08-18 17:32:05\",\n        \"data_cadastro\": \"2023-08-18 17:32:05\",\n        \"data_atualizacao\": \"2023-08-18 17:32:05\",\n        \"valor_total\": null,\n        \"observacao\": null,\n        \"produtos\": [\n            {\n                \"id_movimento_estoque_produto\": 4902,\n                \"produto\": \"Airgrid: 1 Unidade - (UN)\",\n                \"valor\": \"400\",\n                \"quantidade\": 1,\n                \"patrimonios\": [\n                    {\n                        \"id_produto_item\": 214436,\n                        \"produto\": {\n                            \"id_produto\": 1,\n                            \"nome\": \"Airgrid\",\n                            \"controle_patrimonial\": true\n                        },\n                        \"local_estoque\": {\n                            \"id_local_estoque\": 1,\n                            \"descricao\": \"Estoque na Cidade XPTO\"\n                        },\n                        \"produto_item_status\": {\n                            \"id_produto_item_status\": 2,\n                            \"descricao\": \"ESTOQUE\",\n                            \"prefixo\": \"estoque\"\n                        },\n                        \"identificador_proprio\": null,\n                        \"codigo_item\": 178777,\n                        \"numero_serie\": null,\n                        \"mac_address\": null,\n                        \"observacoes\": null\n                    }\n                ]\n            }\n        ],\n        \"tipo_movimento_estoque\": {\n            \"id_tipo_movimento_estoque\": 10,\n            \"nome\": \"ENTRADA MANUAL\",\n            \"prefixo\": \"entrada\",\n            \"produto_item_status\": {\n                \"id_produto_item_status\": 2,\n                \"descricao\": \"ESTOQUE\",\n                \"prefixo\": \"estoque\"\n            }\n        },\n        \"usuario_cadastro\": {\n            \"id_usuario_cadastro\": 1023,\n            \"nome\": \"Maciel Filho\",\n            \"email\": \"maciel@hubsoft.com.br\"\n        }\n    }\n}"
+								},
+								{
+									"id": "d5f9212f-f592-4da8-904d-10f91a6ffec0",
+									"name": "Erro",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{url}}/api/v1/integracao/estoque/movimento_estoque/234124"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Aug 2023 14:57:25 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Aug 2023 14:57:25 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.4.28"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=smoiYmPqJ6VZgQLx98omH7JdCIc62fV0INffIE33; expires=Mon, 21-Aug-2023 15:57:25 GMT; Max-Age=3600; path=/; httponly"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"error\",\n    \"msg\": \"Movimentro de Estoque de ID 234124 não encontrado\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Adicionar Produtos",
+							"id": "f58cf5b8-179a-4cdd-a836-3d138ccafbb8",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjI3NDlmOWRmYzE4NWJkNWI5ZGQzZWZlNzI1NTMyNTllOTZkMDNhY2VkNzc5NDViNzBiNzU0YWQwZGY0MzkxMjVkOWRiODRhZDg3N2ZjMzhiIn0.eyJhdWQiOiI3IiwianRpIjoiMjc0OWY5ZGZjMTg1YmQ1YjlkZDNlZmU3MjU1MzI1OWU5NmQwM2FjZWQ3Nzk0NWI3MGI3NTRhZDBkZjQzOTEyNWQ5ZGI4NGFkODc3ZmMzOGIiLCJpYXQiOjE2OTIyOTc2NDgsIm5iZiI6MTY5MjI5NzY0OCwiZXhwIjoxNjk0ODg5NjQ4LCJzdWIiOiIxMDIzIiwic2NvcGVzIjpbXX0.yL5j9E_UTBBjtJ86F_pQpKDbeCExeZdWlvzo9ciSn2lu1nC63mQbhFvMKgsv6hmEB1SXatUkBSPDPYiuFjlo1q7XYDiBzRGjgum2sWQa8mJh4BhcEcdiNtwvONGYpu567oX1vcrUP6DtrRI3H-xlsfTAowznd-T7p4xYQeekb0hAWXKx1OtdjT59yuQ6gZ2zoIjSDfRPRVxYU9oozqZ8Fmazs3fi5Er-RYPkBur4807-w4ndBXRL88gW6aAavD2NtnbH9FRsDNHLLM-l3vho5TboOPLNHKPzH6ecEqm9jUodZGCziidopzRtE3QLaGm3T0EKKHbBCUXqIUV2AEIGH-gYXJdpFs0uep60TX9i4qA-i-nmzlDPFgMwmufj8X3dYu7tiobwxkgYM3Wmbw8UzX4PuHcoc8KsP5efP0vGBU3hJVOE64Jc2roQcLTtGd0qwNVKmYT8ki07WT1g7LeM7Vn8NDlZkSw9S4K07UySZiylz9N0PCUZq4a1as36V-WXDKpLr5LwBfxzUExGpJPAJtLGffKrm6ekWdNRBzm5FUKMNmmuOtWqU8KeMF-iIkaBG88TK1_TJoTlo8kbxA4XUK0YEgnQxH0zlG3aKoLy6-ScOQ9kqAvTwqBtFScrkAqdPGGfEsiH_on8q10nky1EBS6AkbqlaYcNsQzDS2CxSQc"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"id_local_estoque\": 1,\n\t\"produtos\": [{\n\t\t\"quantidade\": 1,\n\t\t\"produto\": {\n\t\t\t\"id_produto\": 1\n\t\t}\n\t}]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/v1/integracao/estoque/movimento_estoque",
+								"description": "Utilizando esse endpoint será possível adicionar produtos a um local de estoque sem a necessidade de gerar uma nova compra dentro do sistema."
+							},
+							"response": [
+								{
+									"id": "3d71e8a0-3489-4037-b47d-89abd0b1786e",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"id_local_estoque\": 1,\n\t\"produtos\": [{\n\t\t\"quantidade\": 1,\n\t\t\"produto\": {\n\t\t\t\"id_produto\": 1\n\t\t}\n\t}]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{url}}/api/v1/integracao/estoque/movimento_estoque"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Aug 2023 17:24:15 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Aug 2023 17:24:15 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.4.28"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=FsWn626vGUXVbn4rhwR0Wuo9iQDfnaicD48S7hhR; expires=Mon, 21-Aug-2023 18:24:15 GMT; Max-Age=3600; path=/; httponly"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Movimento criado com sucesso\",\n    \"movimento_estoque\": {\n        \"id_movimento_estoque\": 4516,\n        \"tipo\": \"entrada\",\n        \"local_estoque\": \"Estoque na Cidade XPTO\",\n        \"vinculo\": {\n            \"id_local_estoque\": 1,\n            \"id_empresa\": 1,\n            \"descricao\": \"Estoque na Cidade XPTO\",\n            \"id_endereco_numero\": 12926,\n            \"created_at\": \"2017-09-22 11:52:26\",\n            \"updated_at\": \"2022-03-14 09:38:06\",\n            \"deleted_at\": null,\n            \"ativo\": true,\n            \"fiscal\": true,\n            \"display\": \"Estoque na Cidade XPTO\"\n        },\n        \"codigo_movimento\": \"b3b0d667-c44d-415f-82de-9ef2a336fa4c\",\n        \"data_movimento\": \"2023-08-21 14:24:14\",\n        \"data_cadastro\": \"2023-08-21 14:24:14\",\n        \"data_atualizacao\": \"2023-08-21 14:24:14\",\n        \"valor_total\": null,\n        \"observacao\": null,\n        \"produtos\": [\n            {\n                \"id_movimento_estoque_produto\": 4926,\n                \"produto\": \"Airgrid: 1 Unidade - (UN)\",\n                \"valor\": \"400\",\n                \"quantidade\": 1,\n                \"patrimonios\": [\n                    {\n                        \"id_produto_item\": 214438,\n                        \"produto\": {\n                            \"id_produto\": 1,\n                            \"nome\": \"Airgrid\",\n                            \"controle_patrimonial\": true\n                        },\n                        \"local_estoque\": {\n                            \"id_local_estoque\": 1,\n                            \"descricao\": \"Estoque na Cidade XPTO\"\n                        },\n                        \"produto_item_status\": {\n                            \"id_produto_item_status\": 2,\n                            \"descricao\": \"ESTOQUE\",\n                            \"prefixo\": \"estoque\"\n                        },\n                        \"identificador_proprio\": null,\n                        \"codigo_item\": 178781,\n                        \"numero_serie\": null,\n                        \"mac_address\": null,\n                        \"observacoes\": null\n                    }\n                ]\n            }\n        ],\n        \"tipo_movimento_estoque\": {\n            \"id_tipo_movimento_estoque\": 10,\n            \"nome\": \"ENTRADA MANUAL\",\n            \"prefixo\": \"entrada\",\n            \"produto_item_status\": {\n                \"id_produto_item_status\": 2,\n                \"descricao\": \"ESTOQUE\",\n                \"prefixo\": \"estoque\"\n            }\n        },\n        \"usuario_cadastro\": {\n            \"id_usuario_cadastro\": 1023,\n            \"nome\": \"Maciel Filho\",\n            \"email\": \"maciel@hubsoft.com.br\"\n        }\n    }\n}"
+								},
+								{
+									"id": "e9d4c14b-5728-4ddd-8254-d6fa085f31f0",
+									"name": "Erro",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{url}}/api/v1/integracao/estoque/movimento_estoque"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Aug 2023 17:06:54 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Aug 2023 17:06:54 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.4.28"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=FsWn626vGUXVbn4rhwR0Wuo9iQDfnaicD48S7hhR; expires=Mon, 21-Aug-2023 18:06:54 GMT; Max-Age=3600; path=/; httponly"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"error\",\n    \"msg\": \"Os dados fornecidos são inválidos\",\n    \"errors\": [\n        \"O ID do Local de Estoque é obrigatório\",\n        \"Os Produtos são obrigatórios\"\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Transferência entre Estoques",
+							"id": "2156dc30-2490-4973-9749-17f1d1c2494a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjI3NDlmOWRmYzE4NWJkNWI5ZGQzZWZlNzI1NTMyNTllOTZkMDNhY2VkNzc5NDViNzBiNzU0YWQwZGY0MzkxMjVkOWRiODRhZDg3N2ZjMzhiIn0.eyJhdWQiOiI3IiwianRpIjoiMjc0OWY5ZGZjMTg1YmQ1YjlkZDNlZmU3MjU1MzI1OWU5NmQwM2FjZWQ3Nzk0NWI3MGI3NTRhZDBkZjQzOTEyNWQ5ZGI4NGFkODc3ZmMzOGIiLCJpYXQiOjE2OTIyOTc2NDgsIm5iZiI6MTY5MjI5NzY0OCwiZXhwIjoxNjk0ODg5NjQ4LCJzdWIiOiIxMDIzIiwic2NvcGVzIjpbXX0.yL5j9E_UTBBjtJ86F_pQpKDbeCExeZdWlvzo9ciSn2lu1nC63mQbhFvMKgsv6hmEB1SXatUkBSPDPYiuFjlo1q7XYDiBzRGjgum2sWQa8mJh4BhcEcdiNtwvONGYpu567oX1vcrUP6DtrRI3H-xlsfTAowznd-T7p4xYQeekb0hAWXKx1OtdjT59yuQ6gZ2zoIjSDfRPRVxYU9oozqZ8Fmazs3fi5Er-RYPkBur4807-w4ndBXRL88gW6aAavD2NtnbH9FRsDNHLLM-l3vho5TboOPLNHKPzH6ecEqm9jUodZGCziidopzRtE3QLaGm3T0EKKHbBCUXqIUV2AEIGH-gYXJdpFs0uep60TX9i4qA-i-nmzlDPFgMwmufj8X3dYu7tiobwxkgYM3Wmbw8UzX4PuHcoc8KsP5efP0vGBU3hJVOE64Jc2roQcLTtGd0qwNVKmYT8ki07WT1g7LeM7Vn8NDlZkSw9S4K07UySZiylz9N0PCUZq4a1as36V-WXDKpLr5LwBfxzUExGpJPAJtLGffKrm6ekWdNRBzm5FUKMNmmuOtWqU8KeMF-iIkaBG88TK1_TJoTlo8kbxA4XUK0YEgnQxH0zlG3aKoLy6-ScOQ9kqAvTwqBtFScrkAqdPGGfEsiH_on8q10nky1EBS6AkbqlaYcNsQzDS2CxSQc"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"id_local_estoque_origem\": 2,\n\t\"id_local_estoque_destino\": 43,\n\t\"produtos\": [{\n\t\t\"quantidade\": 1,\n\t\t\"produto\": {\n\t\t\t\"id_produto\": 1\n\t\t},\n\t\t\"patrimonios\": [{\n\t\t\t\"id_produto_item\": 126543\n\t\t}]\n\t}]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/v1/integracao/estoque/movimento_estoque/transferencia"
+							},
+							"response": [
+								{
+									"id": "8121b05b-6c4c-4f1c-ad12-310167f93e9c",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"id_local_estoque_origem\": 2,\n\t\"id_local_estoque_destino\": 43,\n\t\"produtos\": [{\n\t\t\"quantidade\": 1,\n\t\t\"produto\": {\n\t\t\t\"id_produto\": 1\n\t\t},\n\t\t\"patrimonios\": [{\n\t\t\t\"id_produto_item\": 126543\n\t\t}]\n\t}]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{url}}/api/v1/integracao/estoque/movimento_estoque/transferencia"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Aug 2023 17:23:19 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Aug 2023 17:23:19 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.4.28"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=FsWn626vGUXVbn4rhwR0Wuo9iQDfnaicD48S7hhR; expires=Mon, 21-Aug-2023 18:23:19 GMT; Max-Age=3600; path=/; httponly"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Transferência realizada com sucesso\",\n    \"movimento_estoque\": {\n        \"id_movimento_estoque\": 4515,\n        \"tipo\": \"saida\",\n        \"local_estoque\": \"Estoque na Cidade XPTO (Não Fiscal)\",\n        \"vinculo\": {\n            \"id_local_estoque\": 2,\n            \"id_empresa\": 1,\n            \"descricao\": \"Estoque na Cidade XPTO (Não Fiscal)\",\n            \"id_endereco_numero\": 18778,\n            \"created_at\": \"2018-02-26 09:02:35\",\n            \"updated_at\": \"2022-03-14 09:38:06\",\n            \"deleted_at\": null,\n            \"ativo\": true,\n            \"fiscal\": false,\n            \"display\": \"Estoque na Cidade XPTO (Não Fiscal)\"\n        },\n        \"codigo_movimento\": \"01ae4c06-526a-4aec-a231-db304b828933\",\n        \"data_movimento\": \"2023-08-21 14:23:18\",\n        \"data_cadastro\": \"2023-08-21 14:23:18\",\n        \"data_atualizacao\": \"2023-08-21 14:23:18\",\n        \"valor_total\": null,\n        \"observacao\": null,\n        \"produtos\": [\n            {\n                \"id_movimento_estoque_produto\": 4925,\n                \"produto\": \"Airgrid: 1 Unidade - (UN)\",\n                \"valor\": \"400\",\n                \"quantidade\": 1,\n                \"patrimonios\": [\n                    {\n                        \"id_produto_item\": 126543,\n                        \"produto\": {\n                            \"id_produto\": 1,\n                            \"nome\": \"Airgrid\",\n                            \"controle_patrimonial\": true\n                        },\n                        \"local_estoque\": {\n                            \"id_local_estoque\": 43,\n                            \"descricao\": \"ESTOQUE GIGANET\"\n                        },\n                        \"produto_item_status\": {\n                            \"id_produto_item_status\": 2,\n                            \"descricao\": \"ESTOQUE\",\n                            \"prefixo\": \"estoque\"\n                        },\n                        \"identificador_proprio\": null,\n                        \"codigo_item\": 109838,\n                        \"numero_serie\": null,\n                        \"mac_address\": null,\n                        \"observacoes\": null\n                    }\n                ]\n            }\n        ],\n        \"tipo_movimento_estoque\": {\n            \"id_tipo_movimento_estoque\": 11,\n            \"nome\": \"TRANSFERÊNCIA\",\n            \"prefixo\": \"transferencia\",\n            \"produto_item_status\": {\n                \"id_produto_item_status\": 2,\n                \"descricao\": \"ESTOQUE\",\n                \"prefixo\": \"estoque\"\n            }\n        },\n        \"usuario_cadastro\": {\n            \"id_usuario_cadastro\": 1023,\n            \"nome\": \"Maciel Filho\",\n            \"email\": \"maciel@hubsoft.com.br\"\n        }\n    }\n}"
+								},
+								{
+									"id": "d331c4ce-cc16-477f-a839-762d7039c63c",
+									"name": "Erro",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"id_local_estoque_origem\": 2,\n\t\"id_local_estoque_destino\": 43,\n\t\"produtos\": [{\n\t\t\"quantidade\": 1,\n\t\t\"produto\": {\n\t\t\t\"id_produto\": 1\n\t\t},\n\t\t\"patrimonios\": [{\n\t\t\t\"id_produto_item\": 126543\n\t\t}]\n\t}]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{url}}/api/v1/integracao/estoque/movimento_estoque/transferencia"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Aug 2023 17:20:05 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Aug 2023 17:20:05 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.4.28"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=FsWn626vGUXVbn4rhwR0Wuo9iQDfnaicD48S7hhR; expires=Mon, 21-Aug-2023 18:20:05 GMT; Max-Age=3600; path=/; httponly"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"error\",\n    \"msg\": \"O patrimônio (109838) Airgrid não pertence ao local de estoque de origem Estoque na Cidade XPTO (Não Fiscal)\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Apagar Produtos",
+							"id": "20422f5b-f7cf-4ea5-a543-7801214d6f34",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjI3NDlmOWRmYzE4NWJkNWI5ZGQzZWZlNzI1NTMyNTllOTZkMDNhY2VkNzc5NDViNzBiNzU0YWQwZGY0MzkxMjVkOWRiODRhZDg3N2ZjMzhiIn0.eyJhdWQiOiI3IiwianRpIjoiMjc0OWY5ZGZjMTg1YmQ1YjlkZDNlZmU3MjU1MzI1OWU5NmQwM2FjZWQ3Nzk0NWI3MGI3NTRhZDBkZjQzOTEyNWQ5ZGI4NGFkODc3ZmMzOGIiLCJpYXQiOjE2OTIyOTc2NDgsIm5iZiI6MTY5MjI5NzY0OCwiZXhwIjoxNjk0ODg5NjQ4LCJzdWIiOiIxMDIzIiwic2NvcGVzIjpbXX0.yL5j9E_UTBBjtJ86F_pQpKDbeCExeZdWlvzo9ciSn2lu1nC63mQbhFvMKgsv6hmEB1SXatUkBSPDPYiuFjlo1q7XYDiBzRGjgum2sWQa8mJh4BhcEcdiNtwvONGYpu567oX1vcrUP6DtrRI3H-xlsfTAowznd-T7p4xYQeekb0hAWXKx1OtdjT59yuQ6gZ2zoIjSDfRPRVxYU9oozqZ8Fmazs3fi5Er-RYPkBur4807-w4ndBXRL88gW6aAavD2NtnbH9FRsDNHLLM-l3vho5TboOPLNHKPzH6ecEqm9jUodZGCziidopzRtE3QLaGm3T0EKKHbBCUXqIUV2AEIGH-gYXJdpFs0uep60TX9i4qA-i-nmzlDPFgMwmufj8X3dYu7tiobwxkgYM3Wmbw8UzX4PuHcoc8KsP5efP0vGBU3hJVOE64Jc2roQcLTtGd0qwNVKmYT8ki07WT1g7LeM7Vn8NDlZkSw9S4K07UySZiylz9N0PCUZq4a1as36V-WXDKpLr5LwBfxzUExGpJPAJtLGffKrm6ekWdNRBzm5FUKMNmmuOtWqU8KeMF-iIkaBG88TK1_TJoTlo8kbxA4XUK0YEgnQxH0zlG3aKoLy6-ScOQ9kqAvTwqBtFScrkAqdPGGfEsiH_on8q10nky1EBS6AkbqlaYcNsQzDS2CxSQc"
+									}
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/v1/integracao/estoque/movimento_estoque/:id_movimento_estoque",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"integracao",
+										"estoque",
+										"movimento_estoque",
+										":id_movimento_estoque"
+									],
+									"variable": [
+										{
+											"id": "9b0b6c74-6eaf-4dce-8b19-27fe0c24849a",
+											"key": "id_movimento_estoque",
+											"value": "integer",
+											"description": "(Obrigatório) ID do Movimento de Estoque"
+										}
+									]
+								},
+								"description": "Através desse endpoint será possível apagar movimentações de estoque de entrada adicionadas através do endpoint **Adicionar Produtos**, também documentado aqui."
+							},
+							"response": [
+								{
+									"id": "e96977c7-61e8-46a1-bac3-f764f2039faa",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": "{{url}}/api/v1/integracao/estoque/movimento_estoque/4516"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Aug 2023 17:34:29 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Aug 2023 17:34:29 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.4.28"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=FsWn626vGUXVbn4rhwR0Wuo9iQDfnaicD48S7hhR; expires=Mon, 21-Aug-2023 18:34:29 GMT; Max-Age=3600; path=/; httponly"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Movimento apagado com sucesso\"\n}"
+								},
+								{
+									"id": "bcb80f5b-5a95-4ab1-9a5b-bfe3ac59277d",
+									"name": "Erro",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": "{{url}}/api/v1/integracao/estoque/movimento_estoque/4495"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Aug 2023 17:33:22 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Aug 2023 17:33:22 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.4.28"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=FsWn626vGUXVbn4rhwR0Wuo9iQDfnaicD48S7hhR; expires=Mon, 21-Aug-2023 18:33:22 GMT; Max-Age=3600; path=/; httponly"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"error\",\n    \"msg\": \"O movimento de ID 4495 não pode ser apagado\"\n}"
+								}
+							]
+						}
+					],
+					"id": "9896b95a-e3a1-4b30-91d2-651582557a24",
+					"description": "Os endpoints abaixo são destinados ao novo módulo de controle de estoque do provedor: **Movimentações de Estoque**.  \n  \n**AVISO:** Os endpoints destinados ao módulo **Movimentação de Produtos**, serão **DESCONTINUADOS**. Você deverá utilizar apenas os endpoints deste novo módulo."
+				},
+				{
 					"name": "Produto",
 					"item": [
 						{
@@ -8719,37 +9732,37 @@
 	],
 	"variable": [
 		{
-			"id": "d0e3ed92-bb64-4559-bf56-854042e53d34",
+			"id": "25e6dc75-7a0a-45a4-8c42-efc83e3cbe4b",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "0b24bd8e-0c51-4ce8-8a6a-48e5fe9421f3",
+			"id": "10cf2bb8-cf77-46d9-8a07-7ecc3b8415cd",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "41aefc83-a2fa-48a8-9b77-fe49650bf38b",
+			"id": "40d03273-1d87-47a9-9825-7d0c0ee2735d",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "c16cfc40-890b-42a6-b412-ee903e357b3d",
+			"id": "f8fb83a2-9c3e-483c-a2f6-a9766e60d987",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "f6de9ccc-2ba1-4a9c-bb35-d0bf64e4bf1b",
+			"id": "c611c2e6-3b54-4fd6-b0f8-0e901a8a98cb",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "e786e2dd-2f5b-4196-9fe1-2125bde323cb",
+			"id": "6ee47510-fac9-417f-bda8-00ebdf5f46e5",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "3c7b3848-dc45-417f-874a-986b2e79c251",
+			"id": "ebeec048-4106-4ea7-9c6c-426a62bd62ca",
 			"key": "access_token",
 			"value": ""
 		}
