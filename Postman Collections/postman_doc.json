@@ -7930,7 +7930,7 @@
 										}
 									]
 								},
-								"description": "**POST**\n\nNo método `POST`, irá consultar os dados de alertas e retornar um `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| ativo | Status do alerta | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| ativo | Caso enviado, deve conter um valor boolean (true/false) | Nenhum |"
+								"description": "**GET**\n\nNo método `GET`, irá consultar os dados de alertas e retornar um `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| ativo | Status do Alerta | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| ativo | Caso enviado, deve conter um dos seguintes valores (sim/nao) | Nenhum |"
 							},
 							"response": [
 								{
@@ -8809,37 +8809,37 @@
 	],
 	"variable": [
 		{
-			"id": "277c5caf-7694-419c-9724-0914944a9223",
+			"id": "0ba10d6f-89c7-48b7-9b4d-fa539ad31260",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "72d05ffb-5ff6-4741-be23-455b07e56020",
+			"id": "8e6c1833-3ea3-488c-9884-ffeaec6b68be",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "6c26d740-d304-4b49-b8e7-bc3b626f6929",
+			"id": "e32c7b6a-69ca-479e-bb8a-6e318e7bbe69",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "031f4ac6-032a-4b59-a580-b8c33eb61e50",
+			"id": "f243074d-44d2-4a7b-bb74-4f65b4070b1f",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "5eea99e5-7981-4953-a548-b975bf88d1f2",
+			"id": "8e7f51b6-eaa3-4687-993b-569dbbb91208",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "62f3cfc5-2d96-45dc-b095-0d346e787fde",
+			"id": "04488147-46f6-4aa8-96cb-b3b2e08ffa79",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "fe8ab471-5e4e-4cb5-9652-7456b2af3092",
+			"id": "08b9bd61-5c22-4e2e-b8e8-9135390a5b9e",
 			"key": "access_token",
 			"value": ""
 		}
