@@ -458,380 +458,6 @@
 			"description": "**Necessário**\n\nPara realizar as requisições nos dados de atendimento, será necessário que você já possua o `access_token`, adquirido através dos `endpoints` de `(oAuth)`."
 		},
 		{
-			"name": "Alarme",
-			"item": [
-				{
-					"name": "Consulta",
-					"id": "5404f24a-0940-4343-947f-d432dcfd2e01",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "{{access_token}}",
-								"description": "Bearer Token obtido na autenticação"
-							}
-						],
-						"url": {
-							"raw": "{{url}}/api/v1/integracao/atendimento/paginado/:quantidade?pagina=1&data_inicio=2022-08-01&data_fim=2022-08-31",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"api",
-								"v1",
-								"integracao",
-								"atendimento",
-								"paginado",
-								":quantidade"
-							],
-							"query": [
-								{
-									"key": "pagina",
-									"value": "1",
-									"description": "Página que está sendo consultada"
-								},
-								{
-									"key": "data_inicio",
-									"value": "2022-08-01",
-									"description": "Data de Início no formato YYYY-MM-DD"
-								},
-								{
-									"key": "data_fim",
-									"value": "2022-08-31",
-									"description": "Data Final no formato YYYY-MM-DD"
-								}
-							],
-							"variable": [
-								{
-									"id": "c52b3fdf-19ca-4dec-a5ec-8a8b3a714e50",
-									"key": "quantidade",
-									"value": "10",
-									"description": "Quantidade de Itens por Página"
-								}
-							]
-						},
-						"description": "**POST**\n\nNo método `POST`, irá consultar os dados dos atendimentos e retornar um `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| data_inicio | Data de Cadastro Inicial | Sim |\n| data_fim | Data de Cadastro Final | Sim |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| data_inicio | Valor no formato DateTime (YYYY-MM-DD) | Nenhum |\n| data_fim | Valor no formato DateTime (YYYY-MM-DD) Obs: Maior ou igual data_inicio | Nenhum |"
-					},
-					"response": [
-						{
-							"id": "972fd953-d943-4aed-9103-eedeb0beb674",
-							"name": "Sucesso",
-							"originalRequest": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "{{access_token}}",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{url}}/api/v1/integracao/atendimento/paginado/:quantidade?pagina=1&data_inicio=2022-08-01&data_fim=2022-08-31",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"api",
-										"v1",
-										"integracao",
-										"atendimento",
-										"paginado",
-										":quantidade"
-									],
-									"query": [
-										{
-											"key": "pagina",
-											"value": "1",
-											"description": "Página que está sendo consultada"
-										},
-										{
-											"key": "data_inicio",
-											"value": "2022-08-01",
-											"description": "Data de Início no formato YYYY-MM-DD"
-										},
-										{
-											"key": "data_fim",
-											"value": "2022-08-31",
-											"description": "Data Final no formato YYYY-MM-DD"
-										}
-									],
-									"variable": [
-										{
-											"key": "quantidade",
-											"value": "10",
-											"description": "Quantidade de Itens por Página"
-										}
-									]
-								}
-							},
-							"_postman_previewlanguage": "json",
-							"header": [],
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Dados consultados com sucesso\",\n    \"atendimentos\": {\n        \"current_page\": 8,\n        \"data\": [\n            {\n                \"id_atendimento\": 4413,\n                \"id_atendimento_status\": 22,\n                \"id_tipo_atendimento\": 162,\n                \"id_cliente_servico\": 17558,\n                \"id_usuario_responsavel\": null,\n                \"id_usuario_abertura\": 5228,\n                \"protocolo\": \"20220804154332049991\",\n                \"data_cadastro\": \"2022-08-04 15:45:57\",\n                \"data_fechamento\": null,\n                \"rascunho\": false,\n                \"status_fechamento\": null,\n                \"descricao_fechamento\": null,\n                \"id_motivo_fechamento_atendimento\": null,\n                \"deleted_at\": null,\n                \"avaliacao\": null,\n                \"comentario_avaliacao\": null,\n                \"ordem_servico_count\": 1,\n                \"anexos_count\": 0,\n                \"ingressado\": false,\n                \"data_cadastro_br\": \"04/08/2022 15:45\",\n                \"data_cadastro_timestamp\": 1659638757000,\n                \"data_fechamento_br\": null,\n                \"data_fechamento_timestamp\": null,\n                \"minutos_em_aberto\": 30126,\n                \"tempo_restante\": \"-501h 6min\",\n                \"percentual_tempo_restante\": 0,\n                \"percentual_color_class\": \"white-fg md-red-bg\",\n                \"status\": {\n                    \"id_atendimento_status\": 22,\n                    \"prefixo\": \"pendente\",\n                    \"descricao\": \"Pendente\",\n                    \"cor\": \"md-purple-900-bg\",\n                    \"abrir_ordem_servico\": true,\n                    \"display\": \"Pendente (Abertura de OS)\"\n                },\n                \"tipo_atendimento\": {\n                    \"id_tipo_atendimento\": 162,\n                    \"descricao\": \"TESTE\"\n                },\n                \"cliente_servico\": {\n                    \"id_cliente_servico\": 17558,\n                    \"id_cliente\": 25126,\n                    \"id_servico\": 1269,\n                    \"numero_plano\": 0,\n                    \"display\": \"(0) 100GB-DE-TESTE(140)\",\n                    \"endereco_numero_completo\": \"RUA ADAIR JUNQUEIRA GONTIJO, 100 - FONTE BOA, DIVINÓPOLIS/MG | CEP: 35000-000\",\n                    \"endereco_instalacao\": {\n                        \"id_cliente_servico_endereco\": 73001,\n                        \"id_endereco_numero\": 51862,\n                        \"id_cliente_servico\": 17558,\n                        \"tipo\": \"instalacao\",\n                        \"endereco_numero\": {\n                            \"id_endereco_numero\": 51862,\n                            \"numero\": \"100\",\n                            \"complemento\": null,\n                            \"coordenadas\": {\n                                \"type\": \"Point\",\n                                \"coordinates\": [\n                                    -19.918339,\n                                    -43.940102\n                                ]\n                            },\n                            \"ativo\": true,\n                            \"id_cidade\": 1597,\n                            \"bairro\": \"FONTE BOA\",\n                            \"referencia\": null,\n                            \"endereco\": \"RUA ADAIR JUNQUEIRA GONTIJO\",\n                            \"cep\": \"35000000\",\n                            \"atualizar_coords_auto\": false,\n                            \"id_condominio\": null,\n                            \"cidade\": {\n                                \"id_cidade\": 1597,\n                                \"id_estado\": 11,\n                                \"nome\": \"Divinópolis\",\n                                \"estado\": {\n                                    \"id_estado\": 11,\n                                    \"sigla\": \"MG\"\n                                }\n                            }\n                        }\n                    },\n                    \"servico\": {\n                        \"id_servico\": 1269,\n                        \"descricao\": \"100GB-DE-TESTE(140)\"\n                    },\n                    \"cliente\": {\n                        \"id_cliente\": 25126,\n                        \"ativo\": true,\n                        \"codigo_cliente\": 2015,\n                        \"nome_razaosocial\": \"GABRIEL\",\n                        \"display\": \"(2015) GABRIEL\"\n                    }\n                },\n                \"usuarios_responsaveis\": [\n                    {\n                        \"id\": 5228,\n                        \"name\": \"Sara Borges \",\n                        \"id_imagem_upload\": null,\n                        \"pivot\": {\n                            \"id_atendimento\": 4413,\n                            \"id_usuario\": 5228\n                        },\n                        \"imagem\": null\n                    }\n                ]\n            },\n            {\n                \"id_atendimento\": 4412,\n                \"id_atendimento_status\": 22,\n                \"id_tipo_atendimento\": 130,\n                \"id_cliente_servico\": 17558,\n                \"id_usuario_responsavel\": null,\n                \"id_usuario_abertura\": 4904,\n                \"protocolo\": \"20220804151732696375\",\n                \"data_cadastro\": \"2022-08-04 15:18:12\",\n                \"data_fechamento\": null,\n                \"rascunho\": false,\n                \"status_fechamento\": null,\n                \"descricao_fechamento\": null,\n                \"id_motivo_fechamento_atendimento\": null,\n                \"deleted_at\": null,\n                \"avaliacao\": null,\n                \"comentario_avaliacao\": null,\n                \"ordem_servico_count\": 1,\n                \"anexos_count\": 0,\n                \"ingressado\": false,\n                \"data_cadastro_br\": \"04/08/2022 15:18\",\n                \"data_cadastro_timestamp\": 1659637092000,\n                \"data_fechamento_br\": null,\n                \"data_fechamento_timestamp\": null,\n                \"minutos_em_aberto\": 30154,\n                \"tempo_restante\": \"-501h 34min\",\n                \"percentual_tempo_restante\": 0,\n                \"percentual_color_class\": \"white-fg md-red-bg\",\n                \"status\": {\n                    \"id_atendimento_status\": 22,\n                    \"prefixo\": \"pendente\",\n                    \"descricao\": \"Pendente\",\n                    \"cor\": \"md-purple-900-bg\",\n                    \"abrir_ordem_servico\": true,\n                    \"display\": \"Pendente (Abertura de OS)\"\n                },\n                \"tipo_atendimento\": {\n                    \"id_tipo_atendimento\": 130,\n                    \"descricao\": \"MUDANÇA DE ENDEREÇO\"\n                },\n                \"cliente_servico\": {\n                    \"id_cliente_servico\": 17558,\n                    \"id_cliente\": 25126,\n                    \"id_servico\": 1269,\n                    \"numero_plano\": 0,\n                    \"display\": \"(0) 100GB-DE-TESTE(140)\",\n                    \"endereco_numero_completo\": \"RUA ADAIR JUNQUEIRA GONTIJO, 100 - FONTE BOA, DIVINÓPOLIS/MG | CEP: 35000-000\",\n                    \"endereco_instalacao\": {\n                        \"id_cliente_servico_endereco\": 73001,\n                        \"id_endereco_numero\": 51862,\n                        \"id_cliente_servico\": 17558,\n                        \"tipo\": \"instalacao\",\n                        \"endereco_numero\": {\n                            \"id_endereco_numero\": 51862,\n                            \"numero\": \"100\",\n                            \"complemento\": null,\n                            \"coordenadas\": {\n                                \"type\": \"Point\",\n                                \"coordinates\": [\n                                    -19.918339,\n                                    -43.940102\n                                ]\n                            },\n                            \"ativo\": true,\n                            \"id_cidade\": 1597,\n                            \"bairro\": \"FONTE BOA\",\n                            \"referencia\": null,\n                            \"endereco\": \"RUA ADAIR JUNQUEIRA GONTIJO\",\n                            \"cep\": \"35000000\",\n                            \"atualizar_coords_auto\": false,\n                            \"id_condominio\": null,\n                            \"cidade\": {\n                                \"id_cidade\": 1597,\n                                \"id_estado\": 11,\n                                \"nome\": \"Divinópolis\",\n                                \"estado\": {\n                                    \"id_estado\": 11,\n                                    \"sigla\": \"MG\"\n                                }\n                            }\n                        }\n                    },\n                    \"servico\": {\n                        \"id_servico\": 1269,\n                        \"descricao\": \"100GB-DE-TESTE(140)\"\n                    },\n                    \"cliente\": {\n                        \"id_cliente\": 25126,\n                        \"ativo\": true,\n                        \"codigo_cliente\": 2015,\n                        \"nome_razaosocial\": \"GABRIEL\",\n                        \"display\": \"(2015) GABRIEL\"\n                    }\n                },\n                \"usuarios_responsaveis\": [\n                    {\n                        \"id\": 4904,\n                        \"name\": \"Ana Flávia\",\n                        \"id_imagem_upload\": null,\n                        \"pivot\": {\n                            \"id_atendimento\": 4412,\n                            \"id_usuario\": 4904\n                        },\n                        \"imagem\": null\n                    }\n                ]\n            },\n            {\n                \"id_atendimento\": 4411,\n                \"id_atendimento_status\": 23,\n                \"id_tipo_atendimento\": null,\n                \"id_cliente_servico\": 16982,\n                \"id_usuario_responsavel\": null,\n                \"id_usuario_abertura\": 3,\n                \"protocolo\": \"20220804112405573653\",\n                \"data_cadastro\": \"2022-08-04 11:24:05\",\n                \"data_fechamento\": null,\n                \"rascunho\": true,\n                \"status_fechamento\": null,\n                \"descricao_fechamento\": null,\n                \"id_motivo_fechamento_atendimento\": null,\n                \"deleted_at\": null,\n                \"avaliacao\": null,\n                \"comentario_avaliacao\": null,\n                \"ordem_servico_count\": 0,\n                \"anexos_count\": 0,\n                \"ingressado\": false,\n                \"data_cadastro_br\": \"04/08/2022 11:24\",\n                \"data_cadastro_timestamp\": 1659623045000,\n                \"data_fechamento_br\": null,\n                \"data_fechamento_timestamp\": null,\n                \"minutos_em_aberto\": 30388,\n                \"tempo_restante\": \"0min\",\n                \"percentual_tempo_restante\": 0,\n                \"percentual_color_class\": \"white-fg md-red-bg\",\n                \"status\": {\n                    \"id_atendimento_status\": 23,\n                    \"prefixo\": \"aguardando_analise\",\n                    \"descricao\": \"Aguardando Análise\",\n                    \"cor\": \"md-deep-orange-A700-bg\",\n                    \"abrir_ordem_servico\": false,\n                    \"display\": \"Aguardando Análise\"\n                },\n                \"tipo_atendimento\": null,\n                \"cliente_servico\": {\n                    \"id_cliente_servico\": 16982,\n                    \"id_cliente\": 11942,\n                    \"id_servico\": 2675,\n                    \"numero_plano\": 73,\n                    \"display\": \"(73) 212 MB - ULTRA FIBRA\",\n                    \"endereco_numero_completo\": \"PRAÇA GETÚLIO VARGAS, 77, SALA 411 - CENTRO, SANTO ANTÔNIO DO MONTE/MG | CEP: 35560-000\",\n                    \"endereco_instalacao\": {\n                        \"id_cliente_servico_endereco\": 71037,\n                        \"id_endereco_numero\": 49538,\n                        \"id_cliente_servico\": 16982,\n                        \"tipo\": \"instalacao\",\n                        \"endereco_numero\": {\n                            \"id_endereco_numero\": 49538,\n                            \"numero\": \"77\",\n                            \"complemento\": \"SALA 411\",\n                            \"coordenadas\": null,\n                            \"ativo\": true,\n                            \"id_cidade\": 2052,\n                            \"bairro\": \"CENTRO\",\n                            \"referencia\": null,\n                            \"endereco\": \"PRAÇA GETÚLIO VARGAS\",\n                            \"cep\": \"35560000\",\n                            \"atualizar_coords_auto\": false,\n                            \"id_condominio\": null,\n                            \"cidade\": {\n                                \"id_cidade\": 2052,\n                                \"id_estado\": 11,\n                                \"nome\": \"Santo Antônio do Monte\",\n                                \"estado\": {\n                                    \"id_estado\": 11,\n                                    \"sigla\": \"MG\"\n                                }\n                            }\n                        }\n                    },\n                    \"servico\": {\n                        \"id_servico\": 2675,\n                        \"descricao\": \"212 MB - ULTRA FIBRA\"\n                    },\n                    \"cliente\": {\n                        \"id_cliente\": 11942,\n                        \"ativo\": true,\n                        \"codigo_cliente\": 1161,\n                        \"nome_razaosocial\": \"ANTONIO MODESTO AMARAL SOUSA\",\n                        \"display\": \"(1161) ANTONIO MODESTO AMARAL SOUSA\"\n                    }\n                },\n                \"usuarios_responsaveis\": []\n            },\n            {\n                \"id_atendimento\": 4409,\n                \"id_atendimento_status\": 23,\n                \"id_tipo_atendimento\": null,\n                \"id_cliente_servico\": 17539,\n                \"id_usuario_responsavel\": null,\n                \"id_usuario_abertura\": 3,\n                \"protocolo\": \"20220804104042145909\",\n                \"data_cadastro\": \"2022-08-04 10:40:42\",\n                \"data_fechamento\": null,\n                \"rascunho\": true,\n                \"status_fechamento\": null,\n                \"descricao_fechamento\": null,\n                \"id_motivo_fechamento_atendimento\": null,\n                \"deleted_at\": null,\n                \"avaliacao\": null,\n                \"comentario_avaliacao\": null,\n                \"ordem_servico_count\": 0,\n                \"anexos_count\": 0,\n                \"ingressado\": false,\n                \"data_cadastro_br\": \"04/08/2022 10:40\",\n                \"data_cadastro_timestamp\": 1659620442000,\n                \"data_fechamento_br\": null,\n                \"data_fechamento_timestamp\": null,\n                \"minutos_em_aberto\": 30431,\n                \"tempo_restante\": \"0min\",\n                \"percentual_tempo_restante\": 0,\n                \"percentual_color_class\": \"white-fg md-red-bg\",\n                \"status\": {\n                    \"id_atendimento_status\": 23,\n                    \"prefixo\": \"aguardando_analise\",\n                    \"descricao\": \"Aguardando Análise\",\n                    \"cor\": \"md-deep-orange-A700-bg\",\n                    \"abrir_ordem_servico\": false,\n                    \"display\": \"Aguardando Análise\"\n                },\n                \"tipo_atendimento\": null,\n                \"cliente_servico\": {\n                    \"id_cliente_servico\": 17539,\n                    \"id_cliente\": 24922,\n                    \"id_servico\": 1270,\n                    \"numero_plano\": 6,\n                    \"display\": \"(6) EMPRESAX - 100MB-FIBRA-2019\",\n                    \"endereco_numero_completo\": \"RUA ADAIR JUNQUEIRA GONTIJO, 100 - FONTE BOA, DIVINÓPOLIS/MG | CEP: 35000-000\",\n                    \"endereco_instalacao\": {\n                        \"id_cliente_servico_endereco\": 72937,\n                        \"id_endereco_numero\": 51790,\n                        \"id_cliente_servico\": 17539,\n                        \"tipo\": \"instalacao\",\n                        \"endereco_numero\": {\n                            \"id_endereco_numero\": 51790,\n                            \"numero\": \"100\",\n                            \"complemento\": null,\n                            \"coordenadas\": {\n                                \"type\": \"Point\",\n                                \"coordinates\": [\n                                    -19.918339,\n                                    -43.940102\n                                ]\n                            },\n                            \"ativo\": true,\n                            \"id_cidade\": 1597,\n                            \"bairro\": \"FONTE BOA\",\n                            \"referencia\": null,\n                            \"endereco\": \"RUA ADAIR JUNQUEIRA GONTIJO\",\n                            \"cep\": \"35000000\",\n                            \"atualizar_coords_auto\": false,\n                            \"id_condominio\": null,\n                            \"cidade\": {\n                                \"id_cidade\": 1597,\n                                \"id_estado\": 11,\n                                \"nome\": \"Divinópolis\",\n                                \"estado\": {\n                                    \"id_estado\": 11,\n                                    \"sigla\": \"MG\"\n                                }\n                            }\n                        }\n                    },\n                    \"servico\": {\n                        \"id_servico\": 1270,\n                        \"descricao\": \"EMPRESAX - 100MB-FIBRA-2019\"\n                    },\n                    \"cliente\": {\n                        \"id_cliente\": 24922,\n                        \"ativo\": true,\n                        \"codigo_cliente\": 1861,\n                        \"nome_razaosocial\": \"ANA FLAVIA\",\n                        \"display\": \"(1861) ANA FLAVIA\"\n                    }\n                },\n                \"usuarios_responsaveis\": []\n            },\n            {\n                \"id_atendimento\": 4407,\n                \"id_atendimento_status\": 22,\n                \"id_tipo_atendimento\": 126,\n                \"id_cliente_servico\": 13724,\n                \"id_usuario_responsavel\": null,\n                \"id_usuario_abertura\": 3,\n                \"protocolo\": \"20220803141306812881\",\n                \"data_cadastro\": \"2022-08-03 14:14:00\",\n                \"data_fechamento\": null,\n                \"rascunho\": false,\n                \"status_fechamento\": null,\n                \"descricao_fechamento\": null,\n                \"id_motivo_fechamento_atendimento\": null,\n                \"deleted_at\": null,\n                \"avaliacao\": null,\n                \"comentario_avaliacao\": null,\n                \"ordem_servico_count\": 1,\n                \"anexos_count\": 0,\n                \"ingressado\": false,\n                \"data_cadastro_br\": \"03/08/2022 14:14\",\n                \"data_cadastro_timestamp\": 1659546840000,\n                \"data_fechamento_br\": null,\n                \"data_fechamento_timestamp\": null,\n                \"minutos_em_aberto\": 31658,\n                \"tempo_restante\": \"-525h 38min\",\n                \"percentual_tempo_restante\": 0,\n                \"percentual_color_class\": \"white-fg md-red-bg\",\n                \"status\": {\n                    \"id_atendimento_status\": 22,\n                    \"prefixo\": \"pendente\",\n                    \"descricao\": \"Pendente\",\n                    \"cor\": \"md-purple-900-bg\",\n                    \"abrir_ordem_servico\": true,\n                    \"display\": \"Pendente (Abertura de OS)\"\n                },\n                \"tipo_atendimento\": {\n                    \"id_tipo_atendimento\": 126,\n                    \"descricao\": \"ATIVAÇÃO FIBRA ÓPTICA\"\n                },\n                \"cliente_servico\": {\n                    \"id_cliente_servico\": 13724,\n                    \"id_cliente\": 23384,\n                    \"id_servico\": 2617,\n                    \"numero_plano\": 0,\n                    \"display\": \"(0) PLANO 40 MB\",\n                    \"endereco_numero_completo\": \"AV JK, 25 - CENTRO, SANTO ANTÔNIO DO MONTE/MG | CEP: 35560-000\",\n                    \"endereco_instalacao\": {\n                        \"id_cliente_servico_endereco\": 59801,\n                        \"id_endereco_numero\": 35300,\n                        \"id_cliente_servico\": 13724,\n                        \"tipo\": \"instalacao\",\n                        \"endereco_numero\": {\n                            \"id_endereco_numero\": 35300,\n                            \"numero\": \"25\",\n                            \"complemento\": null,\n                            \"coordenadas\": {\n                                \"type\": \"Point\",\n                                \"coordinates\": [\n                                    -45.292417,\n                                    -20.085267\n                                ]\n                            },\n                            \"ativo\": true,\n                            \"id_cidade\": 2052,\n                            \"bairro\": \"CENTRO\",\n                            \"referencia\": null,\n                            \"endereco\": \"AV JK\",\n                            \"cep\": \"35560000\",\n                            \"atualizar_coords_auto\": true,\n                            \"id_condominio\": null,\n                            \"cidade\": {\n                                \"id_cidade\": 2052,\n                                \"id_estado\": 11,\n                                \"nome\": \"Santo Antônio do Monte\",\n                                \"estado\": {\n                                    \"id_estado\": 11,\n                                    \"sigla\": \"MG\"\n                                }\n                            }\n                        }\n                    },\n                    \"servico\": {\n                        \"id_servico\": 2617,\n                        \"descricao\": \"PLANO 40 MB\"\n                    },\n                    \"cliente\": {\n                        \"id_cliente\": 23384,\n                        \"ativo\": true,\n                        \"codigo_cliente\": 1425,\n                        \"nome_razaosocial\": \"BIANCA COUTO\",\n                        \"display\": \"(1425) BIANCA COUTO\"\n                    }\n                },\n                \"usuarios_responsaveis\": []\n            },\n            {\n                \"id_atendimento\": 4405,\n                \"id_atendimento_status\": 23,\n                \"id_tipo_atendimento\": null,\n                \"id_cliente_servico\": 17539,\n                \"id_usuario_responsavel\": null,\n                \"id_usuario_abertura\": 4904,\n                \"protocolo\": \"20220802161457397301\",\n                \"data_cadastro\": \"2022-08-02 16:14:57\",\n                \"data_fechamento\": null,\n                \"rascunho\": true,\n                \"status_fechamento\": null,\n                \"descricao_fechamento\": null,\n                \"id_motivo_fechamento_atendimento\": null,\n                \"deleted_at\": null,\n                \"avaliacao\": null,\n                \"comentario_avaliacao\": null,\n                \"ordem_servico_count\": 0,\n                \"anexos_count\": 0,\n                \"ingressado\": false,\n                \"data_cadastro_br\": \"02/08/2022 16:14\",\n                \"data_cadastro_timestamp\": 1659467697000,\n                \"data_fechamento_br\": null,\n                \"data_fechamento_timestamp\": null,\n                \"minutos_em_aberto\": 32977,\n                \"tempo_restante\": \"0min\",\n                \"percentual_tempo_restante\": 0,\n                \"percentual_color_class\": \"white-fg md-red-bg\",\n                \"status\": {\n                    \"id_atendimento_status\": 23,\n                    \"prefixo\": \"aguardando_analise\",\n                    \"descricao\": \"Aguardando Análise\",\n                    \"cor\": \"md-deep-orange-A700-bg\",\n                    \"abrir_ordem_servico\": false,\n                    \"display\": \"Aguardando Análise\"\n                },\n                \"tipo_atendimento\": null,\n                \"cliente_servico\": {\n                    \"id_cliente_servico\": 17539,\n                    \"id_cliente\": 24922,\n                    \"id_servico\": 1270,\n                    \"numero_plano\": 6,\n                    \"display\": \"(6) EMPRESAX - 100MB-FIBRA-2019\",\n                    \"endereco_numero_completo\": \"RUA ADAIR JUNQUEIRA GONTIJO, 100 - FONTE BOA, DIVINÓPOLIS/MG | CEP: 35000-000\",\n                    \"endereco_instalacao\": {\n                        \"id_cliente_servico_endereco\": 72937,\n                        \"id_endereco_numero\": 51790,\n                        \"id_cliente_servico\": 17539,\n                        \"tipo\": \"instalacao\",\n                        \"endereco_numero\": {\n                            \"id_endereco_numero\": 51790,\n                            \"numero\": \"100\",\n                            \"complemento\": null,\n                            \"coordenadas\": {\n                                \"type\": \"Point\",\n                                \"coordinates\": [\n                                    -19.918339,\n                                    -43.940102\n                                ]\n                            },\n                            \"ativo\": true,\n                            \"id_cidade\": 1597,\n                            \"bairro\": \"FONTE BOA\",\n                            \"referencia\": null,\n                            \"endereco\": \"RUA ADAIR JUNQUEIRA GONTIJO\",\n                            \"cep\": \"35000000\",\n                            \"atualizar_coords_auto\": false,\n                            \"id_condominio\": null,\n                            \"cidade\": {\n                                \"id_cidade\": 1597,\n                                \"id_estado\": 11,\n                                \"nome\": \"Divinópolis\",\n                                \"estado\": {\n                                    \"id_estado\": 11,\n                                    \"sigla\": \"MG\"\n                                }\n                            }\n                        }\n                    },\n                    \"servico\": {\n                        \"id_servico\": 1270,\n                        \"descricao\": \"EMPRESAX - 100MB-FIBRA-2019\"\n                    },\n                    \"cliente\": {\n                        \"id_cliente\": 24922,\n                        \"ativo\": true,\n                        \"codigo_cliente\": 1861,\n                        \"nome_razaosocial\": \"ANA FLAVIA\",\n                        \"display\": \"(1861) ANA FLAVIA\"\n                    }\n                },\n                \"usuarios_responsaveis\": []\n            },\n            {\n                \"id_atendimento\": 4404,\n                \"id_atendimento_status\": 23,\n                \"id_tipo_atendimento\": null,\n                \"id_cliente_servico\": 15055,\n                \"id_usuario_responsavel\": null,\n                \"id_usuario_abertura\": 3,\n                \"protocolo\": \"20220802154003171906\",\n                \"data_cadastro\": \"2022-08-02 15:40:03\",\n                \"data_fechamento\": null,\n                \"rascunho\": true,\n                \"status_fechamento\": null,\n                \"descricao_fechamento\": null,\n                \"id_motivo_fechamento_atendimento\": null,\n                \"deleted_at\": null,\n                \"avaliacao\": null,\n                \"comentario_avaliacao\": null,\n                \"ordem_servico_count\": 0,\n                \"anexos_count\": 0,\n                \"ingressado\": false,\n                \"data_cadastro_br\": \"02/08/2022 15:40\",\n                \"data_cadastro_timestamp\": 1659465603000,\n                \"data_fechamento_br\": null,\n                \"data_fechamento_timestamp\": null,\n                \"minutos_em_aberto\": 33012,\n                \"tempo_restante\": \"0min\",\n                \"percentual_tempo_restante\": 0,\n                \"percentual_color_class\": \"white-fg md-red-bg\",\n                \"status\": {\n                    \"id_atendimento_status\": 23,\n                    \"prefixo\": \"aguardando_analise\",\n                    \"descricao\": \"Aguardando Análise\",\n                    \"cor\": \"md-deep-orange-A700-bg\",\n                    \"abrir_ordem_servico\": false,\n                    \"display\": \"Aguardando Análise\"\n                },\n                \"tipo_atendimento\": null,\n                \"cliente_servico\": {\n                    \"id_cliente_servico\": 15055,\n                    \"id_cliente\": 12078,\n                    \"id_servico\": 1386,\n                    \"numero_plano\": 9,\n                    \"display\": \"(9) 100MB-PACOTE-ADICIONAL\",\n                    \"endereco_numero_completo\": \"AVENIDA BRASIL, 222 - CENTRO, SANTO ANTÔNIO DO MONTE/MG | CEP: 35560-000\",\n                    \"endereco_instalacao\": {\n                        \"id_cliente_servico_endereco\": 64844,\n                        \"id_endereco_numero\": 42123,\n                        \"id_cliente_servico\": 15055,\n                        \"tipo\": \"instalacao\",\n                        \"endereco_numero\": {\n                            \"id_endereco_numero\": 42123,\n                            \"numero\": \"222\",\n                            \"complemento\": null,\n                            \"coordenadas\": {\n                                \"type\": \"Point\",\n                                \"coordinates\": [\n                                    -45.290375,\n                                    -20.086908\n                                ]\n                            },\n                            \"ativo\": true,\n                            \"id_cidade\": 2052,\n                            \"bairro\": \"CENTRO\",\n                            \"referencia\": null,\n                            \"endereco\": \"AVENIDA BRASIL\",\n                            \"cep\": \"35560000\",\n                            \"atualizar_coords_auto\": true,\n                            \"id_condominio\": null,\n                            \"cidade\": {\n                                \"id_cidade\": 2052,\n                                \"id_estado\": 11,\n                                \"nome\": \"Santo Antônio do Monte\",\n                                \"estado\": {\n                                    \"id_estado\": 11,\n                                    \"sigla\": \"MG\"\n                                }\n                            }\n                        }\n                    },\n                    \"servico\": {\n                        \"id_servico\": 1386,\n                        \"descricao\": \"100MB-PACOTE-ADICIONAL\"\n                    },\n                    \"cliente\": {\n                        \"id_cliente\": 12078,\n                        \"ativo\": true,\n                        \"codigo_cliente\": 1258,\n                        \"nome_razaosocial\": \"IZABELLA RIBEIRO\",\n                        \"display\": \"(1258) IZABELLA RIBEIRO\"\n                    }\n                },\n                \"usuarios_responsaveis\": []\n            },\n            {\n                \"id_atendimento\": 4403,\n                \"id_atendimento_status\": 22,\n                \"id_tipo_atendimento\": 122,\n                \"id_cliente_servico\": 17495,\n                \"id_usuario_responsavel\": null,\n                \"id_usuario_abertura\": 1170,\n                \"protocolo\": \"20220801083002856506\",\n                \"data_cadastro\": \"2022-08-01 08:30:43\",\n                \"data_fechamento\": null,\n                \"rascunho\": false,\n                \"status_fechamento\": null,\n                \"descricao_fechamento\": null,\n                \"id_motivo_fechamento_atendimento\": null,\n                \"deleted_at\": null,\n                \"avaliacao\": null,\n                \"comentario_avaliacao\": null,\n                \"ordem_servico_count\": 2,\n                \"anexos_count\": 0,\n                \"ingressado\": false,\n                \"data_cadastro_br\": \"01/08/2022 08:30\",\n                \"data_cadastro_timestamp\": 1659353443000,\n                \"data_fechamento_br\": null,\n                \"data_fechamento_timestamp\": null,\n                \"minutos_em_aberto\": 34881,\n                \"tempo_restante\": \"-580h 21min\",\n                \"percentual_tempo_restante\": 0,\n                \"percentual_color_class\": \"white-fg md-red-bg\",\n                \"status\": {\n                    \"id_atendimento_status\": 22,\n                    \"prefixo\": \"pendente\",\n                    \"descricao\": \"Pendente\",\n                    \"cor\": \"md-purple-900-bg\",\n                    \"abrir_ordem_servico\": true,\n                    \"display\": \"Pendente (Abertura de OS)\"\n                },\n                \"tipo_atendimento\": {\n                    \"id_tipo_atendimento\": 122,\n                    \"descricao\": \"QUEDA MASSIVA\"\n                },\n                \"cliente_servico\": {\n                    \"id_cliente_servico\": 17495,\n                    \"id_cliente\": 24642,\n                    \"id_servico\": 1427,\n                    \"numero_plano\": 35,\n                    \"display\": \"(35) 100 CANAIS CLONE TESTE\",\n                    \"endereco_numero_completo\": \"RUA JOSÉ VITAL DE CASTRO, 09 - SAO LUCAS, SANTO ANTÔNIO DO MONTE/MG | CEP: 35560-000\",\n                    \"endereco_instalacao\": {\n                        \"id_cliente_servico_endereco\": 72763,\n                        \"id_endereco_numero\": 51575,\n                        \"id_cliente_servico\": 17495,\n                        \"tipo\": \"instalacao\",\n                        \"endereco_numero\": {\n                            \"id_endereco_numero\": 51575,\n                            \"numero\": \"09\",\n                            \"complemento\": null,\n                            \"coordenadas\": {\n                                \"type\": \"Point\",\n                                \"coordinates\": [\n                                    -45.298053,\n                                    -20.093926\n                                ]\n                            },\n                            \"ativo\": true,\n                            \"id_cidade\": 2052,\n                            \"bairro\": \"SAO LUCAS\",\n                            \"referencia\": null,\n                            \"endereco\": \"RUA JOSÉ VITAL DE CASTRO\",\n                            \"cep\": \"35560000\",\n                            \"atualizar_coords_auto\": false,\n                            \"id_condominio\": null,\n                            \"cidade\": {\n                                \"id_cidade\": 2052,\n                                \"id_estado\": 11,\n                                \"nome\": \"Santo Antônio do Monte\",\n                                \"estado\": {\n                                    \"id_estado\": 11,\n                                    \"sigla\": \"MG\"\n                                }\n                            }\n                        }\n                    },\n                    \"servico\": {\n                        \"id_servico\": 1427,\n                        \"descricao\": \"100 CANAIS Clone Teste\"\n                    },\n                    \"cliente\": {\n                        \"id_cliente\": 24642,\n                        \"ativo\": true,\n                        \"codigo_cliente\": 1734,\n                        \"nome_razaosocial\": \"GERALDO JUNIOR OPA\",\n                        \"display\": \"(1734) GERALDO JUNIOR OPA\"\n                    }\n                },\n                \"usuarios_responsaveis\": []\n            }\n        ],\n        \"first_page_url\": \"http://localhost:8000/api/v1/integracao/atendimento/paginado/10?page=1\",\n        \"from\": 71,\n        \"last_page\": 8,\n        \"last_page_url\": \"http://localhost:8000/api/v1/integracao/atendimento/paginado/10?page=8\",\n        \"next_page_url\": null,\n        \"path\": \"http://localhost:8000/api/v1/integracao/atendimento/paginado/10\",\n        \"per_page\": 10,\n        \"prev_page_url\": \"http://localhost:8000/api/v1/integracao/atendimento/paginado/10?page=7\",\n        \"to\": 78,\n        \"total\": 78\n    },\n    \"cliente\": null\n}"
-						}
-					]
-				},
-				{
-					"name": "Todos",
-					"id": "10cc7c29-d8ee-4d8a-85f0-027362f4d89a",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "{{access_token}}",
-								"type": "text",
-								"description": "Bearer Token obtido na autenticação"
-							}
-						],
-						"url": {
-							"raw": "{{url}}/api/v1/integracao/atendimento/todos?pagina=0&itens_por_pagina=0&data_inicio=&data_fim=&relacoes=",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"api",
-								"v1",
-								"integracao",
-								"atendimento",
-								"todos"
-							],
-							"query": [
-								{
-									"key": "pagina",
-									"value": "0",
-									"description": "(Obrigatório) Número da Página que deseja consultar. Primeira página = "
-								},
-								{
-									"key": "itens_por_pagina",
-									"value": "0",
-									"description": "(Obrigatório) Total de Itens por Página (Min: 1 e Max: 500)"
-								},
-								{
-									"key": "data_inicio",
-									"value": "",
-									"description": "(opcional) Valor no formato Date (YYYY-MM-DD). Obs: Menor ou igual a data fim"
-								},
-								{
-									"key": "data_fim",
-									"value": "",
-									"description": "(opcional) Valor no formato Date (YYYY-MM-DD) Obs: Maior ou igual data_inicio"
-								},
-								{
-									"key": "relacoes",
-									"value": "",
-									"description": "(opcional) cliente_servico,usuarios_responsaveis,atendimento_mensagem"
-								}
-							]
-						},
-						"description": "No método `GET`, irá consultar os dados dos atendimentos e retornar um `JSON` como resposta. O resultado é retornado de forma paginada, portanto é importante fazer um loop de consultas em sua aplicação, caso queria percorrer os dados em sua totalidade.\n\nOs seguintes parâmetros podem/devem ser utilizados:\n\n| **Atributo** | **Descrição** | **Obrigatório** |\n| --- | --- | --- |\n| pagina | Número da Página da Consulta | **Sim** |\n| itens_por_pagina | Quantidade de Registro por Página da consulta | **Sim** |\n| data_inicio | Data de Cadastro Inicial | Não |\n| data_fim | Data de Cadastro Final | Não |\n| relacoes | Carrega apenas os relacionamentos especificados | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| **Atributo** | **Descrição** | **Valor Default** |\n| --- | --- | --- |\n| pagina | Valor númerico. A primeira página será 0 | Nenhum |\n| itens_por_pagina | Valor númerico. Mínimo: 1, Máximo: 500 | Nenhum |\n| data_inicio | Valor no formato DateTime (YYYY-MM-DD) | Nenhum |\n| data_fim | Valor no formato DateTime (YYYY-MM-DD) Obs: Maior ou igual data_inicio | Nenhum |\n| relacoes | cliente_servico,usuarios_responsaveis,atendimento_mensagem | Nenhum |\n\n**IMPORTANTE:** Lembre-se que essa é uma requisição que poderá retornar um volume muito grande de dados, portanto, utilize as relações com cautela, pois quanto mais relações forem utilizados, maior poderá ser o tempo de resposta da API."
-					},
-					"response": [
-						{
-							"id": "6a696f92-2313-49b0-baff-3772c1deeff2",
-							"name": "Sucesso",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "",
-										"type": "text"
-									}
-								],
-								"url": "/api/v1/integracao/atendimento/todos"
-							},
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Dados consultados com sucesso\",\n    \"paginacao\": {\n        \"primeira_pagina\": 0,\n        \"ultima_pagina\": 38,\n        \"pagina_atual\": 0,\n        \"total_registros\": 39\n    },\n    \"atendimentos\": [\n        {\n            \"id_atendimento\": 5448,\n            \"id_atendimento_status\": 23,\n            \"id_tipo_atendimento\": 125,\n            \"id_cliente_servico\": 17812,\n            \"id_usuario_responsavel\": null,\n            \"id_usuario_abertura\": 4903,\n            \"protocolo\": \"20221229180833379797\",\n            \"data_cadastro\": \"2022-12-29 18:08:33\",\n            \"data_fechamento\": null,\n            \"rascunho\": false,\n            \"status_fechamento\": null,\n            \"descricao_fechamento\": null,\n            \"id_motivo_fechamento_atendimento\": null,\n            \"deleted_at\": null,\n            \"avaliacao\": null,\n            \"comentario_avaliacao\": null,\n            \"ordem_servico_count\": 0,\n            \"ordem_servico_fechada\": 0,\n            \"ordem_servico_aberta\": 0,\n            \"ingressado\": false,\n            \"data_cadastro_br\": \"29/12/2022 18:08\",\n            \"data_cadastro_timestamp\": 1672348113000,\n            \"data_fechamento_br\": null,\n            \"data_fechamento_timestamp\": null,\n            \"minutos_em_aberto\": 61486,\n            \"tempo_restante\": \"-1023h 46min\",\n            \"percentual_tempo_restante\": 0,\n            \"percentual_color_class\": \"white-fg md-red-bg\",\n            \"status\": {\n                \"id_atendimento_status\": 23,\n                \"prefixo\": \"aguardando_analise\",\n                \"descricao\": \"Aguardando Análise\",\n                \"cor\": \"md-deep-orange-A700-bg\",\n                \"abrir_ordem_servico\": false,\n                \"display\": \"Aguardando Análise\"\n            },\n            \"tipo_atendimento\": {\n                \"id_tipo_atendimento\": 125,\n                \"descricao\": \"COMERCIAL\",\n                \"checklists\": []\n            },\n            \"cliente_servico\": {\n                \"id_cliente_servico\": 17812,\n                \"id_cliente\": 24930,\n                \"id_servico\": 2735,\n                \"numero_plano\": 6,\n                \"display\": \"(6) (MIGRACAO-TESTEMAP) COMBO 10 MEGA - RÁDIO\",\n                \"endereco_numero_completo\": \"RUA PADRE PAULO, 308 - MAE CHIQUINHA, SANTO ANTÔNIO DO MONTE/MG | CEP: 35560-000\",\n                \"endereco_instalacao\": {\n                    \"id_cliente_servico_endereco\": 73553,\n                    \"id_endereco_numero\": 52635,\n                    \"id_cliente_servico\": 17812,\n                    \"tipo\": \"instalacao\",\n                    \"endereco_numero\": {\n                        \"id_endereco_numero\": 52635,\n                        \"numero\": \"308\",\n                        \"complemento\": null,\n                        \"coordenadas\": {\n                            \"type\": \"Point\",\n                            \"coordinates\": [\n                                -45.292858,\n                                -20.092926\n                            ]\n                        },\n                        \"ativo\": true,\n                        \"id_cidade\": 7674,\n                        \"bairro\": \"MAE CHIQUINHA\",\n                        \"referencia\": null,\n                        \"endereco\": \"RUA PADRE PAULO\",\n                        \"cep\": \"35560000\",\n                        \"atualizar_coords_auto\": false,\n                        \"id_condominio\": null,\n                        \"cidade\": {\n                            \"id_cidade\": 7674,\n                            \"id_estado\": 65,\n                            \"nome\": \"Santo Antônio do Monte\",\n                            \"estado\": {\n                                \"id_estado\": 65,\n                                \"sigla\": \"MG\"\n                            }\n                        }\n                    }\n                },\n                \"servico\": {\n                    \"id_servico\": 2735,\n                    \"descricao\": \"(Migracao-TesteMap) COMBO 10 MEGA - RÁDIO\",\n                    \"id_servico_grupo\": 51,\n                    \"servico_grupo\": {\n                        \"id_servico_grupo\": 51,\n                        \"descricao\": \"GRUPO DE TESTE\",\n                        \"data_cadastro\": \"2020-04-15 13:52:01\",\n                        \"ativo\": true\n                    }\n                },\n                \"cliente\": {\n                    \"id_cliente\": 24930,\n                    \"ativo\": true,\n                    \"codigo_cliente\": 1864,\n                    \"nome_razaosocial\": \"LAVYNIA\",\n                    \"display\": \"(1864) LAVYNIA\"\n                }\n            },\n            \"usuarios_responsaveis\": [],\n            \"atendimento_mensagem\": [\n                {\n                    \"id_atendimento_mensagem\": 376,\n                    \"id_atendimento\": 5448,\n                    \"mensagem\": \"TESTE\",\n                    \"data_cadastro_br\": \"10/02/2023 10:55\",\n                    \"data_cadastro_timestamp\": 1676037311000\n                },\n                {\n                    \"id_atendimento_mensagem\": 375,\n                    \"id_atendimento\": 5448,\n                    \"mensagem\": \"TESTE\",\n                    \"data_cadastro_br\": \"10/02/2023 10:55\",\n                    \"data_cadastro_timestamp\": 1676037311000\n                }\n            ]\n        }\n    ]\n}"
-						}
-					]
-				},
-				{
-					"name": "Adicionar",
-					"id": "3d3f172e-2062-49d4-8d0a-83da9ad6fe79",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "noauth"
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "{{access_token}}",
-								"description": "Bearer Token obtido na autenticação"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n        \"id_cliente_servico\":\"11000\",\n        \"descricao\":\"Abertura de atendimento de teste\",\n        \"nome\":\"Nome do Usuário Solicitante\",\n        \"telefone\":\"37999112233\",\n        \"email\":\"teste@teste.com.br\",\n        \"abrir_os\":true,\n        \"parametros\":{\n            \"parametro1\":\"Teste\",\n            \"parametro2\":\"Teste2\",\n            \"parametro3\":\"Teste3\"\n        }\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "{{url}}/api/v1/integracao/atendimento",
-						"description": "**POST**\n\nNo método `POST`, será possível adicionar os atendimentos em aberto/fechados dos clientes e obter o retorno no formato `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico | Identificador do serviço do cliente | Sim |\n| id_tipo_atendimento | Identificador do tipo de atendimento | Não |\n| descricao | Descrição detalhada do atendimento | Sim |\n| nome | Nome do solicitante | Sim |\n| telefone | Telefone do solicitante | Sim |\n| email | Email do solicitante | Não |\n| abrir_os | Indica se deve abrir Ordem de Serviço ou não | Não |\n| parametros | Parâmetros Dinâmicos. Array de dados. | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico | Número Inteiro | Nenhum |\n| id_tipo_atendimento | Número Inteiro | Nenhum |\n| descricao | Campo Livre (Qualquer valor é aceito) | Nenhum |\n| nome | Campo Livre (Qualquer valor é aceito) | Nenhum |\n| telefone | Telefone no formato (DDNNNNNNNNN). | Nenhum |\n| email | Caso enviado deve ser no formato e-mail (EX: [user@dominio.com](mailto:user@dominio.com)) | Nenhum |\n| abrir_os | Caso enviado, deve conter um valor boolean (true | false |\n| parametros | Nos parâmetros dinâmicos podem ser enviados qualquer informação. |  |\n\n**Observação: Se o parâmetro id_tipo_atendimento não for enviado, o atendimento será aberto com o tipo padrão SAC.**\n\nObservação 2: Veja que na abertura do atendimento existe a possibilidade de enviar parâmetros dinâmicos. Esses parâmetros todos serão armazendos juntamente com o atendimento . Por exemplo se a sua plataforma for um sistema Omnichannel (PBX, WhatsApp, Messenger, etc), você pode armazar o ID da Conversa/Chamada, Data de Início, Data de Término, Atendimento, etc. Quanto mais informações você envia para o HubSoft, mais completo ficará a visualização do atendimento."
-					},
-					"response": [
-						{
-							"id": "626ec344-2249-4393-8cef-c06276b4f8d2",
-							"name": "Sucesso",
-							"originalRequest": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "{{access_token}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"id_cliente_servico\": \"11000\",\n    \"descricao\": \"Abertura de atendimento de teste\",\n    \"nome\": \"Nome do Usuário Solicitante\",\n    \"telefone\": \"37999112233\",\n    \"email\": \"teste@teste.com.br\",\n    \"abrir_os\": true,\n    \"parametros\":{\n        \"id_ligacao\":\"1233882731973123\",\n        \"data_inicio\":\"20/12/2023 09:32:11\",\n        \"data_termino\":\"20/20/2023 09:37:21\",\n        \"atendimento\":\"João Silva\",\n        \"ramal\":\"12342\",\n        \"url_chamada\":\"https://meuservidorpbx.com.br/ligacao/1233882731973123.mp3\",\n        \"caminho_ura\":\"1000 -> 1003 -> 2000 -> 2001\"\n    }\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{url}}/api/v1/integracao/atendimento"
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Authorization",
-									"value": "Bearer 12lk3jsdkjfk!jksjdfkwjk12jk3j1k31ksjfksdjfkwj",
-									"description": "",
-									"type": "text"
-								}
-							],
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Atendimento aberto com sucesso. Anote o protocolo: 201811161058216. Foi aberto também uma ordem de serviço e encaminhada ao sertor responsável\",\n    \"atendimento\": {\n        \"id_atendimento\": 300,\n        \"protocolo\": \"201811161058216\",\n        \"descricao_abertura\": \"Estou sem acesso a internet desde segunda-feira. | ATENDIMENTO ABERTO VIA API\",\n        \"descricao_fechamento\": null,\n        \"tipo_atendimento\": \"SAC\",\n        \"usuario_abertura\": \"IP Telecom\",\n        \"usuario_responsavel\": \"IP Telecom\",\n        \"usuario_fechamento\": null,\n        \"data_cadastro\": \"16/11/2018\",\n        \"data_fechamento\": null,\n        \"setor_responsavel\": null,\n        \"status_fechamento\": null,\n        \"motivo_fechamento\": null,\n        \"status\": \"Aguardando Análise\",\n        \"cliente\": {\n            \"codigo_cliente\": 1204,\n            \"nome_razaosocial\": \"BIANCA COUTO\",\n            \"cpf_cnpj\": \"86214941081\"\n        },\n        \"ordens_servico\": [\n            {\n                \"id_ordem_servico\": 340,\n                \"numero_ordem_servico\": \"320\",\n                \"data_cadastro\": \"16/11/2018 10:58:21\",\n                \"tipo\": \"ABERTURA VIA API\",\n                \"data_inicio_programado\": \"16/11/2018 11:58:21\",\n                \"data_termino_programado\": \"16/11/2018 12:58:21\",\n                \"data_inicio_executado\": null,\n                \"data_termino_executado\": null,\n                \"descricao_abertura\": \"Estou sem acesso a internet desde segunda-feira. | ATENDIMENTO ABERTO VIA API\",\n                \"descricao_servico\": \"Estou sem acesso a internet desde segunda-feira. | ATENDIMENTO ABERTO VIA API\",\n                \"descricao_fechamento\": null,\n                \"usuario_abertura\": \"IP Telecom\",\n                \"usuario_fechamento\": null,\n                \"status\": \"aguardando_agendamento\",\n                \"status_fechamento\": null,\n                \"cliente\": {\n                    \"codigo_cliente\": 1204,\n                    \"nome_razaosocial\": \"BIANCA COUTO\",\n                    \"cpf_cnpj\": \"86214941081\"\n                },\n                \"servico\": {\n                    \"numero_plano\": 9,\n                    \"nome\": \"NEXT-NV_1MBPS\",\n                    \"valor\": 69.9,\n                    \"status\": \"Serviço Habilitado\",\n                    \"status_prefixo\": \"servico_habilitado\"\n                }\n            }\n        ]\n    }\n}"
-						}
-					]
-				},
-				{
-					"name": "Editar",
-					"id": "23f95cc1-d4d9-4363-a555-d7eeaa02fb11",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "PUT",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "{{access_token}}",
-								"description": "Bearer Token obtido na autenticação"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"parametros\": {\n        \"url_ligacao\": \"https://www.meusite.com.br/ligacao/3\",\n        \"software\": \"PBX ABCDE\",\n        \"outro_parametro\": 123456\n    },\n    \"fechar_atendimento\": true\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{url}}/api/v1/integracao/atendimento/:id_atendimento",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"api",
-								"v1",
-								"integracao",
-								"atendimento",
-								":id_atendimento"
-							],
-							"variable": [
-								{
-									"id": "5f3ae58b-2f5e-42e6-bb0d-6d3a07dd8799",
-									"key": "id_atendimento",
-									"value": "123",
-									"description": "ID do Atendimento a ser editado"
-								}
-							]
-						},
-						"description": "Através desse endpoint será possível editar e fechar os atendimentos em abertos dos clientes e obter o retorno no formato JSON como resposta. Lembre de enviar o ID do atendimento como um parâmetro na URL, conforme o exemplo acima. Os seguintes parâmetros podem/devem estar presentes no corpo do requisição:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| descricao | Descrição de abertura do atendimento (Opcional) | Não |\n| fechar_atendimento | Indica se deve ser fechado os atendimento e suas ordens de serviço | Sim |\n| parametros | Objeto JSON que poderá conter qualquer informação da integração | Sim |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| descricao | Texto | Nenhum |\n| fechar_atendimento | Boolean ( Verdadeiro ou Falso ) | false |\n| parametros | Array Associativo, JSON | Nenhum |"
-					},
-					"response": [
-						{
-							"id": "8c181727-ad26-498d-9657-ba55995b592f",
-							"name": "Sucesso",
-							"originalRequest": {
-								"method": "PUT",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "{{access_token}}",
-										"description": "Token Obtido na etapa de Autenticação",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"parametros\": {\n        \"url_ligacao\": \"https://www.meusite.com.br/ligacao/3\",\n        \"software\": \"PBX ABCDE\",\n        \"outro_parametro\": 123456\n    },\n    \"fechar_atendimento\": true\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{url}}/api/v1/integracao/atendimento/:id_atendimento",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"api",
-										"v1",
-										"integracao",
-										"atendimento",
-										":id_atendimento"
-									],
-									"variable": [
-										{
-											"key": "id_atendimento",
-											"value": "123",
-											"description": "ID do Atendimento a ser editado"
-										}
-									]
-								}
-							},
-							"_postman_previewlanguage": "json",
-							"header": null,
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Atendimento atualizado com sucesso\",\n    \"atendimento\": {\n        \"id_atendimento\": 1114,\n        \"protocolo\": \"202003051452007\",\n        \"id_cliente_servico\": 13677,\n        \"id_tipo_atendimento\": 44,\n        \"id_usuario_abertura\": 56,\n        \"id_usuario_fechamento\": 1,\n        \"descricao_abertura\": \"INSTALAÇÃO NOVA\",\n        \"descricao_fechamento\": \"Fechamento automático.\",\n        \"data_cadastro\": \"2020-03-05 14:52:00\",\n        \"data_fechamento\": \"2020-03-11 09:56:10\",\n        \"ip_cadastro\": null,\n        \"id_usuario_responsavel\": 22,\n        \"id_setor_responsavel\": null,\n        \"destino\": \"usuario\",\n        \"status_fechamento\": \"concluido\",\n        \"id_motivo_fechamento_atendimento\": 5,\n        \"id_atendimento_status\": 24,\n        \"resultado_diagnostico\": null,\n        \"nome_contato\": \"TESTE APRESENT\",\n        \"telefone_contato\": \"3734151100\",\n        \"email_contato\": null,\n        \"rascunho\": false,\n        \"deleted_at\": null,\n        \"id_origem_contato\": null,\n        \"avaliacao\": null,\n        \"comentario_avaliacao\": null,\n        \"push_notification_enviado\": false,\n        \"data_cadastro_br\": \"05/03/2020 14:52\",\n        \"data_cadastro_timestamp\": 1583430720000,\n        \"data_fechamento_br\": \"11/03/2020 09:56\",\n        \"data_fechamento_timestamp\": 1583931370000,\n        \"minutos_em_aberto\": 8344,\n        \"tempo_restante\": \"-138h 4min\",\n        \"percentual_tempo_restante\": 0,\n        \"percentual_color_class\": \"white-fg md-red-bg\"\n    }\n}"
-						}
-					]
-				}
-			],
-			"id": "606de75a-0db7-4a9c-806c-0737fb8ac23f",
-			"description": "**Necessário**\n\nPara realizar as requisições nos dados de atendimento, será necessário que você já possua o `access_token`, adquirido através dos `endpoints` de `(oAuth)`."
-		},
-		{
 			"name": "Clientes",
 			"item": [
 				{
@@ -8257,6 +7883,380 @@
 			"name": "Configuração",
 			"item": [
 				{
+					"name": "Alarme",
+					"item": [
+						{
+							"name": "Consulta",
+							"id": "5404f24a-0940-4343-947f-d432dcfd2e01",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"description": "Bearer Token obtido na autenticação"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/v1/integracao/atendimento/paginado/:quantidade?pagina=1&data_inicio=2022-08-01&data_fim=2022-08-31",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"integracao",
+										"atendimento",
+										"paginado",
+										":quantidade"
+									],
+									"query": [
+										{
+											"key": "pagina",
+											"value": "1",
+											"description": "Página que está sendo consultada"
+										},
+										{
+											"key": "data_inicio",
+											"value": "2022-08-01",
+											"description": "Data de Início no formato YYYY-MM-DD"
+										},
+										{
+											"key": "data_fim",
+											"value": "2022-08-31",
+											"description": "Data Final no formato YYYY-MM-DD"
+										}
+									],
+									"variable": [
+										{
+											"id": "c52b3fdf-19ca-4dec-a5ec-8a8b3a714e50",
+											"key": "quantidade",
+											"value": "10",
+											"description": "Quantidade de Itens por Página"
+										}
+									]
+								},
+								"description": "**POST**\n\nNo método `POST`, irá consultar os dados dos atendimentos e retornar um `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| data_inicio | Data de Cadastro Inicial | Sim |\n| data_fim | Data de Cadastro Final | Sim |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| data_inicio | Valor no formato DateTime (YYYY-MM-DD) | Nenhum |\n| data_fim | Valor no formato DateTime (YYYY-MM-DD) Obs: Maior ou igual data_inicio | Nenhum |"
+							},
+							"response": [
+								{
+									"id": "972fd953-d943-4aed-9103-eedeb0beb674",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/atendimento/paginado/:quantidade?pagina=1&data_inicio=2022-08-01&data_fim=2022-08-31",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"atendimento",
+												"paginado",
+												":quantidade"
+											],
+											"query": [
+												{
+													"key": "pagina",
+													"value": "1",
+													"description": "Página que está sendo consultada"
+												},
+												{
+													"key": "data_inicio",
+													"value": "2022-08-01",
+													"description": "Data de Início no formato YYYY-MM-DD"
+												},
+												{
+													"key": "data_fim",
+													"value": "2022-08-31",
+													"description": "Data Final no formato YYYY-MM-DD"
+												}
+											],
+											"variable": [
+												{
+													"key": "quantidade",
+													"value": "10",
+													"description": "Quantidade de Itens por Página"
+												}
+											]
+										}
+									},
+									"_postman_previewlanguage": "json",
+									"header": [],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Dados consultados com sucesso\",\n    \"atendimentos\": {\n        \"current_page\": 8,\n        \"data\": [\n            {\n                \"id_atendimento\": 4413,\n                \"id_atendimento_status\": 22,\n                \"id_tipo_atendimento\": 162,\n                \"id_cliente_servico\": 17558,\n                \"id_usuario_responsavel\": null,\n                \"id_usuario_abertura\": 5228,\n                \"protocolo\": \"20220804154332049991\",\n                \"data_cadastro\": \"2022-08-04 15:45:57\",\n                \"data_fechamento\": null,\n                \"rascunho\": false,\n                \"status_fechamento\": null,\n                \"descricao_fechamento\": null,\n                \"id_motivo_fechamento_atendimento\": null,\n                \"deleted_at\": null,\n                \"avaliacao\": null,\n                \"comentario_avaliacao\": null,\n                \"ordem_servico_count\": 1,\n                \"anexos_count\": 0,\n                \"ingressado\": false,\n                \"data_cadastro_br\": \"04/08/2022 15:45\",\n                \"data_cadastro_timestamp\": 1659638757000,\n                \"data_fechamento_br\": null,\n                \"data_fechamento_timestamp\": null,\n                \"minutos_em_aberto\": 30126,\n                \"tempo_restante\": \"-501h 6min\",\n                \"percentual_tempo_restante\": 0,\n                \"percentual_color_class\": \"white-fg md-red-bg\",\n                \"status\": {\n                    \"id_atendimento_status\": 22,\n                    \"prefixo\": \"pendente\",\n                    \"descricao\": \"Pendente\",\n                    \"cor\": \"md-purple-900-bg\",\n                    \"abrir_ordem_servico\": true,\n                    \"display\": \"Pendente (Abertura de OS)\"\n                },\n                \"tipo_atendimento\": {\n                    \"id_tipo_atendimento\": 162,\n                    \"descricao\": \"TESTE\"\n                },\n                \"cliente_servico\": {\n                    \"id_cliente_servico\": 17558,\n                    \"id_cliente\": 25126,\n                    \"id_servico\": 1269,\n                    \"numero_plano\": 0,\n                    \"display\": \"(0) 100GB-DE-TESTE(140)\",\n                    \"endereco_numero_completo\": \"RUA ADAIR JUNQUEIRA GONTIJO, 100 - FONTE BOA, DIVINÓPOLIS/MG | CEP: 35000-000\",\n                    \"endereco_instalacao\": {\n                        \"id_cliente_servico_endereco\": 73001,\n                        \"id_endereco_numero\": 51862,\n                        \"id_cliente_servico\": 17558,\n                        \"tipo\": \"instalacao\",\n                        \"endereco_numero\": {\n                            \"id_endereco_numero\": 51862,\n                            \"numero\": \"100\",\n                            \"complemento\": null,\n                            \"coordenadas\": {\n                                \"type\": \"Point\",\n                                \"coordinates\": [\n                                    -19.918339,\n                                    -43.940102\n                                ]\n                            },\n                            \"ativo\": true,\n                            \"id_cidade\": 1597,\n                            \"bairro\": \"FONTE BOA\",\n                            \"referencia\": null,\n                            \"endereco\": \"RUA ADAIR JUNQUEIRA GONTIJO\",\n                            \"cep\": \"35000000\",\n                            \"atualizar_coords_auto\": false,\n                            \"id_condominio\": null,\n                            \"cidade\": {\n                                \"id_cidade\": 1597,\n                                \"id_estado\": 11,\n                                \"nome\": \"Divinópolis\",\n                                \"estado\": {\n                                    \"id_estado\": 11,\n                                    \"sigla\": \"MG\"\n                                }\n                            }\n                        }\n                    },\n                    \"servico\": {\n                        \"id_servico\": 1269,\n                        \"descricao\": \"100GB-DE-TESTE(140)\"\n                    },\n                    \"cliente\": {\n                        \"id_cliente\": 25126,\n                        \"ativo\": true,\n                        \"codigo_cliente\": 2015,\n                        \"nome_razaosocial\": \"GABRIEL\",\n                        \"display\": \"(2015) GABRIEL\"\n                    }\n                },\n                \"usuarios_responsaveis\": [\n                    {\n                        \"id\": 5228,\n                        \"name\": \"Sara Borges \",\n                        \"id_imagem_upload\": null,\n                        \"pivot\": {\n                            \"id_atendimento\": 4413,\n                            \"id_usuario\": 5228\n                        },\n                        \"imagem\": null\n                    }\n                ]\n            },\n            {\n                \"id_atendimento\": 4412,\n                \"id_atendimento_status\": 22,\n                \"id_tipo_atendimento\": 130,\n                \"id_cliente_servico\": 17558,\n                \"id_usuario_responsavel\": null,\n                \"id_usuario_abertura\": 4904,\n                \"protocolo\": \"20220804151732696375\",\n                \"data_cadastro\": \"2022-08-04 15:18:12\",\n                \"data_fechamento\": null,\n                \"rascunho\": false,\n                \"status_fechamento\": null,\n                \"descricao_fechamento\": null,\n                \"id_motivo_fechamento_atendimento\": null,\n                \"deleted_at\": null,\n                \"avaliacao\": null,\n                \"comentario_avaliacao\": null,\n                \"ordem_servico_count\": 1,\n                \"anexos_count\": 0,\n                \"ingressado\": false,\n                \"data_cadastro_br\": \"04/08/2022 15:18\",\n                \"data_cadastro_timestamp\": 1659637092000,\n                \"data_fechamento_br\": null,\n                \"data_fechamento_timestamp\": null,\n                \"minutos_em_aberto\": 30154,\n                \"tempo_restante\": \"-501h 34min\",\n                \"percentual_tempo_restante\": 0,\n                \"percentual_color_class\": \"white-fg md-red-bg\",\n                \"status\": {\n                    \"id_atendimento_status\": 22,\n                    \"prefixo\": \"pendente\",\n                    \"descricao\": \"Pendente\",\n                    \"cor\": \"md-purple-900-bg\",\n                    \"abrir_ordem_servico\": true,\n                    \"display\": \"Pendente (Abertura de OS)\"\n                },\n                \"tipo_atendimento\": {\n                    \"id_tipo_atendimento\": 130,\n                    \"descricao\": \"MUDANÇA DE ENDEREÇO\"\n                },\n                \"cliente_servico\": {\n                    \"id_cliente_servico\": 17558,\n                    \"id_cliente\": 25126,\n                    \"id_servico\": 1269,\n                    \"numero_plano\": 0,\n                    \"display\": \"(0) 100GB-DE-TESTE(140)\",\n                    \"endereco_numero_completo\": \"RUA ADAIR JUNQUEIRA GONTIJO, 100 - FONTE BOA, DIVINÓPOLIS/MG | CEP: 35000-000\",\n                    \"endereco_instalacao\": {\n                        \"id_cliente_servico_endereco\": 73001,\n                        \"id_endereco_numero\": 51862,\n                        \"id_cliente_servico\": 17558,\n                        \"tipo\": \"instalacao\",\n                        \"endereco_numero\": {\n                            \"id_endereco_numero\": 51862,\n                            \"numero\": \"100\",\n                            \"complemento\": null,\n                            \"coordenadas\": {\n                                \"type\": \"Point\",\n                                \"coordinates\": [\n                                    -19.918339,\n                                    -43.940102\n                                ]\n                            },\n                            \"ativo\": true,\n                            \"id_cidade\": 1597,\n                            \"bairro\": \"FONTE BOA\",\n                            \"referencia\": null,\n                            \"endereco\": \"RUA ADAIR JUNQUEIRA GONTIJO\",\n                            \"cep\": \"35000000\",\n                            \"atualizar_coords_auto\": false,\n                            \"id_condominio\": null,\n                            \"cidade\": {\n                                \"id_cidade\": 1597,\n                                \"id_estado\": 11,\n                                \"nome\": \"Divinópolis\",\n                                \"estado\": {\n                                    \"id_estado\": 11,\n                                    \"sigla\": \"MG\"\n                                }\n                            }\n                        }\n                    },\n                    \"servico\": {\n                        \"id_servico\": 1269,\n                        \"descricao\": \"100GB-DE-TESTE(140)\"\n                    },\n                    \"cliente\": {\n                        \"id_cliente\": 25126,\n                        \"ativo\": true,\n                        \"codigo_cliente\": 2015,\n                        \"nome_razaosocial\": \"GABRIEL\",\n                        \"display\": \"(2015) GABRIEL\"\n                    }\n                },\n                \"usuarios_responsaveis\": [\n                    {\n                        \"id\": 4904,\n                        \"name\": \"Ana Flávia\",\n                        \"id_imagem_upload\": null,\n                        \"pivot\": {\n                            \"id_atendimento\": 4412,\n                            \"id_usuario\": 4904\n                        },\n                        \"imagem\": null\n                    }\n                ]\n            },\n            {\n                \"id_atendimento\": 4411,\n                \"id_atendimento_status\": 23,\n                \"id_tipo_atendimento\": null,\n                \"id_cliente_servico\": 16982,\n                \"id_usuario_responsavel\": null,\n                \"id_usuario_abertura\": 3,\n                \"protocolo\": \"20220804112405573653\",\n                \"data_cadastro\": \"2022-08-04 11:24:05\",\n                \"data_fechamento\": null,\n                \"rascunho\": true,\n                \"status_fechamento\": null,\n                \"descricao_fechamento\": null,\n                \"id_motivo_fechamento_atendimento\": null,\n                \"deleted_at\": null,\n                \"avaliacao\": null,\n                \"comentario_avaliacao\": null,\n                \"ordem_servico_count\": 0,\n                \"anexos_count\": 0,\n                \"ingressado\": false,\n                \"data_cadastro_br\": \"04/08/2022 11:24\",\n                \"data_cadastro_timestamp\": 1659623045000,\n                \"data_fechamento_br\": null,\n                \"data_fechamento_timestamp\": null,\n                \"minutos_em_aberto\": 30388,\n                \"tempo_restante\": \"0min\",\n                \"percentual_tempo_restante\": 0,\n                \"percentual_color_class\": \"white-fg md-red-bg\",\n                \"status\": {\n                    \"id_atendimento_status\": 23,\n                    \"prefixo\": \"aguardando_analise\",\n                    \"descricao\": \"Aguardando Análise\",\n                    \"cor\": \"md-deep-orange-A700-bg\",\n                    \"abrir_ordem_servico\": false,\n                    \"display\": \"Aguardando Análise\"\n                },\n                \"tipo_atendimento\": null,\n                \"cliente_servico\": {\n                    \"id_cliente_servico\": 16982,\n                    \"id_cliente\": 11942,\n                    \"id_servico\": 2675,\n                    \"numero_plano\": 73,\n                    \"display\": \"(73) 212 MB - ULTRA FIBRA\",\n                    \"endereco_numero_completo\": \"PRAÇA GETÚLIO VARGAS, 77, SALA 411 - CENTRO, SANTO ANTÔNIO DO MONTE/MG | CEP: 35560-000\",\n                    \"endereco_instalacao\": {\n                        \"id_cliente_servico_endereco\": 71037,\n                        \"id_endereco_numero\": 49538,\n                        \"id_cliente_servico\": 16982,\n                        \"tipo\": \"instalacao\",\n                        \"endereco_numero\": {\n                            \"id_endereco_numero\": 49538,\n                            \"numero\": \"77\",\n                            \"complemento\": \"SALA 411\",\n                            \"coordenadas\": null,\n                            \"ativo\": true,\n                            \"id_cidade\": 2052,\n                            \"bairro\": \"CENTRO\",\n                            \"referencia\": null,\n                            \"endereco\": \"PRAÇA GETÚLIO VARGAS\",\n                            \"cep\": \"35560000\",\n                            \"atualizar_coords_auto\": false,\n                            \"id_condominio\": null,\n                            \"cidade\": {\n                                \"id_cidade\": 2052,\n                                \"id_estado\": 11,\n                                \"nome\": \"Santo Antônio do Monte\",\n                                \"estado\": {\n                                    \"id_estado\": 11,\n                                    \"sigla\": \"MG\"\n                                }\n                            }\n                        }\n                    },\n                    \"servico\": {\n                        \"id_servico\": 2675,\n                        \"descricao\": \"212 MB - ULTRA FIBRA\"\n                    },\n                    \"cliente\": {\n                        \"id_cliente\": 11942,\n                        \"ativo\": true,\n                        \"codigo_cliente\": 1161,\n                        \"nome_razaosocial\": \"ANTONIO MODESTO AMARAL SOUSA\",\n                        \"display\": \"(1161) ANTONIO MODESTO AMARAL SOUSA\"\n                    }\n                },\n                \"usuarios_responsaveis\": []\n            },\n            {\n                \"id_atendimento\": 4409,\n                \"id_atendimento_status\": 23,\n                \"id_tipo_atendimento\": null,\n                \"id_cliente_servico\": 17539,\n                \"id_usuario_responsavel\": null,\n                \"id_usuario_abertura\": 3,\n                \"protocolo\": \"20220804104042145909\",\n                \"data_cadastro\": \"2022-08-04 10:40:42\",\n                \"data_fechamento\": null,\n                \"rascunho\": true,\n                \"status_fechamento\": null,\n                \"descricao_fechamento\": null,\n                \"id_motivo_fechamento_atendimento\": null,\n                \"deleted_at\": null,\n                \"avaliacao\": null,\n                \"comentario_avaliacao\": null,\n                \"ordem_servico_count\": 0,\n                \"anexos_count\": 0,\n                \"ingressado\": false,\n                \"data_cadastro_br\": \"04/08/2022 10:40\",\n                \"data_cadastro_timestamp\": 1659620442000,\n                \"data_fechamento_br\": null,\n                \"data_fechamento_timestamp\": null,\n                \"minutos_em_aberto\": 30431,\n                \"tempo_restante\": \"0min\",\n                \"percentual_tempo_restante\": 0,\n                \"percentual_color_class\": \"white-fg md-red-bg\",\n                \"status\": {\n                    \"id_atendimento_status\": 23,\n                    \"prefixo\": \"aguardando_analise\",\n                    \"descricao\": \"Aguardando Análise\",\n                    \"cor\": \"md-deep-orange-A700-bg\",\n                    \"abrir_ordem_servico\": false,\n                    \"display\": \"Aguardando Análise\"\n                },\n                \"tipo_atendimento\": null,\n                \"cliente_servico\": {\n                    \"id_cliente_servico\": 17539,\n                    \"id_cliente\": 24922,\n                    \"id_servico\": 1270,\n                    \"numero_plano\": 6,\n                    \"display\": \"(6) EMPRESAX - 100MB-FIBRA-2019\",\n                    \"endereco_numero_completo\": \"RUA ADAIR JUNQUEIRA GONTIJO, 100 - FONTE BOA, DIVINÓPOLIS/MG | CEP: 35000-000\",\n                    \"endereco_instalacao\": {\n                        \"id_cliente_servico_endereco\": 72937,\n                        \"id_endereco_numero\": 51790,\n                        \"id_cliente_servico\": 17539,\n                        \"tipo\": \"instalacao\",\n                        \"endereco_numero\": {\n                            \"id_endereco_numero\": 51790,\n                            \"numero\": \"100\",\n                            \"complemento\": null,\n                            \"coordenadas\": {\n                                \"type\": \"Point\",\n                                \"coordinates\": [\n                                    -19.918339,\n                                    -43.940102\n                                ]\n                            },\n                            \"ativo\": true,\n                            \"id_cidade\": 1597,\n                            \"bairro\": \"FONTE BOA\",\n                            \"referencia\": null,\n                            \"endereco\": \"RUA ADAIR JUNQUEIRA GONTIJO\",\n                            \"cep\": \"35000000\",\n                            \"atualizar_coords_auto\": false,\n                            \"id_condominio\": null,\n                            \"cidade\": {\n                                \"id_cidade\": 1597,\n                                \"id_estado\": 11,\n                                \"nome\": \"Divinópolis\",\n                                \"estado\": {\n                                    \"id_estado\": 11,\n                                    \"sigla\": \"MG\"\n                                }\n                            }\n                        }\n                    },\n                    \"servico\": {\n                        \"id_servico\": 1270,\n                        \"descricao\": \"EMPRESAX - 100MB-FIBRA-2019\"\n                    },\n                    \"cliente\": {\n                        \"id_cliente\": 24922,\n                        \"ativo\": true,\n                        \"codigo_cliente\": 1861,\n                        \"nome_razaosocial\": \"ANA FLAVIA\",\n                        \"display\": \"(1861) ANA FLAVIA\"\n                    }\n                },\n                \"usuarios_responsaveis\": []\n            },\n            {\n                \"id_atendimento\": 4407,\n                \"id_atendimento_status\": 22,\n                \"id_tipo_atendimento\": 126,\n                \"id_cliente_servico\": 13724,\n                \"id_usuario_responsavel\": null,\n                \"id_usuario_abertura\": 3,\n                \"protocolo\": \"20220803141306812881\",\n                \"data_cadastro\": \"2022-08-03 14:14:00\",\n                \"data_fechamento\": null,\n                \"rascunho\": false,\n                \"status_fechamento\": null,\n                \"descricao_fechamento\": null,\n                \"id_motivo_fechamento_atendimento\": null,\n                \"deleted_at\": null,\n                \"avaliacao\": null,\n                \"comentario_avaliacao\": null,\n                \"ordem_servico_count\": 1,\n                \"anexos_count\": 0,\n                \"ingressado\": false,\n                \"data_cadastro_br\": \"03/08/2022 14:14\",\n                \"data_cadastro_timestamp\": 1659546840000,\n                \"data_fechamento_br\": null,\n                \"data_fechamento_timestamp\": null,\n                \"minutos_em_aberto\": 31658,\n                \"tempo_restante\": \"-525h 38min\",\n                \"percentual_tempo_restante\": 0,\n                \"percentual_color_class\": \"white-fg md-red-bg\",\n                \"status\": {\n                    \"id_atendimento_status\": 22,\n                    \"prefixo\": \"pendente\",\n                    \"descricao\": \"Pendente\",\n                    \"cor\": \"md-purple-900-bg\",\n                    \"abrir_ordem_servico\": true,\n                    \"display\": \"Pendente (Abertura de OS)\"\n                },\n                \"tipo_atendimento\": {\n                    \"id_tipo_atendimento\": 126,\n                    \"descricao\": \"ATIVAÇÃO FIBRA ÓPTICA\"\n                },\n                \"cliente_servico\": {\n                    \"id_cliente_servico\": 13724,\n                    \"id_cliente\": 23384,\n                    \"id_servico\": 2617,\n                    \"numero_plano\": 0,\n                    \"display\": \"(0) PLANO 40 MB\",\n                    \"endereco_numero_completo\": \"AV JK, 25 - CENTRO, SANTO ANTÔNIO DO MONTE/MG | CEP: 35560-000\",\n                    \"endereco_instalacao\": {\n                        \"id_cliente_servico_endereco\": 59801,\n                        \"id_endereco_numero\": 35300,\n                        \"id_cliente_servico\": 13724,\n                        \"tipo\": \"instalacao\",\n                        \"endereco_numero\": {\n                            \"id_endereco_numero\": 35300,\n                            \"numero\": \"25\",\n                            \"complemento\": null,\n                            \"coordenadas\": {\n                                \"type\": \"Point\",\n                                \"coordinates\": [\n                                    -45.292417,\n                                    -20.085267\n                                ]\n                            },\n                            \"ativo\": true,\n                            \"id_cidade\": 2052,\n                            \"bairro\": \"CENTRO\",\n                            \"referencia\": null,\n                            \"endereco\": \"AV JK\",\n                            \"cep\": \"35560000\",\n                            \"atualizar_coords_auto\": true,\n                            \"id_condominio\": null,\n                            \"cidade\": {\n                                \"id_cidade\": 2052,\n                                \"id_estado\": 11,\n                                \"nome\": \"Santo Antônio do Monte\",\n                                \"estado\": {\n                                    \"id_estado\": 11,\n                                    \"sigla\": \"MG\"\n                                }\n                            }\n                        }\n                    },\n                    \"servico\": {\n                        \"id_servico\": 2617,\n                        \"descricao\": \"PLANO 40 MB\"\n                    },\n                    \"cliente\": {\n                        \"id_cliente\": 23384,\n                        \"ativo\": true,\n                        \"codigo_cliente\": 1425,\n                        \"nome_razaosocial\": \"BIANCA COUTO\",\n                        \"display\": \"(1425) BIANCA COUTO\"\n                    }\n                },\n                \"usuarios_responsaveis\": []\n            },\n            {\n                \"id_atendimento\": 4405,\n                \"id_atendimento_status\": 23,\n                \"id_tipo_atendimento\": null,\n                \"id_cliente_servico\": 17539,\n                \"id_usuario_responsavel\": null,\n                \"id_usuario_abertura\": 4904,\n                \"protocolo\": \"20220802161457397301\",\n                \"data_cadastro\": \"2022-08-02 16:14:57\",\n                \"data_fechamento\": null,\n                \"rascunho\": true,\n                \"status_fechamento\": null,\n                \"descricao_fechamento\": null,\n                \"id_motivo_fechamento_atendimento\": null,\n                \"deleted_at\": null,\n                \"avaliacao\": null,\n                \"comentario_avaliacao\": null,\n                \"ordem_servico_count\": 0,\n                \"anexos_count\": 0,\n                \"ingressado\": false,\n                \"data_cadastro_br\": \"02/08/2022 16:14\",\n                \"data_cadastro_timestamp\": 1659467697000,\n                \"data_fechamento_br\": null,\n                \"data_fechamento_timestamp\": null,\n                \"minutos_em_aberto\": 32977,\n                \"tempo_restante\": \"0min\",\n                \"percentual_tempo_restante\": 0,\n                \"percentual_color_class\": \"white-fg md-red-bg\",\n                \"status\": {\n                    \"id_atendimento_status\": 23,\n                    \"prefixo\": \"aguardando_analise\",\n                    \"descricao\": \"Aguardando Análise\",\n                    \"cor\": \"md-deep-orange-A700-bg\",\n                    \"abrir_ordem_servico\": false,\n                    \"display\": \"Aguardando Análise\"\n                },\n                \"tipo_atendimento\": null,\n                \"cliente_servico\": {\n                    \"id_cliente_servico\": 17539,\n                    \"id_cliente\": 24922,\n                    \"id_servico\": 1270,\n                    \"numero_plano\": 6,\n                    \"display\": \"(6) EMPRESAX - 100MB-FIBRA-2019\",\n                    \"endereco_numero_completo\": \"RUA ADAIR JUNQUEIRA GONTIJO, 100 - FONTE BOA, DIVINÓPOLIS/MG | CEP: 35000-000\",\n                    \"endereco_instalacao\": {\n                        \"id_cliente_servico_endereco\": 72937,\n                        \"id_endereco_numero\": 51790,\n                        \"id_cliente_servico\": 17539,\n                        \"tipo\": \"instalacao\",\n                        \"endereco_numero\": {\n                            \"id_endereco_numero\": 51790,\n                            \"numero\": \"100\",\n                            \"complemento\": null,\n                            \"coordenadas\": {\n                                \"type\": \"Point\",\n                                \"coordinates\": [\n                                    -19.918339,\n                                    -43.940102\n                                ]\n                            },\n                            \"ativo\": true,\n                            \"id_cidade\": 1597,\n                            \"bairro\": \"FONTE BOA\",\n                            \"referencia\": null,\n                            \"endereco\": \"RUA ADAIR JUNQUEIRA GONTIJO\",\n                            \"cep\": \"35000000\",\n                            \"atualizar_coords_auto\": false,\n                            \"id_condominio\": null,\n                            \"cidade\": {\n                                \"id_cidade\": 1597,\n                                \"id_estado\": 11,\n                                \"nome\": \"Divinópolis\",\n                                \"estado\": {\n                                    \"id_estado\": 11,\n                                    \"sigla\": \"MG\"\n                                }\n                            }\n                        }\n                    },\n                    \"servico\": {\n                        \"id_servico\": 1270,\n                        \"descricao\": \"EMPRESAX - 100MB-FIBRA-2019\"\n                    },\n                    \"cliente\": {\n                        \"id_cliente\": 24922,\n                        \"ativo\": true,\n                        \"codigo_cliente\": 1861,\n                        \"nome_razaosocial\": \"ANA FLAVIA\",\n                        \"display\": \"(1861) ANA FLAVIA\"\n                    }\n                },\n                \"usuarios_responsaveis\": []\n            },\n            {\n                \"id_atendimento\": 4404,\n                \"id_atendimento_status\": 23,\n                \"id_tipo_atendimento\": null,\n                \"id_cliente_servico\": 15055,\n                \"id_usuario_responsavel\": null,\n                \"id_usuario_abertura\": 3,\n                \"protocolo\": \"20220802154003171906\",\n                \"data_cadastro\": \"2022-08-02 15:40:03\",\n                \"data_fechamento\": null,\n                \"rascunho\": true,\n                \"status_fechamento\": null,\n                \"descricao_fechamento\": null,\n                \"id_motivo_fechamento_atendimento\": null,\n                \"deleted_at\": null,\n                \"avaliacao\": null,\n                \"comentario_avaliacao\": null,\n                \"ordem_servico_count\": 0,\n                \"anexos_count\": 0,\n                \"ingressado\": false,\n                \"data_cadastro_br\": \"02/08/2022 15:40\",\n                \"data_cadastro_timestamp\": 1659465603000,\n                \"data_fechamento_br\": null,\n                \"data_fechamento_timestamp\": null,\n                \"minutos_em_aberto\": 33012,\n                \"tempo_restante\": \"0min\",\n                \"percentual_tempo_restante\": 0,\n                \"percentual_color_class\": \"white-fg md-red-bg\",\n                \"status\": {\n                    \"id_atendimento_status\": 23,\n                    \"prefixo\": \"aguardando_analise\",\n                    \"descricao\": \"Aguardando Análise\",\n                    \"cor\": \"md-deep-orange-A700-bg\",\n                    \"abrir_ordem_servico\": false,\n                    \"display\": \"Aguardando Análise\"\n                },\n                \"tipo_atendimento\": null,\n                \"cliente_servico\": {\n                    \"id_cliente_servico\": 15055,\n                    \"id_cliente\": 12078,\n                    \"id_servico\": 1386,\n                    \"numero_plano\": 9,\n                    \"display\": \"(9) 100MB-PACOTE-ADICIONAL\",\n                    \"endereco_numero_completo\": \"AVENIDA BRASIL, 222 - CENTRO, SANTO ANTÔNIO DO MONTE/MG | CEP: 35560-000\",\n                    \"endereco_instalacao\": {\n                        \"id_cliente_servico_endereco\": 64844,\n                        \"id_endereco_numero\": 42123,\n                        \"id_cliente_servico\": 15055,\n                        \"tipo\": \"instalacao\",\n                        \"endereco_numero\": {\n                            \"id_endereco_numero\": 42123,\n                            \"numero\": \"222\",\n                            \"complemento\": null,\n                            \"coordenadas\": {\n                                \"type\": \"Point\",\n                                \"coordinates\": [\n                                    -45.290375,\n                                    -20.086908\n                                ]\n                            },\n                            \"ativo\": true,\n                            \"id_cidade\": 2052,\n                            \"bairro\": \"CENTRO\",\n                            \"referencia\": null,\n                            \"endereco\": \"AVENIDA BRASIL\",\n                            \"cep\": \"35560000\",\n                            \"atualizar_coords_auto\": true,\n                            \"id_condominio\": null,\n                            \"cidade\": {\n                                \"id_cidade\": 2052,\n                                \"id_estado\": 11,\n                                \"nome\": \"Santo Antônio do Monte\",\n                                \"estado\": {\n                                    \"id_estado\": 11,\n                                    \"sigla\": \"MG\"\n                                }\n                            }\n                        }\n                    },\n                    \"servico\": {\n                        \"id_servico\": 1386,\n                        \"descricao\": \"100MB-PACOTE-ADICIONAL\"\n                    },\n                    \"cliente\": {\n                        \"id_cliente\": 12078,\n                        \"ativo\": true,\n                        \"codigo_cliente\": 1258,\n                        \"nome_razaosocial\": \"IZABELLA RIBEIRO\",\n                        \"display\": \"(1258) IZABELLA RIBEIRO\"\n                    }\n                },\n                \"usuarios_responsaveis\": []\n            },\n            {\n                \"id_atendimento\": 4403,\n                \"id_atendimento_status\": 22,\n                \"id_tipo_atendimento\": 122,\n                \"id_cliente_servico\": 17495,\n                \"id_usuario_responsavel\": null,\n                \"id_usuario_abertura\": 1170,\n                \"protocolo\": \"20220801083002856506\",\n                \"data_cadastro\": \"2022-08-01 08:30:43\",\n                \"data_fechamento\": null,\n                \"rascunho\": false,\n                \"status_fechamento\": null,\n                \"descricao_fechamento\": null,\n                \"id_motivo_fechamento_atendimento\": null,\n                \"deleted_at\": null,\n                \"avaliacao\": null,\n                \"comentario_avaliacao\": null,\n                \"ordem_servico_count\": 2,\n                \"anexos_count\": 0,\n                \"ingressado\": false,\n                \"data_cadastro_br\": \"01/08/2022 08:30\",\n                \"data_cadastro_timestamp\": 1659353443000,\n                \"data_fechamento_br\": null,\n                \"data_fechamento_timestamp\": null,\n                \"minutos_em_aberto\": 34881,\n                \"tempo_restante\": \"-580h 21min\",\n                \"percentual_tempo_restante\": 0,\n                \"percentual_color_class\": \"white-fg md-red-bg\",\n                \"status\": {\n                    \"id_atendimento_status\": 22,\n                    \"prefixo\": \"pendente\",\n                    \"descricao\": \"Pendente\",\n                    \"cor\": \"md-purple-900-bg\",\n                    \"abrir_ordem_servico\": true,\n                    \"display\": \"Pendente (Abertura de OS)\"\n                },\n                \"tipo_atendimento\": {\n                    \"id_tipo_atendimento\": 122,\n                    \"descricao\": \"QUEDA MASSIVA\"\n                },\n                \"cliente_servico\": {\n                    \"id_cliente_servico\": 17495,\n                    \"id_cliente\": 24642,\n                    \"id_servico\": 1427,\n                    \"numero_plano\": 35,\n                    \"display\": \"(35) 100 CANAIS CLONE TESTE\",\n                    \"endereco_numero_completo\": \"RUA JOSÉ VITAL DE CASTRO, 09 - SAO LUCAS, SANTO ANTÔNIO DO MONTE/MG | CEP: 35560-000\",\n                    \"endereco_instalacao\": {\n                        \"id_cliente_servico_endereco\": 72763,\n                        \"id_endereco_numero\": 51575,\n                        \"id_cliente_servico\": 17495,\n                        \"tipo\": \"instalacao\",\n                        \"endereco_numero\": {\n                            \"id_endereco_numero\": 51575,\n                            \"numero\": \"09\",\n                            \"complemento\": null,\n                            \"coordenadas\": {\n                                \"type\": \"Point\",\n                                \"coordinates\": [\n                                    -45.298053,\n                                    -20.093926\n                                ]\n                            },\n                            \"ativo\": true,\n                            \"id_cidade\": 2052,\n                            \"bairro\": \"SAO LUCAS\",\n                            \"referencia\": null,\n                            \"endereco\": \"RUA JOSÉ VITAL DE CASTRO\",\n                            \"cep\": \"35560000\",\n                            \"atualizar_coords_auto\": false,\n                            \"id_condominio\": null,\n                            \"cidade\": {\n                                \"id_cidade\": 2052,\n                                \"id_estado\": 11,\n                                \"nome\": \"Santo Antônio do Monte\",\n                                \"estado\": {\n                                    \"id_estado\": 11,\n                                    \"sigla\": \"MG\"\n                                }\n                            }\n                        }\n                    },\n                    \"servico\": {\n                        \"id_servico\": 1427,\n                        \"descricao\": \"100 CANAIS Clone Teste\"\n                    },\n                    \"cliente\": {\n                        \"id_cliente\": 24642,\n                        \"ativo\": true,\n                        \"codigo_cliente\": 1734,\n                        \"nome_razaosocial\": \"GERALDO JUNIOR OPA\",\n                        \"display\": \"(1734) GERALDO JUNIOR OPA\"\n                    }\n                },\n                \"usuarios_responsaveis\": []\n            }\n        ],\n        \"first_page_url\": \"http://localhost:8000/api/v1/integracao/atendimento/paginado/10?page=1\",\n        \"from\": 71,\n        \"last_page\": 8,\n        \"last_page_url\": \"http://localhost:8000/api/v1/integracao/atendimento/paginado/10?page=8\",\n        \"next_page_url\": null,\n        \"path\": \"http://localhost:8000/api/v1/integracao/atendimento/paginado/10\",\n        \"per_page\": 10,\n        \"prev_page_url\": \"http://localhost:8000/api/v1/integracao/atendimento/paginado/10?page=7\",\n        \"to\": 78,\n        \"total\": 78\n    },\n    \"cliente\": null\n}"
+								}
+							]
+						},
+						{
+							"name": "Todos",
+							"id": "10cc7c29-d8ee-4d8a-85f0-027362f4d89a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"type": "text",
+										"description": "Bearer Token obtido na autenticação"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/v1/integracao/atendimento/todos?pagina=0&itens_por_pagina=0&data_inicio=&data_fim=&relacoes=",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"integracao",
+										"atendimento",
+										"todos"
+									],
+									"query": [
+										{
+											"key": "pagina",
+											"value": "0",
+											"description": "(Obrigatório) Número da Página que deseja consultar. Primeira página = "
+										},
+										{
+											"key": "itens_por_pagina",
+											"value": "0",
+											"description": "(Obrigatório) Total de Itens por Página (Min: 1 e Max: 500)"
+										},
+										{
+											"key": "data_inicio",
+											"value": "",
+											"description": "(opcional) Valor no formato Date (YYYY-MM-DD). Obs: Menor ou igual a data fim"
+										},
+										{
+											"key": "data_fim",
+											"value": "",
+											"description": "(opcional) Valor no formato Date (YYYY-MM-DD) Obs: Maior ou igual data_inicio"
+										},
+										{
+											"key": "relacoes",
+											"value": "",
+											"description": "(opcional) cliente_servico,usuarios_responsaveis,atendimento_mensagem"
+										}
+									]
+								},
+								"description": "No método `GET`, irá consultar os dados dos atendimentos e retornar um `JSON` como resposta. O resultado é retornado de forma paginada, portanto é importante fazer um loop de consultas em sua aplicação, caso queria percorrer os dados em sua totalidade.\n\nOs seguintes parâmetros podem/devem ser utilizados:\n\n| **Atributo** | **Descrição** | **Obrigatório** |\n| --- | --- | --- |\n| pagina | Número da Página da Consulta | **Sim** |\n| itens_por_pagina | Quantidade de Registro por Página da consulta | **Sim** |\n| data_inicio | Data de Cadastro Inicial | Não |\n| data_fim | Data de Cadastro Final | Não |\n| relacoes | Carrega apenas os relacionamentos especificados | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| **Atributo** | **Descrição** | **Valor Default** |\n| --- | --- | --- |\n| pagina | Valor númerico. A primeira página será 0 | Nenhum |\n| itens_por_pagina | Valor númerico. Mínimo: 1, Máximo: 500 | Nenhum |\n| data_inicio | Valor no formato DateTime (YYYY-MM-DD) | Nenhum |\n| data_fim | Valor no formato DateTime (YYYY-MM-DD) Obs: Maior ou igual data_inicio | Nenhum |\n| relacoes | cliente_servico,usuarios_responsaveis,atendimento_mensagem | Nenhum |\n\n**IMPORTANTE:** Lembre-se que essa é uma requisição que poderá retornar um volume muito grande de dados, portanto, utilize as relações com cautela, pois quanto mais relações forem utilizados, maior poderá ser o tempo de resposta da API."
+							},
+							"response": [
+								{
+									"id": "6a696f92-2313-49b0-baff-3772c1deeff2",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "",
+												"type": "text"
+											}
+										],
+										"url": "/api/v1/integracao/atendimento/todos"
+									},
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Dados consultados com sucesso\",\n    \"paginacao\": {\n        \"primeira_pagina\": 0,\n        \"ultima_pagina\": 38,\n        \"pagina_atual\": 0,\n        \"total_registros\": 39\n    },\n    \"atendimentos\": [\n        {\n            \"id_atendimento\": 5448,\n            \"id_atendimento_status\": 23,\n            \"id_tipo_atendimento\": 125,\n            \"id_cliente_servico\": 17812,\n            \"id_usuario_responsavel\": null,\n            \"id_usuario_abertura\": 4903,\n            \"protocolo\": \"20221229180833379797\",\n            \"data_cadastro\": \"2022-12-29 18:08:33\",\n            \"data_fechamento\": null,\n            \"rascunho\": false,\n            \"status_fechamento\": null,\n            \"descricao_fechamento\": null,\n            \"id_motivo_fechamento_atendimento\": null,\n            \"deleted_at\": null,\n            \"avaliacao\": null,\n            \"comentario_avaliacao\": null,\n            \"ordem_servico_count\": 0,\n            \"ordem_servico_fechada\": 0,\n            \"ordem_servico_aberta\": 0,\n            \"ingressado\": false,\n            \"data_cadastro_br\": \"29/12/2022 18:08\",\n            \"data_cadastro_timestamp\": 1672348113000,\n            \"data_fechamento_br\": null,\n            \"data_fechamento_timestamp\": null,\n            \"minutos_em_aberto\": 61486,\n            \"tempo_restante\": \"-1023h 46min\",\n            \"percentual_tempo_restante\": 0,\n            \"percentual_color_class\": \"white-fg md-red-bg\",\n            \"status\": {\n                \"id_atendimento_status\": 23,\n                \"prefixo\": \"aguardando_analise\",\n                \"descricao\": \"Aguardando Análise\",\n                \"cor\": \"md-deep-orange-A700-bg\",\n                \"abrir_ordem_servico\": false,\n                \"display\": \"Aguardando Análise\"\n            },\n            \"tipo_atendimento\": {\n                \"id_tipo_atendimento\": 125,\n                \"descricao\": \"COMERCIAL\",\n                \"checklists\": []\n            },\n            \"cliente_servico\": {\n                \"id_cliente_servico\": 17812,\n                \"id_cliente\": 24930,\n                \"id_servico\": 2735,\n                \"numero_plano\": 6,\n                \"display\": \"(6) (MIGRACAO-TESTEMAP) COMBO 10 MEGA - RÁDIO\",\n                \"endereco_numero_completo\": \"RUA PADRE PAULO, 308 - MAE CHIQUINHA, SANTO ANTÔNIO DO MONTE/MG | CEP: 35560-000\",\n                \"endereco_instalacao\": {\n                    \"id_cliente_servico_endereco\": 73553,\n                    \"id_endereco_numero\": 52635,\n                    \"id_cliente_servico\": 17812,\n                    \"tipo\": \"instalacao\",\n                    \"endereco_numero\": {\n                        \"id_endereco_numero\": 52635,\n                        \"numero\": \"308\",\n                        \"complemento\": null,\n                        \"coordenadas\": {\n                            \"type\": \"Point\",\n                            \"coordinates\": [\n                                -45.292858,\n                                -20.092926\n                            ]\n                        },\n                        \"ativo\": true,\n                        \"id_cidade\": 7674,\n                        \"bairro\": \"MAE CHIQUINHA\",\n                        \"referencia\": null,\n                        \"endereco\": \"RUA PADRE PAULO\",\n                        \"cep\": \"35560000\",\n                        \"atualizar_coords_auto\": false,\n                        \"id_condominio\": null,\n                        \"cidade\": {\n                            \"id_cidade\": 7674,\n                            \"id_estado\": 65,\n                            \"nome\": \"Santo Antônio do Monte\",\n                            \"estado\": {\n                                \"id_estado\": 65,\n                                \"sigla\": \"MG\"\n                            }\n                        }\n                    }\n                },\n                \"servico\": {\n                    \"id_servico\": 2735,\n                    \"descricao\": \"(Migracao-TesteMap) COMBO 10 MEGA - RÁDIO\",\n                    \"id_servico_grupo\": 51,\n                    \"servico_grupo\": {\n                        \"id_servico_grupo\": 51,\n                        \"descricao\": \"GRUPO DE TESTE\",\n                        \"data_cadastro\": \"2020-04-15 13:52:01\",\n                        \"ativo\": true\n                    }\n                },\n                \"cliente\": {\n                    \"id_cliente\": 24930,\n                    \"ativo\": true,\n                    \"codigo_cliente\": 1864,\n                    \"nome_razaosocial\": \"LAVYNIA\",\n                    \"display\": \"(1864) LAVYNIA\"\n                }\n            },\n            \"usuarios_responsaveis\": [],\n            \"atendimento_mensagem\": [\n                {\n                    \"id_atendimento_mensagem\": 376,\n                    \"id_atendimento\": 5448,\n                    \"mensagem\": \"TESTE\",\n                    \"data_cadastro_br\": \"10/02/2023 10:55\",\n                    \"data_cadastro_timestamp\": 1676037311000\n                },\n                {\n                    \"id_atendimento_mensagem\": 375,\n                    \"id_atendimento\": 5448,\n                    \"mensagem\": \"TESTE\",\n                    \"data_cadastro_br\": \"10/02/2023 10:55\",\n                    \"data_cadastro_timestamp\": 1676037311000\n                }\n            ]\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Adicionar",
+							"id": "3d3f172e-2062-49d4-8d0a-83da9ad6fe79",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"description": "Bearer Token obtido na autenticação"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"id_cliente_servico\":\"11000\",\n        \"descricao\":\"Abertura de atendimento de teste\",\n        \"nome\":\"Nome do Usuário Solicitante\",\n        \"telefone\":\"37999112233\",\n        \"email\":\"teste@teste.com.br\",\n        \"abrir_os\":true,\n        \"parametros\":{\n            \"parametro1\":\"Teste\",\n            \"parametro2\":\"Teste2\",\n            \"parametro3\":\"Teste3\"\n        }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/v1/integracao/atendimento",
+								"description": "**POST**\n\nNo método `POST`, será possível adicionar os atendimentos em aberto/fechados dos clientes e obter o retorno no formato `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico | Identificador do serviço do cliente | Sim |\n| id_tipo_atendimento | Identificador do tipo de atendimento | Não |\n| descricao | Descrição detalhada do atendimento | Sim |\n| nome | Nome do solicitante | Sim |\n| telefone | Telefone do solicitante | Sim |\n| email | Email do solicitante | Não |\n| abrir_os | Indica se deve abrir Ordem de Serviço ou não | Não |\n| parametros | Parâmetros Dinâmicos. Array de dados. | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico | Número Inteiro | Nenhum |\n| id_tipo_atendimento | Número Inteiro | Nenhum |\n| descricao | Campo Livre (Qualquer valor é aceito) | Nenhum |\n| nome | Campo Livre (Qualquer valor é aceito) | Nenhum |\n| telefone | Telefone no formato (DDNNNNNNNNN). | Nenhum |\n| email | Caso enviado deve ser no formato e-mail (EX: [user@dominio.com](mailto:user@dominio.com)) | Nenhum |\n| abrir_os | Caso enviado, deve conter um valor boolean (true | false |\n| parametros | Nos parâmetros dinâmicos podem ser enviados qualquer informação. |  |\n\n**Observação: Se o parâmetro id_tipo_atendimento não for enviado, o atendimento será aberto com o tipo padrão SAC.**\n\nObservação 2: Veja que na abertura do atendimento existe a possibilidade de enviar parâmetros dinâmicos. Esses parâmetros todos serão armazendos juntamente com o atendimento . Por exemplo se a sua plataforma for um sistema Omnichannel (PBX, WhatsApp, Messenger, etc), você pode armazar o ID da Conversa/Chamada, Data de Início, Data de Término, Atendimento, etc. Quanto mais informações você envia para o HubSoft, mais completo ficará a visualização do atendimento."
+							},
+							"response": [
+								{
+									"id": "626ec344-2249-4393-8cef-c06276b4f8d2",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id_cliente_servico\": \"11000\",\n    \"descricao\": \"Abertura de atendimento de teste\",\n    \"nome\": \"Nome do Usuário Solicitante\",\n    \"telefone\": \"37999112233\",\n    \"email\": \"teste@teste.com.br\",\n    \"abrir_os\": true,\n    \"parametros\":{\n        \"id_ligacao\":\"1233882731973123\",\n        \"data_inicio\":\"20/12/2023 09:32:11\",\n        \"data_termino\":\"20/20/2023 09:37:21\",\n        \"atendimento\":\"João Silva\",\n        \"ramal\":\"12342\",\n        \"url_chamada\":\"https://meuservidorpbx.com.br/ligacao/1233882731973123.mp3\",\n        \"caminho_ura\":\"1000 -> 1003 -> 2000 -> 2001\"\n    }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{url}}/api/v1/integracao/atendimento"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Authorization",
+											"value": "Bearer 12lk3jsdkjfk!jksjdfkwjk12jk3j1k31ksjfksdjfkwj",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Atendimento aberto com sucesso. Anote o protocolo: 201811161058216. Foi aberto também uma ordem de serviço e encaminhada ao sertor responsável\",\n    \"atendimento\": {\n        \"id_atendimento\": 300,\n        \"protocolo\": \"201811161058216\",\n        \"descricao_abertura\": \"Estou sem acesso a internet desde segunda-feira. | ATENDIMENTO ABERTO VIA API\",\n        \"descricao_fechamento\": null,\n        \"tipo_atendimento\": \"SAC\",\n        \"usuario_abertura\": \"IP Telecom\",\n        \"usuario_responsavel\": \"IP Telecom\",\n        \"usuario_fechamento\": null,\n        \"data_cadastro\": \"16/11/2018\",\n        \"data_fechamento\": null,\n        \"setor_responsavel\": null,\n        \"status_fechamento\": null,\n        \"motivo_fechamento\": null,\n        \"status\": \"Aguardando Análise\",\n        \"cliente\": {\n            \"codigo_cliente\": 1204,\n            \"nome_razaosocial\": \"BIANCA COUTO\",\n            \"cpf_cnpj\": \"86214941081\"\n        },\n        \"ordens_servico\": [\n            {\n                \"id_ordem_servico\": 340,\n                \"numero_ordem_servico\": \"320\",\n                \"data_cadastro\": \"16/11/2018 10:58:21\",\n                \"tipo\": \"ABERTURA VIA API\",\n                \"data_inicio_programado\": \"16/11/2018 11:58:21\",\n                \"data_termino_programado\": \"16/11/2018 12:58:21\",\n                \"data_inicio_executado\": null,\n                \"data_termino_executado\": null,\n                \"descricao_abertura\": \"Estou sem acesso a internet desde segunda-feira. | ATENDIMENTO ABERTO VIA API\",\n                \"descricao_servico\": \"Estou sem acesso a internet desde segunda-feira. | ATENDIMENTO ABERTO VIA API\",\n                \"descricao_fechamento\": null,\n                \"usuario_abertura\": \"IP Telecom\",\n                \"usuario_fechamento\": null,\n                \"status\": \"aguardando_agendamento\",\n                \"status_fechamento\": null,\n                \"cliente\": {\n                    \"codigo_cliente\": 1204,\n                    \"nome_razaosocial\": \"BIANCA COUTO\",\n                    \"cpf_cnpj\": \"86214941081\"\n                },\n                \"servico\": {\n                    \"numero_plano\": 9,\n                    \"nome\": \"NEXT-NV_1MBPS\",\n                    \"valor\": 69.9,\n                    \"status\": \"Serviço Habilitado\",\n                    \"status_prefixo\": \"servico_habilitado\"\n                }\n            }\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Editar",
+							"id": "23f95cc1-d4d9-4363-a555-d7eeaa02fb11",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"description": "Bearer Token obtido na autenticação"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"parametros\": {\n        \"url_ligacao\": \"https://www.meusite.com.br/ligacao/3\",\n        \"software\": \"PBX ABCDE\",\n        \"outro_parametro\": 123456\n    },\n    \"fechar_atendimento\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/v1/integracao/atendimento/:id_atendimento",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"integracao",
+										"atendimento",
+										":id_atendimento"
+									],
+									"variable": [
+										{
+											"id": "5f3ae58b-2f5e-42e6-bb0d-6d3a07dd8799",
+											"key": "id_atendimento",
+											"value": "123",
+											"description": "ID do Atendimento a ser editado"
+										}
+									]
+								},
+								"description": "Através desse endpoint será possível editar e fechar os atendimentos em abertos dos clientes e obter o retorno no formato JSON como resposta. Lembre de enviar o ID do atendimento como um parâmetro na URL, conforme o exemplo acima. Os seguintes parâmetros podem/devem estar presentes no corpo do requisição:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| descricao | Descrição de abertura do atendimento (Opcional) | Não |\n| fechar_atendimento | Indica se deve ser fechado os atendimento e suas ordens de serviço | Sim |\n| parametros | Objeto JSON que poderá conter qualquer informação da integração | Sim |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| descricao | Texto | Nenhum |\n| fechar_atendimento | Boolean ( Verdadeiro ou Falso ) | false |\n| parametros | Array Associativo, JSON | Nenhum |"
+							},
+							"response": [
+								{
+									"id": "8c181727-ad26-498d-9657-ba55995b592f",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Token Obtido na etapa de Autenticação",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"parametros\": {\n        \"url_ligacao\": \"https://www.meusite.com.br/ligacao/3\",\n        \"software\": \"PBX ABCDE\",\n        \"outro_parametro\": 123456\n    },\n    \"fechar_atendimento\": true\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/atendimento/:id_atendimento",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"atendimento",
+												":id_atendimento"
+											],
+											"variable": [
+												{
+													"key": "id_atendimento",
+													"value": "123",
+													"description": "ID do Atendimento a ser editado"
+												}
+											]
+										}
+									},
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Atendimento atualizado com sucesso\",\n    \"atendimento\": {\n        \"id_atendimento\": 1114,\n        \"protocolo\": \"202003051452007\",\n        \"id_cliente_servico\": 13677,\n        \"id_tipo_atendimento\": 44,\n        \"id_usuario_abertura\": 56,\n        \"id_usuario_fechamento\": 1,\n        \"descricao_abertura\": \"INSTALAÇÃO NOVA\",\n        \"descricao_fechamento\": \"Fechamento automático.\",\n        \"data_cadastro\": \"2020-03-05 14:52:00\",\n        \"data_fechamento\": \"2020-03-11 09:56:10\",\n        \"ip_cadastro\": null,\n        \"id_usuario_responsavel\": 22,\n        \"id_setor_responsavel\": null,\n        \"destino\": \"usuario\",\n        \"status_fechamento\": \"concluido\",\n        \"id_motivo_fechamento_atendimento\": 5,\n        \"id_atendimento_status\": 24,\n        \"resultado_diagnostico\": null,\n        \"nome_contato\": \"TESTE APRESENT\",\n        \"telefone_contato\": \"3734151100\",\n        \"email_contato\": null,\n        \"rascunho\": false,\n        \"deleted_at\": null,\n        \"id_origem_contato\": null,\n        \"avaliacao\": null,\n        \"comentario_avaliacao\": null,\n        \"push_notification_enviado\": false,\n        \"data_cadastro_br\": \"05/03/2020 14:52\",\n        \"data_cadastro_timestamp\": 1583430720000,\n        \"data_fechamento_br\": \"11/03/2020 09:56\",\n        \"data_fechamento_timestamp\": 1583931370000,\n        \"minutos_em_aberto\": 8344,\n        \"tempo_restante\": \"-138h 4min\",\n        \"percentual_tempo_restante\": 0,\n        \"percentual_color_class\": \"white-fg md-red-bg\"\n    }\n}"
+								}
+							]
+						}
+					],
+					"id": "606de75a-0db7-4a9c-806c-0737fb8ac23f",
+					"description": "**Necessário**\n\nPara realizar as requisições nos dados de alarme, será necessário que você já possua o `access_token`, adquirido através dos `endpoints` de `(oAuth)`."
+				},
+				{
 					"name": "Caixa Financeiro",
 					"id": "431b8688-0ae9-44b1-bc16-5ae888b0dc99",
 					"protocolProfileBehavior": {
@@ -8818,37 +8818,37 @@
 	],
 	"variable": [
 		{
-			"id": "df9a5c73-8e3d-40a7-93e1-8c4b46e0c352",
+			"id": "1899bea4-94d2-4e9a-802c-c46ac6cb22f9",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "283ddbdd-bde7-450e-9228-a6e2552390c4",
+			"id": "88f3192a-eea5-46d4-b80d-30ea65752e63",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "edb7d4bb-1046-40d5-8526-9fd8549bf358",
+			"id": "e63adf78-2cfc-44d9-a95c-d2e353cce89a",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "da417f65-d9dd-4717-91bf-9128f5e9842d",
+			"id": "7839b5cb-0376-49b7-b0f8-531004bf4fdb",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "47b86f98-6750-4587-9cb8-cc6e150841d5",
+			"id": "ef7443a9-3c40-418d-b8a6-0b5f457d3643",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "604ad9c7-6dca-45b5-8bce-09e121d42cf1",
+			"id": "9d1ce19f-7b40-40fa-ac2a-3c1e19039a77",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "e434ed34-13e3-495d-8fa9-31001bece42b",
+			"id": "dead450f-9fa4-406d-8325-adac45b95eec",
 			"key": "access_token",
 			"value": ""
 		}
