@@ -9163,7 +9163,7 @@
 									"header": null,
 									"cookie": [],
 									"responseTime": null,
-									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Atendimento atualizado com sucesso\",\n    \"atendimento\": {\n        \"id_atendimento\": 1114,\n        \"protocolo\": \"202003051452007\",\n        \"id_cliente_servico\": 13677,\n        \"id_tipo_atendimento\": 44,\n        \"id_usuario_abertura\": 56,\n        \"id_usuario_fechamento\": 1,\n        \"descricao_abertura\": \"INSTALAÇÃO NOVA\",\n        \"descricao_fechamento\": \"Fechamento automático.\",\n        \"data_cadastro\": \"2020-03-05 14:52:00\",\n        \"data_fechamento\": \"2020-03-11 09:56:10\",\n        \"ip_cadastro\": null,\n        \"id_usuario_responsavel\": 22,\n        \"id_setor_responsavel\": null,\n        \"destino\": \"usuario\",\n        \"status_fechamento\": \"concluido\",\n        \"id_motivo_fechamento_atendimento\": 5,\n        \"id_atendimento_status\": 24,\n        \"resultado_diagnostico\": null,\n        \"nome_contato\": \"TESTE APRESENT\",\n        \"telefone_contato\": \"3734151100\",\n        \"email_contato\": null,\n        \"rascunho\": false,\n        \"deleted_at\": null,\n        \"id_origem_contato\": null,\n        \"avaliacao\": null,\n        \"comentario_avaliacao\": null,\n        \"push_notification_enviado\": false,\n        \"data_cadastro_br\": \"05/03/2020 14:52\",\n        \"data_cadastro_timestamp\": 1583430720000,\n        \"data_fechamento_br\": \"11/03/2020 09:56\",\n        \"data_fechamento_timestamp\": 1583931370000,\n        \"minutos_em_aberto\": 8344,\n        \"tempo_restante\": \"-138h 4min\",\n        \"percentual_tempo_restante\": 0,\n        \"percentual_color_class\": \"white-fg md-red-bg\"\n    }\n}"
+									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Alerta atualizado com sucesso!\",\n    \"alerta\": [\n        {\n            \"id_alerta\": 217,\n            \"descricao\": \"TESTE ALTERAÇÃO VIA API\",\n            \"ativo\": true,\n            \"data_cadastro\": \"21/08/2023 15:49\",\n            \"data_inicio\": null,\n            \"data_fim\": null,\n            \"texto_alerta\": \"TESTE ALTERAÇÃO VIA API\\n\\n21/08/2023 15:49 - Usuário API\\n\",\n            \"cidade\": [],\n            \"grupo_cliente\": [],\n            \"grupo_cliente_servico\": [],\n            \"interface_conexao\": [],\n            \"caixa_optica\": [],\n            \"servico_status\": [],\n            \"usuario\": {\n                \"nome\": \"Usuário API\"\n            }\n        }\n    ]\n}"
 								}
 							]
 						}
@@ -9733,37 +9733,37 @@
 	],
 	"variable": [
 		{
-			"id": "7dc40c95-9673-4357-a6d8-cdba862d1195",
+			"id": "a4286623-d345-4430-8a91-022244c950b1",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "f80a1a73-5751-41d4-9390-95da724d2574",
+			"id": "70884ef2-def3-4aef-b7f6-132fe56b39a5",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "4e7d87fa-b52c-442d-80ac-1c63b26e9d23",
+			"id": "11e50f93-4e1d-4039-8ba7-1c4aa511c0d3",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "07aeb32c-101b-4e18-a996-2cb897735ae5",
+			"id": "aeab8b50-3349-410c-abce-d9ff474c34ef",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "4a898699-0c03-47ae-ae21-75e48d086466",
+			"id": "cddd9211-6823-4fdf-a789-46dc3f69a17a",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "75db2c70-b7d0-4ee9-835b-ae60a2c2c160",
+			"id": "b3532b22-a791-4f15-9122-16c8e394e33d",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "e22492a2-e634-4f06-9737-2f0aed1b86f1",
+			"id": "c0577191-e9bf-49fe-8de7-b368306398e4",
 			"key": "access_token",
 			"value": ""
 		}
