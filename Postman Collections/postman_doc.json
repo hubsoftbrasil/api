@@ -8931,7 +8931,8 @@
 									"query": [
 										{
 											"key": "page",
-											"value": "1"
+											"value": "1",
+											"description": "Página que está sendo consultada"
 										}
 									],
 									"variable": [
@@ -9732,37 +9733,37 @@
 	],
 	"variable": [
 		{
-			"id": "70145673-3b41-4737-a06a-fe6237dcc915",
+			"id": "495c739f-db89-49f7-a16e-fc013445e17c",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "3049ad6a-a361-4b4b-b82b-01987c7345b9",
+			"id": "54d0091d-427a-4062-8a79-de6119d844e8",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "c0f907e0-ebdc-434c-972c-d3b318cfb387",
+			"id": "85b9d7f5-8588-4522-be1f-3a0b61e5566c",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "70c49809-f9e4-410c-8bc5-a0355c711eb5",
+			"id": "33d8dbd0-9439-480e-9246-8a1031947f15",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "aa44f780-212e-43c4-987b-8e16b06b21c1",
+			"id": "a0b9f3fa-0ac2-4767-806a-6fa4262bb60b",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "b0da337a-5b11-40fe-b1a1-0a9541c4fe57",
+			"id": "7715796b-7aa4-45cd-ac3c-0ba06bc7b666",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "b5795de0-34e0-42e5-a667-3199b642a676",
+			"id": "8be27e92-f1ca-4ae8-a67c-baf30e193014",
 			"key": "access_token",
 			"value": ""
 		}
