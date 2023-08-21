@@ -9169,7 +9169,7 @@
 						}
 					],
 					"id": "606de75a-0db7-4a9c-806c-0737fb8ac23f",
-					"description": "**Necessário**\n\nPara realizar as requisições nos dados de alarme, será necessário que você já possua o `access_token`, adquirido através dos `endpoints` de `(oAuth)`."
+					"description": "**Necessário**\n\nPara realizar as requisições nos dados de alerta, será necessário que você já possua o `access_token`, adquirido através dos `endpoints` de `(oAuth)`."
 				},
 				{
 					"name": "Caixa Financeiro",
@@ -9733,37 +9733,37 @@
 	],
 	"variable": [
 		{
-			"id": "d31ab437-fa61-4114-9ff2-baff19343e6d",
+			"id": "8538e080-921e-496e-8968-8ffbfdb6af51",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "fc586471-bf6c-47d2-bda4-64b06f8b90e2",
+			"id": "f0acc657-44d5-49ac-99c5-fbe752794a5a",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "e8849975-b3bb-4c63-8255-4c35d280fd61",
+			"id": "d9f9e0a7-1a37-45a4-87ed-56274ef9cd27",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "6d6c63a3-eee7-4bb5-84fe-1a5e13162f2f",
+			"id": "6edb28e1-157e-44c3-aef4-d1ab5c1cfe08",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "ca317f18-84c3-49f0-8839-f39f7acec955",
+			"id": "b4088dfa-f37c-46ae-a82a-4a92e26977e4",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "427e0390-d8d0-4ab7-b662-cd930cac32e1",
+			"id": "1f1282c9-7f70-4772-8b13-4db4c0451888",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "57a77532-6d8c-45ed-91ff-6342c7e1e3d0",
+			"id": "bb366f3f-9f48-46db-90b9-e0a2bd97cf37",
 			"key": "access_token",
 			"value": ""
 		}
