@@ -9064,7 +9064,7 @@
 									],
 									"cookie": [],
 									"responseTime": null,
-									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Atendimento aberto com sucesso. Anote o protocolo: 201811161058216. Foi aberto também uma ordem de serviço e encaminhada ao sertor responsável\",\n    \"atendimento\": {\n        \"id_atendimento\": 300,\n        \"protocolo\": \"201811161058216\",\n        \"descricao_abertura\": \"Estou sem acesso a internet desde segunda-feira. | ATENDIMENTO ABERTO VIA API\",\n        \"descricao_fechamento\": null,\n        \"tipo_atendimento\": \"SAC\",\n        \"usuario_abertura\": \"IP Telecom\",\n        \"usuario_responsavel\": \"IP Telecom\",\n        \"usuario_fechamento\": null,\n        \"data_cadastro\": \"16/11/2018\",\n        \"data_fechamento\": null,\n        \"setor_responsavel\": null,\n        \"status_fechamento\": null,\n        \"motivo_fechamento\": null,\n        \"status\": \"Aguardando Análise\",\n        \"cliente\": {\n            \"codigo_cliente\": 1204,\n            \"nome_razaosocial\": \"BIANCA COUTO\",\n            \"cpf_cnpj\": \"86214941081\"\n        },\n        \"ordens_servico\": [\n            {\n                \"id_ordem_servico\": 340,\n                \"numero_ordem_servico\": \"320\",\n                \"data_cadastro\": \"16/11/2018 10:58:21\",\n                \"tipo\": \"ABERTURA VIA API\",\n                \"data_inicio_programado\": \"16/11/2018 11:58:21\",\n                \"data_termino_programado\": \"16/11/2018 12:58:21\",\n                \"data_inicio_executado\": null,\n                \"data_termino_executado\": null,\n                \"descricao_abertura\": \"Estou sem acesso a internet desde segunda-feira. | ATENDIMENTO ABERTO VIA API\",\n                \"descricao_servico\": \"Estou sem acesso a internet desde segunda-feira. | ATENDIMENTO ABERTO VIA API\",\n                \"descricao_fechamento\": null,\n                \"usuario_abertura\": \"IP Telecom\",\n                \"usuario_fechamento\": null,\n                \"status\": \"aguardando_agendamento\",\n                \"status_fechamento\": null,\n                \"cliente\": {\n                    \"codigo_cliente\": 1204,\n                    \"nome_razaosocial\": \"BIANCA COUTO\",\n                    \"cpf_cnpj\": \"86214941081\"\n                },\n                \"servico\": {\n                    \"numero_plano\": 9,\n                    \"nome\": \"NEXT-NV_1MBPS\",\n                    \"valor\": 69.9,\n                    \"status\": \"Serviço Habilitado\",\n                    \"status_prefixo\": \"servico_habilitado\"\n                }\n            }\n        ]\n    }\n}"
+									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Alerta cadastrado com sucesso!\",\n    \"alerta\": [\n        {\n            \"id_alerta\": 1,\n            \"descricao\": \"ALERTA TESTE CADASTRO API\",\n            \"ativo\": true,\n            \"data_cadastro\": \"21/08/2023 15:49\",\n            \"data_inicio\": null,\n            \"data_fim\": null,\n            \"texto_alerta\": \"ALERTA TESTE CADASTRO API\\n\\n21/08/2023 15:49 - Api Integração\\n\",\n            \"cidade\": [],\n            \"grupo_cliente\": [],\n            \"grupo_cliente_servico\": [],\n            \"interface_conexao\": [],\n            \"caixa_optica\": [],\n            \"servico_status\": [],\n            \"usuario\": {\n                \"nome\": \"Api Integração\"\n            }\n        }\n    ]\n}"
 								}
 							]
 						},
@@ -9733,37 +9733,37 @@
 	],
 	"variable": [
 		{
-			"id": "dd0b1343-072b-4341-a572-6faf43ad0d24",
+			"id": "d5ffe707-04bd-408c-8ca7-e0584c6f513e",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "7331a25b-0da2-4b6d-9578-fa8cb226e4ce",
+			"id": "7af51d60-f6a3-468f-8ffc-1226555294d6",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "375810b9-49fd-407c-b774-9178afd31226",
+			"id": "b78af36b-3aad-4f1d-82b8-24fa953cc498",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "f9fd7c60-2a60-4fcb-a34d-731b0209d3ce",
+			"id": "dd1e2981-4ed9-4a5c-9f63-bbcf15fd1741",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "3ab1fad3-78f5-4a62-b5b7-b1d5b97a4283",
+			"id": "209879b3-0bfa-4655-aaec-59e1f94ca18b",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "6defd7ad-d7c6-4f86-bfcd-66f1fb282421",
+			"id": "0d73b580-1eaa-4c68-a21e-509bb8730a84",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "bf4a8c8e-a6fa-4176-abb3-2e115ff8512a",
+			"id": "ffb5baa3-7b11-4065-b88f-c41b3b71e7bc",
 			"key": "access_token",
 			"value": ""
 		}
