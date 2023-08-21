@@ -9024,7 +9024,7 @@
 									}
 								},
 								"url": "{{url}}/api/v1/integracao/configuracao/alerta",
-								"description": "**POST**\n\nNo método `POST`, será possível adicionar alertas e obter o retorno no formato `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| descricao | Descrição do alerta | Sim |\n| id_tipo_atendimento | Identificador do tipo de atendimento | Não |\n| descricao | Descrição detalhada do atendimento | Sim |\n| nome | Nome do solicitante | Sim |\n| telefone | Telefone do solicitante | Sim |\n| email | Email do solicitante | Não |\n| abrir_os | Indica se deve abrir Ordem de Serviço ou não | Não |\n| parametros | Parâmetros Dinâmicos. Array de dados. | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico | Número Inteiro | Nenhum |\n| id_tipo_atendimento | Número Inteiro | Nenhum |\n| descricao | Campo Livre (Qualquer valor é aceito) | Nenhum |\n| nome | Campo Livre (Qualquer valor é aceito) | Nenhum |\n| telefone | Telefone no formato (DDNNNNNNNNN). | Nenhum |\n| email | Caso enviado deve ser no formato e-mail (EX: [user@dominio.com](https://mailto:user@dominio.com)) | Nenhum |\n| abrir_os | Caso enviado, deve conter um valor boolean (true | false |\n| parametros | Nos parâmetros dinâmicos podem ser enviados qualquer informação. |  |\n\n**Observação: Se o parâmetro id_tipo_atendimento não for enviado, o atendimento será aberto com o tipo padrão SAC.**\n\nObservação 2: Veja que na abertura do atendimento existe a possibilidade de enviar parâmetros dinâmicos. Esses parâmetros todos serão armazendos juntamente com o atendimento . Por exemplo se a sua plataforma for um sistema Omnichannel (PBX, WhatsApp, Messenger, etc), você pode armazar o ID da Conversa/Chamada, Data de Início, Data de Término, Atendimento, etc. Quanto mais informações você envia para o HubSoft, mais completo ficará a visualização do atendimento."
+								"description": "**POST**\n\nNo método `POST`, será possível adicionar alertas e obter o retorno no formato `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| descricao | Descrição do alerta | Sim |\n| visivel_via_api | Indica se estará disponivel via API | Sim |\n| nome | Nome do solicitante | Sim |\n| telefone | Telefone do solicitante | Sim |\n| email | Email do solicitante | Não |\n| abrir_os | Indica se deve abrir Ordem de Serviço ou não | Não |\n| parametros | Parâmetros Dinâmicos. Array de dados. | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico | Número Inteiro | Nenhum |\n| id_tipo_atendimento | Número Inteiro | Nenhum |\n| descricao | Campo Livre (Qualquer valor é aceito) | Nenhum |\n| nome | Campo Livre (Qualquer valor é aceito) | Nenhum |\n| telefone | Telefone no formato (DDNNNNNNNNN). | Nenhum |\n| email | Caso enviado deve ser no formato e-mail (EX: [user@dominio.com](https://mailto:user@dominio.com)) | Nenhum |\n| abrir_os | Caso enviado, deve conter um valor boolean (true | false |\n| parametros | Nos parâmetros dinâmicos podem ser enviados qualquer informação. |  |\n\n**Observação: Se o parâmetro id_tipo_atendimento não for enviado, o atendimento será aberto com o tipo padrão SAC.**\n\nObservação 2: Veja que na abertura do atendimento existe a possibilidade de enviar parâmetros dinâmicos. Esses parâmetros todos serão armazendos juntamente com o atendimento . Por exemplo se a sua plataforma for um sistema Omnichannel (PBX, WhatsApp, Messenger, etc), você pode armazar o ID da Conversa/Chamada, Data de Início, Data de Término, Atendimento, etc. Quanto mais informações você envia para o HubSoft, mais completo ficará a visualização do atendimento."
 							},
 							"response": [
 								{
@@ -9732,37 +9732,37 @@
 	],
 	"variable": [
 		{
-			"id": "1225b069-0448-4b0d-815b-40ff44acd546",
+			"id": "6641ca61-0eec-407b-a6bb-c2c7ac1aa6aa",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "ac2b3bc2-34fe-4219-b571-c4fa24c4b1f2",
+			"id": "9ed303df-478d-4b27-89f5-f72eb5bccf8a",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "bc7a8bf0-3e68-45f1-9211-9b3ee1906546",
+			"id": "776f9888-9081-4932-9c85-968c66318258",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "fa9a736e-e242-463b-998f-b6f77178a420",
+			"id": "fbcc0cf6-ce77-4504-952a-040e8df53efc",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "2bac4819-20ae-4490-9736-e30a646146fa",
+			"id": "73ac6388-bf10-4cf7-bc3a-fc8aa4d996e6",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "5b7f39b9-2960-4dca-a500-b91ea5af5582",
+			"id": "671f2cc4-20bd-43fe-a4e4-594e38f348c8",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "94c34d9e-b79c-4dca-9d52-cdaa8e25ed1b",
+			"id": "bdd348ff-9000-4590-bfd2-2d04358541c3",
 			"key": "access_token",
 			"value": ""
 		}
