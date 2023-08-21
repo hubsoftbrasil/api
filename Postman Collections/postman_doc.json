@@ -8993,7 +8993,7 @@
 									"header": [],
 									"cookie": [],
 									"responseTime": null,
-									"body": "{\n  \"status\": \"success\",\n  \"msg\": \"Alertas consultados com sucesso!\",\n  \"alertas\": {\n    \"current_page\": 1,\n    \"data\": [\n      {\n        \"id_alerta\": 216,\n        \"descricao\": \"TESTE\",\n        \"atendimento\": true,\n        \"faturamento\": false,\n        \"arquivo_remessa\": false,\n        \"arquivo_retorno\": false,\n        \"nota_fiscal\": false,\n        \"id_usuario\": 4897,\n        \"created_at\": \"2023-08-16 14:23:36\",\n        \"updated_at\": \"2023-08-16 14:23:55\",\n        \"parametros\": {\n          \"bairros\": [],\n          \"id_cidade_bairros\": []\n        },\n        \"visivel_via_api\": true,\n        \"deleted_at\": null,\n        \"data_inicio\": \"2023-08-16 00:00:00\",\n        \"data_fim\": \"2023-08-18 00:00:00\",\n        \"texto_alerta\": \"TESTE API\",\n        \"data_cadastro_br\": \"16/08/2023 14:23\",\n        \"bairros\": [],\n        \"cidades\": [],\n        \"grupos_cliente\": [],\n        \"grupos_cliente_servico\": [],\n        \"interfaces_conexao\": [],\n        \"caixa_optica\": [],\n        \"servico_status\": [],\n        \"usuario\": {\n          \"id\": 1,\n          \"name\": \"API\",\n          \"enabled2fa\": false\n        }\n      }\n    ],\n    \"first_page_url\": \"http://localhost:8000/api/v1/integracao/configuracao/alerta/paginado/1?page=1\",\n    \"from\": 1,\n    \"last_page\": 13,\n    \"last_page_url\": \"http://localhost:8000/api/v1/integracao/configuracao/alerta/paginado/1?page=13\",\n    \"next_page_url\": \"http://localhost:8000/api/v1/integracao/configuracao/alerta/paginado/1?page=2\",\n    \"path\": \"http://localhost:8000/api/v1/integracao/configuracao/alerta/paginado/1\",\n    \"per_page\": \"1\",\n    \"prev_page_url\": null,\n    \"to\": 1,\n    \"total\": 13\n  }\n}"
+									"body": "{\n  \"status\": \"success\",\n  \"msg\": \"Alertas consultados com sucesso!\",\n  \"alertas\": {\n    \"current_page\": 1,\n    \"data\": [\n      {\n        \"id_alerta\": 216,\n        \"descricao\": \"TESTE\",\n        \"atendimento\": true,\n        \"faturamento\": false,\n        \"arquivo_remessa\": false,\n        \"arquivo_retorno\": false,\n        \"nota_fiscal\": false,\n        \"id_usuario\": 4897,\n        \"created_at\": \"2023-08-16 14:23:36\",\n        \"updated_at\": \"2023-08-16 14:23:55\",\n        \"parametros\": {\n          \"bairros\": [],\n          \"id_cidade_bairros\": []\n        },\n        \"visivel_via_api\": true,\n        \"deleted_at\": null,\n        \"data_inicio\": \"2023-08-16 00:00:00\",\n        \"data_fim\": \"2023-08-18 00:00:00\",\n        \"texto_alerta\": \"TESTE API\",\n        \"data_cadastro_br\": \"16/08/2023 14:23\",\n        \"bairros\": [],\n        \"cidades\": [],\n        \"grupos_cliente\": [],\n        \"grupos_cliente_servico\": [],\n        \"interfaces_conexao\": [],\n        \"caixa_optica\": [],\n        \"servico_status\": [],\n        \"usuario\": {\n          \"id\": 1,\n          \"name\": \"API\"\n        }\n      }\n    ],\n    \"first_page_url\": \"http://localhost:8000/api/v1/integracao/configuracao/alerta/paginado/1?page=1\",\n    \"from\": 1,\n    \"last_page\": 13,\n    \"last_page_url\": \"http://localhost:8000/api/v1/integracao/configuracao/alerta/paginado/1?page=13\",\n    \"next_page_url\": \"http://localhost:8000/api/v1/integracao/configuracao/alerta/paginado/1?page=2\",\n    \"path\": \"http://localhost:8000/api/v1/integracao/configuracao/alerta/paginado/1\",\n    \"per_page\": \"1\",\n    \"prev_page_url\": null,\n    \"to\": 1,\n    \"total\": 13\n  }\n}"
 								}
 							]
 						},
@@ -9838,37 +9838,37 @@
 	],
 	"variable": [
 		{
-			"id": "e124b1ef-6f72-4d4a-b53a-c0a07a5f7396",
+			"id": "308a7868-c251-479b-96c4-60808e0099da",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "ce081c30-319f-492d-80ab-5341d949e177",
+			"id": "30fe2319-ee2d-4d3a-8d16-ce6833b2f481",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "51076e71-c8e1-46e6-8139-41e66ed5878c",
+			"id": "098ce13f-8296-42d7-8754-87a3903d51c0",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "9f4add80-588c-4f3d-b4e4-c7f823125caf",
+			"id": "8ba69cdb-0c5e-474d-a6ad-6a6519508b46",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "47ec092c-8952-471b-a1b9-b14159c0c15a",
+			"id": "55a79a6c-55fd-4b83-a54e-8e7e4a89c7f6",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "98b98dfa-f59c-4a94-92cb-fbc26600943d",
+			"id": "db45ec32-0886-4b18-8bea-65b1025dff45",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "4d14c264-a200-442d-b2d9-22dce36ac6bc",
+			"id": "250dc491-24a6-4465-8915-bc130052eaf5",
 			"key": "access_token",
 			"value": ""
 		}
