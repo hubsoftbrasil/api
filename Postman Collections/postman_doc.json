@@ -7901,7 +7901,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{url}}/api/v1/integracao/configuracao/alerta/paginado/:quantidade?pagina=1&status=ativo|inativo",
+									"raw": "{{url}}/api/v1/integracao/configuracao/alerta/paginado/:quantidade?pagina=1",
 									"host": [
 										"{{url}}"
 									],
@@ -7919,12 +7919,6 @@
 											"key": "pagina",
 											"value": "1",
 											"description": "Página que está sendo consultada"
-										},
-										{
-											"key": "status",
-											"value": "ativo|inativo",
-											"description": "Status do alerta",
-											"type": "text"
 										}
 									],
 									"variable": [
@@ -8815,37 +8809,37 @@
 	],
 	"variable": [
 		{
-			"id": "77290a5e-6279-40a9-b9ea-bdae918b806c",
+			"id": "277c5caf-7694-419c-9724-0914944a9223",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "f40635da-f0c7-4fae-a102-5b756a1a27c7",
+			"id": "72d05ffb-5ff6-4741-be23-455b07e56020",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "25614b85-8ea0-4114-9ded-b0a7cc6804fb",
+			"id": "6c26d740-d304-4b49-b8e7-bc3b626f6929",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "4bdd8495-217a-4bcf-a472-ff50a69478f0",
+			"id": "031f4ac6-032a-4b59-a580-b8c33eb61e50",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "d2993d53-383b-4ce1-91d9-f50b89809b66",
+			"id": "5eea99e5-7981-4953-a548-b975bf88d1f2",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "9a639aa8-da84-401c-9854-5b27913fae31",
+			"id": "62f3cfc5-2d96-45dc-b095-0d346e787fde",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "b9fcb9c8-0f71-4dc7-b992-d515f77eb6f0",
+			"id": "fe8ab471-5e4e-4cb5-9652-7456b2af3092",
 			"key": "access_token",
 			"value": ""
 		}
