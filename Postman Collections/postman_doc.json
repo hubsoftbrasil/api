@@ -9192,7 +9192,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{url}}/api/v1/integracao/configuracao/configuracao/:id_alerta",
+									"raw": "{{url}}/api/v1/integracao/configuracao/alerta/:id_alerta",
 									"host": [
 										"{{url}}"
 									],
@@ -9201,7 +9201,7 @@
 										"v1",
 										"integracao",
 										"configuracao",
-										"configuracao",
+										"alerta",
 										":id_alerta"
 									],
 									"variable": [
@@ -9818,37 +9818,37 @@
 	],
 	"variable": [
 		{
-			"id": "1d9d40e4-2aea-4ca8-9100-adb6f4444cad",
+			"id": "244ddb3f-f52e-4bb4-976e-202bb85a8a90",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "09843f33-2adf-4b48-aaac-fb95321a625e",
+			"id": "fe668ad3-0408-4a54-be7d-2c0aae833f49",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "0ccf25cf-7445-4c83-a07a-e7488b96ef38",
+			"id": "39080d61-b0b4-420c-ade4-9fc4027a10e9",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "2186e43a-e0f1-48b2-9629-fb16df1425fa",
+			"id": "7c5c4321-2dfc-4bcd-ae42-053878d86f54",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "82e22703-4903-4c89-9056-be935e7ab625",
+			"id": "223627a3-69fa-42d6-b8d6-6de7406e96f2",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "beddef68-c0b1-4698-9a20-f3ef8143391c",
+			"id": "ced3ac1f-b570-469e-a246-0b9db02486c0",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "ebaee658-f806-4433-932a-b4d811d65574",
+			"id": "070f2554-06ea-46bb-b103-44a05f6bbe4e",
 			"key": "access_token",
 			"value": ""
 		}
