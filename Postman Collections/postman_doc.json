@@ -9113,7 +9113,7 @@
 										}
 									]
 								},
-								"description": "Através desse endpoint será possível editar e fechar os atendimentos em abertos dos clientes e obter o retorno no formato JSON como resposta. Lembre de enviar o ID do atendimento como um parâmetro na URL, conforme o exemplo acima. Os seguintes parâmetros podem/devem estar presentes no corpo do requisição:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| descricao | Descrição de abertura do atendimento (Opcional) | Não |\n| fechar_atendimento | Indica se deve ser fechado os atendimento e suas ordens de serviço | Sim |\n| parametros | Objeto JSON que poderá conter qualquer informação da integração | Sim |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| descricao | Texto | Nenhum |\n| fechar_atendimento | Boolean ( Verdadeiro ou Falso ) | false |\n| parametros | Array Associativo, JSON | Nenhum |"
+								"description": "Através desse endpoint será possível editar o alerta e obter o retorno no formato JSON como resposta.  \nLembre de enviar o ID do alertacomo um parâmetro na URL, conforme o exemplo acima.  \nOs seguintes parâmetros podem/devem estar presentes no corpo do requisição:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| descricao | Descrição de abertura do atendimento (Opcional) | Não |\n| fechar_atendimento | Indica se deve ser fechado os atendimento e suas ordens de serviço | Sim |\n| parametros | Objeto JSON que poderá conter qualquer informação da integração | Sim |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| descricao | Texto | Nenhum |\n| fechar_atendimento | Boolean ( Verdadeiro ou Falso ) | false |\n| parametros | Array Associativo, JSON | Nenhum |"
 							},
 							"response": [
 								{
@@ -9733,37 +9733,37 @@
 	],
 	"variable": [
 		{
-			"id": "debd41ab-9a2a-4526-aef3-8ce2078c47e5",
+			"id": "34ce4858-e6de-4d90-b3e0-dfda5b718a81",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "744c51d4-3dcb-4732-871c-520eac101ceb",
+			"id": "911a03ce-7d69-43b1-83cb-02e35172a562",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "ed9428be-7fc0-451a-8b57-3f821453c96b",
+			"id": "6f05f2ad-a60b-48a1-ae3c-554d281a4bee",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "8e55e5d0-04bf-432a-949c-e0aefa51d5d4",
+			"id": "18ee5e5a-db5f-4683-9ccd-7a50f9c62b8d",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "c279799f-8bc6-429d-baf0-3c77e21933eb",
+			"id": "3b716bb0-b314-4956-97ab-5da069abdd6d",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "6704b0d0-47fc-4e27-9044-bf683498ebb8",
+			"id": "fbf15b25-d510-4f73-a5d7-fc4429a99253",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "491e7d3e-b268-4a15-9241-d5e452a9e7d5",
+			"id": "4897079a-a7cb-43d2-bd30-d2f9b4620696",
 			"key": "access_token",
 			"value": ""
 		}
