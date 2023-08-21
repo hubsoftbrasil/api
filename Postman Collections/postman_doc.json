@@ -9219,7 +9219,7 @@
 									"id": "7849cc84-f5a0-4cb2-a084-6d0ff1a9891d",
 									"name": "Sucesso",
 									"originalRequest": {
-										"method": "POST",
+										"method": "DELETE",
 										"header": [
 											{
 												"key": "Authorization",
@@ -9242,7 +9242,26 @@
 												}
 											}
 										},
-										"url": "{{url}}/api/v1/integracao/cliente/contrato/remover_contrato"
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/configuracao/alerta/:id_alerta",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"configuracao",
+												"alerta",
+												":id_alerta"
+											],
+											"variable": [
+												{
+													"key": "id_alerta",
+													"value": ""
+												}
+											]
+										}
 									},
 									"_postman_previewlanguage": "json",
 									"header": null,
@@ -9818,37 +9837,37 @@
 	],
 	"variable": [
 		{
-			"id": "cdeb88f3-03fa-46a1-b021-1be6f65fc3a8",
+			"id": "2e29f742-8b13-4e96-b53c-459fd1cd47ff",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "7e2eec85-e28c-40ca-ab2a-ee688b82137c",
+			"id": "922b994e-6ea8-4834-9226-f31e554c89fd",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "0e6f3f2f-c1c2-48e5-ba97-bece3048aa58",
+			"id": "b002a2c3-8c2f-4505-999b-113b92573567",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "fbd84e9d-8ae5-4a50-af55-1d2bcbb36d78",
+			"id": "c83dcbd0-5858-4a5f-afd8-309da1086ccf",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "466dc910-f99d-46ed-841f-b9c9febfc5bc",
+			"id": "e3b6a732-30d7-4213-a73a-41dfb248153b",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "393d4c2a-f9fa-4ac7-aa09-0cab53d01083",
+			"id": "4ebf62bf-598d-44d5-8f1b-a846f69d4ac6",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "a7aee436-7879-4f38-ae98-143faf80ac02",
+			"id": "01d01c92-cc01-42e8-8662-f2b26b14d335",
 			"key": "access_token",
 			"value": ""
 		}
