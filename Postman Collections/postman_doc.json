@@ -9192,7 +9192,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{url}}/api/v1/integracao/cliente/contrato/:id_cliente_servico_contrato",
+									"raw": "{{url}}/api/v1/integracao/configuracao/configuracao/:id_alerta",
 									"host": [
 										"{{url}}"
 									],
@@ -9200,16 +9200,15 @@
 										"api",
 										"v1",
 										"integracao",
-										"cliente",
-										"contrato",
-										":id_cliente_servico_contrato"
+										"configuracao",
+										"configuracao",
+										":id_alerta"
 									],
 									"variable": [
 										{
-											"id": "e75ff9a8-5f73-4111-addc-b4885a0e9059",
-											"key": "id_cliente_servico_contrato",
-											"value": "integer",
-											"description": "(Integer) ID do Cliente Servico Contrato já cadastrado anteriormente"
+											"key": "id_alerta",
+											"value": "",
+											"description": "Integer (id_alerta) Identificador do alerta que será removido (inativado)"
 										}
 									]
 								},
@@ -9819,37 +9818,37 @@
 	],
 	"variable": [
 		{
-			"id": "83746ecd-af36-433b-a73c-49ff8893cca2",
+			"id": "1d9d40e4-2aea-4ca8-9100-adb6f4444cad",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "302a6995-a526-44ca-93fa-d358f6a14b05",
+			"id": "09843f33-2adf-4b48-aaac-fb95321a625e",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "f9d7d860-b10c-4c09-8e97-8337db1a22c6",
+			"id": "0ccf25cf-7445-4c83-a07a-e7488b96ef38",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "5e4ff7dd-6ec9-4852-a03f-36815a5c21aa",
+			"id": "2186e43a-e0f1-48b2-9629-fb16df1425fa",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "410ebb0b-e6a5-4aa7-be17-0893d386c5e5",
+			"id": "82e22703-4903-4c89-9056-be935e7ab625",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "07b6a4a3-bd49-4977-9340-4a9481c45103",
+			"id": "beddef68-c0b1-4698-9a20-f3ef8143391c",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "207593a4-04c5-45b4-b7fe-3a19f0d3e54a",
+			"id": "ebaee658-f806-4433-932a-b4d811d65574",
 			"key": "access_token",
 			"value": ""
 		}
