@@ -7901,7 +7901,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{url}}/api/v1/integracao/atendimento/paginado/:quantidade?pagina=1&data_inicio=2022-08-01&data_fim=2022-08-31",
+									"raw": "{{url}}/api/v1/integracao/configuracao/alerta/paginado/:quantidade?pagina=1&status=ativo|inativo",
 									"host": [
 										"{{url}}"
 									],
@@ -7909,7 +7909,8 @@
 										"api",
 										"v1",
 										"integracao",
-										"atendimento",
+										"configuracao",
+										"alerta",
 										"paginado",
 										":quantidade"
 									],
@@ -7920,14 +7921,10 @@
 											"description": "Página que está sendo consultada"
 										},
 										{
-											"key": "data_inicio",
-											"value": "2022-08-01",
-											"description": "Data de Início no formato YYYY-MM-DD"
-										},
-										{
-											"key": "data_fim",
-											"value": "2022-08-31",
-											"description": "Data Final no formato YYYY-MM-DD"
+											"key": "status",
+											"value": "ativo|inativo",
+											"description": "Status do alerta",
+											"type": "text"
 										}
 									],
 									"variable": [
@@ -8818,37 +8815,37 @@
 	],
 	"variable": [
 		{
-			"id": "1899bea4-94d2-4e9a-802c-c46ac6cb22f9",
+			"id": "a06c923e-58c1-451f-a4b1-92d47bad920b",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "88f3192a-eea5-46d4-b80d-30ea65752e63",
+			"id": "0768897c-b79e-4c13-920c-a1d0a8aedf58",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "e63adf78-2cfc-44d9-a95c-d2e353cce89a",
+			"id": "823ca9b2-6c3a-4de3-bc00-22ac2b629d93",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "7839b5cb-0376-49b7-b0f8-531004bf4fdb",
+			"id": "67145b5e-417f-4432-87cd-f1d0abda9684",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "ef7443a9-3c40-418d-b8a6-0b5f457d3643",
+			"id": "1ecc49b2-d758-4770-a5bf-fd951b5b0498",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "9d1ce19f-7b40-40fa-ac2a-3c1e19039a77",
+			"id": "39f5f058-3dd3-4869-94b3-4456f5af8b89",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "dead450f-9fa4-406d-8325-adac45b95eec",
+			"id": "5bc5d919-59dd-4660-aba1-cc2995954e5d",
 			"key": "access_token",
 			"value": ""
 		}
