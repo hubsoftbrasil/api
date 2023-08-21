@@ -8010,7 +8010,7 @@
 										}
 									}
 								},
-								"url": "{{url}}/api/v1/integracao/atendimento",
+								"url": "{{url}}/api/v1/integracao/configuracao/alerta",
 								"description": "**POST**\n\nNo método `POST`, será possível adicionar os atendimentos em aberto/fechados dos clientes e obter o retorno no formato `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_cliente_servico | Identificador do serviço do cliente | Sim |\n| id_tipo_atendimento | Identificador do tipo de atendimento | Não |\n| descricao | Descrição detalhada do atendimento | Sim |\n| nome | Nome do solicitante | Sim |\n| telefone | Telefone do solicitante | Sim |\n| email | Email do solicitante | Não |\n| abrir_os | Indica se deve abrir Ordem de Serviço ou não | Não |\n| parametros | Parâmetros Dinâmicos. Array de dados. | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_cliente_servico | Número Inteiro | Nenhum |\n| id_tipo_atendimento | Número Inteiro | Nenhum |\n| descricao | Campo Livre (Qualquer valor é aceito) | Nenhum |\n| nome | Campo Livre (Qualquer valor é aceito) | Nenhum |\n| telefone | Telefone no formato (DDNNNNNNNNN). | Nenhum |\n| email | Caso enviado deve ser no formato e-mail (EX: [user@dominio.com](mailto:user@dominio.com)) | Nenhum |\n| abrir_os | Caso enviado, deve conter um valor boolean (true | false |\n| parametros | Nos parâmetros dinâmicos podem ser enviados qualquer informação. |  |\n\n**Observação: Se o parâmetro id_tipo_atendimento não for enviado, o atendimento será aberto com o tipo padrão SAC.**\n\nObservação 2: Veja que na abertura do atendimento existe a possibilidade de enviar parâmetros dinâmicos. Esses parâmetros todos serão armazendos juntamente com o atendimento . Por exemplo se a sua plataforma for um sistema Omnichannel (PBX, WhatsApp, Messenger, etc), você pode armazar o ID da Conversa/Chamada, Data de Início, Data de Término, Atendimento, etc. Quanto mais informações você envia para o HubSoft, mais completo ficará a visualização do atendimento."
 							},
 							"response": [
@@ -8719,37 +8719,37 @@
 	],
 	"variable": [
 		{
-			"id": "e896f554-02b5-434a-8096-99c6bbfb5911",
+			"id": "d0e3ed92-bb64-4559-bf56-854042e53d34",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "0216437a-fa62-46b5-af4e-ce99b8b85fbc",
+			"id": "0b24bd8e-0c51-4ce8-8a6a-48e5fe9421f3",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "a68e6e30-0a05-4c90-adde-1f936425dd26",
+			"id": "41aefc83-a2fa-48a8-9b77-fe49650bf38b",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "2eeed4fa-e3eb-4525-8a3e-358211e978c6",
+			"id": "c16cfc40-890b-42a6-b412-ee903e357b3d",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "8a8521d1-f595-422a-a0c4-d499da95c0e4",
+			"id": "f6de9ccc-2ba1-4a9c-bb35-d0bf64e4bf1b",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "dd9c99c1-5398-423a-bbd7-d4bb96b452ee",
+			"id": "e786e2dd-2f5b-4196-9fe1-2125bde323cb",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "f589bef5-6d40-4e53-bc96-93fd4f5f8f5f",
+			"id": "3c7b3848-dc45-417f-874a-986b2e79c251",
 			"key": "access_token",
 			"value": ""
 		}
