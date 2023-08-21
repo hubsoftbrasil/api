@@ -9212,7 +9212,7 @@
 										}
 									]
 								},
-								"description": "No método `DELETE`, será possível remover os contratos do o serviço do cliente.\n\n**Aviso**\n\n`IMPORTANTE`: É necessário informar na requisição o `id_cliente_servico_contrato`, eles podem retornados nas rotas Clientes > Consulta.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| motivo | Descrição textual do motivo da remoção do contrato. | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| motivo | Textual | Nenhum |"
+								"description": "No método `DELETE`, será possível remover (inativar) um alerta.\n\n**Aviso**\n\n`IMPORTANTE`: É necessário informar na requisição o `id_alerta.`"
 							},
 							"response": [
 								{
@@ -9818,37 +9818,37 @@
 	],
 	"variable": [
 		{
-			"id": "244ddb3f-f52e-4bb4-976e-202bb85a8a90",
+			"id": "cdeb88f3-03fa-46a1-b021-1be6f65fc3a8",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "fe668ad3-0408-4a54-be7d-2c0aae833f49",
+			"id": "7e2eec85-e28c-40ca-ab2a-ee688b82137c",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "39080d61-b0b4-420c-ade4-9fc4027a10e9",
+			"id": "0e6f3f2f-c1c2-48e5-ba97-bece3048aa58",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "7c5c4321-2dfc-4bcd-ae42-053878d86f54",
+			"id": "fbd84e9d-8ae5-4a50-af55-1d2bcbb36d78",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "223627a3-69fa-42d6-b8d6-6de7406e96f2",
+			"id": "466dc910-f99d-46ed-841f-b9c9febfc5bc",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "ced3ac1f-b570-469e-a246-0b9db02486c0",
+			"id": "393d4c2a-f9fa-4ac7-aa09-0cab53d01083",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "070f2554-06ea-46bb-b103-44a05f6bbe4e",
+			"id": "a7aee436-7879-4f38-ae98-143faf80ac02",
 			"key": "access_token",
 			"value": ""
 		}
