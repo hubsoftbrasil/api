@@ -9093,7 +9093,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{url}}/api/v1/integracao/atendimento/:id_atendimento",
+									"raw": "{{url}}/api/v1/integracao/configuracao/alerta/:id_alerta",
 									"host": [
 										"{{url}}"
 									],
@@ -9101,15 +9101,15 @@
 										"api",
 										"v1",
 										"integracao",
-										"atendimento",
-										":id_atendimento"
+										"configuracao",
+										"alerta",
+										":id_alerta"
 									],
 									"variable": [
 										{
-											"id": "5f3ae58b-2f5e-42e6-bb0d-6d3a07dd8799",
-											"key": "id_atendimento",
-											"value": "123",
-											"description": "ID do Atendimento a ser editado"
+											"key": "id_alerta",
+											"value": "",
+											"description": "id do alerta que será editado"
 										}
 									]
 								},
@@ -9733,37 +9733,37 @@
 	],
 	"variable": [
 		{
-			"id": "495c739f-db89-49f7-a16e-fc013445e17c",
+			"id": "4e866b09-5326-45c0-82d0-560b0e99a483",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "54d0091d-427a-4062-8a79-de6119d844e8",
+			"id": "7c2bd8e9-b1eb-4d69-8681-3d6b7c35714d",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "85b9d7f5-8588-4522-be1f-3a0b61e5566c",
+			"id": "62cfc089-4a45-4016-b457-e513768bfc3a",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "33d8dbd0-9439-480e-9246-8a1031947f15",
+			"id": "ddccc6f5-eb63-48fa-a95a-3e9c678c79d2",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "a0b9f3fa-0ac2-4767-806a-6fa4262bb60b",
+			"id": "f5d0fa4e-4276-4ab3-ad19-662588247f39",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "7715796b-7aa4-45cd-ac3c-0ba06bc7b666",
+			"id": "faa973be-a627-4dc1-8402-4e0e989a669e",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "8be27e92-f1ca-4ae8-a67c-baf30e193014",
+			"id": "e63b1bcd-5308-47cd-9857-4efcce52d572",
 			"key": "access_token",
 			"value": ""
 		}
