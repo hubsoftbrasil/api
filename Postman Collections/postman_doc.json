@@ -9166,6 +9166,92 @@
 									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Alerta atualizado com sucesso!\",\n    \"alerta\": [\n        {\n            \"id_alerta\": 217,\n            \"descricao\": \"TESTE ALTERAÇÃO VIA API\",\n            \"ativo\": true,\n            \"data_cadastro\": \"21/08/2023 15:49\",\n            \"data_inicio\": null,\n            \"data_fim\": null,\n            \"texto_alerta\": \"TESTE ALTERAÇÃO VIA API\\n\\n21/08/2023 15:49 - Usuário API\\n\",\n            \"cidade\": [],\n            \"grupo_cliente\": [],\n            \"grupo_cliente_servico\": [],\n            \"interface_conexao\": [],\n            \"caixa_optica\": [],\n            \"servico_status\": [],\n            \"usuario\": {\n                \"nome\": \"Usuário API\"\n            }\n        }\n    ]\n}"
 								}
 							]
+						},
+						{
+							"name": "Remover (Inativar)",
+							"id": "eedad40d-eca9-44e9-89d5-0dd823d7acf7",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"description": "Bearer Token obtido na autenticação"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"motivo\": \"SERÁ ADICIONADO OUTRO CONTRATO PARA O CLIENTE\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/v1/integracao/cliente/contrato/:id_cliente_servico_contrato",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"integracao",
+										"cliente",
+										"contrato",
+										":id_cliente_servico_contrato"
+									],
+									"variable": [
+										{
+											"id": "e75ff9a8-5f73-4111-addc-b4885a0e9059",
+											"key": "id_cliente_servico_contrato",
+											"value": "integer",
+											"description": "(Integer) ID do Cliente Servico Contrato já cadastrado anteriormente"
+										}
+									]
+								},
+								"description": "No método `DELETE`, será possível remover os contratos do o serviço do cliente.\n\n**Aviso**\n\n`IMPORTANTE`: É necessário informar na requisição o `id_cliente_servico_contrato`, eles podem retornados nas rotas Clientes > Consulta.\n\n**Atributos da Requisição**\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| motivo | Descrição textual do motivo da remoção do contrato. | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| motivo | Textual | Nenhum |"
+							},
+							"response": [
+								{
+									"id": "7849cc84-f5a0-4cb2-a084-6d0ff1a9891d",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id_cliente_servico_contrato\": 9308,\n    \"motivo\": \"SERÁ ADICIONADO OUTRO CONTRATO PARA O CLIENTE\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{url}}/api/v1/integracao/cliente/contrato/remover_contrato"
+									},
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Contrato inativado com sucesso\",\r\n    \"cliente_servico_contrato\": {\r\n        \"id_cliente_servico_contrato\": 9308,\r\n        \"id_cliente_servico\": 18950,\r\n        \"id_contrato\": 77,\r\n        \"validade\": 12,\r\n        \"numero_contrato\": 6421,\r\n        \"id_empresa\": 14,\r\n        \"deleted_at_br\": \"04/08/2023 14:26:42\",\r\n        \"contrato\": {\r\n            \"id_contrato\": 77,\r\n            \"descricao\": \"-Ápice - Contrato Cliente Rádio\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null\r\n        },\r\n        \"empresa\": {\r\n            \"id_empresa\": 14,\r\n            \"display\": \"COMUNICAÇÕES LTDA (CNPJ: 24.605.227/0001-29)\"\r\n        },\r\n        \"cliente_servico\": {\r\n            \"id_cliente_servico\": 18950,\r\n            \"display\": \"(5) 1.5-MBPS-PROMOCIONAL-WIRELESS-2018/09 COELHO\",\r\n            \"cliente\": {\r\n                \"id_cliente\": 25246,\r\n                \"display\": \"(2082) BORGES SILVA\"\r\n            }\r\n        }\r\n    }\r\n}"
+								}
+							]
 						}
 					],
 					"id": "606de75a-0db7-4a9c-806c-0737fb8ac23f",
@@ -9733,37 +9819,37 @@
 	],
 	"variable": [
 		{
-			"id": "68ef8064-fc7b-4e27-ba3c-786676f6dff0",
+			"id": "83746ecd-af36-433b-a73c-49ff8893cca2",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "b7b5196c-af53-4ea6-b2e7-f65361a5e2d3",
+			"id": "302a6995-a526-44ca-93fa-d358f6a14b05",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "68d3d5fc-7254-4989-b5b1-a8e0ebf3e4cf",
+			"id": "f9d7d860-b10c-4c09-8e97-8337db1a22c6",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "b4cfe2fb-4e15-4f41-813c-9b7fd5eb32a7",
+			"id": "5e4ff7dd-6ec9-4852-a03f-36815a5c21aa",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "8d19afcc-df63-41e7-b57f-c90f7f2a9380",
+			"id": "410ebb0b-e6a5-4aa7-be17-0893d386c5e5",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "87086389-6cf3-47d7-8934-a52679850780",
+			"id": "07b6a4a3-bd49-4977-9340-4a9481c45103",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "83bbffce-22f6-4d3f-af1f-1281c5375468",
+			"id": "207593a4-04c5-45b4-b7fe-3a19f0d3e54a",
 			"key": "access_token",
 			"value": ""
 		}
