@@ -9085,7 +9085,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"parametros\": {\n        \"url_ligacao\": \"https://www.meusite.com.br/ligacao/3\",\n        \"software\": \"PBX ABCDE\",\n        \"outro_parametro\": 123456\n    },\n    \"fechar_atendimento\": true\n}",
+									"raw": "{\n  \"descricao\": \"TESTE ALTERAÇÃO VIA API\",\n  \"visivel_via_api\": true,\n  \"atendimento\": true\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -9733,37 +9733,37 @@
 	],
 	"variable": [
 		{
-			"id": "4e866b09-5326-45c0-82d0-560b0e99a483",
+			"id": "7dc40c95-9673-4357-a6d8-cdba862d1195",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "7c2bd8e9-b1eb-4d69-8681-3d6b7c35714d",
+			"id": "f80a1a73-5751-41d4-9390-95da724d2574",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "62cfc089-4a45-4016-b457-e513768bfc3a",
+			"id": "4e7d87fa-b52c-442d-80ac-1c63b26e9d23",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "ddccc6f5-eb63-48fa-a95a-3e9c678c79d2",
+			"id": "07aeb32c-101b-4e18-a996-2cb897735ae5",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "f5d0fa4e-4276-4ab3-ad19-662588247f39",
+			"id": "4a898699-0c03-47ae-ae21-75e48d086466",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "faa973be-a627-4dc1-8402-4e0e989a669e",
+			"id": "75db2c70-b7d0-4ee9-835b-ae60a2c2c160",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "e63b1bcd-5308-47cd-9857-4efcce52d572",
+			"id": "e22492a2-e634-4f06-9737-2f0aed1b86f1",
 			"key": "access_token",
 			"value": ""
 		}
