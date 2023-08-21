@@ -8897,7 +8897,7 @@
 			"name": "Configuração",
 			"item": [
 				{
-					"name": "Alarme",
+					"name": "Alerta",
 					"item": [
 						{
 							"name": "Consulta",
@@ -9733,37 +9733,37 @@
 	],
 	"variable": [
 		{
-			"id": "d5ffe707-04bd-408c-8ca7-e0584c6f513e",
+			"id": "d31ab437-fa61-4114-9ff2-baff19343e6d",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "7af51d60-f6a3-468f-8ffc-1226555294d6",
+			"id": "fc586471-bf6c-47d2-bda4-64b06f8b90e2",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "b78af36b-3aad-4f1d-82b8-24fa953cc498",
+			"id": "e8849975-b3bb-4c63-8255-4c35d280fd61",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "dd1e2981-4ed9-4a5c-9f63-bbcf15fd1741",
+			"id": "6d6c63a3-eee7-4bb5-84fe-1a5e13162f2f",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "209879b3-0bfa-4655-aaec-59e1f94ca18b",
+			"id": "ca317f18-84c3-49f0-8839-f39f7acec955",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "0d73b580-1eaa-4c68-a21e-509bb8730a84",
+			"id": "427e0390-d8d0-4ab7-b662-cd930cac32e1",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "ffb5baa3-7b11-4065-b88f-c41b3b71e7bc",
+			"id": "57a77532-6d8c-45ed-91ff-6342c7e1e3d0",
 			"key": "access_token",
 			"value": ""
 		}
