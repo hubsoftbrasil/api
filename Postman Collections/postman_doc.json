@@ -9163,7 +9163,7 @@
 									"header": null,
 									"cookie": [],
 									"responseTime": null,
-									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Alerta atualizado com sucesso!\",\n    \"alerta\": [\n        {\n            \"id_alerta\": 217,\n            \"descricao\": \"TESTE ALTERAÇÃO VIA API\",\n            \"ativo\": true,\n            \"data_cadastro\": \"21/08/2023 15:49\",\n            \"data_inicio\": null,\n            \"data_fim\": null,\n            \"texto_alerta\": \"TESTE ALTERAÇÃO VIA API\\n\\n21/08/2023 15:49 - Usuário API\\n\",\n            \"cidade\": [],\n            \"grupo_cliente\": [],\n            \"grupo_cliente_servico\": [],\n            \"interface_conexao\": [],\n            \"caixa_optica\": [],\n            \"servico_status\": [],\n            \"usuario\": {\n                \"nome\": \"Usuário API\"\n            }\n        }\n    ]\n}"
+									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Alerta atualizado com sucesso!\",\n    \"alerta\": [\n        {\n            \"id_alerta\": 217,\n            \"descricao\": \"TESTE ALTERAÇÃO VIA API\",\n            \"ativo\": true,\n            \"data_cadastro\": \"21/08/2023 15:49\",\n            \"data_inicio\": null,\n            \"data_fim\": null,\n            \"texto_alerta\": \"TESTE ALTERAÇÃO VIA API\\n\\n21/08/2023 15:49 - Usuário API\\n\",\n            \"cidade\": [],\n            \"grupo_cliente\": [],\n            \"grupo_cliente_servico\": [],\n            \"interface_conexao\": [],\n            \"caixa_optica\": [],\n            \"servico_status\": [],\n            \"usuario\": {\n                \"id\":1,\n                \"nome\": \"Usuário API\"\n            }\n        }\n    ]\n}"
 								}
 							]
 						},
@@ -9838,37 +9838,37 @@
 	],
 	"variable": [
 		{
-			"id": "8dc3e60e-0855-4a5b-9c80-5429e249aed6",
+			"id": "12872c34-04a4-4531-b0b9-897738746aa4",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "a37cd5e9-faa2-4144-b104-3679e31dc41a",
+			"id": "94ef1a41-3f7d-4876-8d33-2693d8325387",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "eb7f04fd-9709-4d46-a6dd-d2903cf085f8",
+			"id": "893aaf45-dc9e-47ac-a5ff-09e0dcff6b2d",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "0add0ba7-c968-44db-9462-dd47f53ed60a",
+			"id": "c1253ce2-5b0f-45f4-aba4-161f336daf6c",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "fc8fbca4-cf7c-4b7d-b005-12463292f5e9",
+			"id": "e1360ef9-03ff-4743-b4f4-2976497e3742",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "bac52a0e-7385-43d2-aab9-f5f6b7a3a953",
+			"id": "65286ae7-0f13-4b8f-b42d-b6dae8011abc",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "de450a86-8004-482b-b436-8fb856fa1992",
+			"id": "0a01ad41-cdeb-4779-9b47-aba111825ad1",
 			"key": "access_token",
 			"value": ""
 		}
