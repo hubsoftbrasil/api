@@ -9049,7 +9049,7 @@
 												}
 											}
 										},
-										"url": "{{url}}/api/v1/integracao/atendimento"
+										"url": "{{url}}/api/v1/integracao/configuracao/alerta"
 									},
 									"status": "OK",
 									"code": 200,
@@ -9733,37 +9733,37 @@
 	],
 	"variable": [
 		{
-			"id": "0509876d-32c8-4dbf-a8d7-3b49c67f928d",
+			"id": "dd0b1343-072b-4341-a572-6faf43ad0d24",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "3f23541e-2225-431d-b4f1-99f7dd031bd1",
+			"id": "7331a25b-0da2-4b6d-9578-fa8cb226e4ce",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "f752f099-5b19-43d2-ab91-02c626d6ea2a",
+			"id": "375810b9-49fd-407c-b774-9178afd31226",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "a9e389f1-9b4e-4e27-8611-7c5333261ed5",
+			"id": "f9fd7c60-2a60-4fcb-a34d-731b0209d3ce",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "1004059e-8f67-4ab8-b111-7337da42e39c",
+			"id": "3ab1fad3-78f5-4a62-b5b7-b1d5b97a4283",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "7602e5e4-cc90-4dca-b779-390245591368",
+			"id": "6defd7ad-d7c6-4f86-bfcd-66f1fb282421",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "912e7614-b57c-4959-8dc3-507e1e03d8c0",
+			"id": "bf4a8c8e-a6fa-4176-abb3-2e115ff8512a",
 			"key": "access_token",
 			"value": ""
 		}
