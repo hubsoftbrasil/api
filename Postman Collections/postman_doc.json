@@ -3502,7 +3502,7 @@
 									}
 								},
 								"url": "{{url}}/api/v1/integracao/estoque/movimento_estoque/transferencia",
-								"description": "**`POST`**\n\nNo endpoint de **Transferência entre Estoque**, será possível mover produtos de um local de estoque para outro.\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_local_estoque_origem | ID do Local de Estoque de Origem | Sim |\n| id_local_estoque_destino | ID do Local de Estoque de Destino | Sim |\n| produtos | Um objeto que contém os ID's dos produtos, quantidades e patrimônios a serem transferidos | (Veja abaixo) |\n\n``` json\n\"produtos\": [{\n\"quantidade\": 10 // Obrigatório,\n\"produto\": {\n\"id_produto\": 1 // Obrigatório\n},\n\"patrimonios\": [{ // Obrigatório se, o produto em questão \n//estiver com o \"Controle Patrimonial\" habilitado\n\"id_produto_item\": 2\n}]\n}]\n\n ```"
+								"description": "**`POST`**\n\nNo endpoint de **Transferência entre Estoque**, será possível mover produtos de um local de estoque para outro.\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_local_estoque_origem | ID do Local de Estoque de Origem | Sim |\n| id_local_estoque_destino | ID do Local de Estoque de Destino | Sim |\n| produtos | Um objeto que contém os ID's dos produtos, quantidades e patrimônios a serem transferidos | (Veja abaixo) |\n\nExemplo de obrigatoriedade do objeto **produtos**:\n\n``` json\n\"produtos\": [{\n\"quantidade\": 10 // Obrigatório,\n\"produtos\": [{\n    \"quantidade\": 10 // Obrigatório,\n    \"produto\": {\n        \"id_produto\": 1 // Obrigatório\n    },\n    \"patrimonios\": [{ // Obrigatório se, o produto em questão estiver com o \"Controle Patrimonial\" habilitado\n        \"id_produto_item\": 2\n    }]\n}]\n\n ```"
 							},
 							"response": [
 								{
@@ -9733,37 +9733,37 @@
 	],
 	"variable": [
 		{
-			"id": "ed6a5f79-6deb-4d77-b46d-d7c5b409331a",
+			"id": "360844c3-db32-404e-b427-f13fec05914d",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "aa2fdfab-9d25-45de-b33d-d9e56bf8d387",
+			"id": "22851307-0c4c-4380-84a9-3943767db90e",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "62447e97-3c73-43af-bcc1-1086ea4dc4e9",
+			"id": "3c0c2364-764a-461f-8d8b-4a8e516d915b",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "d5605817-50de-4a35-86ce-d1cf142d04b1",
+			"id": "ad34f99d-9f7b-498d-8eec-19daa6c1a640",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "302145b3-70aa-4d87-8666-156610dae810",
+			"id": "f5933bec-61e4-4443-8125-ccd503ebf96e",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "43968c41-9c6a-47ef-a654-de73b07845df",
+			"id": "ec0338b9-e7a5-4c71-ae59-2f38afd50884",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "5f33b710-d174-40e6-920b-c9701ff62760",
+			"id": "001402d1-1be0-4aff-8b7e-1f4d38f77150",
 			"key": "access_token",
 			"value": ""
 		}
