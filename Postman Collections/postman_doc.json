@@ -9258,7 +9258,8 @@
 											"variable": [
 												{
 													"key": "id_alerta",
-													"value": ""
+													"value": "",
+													"description": "Integer (id_alerta) Identificador do alerta que será removido (inativado)"
 												}
 											]
 										}
@@ -9837,37 +9838,37 @@
 	],
 	"variable": [
 		{
-			"id": "2e29f742-8b13-4e96-b53c-459fd1cd47ff",
+			"id": "46d54911-5f01-4aee-9d11-6cc9f118b7db",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "922b994e-6ea8-4834-9226-f31e554c89fd",
+			"id": "933ad3ad-2099-4f7c-8633-391a08ece699",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "b002a2c3-8c2f-4505-999b-113b92573567",
+			"id": "f980bc60-0812-45d9-9632-1241f7c26e29",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "c83dcbd0-5858-4a5f-afd8-309da1086ccf",
+			"id": "d8406308-ecf9-4d38-8371-8ecc5a36d19d",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "e3b6a732-30d7-4213-a73a-41dfb248153b",
+			"id": "37413160-597d-4e41-bee5-a0b148a73bb1",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "4ebf62bf-598d-44d5-8f1b-a846f69d4ac6",
+			"id": "516e5ab9-81be-47f3-80ba-2a5cbf244de2",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "01d01c92-cc01-42e8-8662-f2b26b14d335",
+			"id": "c200ef3b-3e09-47cf-aca3-a7155fc78e2d",
 			"key": "access_token",
 			"value": ""
 		}
