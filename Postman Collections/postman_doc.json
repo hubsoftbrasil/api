@@ -9268,7 +9268,7 @@
 									"header": null,
 									"cookie": [],
 									"responseTime": null,
-									"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Contrato inativado com sucesso\",\r\n    \"cliente_servico_contrato\": {\r\n        \"id_cliente_servico_contrato\": 9308,\r\n        \"id_cliente_servico\": 18950,\r\n        \"id_contrato\": 77,\r\n        \"validade\": 12,\r\n        \"numero_contrato\": 6421,\r\n        \"id_empresa\": 14,\r\n        \"deleted_at_br\": \"04/08/2023 14:26:42\",\r\n        \"contrato\": {\r\n            \"id_contrato\": 77,\r\n            \"descricao\": \"-Ápice - Contrato Cliente Rádio\",\r\n            \"validade\": 12,\r\n            \"gera_multa\": false,\r\n            \"valor_multa\": null\r\n        },\r\n        \"empresa\": {\r\n            \"id_empresa\": 14,\r\n            \"display\": \"COMUNICAÇÕES LTDA (CNPJ: 24.605.227/0001-29)\"\r\n        },\r\n        \"cliente_servico\": {\r\n            \"id_cliente_servico\": 18950,\r\n            \"display\": \"(5) 1.5-MBPS-PROMOCIONAL-WIRELESS-2018/09 COELHO\",\r\n            \"cliente\": {\r\n                \"id_cliente\": 25246,\r\n                \"display\": \"(2082) BORGES SILVA\"\r\n            }\r\n        }\r\n    }\r\n}"
+									"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Alerta removido com sucesso!\",\r\n    \"alerta\": {\r\n        \"id_alerta\": 1,\r\n        \"descricao\": \"TESTE ALTERAÇÃO VIA API\",\r\n        \"atendimento\": true,\r\n        \"faturamento\": false,\r\n        \"arquivo_remessa\": false,\r\n        \"arquivo_retorno\": false,\r\n        \"nota_fiscal\": false,\r\n        \"id_usuario\": 915,\r\n        \"created_at\": \"2023-08-21 15:49:18\",\r\n        \"updated_at\": \"2023-08-21 16:44:26\",\r\n        \"parametros\": [],\r\n        \"visivel_via_api\": true,\r\n        \"deleted_at\": \"2023-08-21 16:44:26\",\r\n        \"data_inicio\": null,\r\n        \"data_fim\": null,\r\n        \"texto_alerta\": \"TESTE ALTERAÇÃO VIA API\\n\\n21/08/2023 15:49 - Usuário API\\n\",\r\n        \"data_cadastro_br\": \"21/08/2023 15:49\",\r\n        \"bairros\": [],\r\n        \"usuario\": {\r\n            \"id\": 1,\r\n            \"name\": \"Usuário API\"\r\n        }\r\n    }\r\n}"
 								}
 							]
 						}
@@ -9838,37 +9838,37 @@
 	],
 	"variable": [
 		{
-			"id": "46d54911-5f01-4aee-9d11-6cc9f118b7db",
+			"id": "9d35e17f-dac6-4f69-bf93-324f91a43cdb",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "933ad3ad-2099-4f7c-8633-391a08ece699",
+			"id": "ab93b45c-5638-47c8-af48-c4ada61fba4e",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "f980bc60-0812-45d9-9632-1241f7c26e29",
+			"id": "156620ca-07fd-4e30-9a8d-2173f26732c1",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "d8406308-ecf9-4d38-8371-8ecc5a36d19d",
+			"id": "d129da34-7c66-4923-89f7-fe1852ccb4a0",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "37413160-597d-4e41-bee5-a0b148a73bb1",
+			"id": "414b26b5-be11-4429-8094-d708c88fdd30",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "516e5ab9-81be-47f3-80ba-2a5cbf244de2",
+			"id": "69f25b04-33a7-47aa-bcb9-3765bac9c836",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "c200ef3b-3e09-47cf-aca3-a7155fc78e2d",
+			"id": "f32dc5cb-6e66-41d4-bc7a-488a0b98e451",
 			"key": "access_token",
 			"value": ""
 		}
