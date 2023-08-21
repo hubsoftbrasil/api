@@ -9268,7 +9268,7 @@
 									"header": null,
 									"cookie": [],
 									"responseTime": null,
-									"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Alerta removido com sucesso!\",\r\n    \"alerta\": {\r\n        \"id_alerta\": 1,\r\n        \"descricao\": \"TESTE ALTERAÇÃO VIA API\",\r\n        \"atendimento\": true,\r\n        \"faturamento\": false,\r\n        \"arquivo_remessa\": false,\r\n        \"arquivo_retorno\": false,\r\n        \"nota_fiscal\": false,\r\n        \"id_usuario\": 915,\r\n        \"created_at\": \"2023-08-21 15:49:18\",\r\n        \"updated_at\": \"2023-08-21 16:44:26\",\r\n        \"parametros\": [],\r\n        \"visivel_via_api\": true,\r\n        \"deleted_at\": \"2023-08-21 16:44:26\",\r\n        \"data_inicio\": null,\r\n        \"data_fim\": null,\r\n        \"texto_alerta\": \"TESTE ALTERAÇÃO VIA API\\n\\n21/08/2023 15:49 - Usuário API\\n\",\r\n        \"data_cadastro_br\": \"21/08/2023 15:49\",\r\n        \"bairros\": [],\r\n        \"usuario\": {\r\n            \"id\": 1,\r\n            \"name\": \"Usuário API\"\r\n        }\r\n    }\r\n}"
+									"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Alerta removido com sucesso!\",\r\n    \"alerta\": {\r\n        \"id_alerta\": 1,\r\n        \"descricao\": \"TESTE ALTERAÇÃO VIA API\",\r\n        \"atendimento\": true,\r\n        \"faturamento\": false,\r\n        \"arquivo_remessa\": false,\r\n        \"arquivo_retorno\": false,\r\n        \"nota_fiscal\": false,\r\n        \"id_usuario\": 915,\r\n        \"created_at\": \"2023-08-21 15:49:18\",\r\n        \"updated_at\": \"2023-08-21 16:44:26\",\r\n        \"parametros\": [],\r\n        \"visivel_via_api\": true,\r\n        \"deleted_at\": \"2023-08-21 16:44:26\",\r\n        \"data_inicio\": null,\r\n        \"data_fim\": null,\r\n        \"texto_alerta\": \"TESTE ALTERAÇÃO VIA API\\n\\n21/08/2023 15:49 - Usuário API\\n\",\r\n        \"data_cadastro_br\": \"21/08/2023 15:49\",\r\n        \"bairros\": [],\r\n        \"usuario\": {\r\n            \"name\": \"Usuário API\"\r\n        }\r\n    }\r\n}"
 								}
 							]
 						}
@@ -9838,37 +9838,37 @@
 	],
 	"variable": [
 		{
-			"id": "9d35e17f-dac6-4f69-bf93-324f91a43cdb",
+			"id": "e124b1ef-6f72-4d4a-b53a-c0a07a5f7396",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "ab93b45c-5638-47c8-af48-c4ada61fba4e",
+			"id": "ce081c30-319f-492d-80ab-5341d949e177",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "156620ca-07fd-4e30-9a8d-2173f26732c1",
+			"id": "51076e71-c8e1-46e6-8139-41e66ed5878c",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "d129da34-7c66-4923-89f7-fe1852ccb4a0",
+			"id": "9f4add80-588c-4f3d-b4e4-c7f823125caf",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "414b26b5-be11-4429-8094-d708c88fdd30",
+			"id": "47ec092c-8952-471b-a1b9-b14159c0c15a",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "69f25b04-33a7-47aa-bcb9-3765bac9c836",
+			"id": "98b98dfa-f59c-4a94-92cb-fbc26600943d",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "f32dc5cb-6e66-41d4-bc7a-488a0b98e451",
+			"id": "4d14c264-a200-442d-b2d9-22dce36ac6bc",
 			"key": "access_token",
 			"value": ""
 		}
