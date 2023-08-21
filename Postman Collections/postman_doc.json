@@ -3501,7 +3501,8 @@
 										}
 									}
 								},
-								"url": "{{url}}/api/v1/integracao/estoque/movimento_estoque/transferencia"
+								"url": "{{url}}/api/v1/integracao/estoque/movimento_estoque/transferencia",
+								"description": "**`POST`**\n\nNo endpoint de **Transferência entre Estoque**, será possível mover produtos de um local de estoque para outro.\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_local_estoque_origem | ID do Local de Estoque de Origem | Sim |\n| id_local_estoque_destino | ID do Local de Estoque de Destino | Sim |\n| produtos | Um objeto que contém os ID's dos produtos, quantidades e patrimônios a serem transferidos | Sim |"
 							},
 							"response": [
 								{
@@ -9732,37 +9733,37 @@
 	],
 	"variable": [
 		{
-			"id": "6641ca61-0eec-407b-a6bb-c2c7ac1aa6aa",
+			"id": "9424139f-823f-419e-9008-58945907247b",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "9ed303df-478d-4b27-89f5-f72eb5bccf8a",
+			"id": "ef25aa71-eb9d-40a9-b588-2aaf2159c472",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "776f9888-9081-4932-9c85-968c66318258",
+			"id": "97d49df6-52bc-4555-9e8d-732bdaacb8f5",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "fbcc0cf6-ce77-4504-952a-040e8df53efc",
+			"id": "11ad8503-4ed8-4989-bd46-c94f87fa7b0e",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "73ac6388-bf10-4cf7-bc3a-fc8aa4d996e6",
+			"id": "ed3bd460-8cef-43e1-beb7-d2873a5dce78",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "671f2cc4-20bd-43fe-a4e4-594e38f348c8",
+			"id": "addab6f0-f28b-4888-b91f-2f13bf6334b5",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "bdd348ff-9000-4590-bfd2-2d04358541c3",
+			"id": "511a242f-0143-4014-87af-a77126655b2e",
 			"key": "access_token",
 			"value": ""
 		}
