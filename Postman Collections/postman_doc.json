@@ -9025,7 +9025,7 @@
 									}
 								},
 								"url": "{{url}}/api/v1/integracao/configuracao/alerta",
-								"description": "**POST**\n\nNo método `POST`, será possível adicionar alertas e obter o retorno no formato `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| descricao | Descrição do alerta | Sim |\n| visivel_via_api | Indica se estará disponivel via API | Sim |\n| atendimento | Indica se o alerta estará disponivel na abertura de atendimentos | Sim |\n| cidade | Array de cidades (pode conter os bairros também) | Não |\n| grupo_cliente | Array de grupos de cliente | Não |\n| grupo_cliente_servico | Array de grupos de serviço | Não |\n| interface_conexao | Array de interfaces de conexão | Não |\n| servico_status | Array de status do serviço | Não |\n| caixa_optica | Array de caixas opticas | Não |\n| data_inicio | Data de início do alerta | Não |\n| data_fim | Data de fim do alerta | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| descrição | Campo Livre (Qualquer valor é aceito) | Nenhum |\n| visivel_via_api | Booleano (true/false) | Nenhum |\n| atendimento | Booleano (true/false) | Nenhum |\n| cidade | Array de objetos contendo (id_cidade) e opcionalmente um array de bairros (contendo o nome do bairro) | Nenhum |\n| grupo_cliente | Array de objetos contendo |  |\n\n**Observação: Se o parâmetro id_tipo_atendimento não for enviado, o atendimento será aberto com o tipo padrão SAC.**\n\nObservação 2: Veja que na abertura do atendimento existe a possibilidade de enviar parâmetros dinâmicos. Esses parâmetros todos serão armazendos juntamente com o atendimento . Por exemplo se a sua plataforma for um sistema Omnichannel (PBX, WhatsApp, Messenger, etc), você pode armazar o ID da Conversa/Chamada, Data de Início, Data de Término, Atendimento, etc. Quanto mais informações você envia para o HubSoft, mais completo ficará a visualização do atendimento."
+								"description": "**POST**\n\nNo método `POST`, será possível adicionar alertas e obter o retorno no formato `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| descricao | Descrição do alerta | Sim |\n| visivel_via_api | Indica se estará disponivel via API | Sim |\n| atendimento | Indica se o alerta estará disponivel na abertura de atendimentos | Sim |\n| cidade | Array de cidades (pode conter os bairros também) | Não |\n| grupo_cliente | Array de grupos de cliente | Não |\n| grupo_cliente_servico | Array de grupos de serviço | Não |\n| interface_conexao | Array de interfaces de conexão | Não |\n| servico_status | Array de status do serviço | Não |\n| caixa_optica | Array de caixas opticas | Não |\n| data_inicio | Data de início do alerta | Não |\n| data_fim | Data de fim do alerta | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| descrição | Campo Livre (Qualquer valor é aceito) | Nenhum |\n| visivel_via_api | Booleano (true/false) | Nenhum |\n| atendimento | Booleano (true/false) | Nenhum |\n| cidade | Array de objetos contendo (id_cidade) e opcionalmente um array de bairros (contendo o nome do bairro) | Nenhum |\n| grupo_cliente | Array de objetos contendo (id_grupo_cliente) | Nenhum |\n| grupo_cliente_servico | Array de objetos contendo (id) | Nenhum |\n| interface_conexao | Array de objetos contendo (id_interface_conexao) | Nenhum |\n| caixa_optica | Array de objetos contendo (id_caixa_optica) | Nenhum |\n| servico_status | Array de objetos contendo (id_servico_status) | Nenhum |\n| data_inicio | Date (YYYY-MM-DD) | Nenhum |\n| data_fim | Date (YYYY-MM-DD) | Nenhum |"
 							},
 							"response": [
 								{
@@ -9733,37 +9733,37 @@
 	],
 	"variable": [
 		{
-			"id": "6244a144-11fa-4202-819b-e0ef6d70ad47",
+			"id": "ee069035-d6e2-44fa-94db-6fce2a85cdc0",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "0287d55f-7b11-4add-a51f-8d9a3554a68a",
+			"id": "aa83b290-924e-41ed-8510-50ecfbcdf9da",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "ef031c8f-6b1b-41f3-af1f-7ebe8729b150",
+			"id": "e767a11e-f478-4bfd-9cfd-56e3c9edd824",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "fd0de268-2c60-4a76-a5f3-bbf4b3b5e681",
+			"id": "1ccdc964-6b0f-437c-a60d-9541783ccbdc",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "3d2a4076-c8b6-4ee4-b547-6fb020108c68",
+			"id": "cc826a2a-bd27-49b9-a048-fdc434516fbc",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "e5a1a597-ccc8-4582-8f3c-24afa6aeb03f",
+			"id": "c7ef6402-70e3-4d6c-922a-2c27a5aa69f7",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "bfd185ed-7b72-44c3-9122-925afd833bfe",
+			"id": "9cadf1dd-e60a-4ef9-ba68-8886253dee9e",
 			"key": "access_token",
 			"value": ""
 		}
