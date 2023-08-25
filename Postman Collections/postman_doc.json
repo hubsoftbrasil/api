@@ -9800,7 +9800,7 @@
 										"type": "text"
 									}
 								],
-								"url": "{{url}}/api/v1/integracao/configuracao/status_servico"
+								"url": "{{url}}/api/v1/integracao/configuracao/servico_status"
 							},
 							"_postman_previewlanguage": "json",
 							"header": [],
@@ -9838,37 +9838,37 @@
 	],
 	"variable": [
 		{
-			"id": "08643b33-96e5-4c40-8639-e292f0b3d8f4",
+			"id": "d6c85662-b7ee-4b16-b39c-8b2378f6c410",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "716db52a-d530-4eff-bbc2-053243dadd53",
+			"id": "e91bfe07-cea4-485a-ac30-2bd9ee503c9a",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "d71d3ba2-f8cf-43dc-9663-ff092ab7726b",
+			"id": "4d2428e0-40c6-4545-a0f6-dc31e85daa81",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "e049745e-8366-4613-ad99-e90b234620a9",
+			"id": "521acbf5-fc14-4fe5-a68c-a024f5af8bc0",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "726a3ead-243e-4a69-be98-38f333ee5858",
+			"id": "2255035e-d3d2-4f09-ba45-717aef883da2",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "5f05ca97-4ddf-4d98-b6c6-42d9e23ef4c0",
+			"id": "b80307a7-4707-4424-b67e-20669e43d504",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "bb79c86d-6669-41c8-896c-f54e5c28def3",
+			"id": "cb399808-2f2a-44e5-bb9a-4f5eda7819dc",
 			"key": "access_token",
 			"value": ""
 		}
