@@ -816,7 +816,7 @@
 									"originalRequest": {
 										"method": "GET",
 										"header": [],
-										"url": ""
+										"url": "{{url}}/api/v1/integracao/cliente/financeiro"
 									},
 									"_postman_previewlanguage": "json",
 									"header": null,
@@ -9838,37 +9838,37 @@
 	],
 	"variable": [
 		{
-			"id": "929d5cea-f044-4587-989b-ca6999236bdf",
+			"id": "b0140f82-6d05-4de9-8b40-c096461cc41c",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "9503d244-fc73-466d-977c-e185612fca63",
+			"id": "3511dd06-e801-4c66-9c1c-840c6b0acb81",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "a39e77d3-8c21-4272-a887-4383da87b5e9",
+			"id": "58600d51-ea6e-4bc7-b9a7-80cd5a1be6e6",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "d0a54e78-b13a-43c2-8ec4-5f297121c8f1",
+			"id": "58a090fc-47b6-4054-ac41-63eac4cd612f",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "5f5c7849-d2c4-4a13-b909-8ebac61f1def",
+			"id": "18a02be3-ec1a-4262-9011-aac045186d51",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "48df0633-4958-4711-bf16-1587c657a1c0",
+			"id": "0888a461-85af-48a1-9ede-778d2610eb6e",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "622b742d-a558-47ae-a97f-53372f167a3f",
+			"id": "12b70825-ee6a-4dd3-8ce8-7e04d13548e1",
 			"key": "access_token",
 			"value": ""
 		}
