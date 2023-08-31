@@ -822,7 +822,31 @@
 												"type": "text"
 											}
 										],
-										"url": "{{url}}/api/v1/integracao/cliente/financeiro"
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/cliente/financeiro?busca=cpf_cnpj&termo_busca=22549996054",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"cliente",
+												"financeiro"
+											],
+											"query": [
+												{
+													"key": "busca",
+													"value": "cpf_cnpj",
+													"type": "text"
+												},
+												{
+													"key": "termo_busca",
+													"value": "22549996054",
+													"type": "text"
+												}
+											]
+										}
 									},
 									"_postman_previewlanguage": "json",
 									"header": null,
@@ -9844,37 +9868,37 @@
 	],
 	"variable": [
 		{
-			"id": "44f488fa-4dc9-477b-8e8f-5851d59d8e23",
+			"id": "ae06b28c-7d0f-4d08-a5ea-c5d6c0ada82b",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "1b3d973a-1ce9-42c4-8cfd-0c901c7e0465",
+			"id": "b4e7679e-dd22-467d-8d18-14379d364a03",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "1c44faec-49eb-4aa9-977b-7ac1eda9c71a",
+			"id": "566e62bb-8472-4e10-bcd9-8d2c8bf0d4ab",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "c8b4e24f-cd22-4fbc-b1f3-9b0d5f20df8c",
+			"id": "0f89e7ad-d491-454a-85d5-65dfe5a0b044",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "e7c9346d-b19d-48a7-84b0-57b1e6bf49f9",
+			"id": "fb5e8cfb-371b-45be-8915-eb52e1ba36b0",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "0ae7108a-c319-4348-9c41-a498176cdd17",
+			"id": "b6de4305-bb2e-487b-9d28-24adbbbda609",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "4d5ef51b-3061-4c37-87b4-654e844bb406",
+			"id": "4ff0c994-6db8-4540-baa3-99503db395be",
 			"key": "access_token",
 			"value": ""
 		}
