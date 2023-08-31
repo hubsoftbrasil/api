@@ -815,7 +815,13 @@
 									"name": "Sucesso",
 									"originalRequest": {
 										"method": "GET",
-										"header": [],
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
 										"url": "{{url}}/api/v1/integracao/cliente/financeiro"
 									},
 									"_postman_previewlanguage": "json",
@@ -9838,37 +9844,37 @@
 	],
 	"variable": [
 		{
-			"id": "b0140f82-6d05-4de9-8b40-c096461cc41c",
+			"id": "44f488fa-4dc9-477b-8e8f-5851d59d8e23",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "3511dd06-e801-4c66-9c1c-840c6b0acb81",
+			"id": "1b3d973a-1ce9-42c4-8cfd-0c901c7e0465",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "58600d51-ea6e-4bc7-b9a7-80cd5a1be6e6",
+			"id": "1c44faec-49eb-4aa9-977b-7ac1eda9c71a",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "58a090fc-47b6-4054-ac41-63eac4cd612f",
+			"id": "c8b4e24f-cd22-4fbc-b1f3-9b0d5f20df8c",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "18a02be3-ec1a-4262-9011-aac045186d51",
+			"id": "e7c9346d-b19d-48a7-84b0-57b1e6bf49f9",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "0888a461-85af-48a1-9ede-778d2610eb6e",
+			"id": "0ae7108a-c319-4348-9c41-a498176cdd17",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "12b70825-ee6a-4dd3-8ce8-7e04d13548e1",
+			"id": "4d5ef51b-3061-4c37-87b4-654e844bb406",
 			"key": "access_token",
 			"value": ""
 		}
