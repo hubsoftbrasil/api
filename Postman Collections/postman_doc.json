@@ -9070,7 +9070,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"id_cliente_servico\": \"11000\",\n    \"descricao\": \"Abertura de atendimento de teste\",\n    \"nome\": \"Nome do Usuário Solicitante\",\n    \"telefone\": \"37999112233\",\n    \"email\": \"teste@teste.com.br\",\n    \"abrir_os\": true,\n    \"parametros\":{\n        \"id_ligacao\":\"1233882731973123\",\n        \"data_inicio\":\"20/12/2023 09:32:11\",\n        \"data_termino\":\"20/20/2023 09:37:21\",\n        \"atendimento\":\"João Silva\",\n        \"ramal\":\"12342\",\n        \"url_chamada\":\"https://meuservidorpbx.com.br/ligacao/1233882731973123.mp3\",\n        \"caminho_ura\":\"1000 -> 1003 -> 2000 -> 2001\"\n    }\n}",
+											"raw": "{\n  \"descricao\": \"ALERTA TESTE CADASTRO API\",\n  \"visivel_via_api\": true,\n  \"atendimento\": true,\n  \"cidade\": [\n    {\n      \"id_cidade\": 6976,\n      \"bairros\": [\n        {\n          \"nome\": \"TESTE\"\n        }\n      ]\n    }\n  ],\n  \"grupo_cliente\": [\n    {\n      \"id_grupo_cliente\": 46\n    }\n  ],\n  \"grupo_cliente_servico\": [\n    {\n      \"id\": 22\n    }\n  ],\n  \"interface_conexao\": [\n    {\n      \"id_interface_conexao\": 1478\n    }\n  ],\n  \"caixa_optica\": [\n    {\n      \"id_caixa_optica\": 1221\n    }\n  ],\n  \"servico_status\": [\n    {\n      \"id_servico_status\": 9\n    }\n  ],\n  \"data_inicio\": \"2023-08-09\",\n  \"data_fim\": \"2023-08-10\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -9866,37 +9866,37 @@
 	],
 	"variable": [
 		{
-			"id": "5d015d80-2061-4114-8351-f4b7a6c7d341",
+			"id": "3d37258b-58a9-48f9-95b8-f954cbcb2943",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "52bb8fda-e174-40a3-8b98-3799e2228608",
+			"id": "3f3ab6cf-56b2-4e25-8348-f8426108b47b",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "0e65638e-d662-46b3-8c28-36b2572d9b67",
+			"id": "38282b05-a76a-4eb4-b95f-2fc1fc80d60f",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "00486fc5-7fab-49cd-a4c0-67baf32b16c4",
+			"id": "09ceaca3-2cf9-4fc7-a746-bf3b8ae129a9",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "41537374-6f3f-41c2-8005-5a82307cd4fa",
+			"id": "cfee9c45-fa9e-4cf5-9d11-c10712f18bc5",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "7f60783d-92dc-4937-93c8-7ec08993707d",
+			"id": "d0bae23b-08b7-423e-80fe-4f061715ff61",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "a0220572-b40b-492f-be3e-445b7edcbad4",
+			"id": "842d6657-79a1-41f0-802c-220657d8aef0",
 			"key": "access_token",
 			"value": ""
 		}
