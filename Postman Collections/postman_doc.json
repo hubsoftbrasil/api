@@ -823,7 +823,7 @@
 											}
 										],
 										"url": {
-											"raw": "{{url}}/api/v1/integracao/cliente/financeiro?busca=cpf_cnpj&termo_busca=41107296617",
+											"raw": "{{url}}/api/v1/integracao/cliente/financeiro?busca=cpf_cnpj&termo_busca=0",
 											"host": [
 												"{{url}}"
 											],
@@ -841,7 +841,7 @@
 												},
 												{
 													"key": "termo_busca",
-													"value": "41107296617"
+													"value": "0"
 												}
 											]
 										}
@@ -9866,37 +9866,37 @@
 	],
 	"variable": [
 		{
-			"id": "920e3455-5b92-4c50-91f2-7beafb5a6238",
+			"id": "37521d46-ef42-4979-a690-edbebf71d6aa",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "7f4c000c-c7b7-4c3b-ad4c-85715be53fd2",
+			"id": "2a4ba558-153b-4adf-8d56-1576534c5460",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "4b06d493-34a7-4c43-8a89-fdadae1dc181",
+			"id": "2c32a5a0-0172-44d4-968b-8f8e7aabfabb",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "cddb2239-17b4-4fc4-8243-8635b5099044",
+			"id": "02f7d2eb-51fd-4947-949b-44eff9a8a59b",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "bc0ce7a8-f1c9-4ba0-9b39-5332ed0e64db",
+			"id": "9d3d7e5f-a791-432a-b72d-388d317903a2",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "6ee752b9-f343-4d80-8f61-29b3dca4f2e4",
+			"id": "b872e8d7-f5e4-4984-8008-3ab88a4e42a0",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "ae005ebf-c835-41cb-8542-f7ed824f61a6",
+			"id": "5b2e8866-7580-44ec-8cdf-948262818927",
 			"key": "access_token",
 			"value": ""
 		}
