@@ -1726,7 +1726,7 @@
 								}
 							]
 						},
-						"description": "No método `GET,` irá consultar os dados dos clientes e retornar um `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| busca | Tipo de busca que deseja fazer no cliente | Sim |\n| Inativo | buscar os clientes que tem o cadastro inativo | não |\n| termo_busca | Termo utilizado para fazer a busca | Sim |\n| limit | Limite de resultados | Não |\n| cancelado | Informa se deseja trazer os serviços cancelados ou não | Não |\n| ultima_conexao | Informa se deseja trazer os dados da última conexão | Não |\n| incluir_contrato | Informa se deseja incluir os contratos do serviço | Não |\n| servico_status | Filtro que ao ser preenchido irá trazer somente clientes que possuem planos com esse status | Não |\n| order_by | Campo que será utilizado para ordenação | Não |\n| order_type | Tipo de Ordenação | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| inativo | sim,não | Não |\n| busca | nome_razaosocial, nome_fantasia, cpf_cnpj, codigo_cliente, telefone, login_radius, ipv4, mac | Nenhum |\n| termo_busca | Campo livre (Qualquer valor será aceito) | Nenhum |\n| limit | Valor mínimo 1, Valor Máximo 100. | 5 |\n| cancelado | sim,nao | nao |\n| ultima_conexao | sim,nao | nao |\n| incluir_contrato | sim,nao | nao |\n| servico_status | `agendado_para_instalacao`  <br>`aguardando_assinatura_contrato`  <br>`aguardando_configuracao`  <br>`aguardando_instalacao`  <br>`aguardando_liberacao_ti`  <br>`aguardando_migracao`  <br>`cancelado`  <br>`franquia_excedida`  <br>`inativo`  <br>`servico_habilitado`  <br>`suspenso_debito`  <br>`suspenso_parcialmente`  <br>`suspenso_pedido_cliente` |  |\n| order_by | data_cadastro,data_fechamento | data_cadastro |\n| order_type | asc,desc | asc |\n\nAvisos:\n\n`IMPORTANTE`: Para trazer os dados da última autenticação, é necessário enviar o parâmetro `ultima_conexao`\\=sim. A última conexão utiliza como base o extrato de conexão do `RADIUS`, por isso, caso existam problemas na rede do provedor, essa informação poderá não ser 100% confiável, uma vez, que ela depende que o concentrador do provedor, informe ao servidor `RADIUS` o estado atual da conexão do cliente.\n\n`IMPORTANTE 2`: Para que o `HubSoft` consiga retornar os dados de coordenadas do endereço, é importante que o provedor tenha configurado em seus sistema, as credenciais de integração com o Google Maps API. O `HubSoft` irá verificar apenas os endereços de instalação, para fazer a atualização de coordenadas.\n\n`IMPORTANTE 3`: O provedor poderá cadastrar os alertas, que serão retornados aqui na `API`, pelos atributos alerta e `alerta_mensagens`. Esses alertas, podem ser utilizados pelo software que está consumindo a `API`, para enviar uma mensagem automática em um `BOT` para o cliente, ou soltar um áudio customizado no PBX, quando o cliente ligar, ou ainda exibir o cliente de uma cor diferente no mapa. As possibilidades são muitas e vão depender exclusivamente da criatividade do integrador. A equipe do `HubSoft` estará sempre a disposição para ajudar os desenvolvedores em suas integrações conosco :)"
+						"description": "No método `GET,` irá consultar os dados dos clientes e retornar um `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| busca | Tipo de busca que deseja fazer no cliente | Sim |\n| Inativo | buscar os clientes que tem o cadastro inativo | não |\n| termo_busca | Termo utilizado para fazer a busca | Sim |\n| limit | Limite de resultados | Não |\n| cancelado | Informa se deseja trazer os serviços cancelados ou não | Não |\n| ultima_conexao | Informa se deseja trazer os dados da última conexão | Não |\n| incluir_alarmes | Informa se deseja incluir os alarmes de conexão do serviço | Não |\n| incluir_contrato | Informa se deseja incluir os contratos do serviço | Não |\n| servico_status | Filtro que ao ser preenchido irá trazer somente clientes que possuem planos com esse status | Não |\n| order_by | Campo que será utilizado para ordenação | Não |\n| order_type | Tipo de Ordenação | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| inativo | sim,não | Não |\n| busca | nome_razaosocial, nome_fantasia, cpf_cnpj, codigo_cliente, telefone, login_radius, ipv4, mac | Nenhum |\n| termo_busca | Campo livre (Qualquer valor será aceito) | Nenhum |\n| limit | Valor mínimo 1, Valor Máximo 100. | 5 |\n| cancelado | sim,nao | nao |\n| ultima_conexao | sim,nao | nao |\n| incluir_alarmes | sim,nao | nao |\n| incluir_contrato | sim,nao | nao |\n| servico_status | `agendado_para_instalacao`  <br>`aguardando_assinatura_contrato`  <br>`aguardando_configuracao`  <br>`aguardando_instalacao`  <br>`aguardando_liberacao_ti`  <br>`aguardando_migracao`  <br>`cancelado`  <br>`franquia_excedida`  <br>`inativo`  <br>`servico_habilitado`  <br>`suspenso_debito`  <br>`suspenso_parcialmente`  <br>`suspenso_pedido_cliente` |  |\n| order_by | data_cadastro,data_fechamento | data_cadastro |\n| order_type | asc,desc | asc |\n\nAvisos:\n\n`IMPORTANTE`: Para trazer os dados da última autenticação, é necessário enviar o parâmetro `ultima_conexao`\\=sim. A última conexão utiliza como base o extrato de conexão do `RADIUS`, por isso, caso existam problemas na rede do provedor, essa informação poderá não ser 100% confiável, uma vez, que ela depende que o concentrador do provedor, informe ao servidor `RADIUS` o estado atual da conexão do cliente.\n\n`IMPORTANTE 2`: Para que o `HubSoft` consiga retornar os dados de coordenadas do endereço, é importante que o provedor tenha configurado em seus sistema, as credenciais de integração com o Google Maps API. O `HubSoft` irá verificar apenas os endereços de instalação, para fazer a atualização de coordenadas.\n\n`IMPORTANTE 3`: O provedor poderá cadastrar os alertas, que serão retornados aqui na `API`, pelos atributos alerta e `alerta_mensagens`. Esses alertas, podem ser utilizados pelo software que está consumindo a `API`, para enviar uma mensagem automática em um `BOT` para o cliente, ou soltar um áudio customizado no PBX, quando o cliente ligar, ou ainda exibir o cliente de uma cor diferente no mapa. As possibilidades são muitas e vão depender exclusivamente da criatividade do integrador. A equipe do `HubSoft` estará sempre a disposição para ajudar os desenvolvedores em suas integrações conosco :)"
 					},
 					"response": [
 						{
@@ -9872,37 +9872,37 @@
 	],
 	"variable": [
 		{
-			"id": "ce7c6a65-ca9e-43ce-a1b3-a63425298bd5",
+			"id": "3aecc1bb-7eaa-49f0-a27c-ff02808e1414",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "fd947c71-09e5-410c-a4f2-e85ff25de522",
+			"id": "d044fcc2-0a36-4da3-a6a3-0b2ba4578b6b",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "ecc8bfcc-6acc-495b-bace-378dc8540668",
+			"id": "a573a29b-6a05-41f9-9a68-653ba4ed958b",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "e3cffbd4-a4ea-48b7-8eb5-c4d935509158",
+			"id": "6d27bf34-f7ea-4a18-b6ca-47ab7387a55e",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "bae66ac0-a049-450f-931f-bf154749a52f",
+			"id": "73cac2ec-8d36-444b-b814-9d9d91810fe2",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "0f98bb2c-3b37-4911-9271-33c27653ad9e",
+			"id": "11271456-6693-4055-8dd4-6dc8d77c85ae",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "0d32df09-c1ae-4412-937a-268c2af8d3e1",
+			"id": "f346c32e-7a45-4247-ab7c-4671540f5e7c",
 			"key": "access_token",
 			"value": ""
 		}
