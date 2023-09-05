@@ -1657,7 +1657,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{url}}/api/v1/integracao/cliente?busca=&termo_busca=&inativo=&limit=&cancelado=&ultima_conexao=&incluir_contrato=&servico_status&order_by=&order_type=",
+							"raw": "{{url}}/api/v1/integracao/cliente?busca=&termo_busca=&inativo=&limit=&cancelado=&ultima_conexao=&incluir_alarmes&incluir_contrato=&servico_status&order_by=&order_type=",
 							"host": [
 								"{{url}}"
 							],
@@ -1699,13 +1699,19 @@
 									"description": "(Opcional) Informa se deseja trazer os dados da última conexão. Valor Aceitos: sim,nao"
 								},
 								{
+									"key": "incluir_alarmes",
+									"value": null,
+									"description": "(Opcional) Informa se deseja incluir os alarmes de conexão do serviço",
+									"type": "text"
+								},
+								{
 									"key": "incluir_contrato",
 									"value": "",
 									"description": "(Opcional) Informa se deseja incluir os contratos do serviço"
 								},
 								{
 									"key": "servico_status",
-									"value": "",
+									"value": null,
 									"description": "(Opcional) Filtro que ao ser preenchido irá trazer somente clientes que possuem planos com esse status"
 								},
 								{
@@ -9866,37 +9872,37 @@
 	],
 	"variable": [
 		{
-			"id": "55a2a047-bbb7-4678-8cb9-33c692e4aafd",
+			"id": "ce7c6a65-ca9e-43ce-a1b3-a63425298bd5",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "751e21eb-92fa-4298-bf6f-db747394db94",
+			"id": "fd947c71-09e5-410c-a4f2-e85ff25de522",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "4640742a-f00f-499d-a659-8e57dd2e8aa2",
+			"id": "ecc8bfcc-6acc-495b-bace-378dc8540668",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "86e55a08-9840-4aaa-a81b-b9400a3e1f81",
+			"id": "e3cffbd4-a4ea-48b7-8eb5-c4d935509158",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "802d2b9b-99f8-44e6-bd67-03538368cabb",
+			"id": "bae66ac0-a049-450f-931f-bf154749a52f",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "eaade646-75ed-4e04-97c9-f5bf80981674",
+			"id": "0f98bb2c-3b37-4911-9271-33c27653ad9e",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "410eb8d5-8fc7-4b2d-b8d6-6a8099cb3eab",
+			"id": "0d32df09-c1ae-4412-937a-268c2af8d3e1",
 			"key": "access_token",
 			"value": ""
 		}
