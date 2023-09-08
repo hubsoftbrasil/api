@@ -9860,7 +9860,7 @@
 							}
 						],
 						"url": "{{url}}/api/v1/integracao/configuracao/vencimento",
-						"description": "Através desse `endpoint` será possível consultar os vendedores que estão cadastrados e ativos no sistema.\n\n`OBSERVAÇÃO`: O uso dessa API será muito útil para complementar a API de Adicionar Prospecto, onde se faz necessário enviar obrigatóriamente o ID do Vendedor caso esteja configurado como obrigatório no formulário de Prospecto do provedor."
+						"description": "Através desse `endpoint` será possível consultar os vencimentos que estão cadastrados e ativos no sistema.\n\n`OBSERVAÇÃO`: O uso dessa API será muito útil para complementar a API de Adicionar Prospecto, onde se faz necessário enviar obrigatóriamente o ID do Vencimento caso esteja configurado como obrigatório no formulário de Prospecto do provedor."
 					},
 					"response": [
 						{
@@ -9954,37 +9954,37 @@
 	],
 	"variable": [
 		{
-			"id": "c1e8a9f7-0bd1-4d90-8047-d4922968dfc5",
+			"id": "f18429b5-77ef-4b17-9d12-39e6b01e64d1",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "293f35b4-df18-448e-91e8-40c93fa5fb92",
+			"id": "b7c1d1fb-8670-414c-9c07-ab05a168a49b",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "c5af38e5-47ca-4c0e-ad30-0804123c6bd9",
+			"id": "d765d7c9-3eba-4e5a-a848-0b660038b537",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "0f868c78-5df2-445e-b4da-4601a53acfef",
+			"id": "4de21bf2-32ec-40c3-b187-cea0a804a99b",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "8491f241-d88a-4865-aa45-9bd8fbf1e5db",
+			"id": "ba709169-d317-441c-9411-f8610ca08b18",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "338d405e-ca1e-49d4-acb9-ee17af59f5cb",
+			"id": "bdf8e4f5-4a20-4dec-a2f4-65aaa8b0b05f",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "470466c8-9abc-4283-bdba-c2e5097005dd",
+			"id": "6fbc4e2f-f5b1-4c68-b08f-1fa0d41b8d72",
 			"key": "access_token",
 			"value": ""
 		}
