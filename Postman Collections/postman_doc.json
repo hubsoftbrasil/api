@@ -9875,13 +9875,13 @@
 										"type": "text"
 									}
 								],
-								"url": "{{url}}/api/v1/integracao/configuracao/empresa"
+								"url": "{{url}}/api/v1/integracao/configuracao/vendedor"
 							},
 							"_postman_previewlanguage": "json",
 							"header": null,
 							"cookie": [],
 							"responseTime": null,
-							"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Empresas consultados com sucesso\",\r\n    \"empresas\": [\r\n        {\r\n            \"id_empresa\": 37,\r\n            \"nome_razaosocial\": \"HUBSOFT BRASIL LTDA\",\r\n            \"cnpj\": \"29507487000185\",\r\n            \"display\": \"HUBSOFT BRASIL LTDA (CNPJ: 29.507.487/0001-85)\"\r\n        }\r\n    ]\r\n}"
+							"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Vendedores consultados com sucesso\",\r\n    \"vendedores\": [\r\n        {\r\n            \"id\": 7603,\r\n            \"name\": \"(Suporte Hubsoft) Ana Julia\"\r\n        },\r\n        {\r\n            \"id\": 1146,\r\n            \"name\": \"(Suporte Hubsoft) Giovanna Oliveira\"\r\n        },\r\n        {\r\n            \"id\": 7806,\r\n            \"name\": \"(Suporte Hubsoft) Marcelo Araújo\"\r\n        },\r\n        {\r\n            \"id\": 7811,\r\n            \"name\": \"Alexsander\"\r\n        },\r\n        {\r\n            \"id\": 5271,\r\n            \"name\": \"André Junior\"\r\n        },\r\n        {\r\n            \"id\": 4808,\r\n            \"name\": \"André Lehrbach \"\r\n        },\r\n        {\r\n            \"id\": 4806,\r\n            \"name\": \"Andressa \"\r\n        },\r\n        {\r\n            \"id\": 4801,\r\n            \"name\": \"Andressa Vargas\"\r\n        },\r\n        {\r\n            \"id\": 4866,\r\n            \"name\": \"Caíque\"\r\n        },\r\n        {\r\n            \"id\": 4817,\r\n            \"name\": \"Calor Xavier\"\r\n        },\r\n        {\r\n            \"id\": 7805,\r\n            \"name\": \"Camila Melo\"\r\n        },\r\n        {\r\n            \"id\": 4852,\r\n            \"name\": \"Carline \"\r\n        },\r\n        {\r\n            \"id\": 4856,\r\n            \"name\": \"Claudia Maria Moura \"\r\n        },\r\n        {\r\n            \"id\": 4846,\r\n            \"name\": \"Cleyton \"\r\n        },\r\n        {\r\n            \"id\": 4704,\r\n            \"name\": \"Clodoaldo \"\r\n        },\r\n        {\r\n            \"id\": 4837,\r\n            \"name\": \"Dayane Moura \"\r\n        },\r\n        {\r\n            \"id\": 4865,\r\n            \"name\": \"Edemar \"\r\n        },\r\n        {\r\n            \"id\": 4816,\r\n            \"name\": \"Edilson\"\r\n        },\r\n        {\r\n            \"id\": 4842,\r\n            \"name\": \"Emerson Soares \"\r\n        },\r\n        {\r\n            \"id\": 4809,\r\n            \"name\": \"Ezequiel\"\r\n        },\r\n        {\r\n            \"id\": 4824,\r\n            \"name\": \"Fabiano \"\r\n        },\r\n        {\r\n            \"id\": 4811,\r\n            \"name\": \"Frank \"\r\n        },\r\n        {\r\n            \"id\": 5236,\r\n            \"name\": \"Gabriel\"\r\n        },\r\n        {\r\n            \"id\": 4828,\r\n            \"name\": \"Gabriel Alves \"\r\n        },\r\n        {\r\n            \"id\": 5210,\r\n            \"name\": \"Geraldo1\"\r\n        },\r\n        {\r\n            \"id\": 4843,\r\n            \"name\": \"Gilson Junior \"\r\n        },\r\n        {\r\n            \"id\": 4867,\r\n            \"name\": \"Guilherme Leão\"\r\n        },\r\n        {\r\n            \"id\": 4818,\r\n            \"name\": \"Hebert\"\r\n        },\r\n        {\r\n            \"id\": 4820,\r\n            \"name\": \"Hicaro Zinatto \"\r\n        },\r\n        {\r\n            \"id\": 4847,\r\n            \"name\": \"Hugo Silveira \"\r\n        },\r\n        {\r\n            \"id\": 7810,\r\n            \"name\": \"Jaís Oliveira\"\r\n        },\r\n        {\r\n            \"id\": 4829,\r\n            \"name\": \"Janete \"\r\n        },\r\n        {\r\n            \"id\": 4853,\r\n            \"name\": \"Jonathan \"\r\n        },\r\n        {\r\n            \"id\": 4851,\r\n            \"name\": \"José\"\r\n        },\r\n        {\r\n            \"id\": 4861,\r\n            \"name\": \"KAIQUE\"\r\n        },\r\n        {\r\n            \"id\": 4849,\r\n            \"name\": \"Kleber \"\r\n        },\r\n        {\r\n            \"id\": 4884,\r\n            \"name\": \"Ligia\"\r\n        },\r\n        {\r\n            \"id\": 4825,\r\n            \"name\": \"Luã Gama\"\r\n        },\r\n        {\r\n            \"id\": 4864,\r\n            \"name\": \"Lucas \"\r\n        },\r\n        {\r\n            \"id\": 4703,\r\n            \"name\": \"Luiz Coelho \"\r\n        },\r\n        {\r\n            \"id\": 4860,\r\n            \"name\": \"Marcos\"\r\n        },\r\n        {\r\n            \"id\": 4869,\r\n            \"name\": \"Marcos Lins \"\r\n        },\r\n        {\r\n            \"id\": 4812,\r\n            \"name\": \"Maria Eduarda\"\r\n        },\r\n        {\r\n            \"id\": 4815,\r\n            \"name\": \"Maria Gorete \"\r\n        },\r\n        {\r\n            \"id\": 7809,\r\n            \"name\": \"Mariana Oliveira\"\r\n        },\r\n        {\r\n            \"id\": 4834,\r\n            \"name\": \"Mário Elmer \"\r\n        },\r\n        {\r\n            \"id\": 5247,\r\n            \"name\": \"Mauro Filho\"\r\n        },\r\n        {\r\n            \"id\": 7601,\r\n            \"name\": \"Otavio Couto\"\r\n        },\r\n        {\r\n            \"id\": 5244,\r\n            \"name\": \"Paulo Renato\"\r\n        },\r\n        {\r\n            \"id\": 392,\r\n            \"name\": \"Paulo Rinco\"\r\n        },\r\n        {\r\n            \"id\": 4848,\r\n            \"name\": \"Ramos\"\r\n        },\r\n        {\r\n            \"id\": 4831,\r\n            \"name\": \"Samuel José \"\r\n        },\r\n        {\r\n            \"id\": 5228,\r\n            \"name\": \"Sara Borges \"\r\n        },\r\n        {\r\n            \"id\": 4859,\r\n            \"name\": \"Silas Aquino\"\r\n        },\r\n        {\r\n            \"id\": 4857,\r\n            \"name\": \"Vanderlei \"\r\n        },\r\n        {\r\n            \"id\": 4840,\r\n            \"name\": \"Weslley \"\r\n        }\r\n    ]\r\n}"
 						}
 					]
 				}
@@ -9913,37 +9913,37 @@
 	],
 	"variable": [
 		{
-			"id": "6b2316c6-3c05-4f19-a7c9-0d2b54318078",
+			"id": "ce702768-8d3c-47cf-bb57-05d9f6a97d86",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "272e234b-594a-4fb4-b9a6-08ff2386732e",
+			"id": "83146a60-46fe-4ab9-806d-08ddb1f8d111",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "c14fe72f-c0eb-41c8-bfc1-446cdcdbfdcd",
+			"id": "7b5b7b33-8a19-4119-b7de-0bf5e23cc6ff",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "a95d5846-b150-4902-845c-3976ed4d4d10",
+			"id": "3872a5ac-9705-4ff7-9f80-cdf28a2abb79",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "2f8ccb46-461f-44b9-b81c-41f3999add1b",
+			"id": "fc0f711b-79a1-468e-9bf9-df8b7113219a",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "c1318cb5-e5a8-4c3c-9aaf-fea588053185",
+			"id": "3637b163-b985-4208-82ae-d806e7a5a2bc",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "065fedb5-17f2-4e64-8dac-2eefc368c2be",
+			"id": "7475aa90-fc69-4359-b2d6-b89f0bbce954",
 			"key": "access_token",
 			"value": ""
 		}
