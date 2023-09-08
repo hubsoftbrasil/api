@@ -9859,7 +9859,7 @@
 								"description": "Bearer Token obtido na autenticação"
 							}
 						],
-						"url": "{{url}}/api/v1/integracao/configuracao/vendedor",
+						"url": "{{url}}/api/v1/integracao/configuracao/vencimento",
 						"description": "Através desse `endpoint` será possível consultar os vendedores que estão cadastrados e ativos no sistema.\n\n`OBSERVAÇÃO`: O uso dessa API será muito útil para complementar a API de Adicionar Prospecto, onde se faz necessário enviar obrigatóriamente o ID do Vendedor caso esteja configurado como obrigatório no formulário de Prospecto do provedor."
 					},
 					"response": [
@@ -9954,37 +9954,37 @@
 	],
 	"variable": [
 		{
-			"id": "803282a4-bec7-4dd1-b9ee-74b41d99f09a",
+			"id": "c1e8a9f7-0bd1-4d90-8047-d4922968dfc5",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "15a3b95f-6861-4e6b-bd12-d1c0cde89c94",
+			"id": "293f35b4-df18-448e-91e8-40c93fa5fb92",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "ac691715-6674-4337-92cf-d1a39274a6cc",
+			"id": "c5af38e5-47ca-4c0e-ad30-0804123c6bd9",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "f314457e-02de-46b1-81f5-4304159f7901",
+			"id": "0f868c78-5df2-445e-b4da-4601a53acfef",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "2f519849-00ae-4665-aae7-83fbe92caeb2",
+			"id": "8491f241-d88a-4865-aa45-9bd8fbf1e5db",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "6f21a03d-2907-42c6-a00b-5db03a04f5dd",
+			"id": "338d405e-ca1e-49d4-acb9-ee17af59f5cb",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "1901fe8c-6b9b-4806-aeb6-a82c0108f6aa",
+			"id": "470466c8-9abc-4283-bdba-c2e5097005dd",
 			"key": "access_token",
 			"value": ""
 		}
