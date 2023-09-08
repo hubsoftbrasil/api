@@ -9875,13 +9875,13 @@
 										"type": "text"
 									}
 								],
-								"url": "{{url}}/api/v1/integracao/configuracao/vendedor"
+								"url": "{{url}}/api/v1/integracao/configuracao/vencimento"
 							},
 							"_postman_previewlanguage": "json",
 							"header": null,
 							"cookie": [],
 							"responseTime": null,
-							"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Vendedores consultados com sucesso\",\r\n    \"vendedores\": [\r\n        {\r\n            \"id\": 7603,\r\n            \"name\": \"(Suporte Hubsoft) Ana Julia\"\r\n        },\r\n        {\r\n            \"id\": 1146,\r\n            \"name\": \"(Suporte Hubsoft) Giovanna Oliveira\"\r\n        },\r\n        {\r\n            \"id\": 7806,\r\n            \"name\": \"(Suporte Hubsoft) Marcelo Araújo\"\r\n        },\r\n        {\r\n            \"id\": 7811,\r\n            \"name\": \"Alexsander\"\r\n        },\r\n        {\r\n            \"id\": 5271,\r\n            \"name\": \"André Junior\"\r\n        },\r\n        {\r\n            \"id\": 4808,\r\n            \"name\": \"André Lehrbach \"\r\n        },\r\n        {\r\n            \"id\": 4806,\r\n            \"name\": \"Andressa \"\r\n        },\r\n        {\r\n            \"id\": 4801,\r\n            \"name\": \"Andressa Vargas\"\r\n        },\r\n        {\r\n            \"id\": 4866,\r\n            \"name\": \"Caíque\"\r\n        },\r\n        {\r\n            \"id\": 4817,\r\n            \"name\": \"Calor Xavier\"\r\n        },\r\n        {\r\n            \"id\": 7805,\r\n            \"name\": \"Camila Melo\"\r\n        },\r\n        {\r\n            \"id\": 4852,\r\n            \"name\": \"Carline \"\r\n        },\r\n        {\r\n            \"id\": 4856,\r\n            \"name\": \"Claudia Maria Moura \"\r\n        },\r\n        {\r\n            \"id\": 4846,\r\n            \"name\": \"Cleyton \"\r\n        },\r\n        {\r\n            \"id\": 4704,\r\n            \"name\": \"Clodoaldo \"\r\n        },\r\n        {\r\n            \"id\": 4837,\r\n            \"name\": \"Dayane Moura \"\r\n        },\r\n        {\r\n            \"id\": 4865,\r\n            \"name\": \"Edemar \"\r\n        },\r\n        {\r\n            \"id\": 4816,\r\n            \"name\": \"Edilson\"\r\n        },\r\n        {\r\n            \"id\": 4842,\r\n            \"name\": \"Emerson Soares \"\r\n        },\r\n        {\r\n            \"id\": 4809,\r\n            \"name\": \"Ezequiel\"\r\n        },\r\n        {\r\n            \"id\": 4824,\r\n            \"name\": \"Fabiano \"\r\n        },\r\n        {\r\n            \"id\": 4811,\r\n            \"name\": \"Frank \"\r\n        },\r\n        {\r\n            \"id\": 5236,\r\n            \"name\": \"Gabriel\"\r\n        },\r\n        {\r\n            \"id\": 4828,\r\n            \"name\": \"Gabriel Alves \"\r\n        },\r\n        {\r\n            \"id\": 5210,\r\n            \"name\": \"Geraldo1\"\r\n        },\r\n        {\r\n            \"id\": 4843,\r\n            \"name\": \"Gilson Junior \"\r\n        },\r\n        {\r\n            \"id\": 4867,\r\n            \"name\": \"Guilherme Leão\"\r\n        },\r\n        {\r\n            \"id\": 4818,\r\n            \"name\": \"Hebert\"\r\n        },\r\n        {\r\n            \"id\": 4820,\r\n            \"name\": \"Hicaro Zinatto \"\r\n        },\r\n        {\r\n            \"id\": 4847,\r\n            \"name\": \"Hugo Silveira \"\r\n        },\r\n        {\r\n            \"id\": 7810,\r\n            \"name\": \"Jaís Oliveira\"\r\n        },\r\n        {\r\n            \"id\": 4829,\r\n            \"name\": \"Janete \"\r\n        },\r\n        {\r\n            \"id\": 4853,\r\n            \"name\": \"Jonathan \"\r\n        },\r\n        {\r\n            \"id\": 4851,\r\n            \"name\": \"José\"\r\n        },\r\n        {\r\n            \"id\": 4861,\r\n            \"name\": \"KAIQUE\"\r\n        },\r\n        {\r\n            \"id\": 4849,\r\n            \"name\": \"Kleber \"\r\n        },\r\n        {\r\n            \"id\": 4884,\r\n            \"name\": \"Ligia\"\r\n        },\r\n        {\r\n            \"id\": 4825,\r\n            \"name\": \"Luã Gama\"\r\n        },\r\n        {\r\n            \"id\": 4864,\r\n            \"name\": \"Lucas \"\r\n        },\r\n        {\r\n            \"id\": 4703,\r\n            \"name\": \"Luiz Coelho \"\r\n        },\r\n        {\r\n            \"id\": 4860,\r\n            \"name\": \"Marcos\"\r\n        },\r\n        {\r\n            \"id\": 4869,\r\n            \"name\": \"Marcos Lins \"\r\n        },\r\n        {\r\n            \"id\": 4812,\r\n            \"name\": \"Maria Eduarda\"\r\n        },\r\n        {\r\n            \"id\": 4815,\r\n            \"name\": \"Maria Gorete \"\r\n        },\r\n        {\r\n            \"id\": 7809,\r\n            \"name\": \"Mariana Oliveira\"\r\n        },\r\n        {\r\n            \"id\": 4834,\r\n            \"name\": \"Mário Elmer \"\r\n        },\r\n        {\r\n            \"id\": 5247,\r\n            \"name\": \"Mauro Filho\"\r\n        },\r\n        {\r\n            \"id\": 7601,\r\n            \"name\": \"Otavio Couto\"\r\n        },\r\n        {\r\n            \"id\": 5244,\r\n            \"name\": \"Paulo Renato\"\r\n        },\r\n        {\r\n            \"id\": 392,\r\n            \"name\": \"Paulo Rinco\"\r\n        },\r\n        {\r\n            \"id\": 4848,\r\n            \"name\": \"Ramos\"\r\n        },\r\n        {\r\n            \"id\": 4831,\r\n            \"name\": \"Samuel José \"\r\n        },\r\n        {\r\n            \"id\": 5228,\r\n            \"name\": \"Sara Borges \"\r\n        },\r\n        {\r\n            \"id\": 4859,\r\n            \"name\": \"Silas Aquino\"\r\n        },\r\n        {\r\n            \"id\": 4857,\r\n            \"name\": \"Vanderlei \"\r\n        },\r\n        {\r\n            \"id\": 4840,\r\n            \"name\": \"Weslley \"\r\n        }\r\n    ]\r\n}"
+							"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Vencimentos consultados com sucesso\",\r\n    \"vencimentos\": [\r\n        {\r\n            \"id_vencimento\": 22,\r\n            \"dia_vencimento\": 1\r\n        },\r\n        {\r\n            \"id_vencimento\": 61,\r\n            \"dia_vencimento\": 10\r\n        },\r\n        {\r\n            \"id_vencimento\": 63,\r\n            \"dia_vencimento\": 15\r\n        },\r\n        {\r\n            \"id_vencimento\": 3,\r\n            \"dia_vencimento\": 20\r\n        },\r\n        {\r\n            \"id_vencimento\": 168,\r\n            \"dia_vencimento\": 21\r\n        },\r\n        {\r\n            \"id_vencimento\": 62,\r\n            \"dia_vencimento\": 22\r\n        },\r\n        {\r\n            \"id_vencimento\": 5,\r\n            \"dia_vencimento\": 23\r\n        },\r\n        {\r\n            \"id_vencimento\": 4,\r\n            \"dia_vencimento\": 25\r\n        },\r\n        {\r\n            \"id_vencimento\": 85,\r\n            \"dia_vencimento\": 26\r\n        },\r\n        {\r\n            \"id_vencimento\": 7,\r\n            \"dia_vencimento\": \"ultimo_dia\"\r\n        }\r\n    ]\r\n}"
 						}
 					]
 				},
@@ -9954,37 +9954,37 @@
 	],
 	"variable": [
 		{
-			"id": "f18429b5-77ef-4b17-9d12-39e6b01e64d1",
+			"id": "e394c213-2576-4d12-b672-309440a37a3b",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "b7c1d1fb-8670-414c-9c07-ab05a168a49b",
+			"id": "c254bba0-a751-41cf-958f-651dc3e528e2",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "d765d7c9-3eba-4e5a-a848-0b660038b537",
+			"id": "afb9c554-8518-428d-9a4b-ce48dfac5a33",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "4de21bf2-32ec-40c3-b187-cea0a804a99b",
+			"id": "a89e5b8b-c289-4cb8-9bdc-14a5252b476d",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "ba709169-d317-441c-9411-f8610ca08b18",
+			"id": "5416e443-ab81-4542-a6ec-0df4304d7716",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "bdf8e4f5-4a20-4dec-a2f4-65aaa8b0b05f",
+			"id": "1307e17e-2c3c-4796-bd07-3d13cd6595e7",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "6fbc4e2f-f5b1-4c68-b08f-1fa0d41b8d72",
+			"id": "3adf9873-7e72-42a1-8fcf-a29dbd3bb392",
 			"key": "access_token",
 			"value": ""
 		}
