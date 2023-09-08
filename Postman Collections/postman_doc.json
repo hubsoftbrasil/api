@@ -9434,6 +9434,100 @@
 					]
 				},
 				{
+					"name": "Grupo de Cliente",
+					"id": "3dcd8365-106b-40b5-b9e8-1dfd0cdc9367",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{access_token}}",
+								"description": "Bearer Token obtido na autenticação"
+							}
+						],
+						"url": "{{url}}/api/v1/integracao/configuracao/grupo_cliente",
+						"description": "No método `GET`, irá consultar os dados de grupos de cliente e irá retornar um `JSON` como resposta."
+					},
+					"response": [
+						{
+							"id": "c1fa53c4-0813-4dd8-862d-15678a573fad",
+							"name": "Sucesso",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/api/v1/integracao/configuracao/grupo_cliente"
+							},
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Dados consultados com sucesso.\",\n    \"grupo_cliente\": [\n        {\n            \"id_grupo_cliente\": 1,\n            \"display\": \"Clientes Empresariais\",\n            \"ativo\": true\n        },\n        {\n            \"id_grupo_cliente\": 2,\n            \"display\": \"Clientes Residenciais\",\n            \"ativo\": true\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Grupo de Serviço",
+					"id": "367f6404-1afb-41c3-bb3e-632df9d3fbf3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{access_token}}",
+								"description": "Bearer Token obtido na autenticação"
+							}
+						],
+						"url": "{{url}}/api/v1/integracao/configuracao/grupo_cliente_servico",
+						"description": "No método `GET`, irá consultar os dados de grupos de serviço e irá retornar um `JSON` como resposta."
+					},
+					"response": [
+						{
+							"id": "1c09a88c-cb30-48b3-9bdb-474980ed4125",
+							"name": "Sucesso",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/api/v1/integracao/configuracao/grupo_cliente_servico"
+							},
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Dados consultados com sucesso.\",\n    \"grupo_cliente_servico\": [\n        {\n            \"id\": 1,\n            \"display\": \"Residencial\",\n            \"ativo\": true\n        },\n        {\n            \"id\": 2,\n            \"display\": \"Serviços Cortesias \",\n            \"ativo\": true\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
 					"name": "Meios de Pagamento",
 					"id": "e3ef9dcf-aaf7-4ebd-a6b2-f890827653e3",
 					"protocolProfileBehavior": {
@@ -9610,6 +9704,53 @@
 					]
 				},
 				{
+					"name": "Status de Serviço",
+					"id": "95bc413f-80fc-4c04-99f2-e556843de410",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{access_token}}",
+								"description": "Bearer Token obtido na autenticação"
+							}
+						],
+						"url": "{{url}}/api/v1/integracao/configuracao/servico_status",
+						"description": "No método `GET`, irá consultar os dados de status de serviço e irá retornar um `JSON` como resposta."
+					},
+					"response": [
+						{
+							"id": "9c0151f5-7e5e-4ffa-a621-dc0196b42947",
+							"name": "Sucesso",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/api/v1/integracao/configuracao/servico_status"
+							},
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Dados consultados com sucesso.\",\n    \"servico_status\": [\n        {\n            \"id_servico_status\": 1,\n            \"descricao\": \"Serviço Habilitado\",\n            \"prefixo\": \"servico_habilitado\"\n        },\n        {\n            \"id_servico_status\": 2,\n            \"descricao\": \"Cancelado\",\n            \"prefixo\": \"cancelado\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
 					"name": "Tipos de Atendimento",
 					"id": "57154c6a-c35b-4832-bd6d-2ec5fa41657b",
 					"protocolProfileBehavior": {
@@ -9704,8 +9845,8 @@
 					]
 				},
 				{
-					"name": "Grupo de Cliente",
-					"id": "3dcd8365-106b-40b5-b9e8-1dfd0cdc9367",
+					"name": "Vendedores",
+					"id": "3c07918e-7849-47b5-80b8-2b5ec28a4590",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -9718,12 +9859,12 @@
 								"description": "Bearer Token obtido na autenticação"
 							}
 						],
-						"url": "{{url}}/api/v1/integracao/configuracao/grupo_cliente",
-						"description": "No método `GET`, irá consultar os dados de grupos de cliente e irá retornar um `JSON` como resposta."
+						"url": "{{url}}/api/v1/integracao/configuracao/empresa",
+						"description": "Através desse `endpoint` será possível consultar as empresas que estão cadastrados e ativas no sistema.\n\n`OBSERVAÇÃO`: O uso dessa API será muito útil para complementar a API de Adicionar Contratos no Cliente, onde se faz necessário enviar obrigatóriamente o ID da Empresa."
 					},
 					"response": [
 						{
-							"id": "c1fa53c4-0813-4dd8-862d-15678a573fad",
+							"id": "644d561e-59e8-447d-8e08-616634984e7e",
 							"name": "Sucesso",
 							"originalRequest": {
 								"method": "GET",
@@ -9732,115 +9873,15 @@
 										"key": "Authorization",
 										"value": "{{access_token}}",
 										"type": "text"
-									},
-									{
-										"key": "Content-Type",
-										"name": "Content-Type",
-										"value": "application/json",
-										"type": "text"
 									}
 								],
-								"url": "{{url}}/api/v1/integracao/configuracao/grupo_cliente"
+								"url": "{{url}}/api/v1/integracao/configuracao/empresa"
 							},
 							"_postman_previewlanguage": "json",
-							"header": [],
+							"header": null,
 							"cookie": [],
 							"responseTime": null,
-							"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Dados consultados com sucesso.\",\n    \"grupo_cliente\": [\n        {\n            \"id_grupo_cliente\": 1,\n            \"display\": \"Clientes Empresariais\",\n            \"ativo\": true\n        },\n        {\n            \"id_grupo_cliente\": 2,\n            \"display\": \"Clientes Residenciais\",\n            \"ativo\": true\n        }\n    ]\n}"
-						}
-					]
-				},
-				{
-					"name": "Grupo de Serviço",
-					"id": "367f6404-1afb-41c3-bb3e-632df9d3fbf3",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "{{access_token}}",
-								"description": "Bearer Token obtido na autenticação"
-							}
-						],
-						"url": "{{url}}/api/v1/integracao/configuracao/grupo_cliente_servico",
-						"description": "No método `GET`, irá consultar os dados de grupos de serviço e irá retornar um `JSON` como resposta."
-					},
-					"response": [
-						{
-							"id": "1c09a88c-cb30-48b3-9bdb-474980ed4125",
-							"name": "Sucesso",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "{{access_token}}",
-										"type": "text"
-									},
-									{
-										"key": "Content-Type",
-										"name": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"url": "{{url}}/api/v1/integracao/configuracao/grupo_cliente_servico"
-							},
-							"_postman_previewlanguage": "json",
-							"header": [],
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Dados consultados com sucesso.\",\n    \"grupo_cliente_servico\": [\n        {\n            \"id\": 1,\n            \"display\": \"Residencial\",\n            \"ativo\": true\n        },\n        {\n            \"id\": 2,\n            \"display\": \"Serviços Cortesias \",\n            \"ativo\": true\n        }\n    ]\n}"
-						}
-					]
-				},
-				{
-					"name": "Status de Serviço",
-					"id": "95bc413f-80fc-4c04-99f2-e556843de410",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "{{access_token}}",
-								"description": "Bearer Token obtido na autenticação"
-							}
-						],
-						"url": "{{url}}/api/v1/integracao/configuracao/servico_status",
-						"description": "No método `GET`, irá consultar os dados de status de serviço e irá retornar um `JSON` como resposta."
-					},
-					"response": [
-						{
-							"id": "9c0151f5-7e5e-4ffa-a621-dc0196b42947",
-							"name": "Sucesso",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "{{access_token}}",
-										"type": "text"
-									},
-									{
-										"key": "Content-Type",
-										"name": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"url": "{{url}}/api/v1/integracao/configuracao/servico_status"
-							},
-							"_postman_previewlanguage": "json",
-							"header": [],
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Dados consultados com sucesso.\",\n    \"servico_status\": [\n        {\n            \"id_servico_status\": 1,\n            \"descricao\": \"Serviço Habilitado\",\n            \"prefixo\": \"servico_habilitado\"\n        },\n        {\n            \"id_servico_status\": 2,\n            \"descricao\": \"Cancelado\",\n            \"prefixo\": \"cancelado\"\n        }\n    ]\n}"
+							"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Empresas consultados com sucesso\",\r\n    \"empresas\": [\r\n        {\r\n            \"id_empresa\": 37,\r\n            \"nome_razaosocial\": \"HUBSOFT BRASIL LTDA\",\r\n            \"cnpj\": \"29507487000185\",\r\n            \"display\": \"HUBSOFT BRASIL LTDA (CNPJ: 29.507.487/0001-85)\"\r\n        }\r\n    ]\r\n}"
 						}
 					]
 				}
@@ -9872,37 +9913,37 @@
 	],
 	"variable": [
 		{
-			"id": "8be894b8-8ad5-44b2-a136-5c131f5d8ed7",
+			"id": "cbccd483-12af-4a1a-8913-af8d6e31a8dc",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "ea82818f-e796-4a72-bfae-d34eba1dbcff",
+			"id": "cda258c0-a98d-403d-b103-2184ba56c03c",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "d30ec943-7d5f-452b-ae6b-5ef15dc83c7b",
+			"id": "ce16b289-0fb0-46df-b7bc-583d79d7cc75",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "4213183c-249e-4f18-9dbd-16f477b38964",
+			"id": "e5e36962-ce73-41aa-a954-53b0e29989fc",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "658ee990-e310-4221-8301-4c9db4a447a3",
+			"id": "8841f5ea-0a4b-4911-b1ba-25abac40a11d",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "4b3ce576-39f9-45b4-b58b-9408c0cdff45",
+			"id": "f3ce666d-219c-4d52-b9c7-f86c3c56fd26",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "8865eb76-1324-4721-9993-3ae6716b987c",
+			"id": "fd07fc69-1ead-4cfc-8f9d-eb1b960e5cd6",
 			"key": "access_token",
 			"value": ""
 		}
