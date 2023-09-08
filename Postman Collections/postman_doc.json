@@ -9859,7 +9859,7 @@
 								"description": "Bearer Token obtido na autenticação"
 							}
 						],
-						"url": "{{url}}/api/v1/integracao/configuracao/empresa",
+						"url": "{{url}}/api/v1/integracao/configuracao/vendedor",
 						"description": "Através desse `endpoint` será possível consultar as empresas que estão cadastrados e ativas no sistema.\n\n`OBSERVAÇÃO`: O uso dessa API será muito útil para complementar a API de Adicionar Contratos no Cliente, onde se faz necessário enviar obrigatóriamente o ID da Empresa."
 					},
 					"response": [
@@ -9913,37 +9913,37 @@
 	],
 	"variable": [
 		{
-			"id": "cbccd483-12af-4a1a-8913-af8d6e31a8dc",
+			"id": "ec23aea1-be44-40ad-b887-46764142e78f",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "cda258c0-a98d-403d-b103-2184ba56c03c",
+			"id": "78343c20-0a5b-4c5b-9e0b-af0328bd3fd0",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "ce16b289-0fb0-46df-b7bc-583d79d7cc75",
+			"id": "e472dcab-eb3f-4cde-9944-7cfbe75538c3",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "e5e36962-ce73-41aa-a954-53b0e29989fc",
+			"id": "b35f12e8-d27a-41bb-95f8-d5b91207d6a5",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "8841f5ea-0a4b-4911-b1ba-25abac40a11d",
+			"id": "bb351ef2-513d-4675-9cfd-b1116146e209",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "f3ce666d-219c-4d52-b9c7-f86c3c56fd26",
+			"id": "96230c83-a8b6-4e7a-9a01-35f5f0843cf1",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "fd07fc69-1ead-4cfc-8f9d-eb1b960e5cd6",
+			"id": "0ab3c158-b578-43a1-b7cd-bb9a1561e94c",
 			"key": "access_token",
 			"value": ""
 		}
