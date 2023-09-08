@@ -9845,6 +9845,47 @@
 					]
 				},
 				{
+					"name": "Vencimentos",
+					"id": "d77a6d03-b76f-4655-a570-fca5e7b245ea",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{access_token}}",
+								"description": "Bearer Token obtido na autenticação"
+							}
+						],
+						"url": "{{url}}/api/v1/integracao/configuracao/vendedor",
+						"description": "Através desse `endpoint` será possível consultar os vendedores que estão cadastrados e ativos no sistema.\n\n`OBSERVAÇÃO`: O uso dessa API será muito útil para complementar a API de Adicionar Prospecto, onde se faz necessário enviar obrigatóriamente o ID do Vendedor caso esteja configurado como obrigatório no formulário de Prospecto do provedor."
+					},
+					"response": [
+						{
+							"id": "fec8f85a-1796-4a30-b692-1a1d1f8f4414",
+							"name": "Sucesso",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/api/v1/integracao/configuracao/vendedor"
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\r\n    \"status\": \"success\",\r\n    \"msg\": \"Vendedores consultados com sucesso\",\r\n    \"vendedores\": [\r\n        {\r\n            \"id\": 7603,\r\n            \"name\": \"(Suporte Hubsoft) Ana Julia\"\r\n        },\r\n        {\r\n            \"id\": 1146,\r\n            \"name\": \"(Suporte Hubsoft) Giovanna Oliveira\"\r\n        },\r\n        {\r\n            \"id\": 7806,\r\n            \"name\": \"(Suporte Hubsoft) Marcelo Araújo\"\r\n        },\r\n        {\r\n            \"id\": 7811,\r\n            \"name\": \"Alexsander\"\r\n        },\r\n        {\r\n            \"id\": 5271,\r\n            \"name\": \"André Junior\"\r\n        },\r\n        {\r\n            \"id\": 4808,\r\n            \"name\": \"André Lehrbach \"\r\n        },\r\n        {\r\n            \"id\": 4806,\r\n            \"name\": \"Andressa \"\r\n        },\r\n        {\r\n            \"id\": 4801,\r\n            \"name\": \"Andressa Vargas\"\r\n        },\r\n        {\r\n            \"id\": 4866,\r\n            \"name\": \"Caíque\"\r\n        },\r\n        {\r\n            \"id\": 4817,\r\n            \"name\": \"Calor Xavier\"\r\n        },\r\n        {\r\n            \"id\": 7805,\r\n            \"name\": \"Camila Melo\"\r\n        },\r\n        {\r\n            \"id\": 4852,\r\n            \"name\": \"Carline \"\r\n        },\r\n        {\r\n            \"id\": 4856,\r\n            \"name\": \"Claudia Maria Moura \"\r\n        },\r\n        {\r\n            \"id\": 4846,\r\n            \"name\": \"Cleyton \"\r\n        },\r\n        {\r\n            \"id\": 4704,\r\n            \"name\": \"Clodoaldo \"\r\n        },\r\n        {\r\n            \"id\": 4837,\r\n            \"name\": \"Dayane Moura \"\r\n        },\r\n        {\r\n            \"id\": 4865,\r\n            \"name\": \"Edemar \"\r\n        },\r\n        {\r\n            \"id\": 4816,\r\n            \"name\": \"Edilson\"\r\n        },\r\n        {\r\n            \"id\": 4842,\r\n            \"name\": \"Emerson Soares \"\r\n        },\r\n        {\r\n            \"id\": 4809,\r\n            \"name\": \"Ezequiel\"\r\n        },\r\n        {\r\n            \"id\": 4824,\r\n            \"name\": \"Fabiano \"\r\n        },\r\n        {\r\n            \"id\": 4811,\r\n            \"name\": \"Frank \"\r\n        },\r\n        {\r\n            \"id\": 5236,\r\n            \"name\": \"Gabriel\"\r\n        },\r\n        {\r\n            \"id\": 4828,\r\n            \"name\": \"Gabriel Alves \"\r\n        },\r\n        {\r\n            \"id\": 5210,\r\n            \"name\": \"Geraldo1\"\r\n        },\r\n        {\r\n            \"id\": 4843,\r\n            \"name\": \"Gilson Junior \"\r\n        },\r\n        {\r\n            \"id\": 4867,\r\n            \"name\": \"Guilherme Leão\"\r\n        },\r\n        {\r\n            \"id\": 4818,\r\n            \"name\": \"Hebert\"\r\n        },\r\n        {\r\n            \"id\": 4820,\r\n            \"name\": \"Hicaro Zinatto \"\r\n        },\r\n        {\r\n            \"id\": 4847,\r\n            \"name\": \"Hugo Silveira \"\r\n        },\r\n        {\r\n            \"id\": 7810,\r\n            \"name\": \"Jaís Oliveira\"\r\n        },\r\n        {\r\n            \"id\": 4829,\r\n            \"name\": \"Janete \"\r\n        },\r\n        {\r\n            \"id\": 4853,\r\n            \"name\": \"Jonathan \"\r\n        },\r\n        {\r\n            \"id\": 4851,\r\n            \"name\": \"José\"\r\n        },\r\n        {\r\n            \"id\": 4861,\r\n            \"name\": \"KAIQUE\"\r\n        },\r\n        {\r\n            \"id\": 4849,\r\n            \"name\": \"Kleber \"\r\n        },\r\n        {\r\n            \"id\": 4884,\r\n            \"name\": \"Ligia\"\r\n        },\r\n        {\r\n            \"id\": 4825,\r\n            \"name\": \"Luã Gama\"\r\n        },\r\n        {\r\n            \"id\": 4864,\r\n            \"name\": \"Lucas \"\r\n        },\r\n        {\r\n            \"id\": 4703,\r\n            \"name\": \"Luiz Coelho \"\r\n        },\r\n        {\r\n            \"id\": 4860,\r\n            \"name\": \"Marcos\"\r\n        },\r\n        {\r\n            \"id\": 4869,\r\n            \"name\": \"Marcos Lins \"\r\n        },\r\n        {\r\n            \"id\": 4812,\r\n            \"name\": \"Maria Eduarda\"\r\n        },\r\n        {\r\n            \"id\": 4815,\r\n            \"name\": \"Maria Gorete \"\r\n        },\r\n        {\r\n            \"id\": 7809,\r\n            \"name\": \"Mariana Oliveira\"\r\n        },\r\n        {\r\n            \"id\": 4834,\r\n            \"name\": \"Mário Elmer \"\r\n        },\r\n        {\r\n            \"id\": 5247,\r\n            \"name\": \"Mauro Filho\"\r\n        },\r\n        {\r\n            \"id\": 7601,\r\n            \"name\": \"Otavio Couto\"\r\n        },\r\n        {\r\n            \"id\": 5244,\r\n            \"name\": \"Paulo Renato\"\r\n        },\r\n        {\r\n            \"id\": 392,\r\n            \"name\": \"Paulo Rinco\"\r\n        },\r\n        {\r\n            \"id\": 4848,\r\n            \"name\": \"Ramos\"\r\n        },\r\n        {\r\n            \"id\": 4831,\r\n            \"name\": \"Samuel José \"\r\n        },\r\n        {\r\n            \"id\": 5228,\r\n            \"name\": \"Sara Borges \"\r\n        },\r\n        {\r\n            \"id\": 4859,\r\n            \"name\": \"Silas Aquino\"\r\n        },\r\n        {\r\n            \"id\": 4857,\r\n            \"name\": \"Vanderlei \"\r\n        },\r\n        {\r\n            \"id\": 4840,\r\n            \"name\": \"Weslley \"\r\n        }\r\n    ]\r\n}"
+						}
+					]
+				},
+				{
 					"name": "Vendedores",
 					"id": "3c07918e-7849-47b5-80b8-2b5ec28a4590",
 					"protocolProfileBehavior": {
@@ -9913,37 +9954,37 @@
 	],
 	"variable": [
 		{
-			"id": "ce702768-8d3c-47cf-bb57-05d9f6a97d86",
+			"id": "803282a4-bec7-4dd1-b9ee-74b41d99f09a",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "83146a60-46fe-4ab9-806d-08ddb1f8d111",
+			"id": "15a3b95f-6861-4e6b-bd12-d1c0cde89c94",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "7b5b7b33-8a19-4119-b7de-0bf5e23cc6ff",
+			"id": "ac691715-6674-4337-92cf-d1a39274a6cc",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "3872a5ac-9705-4ff7-9f80-cdf28a2abb79",
+			"id": "f314457e-02de-46b1-81f5-4304159f7901",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "fc0f711b-79a1-468e-9bf9-df8b7113219a",
+			"id": "2f519849-00ae-4665-aae7-83fbe92caeb2",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "3637b163-b985-4208-82ae-d806e7a5a2bc",
+			"id": "6f21a03d-2907-42c6-a00b-5db03a04f5dd",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "7475aa90-fc69-4359-b2d6-b89f0bbce954",
+			"id": "1901fe8c-6b9b-4806-aeb6-a82c0108f6aa",
 			"key": "access_token",
 			"value": ""
 		}
