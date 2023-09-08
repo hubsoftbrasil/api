@@ -9860,7 +9860,7 @@
 							}
 						],
 						"url": "{{url}}/api/v1/integracao/configuracao/vendedor",
-						"description": "Através desse `endpoint` será possível consultar as empresas que estão cadastrados e ativas no sistema.\n\n`OBSERVAÇÃO`: O uso dessa API será muito útil para complementar a API de Adicionar Contratos no Cliente, onde se faz necessário enviar obrigatóriamente o ID da Empresa."
+						"description": "Através desse `endpoint` será possível consultar os vendedores que estão cadastrados e ativos no sistema.\n\n`OBSERVAÇÃO`: O uso dessa API será muito útil para complementar a API de Adicionar Prospecto, onde se faz necessário enviar obrigatóriamente o ID do Vendedor caso esteja configurado como obrigatório no formulário de Prospecto do provedor."
 					},
 					"response": [
 						{
@@ -9913,37 +9913,37 @@
 	],
 	"variable": [
 		{
-			"id": "ec23aea1-be44-40ad-b887-46764142e78f",
+			"id": "6b2316c6-3c05-4f19-a7c9-0d2b54318078",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "78343c20-0a5b-4c5b-9e0b-af0328bd3fd0",
+			"id": "272e234b-594a-4fb4-b9a6-08ff2386732e",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "e472dcab-eb3f-4cde-9944-7cfbe75538c3",
+			"id": "c14fe72f-c0eb-41c8-bfc1-446cdcdbfdcd",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "b35f12e8-d27a-41bb-95f8-d5b91207d6a5",
+			"id": "a95d5846-b150-4902-845c-3976ed4d4d10",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "bb351ef2-513d-4675-9cfd-b1116146e209",
+			"id": "2f8ccb46-461f-44b9-b81c-41f3999add1b",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "96230c83-a8b6-4e7a-9a01-35f5f0843cf1",
+			"id": "c1318cb5-e5a8-4c3c-9aaf-fea588053185",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "0ab3c158-b578-43a1-b7cd-bb9a1561e94c",
+			"id": "065fedb5-17f2-4e64-8dac-2eefc368c2be",
 			"key": "access_token",
 			"value": ""
 		}
