@@ -8465,7 +8465,7 @@
 							}
 						},
 						"url": "{{url}}/api/v1/integracao/prospecto",
-						"description": "A rota em questão é do tipo `POST` e o copo da requisição deve possuir os campos abaixo no JSON.\n\n**Obs.:** _A obrigatoriedade dos campos pode ser personalizada pelo usuário no sistema._\n\n| Campo | Descrição | Obrigatório |\n| --- | --- | --- |\n| cep | CEP referente ao endereço de instalação | Sim |\n| servico.id_servico | Identificador único do serviço / plano de contratação | Sim |\n| servico.valor | Valor em reais (R$) do serviço / plano ofertado | Sim |\n| nome_razaosocial | Nome ou Razão Social do contratante | Sim |\n| cpf_cnpj | CPF ou CNPJ do contratante | Não |\n| telefone | Telefone principal do contratante | Sim |\n| email | email principal do contratante | Não |\n| observacao | Campo livre para observações do contratante | Não |\n| tipo_pessoa | Informar «pj» para pessoa jurídica ou «pf» para pessoa física | Sim |\n| bairro | Bairro referente ao endereço de instalação | Sim |\n| endereco | Endereço referente ao local de instalação | Sim |\n| numero | Número referente ao endereço de instalação | Sim |\n| latitude | Latitude referente ao endereço de instalação | Não |\n| longitude | Longitude referente ao endereço de instalação | Não |\n| id_crm | ID referente ao CRM que será vinculado o prospecto | Nao |\n| id_origem_cliente | ID referente a Origem do Cliente que será vinculado o prospecto | Nao |\n| id_motivo_contratacao | ID referente ao Motivo de Contratao que será vinculado o prospecto | Nao |\n| id_vendedor | ID referente ao Vendedor que será vinculado o prospecto | Nao |\n| rg | RG que será vinculado o prospecto | Nao |\n| data_nascimento | Data de Nascimento (YYYY-MM-DD) que será vinculado o prospecto | Nao |\n| telefone_secundario | Telefone secundário que será vinculado o prospecto | Nao |\n| id_vencimento | ID referente ao Vencimento que será vinculado o prospecto | Nao |\n| observacao | Observação que será vinculado o prospecto | Nao |\n| nome_pai | Nome do Pai que será vinculado o prospecto | Nao |\n| nome_mae | Nome da Mãe que será vinculado o prospecto | Nao |\n| estado_civil | Estado Cívil que será vinculado o prospecto (solteiro,casado,viuvo,separado_judicialmente,divorciado) | Nao |\n| genero | Gênero que será vinculado o prospecto (masculino,feminino,outro) | Nao |\n| nacionalidade | Nacionalidade que será vinculado o prospecto (brasileiro,estrangeiro) | Nao |\n| rg_emissor | RG Emissor que será vinculado o prospecto | Nao |\n\n\\* Tipo de valores aceitos pelos campos:\n\n| Campo | Tipo |\n| --- | --- |\n| cep | Numérico |\n| servico.id_servico | Numérico |\n| servico.valor | Numérico |\n| nome_razaosocial | Texto |\n| cpf_cnpj | Numérico |\n| telefone | Numérico |\n| email | Texto |\n| observacao | Texto |\n| tipo_pessoa | Texto |\n| bairro | Texto |\n| endereco | Texto |\n| numero | Numérico |\n| latitude | Numérico |\n| longitude | Númerico |\n| id_crm | Numérico |\n| id_origem_cliente | Numérico |\n| id_motivo_contratacao | Numérico |\n| id_vendedor | Numérico |\n| rg | Texto |\n| data_nascimento | Date |\n| telefone_secundario | Numérico |\n| id_vencimento | Numérico |\n| observacao | Texto |\n| nome_pai | Texto |\n| nome_mae | Texto |\n| estado_civil | Texto |\n| genero | Texto |\n| nacionalidade | Texto |\n| rg_emissor | Texto |"
+						"description": "A rota em questão é do tipo `POST` e o copo da requisição deve possuir os campos abaixo no JSON.\n\n**Obs.:** _A obrigatoriedade dos campos pode ser personalizada pelo usuário no sistema._\n\n| Campo | Descrição | Obrigatório |\n| --- | --- | --- |\n| cep | CEP referente ao endereço de instalação | Sim |\n| servico.id_servico | Identificador único do serviço / plano de contratação | Sim |\n| servico.valor | Valor em reais (R$) do serviço / plano ofertado | Sim |\n| nome_razaosocial | Nome ou Razão Social do contratante | Sim |\n| cpf_cnpj | CPF ou CNPJ do contratante | Não |\n| telefone | Telefone principal do contratante | Sim |\n| email | email principal do contratante | Não |\n| observacao | Campo livre para observações do contratante | Não |\n| tipo_pessoa | Informar «pj» para pessoa jurídica ou «pf» para pessoa física | Sim |\n| bairro | Bairro referente ao endereço de instalação | Sim |\n| endereco | Endereço referente ao local de instalação | Sim |\n| numero | Número referente ao endereço de instalação | Sim |\n| latitude | Latitude referente ao endereço de instalação | Não |\n| longitude | Longitude referente ao endereço de instalação | Não |\n| id_crm | ID referente ao CRM que será vinculado o prospecto | Nao |\n| id_origem_cliente | ID referente a Origem do Cliente que será vinculado o prospecto | Nao |\n| id_motivo_contratacao | ID referente ao Motivo de Contratao que será vinculado o prospecto | Nao |\n| id_vendedor | ID referente ao Vendedor que será vinculado o prospecto | Nao |\n| rg | RG que será vinculado o prospecto | Nao |\n| data_nascimento | Data de Nascimento (YYYY-MM-DD) que será vinculado o prospecto | Nao |\n| telefone_secundario | Telefone secundário que será vinculado o prospecto | Nao |\n| id_vencimento | ID referente ao Vencimento que será vinculado o prospecto | Nao |\n| nome_pai | Nome do Pai que será vinculado o prospecto | Nao |\n| nome_mae | Nome da Mãe que será vinculado o prospecto | Nao |\n| estado_civil | Estado Cívil que será vinculado o prospecto (solteiro,casado,viuvo,separado_judicialmente,divorciado) | Nao |\n| genero | Gênero que será vinculado o prospecto (masculino,feminino,outro) | Nao |\n| nacionalidade | Nacionalidade que será vinculado o prospecto (brasileiro,estrangeiro) | Nao |\n| rg_emissor | RG Emissor que será vinculado o prospecto | Nao |\n\n\\* Tipo de valores aceitos pelos campos:\n\n| Campo | Tipo |\n| --- | --- |\n| cep | Numérico |\n| servico.id_servico | Numérico |\n| servico.valor | Numérico |\n| nome_razaosocial | Texto |\n| cpf_cnpj | Numérico |\n| telefone | Numérico |\n| email | Texto |\n| observacao | Texto |\n| tipo_pessoa | Texto |\n| bairro | Texto |\n| endereco | Texto |\n| numero | Numérico |\n| latitude | Numérico |\n| longitude | Númerico |\n| id_crm | Numérico |\n| id_origem_cliente | Numérico |\n| id_motivo_contratacao | Numérico |\n| id_vendedor | Numérico |\n| rg | Texto |\n| data_nascimento | Date |\n| telefone_secundario | Numérico |\n| id_vencimento | Numérico |\n| nome_pai | Texto |\n| nome_mae | Texto |\n| estado_civil | Texto |\n| genero | Texto |\n| nacionalidade | Texto |\n| rg_emissor | Texto |"
 					},
 					"response": [
 						{
@@ -9954,37 +9954,37 @@
 	],
 	"variable": [
 		{
-			"id": "7cfb667a-72a7-4253-83ba-ec673aef80c8",
+			"id": "b0eeb10c-a84b-48ce-b855-c2bda0021cfe",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "0b1876e4-bd79-4820-b67b-173af45dc866",
+			"id": "ff767d1f-77ec-4d2d-8d8d-04a5e467a8d0",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "5db312b1-83ae-472f-b1b5-aad565b7839c",
+			"id": "9d8505e6-a1d4-4855-9fac-013247c3a93a",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "1b63c924-7638-42b0-8482-f2e3bc6b0b10",
+			"id": "b2a47288-6510-469b-b9a9-91ec99aa7e2e",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "18ab0cdc-6621-4c79-9f6a-95a42d79ae23",
+			"id": "936f36c4-1c7c-46a9-b792-9a29e030a3a5",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "9e291085-9881-4ce8-9702-5ff1686782b9",
+			"id": "c4b96bb5-1c03-4dc0-b911-af8ce102ac6c",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "8643d231-1044-4439-8c3e-f8a2265364ad",
+			"id": "eb3645e9-d018-4a21-95ee-9065d9d8c569",
 			"key": "access_token",
 			"value": ""
 		}
