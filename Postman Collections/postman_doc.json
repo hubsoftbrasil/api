@@ -1455,7 +1455,7 @@
 									}
 								],
 								"url": "{{url}}/api/v1/integracao/cliente/extrato_conexao",
-								"description": "**GET**\n\nNo método `GET`, será possível consultar os extratos de conexão de um determinado login e obter o retorno no formato `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| busca | Tipo de busca que deseja fazer no cliente | Sim |\n| termo_busca | Termo utilizado para fazer a busca | Sim |\n| limit | Limite de resultados | Não |\n| data_inicio | Data de Início (Utiliza a data de vencimento como base) | Não |\n| data_fim | Data de Fim (Utiliza a data de vencimento como base) | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| busca | login,ipv4,ipv6_wan,ipv6_lan | Nenhum |\n| termo_busca | Campo livre | Nehum |\n| limit | Valor mínimo 1, Valor máximo 50 | 20 |\n| data_inicio | Campo no formato DateTime (YYYY-MM-DD). | Data atual menos 30 dias |\n| data_fim | Campo no formato DateTime (YYYY-MM-DD). | Data atual |"
+								"description": "**GET**\n\nNo método `GET`, será possível consultar os extratos de conexão de um determinado login e obter o retorno no formato `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| busca | Tipo de busca que deseja fazer no cliente | Sim |\n| termo_busca | Termo utilizado para fazer a busca | Sim |\n| limit | Limite de resultados | Não |\n| data_inicio | Data de Início (Utiliza a data de vencimento como base) | Não |\n| data_fim | Data de Fim (Utiliza a data de vencimento como base) | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| busca | login,ipv4,ipv6_wan,ipv6_lan, mac | Nenhum |\n| termo_busca | Campo livre | Nehum |\n| limit | Valor mínimo 1, Valor máximo 50 | 20 |\n| data_inicio | Campo no formato DateTime (YYYY-MM-DD). | Data atual menos 30 dias |\n| data_fim | Campo no formato DateTime (YYYY-MM-DD). | Data atual |"
 							},
 							"response": [
 								{
@@ -9954,37 +9954,37 @@
 	],
 	"variable": [
 		{
-			"id": "f3e9cde2-49d6-4485-8fcb-7d0f49e1d4fc",
+			"id": "bfb86397-dedc-4b44-b4f1-10310f703afb",
 			"key": "url",
 			"value": ""
 		},
 		{
-			"id": "5035c1a1-7452-487b-87aa-96d987629347",
+			"id": "f68acfe6-f582-49ef-aeff-fbfb4eabae02",
 			"key": "client_id",
 			"value": ""
 		},
 		{
-			"id": "f9473a91-79fb-4c6a-8f82-0507bfb0ef85",
+			"id": "e6a3b89c-ff2a-4642-96f7-548afea468ea",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
-			"id": "220f7d58-7366-47d3-b6f2-6853d2764dc2",
+			"id": "faecf465-3161-4274-98de-bbee79bf5997",
 			"key": "username",
 			"value": ""
 		},
 		{
-			"id": "b4053f91-f92d-4d85-b686-4bc9e4e44cf7",
+			"id": "8f174006-866e-4dc5-864f-f27a8b5b97c3",
 			"key": "password",
 			"value": ""
 		},
 		{
-			"id": "d9c8de5a-58d0-44ed-be34-13d75bf80051",
+			"id": "ae003276-06f3-4708-a1cb-12410e9afb1d",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
-			"id": "f5a84d6a-7bc0-4349-817f-4cda8b462f66",
+			"id": "667028b1-14eb-4068-8f88-92724998c526",
 			"key": "access_token",
 			"value": ""
 		}
