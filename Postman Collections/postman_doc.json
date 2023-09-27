@@ -6216,7 +6216,7 @@
 									}
 								},
 								"url": "{{url}}/api/v1/integracao/estoque/produto_item/movimentar",
-								"description": "Através desse endpoint, será possível fazer a movimentação do item de produto, permitindo assim, alterar:\n\n- Status do Item\n- Local de Estque do Item\n    \n\nOs atributos podem/devem conter os seguintes valores:\n\n| **Atributo** | **Descrição** | **Obrigatório** | **Valor Default** |\n| --- | --- | --- | --- |\n| ids_produtos | `Array` | Sim | `NULL` |\n| id_local_estoque | `Integer` | Não | `NULL` |\n| status | `String` | Não | `NULL` |\n| observacao | `String` | Não | `NULL` |\n\nO campo `status` deverá ter um dos seguintes valores, caso seja utilizado:\n\n- `baixa_manual`\n- `defeito`\n- `descartado`\n- `estoque`\n- `manutencao`\n- `perdido`\n- `teste`\n    \n\nÉ obrigatório enviar pelo menos um dos campos abaixo:\n\n- `id_local_estoque`\n- `status`"
+								"description": "Através desse endpoint, será possível fazer a movimentação do item de produto, permitindo assim, alterar:\n\n- Status do Item\n- Local de Estque do Item\n    \n\nOs atributos podem/devem conter os seguintes valores:\n\n| **Atributo** | **Descrição** | **Obrigatório** | **Valor Default** |\n| --- | --- | --- | --- |\n| ids_produto_item | `Array` | Sim | `NULL` |\n| id_local_estoque | `Integer` | Não | `NULL` |\n| status | `String` | Não | `NULL` |\n| observacao | `String` | Não | `NULL` |\n\nO campo `status` deverá ter um dos seguintes valores, caso seja utilizado:\n\n- `baixa_manual`\n- `defeito`\n- `descartado`\n- `estoque`\n- `manutencao`\n- `perdido`\n- `teste`\n    \n\nÉ obrigatório enviar pelo menos um dos campos abaixo:\n\n- `id_local_estoque`\n- `status`"
 							},
 							"response": [
 								{
