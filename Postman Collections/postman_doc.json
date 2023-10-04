@@ -6406,6 +6406,223 @@
 							]
 						},
 						{
+							"name": "Transferência entre Estoques",
+							"id": "f24b3609-aeda-4b49-9a26-6331516ae1f9",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"description": "Bearer Token obtido na autenticação"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"ids_produto_item\":[101738,101740]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/v1/integracao/estoque/produto_item/movimentar",
+								"description": "Através desse endpoint, será possível fazer a movimentação do item de produto, permitindo assim, alterar:\n\n- Status do Item\n- Local de Estque do Item\n    \n\nOs atributos podem/devem conter os seguintes valores:\n\n| **Atributo** | **Descrição** | **Obrigatório** | **Valor Default** |\n| --- | --- | --- | --- |\n| ids_produto_item | `Array` | Sim | `NULL` |\n| id_local_estoque | `Integer` | Não | `NULL` |\n| status | `String` | Não | `NULL` |\n| observacao | `String` | Não | `NULL` |\n\nO campo `status` deverá ter um dos seguintes valores, caso seja utilizado:\n\n- `baixa_manual`\n- `defeito`\n- `descartado`\n- `estoque`\n- `manutencao`\n- `perdido`\n- `teste`\n    \n\nÉ obrigatório enviar pelo menos um dos campos abaixo:\n\n- `id_local_estoque`\n- `status`"
+							},
+							"response": [
+								{
+									"id": "ce039079-7f48-47aa-a8c9-7ddcdf67fa46",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Bearer Token obtido na autenticação"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"ids_produto_item\":[101738,101740],\n    \"id_local_estoque\":5,\n    \"status\":\"estoque\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{url}}/api/v1/integracao/estoque/produto_item/movimentar"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 08 Feb 2023 14:47:31 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=SJhGNy7n7PQLiDSapccYgdXQoxVj8ET5aybcd72e; expires=Wed, 08-Feb-2023 15:47:31 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Itens movimentados com sucesso\"\n}"
+								},
+								{
+									"id": "dff7ac42-48cd-4075-9f1c-644963041b40",
+									"name": "Erro",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Bearer Token obtido na autenticação"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"ids_produto_item\":[101738,101740]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{url}}/api/v1/integracao/estoque/produto_item/movimentar"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 08 Feb 2023 14:47:53 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=SJhGNy7n7PQLiDSapccYgdXQoxVj8ET5aybcd72e; expires=Wed, 08-Feb-2023 15:47:53 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"error\",\n    \"msg\": \"Local de Estoque ou Status devem estar preenchidos. Preencha pelo menos um dos dois e tente novamente.\",\n    \"errors\": []\n}"
+								}
+							]
+						},
+						{
 							"name": "Apagar",
 							"id": "e3df1fdb-584a-47fa-8d99-7e8394948ab0",
 							"protocolProfileBehavior": {
