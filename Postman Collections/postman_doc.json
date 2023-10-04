@@ -6415,7 +6415,7 @@
 								"auth": {
 									"type": "noauth"
 								},
-								"method": "PUT",
+								"method": "POST",
 								"header": [
 									{
 										"key": "Authorization",
@@ -6425,14 +6425,14 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"ids_produto_item\":[101738,101740]\n}",
+									"raw": "{\n\t\"produtos\": [{\n\t\t\"id_local_estoque_origem\": 9,\n\t\t\"id_local_estoque_destino\": 22,\n\t\t\"id_produto\": 3508,\n\t\t\"quantidade\": 2\n\t}, {\n\t\t\"id_local_estoque_origem\": 1,\n\t\t\"id_local_estoque_destino\":9,\n\t\t\"id_produto\": 137,\n\t\t\"itens_selecionados\": [140876]\n\t}]\n}",
 									"options": {
 										"raw": {
 											"language": "json"
 										}
 									}
 								},
-								"url": "{{url}}/api/v1/integracao/estoque/produto_item/movimentar",
+								"url": "{{url}}/api/v1/integracao/estoque/produto_item/transferencia",
 								"description": "Através desse endpoint, será possível fazer a movimentação do item de produto, permitindo assim, alterar:\n\n- Status do Item\n- Local de Estque do Item\n    \n\nOs atributos podem/devem conter os seguintes valores:\n\n| **Atributo** | **Descrição** | **Obrigatório** | **Valor Default** |\n| --- | --- | --- | --- |\n| ids_produto_item | `Array` | Sim | `NULL` |\n| id_local_estoque | `Integer` | Não | `NULL` |\n| status | `String` | Não | `NULL` |\n| observacao | `String` | Não | `NULL` |\n\nO campo `status` deverá ter um dos seguintes valores, caso seja utilizado:\n\n- `baixa_manual`\n- `defeito`\n- `descartado`\n- `estoque`\n- `manutencao`\n- `perdido`\n- `teste`\n    \n\nÉ obrigatório enviar pelo menos um dos campos abaixo:\n\n- `id_local_estoque`\n- `status`"
 							},
 							"response": [
@@ -6450,14 +6450,14 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"ids_produto_item\":[101738,101740],\n    \"id_local_estoque\":5,\n    \"status\":\"estoque\"\n}",
+											"raw": "{\n\t\"produtos\": [{\n\t\t\"id_local_estoque_origem\": 9,\n\t\t\"id_local_estoque_destino\": 22,\n\t\t\"id_produto\": 3508, // Produto Agrupado (Insumo)\n\t\t\"quantidade\": 2\n\t}, {\n\t\t\"id_local_estoque_origem\": 1,\n\t\t\"id_local_estoque_destino\":9,\n\t\t\"id_produto\": 137, // Produto Não-Agrupado (Patrimônio)\n\t\t\"itens_selecionados\": [140876]\n\t}]\n}",
 											"options": {
 												"raw": {
 													"language": "json"
 												}
 											}
 										},
-										"url": "{{url}}/api/v1/integracao/estoque/produto_item/movimentar"
+										"url": "{{url}}/api/v1/integracao/estoque/produto_item/transferencia"
 									},
 									"status": "OK",
 									"code": 200,
@@ -6526,7 +6526,7 @@
 									],
 									"cookie": [],
 									"responseTime": null,
-									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Itens movimentados com sucesso\"\n}"
+									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Movimento entre estoques executado com sucesso\"\n}"
 								},
 								{
 									"id": "dff7ac42-48cd-4075-9f1c-644963041b40",
@@ -6542,14 +6542,14 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"ids_produto_item\":[101738,101740]\n}",
+											"raw": "{\n\t\"produtos\": [{\n\t\t\"id_local_estoque_origem\": 9,\n\t\t\"id_local_estoque_destino\": 22,\n\t\t\"id_produto\": 3508,\n\t\t\"quantidade\": 2\n\t}, {\n\t\t\"id_local_estoque_origem\": 1,\n\t\t\"id_local_estoque_destino\":9,\n\t\t\"id_produto\": 137,\n\t\t\"itens_selecionados\": [140876]\n\t}]\n}",
 											"options": {
 												"raw": {
 													"language": "json"
 												}
 											}
 										},
-										"url": "{{url}}/api/v1/integracao/estoque/produto_item/movimentar"
+										"url": "{{url}}/api/v1/integracao/estoque/produto_item/transferencia"
 									},
 									"status": "OK",
 									"code": 200,
@@ -6618,7 +6618,7 @@
 									],
 									"cookie": [],
 									"responseTime": null,
-									"body": "{\n    \"status\": \"error\",\n    \"msg\": \"Local de Estoque ou Status devem estar preenchidos. Preencha pelo menos um dos dois e tente novamente.\",\n    \"errors\": []\n}"
+									"body": "{\n\t\"status\": \"error\",\n\t\"msg\": \"O produto ABRACADEIRA ACO PARA LAMPADA T08\\/T10 ST: 0,13 possui uma quantidade de 0, que é menor que a informada\",\n\t\"errors\": []\n}"
 								}
 							]
 						},
