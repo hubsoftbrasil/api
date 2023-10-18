@@ -304,7 +304,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n        \"id_cliente_servico\":\"11000\",\n        \"descricao\":\"Abertura de atendimento de teste\",\n        \"nome\":\"Nome do Usuário Solicitante\",\n        \"telefone\":\"37999112233\",\n        \"email\":\"teste@teste.com.br\",\n        \"abrir_os\":true,\n        \"parametros\":{\n            \"parametro1\":\"Teste\",\n            \"parametro2\":\"Teste2\",\n            \"parametro3\":\"Teste3\"\n        },\n        \"parametros_ordem_servico\":{\n            \"id_tipo_ordem_servico\":\"1\",\n            \"status\":\"Teste2\",\n            \"ids_tecnicos\":[\n                \"1001\", \"935\"\n            ]\n        }\n}",
+							"raw": "{\n        \"id_cliente_servico\":\"11000\",\n        \"descricao\":\"Abertura de atendimento de teste\",\n        \"nome\":\"Nome do Usuário Solicitante\",\n        \"telefone\":\"37999112233\",\n        \"email\":\"teste@teste.com.br\",\n        \"abrir_os\":true,\n        \"parametros\":{\n            \"parametro1\":\"Teste\",\n            \"parametro2\":\"Teste2\",\n            \"parametro3\":\"Teste3\"\n        },\n        \"parametros_ordem_servico\":{\n            \"id_tipo_ordem_servico\":\"1\",\n            \"status\":\"pendente\",\n            \"ids_tecnicos\":[\n                \"1001\", \"935\"\n            ]\n        }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
