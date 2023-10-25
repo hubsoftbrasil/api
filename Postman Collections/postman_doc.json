@@ -8906,12 +8906,11 @@
 									}
 								],
 								"url": {
-									"raw": "{{url}}/api/v1/integracao/prospecto?busca=xpto",
+									"raw": "{{url}}api/v1/integracao/prospecto?busca=nome_razaosocial&termo_busca=xpto",
 									"host": [
-										"{{url}}"
+										"{{url}}api"
 									],
 									"path": [
-										"api",
 										"v1",
 										"integracao",
 										"prospecto"
@@ -8919,6 +8918,10 @@
 									"query": [
 										{
 											"key": "busca",
+											"value": "nome_razaosocial"
+										},
+										{
+											"key": "termo_busca",
 											"value": "xpto"
 										}
 									]
@@ -8943,12 +8946,11 @@
 									}
 								],
 								"url": {
-									"raw": "{{url}}/api/v1/integracao/prospecto?busca=xpto",
+									"raw": "{{url}}api/v1/integracao/prospecto?busca=wqqwe&termo_busca=xpto",
 									"host": [
-										"{{url}}"
+										"{{url}}api"
 									],
 									"path": [
-										"api",
 										"v1",
 										"integracao",
 										"prospecto"
@@ -8956,6 +8958,10 @@
 									"query": [
 										{
 											"key": "busca",
+											"value": "wqqwe"
+										},
+										{
+											"key": "termo_busca",
 											"value": "xpto"
 										}
 									]
