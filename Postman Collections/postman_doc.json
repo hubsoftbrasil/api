@@ -8890,7 +8890,7 @@
 								}
 							]
 						},
-						"description": "## Rota e parâmetros da requisição\n\nNo método `GET,` irá consultar os dados dos prospectos e retornar um `JSON` como resposta. Os seguintes parâmetros devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| busca | Tipo de busca que deseja fazer no cliente | Sim |\n| termo_busca | Busca os prospectos de acordo com o tipo de busca que for definido | Sim |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| busca | nome_razaosocial, telefone, origem, email, id_externo | Nenhum |\n| termo_busca | Campo livre (Qualquer valor será aceito) | Nenhum |"
+						"description": "## Rota e parâmetros da requisição\n\nNo método `GET,` irá consultar os dados dos prospectos e retornar um `JSON` como resposta. Os seguintes parâmetros devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| busca | Tipo de busca que deseja no prospecto | Sim |\n| termo_busca | Busca os prospectos de acordo com o tipo de busca que for definido | Sim |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| busca | nome_razaosocial, telefone, origem, email, id_externo | Nenhum |\n| termo_busca | Campo livre (Qualquer valor será aceito) | Nenhum |"
 					},
 					"response": [
 						{
