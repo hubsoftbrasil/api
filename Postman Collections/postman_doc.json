@@ -8775,7 +8775,7 @@
 								}
 							]
 						},
-						"description": "## Rota e parâmetros da requisição\n\nA rota em questão é do tipo **`GET`** e é necessário informar o parâmetro **busca** no formato _`query string`_`.`\n\n**\\*Nota :** A busca acontecerá em cima do **Nome ou Razão Social** que estiver cadastrado no prospecto."
+						"description": "## Rota e parâmetros da requisição\n\nA rota em questão é do tipo **`GET`** e é necessário informar o parâmetro **busca** no formato `_query string_.`\n\n**\\*Nota :** A busca acontecerá em cima do **Nome ou Razão Social** que estiver cadastrado no prospecto."
 					},
 					"response": [
 						{
@@ -8817,6 +8817,118 @@
 						},
 						{
 							"id": "477d6002-b71f-45d0-9aa8-184f97021ab9",
+							"name": "ERRO - Preencher o campo busca",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/v1/integracao/prospecto?busca=xpto",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"integracao",
+										"prospecto"
+									],
+									"query": [
+										{
+											"key": "busca",
+											"value": "xpto"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Buscar Prospectos Versão 1.103",
+					"id": "5fa98f2a-0f9a-4054-8015-3ba98b065c07",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{access_token}}",
+								"description": "Bearer Token obtido na autenticação"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/v1/integracao/prospecto?busca=xpto",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"integracao",
+								"prospecto"
+							],
+							"query": [
+								{
+									"key": "busca",
+									"value": "xpto"
+								}
+							]
+						},
+						"description": "## Rota e parâmetros da requisição\n\nStartFragment\n\nNo método `GET,` irá consultar os dados dos clientes e retornar um `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\nView More\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| busca | Tipo de busca que deseja fazer no cliente | Sim |\n| Inativo | buscar os clientes que tem o cadastro inativo | não |"
+					},
+					"response": [
+						{
+							"id": "43fbfdd0-6f88-4b78-9e6d-b9d1cf804e14",
+							"name": "SUCESSO",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/v1/integracao/prospecto?busca=xpto",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"integracao",
+										"prospecto"
+									],
+									"query": [
+										{
+											"key": "busca",
+											"value": "xpto"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Dados consultados com sucesso\",\n    \"prospectos\": [\n        {\n            \"id_prospecto\": 100,\n            \"nome_razaosocial\": \"EMPRESA XPTO LTDA\",\n            \"cpf_cnpj\": \"41483316000169\",\n            \"email\": null,\n            \"telefone\": \"3732818000\",\n            \"observacao\": null,\n            \"id_cliente\": null,\n            \"id_endereco_numero\": 33320,\n            \"created_at\": \"2020-07-28 10:27:56\",\n            \"updated_at\": \"2020-07-28 10:27:56\",\n            \"tipo_pessoa\": \"pj\",\n            \"id_usuario\": 1,\n            \"origem\": \"API\",\n            \"created_at_br\": \"28/07/2020\"\n        }\n    ]\n}"
+						},
+						{
+							"id": "7ff67c3f-6ba6-4a4d-839c-4beba67db904",
 							"name": "ERRO - Preencher o campo busca",
 							"originalRequest": {
 								"method": "GET",
