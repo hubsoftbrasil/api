@@ -8775,7 +8775,7 @@
 								}
 							]
 						},
-						"description": "## Rota e parâmetros da requisição\n\nA rota em questão é do tipo **`GET`** e é necessário informar o parâmetro **busca** no formato `_query string_.`\n\n**\\*Nota :** A busca acontecerá em cima do **Nome ou Razão Social** que estiver cadastrado no prospecto."
+						"description": "## Rota e parâmetros da requisição\n\nA rota em questão é do tipo **`GET`** e é necessário informar o parâmetro **busca** no formato `_query string_`\n\n**\\*Nota :** A busca acontecerá em cima do **Nome ou Razão Social** que estiver cadastrado no prospecto."
 					},
 					"response": [
 						{
@@ -8855,7 +8855,7 @@
 					]
 				},
 				{
-					"name": "Buscar Prospectos Versão 1.103",
+					"name": "Buscar Prospectos - A partir da Versão 1.103",
 					"id": "5fa98f2a-0f9a-4054-8015-3ba98b065c07",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -8870,12 +8870,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{url}}/api/v1/integracao/prospecto?busca=xpto",
+							"raw": "{{url}}api/v1/integracao/prospecto?busca=nome_razaosocial&termo_busca=xpto",
 							"host": [
-								"{{url}}"
+								"{{url}}api"
 							],
 							"path": [
-								"api",
 								"v1",
 								"integracao",
 								"prospecto"
@@ -8883,11 +8882,15 @@
 							"query": [
 								{
 									"key": "busca",
+									"value": "nome_razaosocial"
+								},
+								{
+									"key": "termo_busca",
 									"value": "xpto"
 								}
 							]
 						},
-						"description": "## Rota e parâmetros da requisição\n\nStartFragment\n\nNo método `GET,` irá consultar os dados dos clientes e retornar um `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\nView More\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| busca | Tipo de busca que deseja fazer no cliente | Sim |\n| Inativo | buscar os clientes que tem o cadastro inativo | não |"
+						"description": "## Rota e parâmetros da requisição\n\nStartFragment\n\nNo método `GET,` irá consultar os dados dos prospectos e retornar um `JSON` como resposta. Os seguintes parâmetros devem ser utilizados:\n\nView More\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| busca | Tipo de busca que deseja fazer no cliente | Sim |\n| termo_busca | Busca os prospectos de acordo com o tipo de busca que for definido | Sim |"
 					},
 					"response": [
 						{
