@@ -7489,7 +7489,7 @@
 										{
 											"key": "order_by",
 											"value": "id_nfse",
-											"description": "(Opcional) Coluna para ordenação: id_nota_fiscal, numero"
+											"description": "(Opcional) Coluna para ordenação: id_nfse, numero"
 										}
 									]
 								},
