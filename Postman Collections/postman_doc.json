@@ -1261,6 +1261,11 @@
 												"name": "Content-Type",
 												"value": "application/json",
 												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"type": "text"
 											}
 										],
 										"body": {
@@ -1436,7 +1441,13 @@
 									"name": "Sucesso",
 									"originalRequest": {
 										"method": "GET",
-										"header": []
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"type": "text"
+											}
+										]
 									},
 									"_postman_previewlanguage": "json",
 									"header": null,
@@ -1490,7 +1501,13 @@
 									"name": "Sucesso",
 									"originalRequest": {
 										"method": "GET",
-										"header": []
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"type": "text"
+											}
+										]
 									},
 									"_postman_previewlanguage": "json",
 									"header": null,
@@ -1542,7 +1559,7 @@
 											},
 											{
 												"key": "Authorization",
-												"value": "Bearer Token",
+												"value": "{{access_token}}",
 												"type": "text"
 											}
 										],
@@ -1816,7 +1833,13 @@
 							"name": "CRM",
 							"originalRequest": {
 								"method": "GET",
-								"header": [],
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
 								"url": "{{url}}/api/v1/integracao/crm/all"
 							},
 							"_postman_previewlanguage": "json",
@@ -2959,7 +2982,13 @@
 									"name": "Sucesso",
 									"originalRequest": {
 										"method": "GET",
-										"header": [],
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"type": "text"
+											}
+										],
 										"url": {
 											"raw": "{{url}}/api/v1/integracao/estoque/movimento_estoque?pagina=1&10=integer&data_inicio=2023-08-01&data_fim=2023-08-31&tipo_data=cadastro",
 											"host": [
@@ -3066,7 +3095,13 @@
 									"name": "Erro",
 									"originalRequest": {
 										"method": "GET",
-										"header": [],
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"type": "text"
+											}
+										],
 										"url": {
 											"raw": "{{url}}/api/v1/integracao/estoque/movimento_estoque?itens_por_pagina=10&data_inicio=2023-08-01&data_fim=2023-08-31&tipo_data=cadastro",
 											"host": [
@@ -3217,7 +3252,13 @@
 									"name": "Sucesso",
 									"originalRequest": {
 										"method": "GET",
-										"header": [],
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"type": "text"
+											}
+										],
 										"url": "{{url}}/api/v1/integracao/estoque/movimento_estoque/4492"
 									},
 									"status": "OK",
@@ -3286,7 +3327,13 @@
 									"name": "Erro",
 									"originalRequest": {
 										"method": "GET",
-										"header": [],
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"type": "text"
+											}
+										],
 										"url": "{{url}}/api/v1/integracao/estoque/movimento_estoque/234124"
 									},
 									"status": "OK",
@@ -3385,7 +3432,13 @@
 									"name": "Sucesso",
 									"originalRequest": {
 										"method": "POST",
-										"header": [],
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"type": "text"
+											}
+										],
 										"body": {
 											"mode": "raw",
 											"raw": "{\n\t\"id_local_estoque\": 1,\n\t\"produtos\": [{\n\t\t\"quantidade\": 1,\n\t\t\"produto\": {\n\t\t\t\"id_produto\": 1\n\t\t}\n\t}]\n}",
@@ -3463,7 +3516,13 @@
 									"name": "Erro",
 									"originalRequest": {
 										"method": "POST",
-										"header": [],
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"type": "text"
+											}
+										],
 										"body": {
 											"mode": "raw",
 											"raw": "{\n}",
@@ -3571,7 +3630,13 @@
 									"name": "Sucesso",
 									"originalRequest": {
 										"method": "POST",
-										"header": [],
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"type": "text"
+											}
+										],
 										"body": {
 											"mode": "raw",
 											"raw": "{\n\t\"id_local_estoque_origem\": 2,\n\t\"id_local_estoque_destino\": 43,\n\t\"produtos\": [{\n\t\t\"quantidade\": 1,\n\t\t\"produto\": {\n\t\t\t\"id_produto\": 1\n\t\t},\n\t\t\"patrimonios\": [{\n\t\t\t\"id_produto_item\": 126543\n\t\t}]\n\t}]\n}",
@@ -3649,7 +3714,13 @@
 									"name": "Erro",
 									"originalRequest": {
 										"method": "POST",
-										"header": [],
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"type": "text"
+											}
+										],
 										"body": {
 											"mode": "raw",
 											"raw": "{\n\t\"id_local_estoque_origem\": 2,\n\t\"id_local_estoque_destino\": 43,\n\t\"produtos\": [{\n\t\t\"quantidade\": 1,\n\t\t\"produto\": {\n\t\t\t\"id_produto\": 1\n\t\t},\n\t\t\"patrimonios\": [{\n\t\t\t\"id_produto_item\": 126543\n\t\t}]\n\t}]\n}",
@@ -3769,7 +3840,13 @@
 									"name": "Sucesso",
 									"originalRequest": {
 										"method": "DELETE",
-										"header": [],
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"type": "text"
+											}
+										],
 										"url": "{{url}}/api/v1/integracao/estoque/movimento_estoque/4516"
 									},
 									"status": "OK",
@@ -3838,7 +3915,13 @@
 									"name": "Erro",
 									"originalRequest": {
 										"method": "DELETE",
-										"header": [],
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"type": "text"
+											}
+										],
 										"url": "{{url}}/api/v1/integracao/estoque/movimento_estoque/4495"
 									},
 									"status": "OK",
@@ -7224,6 +7307,11 @@
 										"name": "Content-Type",
 										"value": "application/json",
 										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"type": "text"
 									}
 								],
 								"body": {
@@ -7531,7 +7619,7 @@
 										"header": [
 											{
 												"key": "Authorization",
-												"value": "Bearer {{access_token}}",
+												"value": "{{access_token}}",
 												"type": "text"
 											}
 										],
@@ -7643,7 +7731,7 @@
 										"header": [
 											{
 												"key": "Authorization",
-												"value": "Bearer {{access_token}}",
+												"value": "{{access_token}}",
 												"type": "text"
 											}
 										],
@@ -7681,8 +7769,7 @@
 												},
 												{
 													"key": "itens_por_pagina",
-													"value": "10",
-													"type": "text"
+													"value": "10"
 												}
 											]
 										}
@@ -7805,7 +7892,7 @@
 										"header": [
 											{
 												"key": "Authorization",
-												"value": "Bearer {{access_token}}",
+												"value": "{{access_token}}",
 												"type": "text"
 											},
 											{
@@ -7895,7 +7982,7 @@
 										"header": [
 											{
 												"key": "Authorization",
-												"value": "Bearer {{access_token}}",
+												"value": "{{access_token}}",
 												"type": "text"
 											},
 											{
