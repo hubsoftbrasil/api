@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "2c0c9d50-5455-45c7-a5b5-37e22070fd7c",
 		"name": "Hubsoft API",
-		"description": "Documentação oficial da **API do HubSoft**\n\nO **HubSoft é um software ERP** com foco em provedores de internet / empresas de telecomunicações. Desde seu conceito inicial, o software foi construído e preparado voltado para integrações, de forma que qualquer software possa consumir dados do sistema.\n\nPara utilizar as APIs do HubSoft é importante que você já possua os seguintes dados em posse:\n\n| **Campo** | **Exemplo** | **Observação** |\n| --- | --- | --- |\n| url | [https://api.endereco.com.br](https://api.endereco.com.br) | URL da API |\n| client_id | 89 | Disponibilizado pela equipe HubSoft |\n| client_secret | ONe7Ns48Y30tB | Disponibilizado pela equipe HubSoft |\n| username | [api@solucao.com](mailto:api@solucao.com) | Criado pelo usuário administrador do provedor |\n| password | !@$fas4jFADSF81731 | Criado pelo usuário administrador do provedor |\n\nCom intuito de sempre inovar, a API do HubSoft foi construída em cima das tecnologias mais recentes do mercado. A troca de mensagens com a API é feita através do `HTTP` (Hypertext Transfer Protocol) utilizando o estilo arquitetural REST (Representation State Transfer).\n\n**Exemplo de Endpoint:**\n\n`https://example.com/produto/1234`\n\nAo fazer uma chamada na rota acima utilizando o método `GET`, estaremos fazendo a consulta do produto de código 1234. Porém ao fazer a chamada na mesma rota, utilizando o método `DELETE`, estaremos enviando a instrução para que a API faça a remoção do produto 1234.\n\nDessa forma, todas as funções do CRUD estarão disponíveis pela API, através dos métodos:\n\n\\* **GET** (Consultar)  \n\\* **POST** (Adicionar)  \n\\* **PUT** (Editar)  \n\\* **DELETE** (Apagar)\n\n**Importante:** Nem todos os endpoints são liberados o CRUD completo. Existem endpoints que na versão atual da API estão disponíveis apenas o método GET.",
+		"description": "Documentação oficial da **API do HubSoft**\n\nO **HubSoft é um software ERP** com foco em provedores de internet / empresas de telecomunicações. Desde seu conceito inicial, o software foi construído e preparado voltado para integrações, de forma que qualquer software possa consumir dados do sistema.\n\nPara utilizar as APIs do HubSoft é importante que você já possua os seguintes dados em posse:\n\n| **Campo** | **Exemplo** | **Observação** |\n| --- | --- | --- |\n| url | [https://api.endereco.com.br](https://api.endereco.com.br) | URL da API |\n| client_id | 89 | Criado pelo usuário administrador do provedor |\n| client_secret | ONe7Ns48Y30tB | Criado pelo usuário administrador do provedor |\n| username | [api@solucao.com](https://mailto:api@solucao.com) | Criado pelo usuário administrador do provedor |\n| password | !@$fas4jFADSF81731 | Criado pelo usuário administrador do provedor |\n\nCom intuito de sempre inovar, a API do HubSoft foi construída em cima das tecnologias mais recentes do mercado. A troca de mensagens com a API é feita através do `HTTP` (Hypertext Transfer Protocol) utilizando o estilo arquitetural REST (Representation State Transfer).\n\n**Exemplo de Endpoint:**\n\n`https://example.com/produto/1234`\n\nAo fazer uma chamada na rota acima utilizando o método `GET`, estaremos fazendo a consulta do produto de código 1234. Porém ao fazer a chamada na mesma rota, utilizando o método `DELETE`, estaremos enviando a instrução para que a API faça a remoção do produto 1234.\n\nDessa forma, todas as funções do CRUD estarão disponíveis pela API, através dos métodos:\n\n\\* **GET** (Consultar)  \n\\* **POST** (Adicionar)  \n\\* **PUT** (Editar)  \n\\* **DELETE** (Apagar)\n\n**Importante:** Nem todos os endpoints são liberados o CRUD completo. Existem endpoints que na versão atual da API estão disponíveis apenas o método GET.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
@@ -270,7 +270,7 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "",
+										"value": "{{access_token}}",
 										"type": "text"
 									}
 								],
@@ -614,6 +614,11 @@
 												"name": "Content-Type",
 												"value": "application/json",
 												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"type": "text"
 											}
 										],
 										"body": {
@@ -820,6 +825,11 @@
 												"key": "Content-Type",
 												"value": "application/json",
 												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"type": "text"
 											}
 										],
 										"url": {
@@ -892,6 +902,11 @@
 												"key": "Content-Type",
 												"name": "Content-Type",
 												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
 												"type": "text"
 											}
 										],
@@ -1074,7 +1089,13 @@
 									"name": "Sucesso",
 									"originalRequest": {
 										"method": "GET",
-										"header": []
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"type": "text"
+											}
+										]
 									},
 									"_postman_previewlanguage": "json",
 									"header": null,
@@ -1179,7 +1200,13 @@
 									"name": "Sucesso",
 									"originalRequest": {
 										"method": "GET",
-										"header": []
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"type": "text"
+											}
+										]
 									},
 									"_postman_previewlanguage": "json",
 									"header": null,
