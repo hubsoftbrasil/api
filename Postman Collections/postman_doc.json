@@ -7439,7 +7439,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{url}}/api/v1/integracao/nota_fiscal/nfse?tipo_data=data_cadastro&data_inicio=2020-01-01&data_fim=2022-08-31&documento=29507487000170&pagina=0&itens_por_pagina=10&order_type=asc&order_by=id_nota_fiscal",
+									"raw": "{{url}}/api/v1/integracao/nota_fiscal/nfse?tipo_data=data_cadastro&data_inicio=2020-01-01&data_fim=2022-08-31&documento=29507487000170&pagina=0&itens_por_pagina=10&order_type=asc&order_by=id_nfse",
 									"host": [
 										"{{url}}"
 									],
@@ -7488,7 +7488,7 @@
 										},
 										{
 											"key": "order_by",
-											"value": "id_nota_fiscal",
+											"value": "id_nfse",
 											"description": "(Opcional) Coluna para ordenação: id_nota_fiscal, numero"
 										}
 									]
@@ -7975,7 +7975,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{url}}/api/v1/integracao/nota_fiscal/telecom?tipo_data=data_emissao&data_inicio=2020-01-01&data_fim=2022-08-31&documento=29507487000185&modelo=21&pagina=0&itens_por_pagina=10&order_type=asc&order_by=id_nfse",
+									"raw": "{{url}}/api/v1/integracao/nota_fiscal/telecom?tipo_data=data_emissao&data_inicio=2020-01-01&data_fim=2022-08-31&documento=29507487000185&modelo=21&pagina=0&itens_por_pagina=10&order_type=asc&order_by=id_nota_fiscal",
 									"host": [
 										"{{url}}"
 									],
@@ -8029,7 +8029,7 @@
 										},
 										{
 											"key": "order_by",
-											"value": "id_nfse",
+											"value": "id_nota_fiscal",
 											"description": "(Opcional) Coluna para ordenação: id_nota_fiscal, numero_nota"
 										}
 									]
@@ -8870,11 +8870,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{url}}api/v1/integracao/prospecto?busca=nome_razaosocial&termo_busca=xpto",
+							"raw": "{{url}}/api/v1/integracao/prospecto?busca=nome_razaosocial&termo_busca=xpto",
 							"host": [
-								"{{url}}api"
+								"{{url}}"
 							],
 							"path": [
+								"api",
 								"v1",
 								"integracao",
 								"prospecto"
