@@ -9509,7 +9509,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"descricao\": \"ALERTA TESTE CADASTRO API\",\n  \"visivel_via_api\": true,\n  \"atendimento\": true,\n  \"cidade\": [\n    {\n      \"id_cidade\": 6976,\n      \"bairros\": [\n        {\n          \"nome\": \"TESTE\"\n        }\n      ]\n    }\n  ],\n  \"grupo_cliente\": [\n    {\n      \"id_grupo_cliente\": 46\n    }\n  ],\n  \"grupo_cliente_servico\": [\n    {\n      \"id\": 22\n    }\n  ],\n  \"interface_conexao\": [\n    {\n      \"id_interface_conexao\": 1478\n    }\n  ],\n  \"caixa_optica\": [\n    {\n      \"id_caixa_optica\": 1221\n    }\n  ],\n  \"servico_status\": [\n    {\n      \"id_servico_status\": 9\n    }\n  ],\n  \"data_inicio\": \"2023-08-09\",\n  \"data_fim\": \"2023-08-10\"\n}",
+									"raw": "{\n  \"descricao\": \"ALERTA TESTE CADASTRO API\",\n  \"visivel_via_api\": true,\n  \"atendimento\": true,\n  \"cidade\": [\n    {\n      \"id_cidade\": 6976,\n      \"bairros\": [\n        {\n          \"nome\": \"TESTE\"\n        }\n      ]\n    }\n  ],\n  \"grupo_cliente\": [\n    {\n      \"id_grupo_cliente\": 46\n    }\n  ],\n  \"grupo_cliente_servico\": [\n    {\n      \"id\": 22\n    }\n  ],\n  \"interface_conexao\": [\n    {\n      \"id_interface_conexao\": 1478\n    }\n  ],\n  \"caixa_optica\": [\n    {\n      \"id_caixa_optica\": 1221\n    }\n  ],\n  \"servico_status\": [\n    {\n      \"id_servico_status\": 9\n    }\n  ],\n  \"data_inicio\": \"2023-08-09\",\n  \"data_fim\": \"2023-08-10\",\n  \"hora_inicio\": \"09:15\",\n  \"hora_fim\": \"16:48\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -10594,30 +10594,37 @@
 	],
 	"variable": [
 		{
+			"id": "fcc5d849-cb98-42b2-b74e-87fd0407941c",
 			"key": "url",
 			"value": ""
 		},
 		{
+			"id": "9a78c9a5-f9c0-4e5d-ab0b-00ba5373f893",
 			"key": "client_id",
 			"value": ""
 		},
 		{
+			"id": "a1967405-25d3-4b0e-8257-3885515ba750",
 			"key": "client_secret",
 			"value": ""
 		},
 		{
+			"id": "87c0a807-afb0-40f3-abfe-99bc373b8e19",
 			"key": "username",
 			"value": ""
 		},
 		{
+			"id": "217e44ee-91fd-49ce-81de-83eb351f5457",
 			"key": "password",
 			"value": ""
 		},
 		{
+			"id": "ce1bb31a-b05a-407e-9edd-335cbb6fa340",
 			"key": "grant_type",
 			"value": ""
 		},
 		{
+			"id": "876ba5c2-7385-40cc-842f-5e4f21bddc6c",
 			"key": "access_token",
 			"value": ""
 		}
