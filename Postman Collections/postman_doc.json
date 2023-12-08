@@ -2955,7 +2955,7 @@
 										{
 											"key": "itens_por_pagina",
 											"value": "integer",
-											"description": "(Opcional) Itens por Página. Se não preenchido será atribuído 100 por padrão. Máximo: 500"
+											"description": "(Opcional) Itens por Página. Se não preenchido será atribuído 20 por padrão. Máximo: 500"
 										},
 										{
 											"key": "data_inicio",
