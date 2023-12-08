@@ -2935,7 +2935,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{url}}/api/v1/integracao/estoque/movimento_estoque?pagina=integer&itens_por_pagina=integer&data_inicio=YYYY-MM-DD HH:mm:ss&data_fim=YYYY-MM-DD HH:mm:ss&tipo_data=cadastro,edicao,movimento",
+									"raw": "{{url}}/api/v1/integracao/estoque/movimento_estoque?pagina=integer&itens_por_pagina=integer&data_inicio=YYYY-MM-DD &data_fim=YYYY-MM-DD &tipo_data=cadastro,edicao,movimento",
 									"host": [
 										"{{url}}"
 									],
@@ -2959,12 +2959,12 @@
 										},
 										{
 											"key": "data_inicio",
-											"value": "YYYY-MM-DD HH:mm:ss",
+											"value": "YYYY-MM-DD ",
 											"description": "(Opcional) Data no Formato `DateTime`"
 										},
 										{
 											"key": "data_fim",
-											"value": "YYYY-MM-DD HH:mm:ss",
+											"value": "YYYY-MM-DD ",
 											"description": "(Opcional) Data no Formato `DateTime`"
 										},
 										{
