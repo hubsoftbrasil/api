@@ -5914,7 +5914,8 @@
 					"id": "67f30b18-daba-4b96-bc44-35072db76cee"
 				}
 			],
-			"id": "3619cf3a-3e0f-4166-b498-1d3a7624a6d7"
+			"id": "3619cf3a-3e0f-4166-b498-1d3a7624a6d7",
+			"description": "**Necessário**\n\nPara fazer requisições nos dados de `Estoque`, é necessário que você já possua o `access_token`, conseguido na etapa `(oAuth)`."
 		},
 		{
 			"name": "Estoque Novo (Desenvolvimento)",
@@ -9608,7 +9609,8 @@
 					"id": "f741004b-44b4-46e1-8ac2-2d33ce0544be"
 				}
 			],
-			"id": "aa7bec20-e5cc-4ba8-b402-c0519ac34e33"
+			"id": "aa7bec20-e5cc-4ba8-b402-c0519ac34e33",
+			"description": "**Necessário**\n\nPara fazer requisições nos dados de `Estoque`, é necessário que você já possua o `access_token`, conseguido na etapa `(oAuth)`."
 		},
 		{
 			"name": "Financeiro",
