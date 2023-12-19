@@ -11496,10 +11496,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{url}}/api/v1/integracao/prospecto?busca=xpto",
-							"host": [
-								"{{url}}"
-							],
+							"raw": "/api/v1/integracao/prospecto?busca=nome_razaosocial&termo_busca=xpto",
 							"path": [
 								"api",
 								"v1",
@@ -11509,11 +11506,15 @@
 							"query": [
 								{
 									"key": "busca",
+									"value": "nome_razaosocial"
+								},
+								{
+									"key": "termo_busca",
 									"value": "xpto"
 								}
 							]
 						},
-						"description": "## Rota e parâmetros da requisição\n\nA rota em questão é do tipo **`GET`** e é necessário informar o parâmetro **busca** no formato `_query string_`\n\n**\\*Nota :** A busca acontecerá em cima do **Nome ou Razão Social** que estiver cadastrado no prospecto."
+						"description": "## Rota e parâmetros da requisição\n\nNo método `GET,` irá consultar os dados dos prospectos e retornar um `JSON` como resposta. Os seguintes parâmetros devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| busca | Tipo de busca que deseja no prospecto | Sim |\n| termo_busca | Busca os prospectos de acordo com o tipo de busca que for definido | Sim |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| busca | nome_razaosocial, telefone, origem, email, id_externo | Nenhum |\n| termo_busca | Campo livre (Qualquer valor será aceito) | Nenhum |"
 					},
 					"response": [
 						{
