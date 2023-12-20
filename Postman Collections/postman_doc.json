@@ -8072,7 +8072,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"unidade_medida\":\"UN\",\n    \"valor_compra\":25.93,\n    \"valor_venda\":39.99\n}",
+									"raw": "{\n    \"controle_patrimonial\": true,\n    \"epi\": true,\n    \"nome\": \"teste api 265656\",\n    \"valor_compra\":25.93,\n    \"valor_venda\":39.99,\n    \"estoque_minimo\": 6,\n    \"produto_marca\" : {\n        \"id_produto_marca\": 1\n    },\n    \"codigo\": 333434553,\n    \"descricao\": \"teste\",\n    \"codigo_ean\": 56,\n    \"codigo_ean_trib\": 753,\n    \"produto_tipo\": {\n        \"id_produto_tipo\": 1\n    },\n    \"ncm\": \"01012100\",\n    \"cest\": \"0100100\",\n    \"cst_origem\": 5,\n    \"produto_categoria\": {\n        \"id_categoria\": 5\n    },\n    \"unidade_medida\": \"L\",\n    \"peso_liquido\": 55,\n    \"peso_bruto\": 55,\n    \"altura\": 67,\n    \"largura\": 677,\n    \"profundidade\": 89,\n    \"espessura\": 833,\n    \"comprimento\": 10\n}",
 									"options": {
 										"raw": {
 											"language": "json"
