@@ -24,7 +24,7 @@ Exemplo de Código em PHP::
 	    curl_setopt($req, CURLOPT_RETURNTRANSFER, true);
 	    if($method == "POST"){
 	        curl_setopt($req, CURLOPT_POST, true );
-	        curl_setopt($req, CURLOPT_POSTFIELDS, http_build_query($body));
+	        curl_setopt($req, CURLOPT_POSTFIELDS, json_encode($body));
 	    }
 	    $respCode = curl_getinfo($req, CURLINFO_HTTP_CODE);
 	    $resp = json_decode(curl_exec($req), true);
