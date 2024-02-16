@@ -4733,6 +4733,260 @@
 							]
 						},
 						{
+							"name": "Encontrar por MAC/Serial/IDProprio",
+							"id": "eb59345b-147c-4336-b57c-cf956e79c247",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"description": "Bearer Token obtido na autenticação"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/v1/integracao/estoque/produto_item/consultar?busca&termo_busca",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"integracao",
+										"estoque",
+										"produto_item",
+										"consultar"
+									],
+									"query": [
+										{
+											"key": "busca",
+											"value": null,
+											"description": "(Obrigatório) Tipo de busca que deseja fazer no item. Valores aceitos: mac_address, codigo_item, numero_serie, identificador_proprio",
+											"type": "text"
+										},
+										{
+											"key": "termo_busca",
+											"value": null,
+											"description": "(Obrigatório) Termo utilizado para fazer a busca",
+											"type": "text"
+										}
+									]
+								},
+								"description": "**GET**\n\nNo método `GET`, será possível consultar um produto individualmente. Esse endpoint pode ser útil quando for necessário verificar / sincronizar produto por produto."
+							},
+							"response": [
+								{
+									"id": "2e0e50a8-f0f7-46e0-991b-bd7f173c86e8",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Bearer Token obtido na autenticação"
+											}
+										],
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/estoque/produto_item/:id_produto_item",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"estoque",
+												"produto_item",
+												":id_produto_item"
+											],
+											"variable": [
+												{
+													"key": "id_produto_item",
+													"value": "3",
+													"description": "(Integer) ID do Produto Item já cadastrado anteriormente"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 06 Feb 2023 12:56:41 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 13:56:41 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Item de Produto de ID 3 consultado com sucesso\",\n    \"produto\": {\n        \"id_produto_item\": 3,\n        \"produto\": {\n            \"id_produto\": 1,\n            \"nome\": \"Airgrid\",\n            \"agrupado\": false\n        },\n        \"local_estoque\": {\n            \"id_local_estoque\": 16,\n            \"descricao\": \"LOCAL PARA TESTE WIKI\"\n        },\n        \"produto_item_status\": {\n            \"id_produto_item_status\": 2,\n            \"descricao\": \"ESTOQUE\",\n            \"prefixo\": \"estoque\"\n        },\n        \"identificador_proprio\": null,\n        \"codigo_item\": 12342,\n        \"numero_serie\": \"123131231\",\n        \"mac_address\": \"00:AA:BB:33:DD:EE\",\n        \"observacoes\": \"teste\"\n    }\n}"
+								},
+								{
+									"id": "04701903-bff0-40b1-b960-d573d6d8f895",
+									"name": "Erro",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Bearer Token obtido na autenticação"
+											}
+										],
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/estoque/produto_item/:id_produto_item",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"estoque",
+												"produto_item",
+												":id_produto_item"
+											],
+											"variable": [
+												{
+													"key": "id_produto_item",
+													"value": "323131231abc",
+													"description": "(Integer) ID do Produto Item já cadastrado anteriormente"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 06 Feb 2023 13:09:19 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 14:09:19 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"error\",\n    \"msg\": \"Favor preencher os campos obrigatórios de acordo com as especificações\",\n    \"errors\": [\n        \"O campo id_produto_item deve ser do tipo integer\"\n    ]\n}"
+								}
+							]
+						},
+						{
 							"name": "Adicionar",
 							"id": "6137caec-7dd3-4049-879b-fc878b0a7b63",
 							"protocolProfileBehavior": {
