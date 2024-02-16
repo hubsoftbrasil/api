@@ -4897,7 +4897,7 @@
 											}
 										],
 										"url": {
-											"raw": "{{url}}/api/v1/integracao/estoque/produto_item/:id_produto_item",
+											"raw": "{{url}}/api/v1/integracao/estoque/produto_item/consultar?busca=mac&termo_busca=58:10:67:34:34:34",
 											"host": [
 												"{{url}}"
 											],
@@ -4907,13 +4907,16 @@
 												"integracao",
 												"estoque",
 												"produto_item",
-												":id_produto_item"
+												"consultar"
 											],
-											"variable": [
+											"query": [
 												{
-													"key": "id_produto_item",
-													"value": "323131231abc",
-													"description": "(Integer) ID do Produto Item já cadastrado anteriormente"
+													"key": "busca",
+													"value": "mac"
+												},
+												{
+													"key": "termo_busca",
+													"value": "58:10:67:34:34:34"
 												}
 											]
 										}
@@ -4985,7 +4988,7 @@
 									],
 									"cookie": [],
 									"responseTime": null,
-									"body": "{\n    \"status\": \"error\",\n    \"msg\": \"Favor preencher os campos obrigatórios de acordo com as especificações\",\n    \"errors\": [\n        \"O campo id_produto_item deve ser do tipo integer\"\n    ]\n}"
+									"body": "{\n    \"status\": \"error\",\n    \"msg\": \"O tipo de busca (mac) não é válido | Valores aceitos para esse campo: mac_address,codigo_item,numero_serie,identificador_proprio\"\n}"
 								}
 							]
 						},
