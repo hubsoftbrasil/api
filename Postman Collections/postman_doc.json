@@ -4209,790 +4209,6 @@
 					"name": "Produto Item",
 					"item": [
 						{
-							"name": "Listar",
-							"id": "d12b5ebc-cd31-491c-85c4-f5e54b4c27f5",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "{{access_token}}",
-										"description": "Bearer Token obtido na autenticação"
-									}
-								],
-								"url": {
-									"raw": "{{url}}/api/v1/integracao/estoque/produto_item?id_produto=integer&pagina=integer&itens_por_pagina=integer",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"api",
-										"v1",
-										"integracao",
-										"estoque",
-										"produto_item"
-									],
-									"query": [
-										{
-											"key": "id_produto",
-											"value": "integer",
-											"description": "(Obrigatório) ID do Produto que terão seus itens listados"
-										},
-										{
-											"key": "pagina",
-											"value": "integer",
-											"description": "(Obrigatório) Número da Página"
-										},
-										{
-											"key": "itens_por_pagina",
-											"value": "integer",
-											"description": "(Opcional) Itens por Página. Se não preenchido será atributo 100 por padrão. Máximo: 500"
-										}
-									]
-								},
-								"description": "**GET**\n\nNo método `GET`, irá consultar/listar os dados de produtos e retornar um `JSON` como resposta. Os dados serão retornados de forma paginada, portanto fique atento ao conjunto da dados \"paginacao\" que é retornado na resposta, para saber se será necessário consultar outras páginas ou não.\n\nOs seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_produto | ID do Produto | Sim |\n| pagina | Página a ser exibida | Sim |\n| itens_por_pagina | Itens por Página a serem exibidos. Mínimo: 1, Máximo: 500. | Não |\n| data_inicio | Data de início da filtragem de dados | Não |\n| data_fim | Data final da filtragem de dados | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_produto | `Integer` |  |\n| pagina | `Integer` | `NULL` |\n| itens_por_pagina | `Integer` | 100 |\n| data_inicio | `Date`(YYYY-MM-DD) | `NULL` |\n| data_fim | `Date` (YYYY-MM-DD) | `NULL` |"
-							},
-							"response": [
-								{
-									"id": "241b96ba-4a11-4eea-b1a4-40369d56ff7d",
-									"name": "Sucesso",
-									"originalRequest": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "Authorization",
-												"value": "{{access_token}}",
-												"description": "Bearer Token obtido na autenticação"
-											}
-										],
-										"url": {
-											"raw": "{{url}}/api/v1/integracao/estoque/produto_item?id_produto=1&pagina=0&itens_por_pagina=10",
-											"host": [
-												"{{url}}"
-											],
-											"path": [
-												"api",
-												"v1",
-												"integracao",
-												"estoque",
-												"produto_item"
-											],
-											"query": [
-												{
-													"key": "id_produto",
-													"value": "1",
-													"description": "(Obrigatório) ID do Produto que terão seus itens listados"
-												},
-												{
-													"key": "pagina",
-													"value": "0",
-													"description": "(Obrigatório) Número da Página"
-												},
-												{
-													"key": "itens_por_pagina",
-													"value": "10",
-													"description": "(Opcional) Itens por Página. Se não preenchido será atributo 100 por padrão. Máximo: 500"
-												}
-											]
-										}
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Server",
-											"value": "nginx/1.16.1"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										},
-										{
-											"key": "Vary",
-											"value": "Accept-Encoding"
-										},
-										{
-											"key": "X-Powered-By",
-											"value": "PHP/7.1.33"
-										},
-										{
-											"key": "Access-Control-Allow-Origin",
-											"value": "*"
-										},
-										{
-											"key": "Access-Control-Allow-Methods",
-											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
-										},
-										{
-											"key": "Access-Control-Allow-Headers",
-											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
-										},
-										{
-											"key": "Access-Control-Max-Age",
-											"value": "1728000"
-										},
-										{
-											"key": "Access-Control-Allow-Credentials",
-											"value": "true"
-										},
-										{
-											"key": "Cache-Control",
-											"value": "no-cache, private"
-										},
-										{
-											"key": "Date",
-											"value": "Mon, 06 Feb 2023 12:51:58 GMT"
-										},
-										{
-											"key": "Set-Cookie",
-											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 13:51:58 GMT; Max-Age=3600; path=/; httponly"
-										},
-										{
-											"key": "Content-Encoding",
-											"value": "gzip"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Dados consultados com sucesso\",\n    \"paginacao\": {\n        \"primeira_pagina\": 0,\n        \"ultima_pagina\": 4397,\n        \"pagina_atual\": 0,\n        \"total_registros\": 43971\n    },\n    \"produto_itens\": [\n        {\n            \"id_produto_item\": 1,\n            \"produto\": {\n                \"id_produto\": 1,\n                \"nome\": \"Airgrid\",\n                \"agrupado\": false\n            },\n            \"local_estoque\": {\n                \"id_local_estoque\": 1,\n                \"descricao\": \"Estoque na Cidade XPTO\"\n            },\n            \"produto_item_status\": {\n                \"id_produto_item_status\": 1,\n                \"descricao\": \"Vendido\",\n                \"prefixo\": \"vendido\"\n            },\n            \"identificador_proprio\": null,\n            \"codigo_item\": 43948,\n            \"numero_serie\": null,\n            \"mac_address\": null,\n            \"observacoes\": \"teste de observação\"\n        },\n        {\n            \"id_produto_item\": 2,\n            \"produto\": {\n                \"id_produto\": 1,\n                \"nome\": \"Airgrid\",\n                \"agrupado\": false\n            },\n            \"local_estoque\": {\n                \"id_local_estoque\": 4,\n                \"descricao\": \"Local de Estoque de Teste\"\n            },\n            \"produto_item_status\": {\n                \"id_produto_item_status\": 8,\n                \"descricao\": \"DESCARTADO\",\n                \"prefixo\": \"descartado\"\n            },\n            \"identificador_proprio\": null,\n            \"codigo_item\": 43949,\n            \"numero_serie\": \"12341341234\",\n            \"mac_address\": null,\n            \"observacoes\": \"teste de observação 3\"\n        },\n        {\n            \"id_produto_item\": 3,\n            \"produto\": {\n                \"id_produto\": 1,\n                \"nome\": \"Airgrid\",\n                \"agrupado\": false\n            },\n            \"local_estoque\": {\n                \"id_local_estoque\": 16,\n                \"descricao\": \"LOCAL PARA TESTE WIKI\"\n            },\n            \"produto_item_status\": {\n                \"id_produto_item_status\": 2,\n                \"descricao\": \"ESTOQUE\",\n                \"prefixo\": \"estoque\"\n            },\n            \"identificador_proprio\": null,\n            \"codigo_item\": 12342,\n            \"numero_serie\": \"123131231\",\n            \"mac_address\": \"00:AA:BB:33:DD:EE\",\n            \"observacoes\": \"teste\"\n        },\n        {\n            \"id_produto_item\": 4,\n            \"produto\": {\n                \"id_produto\": 1,\n                \"nome\": \"Airgrid\",\n                \"agrupado\": false\n            },\n            \"local_estoque\": {\n                \"id_local_estoque\": 1,\n                \"descricao\": \"Estoque na Cidade XPTO\"\n            },\n            \"produto_item_status\": {\n                \"id_produto_item_status\": 5,\n                \"descricao\": \"Perdido\",\n                \"prefixo\": \"perdido\"\n            },\n            \"identificador_proprio\": null,\n            \"codigo_item\": 12358,\n            \"numero_serie\": null,\n            \"mac_address\": null,\n            \"observacoes\": null\n        },\n        {\n            \"id_produto_item\": 5,\n            \"produto\": {\n                \"id_produto\": 1,\n                \"nome\": \"Airgrid\",\n                \"agrupado\": false\n            },\n            \"local_estoque\": {\n                \"id_local_estoque\": 1,\n                \"descricao\": \"Estoque na Cidade XPTO\"\n            },\n            \"produto_item_status\": {\n                \"id_produto_item_status\": 1,\n                \"descricao\": \"Vendido\",\n                \"prefixo\": \"vendido\"\n            },\n            \"identificador_proprio\": null,\n            \"codigo_item\": 12359,\n            \"numero_serie\": null,\n            \"mac_address\": null,\n            \"observacoes\": \"teste de observações 2\"\n        },\n        {\n            \"id_produto_item\": 6,\n            \"produto\": {\n                \"id_produto\": 1,\n                \"nome\": \"Airgrid\",\n                \"agrupado\": false\n            },\n            \"local_estoque\": {\n                \"id_local_estoque\": 1,\n                \"descricao\": \"Estoque na Cidade XPTO\"\n            },\n            \"produto_item_status\": {\n                \"id_produto_item_status\": 6,\n                \"descricao\": \"MANUTENÇÃO\",\n                \"prefixo\": \"manutencao\"\n            },\n            \"identificador_proprio\": null,\n            \"codigo_item\": 12360,\n            \"numero_serie\": \"123412342\",\n            \"mac_address\": null,\n            \"observacoes\": \"teste de observação 3\"\n        },\n        {\n            \"id_produto_item\": 7,\n            \"produto\": {\n                \"id_produto\": 1,\n                \"nome\": \"Airgrid\",\n                \"agrupado\": false\n            },\n            \"local_estoque\": {\n                \"id_local_estoque\": 1,\n                \"descricao\": \"Estoque na Cidade XPTO\"\n            },\n            \"produto_item_status\": {\n                \"id_produto_item_status\": 10,\n                \"descricao\": \"Ordem de Serviço\",\n                \"prefixo\": \"ordem_servico\"\n            },\n            \"identificador_proprio\": null,\n            \"codigo_item\": 45361,\n            \"numero_serie\": null,\n            \"mac_address\": null,\n            \"observacoes\": null\n        },\n        {\n            \"id_produto_item\": 8,\n            \"produto\": {\n                \"id_produto\": 1,\n                \"nome\": \"Airgrid\",\n                \"agrupado\": false\n            },\n            \"local_estoque\": {\n                \"id_local_estoque\": 1,\n                \"descricao\": \"Estoque na Cidade XPTO\"\n            },\n            \"produto_item_status\": {\n                \"id_produto_item_status\": 10,\n                \"descricao\": \"Ordem de Serviço\",\n                \"prefixo\": \"ordem_servico\"\n            },\n            \"identificador_proprio\": null,\n            \"codigo_item\": 43950,\n            \"numero_serie\": null,\n            \"mac_address\": null,\n            \"observacoes\": null\n        },\n        {\n            \"id_produto_item\": 9,\n            \"produto\": {\n                \"id_produto\": 1,\n                \"nome\": \"Airgrid\",\n                \"agrupado\": false\n            },\n            \"local_estoque\": {\n                \"id_local_estoque\": 1,\n                \"descricao\": \"Estoque na Cidade XPTO\"\n            },\n            \"produto_item_status\": {\n                \"id_produto_item_status\": 1,\n                \"descricao\": \"Vendido\",\n                \"prefixo\": \"vendido\"\n            },\n            \"identificador_proprio\": null,\n            \"codigo_item\": 963,\n            \"numero_serie\": null,\n            \"mac_address\": null,\n            \"observacoes\": null\n        },\n        {\n            \"id_produto_item\": 10,\n            \"produto\": {\n                \"id_produto\": 1,\n                \"nome\": \"Airgrid\",\n                \"agrupado\": false\n            },\n            \"local_estoque\": {\n                \"id_local_estoque\": 1,\n                \"descricao\": \"Estoque na Cidade XPTO\"\n            },\n            \"produto_item_status\": {\n                \"id_produto_item_status\": 1,\n                \"descricao\": \"Vendido\",\n                \"prefixo\": \"vendido\"\n            },\n            \"identificador_proprio\": null,\n            \"codigo_item\": 43951,\n            \"numero_serie\": null,\n            \"mac_address\": null,\n            \"observacoes\": null\n        }\n    ]\n}"
-								},
-								{
-									"id": "f711c7f7-e88d-4ffb-ba62-7584c3f1957f",
-									"name": "Erro",
-									"originalRequest": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "Authorization",
-												"value": "{{access_token}}",
-												"description": "Bearer Token obtido na autenticação"
-											}
-										],
-										"url": {
-											"raw": "{{url}}/api/v1/integracao/estoque/produto_item",
-											"host": [
-												"{{url}}"
-											],
-											"path": [
-												"api",
-												"v1",
-												"integracao",
-												"estoque",
-												"produto_item"
-											],
-											"query": [
-												{
-													"key": "id_produto",
-													"value": "1",
-													"description": "(Obrigatório) ID do Produto que terão seus itens listados",
-													"disabled": true
-												},
-												{
-													"key": "pagina",
-													"value": "0",
-													"description": "(Obrigatório) Número da Página",
-													"disabled": true
-												},
-												{
-													"key": "itens_por_pagina",
-													"value": "10",
-													"description": "(Opcional) Itens por Página. Se não preenchido será atributo 100 por padrão. Máximo: 500",
-													"disabled": true
-												}
-											]
-										}
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Server",
-											"value": "nginx/1.16.1"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										},
-										{
-											"key": "Vary",
-											"value": "Accept-Encoding"
-										},
-										{
-											"key": "X-Powered-By",
-											"value": "PHP/7.1.33"
-										},
-										{
-											"key": "Access-Control-Allow-Origin",
-											"value": "*"
-										},
-										{
-											"key": "Access-Control-Allow-Methods",
-											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
-										},
-										{
-											"key": "Access-Control-Allow-Headers",
-											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
-										},
-										{
-											"key": "Access-Control-Max-Age",
-											"value": "1728000"
-										},
-										{
-											"key": "Access-Control-Allow-Credentials",
-											"value": "true"
-										},
-										{
-											"key": "Cache-Control",
-											"value": "no-cache, private"
-										},
-										{
-											"key": "Date",
-											"value": "Mon, 06 Feb 2023 12:52:58 GMT"
-										},
-										{
-											"key": "Set-Cookie",
-											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 13:52:58 GMT; Max-Age=3600; path=/; httponly"
-										},
-										{
-											"key": "Content-Encoding",
-											"value": "gzip"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"status\": \"error\",\n    \"msg\": \"Favor preencher os campos obrigatórios de acordo com as especificações\",\n    \"errors\": [\n        \"O campo id produto é obrigatório.\",\n        \"O campo pagina é obrigatório.\"\n    ]\n}"
-								}
-							]
-						},
-						{
-							"name": "Encontrar por ID",
-							"id": "9e99a697-8945-447f-939c-133d1a4258d1",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "{{access_token}}",
-										"description": "Bearer Token obtido na autenticação"
-									}
-								],
-								"url": {
-									"raw": "{{url}}/api/v1/integracao/estoque/produto_item/:id_produto_item",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"api",
-										"v1",
-										"integracao",
-										"estoque",
-										"produto_item",
-										":id_produto_item"
-									],
-									"variable": [
-										{
-											"key": "id_produto_item",
-											"value": "integer",
-											"description": "(Integer) ID do Produto Item já cadastrado anteriormente"
-										}
-									]
-								},
-								"description": "**GET**\n\nNo método `GET`, será possível consultar um produto individualmente. Esse endpoint pode ser útil quando for necessário verificar / sincronizar produto por produto."
-							},
-							"response": [
-								{
-									"id": "da71cdbd-945b-46f1-a210-2e42fe0671cc",
-									"name": "Sucesso",
-									"originalRequest": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "Authorization",
-												"value": "{{access_token}}",
-												"description": "Bearer Token obtido na autenticação"
-											}
-										],
-										"url": {
-											"raw": "{{url}}/api/v1/integracao/estoque/produto_item/:id_produto_item",
-											"host": [
-												"{{url}}"
-											],
-											"path": [
-												"api",
-												"v1",
-												"integracao",
-												"estoque",
-												"produto_item",
-												":id_produto_item"
-											],
-											"variable": [
-												{
-													"key": "id_produto_item",
-													"value": "3",
-													"description": "(Integer) ID do Produto Item já cadastrado anteriormente"
-												}
-											]
-										}
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Server",
-											"value": "nginx/1.16.1"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										},
-										{
-											"key": "Vary",
-											"value": "Accept-Encoding"
-										},
-										{
-											"key": "X-Powered-By",
-											"value": "PHP/7.1.33"
-										},
-										{
-											"key": "Access-Control-Allow-Origin",
-											"value": "*"
-										},
-										{
-											"key": "Access-Control-Allow-Methods",
-											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
-										},
-										{
-											"key": "Access-Control-Allow-Headers",
-											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
-										},
-										{
-											"key": "Access-Control-Max-Age",
-											"value": "1728000"
-										},
-										{
-											"key": "Access-Control-Allow-Credentials",
-											"value": "true"
-										},
-										{
-											"key": "Cache-Control",
-											"value": "no-cache, private"
-										},
-										{
-											"key": "Date",
-											"value": "Mon, 06 Feb 2023 12:56:41 GMT"
-										},
-										{
-											"key": "Set-Cookie",
-											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 13:56:41 GMT; Max-Age=3600; path=/; httponly"
-										},
-										{
-											"key": "Content-Encoding",
-											"value": "gzip"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Item de Produto de ID 3 consultado com sucesso\",\n    \"produto\": {\n        \"id_produto_item\": 3,\n        \"produto\": {\n            \"id_produto\": 1,\n            \"nome\": \"Airgrid\",\n            \"agrupado\": false\n        },\n        \"local_estoque\": {\n            \"id_local_estoque\": 16,\n            \"descricao\": \"LOCAL PARA TESTE WIKI\"\n        },\n        \"produto_item_status\": {\n            \"id_produto_item_status\": 2,\n            \"descricao\": \"ESTOQUE\",\n            \"prefixo\": \"estoque\"\n        },\n        \"identificador_proprio\": null,\n        \"codigo_item\": 12342,\n        \"numero_serie\": \"123131231\",\n        \"mac_address\": \"00:AA:BB:33:DD:EE\",\n        \"observacoes\": \"teste\"\n    }\n}"
-								},
-								{
-									"id": "57216064-3785-47f2-b700-cb10b7a27e6e",
-									"name": "Erro",
-									"originalRequest": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "Authorization",
-												"value": "{{access_token}}",
-												"description": "Bearer Token obtido na autenticação"
-											}
-										],
-										"url": {
-											"raw": "{{url}}/api/v1/integracao/estoque/produto_item/:id_produto_item",
-											"host": [
-												"{{url}}"
-											],
-											"path": [
-												"api",
-												"v1",
-												"integracao",
-												"estoque",
-												"produto_item",
-												":id_produto_item"
-											],
-											"variable": [
-												{
-													"key": "id_produto_item",
-													"value": "323131231abc",
-													"description": "(Integer) ID do Produto Item já cadastrado anteriormente"
-												}
-											]
-										}
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Server",
-											"value": "nginx/1.16.1"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										},
-										{
-											"key": "Vary",
-											"value": "Accept-Encoding"
-										},
-										{
-											"key": "X-Powered-By",
-											"value": "PHP/7.1.33"
-										},
-										{
-											"key": "Access-Control-Allow-Origin",
-											"value": "*"
-										},
-										{
-											"key": "Access-Control-Allow-Methods",
-											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
-										},
-										{
-											"key": "Access-Control-Allow-Headers",
-											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
-										},
-										{
-											"key": "Access-Control-Max-Age",
-											"value": "1728000"
-										},
-										{
-											"key": "Access-Control-Allow-Credentials",
-											"value": "true"
-										},
-										{
-											"key": "Cache-Control",
-											"value": "no-cache, private"
-										},
-										{
-											"key": "Date",
-											"value": "Mon, 06 Feb 2023 13:09:19 GMT"
-										},
-										{
-											"key": "Set-Cookie",
-											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 14:09:19 GMT; Max-Age=3600; path=/; httponly"
-										},
-										{
-											"key": "Content-Encoding",
-											"value": "gzip"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"status\": \"error\",\n    \"msg\": \"Favor preencher os campos obrigatórios de acordo com as especificações\",\n    \"errors\": [\n        \"O campo id_produto_item deve ser do tipo integer\"\n    ]\n}"
-								}
-							]
-						},
-						{
-							"name": "Consultar",
-							"id": "eb59345b-147c-4336-b57c-cf956e79c247",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "{{access_token}}",
-										"description": "Bearer Token obtido na autenticação"
-									}
-								],
-								"url": {
-									"raw": "{{url}}/api/v1/integracao/estoque/produto_item/consultar?busca&termo_busca",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"api",
-										"v1",
-										"integracao",
-										"estoque",
-										"produto_item",
-										"consultar"
-									],
-									"query": [
-										{
-											"key": "busca",
-											"value": null,
-											"description": "(Obrigatório) Tipo de busca que deseja fazer no item. Valores aceitos: mac_address, codigo_item, numero_serie, identificador_proprio",
-											"type": "text"
-										},
-										{
-											"key": "termo_busca",
-											"value": null,
-											"description": "(Obrigatório) Termo utilizado para fazer a busca",
-											"type": "text"
-										}
-									]
-								},
-								"description": "**GET**\n\nNo método `GET`, será possível consultar um item do produto individualmente. Ele irá retornar um `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| busca | Tipo de busca que deseja fazer no cliente | Sim |\n| termo_busca | Termo utilizado para fazer a busca | Sim |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| busca | mac_address, codigo_item, numero_serie, identificador_proprio | Nenhum |\n| termo_busca | Campo livre (Qualquer valor será aceito) | Nenhum |"
-							},
-							"response": [
-								{
-									"id": "2e0e50a8-f0f7-46e0-991b-bd7f173c86e8",
-									"name": "Sucesso",
-									"originalRequest": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "Authorization",
-												"value": "{{access_token}}",
-												"description": "Bearer Token obtido na autenticação"
-											}
-										],
-										"url": {
-											"raw": "{{url}}/api/v1/integracao/estoque/produto_item/consultar?busca=numero_serie&termo_busca=13423434NSAD134",
-											"host": [
-												"{{url}}"
-											],
-											"path": [
-												"api",
-												"v1",
-												"integracao",
-												"estoque",
-												"produto_item",
-												"consultar"
-											],
-											"query": [
-												{
-													"key": "busca",
-													"value": "numero_serie"
-												},
-												{
-													"key": "termo_busca",
-													"value": "13423434NSAD134"
-												}
-											]
-										}
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Server",
-											"value": "nginx/1.16.1"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										},
-										{
-											"key": "Vary",
-											"value": "Accept-Encoding"
-										},
-										{
-											"key": "X-Powered-By",
-											"value": "PHP/7.1.33"
-										},
-										{
-											"key": "Access-Control-Allow-Origin",
-											"value": "*"
-										},
-										{
-											"key": "Access-Control-Allow-Methods",
-											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
-										},
-										{
-											"key": "Access-Control-Allow-Headers",
-											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
-										},
-										{
-											"key": "Access-Control-Max-Age",
-											"value": "1728000"
-										},
-										{
-											"key": "Access-Control-Allow-Credentials",
-											"value": "true"
-										},
-										{
-											"key": "Cache-Control",
-											"value": "no-cache, private"
-										},
-										{
-											"key": "Date",
-											"value": "Mon, 06 Feb 2023 12:56:41 GMT"
-										},
-										{
-											"key": "Set-Cookie",
-											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 13:56:41 GMT; Max-Age=3600; path=/; httponly"
-										},
-										{
-											"key": "Content-Encoding",
-											"value": "gzip"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Itens consultados com sucesso\",\n    \"produto\": [\n        {\n            \"id_produto_item\": 127564,\n            \"produto\": {\n                \"id_produto\": 669,\n                \"nome\": \"ROTEADOR D-LINK\",\n                \"agrupado\": false\n            },\n            \"local_estoque\": {\n                \"id_local_estoque\": 281,\n                \"descricao\": \"ESTOQUE GERAL\"\n            },\n            \"produto_item_status\": {\n                \"id_produto_item_status\": 2,\n                \"descricao\": \"ESTOQUE\",\n                \"prefixo\": \"estoque\"\n            },\n            \"identificador_proprio\": \"IDBIA1234\",\n            \"codigo_item\": 110841,\n            \"numero_serie\": \"13423434NSAD134\",\n            \"mac_address\": \"58:10:67:34:34:34\",\n            \"observacoes\": null\n        }\n    ]\n}"
-								},
-								{
-									"id": "04701903-bff0-40b1-b960-d573d6d8f895",
-									"name": "Erro",
-									"originalRequest": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "Authorization",
-												"value": "{{access_token}}",
-												"description": "Bearer Token obtido na autenticação"
-											}
-										],
-										"url": {
-											"raw": "{{url}}/api/v1/integracao/estoque/produto_item/consultar?busca=mac&termo_busca=58:10:67:34:34:34",
-											"host": [
-												"{{url}}"
-											],
-											"path": [
-												"api",
-												"v1",
-												"integracao",
-												"estoque",
-												"produto_item",
-												"consultar"
-											],
-											"query": [
-												{
-													"key": "busca",
-													"value": "mac"
-												},
-												{
-													"key": "termo_busca",
-													"value": "58:10:67:34:34:34"
-												}
-											]
-										}
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Server",
-											"value": "nginx/1.16.1"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										},
-										{
-											"key": "Vary",
-											"value": "Accept-Encoding"
-										},
-										{
-											"key": "X-Powered-By",
-											"value": "PHP/7.1.33"
-										},
-										{
-											"key": "Access-Control-Allow-Origin",
-											"value": "*"
-										},
-										{
-											"key": "Access-Control-Allow-Methods",
-											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
-										},
-										{
-											"key": "Access-Control-Allow-Headers",
-											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
-										},
-										{
-											"key": "Access-Control-Max-Age",
-											"value": "1728000"
-										},
-										{
-											"key": "Access-Control-Allow-Credentials",
-											"value": "true"
-										},
-										{
-											"key": "Cache-Control",
-											"value": "no-cache, private"
-										},
-										{
-											"key": "Date",
-											"value": "Mon, 06 Feb 2023 13:09:19 GMT"
-										},
-										{
-											"key": "Set-Cookie",
-											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 14:09:19 GMT; Max-Age=3600; path=/; httponly"
-										},
-										{
-											"key": "Content-Encoding",
-											"value": "gzip"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"status\": \"error\",\n    \"msg\": \"O tipo de busca (mac) não é válido | Valores aceitos para esse campo: mac_address,codigo_item,numero_serie,identificador_proprio\"\n}"
-								}
-							]
-						},
-						{
 							"name": "Adicionar",
 							"id": "6137caec-7dd3-4049-879b-fc878b0a7b63",
 							"protocolProfileBehavior": {
@@ -5206,6 +4422,516 @@
 									"cookie": [],
 									"responseTime": null,
 									"body": "{\n    \"status\": \"error\",\n    \"msg\": \"Local de Estoque de ID 9999 não encontrado\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Apagar",
+							"id": "e3df1fdb-584a-47fa-8d99-7e8394948ab0",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"description": "Bearer Token obtido na autenticação"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/v1/integracao/estoque/produto_item/:id_produto_item",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"integracao",
+										"estoque",
+										"produto_item",
+										":id_produto_item"
+									],
+									"variable": [
+										{
+											"key": "id_produto_item",
+											"value": "integer",
+											"description": "(Integer) ID do Produto Item já cadastrado anteriormente"
+										}
+									]
+								},
+								"description": "No método `DELETE`, será possível apagar um item de produto. Para que ele seja removido, o mesmo precisa estar no estatus \"estoque\", se ele estiver em qualquer outro status, significa que o mesmo está movimentado / sendo utilizado, portanto não será possível remover."
+							},
+							"response": [
+								{
+									"id": "7d7900f3-a5b7-40bf-b159-890011b820ea",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Bearer Token obtido na autenticação"
+											}
+										],
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/estoque/produto_item/:id_produto_item",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"estoque",
+												"produto_item",
+												":id_produto_item"
+											],
+											"variable": [
+												{
+													"key": "id_produto_item",
+													"value": "213346",
+													"description": "(Integer) ID do Produto Item já cadastrado anteriormente"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 06 Feb 2023 13:41:42 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 14:41:42 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Item do Produto apagado com sucesso\"\n}"
+								},
+								{
+									"id": "62f651e1-ab56-465f-aa51-efb4bfb6ad49",
+									"name": "Erro",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Bearer Token obtido na autenticação"
+											}
+										],
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/estoque/produto_item/:id_produto_item",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"estoque",
+												"produto_item",
+												":id_produto_item"
+											],
+											"variable": [
+												{
+													"key": "id_produto_item",
+													"value": "213346abc",
+													"description": "(Integer) ID do Produto Item já cadastrado anteriormente"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 06 Feb 2023 13:40:16 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 14:40:16 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"error\",\n    \"msg\": \"Favor preencher os campos obrigatórios de acordo com as especificações\",\n    \"errors\": [\n        \"O campo id_produto_item deve ser do tipo integer\"\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Consultar",
+							"id": "eb59345b-147c-4336-b57c-cf956e79c247",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"description": "Bearer Token obtido na autenticação"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/v1/integracao/estoque/produto_item/consultar?busca&termo_busca",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"integracao",
+										"estoque",
+										"produto_item",
+										"consultar"
+									],
+									"query": [
+										{
+											"key": "busca",
+											"value": null,
+											"description": "(Obrigatório) Tipo de busca que deseja fazer no item. Valores aceitos: mac_address, codigo_item, numero_serie, identificador_proprio",
+											"type": "text"
+										},
+										{
+											"key": "termo_busca",
+											"value": null,
+											"description": "(Obrigatório) Termo utilizado para fazer a busca",
+											"type": "text"
+										}
+									]
+								},
+								"description": "**GET**\n\nNo método `GET`, será possível consultar um item do produto individualmente. Ele irá retornar um `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| busca | Tipo de busca que deseja fazer no cliente | Sim |\n| termo_busca | Termo utilizado para fazer a busca | Sim |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| busca | mac_address, codigo_item, numero_serie, identificador_proprio | Nenhum |\n| termo_busca | Campo livre (Qualquer valor será aceito) | Nenhum |"
+							},
+							"response": [
+								{
+									"id": "2e0e50a8-f0f7-46e0-991b-bd7f173c86e8",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Bearer Token obtido na autenticação"
+											}
+										],
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/estoque/produto_item/consultar?busca=numero_serie&termo_busca=13423434NSAD134",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"estoque",
+												"produto_item",
+												"consultar"
+											],
+											"query": [
+												{
+													"key": "busca",
+													"value": "numero_serie"
+												},
+												{
+													"key": "termo_busca",
+													"value": "13423434NSAD134"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 06 Feb 2023 12:56:41 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 13:56:41 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Item consultado com sucesso!\",\n    \"produto\": [\n        {\n            \"id_produto_item\": 127564,\n            \"produto\": {\n                \"id_produto\": 669,\n                \"nome\": \"ROTEADOR D-LINK\",\n                \"agrupado\": false\n            },\n            \"local_estoque\": {\n                \"id_local_estoque\": 281,\n                \"descricao\": \"ESTOQUE GERAL\"\n            },\n            \"produto_item_status\": {\n                \"id_produto_item_status\": 2,\n                \"descricao\": \"ESTOQUE\",\n                \"prefixo\": \"estoque\"\n            },\n            \"identificador_proprio\": \"IDBIA1234\",\n            \"codigo_item\": 110841,\n            \"numero_serie\": \"13423434NSAD134\",\n            \"mac_address\": \"58:10:67:34:34:34\",\n            \"observacoes\": null\n        }\n    ]\n}"
+								},
+								{
+									"id": "04701903-bff0-40b1-b960-d573d6d8f895",
+									"name": "Erro",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Bearer Token obtido na autenticação"
+											}
+										],
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/estoque/produto_item/consultar?busca=mac&termo_busca=58:10:67:34:34:34",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"estoque",
+												"produto_item",
+												"consultar"
+											],
+											"query": [
+												{
+													"key": "busca",
+													"value": "mac"
+												},
+												{
+													"key": "termo_busca",
+													"value": "58:10:67:34:34:34"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 06 Feb 2023 13:09:19 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 14:09:19 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"error\",\n    \"msg\": \"O tipo de busca (mac) não é válido | Valores aceitos para esse campo: mac_address,codigo_item,numero_serie,identificador_proprio\"\n}"
 								}
 							]
 						},
@@ -5483,6 +5209,530 @@
 									"cookie": [],
 									"responseTime": null,
 									"body": "{\n    \"status\": \"error\",\n    \"msg\": \"Favor preencher os campos obrigatórios de acordo com as especificações\",\n    \"errors\": [\n        \"O campo id_produto_item deve ser do tipo integer\"\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Encontrar por ID",
+							"id": "9e99a697-8945-447f-939c-133d1a4258d1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"description": "Bearer Token obtido na autenticação"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/v1/integracao/estoque/produto_item/:id_produto_item",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"integracao",
+										"estoque",
+										"produto_item",
+										":id_produto_item"
+									],
+									"variable": [
+										{
+											"key": "id_produto_item",
+											"value": "integer",
+											"description": "(Integer) ID do Produto Item já cadastrado anteriormente"
+										}
+									]
+								},
+								"description": "**GET**\n\nNo método `GET`, será possível consultar um produto individualmente. Esse endpoint pode ser útil quando for necessário verificar / sincronizar produto por produto."
+							},
+							"response": [
+								{
+									"id": "da71cdbd-945b-46f1-a210-2e42fe0671cc",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Bearer Token obtido na autenticação"
+											}
+										],
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/estoque/produto_item/:id_produto_item",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"estoque",
+												"produto_item",
+												":id_produto_item"
+											],
+											"variable": [
+												{
+													"key": "id_produto_item",
+													"value": "3",
+													"description": "(Integer) ID do Produto Item já cadastrado anteriormente"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 06 Feb 2023 12:56:41 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 13:56:41 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Item de Produto de ID 3 consultado com sucesso\",\n    \"produto\": {\n        \"id_produto_item\": 3,\n        \"produto\": {\n            \"id_produto\": 1,\n            \"nome\": \"Airgrid\",\n            \"agrupado\": false\n        },\n        \"local_estoque\": {\n            \"id_local_estoque\": 16,\n            \"descricao\": \"LOCAL PARA TESTE WIKI\"\n        },\n        \"produto_item_status\": {\n            \"id_produto_item_status\": 2,\n            \"descricao\": \"ESTOQUE\",\n            \"prefixo\": \"estoque\"\n        },\n        \"identificador_proprio\": null,\n        \"codigo_item\": 12342,\n        \"numero_serie\": \"123131231\",\n        \"mac_address\": \"00:AA:BB:33:DD:EE\",\n        \"observacoes\": \"teste\"\n    }\n}"
+								},
+								{
+									"id": "57216064-3785-47f2-b700-cb10b7a27e6e",
+									"name": "Erro",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Bearer Token obtido na autenticação"
+											}
+										],
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/estoque/produto_item/:id_produto_item",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"estoque",
+												"produto_item",
+												":id_produto_item"
+											],
+											"variable": [
+												{
+													"key": "id_produto_item",
+													"value": "323131231abc",
+													"description": "(Integer) ID do Produto Item já cadastrado anteriormente"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 06 Feb 2023 13:09:19 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 14:09:19 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"error\",\n    \"msg\": \"Favor preencher os campos obrigatórios de acordo com as especificações\",\n    \"errors\": [\n        \"O campo id_produto_item deve ser do tipo integer\"\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Listar",
+							"id": "d12b5ebc-cd31-491c-85c4-f5e54b4c27f5",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"description": "Bearer Token obtido na autenticação"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/v1/integracao/estoque/produto_item?id_produto=integer&pagina=integer&itens_por_pagina=integer",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"integracao",
+										"estoque",
+										"produto_item"
+									],
+									"query": [
+										{
+											"key": "id_produto",
+											"value": "integer",
+											"description": "(Obrigatório) ID do Produto que terão seus itens listados"
+										},
+										{
+											"key": "pagina",
+											"value": "integer",
+											"description": "(Obrigatório) Número da Página"
+										},
+										{
+											"key": "itens_por_pagina",
+											"value": "integer",
+											"description": "(Opcional) Itens por Página. Se não preenchido será atributo 100 por padrão. Máximo: 500"
+										}
+									]
+								},
+								"description": "**GET**\n\nNo método `GET`, irá consultar/listar os dados de produtos e retornar um `JSON` como resposta. Os dados serão retornados de forma paginada, portanto fique atento ao conjunto da dados \"paginacao\" que é retornado na resposta, para saber se será necessário consultar outras páginas ou não.\n\nOs seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_produto | ID do Produto | Sim |\n| pagina | Página a ser exibida | Sim |\n| itens_por_pagina | Itens por Página a serem exibidos. Mínimo: 1, Máximo: 500. | Não |\n| data_inicio | Data de início da filtragem de dados | Não |\n| data_fim | Data final da filtragem de dados | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_produto | `Integer` |  |\n| pagina | `Integer` | `NULL` |\n| itens_por_pagina | `Integer` | 100 |\n| data_inicio | `Date`(YYYY-MM-DD) | `NULL` |\n| data_fim | `Date` (YYYY-MM-DD) | `NULL` |"
+							},
+							"response": [
+								{
+									"id": "241b96ba-4a11-4eea-b1a4-40369d56ff7d",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Bearer Token obtido na autenticação"
+											}
+										],
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/estoque/produto_item?id_produto=1&pagina=0&itens_por_pagina=10",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"estoque",
+												"produto_item"
+											],
+											"query": [
+												{
+													"key": "id_produto",
+													"value": "1",
+													"description": "(Obrigatório) ID do Produto que terão seus itens listados"
+												},
+												{
+													"key": "pagina",
+													"value": "0",
+													"description": "(Obrigatório) Número da Página"
+												},
+												{
+													"key": "itens_por_pagina",
+													"value": "10",
+													"description": "(Opcional) Itens por Página. Se não preenchido será atributo 100 por padrão. Máximo: 500"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 06 Feb 2023 12:51:58 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 13:51:58 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Dados consultados com sucesso\",\n    \"paginacao\": {\n        \"primeira_pagina\": 0,\n        \"ultima_pagina\": 4397,\n        \"pagina_atual\": 0,\n        \"total_registros\": 43971\n    },\n    \"produto_itens\": [\n        {\n            \"id_produto_item\": 1,\n            \"produto\": {\n                \"id_produto\": 1,\n                \"nome\": \"Airgrid\",\n                \"agrupado\": false\n            },\n            \"local_estoque\": {\n                \"id_local_estoque\": 1,\n                \"descricao\": \"Estoque na Cidade XPTO\"\n            },\n            \"produto_item_status\": {\n                \"id_produto_item_status\": 1,\n                \"descricao\": \"Vendido\",\n                \"prefixo\": \"vendido\"\n            },\n            \"identificador_proprio\": null,\n            \"codigo_item\": 43948,\n            \"numero_serie\": null,\n            \"mac_address\": null,\n            \"observacoes\": \"teste de observação\"\n        },\n        {\n            \"id_produto_item\": 2,\n            \"produto\": {\n                \"id_produto\": 1,\n                \"nome\": \"Airgrid\",\n                \"agrupado\": false\n            },\n            \"local_estoque\": {\n                \"id_local_estoque\": 4,\n                \"descricao\": \"Local de Estoque de Teste\"\n            },\n            \"produto_item_status\": {\n                \"id_produto_item_status\": 8,\n                \"descricao\": \"DESCARTADO\",\n                \"prefixo\": \"descartado\"\n            },\n            \"identificador_proprio\": null,\n            \"codigo_item\": 43949,\n            \"numero_serie\": \"12341341234\",\n            \"mac_address\": null,\n            \"observacoes\": \"teste de observação 3\"\n        },\n        {\n            \"id_produto_item\": 3,\n            \"produto\": {\n                \"id_produto\": 1,\n                \"nome\": \"Airgrid\",\n                \"agrupado\": false\n            },\n            \"local_estoque\": {\n                \"id_local_estoque\": 16,\n                \"descricao\": \"LOCAL PARA TESTE WIKI\"\n            },\n            \"produto_item_status\": {\n                \"id_produto_item_status\": 2,\n                \"descricao\": \"ESTOQUE\",\n                \"prefixo\": \"estoque\"\n            },\n            \"identificador_proprio\": null,\n            \"codigo_item\": 12342,\n            \"numero_serie\": \"123131231\",\n            \"mac_address\": \"00:AA:BB:33:DD:EE\",\n            \"observacoes\": \"teste\"\n        },\n        {\n            \"id_produto_item\": 4,\n            \"produto\": {\n                \"id_produto\": 1,\n                \"nome\": \"Airgrid\",\n                \"agrupado\": false\n            },\n            \"local_estoque\": {\n                \"id_local_estoque\": 1,\n                \"descricao\": \"Estoque na Cidade XPTO\"\n            },\n            \"produto_item_status\": {\n                \"id_produto_item_status\": 5,\n                \"descricao\": \"Perdido\",\n                \"prefixo\": \"perdido\"\n            },\n            \"identificador_proprio\": null,\n            \"codigo_item\": 12358,\n            \"numero_serie\": null,\n            \"mac_address\": null,\n            \"observacoes\": null\n        },\n        {\n            \"id_produto_item\": 5,\n            \"produto\": {\n                \"id_produto\": 1,\n                \"nome\": \"Airgrid\",\n                \"agrupado\": false\n            },\n            \"local_estoque\": {\n                \"id_local_estoque\": 1,\n                \"descricao\": \"Estoque na Cidade XPTO\"\n            },\n            \"produto_item_status\": {\n                \"id_produto_item_status\": 1,\n                \"descricao\": \"Vendido\",\n                \"prefixo\": \"vendido\"\n            },\n            \"identificador_proprio\": null,\n            \"codigo_item\": 12359,\n            \"numero_serie\": null,\n            \"mac_address\": null,\n            \"observacoes\": \"teste de observações 2\"\n        },\n        {\n            \"id_produto_item\": 6,\n            \"produto\": {\n                \"id_produto\": 1,\n                \"nome\": \"Airgrid\",\n                \"agrupado\": false\n            },\n            \"local_estoque\": {\n                \"id_local_estoque\": 1,\n                \"descricao\": \"Estoque na Cidade XPTO\"\n            },\n            \"produto_item_status\": {\n                \"id_produto_item_status\": 6,\n                \"descricao\": \"MANUTENÇÃO\",\n                \"prefixo\": \"manutencao\"\n            },\n            \"identificador_proprio\": null,\n            \"codigo_item\": 12360,\n            \"numero_serie\": \"123412342\",\n            \"mac_address\": null,\n            \"observacoes\": \"teste de observação 3\"\n        },\n        {\n            \"id_produto_item\": 7,\n            \"produto\": {\n                \"id_produto\": 1,\n                \"nome\": \"Airgrid\",\n                \"agrupado\": false\n            },\n            \"local_estoque\": {\n                \"id_local_estoque\": 1,\n                \"descricao\": \"Estoque na Cidade XPTO\"\n            },\n            \"produto_item_status\": {\n                \"id_produto_item_status\": 10,\n                \"descricao\": \"Ordem de Serviço\",\n                \"prefixo\": \"ordem_servico\"\n            },\n            \"identificador_proprio\": null,\n            \"codigo_item\": 45361,\n            \"numero_serie\": null,\n            \"mac_address\": null,\n            \"observacoes\": null\n        },\n        {\n            \"id_produto_item\": 8,\n            \"produto\": {\n                \"id_produto\": 1,\n                \"nome\": \"Airgrid\",\n                \"agrupado\": false\n            },\n            \"local_estoque\": {\n                \"id_local_estoque\": 1,\n                \"descricao\": \"Estoque na Cidade XPTO\"\n            },\n            \"produto_item_status\": {\n                \"id_produto_item_status\": 10,\n                \"descricao\": \"Ordem de Serviço\",\n                \"prefixo\": \"ordem_servico\"\n            },\n            \"identificador_proprio\": null,\n            \"codigo_item\": 43950,\n            \"numero_serie\": null,\n            \"mac_address\": null,\n            \"observacoes\": null\n        },\n        {\n            \"id_produto_item\": 9,\n            \"produto\": {\n                \"id_produto\": 1,\n                \"nome\": \"Airgrid\",\n                \"agrupado\": false\n            },\n            \"local_estoque\": {\n                \"id_local_estoque\": 1,\n                \"descricao\": \"Estoque na Cidade XPTO\"\n            },\n            \"produto_item_status\": {\n                \"id_produto_item_status\": 1,\n                \"descricao\": \"Vendido\",\n                \"prefixo\": \"vendido\"\n            },\n            \"identificador_proprio\": null,\n            \"codigo_item\": 963,\n            \"numero_serie\": null,\n            \"mac_address\": null,\n            \"observacoes\": null\n        },\n        {\n            \"id_produto_item\": 10,\n            \"produto\": {\n                \"id_produto\": 1,\n                \"nome\": \"Airgrid\",\n                \"agrupado\": false\n            },\n            \"local_estoque\": {\n                \"id_local_estoque\": 1,\n                \"descricao\": \"Estoque na Cidade XPTO\"\n            },\n            \"produto_item_status\": {\n                \"id_produto_item_status\": 1,\n                \"descricao\": \"Vendido\",\n                \"prefixo\": \"vendido\"\n            },\n            \"identificador_proprio\": null,\n            \"codigo_item\": 43951,\n            \"numero_serie\": null,\n            \"mac_address\": null,\n            \"observacoes\": null\n        }\n    ]\n}"
+								},
+								{
+									"id": "f711c7f7-e88d-4ffb-ba62-7584c3f1957f",
+									"name": "Erro",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Bearer Token obtido na autenticação"
+											}
+										],
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/estoque/produto_item",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"estoque",
+												"produto_item"
+											],
+											"query": [
+												{
+													"key": "id_produto",
+													"value": "1",
+													"description": "(Obrigatório) ID do Produto que terão seus itens listados",
+													"disabled": true
+												},
+												{
+													"key": "pagina",
+													"value": "0",
+													"description": "(Obrigatório) Número da Página",
+													"disabled": true
+												},
+												{
+													"key": "itens_por_pagina",
+													"value": "10",
+													"description": "(Opcional) Itens por Página. Se não preenchido será atributo 100 por padrão. Máximo: 500",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 06 Feb 2023 12:52:58 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 13:52:58 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"error\",\n    \"msg\": \"Favor preencher os campos obrigatórios de acordo com as especificações\",\n    \"errors\": [\n        \"O campo id produto é obrigatório.\",\n        \"O campo pagina é obrigatório.\"\n    ]\n}"
 								}
 							]
 						},
@@ -5917,256 +6167,6 @@
 									"cookie": [],
 									"responseTime": null,
 									"body": "{\n\t\"status\": \"error\",\n\t\"msg\": \"O produto ABRACADEIRA ACO PARA LAMPADA T08\\/T10 ST: 0,13 possui uma quantidade de 0, que é menor que a informada\",\n\t\"errors\": []\n}"
-								}
-							]
-						},
-						{
-							"name": "Apagar",
-							"id": "e3df1fdb-584a-47fa-8d99-7e8394948ab0",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "noauth"
-								},
-								"method": "DELETE",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "{{access_token}}",
-										"description": "Bearer Token obtido na autenticação"
-									}
-								],
-								"url": {
-									"raw": "{{url}}/api/v1/integracao/estoque/produto_item/:id_produto_item",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"api",
-										"v1",
-										"integracao",
-										"estoque",
-										"produto_item",
-										":id_produto_item"
-									],
-									"variable": [
-										{
-											"key": "id_produto_item",
-											"value": "integer",
-											"description": "(Integer) ID do Produto Item já cadastrado anteriormente"
-										}
-									]
-								},
-								"description": "No método `DELETE`, será possível apagar um item de produto. Para que ele seja removido, o mesmo precisa estar no estatus \"estoque\", se ele estiver em qualquer outro status, significa que o mesmo está movimentado / sendo utilizado, portanto não será possível remover."
-							},
-							"response": [
-								{
-									"id": "7d7900f3-a5b7-40bf-b159-890011b820ea",
-									"name": "Sucesso",
-									"originalRequest": {
-										"method": "DELETE",
-										"header": [
-											{
-												"key": "Authorization",
-												"value": "{{access_token}}",
-												"description": "Bearer Token obtido na autenticação"
-											}
-										],
-										"url": {
-											"raw": "{{url}}/api/v1/integracao/estoque/produto_item/:id_produto_item",
-											"host": [
-												"{{url}}"
-											],
-											"path": [
-												"api",
-												"v1",
-												"integracao",
-												"estoque",
-												"produto_item",
-												":id_produto_item"
-											],
-											"variable": [
-												{
-													"key": "id_produto_item",
-													"value": "213346",
-													"description": "(Integer) ID do Produto Item já cadastrado anteriormente"
-												}
-											]
-										}
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Server",
-											"value": "nginx/1.16.1"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										},
-										{
-											"key": "Vary",
-											"value": "Accept-Encoding"
-										},
-										{
-											"key": "X-Powered-By",
-											"value": "PHP/7.1.33"
-										},
-										{
-											"key": "Access-Control-Allow-Origin",
-											"value": "*"
-										},
-										{
-											"key": "Access-Control-Allow-Methods",
-											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
-										},
-										{
-											"key": "Access-Control-Allow-Headers",
-											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
-										},
-										{
-											"key": "Access-Control-Max-Age",
-											"value": "1728000"
-										},
-										{
-											"key": "Access-Control-Allow-Credentials",
-											"value": "true"
-										},
-										{
-											"key": "Cache-Control",
-											"value": "no-cache, private"
-										},
-										{
-											"key": "Date",
-											"value": "Mon, 06 Feb 2023 13:41:42 GMT"
-										},
-										{
-											"key": "Set-Cookie",
-											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 14:41:42 GMT; Max-Age=3600; path=/; httponly"
-										},
-										{
-											"key": "Content-Encoding",
-											"value": "gzip"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Item do Produto apagado com sucesso\"\n}"
-								},
-								{
-									"id": "62f651e1-ab56-465f-aa51-efb4bfb6ad49",
-									"name": "Erro",
-									"originalRequest": {
-										"method": "DELETE",
-										"header": [
-											{
-												"key": "Authorization",
-												"value": "{{access_token}}",
-												"description": "Bearer Token obtido na autenticação"
-											}
-										],
-										"url": {
-											"raw": "{{url}}/api/v1/integracao/estoque/produto_item/:id_produto_item",
-											"host": [
-												"{{url}}"
-											],
-											"path": [
-												"api",
-												"v1",
-												"integracao",
-												"estoque",
-												"produto_item",
-												":id_produto_item"
-											],
-											"variable": [
-												{
-													"key": "id_produto_item",
-													"value": "213346abc",
-													"description": "(Integer) ID do Produto Item já cadastrado anteriormente"
-												}
-											]
-										}
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Server",
-											"value": "nginx/1.16.1"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										},
-										{
-											"key": "Vary",
-											"value": "Accept-Encoding"
-										},
-										{
-											"key": "X-Powered-By",
-											"value": "PHP/7.1.33"
-										},
-										{
-											"key": "Access-Control-Allow-Origin",
-											"value": "*"
-										},
-										{
-											"key": "Access-Control-Allow-Methods",
-											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
-										},
-										{
-											"key": "Access-Control-Allow-Headers",
-											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
-										},
-										{
-											"key": "Access-Control-Max-Age",
-											"value": "1728000"
-										},
-										{
-											"key": "Access-Control-Allow-Credentials",
-											"value": "true"
-										},
-										{
-											"key": "Cache-Control",
-											"value": "no-cache, private"
-										},
-										{
-											"key": "Date",
-											"value": "Mon, 06 Feb 2023 13:40:16 GMT"
-										},
-										{
-											"key": "Set-Cookie",
-											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 14:40:16 GMT; Max-Age=3600; path=/; httponly"
-										},
-										{
-											"key": "Content-Encoding",
-											"value": "gzip"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"status\": \"error\",\n    \"msg\": \"Favor preencher os campos obrigatórios de acordo com as especificações\",\n    \"errors\": [\n        \"O campo id_produto_item deve ser do tipo integer\"\n    ]\n}"
 								}
 							]
 						}
