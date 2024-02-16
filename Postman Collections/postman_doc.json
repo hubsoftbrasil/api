@@ -4733,7 +4733,7 @@
 							]
 						},
 						{
-							"name": "Encontrar por MAC/Serial/IDProprio",
+							"name": "Consultar",
 							"id": "eb59345b-147c-4336-b57c-cf956e79c247",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -4775,7 +4775,7 @@
 										}
 									]
 								},
-								"description": "**GET**\n\nNo método `GET`, será possível consultar um produto individualmente. Esse endpoint pode ser útil quando for necessário verificar / sincronizar produto por produto."
+								"description": "**GET**\n\nNo método `GET`, será possível consultar um item do produto individualmente. Ele irá retornar um `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| busca | Tipo de busca que deseja fazer no cliente | Sim |\n| termo_busca | Termo utilizado para fazer a busca | Sim |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| busca | mac_address, codigo_item, numero_serie, identificador_proprio | Nenhum |\n| termo_busca | Campo livre (Qualquer valor será aceito) | Nenhum |"
 							},
 							"response": [
 								{
@@ -4791,7 +4791,7 @@
 											}
 										],
 										"url": {
-											"raw": "{{url}}/api/v1/integracao/estoque/produto_item/:id_produto_item",
+											"raw": "{{url}}/api/v1/integracao/estoque/produto_item/consultar?busca=numero_serie&termo_busca=13423434NSAD134",
 											"host": [
 												"{{url}}"
 											],
@@ -4801,13 +4801,16 @@
 												"integracao",
 												"estoque",
 												"produto_item",
-												":id_produto_item"
+												"consultar"
 											],
-											"variable": [
+											"query": [
 												{
-													"key": "id_produto_item",
-													"value": "3",
-													"description": "(Integer) ID do Produto Item já cadastrado anteriormente"
+													"key": "busca",
+													"value": "numero_serie"
+												},
+												{
+													"key": "termo_busca",
+													"value": "13423434NSAD134"
 												}
 											]
 										}
@@ -4879,7 +4882,7 @@
 									],
 									"cookie": [],
 									"responseTime": null,
-									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Item de Produto de ID 3 consultado com sucesso\",\n    \"produto\": {\n        \"id_produto_item\": 3,\n        \"produto\": {\n            \"id_produto\": 1,\n            \"nome\": \"Airgrid\",\n            \"agrupado\": false\n        },\n        \"local_estoque\": {\n            \"id_local_estoque\": 16,\n            \"descricao\": \"LOCAL PARA TESTE WIKI\"\n        },\n        \"produto_item_status\": {\n            \"id_produto_item_status\": 2,\n            \"descricao\": \"ESTOQUE\",\n            \"prefixo\": \"estoque\"\n        },\n        \"identificador_proprio\": null,\n        \"codigo_item\": 12342,\n        \"numero_serie\": \"123131231\",\n        \"mac_address\": \"00:AA:BB:33:DD:EE\",\n        \"observacoes\": \"teste\"\n    }\n}"
+									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Itens consultados com sucesso\",\n    \"produto\": [\n        {\n            \"id_produto_item\": 127564,\n            \"produto\": {\n                \"id_produto\": 669,\n                \"nome\": \"ROTEADOR D-LINK\",\n                \"agrupado\": false\n            },\n            \"local_estoque\": {\n                \"id_local_estoque\": 281,\n                \"descricao\": \"ESTOQUE GERAL\"\n            },\n            \"produto_item_status\": {\n                \"id_produto_item_status\": 2,\n                \"descricao\": \"ESTOQUE\",\n                \"prefixo\": \"estoque\"\n            },\n            \"identificador_proprio\": \"IDBIA1234\",\n            \"codigo_item\": 110841,\n            \"numero_serie\": \"13423434NSAD134\",\n            \"mac_address\": \"58:10:67:34:34:34\",\n            \"observacoes\": null\n        }\n    ]\n}"
 								},
 								{
 									"id": "04701903-bff0-40b1-b960-d573d6d8f895",
