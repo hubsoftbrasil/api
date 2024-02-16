@@ -9063,6 +9063,266 @@
 					"name": "Patrimonio",
 					"item": [
 						{
+							"name": "Consultar",
+							"id": "0f9fd538-d677-41ef-a1ae-3c99234c25b3",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"description": "Bearer Token obtido na autenticação"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/v1/integracao/estoque/produto_item/consultar?busca&termo_busca",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"integracao",
+										"estoque",
+										"produto_item",
+										"consultar"
+									],
+									"query": [
+										{
+											"key": "busca",
+											"value": null,
+											"description": "(Obrigatório) Tipo de busca que deseja fazer no item. Valores aceitos: mac_address, codigo_item, numero_serie, identificador_proprio",
+											"type": "text"
+										},
+										{
+											"key": "termo_busca",
+											"value": null,
+											"description": "(Obrigatório) Termo utilizado para fazer a busca",
+											"type": "text"
+										}
+									]
+								},
+								"description": "**GET**\n\nNo método `GET`, será possível consultar um item do produto individualmente. Ele irá retornar um `JSON` como resposta. Os seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| busca | Tipo de busca que deseja fazer no cliente | Sim |\n| termo_busca | Termo utilizado para fazer a busca | Sim |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| busca | mac_address, codigo_item, numero_serie, identificador_proprio | Nenhum |\n| termo_busca | Campo livre (Qualquer valor será aceito) | Nenhum |"
+							},
+							"response": [
+								{
+									"id": "ed47cf56-401c-4e86-93bb-b18d93e7e440",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Bearer Token obtido na autenticação"
+											}
+										],
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/estoque/produto_item/consultar?busca=numero_serie&termo_busca=13423434NSAD134",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"estoque",
+												"produto_item",
+												"consultar"
+											],
+											"query": [
+												{
+													"key": "busca",
+													"value": "numero_serie"
+												},
+												{
+													"key": "termo_busca",
+													"value": "13423434NSAD134"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 06 Feb 2023 12:56:41 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 13:56:41 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Item consultado com sucesso!\",\n    \"produto\": [\n        {\n            \"id_produto_item\": 127564,\n            \"produto\": {\n                \"id_produto\": 669,\n                \"nome\": \"ROTEADOR D-LINK\",\n                \"agrupado\": false\n            },\n            \"local_estoque\": {\n                \"id_local_estoque\": 281,\n                \"descricao\": \"ESTOQUE GERAL\"\n            },\n            \"produto_item_status\": {\n                \"id_produto_item_status\": 2,\n                \"descricao\": \"ESTOQUE\",\n                \"prefixo\": \"estoque\"\n            },\n            \"identificador_proprio\": \"IDBIA1234\",\n            \"codigo_item\": 110841,\n            \"numero_serie\": \"13423434NSAD134\",\n            \"mac_address\": \"58:10:67:34:34:34\",\n            \"observacoes\": null\n        }\n    ]\n}"
+								},
+								{
+									"id": "70548487-dc64-4676-a606-04d5d8518a58",
+									"name": "Erro",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Bearer Token obtido na autenticação"
+											}
+										],
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/estoque/produto_item/consultar?busca=mac&termo_busca=58:10:67:34:34:34",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"estoque",
+												"produto_item",
+												"consultar"
+											],
+											"query": [
+												{
+													"key": "busca",
+													"value": "mac"
+												},
+												{
+													"key": "termo_busca",
+													"value": "58:10:67:34:34:34"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 06 Feb 2023 13:09:19 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 14:09:19 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"error\",\n    \"msg\": \"O tipo de busca (mac) não é válido | Valores aceitos para esse campo: mac_address,codigo_item,numero_serie,identificador_proprio\"\n}"
+								}
+							]
+						},
+						{
 							"name": "Listar",
 							"id": "c6cd8f93-1d29-41e8-aaa3-a6bb8ef04371",
 							"protocolProfileBehavior": {
