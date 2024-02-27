@@ -12130,6 +12130,96 @@
 								"disableBodyPruning": true
 							},
 							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": "{{url}}/api/v1/integracao/rede/cpe/todos",
+								"description": "O método **POST** /todos permite filtrar as CPEs de forma paginada. Somente CPEs que possuem assinantes associados serão retornadas. O atributo **parametros** retorna até 5 parâmetros por CPE."
+							},
+							"response": [
+								{
+									"id": "5b4aa7db-f4e2-4e67-871b-bf1df070f830",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Token de autorização",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"pagina\": 1,\r\n    \"itens_por_pagina\": 30\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/rede/cpe/todos?pagina=1&itens_por_pagina=20&data_inicio&data_fim",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"rede",
+												"cpe",
+												"todos"
+											],
+											"query": [
+												{
+													"key": "pagina",
+													"value": "1",
+													"description": "(Obrigatório) Número da página desejada"
+												},
+												{
+													"key": "itens_por_pagina",
+													"value": "20",
+													"description": "(Obrigatório) Quantidade de itens desejados por página"
+												},
+												{
+													"key": "data_inicio",
+													"value": null,
+													"description": "(Opcional) Filtra CPEs que foram vistas a partir dessa data"
+												},
+												{
+													"key": "data_fim",
+													"value": null,
+													"description": "(Opcional) Filtra CPEs que foram vistas até esta data"
+												}
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\r\n    \"status\": \"success\",\r\n    \"paginacao\": {\r\n        \"primeira_pagina\": 0,\r\n        \"ultima_pagina\": 0,\r\n        \"pagina_atual\": 1,\r\n        \"total_registros\": 1\r\n    },\r\n    \"cpes\": [\r\n        {\r\n            \"id_cpe\": 71524,\r\n            \"phy_addr\": \"485754437D38A19E\",\r\n            \"data_ultima_atualizacao\": \"2023-07-06 14:48:59\",\r\n            \"historico_parametros\": [\r\n                {\r\n                    \"id_cpe\": 71524,\r\n                    \"parametros\": {\r\n                        \"tx_signal\": 23.5,\r\n                        \"rx_signal\": 24\r\n                    },\r\n                    \"created_at\": \"2023-07-06 14:48:59\",\r\n                    \"data_cadastro_br\": \"06/07/2023 14:48:59\"\r\n                }\r\n            ],\r\n            \"servicos\": [\r\n                {\r\n                    \"id_cliente\": 11942,\r\n                    \"id_servico\": 1394,\r\n                    \"codigo_cliente\": 1161,\r\n                    \"nome_razaosocial\": \"ANTONIO MODESTO AMARAL SOUSA\",\r\n                    \"cpf_cnpj\": \"09350298694\",\r\n                    \"servico\": \"100MB + HBO\",\r\n                    \"status\": \"servico_habilitado\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}"
+								}
+							]
+						},
+						{
+							"name": "Reiniciar",
+							"id": "a1f96f0d-07c5-49c1-b710-afdb6a15a391",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
 								"method": "POST",
 								"header": [],
 								"body": {
@@ -12166,7 +12256,122 @@
 							},
 							"response": [
 								{
-									"id": "5b4aa7db-f4e2-4e67-871b-bf1df070f830",
+									"id": "22d8344e-5baf-4aea-9a43-af1c531c0ecc",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Token de autorização",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"pagina\": 1,\r\n    \"itens_por_pagina\": 30\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/rede/cpe/todos?pagina=1&itens_por_pagina=20&data_inicio&data_fim",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"rede",
+												"cpe",
+												"todos"
+											],
+											"query": [
+												{
+													"key": "pagina",
+													"value": "1",
+													"description": "(Obrigatório) Número da página desejada"
+												},
+												{
+													"key": "itens_por_pagina",
+													"value": "20",
+													"description": "(Obrigatório) Quantidade de itens desejados por página"
+												},
+												{
+													"key": "data_inicio",
+													"value": null,
+													"description": "(Opcional) Filtra CPEs que foram vistas a partir dessa data"
+												},
+												{
+													"key": "data_fim",
+													"value": null,
+													"description": "(Opcional) Filtra CPEs que foram vistas até esta data"
+												}
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\r\n    \"status\": \"success\",\r\n    \"paginacao\": {\r\n        \"primeira_pagina\": 0,\r\n        \"ultima_pagina\": 0,\r\n        \"pagina_atual\": 1,\r\n        \"total_registros\": 1\r\n    },\r\n    \"cpes\": [\r\n        {\r\n            \"id_cpe\": 71524,\r\n            \"phy_addr\": \"485754437D38A19E\",\r\n            \"data_ultima_atualizacao\": \"2023-07-06 14:48:59\",\r\n            \"historico_parametros\": [\r\n                {\r\n                    \"id_cpe\": 71524,\r\n                    \"parametros\": {\r\n                        \"tx_signal\": 23.5,\r\n                        \"rx_signal\": 24\r\n                    },\r\n                    \"created_at\": \"2023-07-06 14:48:59\",\r\n                    \"data_cadastro_br\": \"06/07/2023 14:48:59\"\r\n                }\r\n            ],\r\n            \"servicos\": [\r\n                {\r\n                    \"id_cliente\": 11942,\r\n                    \"id_servico\": 1394,\r\n                    \"codigo_cliente\": 1161,\r\n                    \"nome_razaosocial\": \"ANTONIO MODESTO AMARAL SOUSA\",\r\n                    \"cpf_cnpj\": \"09350298694\",\r\n                    \"servico\": \"100MB + HBO\",\r\n                    \"status\": \"servico_habilitado\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}"
+								}
+							]
+						},
+						{
+							"name": "Restaurar",
+							"id": "6e841d2c-f2ef-4910-941b-7ba1cc92606e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "pagina",
+											"value": "0",
+											"description": "(Obrigatório) Número da página desejada. Primeira página é a 0",
+											"type": "text"
+										},
+										{
+											"key": "itens_por_pagina",
+											"value": "20",
+											"description": "(Obrigatório) Itens por página. De 20 até 500",
+											"type": "text"
+										},
+										{
+											"key": "data_inicio",
+											"value": "",
+											"description": "(Opcional) Filtra CPEs que foram vistas a partir desta data",
+											"type": "text"
+										},
+										{
+											"key": "data_fim",
+											"value": "",
+											"description": "(Opcional) Filtra CPEs que foram vistas até esta data",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{url}}/api/v1/integracao/rede/cpe/todos",
+								"description": "O método **POST** /todos permite filtrar as CPEs de forma paginada. Somente CPEs que possuem assinantes associados serão retornadas. O atributo **parametros** retorna até 5 parâmetros por CPE."
+							},
+							"response": [
+								{
+									"id": "dc9e226a-d4c0-4f05-a710-722aaec552ef",
 									"name": "Sucesso",
 									"originalRequest": {
 										"method": "POST",
