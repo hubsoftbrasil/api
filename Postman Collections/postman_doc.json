@@ -12271,7 +12271,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"pagina\": 1,\r\n    \"itens_por_pagina\": 30\r\n}",
+											"raw": "",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -12375,7 +12375,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"pagina\": 1,\r\n    \"itens_por_pagina\": 30\r\n}",
+											"raw": "",
 											"options": {
 												"raw": {
 													"language": "json"
