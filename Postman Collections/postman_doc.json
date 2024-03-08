@@ -7573,7 +7573,7 @@
 							]
 						},
 						{
-							"name": "Apagar Produtos",
+							"name": "Apagar Movimento",
 							"id": "0f912e98-467f-4ade-9c54-7848bae86a7d",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
