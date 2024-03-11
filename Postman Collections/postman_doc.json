@@ -1854,7 +1854,7 @@
 			"description": "**Necessário**\n\nPara fazer requisições nos dados de `CRM`, é necessário que você já possua o `access_token`, conseguido na etapa `(oAuth)`.\n\nOBS: Essa rota irá retornar todos os dados de `CRM.`"
 		},
 		{
-			"name": "Estoque",
+			"name": "Estoque (Versão Descontinuada)",
 			"item": [
 				{
 					"name": "Local de Estoque",
@@ -6178,7 +6178,7 @@
 			"description": "**Necessário**\n\nPara fazer requisições nos dados de `Estoque`, é necessário que você já possua o `access_token`, conseguido na etapa `(oAuth)`."
 		},
 		{
-			"name": "Estoque Novo (Desenvolvimento)",
+			"name": "Estoque",
 			"item": [
 				{
 					"name": "Local de Estoque",
@@ -7766,7 +7766,7 @@
 						}
 					],
 					"id": "6f78dd8d-2948-4423-943a-b3fe7958c3c7",
-					"description": "Os endpoints abaixo são destinados ao novo módulo de controle de estoque do provedor: **Movimentações de Estoque**.  \n  \n**AVISO:** Os endpoints destinados ao módulo **Movimentação de Produtos**, serão **DESCONTINUADOS**. Você deverá utilizar apenas os endpoints deste novo módulo."
+					"description": "Os endpoints abaixo são destinados ao novo módulo de controle de estoque do provedor: **Movimentações de Estoque**.\n\n**AVISO:** Os endpoints destinados ao módulo **Movimentação de Produtos**, serão **DESCONTINUADOS**. Você deverá utilizar apenas os endpoints deste novo módulo."
 				},
 				{
 					"name": "Produto",
