@@ -10706,7 +10706,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{url}}/api/v1/integracao/nota_fiscal/nfse?tipo_data=data_cadastro&data_inicio=2020-01-01&data_fim=2022-08-31&documento=29507487000170&pagina=0&itens_por_pagina=10&order_type=asc&order_by=id_nfse",
+									"raw": "{{url}}/api/v1/integracao/nota_fiscal/nfse?tipo_data=data_cadastro&data_inicio=2020-01-01&data_fim=2022-08-31&documento=29507487000170&pagina=0&itens_por_pagina=10&order_type=asc&order_by=id_nfse&status=todas",
 									"host": [
 										"{{url}}"
 									],
@@ -10757,10 +10757,16 @@
 											"key": "order_by",
 											"value": "id_nfse",
 											"description": "(Opcional) Coluna para ordenação: id_nfse, numero"
+										},
+										{
+											"key": "status",
+											"value": "todas",
+											"description": "(Opicional) Informa o Status da Nota. Todas seria o padrão para consultar normalmente.",
+											"type": "text"
 										}
 									]
 								},
-								"description": "No método `GET`, será possível consultar as NFSe emitidas e obter o retorno no formato `JSON` como resposta. Os seguintes `Query Params` podem/devem ser utilizados.\n\n| **Atributo** | **Descrição** | **Obrigatório** |\n| --- | --- | --- |\n| `tipo_data` | Tipo de data que será filtrada nos campos  <br>`data_inicio` e `data_fim`. Valor disponíveis: data_cadastro, data_cancelamento, data_emissao | Não |\n| `data_inicio` | Data Inicial no formato YYYY-MM-DD | Sim |\n| `data_fim` | Data Final no formato YYYY-MM-DD | Sim |\n| `documento` | CNPJ da Empresa emissora da NFSe | Sim |\n| `pagina` | Página a ser exibida | Sim |\n| `itens_por_pagina` | Itens por Página a serem exibidos. Mínimo: 1, Máximo: 500 | Sim |\n| `id_nfse` | Filtra a NFSe pelo ID | Não |\n| `numero` | Filtra a NFSe pelo número | Não |\n| `order_type` | Tipo de ordenação: asc, desc | Não |\n| `order_by` | Coluna para ordenação: id_nfse, numero | Não |\n\nOBS: Caso queira filtrar por exemplo somente as notas fiscais canceladas, basta preencher o parâmetro `tipo_data` com o valor `data_cancelamento`."
+								"description": "No método `GET`, será possível consultar as NFSe emitidas e obter o retorno no formato `JSON` como resposta. Os seguintes `Query Params` podem/devem ser utilizados.\n\n| **Atributo** | **Descrição** | **Obrigatório** |\n| --- | --- | --- |\n| `tipo_data` | Tipo de data que será filtrada nos campos  <br>`data_inicio` e `data_fim`. Valor disponíveis: data_cadastro, data_cancelamento, data_emissao | Não |\n| `data_inicio` | Data Inicial no formato YYYY-MM-DD | Sim |\n| `data_fim` | Data Final no formato YYYY-MM-DD | Sim |\n| `documento` | CNPJ da Empresa emissora da NFSe | Sim |\n| `pagina` | Página a ser exibida | Sim |\n| `itens_por_pagina` | Itens por Página a serem exibidos. Mínimo: 1, Máximo: 500 | Sim |\n| `id_nfse` | Filtra a NFSe pelo ID | Não |\n| `numero` | Filtra a NFSe pelo número | Não |\n| `order_type` | Tipo de ordenação: asc, desc | Não |\n| `order_by` | Coluna para ordenação: id_nfse, numero | Não |\n| `status` | Coluna para consultar pelo status da nota: pendente, em_transmissao e etc. | Não |\n\nOBS: Caso queira filtrar por exemplo somente as notas fiscais canceladas, basta preencher o parâmetro `tipo_data` com o valor `data_cancelamento`.\n\nA consulta por status estará disponível apenas na versão 1.106 do sistema."
 							},
 							"response": [
 								{
