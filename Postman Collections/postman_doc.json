@@ -11300,8 +11300,7 @@
 										{
 											"key": "status",
 											"value": "todas",
-											"description": "(Opicional) Informa o Status da Nota. Todas seria o padrão para consultar sem nenhum filtro.",
-											"type": "text"
+											"description": "(Opicional) Informa o Status da Nota. Todas seria o padrão para consultar sem nenhum filtro."
 										}
 									]
 								},
