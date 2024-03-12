@@ -341,14 +341,7 @@
 							"status": "OK",
 							"code": 200,
 							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Authorization",
-									"value": "Bearer 12lk3jsdkjfk!jksjdfkwjk12jk3j1k31ksjfksdjfkwj",
-									"description": "",
-									"type": "text"
-								}
-							],
+							"header": [],
 							"cookie": [],
 							"responseTime": null,
 							"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Atendimento aberto com sucesso. Anote o protocolo: 201811161058216. Foi aberto também uma ordem de serviço e encaminhada ao sertor responsável\",\n    \"atendimento\": {\n        \"id_atendimento\": 300,\n        \"protocolo\": \"201811161058216\",\n        \"descricao_abertura\": \"Estou sem acesso a internet desde segunda-feira. | ATENDIMENTO ABERTO VIA API\",\n        \"descricao_fechamento\": null,\n        \"tipo_atendimento\": \"SAC\",\n        \"usuario_abertura\": \"IP Telecom\",\n        \"usuario_responsavel\": \"IP Telecom\",\n        \"usuario_fechamento\": null,\n        \"data_cadastro\": \"16/11/2018\",\n        \"data_fechamento\": null,\n        \"setor_responsavel\": null,\n        \"status_fechamento\": null,\n        \"motivo_fechamento\": null,\n        \"status\": \"Aguardando Análise\",\n        \"cliente\": {\n            \"codigo_cliente\": 1204,\n            \"nome_razaosocial\": \"BIANCA COUTO\",\n            \"cpf_cnpj\": \"86214941081\"\n        },\n        \"ordens_servico\": [\n            {\n                \"id_ordem_servico\": 340,\n                \"numero_ordem_servico\": \"320\",\n                \"data_cadastro\": \"16/11/2018 10:58:21\",\n                \"tipo\": \"ABERTURA VIA API\",\n                \"data_inicio_programado\": \"16/11/2018 11:58:21\",\n                \"data_termino_programado\": \"16/11/2018 12:58:21\",\n                \"data_inicio_executado\": null,\n                \"data_termino_executado\": null,\n                \"descricao_abertura\": \"Estou sem acesso a internet desde segunda-feira. | ATENDIMENTO ABERTO VIA API\",\n                \"descricao_servico\": \"Estou sem acesso a internet desde segunda-feira. | ATENDIMENTO ABERTO VIA API\",\n                \"descricao_fechamento\": null,\n                \"usuario_abertura\": \"IP Telecom\",\n                \"usuario_fechamento\": null,\n                \"status\": \"aguardando_agendamento\",\n                \"status_fechamento\": null,\n                \"cliente\": {\n                    \"codigo_cliente\": 1204,\n                    \"nome_razaosocial\": \"BIANCA COUTO\",\n                    \"cpf_cnpj\": \"86214941081\"\n                },\n                \"servico\": {\n                    \"numero_plano\": 9,\n                    \"nome\": \"NEXT-NV_1MBPS\",\n                    \"valor\": 69.9,\n                    \"status\": \"Serviço Habilitado\",\n                    \"status_prefixo\": \"servico_habilitado\"\n                }\n            }\n        ]\n    }\n}"
@@ -12766,14 +12759,7 @@
 									"status": "OK",
 									"code": 200,
 									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Authorization",
-											"value": "Bearer 12lk3jsdkjfk!jksjdfkwjk12jk3j1k31ksjfksdjfkwj",
-											"description": "",
-											"type": "text"
-										}
-									],
+									"header": [],
 									"cookie": [],
 									"responseTime": null,
 									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Alerta cadastrado com sucesso!\",\n    \"alerta\": [\n        {\n            \"id_alerta\": 1,\n            \"descricao\": \"ALERTA TESTE CADASTRO API\",\n            \"ativo\": true,\n            \"data_cadastro\": \"21/08/2023 15:49\",\n            \"data_inicio\": null,\n            \"data_fim\": null,\n            \"texto_alerta\": \"ALERTA TESTE CADASTRO API\\n\\n21/08/2023 15:49 - Usuário API\\n\",\n            \"cidade\": [],\n            \"grupo_cliente\": [],\n            \"grupo_cliente_servico\": [],\n            \"interface_conexao\": [],\n            \"caixa_optica\": [],\n            \"servico_status\": [],\n            \"usuario\": {\n                \"id\":1,\n                \"nome\": \"Usuário API\"\n            }\n        }\n    ]\n}"
