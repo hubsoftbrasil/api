@@ -7398,7 +7398,7 @@
 									}
 								},
 								"url": "{{url}}/api/v1/integracao/estoque/movimento_estoque/saida",
-								"description": "Utilizando esse endpoint será possível dar saida manual nos produtos de um local de estoque.\n\n**Seria a Saída Manual do sistema.\n\nImportante:** Caso o produto seja **patrimonial**, é obrigatório passar o array de patrimonios e o objeto de produto_item_status."
+								"description": "Utilizando esse endpoint será possível dar saida manual nos produtos de um local de estoque.\n\n**Seria a Saída Manual do sistema.\n\nImportante:** Caso o produto seja **patrimonial**, é obrigatório passar o array de patrimonios e o objeto de produto_item_status.\n\n**É possível coletar a informação do id_produto_item_status na rota GET configuracao/produto_item_status**"
 							},
 							"response": [
 								{
