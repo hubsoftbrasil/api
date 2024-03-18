@@ -13414,8 +13414,8 @@
 										"description": "Bearer Token obtido na autenticação"
 									}
 								],
-								"url": "{{url}}/api/v1/integracao/configuracao/servico_status",
-								"description": "No método `GET`, irá consultar os dados de status de serviço e irá retornar um `JSON` como resposta."
+								"url": "{{url}}/api/v1/integracao/configuracao/produto_item_status",
+								"description": "No método `GET`, irá consultar os dados de status de produtos e irá retornar um `JSON` como resposta."
 							},
 							"response": [
 								{
