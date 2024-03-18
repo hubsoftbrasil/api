@@ -7197,7 +7197,7 @@
 										}
 									}
 								},
-								"url": "{{url}}/api/v1/integracao/estoque/movimento_estoque",
+								"url": "{{url}}/api/v1/integracao/estoque/movimento_estoque/entrada",
 								"description": "Utilizando esse endpoint será possível adicionar produtos a um local de estoque sem a necessidade de gerar uma nova compra dentro do sistema."
 							},
 							"response": [
@@ -7222,7 +7222,7 @@
 												}
 											}
 										},
-										"url": "{{url}}/api/v1/integracao/estoque/movimento_estoque"
+										"url": "{{url}}/api/v1/integracao/estoque/movimento_estoque/entrada"
 									},
 									"status": "OK",
 									"code": 200,
@@ -7306,7 +7306,7 @@
 												}
 											}
 										},
-										"url": "{{url}}/api/v1/integracao/estoque/movimento_estoque"
+										"url": "{{url}}/api/v1/integracao/estoque/movimento_estoque/entrada"
 									},
 									"status": "OK",
 									"code": 200,
