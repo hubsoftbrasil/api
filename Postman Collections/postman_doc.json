@@ -7390,14 +7390,14 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"id_local_estoque\": 1,\n\t\"produtos\": [\n        {\n            \"quantidade\": 1,\n            \"produto\": {\n                \"id_produto\": 1\n            }\n        }\n    ],\n    \"observacao\":\"Campo de preenchimento opcional. Aqui poderá ser preenchido um texto longo se necessário\"\n}",
+									"raw": "{\n\t\"id_local_estoque\": 307,\n\t\"produtos\": [\n        {\n            \"quantidade\": 2,\n            \"produto\": {\n                \"id_produto\": 3975\n            },\n            \"patrimonios\": [\n                {\n                    \"id_produto_item\": 234663\n                },\n                {\n                    \"id_produto_item\": 234664\n                }   \n            ],\n            \"produto_item_status\": {\n                \"id_produto_item_status\": 6\n            }\n        },\n        {\n            \"quantidade\": 3,\n            \"produto\": {\n                \"id_produto\": 172\n            }\n        }\n    ],\n    \"observacao\":\"Campo de preenchimento opcional. Aqui poderá ser preenchido um texto longo se necessário\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
 										}
 									}
 								},
-								"url": "{{url}}/api/v1/integracao/estoque/movimento_estoque/entrada",
+								"url": "{{url}}/api/v1/integracao/estoque/movimento_estoque/saida",
 								"description": "Utilizando esse endpoint será possível adicionar produtos a um local de estoque sem a necessidade de gerar uma nova compra dentro do sistema.\n\n**Seria a Entrada Manual do sistema.**"
 							},
 							"response": [
