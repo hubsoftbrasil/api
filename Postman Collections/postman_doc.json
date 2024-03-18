@@ -7372,7 +7372,7 @@
 							]
 						},
 						{
-							"name": "Adicionar Produtos Copy",
+							"name": "Saída Produtos",
 							"id": "1c96dea1-8a05-4a4c-800f-6a688b4c2337",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
