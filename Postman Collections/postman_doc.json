@@ -13884,6 +13884,53 @@
 					]
 				},
 				{
+					"name": "Status de Serviço Copy",
+					"id": "8e8f75ba-4385-4e84-af51-2b70844b0592",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{access_token}}",
+								"description": "Bearer Token obtido na autenticação"
+							}
+						],
+						"url": "{{url}}/api/v1/integracao/configuracao/servico_status",
+						"description": "No método `GET`, irá consultar os dados de status de serviço e irá retornar um `JSON` como resposta."
+					},
+					"response": [
+						{
+							"id": "6ee3d13f-93b3-4423-b64e-6c888a66c8c2",
+							"name": "Sucesso",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/api/v1/integracao/configuracao/servico_status"
+							},
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Dados consultados com sucesso.\",\n    \"servico_status\": [\n        {\n            \"id_servico_status\": 1,\n            \"descricao\": \"Serviço Habilitado\",\n            \"prefixo\": \"servico_habilitado\"\n        },\n        {\n            \"id_servico_status\": 2,\n            \"descricao\": \"Cancelado\",\n            \"prefixo\": \"cancelado\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
 					"name": "Serviços Tecnologia",
 					"id": "fc635633-90c7-4bcf-a915-f0c09cd09458",
 					"protocolProfileBehavior": {
