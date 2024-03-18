@@ -7398,7 +7398,7 @@
 									}
 								},
 								"url": "{{url}}/api/v1/integracao/estoque/movimento_estoque/saida",
-								"description": "Utilizando esse endpoint será possível adicionar produtos a um local de estoque sem a necessidade de gerar uma nova compra dentro do sistema.\n\n**Seria a Entrada Manual do sistema.**"
+								"description": "Utilizando esse endpoint será possível dar saida manual nos produtos de um local de estoque.\n\n**Seria a Saída Manual do sistema.  \n  \nImportante:** Caso o produto seja patrimonial, é obrigatório passar os patrimonios e o"
 							},
 							"response": [
 								{
