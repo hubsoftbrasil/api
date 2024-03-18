@@ -7422,7 +7422,7 @@
 												}
 											}
 										},
-										"url": "{{url}}/api/v1/integracao/estoque/movimento_estoque/entrada"
+										"url": "{{url}}/api/v1/integracao/estoque/movimento_estoque/saida"
 									},
 									"status": "OK",
 									"code": 200,
