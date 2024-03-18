@@ -13415,7 +13415,7 @@
 									}
 								],
 								"url": "{{url}}/api/v1/integracao/configuracao/produto_item_status",
-								"description": "No método `GET`, irá consultar os dados de status de produtos e irá retornar um `JSON` como resposta."
+								"description": "No método `GET`, irá consultar os dados de status de produtos e irá retornar um `JSON` como resposta.\n\n**Importante: Irá retornar apenas os status que permitem baixa manual.**"
 							},
 							"response": [
 								{
@@ -13436,13 +13436,13 @@
 												"type": "text"
 											}
 										],
-										"url": "{{url}}/api/v1/integracao/configuracao/servico_status"
+										"url": "{{url}}/api/v1/integracao/configuracao/produto_item_status"
 									},
 									"_postman_previewlanguage": "json",
 									"header": [],
 									"cookie": [],
 									"responseTime": null,
-									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Dados consultados com sucesso.\",\n    \"servico_status\": [\n        {\n            \"id_servico_status\": 1,\n            \"descricao\": \"Serviço Habilitado\",\n            \"prefixo\": \"servico_habilitado\"\n        },\n        {\n            \"id_servico_status\": 2,\n            \"descricao\": \"Cancelado\",\n            \"prefixo\": \"cancelado\"\n        }\n    ]\n}"
+									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Produto Item Status consultados com sucesso.\",\n    \"produto_item_status\": [\n        {\n            \"id_produto_item_status\": 9,\n            \"descricao\": \"DEFEITO\",\n            \"prefixo\": \"defeito\"\n        },\n        {\n            \"id_produto_item_status\": 8,\n            \"descricao\": \"DESCARTADO\",\n            \"prefixo\": \"descartado\"\n        },\n        {\n            \"id_produto_item_status\": 28,\n            \"descricao\": \"DOAÇÃO.\",\n            \"prefixo\": \"doado\"\n        },\n        {\n            \"id_produto_item_status\": 41,\n            \"descricao\": \"EM GARANTIA\",\n            \"prefixo\": \"ainda_em_garantia\"\n        },\n        {\n            \"id_produto_item_status\": 7,\n            \"descricao\": \"EM TESTE\",\n            \"prefixo\": \"teste\"\n        },\n        {\n            \"id_produto_item_status\": 32,\n            \"descricao\": \"FINALIZADO\",\n            \"prefixo\": \"finalizado\"\n        },\n        {\n            \"id_produto_item_status\": 12,\n            \"descricao\": \"INSTALADO INFRA\",\n            \"prefixo\": \"instal_infra\"\n        },\n        {\n            \"id_produto_item_status\": 6,\n            \"descricao\": \"MANUTENÇÃO\",\n            \"prefixo\": \"manutencao\"\n        },\n        {\n            \"id_produto_item_status\": 13,\n            \"descricao\": \"Mercado Livre\",\n            \"prefixo\": \"mercado_livre\"\n        },\n        {\n            \"id_produto_item_status\": 5,\n            \"descricao\": \"Perdido\",\n            \"prefixo\": \"perdido\"\n        },\n        {\n            \"id_produto_item_status\": 141,\n            \"descricao\": \"Teste Cor Erro\",\n            \"prefixo\": \"teste_cor_erro\"\n        },\n        {\n            \"id_produto_item_status\": 46,\n            \"descricao\": \"Uso Interno\",\n            \"prefixo\": \"uso_interno\"\n        },\n        {\n            \"id_produto_item_status\": 27,\n            \"descricao\": \"Uso Particular na Empresa\",\n            \"prefixo\": \"uso_empresarial\"\n        },\n        {\n            \"id_produto_item_status\": 133,\n            \"descricao\": \"Venda\",\n            \"prefixo\": \"venda\"\n        },\n        {\n            \"id_produto_item_status\": 166,\n            \"descricao\": \"teste_status\",\n            \"prefixo\": \"teste_status\"\n        }\n    ]\n}"
 								}
 							]
 						}
