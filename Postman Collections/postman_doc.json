@@ -7198,7 +7198,7 @@
 									}
 								},
 								"url": "{{url}}/api/v1/integracao/estoque/movimento_estoque/entrada",
-								"description": "Utilizando esse endpoint será possível adicionar produtos a um local de estoque sem a necessidade de gerar uma nova compra dentro do sistema."
+								"description": "Utilizando esse endpoint será possível adicionar produtos a um local de estoque sem a necessidade de gerar uma nova compra dentro do sistema.\n\n**Seria a Entrada Manual do sistema.**"
 							},
 							"response": [
 								{
