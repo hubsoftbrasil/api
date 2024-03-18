@@ -10125,6 +10125,263 @@
 									"body": "{\n    \"status\": \"error\",\n    \"msg\": \"Favor preencher os campos obrigatórios de acordo com as especificações\",\n    \"errors\": [\n        \"O campo id_produto_item deve ser do tipo integer\"\n    ]\n}"
 								}
 							]
+						},
+						{
+							"name": "Alterar Status",
+							"id": "c9d7bcc9-8427-4c6e-8678-f61cfddba438",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{access_token}}",
+										"description": "Bearer Token obtido na autenticação"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"ids_produto_item\":[130109,130111],\n    \"status\":\"teste_bianca\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/v1/integracao/estoque/produto_item/alterar_status",
+								"description": "**POST**\n\nNo método `PUT`, será possível editar os dados de cadastro do item de produto.\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| id_produto | ID do Produto já cadastrado anteriormente | Sim |\n| id_local_estoque | ID do Local de Estoque já cadastrado anteriormente | Sim |\n| numero_serie | Número de Série | Não |\n| mac_address | MAC Address | Não |\n| identificador_proprio | Identificador Interno da Empresa ou ID do Item em outro sistema | Não |\n| observacoes | Observações livres | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| Atributo | Descrição | Valor Default |\n| --- | --- | --- |\n| id_produto | `Integer` | `NULL` |\n| id_local_estoque | `Integer` | `NULL` |\n| numero_serie | `String` | `NULL` |\n| mac_address | `String` | `NULL` |\n| identificador_proprio | `String` | `NULL` |\n| observacoes | `LongText` | `NULL` |"
+							},
+							"response": [
+								{
+									"id": "2d4753a9-8887-43dc-8c7c-6386cc16c082",
+									"name": "Sucesso",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Bearer Token obtido na autenticação"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"mac_address\":\"00:11:22:AA:BB:CC\",\n    \"numero_serie\":\"SN111222333999\",\n    \"identificador_proprio\":\"95f5d435-c302-463e-ad2e-748025fca05e\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/estoque/produto_item/:id_produto_item",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"estoque",
+												"produto_item",
+												":id_produto_item"
+											],
+											"variable": [
+												{
+													"key": "id_produto_item",
+													"value": "213346",
+													"description": "(Integer) ID do Produto Item já cadastrado anteriormente"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 06 Feb 2023 13:29:29 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 14:29:29 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"success\",\n    \"msg\": \"Edição realizado com sucesso\",\n    \"produto_item\": {\n        \"id_produto_item\": 213346,\n        \"produto\": {\n            \"id_produto\": 1,\n            \"nome\": \"Airgrid\",\n            \"agrupado\": false\n        },\n        \"local_estoque\": {\n            \"id_local_estoque\": 9,\n            \"descricao\": \"HUBSOFT\"\n        },\n        \"produto_item_status\": {\n            \"id_produto_item_status\": 2,\n            \"descricao\": \"ESTOQUE\",\n            \"prefixo\": \"estoque\"\n        },\n        \"identificador_proprio\": \"95f5d435-c302-463e-ad2e-748025fca05e\",\n        \"codigo_item\": 177686,\n        \"numero_serie\": \"SN111222333999\",\n        \"mac_address\": \"00:11:22:AA:BB:CC\",\n        \"observacoes\": null\n    }\n}"
+								},
+								{
+									"id": "025eaddf-b883-48ec-9b78-4d7a13624ace",
+									"name": "Erro",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{access_token}}",
+												"description": "Bearer Token obtido na autenticação"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"mac_address\":\"00:11:22:AA:BB:CC\",\n    \"numero_serie\":\"SN111222333999\",\n    \"identificador_proprio\":\"95f5d435-c302-463e-ad2e-748025fca05e\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url}}/api/v1/integracao/estoque/produto_item/:id_produto_item",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"integracao",
+												"estoque",
+												"produto_item",
+												":id_produto_item"
+											],
+											"variable": [
+												{
+													"key": "id_produto_item",
+													"value": "213346abc",
+													"description": "(Integer) ID do Produto Item já cadastrado anteriormente"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.16.1"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.1.33"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "DELETE, HEAD, GET, OPTIONS, POST, PUT"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Content-Range, Content-Disposition, Content-Description, Origin, Authorization, AuthorizationId, AuthorizationAccessToken, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Max-Age",
+											"value": "1728000"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 06 Feb 2023 13:30:35 GMT"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "hubsoft_session=RUM3uOnOekgibbXISvqxjoasRfPOJfgePAW60Uwx; expires=Mon, 06-Feb-2023 14:30:35 GMT; Max-Age=3600; path=/; httponly"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": \"error\",\n    \"msg\": \"Favor preencher os campos obrigatórios de acordo com as especificações\",\n    \"errors\": [\n        \"O campo id_produto_item deve ser do tipo integer\"\n    ]\n}"
+								}
+							]
 						}
 					],
 					"id": "f741004b-44b4-46e1-8ac2-2d33ce0544be"
