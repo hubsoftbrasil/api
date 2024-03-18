@@ -7172,7 +7172,7 @@
 							]
 						},
 						{
-							"name": "Adicionar Produtos",
+							"name": "Entrada Produtos",
 							"id": "61c8f97f-fcd5-4302-82cc-f1e3d5ed21b7",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
