@@ -7499,14 +7499,14 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n}",
+											"raw": "{\n\t\"id_local_estoque\": 307,\n\t\"produtos\": [\n        {\n            \"quantidade\": 2,\n            \"produto\": {\n                \"id_produto\": 3975\n            },\n            \"patrimonios\": [],\n            \"produto_item_status\": {\n                \"id_produto_item_status\": 6\n            }\n        },\n        {\n            \"quantidade\": 3,\n            \"produto\": {\n                \"id_produto\": 172\n            }\n        }\n    ],\n    \"observacao\":\"Campo de preenchimento opcional. Aqui poderá ser preenchido um texto longo se necessário\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
 												}
 											}
 										},
-										"url": "{{url}}/api/v1/integracao/estoque/movimento_estoque/entrada"
+										"url": "{{url}}/api/v1/integracao/estoque/movimento_estoque/saida"
 									},
 									"status": "OK",
 									"code": 200,
@@ -7567,7 +7567,7 @@
 									],
 									"cookie": [],
 									"responseTime": null,
-									"body": "{\n    \"status\": \"error\",\n    \"msg\": \"Os dados fornecidos são inválidos\",\n    \"errors\": [\n        \"O ID do Local de Estoque é obrigatório\",\n        \"Os Produtos são obrigatórios\"\n    ]\n}"
+									"body": "{\n    \"status\": \"error\",\n    \"msg\": \"O produto Adaptador multiportas USB-C 7 em 1 da Dell — DA310 (DELL) é do tipo patrimonial, para dar saída manual desse produto, é obrigatório passar um array com os patrimonios\"\n}"
 								}
 							]
 						},
