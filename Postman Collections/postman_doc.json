@@ -11092,7 +11092,7 @@
 				},
 				{
 					"name": "Todos",
-					"id": "a99739e6-26d3-46cd-a52f-88eb913a116f",
+					"id": "34c56330-cf29-49d4-986c-dd3a5d941e9f",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -11107,7 +11107,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{url}}/api/v1/integracao/atendimento/todos?pagina=0&itens_por_pagina=0&data_inicio=&data_fim=&relacoes=",
+							"raw": "{{url}}/api/v1/integracao/ordem_servico/todos?pagina=0&itens_por_pagina=0&data_inicio=&data_fim=&relacoes=",
 							"host": [
 								"{{url}}"
 							],
@@ -11115,7 +11115,7 @@
 								"api",
 								"v1",
 								"integracao",
-								"atendimento",
+								"ordem_servico",
 								"todos"
 							],
 							"query": [
@@ -11142,15 +11142,15 @@
 								{
 									"key": "relacoes",
 									"value": "",
-									"description": "(opcional) cliente_servico,usuarios_responsaveis,atendimento_mensagem"
+									"description": "(opcional) tecnicos"
 								}
 							]
 						},
-						"description": "No método `GET`, irá consultar os dados dos atendimentos e retornar um `JSON` como resposta. O resultado é retornado de forma paginada, portanto é importante fazer um loop de consultas em sua aplicação, caso queria percorrer os dados em sua totalidade.\n\nOs seguintes parâmetros podem/devem ser utilizados:\n\n| **Atributo** | **Descrição** | **Obrigatório** |\n| --- | --- | --- |\n| pagina | Número da Página da Consulta | **Sim** |\n| itens_por_pagina | Quantidade de Registro por Página da consulta | **Sim** |\n| data_inicio | Data de Cadastro Inicial | Não |\n| data_fim | Data de Cadastro Final | Não |\n| relacoes | Carrega apenas os relacionamentos especificados | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| **Atributo** | **Descrição** | **Valor Default** |\n| --- | --- | --- |\n| pagina | Valor númerico. A primeira página será 0 | Nenhum |\n| itens_por_pagina | Valor númerico. Mínimo: 1, Máximo: 500 | Nenhum |\n| data_inicio | Valor no formato DateTime (YYYY-MM-DD) | Nenhum |\n| data_fim | Valor no formato DateTime (YYYY-MM-DD) Obs: Maior ou igual data_inicio | Nenhum |\n| relacoes | cliente_servico,usuarios_responsaveis,atendimento_mensagem | Nenhum |\n\n**IMPORTANTE:** Lembre-se que essa é uma requisição que poderá retornar um volume muito grande de dados, portanto, utilize as relações com cautela, pois quanto mais relações forem utilizados, maior poderá ser o tempo de resposta da API."
+						"description": "No método `GET`, irá consultar os dados dos ordens de serviço e retornar um `JSON` como resposta. O resultado é retornado de forma paginada, portanto é importante fazer um loop de consultas em sua aplicação, caso queria percorrer os dados em sua totalidade.\n\nOs seguintes parâmetros podem/devem ser utilizados:\n\n| **Atributo** | **Descrição** | **Obrigatório** |\n| --- | --- | --- |\n| pagina | Número da Página da Consulta | **Sim** |\n| itens_por_pagina | Quantidade de Registro por Página da consulta | **Sim** |\n| data_inicio | Data de Cadastro Inicial | Não |\n| data_fim | Data de Cadastro Final | Não |\n| relacoes | Carrega os relacionamentos especificados | Não |\n\nOs atributos podem conter os seguintes valores:\n\n| **Atributo** | **Descrição** | **Valor Default** |\n| --- | --- | --- |\n| pagina | Valor númerico. A primeira página será 0 | Nenhum |\n| itens_por_pagina | Valor númerico. Mínimo: 1, Máximo: 500 | Nenhum |\n| data_inicio | Valor no formato DateTime (YYYY-MM-DD) | Nenhum |\n| data_fim | Valor no formato DateTime (YYYY-MM-DD) Obs: Maior ou igual data_inicio | Nenhum |\n| relacoes | tecnicos | Nenhum |\n\n**IMPORTANTE:** Lembre-se que essa é uma requisição que poderá retornar um volume muito grande de dados, portanto, utilize as relações com cautela, pois quanto mais relações forem utilizados, maior poderá ser o tempo de resposta da API."
 					},
 					"response": [
 						{
-							"id": "bfbf0d68-78a5-457c-94a3-71e1fa38b5c9",
+							"id": "4d180c5d-aef3-4746-84cc-358abbb01428",
 							"name": "Sucesso",
 							"originalRequest": {
 								"method": "GET",
