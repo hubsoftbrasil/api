@@ -6473,7 +6473,7 @@
 										}
 									]
 								},
-								"description": "**GET**\n\nNo método `GET`, será possível consultar um produto individualmente. Esse endpoint pode ser útil quando for necessário verificar / sincronizar produto por produto."
+								"description": "**GET**\n\nNo método `GET`, será possível consultar um produto individualmente. Esse endpoint pode ser útil quando for necessário verificar / sincronizar produto por produto.\n\nOs seguintes parâmetros podem/devem ser utilizados:\n\n| Atributo | Descrição | Obrigatório |\n| --- | --- | --- |\n| relacoes | Carrega os relacionamentos especificados | Não |"
 							},
 							"response": [
 								{
