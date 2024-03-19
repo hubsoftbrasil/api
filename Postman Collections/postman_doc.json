@@ -11107,7 +11107,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{url}}/api/v1/integracao/ordem_servico/todos?pagina=0&itens_por_pagina=1&data_inicio=&data_fim=&relacoes=",
+							"raw": "{{url}}/api/v1/integracao/ordem_servico/todos?pagina=0&itens_por_pagina=1&data_inicio=&data_fim=&tipo_data=data_inicio_programado&relacoes=",
 							"host": [
 								"{{url}}"
 							],
@@ -11140,6 +11140,11 @@
 									"description": "(opcional) Valor no formato Date (YYYY-MM-DD) Obs: Maior ou igual data_inicio"
 								},
 								{
+									"key": "tipo_data",
+									"value": "data_inicio_programado",
+									"description": "(opcional) data_cadastro, data_inicio_programado, data_inicio_executado, data_termino_programado, data_termino_executado"
+								},
+								{
 									"key": "relacoes",
 									"value": "",
 									"description": "(opcional) tecnicos"
@@ -11162,7 +11167,7 @@
 									}
 								],
 								"url": {
-									"raw": "/api/v1/integracao/ordem_servico/todos?pagina=0&itens_por_pagina=1&data_inicio=&data_fim=&relacoes=",
+									"raw": "/api/v1/integracao/ordem_servico/todos?pagina=0&itens_por_pagina=1&data_inicio=&data_fim=&tipo_data=data_inicio_programado&relacoes=",
 									"path": [
 										"api",
 										"v1",
@@ -11186,6 +11191,11 @@
 										{
 											"key": "data_fim",
 											"value": ""
+										},
+										{
+											"key": "tipo_data",
+											"value": "data_inicio_programado",
+											"type": "text"
 										},
 										{
 											"key": "relacoes",
