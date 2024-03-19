@@ -11770,6 +11770,12 @@
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImQ2ODFjOWJkN2ZjMjliMjY5YzBjN2QwNzgyNGVkMDk5Mjk3YmYyYmNiYzgyODg0Y2FjZmQxODMwMzBiMjMxNGM1N2JhMmQyOGY5Y2RiZjAyIn0.eyJhdWQiOiIzNDQiLCJqdGkiOiJkNjgxYzliZDdmYzI5YjI2OWMwYzdkMDc4MjRlZDA5OTI5N2JmMmJjYmM4Mjg4NGNhY2ZkMTgzMDMwYjIzMTRjNTdiYTJkMjhmOWNkYmYwMiIsImlhdCI6MTcxMDE4Nzc0MCwibmJmIjoxNzEwMTg3NzQwLCJleHAiOjE3MTI3Nzk3NDAsInN1YiI6Ijc4MjMiLCJzY29wZXMiOltdfQ.cRUgas8yR9qEOar5q_N_t2r1K3VfgAhbOhhW1pPKzlMQbhuzDWB2HMaiL9nQpw5CQbM1m-wB2vEkuJ3OY4s-QNpyDNSzUTm17CV5NjULhr0-iKwGhOVyGX_sFBeLR81F1jJXKWRh0c1OdnwqTI5mlsCn_21f7XuEMi7eT17vscXGMVj8naMskqdWLVusIdMyPDnqqr6CZMWojx8oyH6BJJlVECATWGPVDqU622eZJ73goFJElCeq61wSdElcZn12TQRY5B8s9Vaj_60SbyWh3BqhdKOD0m2rVAPwovOsIrejTNZVtzPevJVmTQ7JgncOc16UfQjByJKlJkC2DhlnKOb7_zrrfmZl_jJTKzZkSpYuENqfez_3vsiU0V2-YJrJyQKbdIHqfD854IHpXniCrDWBZIRaRmcbOPcYQOs23ScZTqBdNPHVnIriD7plqwFArtOGfWw-SpF2gwz6Npm8Qw8Evn8AHaZ4DA68pmSkk8PwP7ySibVV0swIbtFfIDdfA19G0VreP88yOD2UbOFIe3Btt-49sSd09rJBDXzHnWa_GXCSOPVBXRWaXvrAtG6RjvSxkEaaMat0MpnB4-7lOFnEn3YUdrCVWPh0Sr9BFSVB0AwourKo9vVE6Js7nT3zXQ0eOnJyXwzYzr6GefwwvYJpiioX1HD3SDjUyujt_tY"
+									}
+								},
 								"method": "GET",
 								"header": [
 									{
@@ -11779,9 +11785,13 @@
 									}
 								],
 								"url": {
-									"raw": "{{url}}/api/v1/integracao/nota_fiscal/telecom?tipo_data=data_emissao&data_inicio=2020-01-01&data_fim=2022-08-31&documento=29507487000185&modelo=21&pagina=0&itens_por_pagina=10&order_type=asc&order_by=id_nota_fiscal&status=todas",
+									"raw": "api.teste.hubsoft.com.br/api/v1/integracao/nota_fiscal/telecom?tipo_data=data_emissao&data_inicio=2020-01-01&data_fim=2022-08-31&documento=29507487000185&modelo=21&pagina=0&itens_por_pagina=1&order_type=asc&order_by=id_nota_fiscal&status=todas",
 									"host": [
-										"{{url}}"
+										"api",
+										"teste",
+										"hubsoft",
+										"com",
+										"br"
 									],
 									"path": [
 										"api",
@@ -11823,7 +11833,7 @@
 										},
 										{
 											"key": "itens_por_pagina",
-											"value": "10",
+											"value": "1",
 											"description": "Quantidade de Itens por Página. Mínimo: 1, Máximo: 500"
 										},
 										{
