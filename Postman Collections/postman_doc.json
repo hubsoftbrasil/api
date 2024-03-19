@@ -11107,7 +11107,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{url}}/api/v1/integracao/ordem_servico/todos?pagina=0&itens_por_pagina=0&data_inicio=&data_fim=&relacoes=",
+							"raw": "{{url}}/api/v1/integracao/ordem_servico/todos?pagina=0&itens_por_pagina=1&data_inicio=&data_fim=&relacoes=",
 							"host": [
 								"{{url}}"
 							],
@@ -11122,11 +11122,11 @@
 								{
 									"key": "pagina",
 									"value": "0",
-									"description": "(Obrigatório) Número da Página que deseja consultar. Primeira página = "
+									"description": "(Obrigatório) Número da Página que deseja consultar. Primeira página = 0"
 								},
 								{
 									"key": "itens_por_pagina",
-									"value": "0",
+									"value": "1",
 									"description": "(Obrigatório) Total de Itens por Página (Min: 1 e Max: 500)"
 								},
 								{
@@ -11161,7 +11161,38 @@
 										"type": "text"
 									}
 								],
-								"url": "/api/v1/integracao/ordem_servico/todos"
+								"url": {
+									"raw": "/api/v1/integracao/ordem_servico/todos?pagina=0&itens_por_pagina=1&data_inicio=&data_fim=&relacoes=",
+									"path": [
+										"api",
+										"v1",
+										"integracao",
+										"ordem_servico",
+										"todos"
+									],
+									"query": [
+										{
+											"key": "pagina",
+											"value": "0"
+										},
+										{
+											"key": "itens_por_pagina",
+											"value": "1"
+										},
+										{
+											"key": "data_inicio",
+											"value": ""
+										},
+										{
+											"key": "data_fim",
+											"value": ""
+										},
+										{
+											"key": "relacoes",
+											"value": ""
+										}
+									]
+								}
 							},
 							"_postman_previewlanguage": "json",
 							"header": null,
